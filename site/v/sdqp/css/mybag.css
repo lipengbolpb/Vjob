@@ -1,0 +1,280 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: white;
+}
+div.wxmark{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    display: none;
+}
+#alert{
+	width: 100%;
+	height: 100%;
+
+}
+div.mybag_top{
+	width:100%;
+	height:100%;
+	background: url('../img/bg_mybag1.png?v=2.1') no-repeat top left;
+	background-size: 100% 100%;
+	transition: all 0.3s ease;
+	position: absolute;
+}
+div.mybag_top div.logo{
+	width:78%;
+	height:28%;
+	background:url('../img/logo_mybag.png?v=2.0') no-repeat top left;
+	background-size: 100% 100%;
+	position:absolute;
+	top:10%;
+	left:11%;
+} 
+div.mybag_top div.logo p{
+	position: absolute;
+    top: 50%;
+    left: 33%;
+    color: #ffffff;
+    width: 11%;
+    text-align: center;
+}
+div.mybag_top div.notice{
+	width:58%;
+	height:12%;
+	position: absolute;
+	top:40%;
+	left:25%;
+}
+div.mybag_top div.notice p{
+	font-size:0.75rem;
+	background: url('../img/icon-1.png') no-repeat;
+	background-size: 0.75rem auto;
+	background-position: 0% 75%;
+	padding-left: 1rem;
+}
+div.mybag_top div.notice p span.num{
+	font-size:1.1rem;
+	color:#892a00;
+	font-weight: 600;
+}
+div.mybag_top div.notice p span.yuan{
+	color:#892a00;
+	font-weight: 600;
+}
+div.mybag_top div.notice p.send{
+	margin-top:2%;
+	background: url('../img/icon-2.png') no-repeat;
+	background-size: 0.7rem auto;
+	background-position: 0% 75%;
+}
+div.mybag_top input.tx_btn{
+	width:45%;
+	height:7.5%;
+	position:absolute;
+	top:53%;
+	left:27.5%;
+	border:none;
+	background:url('../img/button.png?v=2.0') no-repeat top left;
+	background-size:100% 100%;
+	text-align: center;
+	font-size: 0.8rem;
+	font-family: '微软雅黑';
+	line-height: 2.4rem;
+	color: #361d0a;
+	z-index: 1;
+}
+div.mybag_top p.message{
+	font-size: 0.5rem;
+	position:absolute;
+	top:63%;
+	left:10%;
+	width:80%;
+	text-align: center;
+}
+div.mybag_top a.rec{
+	position:absolute;
+	top:78%;
+	right: 10%;
+	font-size: 0.6rem;
+	color:#892a00;
+}
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg_mybag2.png?v=2.1') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	transition: all 0.3s ease;
+}
+div.mybag_bottom #hide{
+	width:45%;
+	height:9%;
+	position:absolute;
+	top:2%;
+	left:27.5%;
+	border:none;
+	background:url('../img/button_up.png?v=2.0') no-repeat top left;
+	background-size:100% 100%;
+	text-align: center;
+	font-size: 0.8rem;
+	font-family: '微软雅黑';
+	line-height: 2.4rem;
+	color: #361d0a;
+	z-index: 1;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 80%;
+	padding-bottom: 0.5rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+	margin-top: 20%;
+}
+div.mybag_bottom div.record input{
+	width: 100%;
+	height: 1.95rem;
+	margin: 1.05rem 0;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	background:#f7ab00 url(../img/mybag-gotop.png?v=2.0) no-repeat center;
+	background-size: auto 100%;
+	float: left;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0rem;
+	border-top: 1px #7d5828 solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #7d5828 solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	color: #FFFFFF;
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #FFFFFF;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #892a00;
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 0.5rem 0;
+	color: #892a00;
+	display: none;
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #892a00;
+	display: none;
+}
+#mon_list{
+	margin-top: 0%;
+	/* height: 100%; */
+}
+#mon_list span{
+	color: #892a00;
+}
+#mon_list span.title{
+	color: #361d0a;
+}
+#mon_list span.time{
+	color: #361d0a;
+}
+@media only screen and (max-height:530px ){
+	div.mybag_top div.logo p{
+    	top: 51%;
+	}
+}
+@media only screen and (max-height:510px ){
+	div.mybag_top div.logo p{
+    	top: 49.5%;
+	}
+}
+@media only screen and (max-height:460px ){
+	div.mybag_top input.tx_btn{
+		line-height: 2rem;
+	}
+}
+@media only screen and (max-height:420px ){
+	div.mybag_top div.logo p{
+    	top: 49%;
+	}
+	div.mybag_top div.notice{
+		top:38%;
+	}
+	div.mybag_top div.notice p.send{
+		margin-top:0;
+	}
+	div.mybag_top input.tx_btn{
+		width:40%;
+		height:7.5%;
+		position:absolute;
+		top:53%;
+		left:30%;
+		border:none;
+		background:url('../img/button.png?v=2.0') no-repeat top left;
+		background-size:100% 100%;
+		text-align: center;
+		font-size: 0.7rem;
+		line-height: 1.8rem;
+		color: #361d0a;
+		z-index: 1;
+	}
+	div.mybag_top p.message{
+		top:62%;
+	}
+	div.mybag_bottom #hide{
+		height:9.5%;
+	}
+
+}

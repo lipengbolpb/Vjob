@@ -1,0 +1,292 @@
+@charset "utf-8";
+body,html,p,img,input,i,em{
+	margin: 0;
+	padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+html{
+	background: url(../img/bg.png) no-repeat top;
+	-webkit-background-size: 100%;
+}
+body{
+	background-color: rgba(0,0,0,.6);
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+
+#got{
+	width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+}
+#got img{
+	width: 12rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -6rem;
+    top: 5rem;
+}
+#got .time{
+	margin-top: 20rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #FFFFFF;
+}
+div.prize_box{
+	width: 13.4rem;
+	height: 11.4rem;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-origin: top;
+	display: none;
+}
+span.tip{
+	font-size: .6rem;
+	line-height: 4rem;
+	color: #2aa1fd;
+	text-align: center;
+	padding:.1rem 0 .1rem 1.1rem;
+	background: url(../img/icon_tip.png) no-repeat left;
+	-webkit-background-size: .7rem auto;
+}
+div.prize_box div.prize_content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:2.8rem;
+	background: url(../img/prize_bg.png) no-repeat center;
+	-webkit-background-size: 100% auto;
+}
+div.prize_box div.prize_content img{
+	width: 4rem;
+	position: absolute;
+	bottom: -.3rem;
+	left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+div.prize_box div.prize_content p.prize_title{
+	font-size: .5rem;
+	color: #fff;
+	width: 100%;
+	padding: 0 2rem;
+	box-sizing: border-box;
+	text-align: right;
+	margin-top: 5.65rem;
+	-webkit-transform: rotate(-9deg);
+}
+div.bottom{
+	display: block;
+	margin-top: 13rem;
+}
+#btn,#tj,#lqyhq{
+	width: 12.5rem;
+	height: 2.15rem;
+	line-height:2.15rem;
+	background: #2aa1fd;
+	color: #fff;
+	font-size: .8rem;
+	border-radius: 3px;
+	display: block;
+	margin: 1.7rem auto .5rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+	overflow: hidden;
+}
+#tj img{
+	display: block;
+	height: 1.15rem;
+	margin: .5rem auto;
+}
+div.msg_wrap{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 1.7rem;
+	overflow-x: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+div.msg_wrap div.pic_box{
+	height: 5.85rem;
+	background: url(../img/prize_bg_2.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	margin-top: 1rem;
+	overflow: hidden;
+}
+div.msg_wrap div.pic_box img{
+	height: 4.3rem;
+	margin: 0.8rem auto 0;
+	display: block;
+}
+div.msg_wrap p.prize_msg{
+	text-align: center;
+	font-size: .6rem;
+	color: #fff;
+	margin: .8rem auto;
+}
+div.msg_wrap p.tip_t{
+	background: url(../img/tip_bg.png) no-repeat center 0.2rem;
+	-webkit-background-size: 100% 85%;
+	font-size: .5rem;
+	color: #1e9bfc;
+	line-height: .6rem;
+	text-align: left;
+	padding: .3rem 0 .7rem 1.5rem;
+}
+div.msg_wrap .msg_box{
+	width: 100%;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	background: #fff;
+	margin: .5rem auto;
+}
+div.msg_wrap .msg_box p{
+	width: 100%;
+	height: 2.1rem;
+	border-bottom: 1px #EFEFEF solid;
+}
+div.msg_wrap .msg_box p input{
+	height: 100%;
+	width: 100%;
+	display: block;
+	border: 0;
+	text-indent: 1rem;
+}
+div.msg_wrap .msg_box p #yz_code{
+	float: left;
+	width: 65%;
+}
+div.msg_wrap .msg_box p #get_yz{
+	float: left;
+	width: 35%;
+	box-sizing: border-box;
+	font-size: .6rem;
+	color: #1e9bfc;
+	line-height: 2.1rem;
+	text-align: center;
+	border-left: 1px #EFEFEF solid;
+}
+div.yhq_box{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+div.yhq_box div.yhq_up{
+	height: 11.75rem;
+	background: url(../img/yhq_bg.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	overflow: hidden;
+}
+div.yhq_box div.yhq_up p.yhq_title{
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 6.5rem auto 0;
+}
+div.yhq_box div.yhq_up p.yhq_title i{
+	position: relative;
+	top: -.5rem;
+}
+div.yhq_box div.yhq_up p.yhq_title span{
+	font-size: 2rem;
+}
+div.yhq_box div.bottom{
+	margin-top: 0;
+}
+div.yhq_box div.yhq_down{
+	margin: 3rem auto 0;
+	display: none;
+}
+div.yhq_box div.yhq_down p.yhq_code{
+	color: #fff;
+	font-size: .8rem;
+}
+div.yhq_box div.yhq_down .yhq_content{
+	height: 8rem;
+	background: url(../img/yhq_bg_2.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	overflow: hidden;
+}
+div.yhq_box div.yhq_down .yhq_content p{
+	font-size: .5rem;
+	color: #fff;
+}
+div.yhq_box div.yhq_down .yhq_content p.code{
+	font-size: .9rem;
+	margin: 3rem auto 1rem;
+}
+div.yhq_box div.yhq_down p.tip_b{
+	background: url(../img/tip_bg_t.png) no-repeat top;
+	-webkit-background-size: 100%;
+	font-size: .5rem;
+	color: #1e9bfc;
+	line-height: .6rem;
+	text-align: left;
+	width: 12.2rem;
+	margin: 1rem auto 3rem;
+	padding: .7rem 0.6rem .3rem  1.5rem;
+	box-sizing: border-box;
+}
+a.mall{
+	font-size: .65rem;
+	color: #2AA1FD;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.tip_msg{
+	font-size: .5rem;
+	color: #fff;
+	width: 100%;
+	margin: .7rem auto 0;
+}
+p.time{
+	position: absolute;
+	bottom: 1.6rem;
+	width: 100%;
+	font-size: .65rem;
+	color: #a6a6a6;
+}
+p.a_box{
+	margin: 0rem auto 0;
+}
+p.a_box a{
+	font-size: .6rem;
+	color: #fff;
+	padding: 0 1rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.msg_wrap p.a_box{
+	margin: 0rem auto 1rem;
+}

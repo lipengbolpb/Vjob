@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒畅享山东</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=2.0.15" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/jiuwang.css" /> -->
+</head>
+
+<body>
+    <!-- <div class="wxmark" id="wxmark">
+        <img src="img/alert_tip.png?v=2.1" class="alert" id="alert">
+    </div> -->
+    <div class="mask" id="wxmark">
+        <img src="img/l-logo.png" class="logo">
+        <img src="img/l-wx-tip.png" class="l-wx-tip">
+        <div class="tip-text">
+            <span>亲，注意聊天消息里的【服务通知】</span>
+            <span>看到这样的消息72小时内点开收钱！</span>
+        </div>
+        <div class="mask-btn" id="alert">
+            <div class="ck mask-ck">我知道了</div>
+        </div>
+    </div>
+    <div class="mark" id="mark">
+        <img src="img/sun.png?v=2.0" class="sun">
+        <!-- <img src="img/bag_mark.png?v=2.0" class="bagMark"> -->
+        <img src="img/star_1.png?v=2.0" class="star1">
+        <img src="img/star_2.png?v=2.0" class="star2">
+        <img src="img/star_3.png?v=2.0" class="star3">
+        <div class="noticeMark">
+            <p class="p1">累计金额</p>
+            <p class="p2">￥<span id="tolMoney"></span>元</p>
+        </div>
+    </div>
+    <div class="bg">
+        <img src="img/l-logo.png" class="logo">
+        <div class="unopened-bag">
+            <div class="turntable-box">
+                <img src="img/l-turntable.png" class="turntable" alt="">
+                <img src="img/l-slogan.png" class="t-slogan" alt="">
+            </div>
+            <div class="bag bag-animation">
+                <img src="img/l-bag-btn.png">
+                <button id="open-btn">立即领取</button>
+            </div>
+            <img src="img/l-glasses.png" alt="" class="glass-logo">
+        </div>
+        <div class="opened-bag">
+            <img src="img/activity-rule.png" class="activity-rule" id="activity-rule">
+    
+            <div class="bag">
+                <img src="img/l-bag-btn-open.png">
+                <div class="notice">
+                    <!-- <img style="display: none;" id="repscan" src="img/zhang.png"/> -->
+                    <img style="display: none;" id="repscan" src="img/rep-scan.png" />
+                    <p class="p1" id="title">恭喜您获得</p>
+                    <p class="p2"><span id="span1">￥</span><span id="money" class="money"></span><span
+                            id="span2">元</span></p>
+                    <p class="p3">您已扫过</p>
+                    <p class="p4">每瓶仅限扫码一次</p>
+                    <div class="day19">
+                        <p class="dp1">恭喜您获得</p>
+                        <p class="dp2">“要酒日”大红包</p>
+                        <p class="dp3"><span>￥</span><span class="money"></span><span>元</span></p>
+                        <p class="dp4">本月“要酒日”扫到第<span class="day-num"></span>支</p>
+                    </div>
+                </div>
+                <div class="total-money">您的账户余额<span class="allMoneyNum">8.88</span>元</div>
+                <div class="repeat-tip">
+                    <span class="repeat-time"></span>
+                    <span class="repeat-money"></span>
+                </div>
+                <input type="button" value="" id="btn">
+            </div>
+            <div class="msg">
+                <p>红包累计大于等于1元后可提现</p>
+                <p>不足1元的红包将存入零钱包</p>
+            </div>
+        </div>
+    </div>
+    <!-- 城市酒王小程序 -->
+    <img src="/v/sdqp-prs/img/icon_jw.png" class="icon_jw">
+    <div class="alert_jw">
+        <p class="close"></p>
+        <img src="/v/sdqp-prs/img/alert_jw.png?v=02" class="alert_jw">
+    </div>
+    <!-- 活动广告页 -->
+    <div class="active">
+        <!-- <img src="img/logo.png" class="logo logo1"> -->
+        <!-- <img src="/v/sdqp-common2.0/img/20190430.png" class="activeMain">
+        <img src="img/close.png" class="activeClose"> -->
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script type="text/javascript" src="/static/js/vve/21tpl.js?v=2"></script>
+<script src="/v/js/cfg.js?v=2.1.02"></script>
+<script src="/v/js/publictip.js?v=1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=2"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=0.1.14" type="text/javascript" charset="utf-8"></script>
+<!--<script>
+      ini_wxshare(vge.sdqpappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+
+</html>

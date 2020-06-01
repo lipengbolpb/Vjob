@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒华南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?1e2fbfeda8535170726e7e72a1ccd291";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<style type="text/css">
+			div.zhang {
+				width: 14rem;
+				height: 5.5rem;
+				font-size: .7rem;
+				background: url(/v/hnqp/img/rep-scan.png?v=1.0.0) no-repeat center;
+				-webkit-background-size: auto 100%;
+				position: absolute;
+				left: 50%;
+				-webkit-transform: translate(-50%, 0) rotate(-10deg);
+				text-align: center;
+				padding-top: .8rem;
+				line-height: 1.5rem;
+				top: -1rem;
+				z-index: 1;
+			}
+		</style>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/repcash.css?v=1.1.4" />
+		<link rel="stylesheet" type="text/css" href="css/jiuwang.css"/>
+	</head>
+
+	<body>
+		<img src="/v/hnqp/img/loading.gif" id="loading" />
+		<div id="alert" class="wxmark">
+			<img src="img/alert_tip.png" />
+		</div>
+		<div class="getmoney">
+			<div class="money">
+				<div class="zhang">
+					您已扫过这个码，红包已入帐<br /> 扫码入帐时间：
+					<br /><span id="scan_time"></span>
+				</div>
+				<p class="title" id="hb_title">恭喜你获得</p><br />
+				<p class="sum"><span class="curMoney">0.00</span>元</p>
+			</div>
+			<div class="msg">
+				<p class="tip">
+					<span class="wxtip">温馨提示：</span><span id="prompt">根据微信平台要求，红包累计大于等于1元后可提现。不足1元的红包我们为您贴心准备了零钱包功能，快点击下方按钮存钱吧~</span>
+				</p>
+				<div class="getbtn">
+					<p class="mark">再扫几个瓶盖攒够一元，即可发送红包</p>
+					<div style="position: absolute;left: 0;top: 0;width: 100%;
+						height: 100%;overflow: hidden;border-radius: 0.5rem;-webkit-border-radius: 0.5rem;"><input type="button" class="tixian" id="" value="" disabled="disabled" /><i></i></div>
+					<span class="sign">¥ <em class="curMoney">0.00</em></span>
+				</div>
+				<input type="button" class="tomybag" id="" value="存入我的零钱包" />
+				<p class="rule">
+					<a href="javascript:;" id="dom_rule">活动规则</a>
+					<a href="javascript:;" id="dom_private">隐私说明</a>
+				</p>
+			</div>
+		</div>
+		<!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon" />
+		<div id="jiuw_box">
+			<img src="/v/ymqp20180130/img/close.png" class="close" />
+			<div>
+				<img src="/v/hnqp20180130/img/jiuw_qrcode.jpg" id="jwqrcode" />
+			</div>
+		</div>-->
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=13.0.2"></script>
+	<script src="/v/js/publictip.js?v=13.0.1"></script>
+	<script src="/static/js/wx/jsdk.js?v=12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/zeroText.js?v=11" type="text/javascript" charset="utf-8"></script>
+	<script src="js/repcash.js?v=13.5.2" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		ini_wxshare(vge.hnqpappid);
+		// 隐藏微信右上角菜单
+		wx.ready(function() {
+			wx.hideOptionMenu();
+		});
+	</script>
+
+</html>

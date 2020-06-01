@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>积分商城</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+	    <meta content="email=no" name="format-detection">
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=1.0.1"/>
+		<link rel="stylesheet" type="text/css" href="css/order.css?v=1.0.2"/>
+		<link rel="stylesheet" href="css/LArea.css">
+	</head>
+	<body>
+		<div class="msg_box">
+			<div id="msg_box">
+				<p id="name_box"><span>收货人</span><input type="text" id="name" value="" placeholder="姓名" maxlength="8"/></p>
+				<p id="tel_box"><span>联系电话</span><input type="text" id="tel" value="" placeholder="手机号" maxlength="11"/></p>
+				<p id="address_box"><span>收件地区</span><input type="text" id="address" readonly value="" placeholder="收件地区" /></p>
+				<p id="address2_box"><span>详细地址</span><input type="text" id="address2" value="" placeholder="如街道、楼层、门牌号等" maxlength="50"/></p>
+			</div>
+            <input id="addressval" type="hidden" />
+            <input type="button"  id="saveMsg" value="保存" />
+        </div>
+    	<div id="order_box">
+    		<div class="addressMsg">
+    			<p class="userinfo"><span class="sh_name">收货人：</span><span class="sh_tel"></span></p>
+    			<p class="addressinfo">收货地址：<span></span></p>
+    		</div>
+    		<div class="goods_box">
+    			<div class="goods_msg">
+    				<img src=""/>
+    				<p></p>
+    			</div>
+    		</div>
+    		<div class="order_msg">
+    			<div>
+    				<p>配送方式：<span><em>免邮</em>普通快递</span></p>
+    				<p>商品积分：<span><i>200</i>积分</span></p>
+    			</div>
+    		</div>
+    		<input type="button" name="" id="tjdd" value="提交订单" />
+    	</div>
+    	<div id="alert">
+			<div class="window_res window">
+				<img src="img/sucess.png" />
+				<p class="tip_msg">商品兑换成功</p>
+				<input type="button" id="res_btn" value="确定" />
+			</div>
+			<div class="window_confirm window">
+				<img src="img/alert_tip.png" />
+				<p class="confrim">确定使用<span></span>积分兑换?</p>
+				<p class="a_box">
+					<a href="javascript:;" class="cancel">取消</a>
+					<a href="javascript:;" class="determine">确定</a>
+				</p>
+			</div>
+		</div>
+		<div id="addressList">
+			<div class="addAddress">
+				<p>新增收货地址</p>
+			</div>
+			<div class="address_list_box">
+				
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/publictip.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/LAreaData2.js"></script>
+    <script src="js/LArea.js"></script>
+    <script src="/v/js/cfg.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+    <script src="js/order.js?v=1.0.5" type="text/javascript" charset="utf-8"></script>
+    <script>
+	    var area = new LArea();
+	    area.init({
+	        'trigger': '#address',
+	        'valueTo': '#addressval',
+	        'keys': {
+	            id: 'value',
+	            name: 'text'
+	        },
+	        'type': 2,
+	        'data': [provs_data, citys_data, dists_data]
+	    });
+    </script>
+</html>

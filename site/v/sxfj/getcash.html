@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>汾酒</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.0.7"/>
+	</head>
+	<body>
+		<div id="ani">
+			<img src="img/mountain_t.png" class="m_t"/>
+	    	<img src="img/bird_1.png" class="bird" id="bird"/>
+	    	<div class="poetry_box">
+    			<img src="img/icon_jiu.png" class="jiu"/>
+	    	</div>
+	    	<img src="img/tree.png" class="tree"/>
+	    	<img src="img/mountain_m.png" class="m_m"/>
+	    	<div class="child">
+	    		<img src="img/yellow.png" class="child"/>
+	    		<img src="img/hand_l.png" class="hand_l"/>
+	    		<div class="cash_s_box">
+	    			<img src="img/hand_r.png" class="hand_r"/>
+	    			<img src="img/cash_s.png" class="cash_s"/>
+	    		</div>
+	    		<img src="img/cash_big.png" class="cash_b"/>
+	    	</div>
+	    	<div id="jump"></div>
+	    	<div class="yy"><img src="img/icon_yy_3.png"/><span></span></div>
+	    	
+		</div>
+		<div id="box" style="display: none;">
+    		<img src="img/mountain_t.png" class="m_t"/>
+	    	<img src="img/bird.png" class="bird"/>
+	    	<div class="content" style="display: block;">
+	    		<img src="img/mountain_m.png" class="m_m"/>
+	    		<p class="money"><img src="img/icon_money_l.png" class="left"/><span></span><img src="img/icon_money_r.png"/></p>
+		    	<img src="img/poetry_1.png" class="poetry"/>
+		    	<div id="btn"></div>
+		    	<p class="tip">
+		    		根据微信平台要求，红包累计大于等于1元后可提现， 不足1元的红包我们为您贴心准备了零钱包功能 
+		    	</p>
+		    	<p class="loop"><a href="javascript:;" id="loop">再听一遍</a></p>
+		    	<p class="rule_box">
+		    		<a href="javascript:;" id="rule">活动规则</a>
+		    		<a href="javascript:;" id="private">隐私说明</a>
+		    	</p>
+	    	</div>
+    	</div>
+    	<div id="tx_tip">
+    		<img src="img/tx_tip.png" class="tx_tip"/>
+    	</div>
+    	<img src="img/mountain_b.png" class="m_b"/>
+    	<audio id="audio" src="" autoplay="autoplay"></audio>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/static/js/vve/21tpl.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/v/js/cfg.js?v=1.0.5"></script>
+	<script src="/v/js/publictip.js?v=3.0.1"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/font.js"></script>
+	<script src="js/getcash.js?v=1.4.4" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 牛位置
+			$('div.child').css({'top':'9rem','-webkit-transform': 'scale(.9)'});
+		}
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		})
+	</script>
+	<script>
+      ini_wxshare(vge.sxfjappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+</html>

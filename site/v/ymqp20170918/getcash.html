@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒激情银麦</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.12" />
+</head>
+
+<body>
+    <!-- 提现成功提示页 -->
+    <div class="alert">
+        <img src="img/alert.png" class="tx_tip" />
+    </div>
+    <!-- 红包页面 -->
+    <div class="up">
+        <div id="ani_1">
+            <img src="img/rabbit_1.png" class="rabbit_1" />
+            <img src="img/lantern.png" class="lantern" />
+        </div>
+        <div id="ani_2">
+            <img src="img/rabbit_2.png" class="rabbit_2" />
+            <div class="cash_s">
+                <img src="img/open.png" class="open" />
+            </div>
+        </div>
+        <!-- 孔明灯 -->
+        <img src="img/light_1.png" class="light1 light">
+        <img src="img/light_1.png" class="light2 light">
+        <img src="img/light_1.png" class="light3 light">
+        <img src="img/light_2.png" class="light4 light">
+        <img src="img/light_2.png" class="light5 light">
+        <img src="img/light_2.png" class="light6 light">
+        <img src="img/light_2.png" class="light7 light">
+        <img src="img/light_2.png" class="light8 light">
+        <img src="img/tianan.png?v=2" class="tianan">
+        <img src="img/slogan.png?v=1" class="slogan" />
+    </div>
+    <!-- 拆开红包页面 -->
+    <div class="down">
+        <img src="img/loading.gif" class="loading" />
+        <p class="title">恭喜您获得</p>
+        <p class="money"></p>
+        <div id="ani_11">
+            <img src="img/rabbit_1.png" class="rabbit_11" />
+            <img src="img/lantern.png" class="lantern1" />
+            <img src="img/rabbit_4.png" class="rabbit_4" />
+            <div class="pic_box">
+                <img src="img/sleep.png" class="sleep" />
+            </div>
+            <div id="btn"></div>
+        </div>
+        <p class="tip">温馨提示：累计金额超过1元可提现</p>
+        <p class="rule_box">
+            <a href="javascript:;" class="pravite">隐私说明</a>
+            <a href="javascript:;" class="rule">活动规则</a>
+        </p>
+        <img src="img/tianan.png?v=3" class="bottom_bg" />
+        <img src="img/game.png" class="game">
+    </div>
+    <!-- 广告页面 -->
+    <div id="ad">
+        <img src="img/ad.jpg" class="ad">
+        <a href="javascript:;" class="close">关闭</a>
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/12event.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=1"></script>
+<script src="/v/js/cfg.js?v=1.0.1"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=1.1.13" type="text/javascript" charset="utf-8"></script>
+<script>
+    ini_wxshare(vge.ymqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

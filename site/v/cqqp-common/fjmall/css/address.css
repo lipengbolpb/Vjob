@@ -1,0 +1,120 @@
+#address_list{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background: #f8f8f8;
+	-webkit-overflow-scrolling: touch;
+	font-size: .56rem;
+	padding-bottom: 2.5rem;
+	box-sizing: border-box;
+}
+#address_list .address_item{
+	width: 100%;
+	background: #fff;
+	margin-bottom: .4rem;
+}
+#address_list .address_item .operate_box{
+	display: flex;
+	display: -webkit-flex;
+	padding: 0 .45rem;
+	justify-content: space-between;
+	line-height: 2rem;
+	border-bottom: 2px #F5F5F5 solid;
+}
+#address_list .address_item .operate_box>div p{
+	padding-left: .9rem;	
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: .685rem auto;
+	-webkit-background-size: .685rem auto;
+}
+#address_list .cur.address_item .operate_box>div:nth-of-type(1)>p{
+	background-image: url(../img/icon-selected.png);
+	color: #0c4291;
+}
+#address_list .address_item .operate_box>div:nth-of-type(1)>p{
+	background-image: url(../img/icon-noselect.png);
+	color: #0c4291;
+}
+#address_list .address_item .operate_box .select{
+	width: 4rem;
+}
+#address_list .address_item .operate_box .change{
+	background: url(../img/icon-change.png) no-repeat .75rem;
+	background-size: .685rem auto;
+	-webkit-background-size: .685rem auto;
+}
+#address_list .address_item .operate_box .delete{
+	background: url(../img/icon-delete.png) no-repeat .75rem;
+	background-size: .685rem auto;
+	-webkit-background-size: .685rem auto;
+}
+#address_list .address_item .operate_box>div:nth-of-type(2){
+	display: flex;
+	display: -webkit-flex;
+}
+#address_list .address_item .operate_box>div:nth-of-type(2) p{
+	padding-left: 1.7rem;	
+}
+
+#address_list .address_item .address_msg{
+	padding: 0.6rem .5rem;
+}
+#address_list .address_item .address_msg>p:nth-of-type(1){
+	font-size: .61rem;
+}
+
+#btn_box,#btn_box_save{
+	height: 2.95rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	background: #fff;
+}
+#add,#save{
+	width: 7.5rem;
+	height: 2.1rem;
+	margin: .45rem auto;
+	text-align: center;
+	line-height: 2.1rem;
+	color: #fff;
+	background: #df0024;
+	font-size: .75rem;
+	border-radius: 2px;
+}
+#addaddress{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;	
+	background: #f8f8f8;
+}
+#addaddress .new_address{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+#addaddress .new_address ul li{
+	display: flex;
+	display: -webkit-flex;
+	font-size: .61rem;
+	color: #656565;
+	padding: 0 .6rem;
+	line-height: 2.1rem;
+	border-bottom: 2px #F5F5F5 solid;
+}
+#addaddress .new_address ul li p{
+	width: 3.1rem;
+}
+#addaddress .new_address ul li input{
+	max-width: 80%;
+	width: 75%;
+	border: 0;
+	color: #656565;
+	outline: none;
+}

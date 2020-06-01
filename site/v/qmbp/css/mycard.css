@@ -1,0 +1,425 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+img {
+    border: none
+}
+ul,li{
+	list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+body{
+	background: url(../img/jk/mycardBg.png) no-repeat top left;
+	background-size: 100% 100%;
+}
+p,div,input,span{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#card_box{
+	/* width: 100%; */
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/jk/mycardBg.png) no-repeat top right;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	/*display: none;*/
+}
+#card_box .slogan{
+	width: 12.6rem;
+	display: block;
+	margin: 1.6rem auto .1rem;
+	transform: translateX(.3rem);
+}
+
+#card_box .rule{
+	font-size: .56rem;
+    position: absolute;
+    right: -.2rem;
+    top: .3rem;
+}
+#card_box .rule .btn{
+	width:2.6rem;
+}
+
+#pic_box img{
+	/* width: 84%; */
+	width:12rem;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: block;	
+}
+#ul_box{
+	width: 100%;
+	overflow-y: hidden;
+	padding-left: .75rem;
+	margin-top: .4rem;
+	-webkit-overflow-scrolling: touch;
+	top: -3rem;
+    position: relative;
+}
+#card_list{
+	width: 180%;
+	overflow: hidden;
+}
+#card_list li{
+	width:3.5rem;
+	height: 4rem;
+	position: relative;
+	margin-right: .4rem;
+	float: left;
+}
+#card_list li img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#card_list li i{
+	position: absolute;
+	right: 0;
+	/* top: 0.2rem; */
+	top:0;
+	line-height: .6rem;
+	width: .6rem;
+	color: #fff;
+	background: #ff0000;
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: .45rem;
+	text-align: center;
+	display: none;
+}
+#exchange{
+	width: 6.8rem;
+	height:1.9rem;
+	background-image: url(../img/jk/exchange.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	margin: .8rem auto 0;
+	outline: none;
+	border: 0;
+	position: relative;
+    top: -2.4rem;
+}
+#exchange.ex{
+	background-image: url(../img/jk/unExchange.png);
+}
+
+/*集卡完成，兑换*/
+#finish{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/* background: url(../img/right-top-bg.png) no-repeat top right;
+	-webkit-background-size: 3rem auto;
+	background-size: 3rem auto; */
+	display: none;
+}
+#finish .slogan{
+	width: 12.6rem;
+	display: block;
+	margin: 1.6rem auto .1rem;
+	transform: translateX(.3rem);
+}
+#finish .rule{
+	font-size: .56rem;
+    position: absolute;
+    right: -.2rem;
+    top: .3rem;
+}
+#finish .rule .btn{
+	width:2.6rem;
+}
+#finish .cash{
+	width: 11rem;
+	height: 13.6rem;
+	margin: 2.6rem auto 1.8rem;
+	background: url(../img/jk/jk-cash.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	overflow: hidden;
+	text-align: center;
+	color: #f3ca92;
+	transform: scale(.95);
+}
+#finish .cash .title{
+	margin-top: 6.4rem;
+	font-size: .67rem;
+}
+#finish .cash .money{
+	font-size: .88rem;
+	font-weight: bold;
+}
+#finish .cash .money span{
+	font-size: 1.5rem;
+}
+/* 集卡兑换现金 */
+#finish .cashBox{
+	display: none;
+}
+/* 集卡兑换实物大奖 */
+#finish .prizeBox{
+	display: none;
+}
+#finish .prizeBox .prize{
+	position: relative;
+	width: 11rem;
+	height: 13.6rem;
+	margin: 2.6rem auto 1.8rem;
+}
+#finish .prizeBox .prizeImg{
+	position: absolute;
+	width:100%;
+}
+#finish .prizeBox #getAward{
+	width: 7.8rem;
+	height:2rem;
+	background-image: url(../img/jk/getPrize-jk.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	margin:0 auto .5rem;
+	outline: none;
+	border: 0;
+}
+/* 集卡兑换实物大奖 end */
+
+/* 大奖信息 */
+/* 提交大奖领取信息表单begin */
+.alertMsg{
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	overflow: hidden;
+	display: none;
+}
+.alertMsg .msg_box{
+	width: 13.25rem;
+	overflow: hidden;
+	margin:6rem auto;
+    background-image: linear-gradient(to right, #fdf097, #f49c21);
+	border-radius: 5px;
+	position: relative;
+}
+/* 灯笼 */
+.lantern{
+	width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+}
+.alertMsg .prize_close{
+	position: absolute;
+    right: 2.8rem;
+    top: 3.8rem;
+	width: 1.75rem;
+	z-index: 3;
+}
+.alertMsg .msg_box .prize_title{
+	width: 10.3rem;
+	display: block;
+	margin: 1rem auto;
+}
+
+.alertMsg .msg_box>div{
+	background: #fff;
+	height: 3.2rem;
+	box-sizing: border-box;
+	border-bottom: 1px #ccc solid;
+	line-height: 3.2rem;
+	display: flex;
+	font-size: .66rem;
+}
+.alertMsg .msg_box>div>span{
+	color: #333;
+	width: 3.75rem;
+	text-align: right;
+	display: block;
+}
+.alertMsg .msg_box>div input{
+	border: 0;
+	outline: none;
+	font-weight: bold;
+	color: #000;
+	font-size: .61rem;
+	font-family: '微软雅黑';
+	text-indent: .5rem;
+	z-index: 4;
+}
+
+.alertMsg .msg_box .tj_box{
+	display: block;
+	overflow: hidden;
+	height: 3rem;
+}
+.alertMsg .msg_box .tj_box p.tj{
+	width: 7.8rem;
+	height:2rem;
+	background-image: url(../img/jk/tj.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	margin:0.8rem auto .5rem;
+	outline: none;
+	border: 0;
+}
+#yz_code{
+	width: 5rem;
+}
+#get_yz{
+	font-size: .47rem;
+	color: #f28f0f;
+	border: 1px #f28f0f solid;
+	border-radius: 5px;
+	display: inline;
+	line-height: 1rem;
+	height: 1rem;
+	text-align: center;
+	width: auto;
+	padding: 0 .3rem;
+	margin-top: 1rem;
+	box-sizing: border-box;
+}
+/* 提交大奖领取信息表单end */
+#tx{
+	width: 7.8rem;
+	height:2rem;
+	background-image: url(../img/jk/btn-tx.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	margin:0 auto .5rem;
+	outline: none;
+	border: 0;
+}
+#toexchange{
+	width: 6.8rem;
+	height:1.9rem;
+	background-image: url(../img/btn-exchange.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	margin: 0 auto 0;
+	outline: none;
+	border: 0;
+}
+
+#tx-alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.7);
+	top: 0;
+	left: 0;
+	z-index: 9;
+	position: absolute;
+	display: none;
+}
+#tx-alert img{
+	width: 12rem;
+	display: block;
+	margin: 4.25rem auto;
+} 
+/*全面屏*/
+.screen #pic_box{
+    margin: 1.7rem auto 0;
+}
+.screen #finish .cash{
+	margin: 3rem auto;
+}
+.screen #exchange{
+	margin: 1.8rem auto 0;
+}

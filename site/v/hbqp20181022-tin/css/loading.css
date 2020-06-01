@@ -1,0 +1,10 @@
+@charset "utf-8";
+#loading{
+	position: fixed;
+	z-index: 1000;
+	width: 2rem;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	display: none;
+}

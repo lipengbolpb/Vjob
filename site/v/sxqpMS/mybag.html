@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享山西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1.0.9"/>
+	</head>
+	<body>
+		<div class="mybag_top">
+			<img src="img/logo.png" class="logo"/>
+			<img src="img/bag_title.png" class="pic_title"/>
+			<p class="bottle_num"><span id="num"></span>瓶</p>
+			<div style="display: inline-block;text-align: left;"><p class="balance">账户余额：<span id="dom_balance"></span>元</p><p class="sent">已领红包：<span id="add_money"></span>元</p></div>
+			<input type="button" name="tx" id="tx" value="立即提现" />
+			<a href="javascript:;" class="details">查看详细记录</a>
+		</div>
+		<div class="mybag_bottom">
+			<div class="record">
+				<input type="button" name="" id="hide" value="收  起" />
+				<ul id="mon_list">
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="tx_mark" style="display: none;">
+			<img src="img/tx_tip.png" class="tx_mark"/>
+		</div>
+		<img src="img/loading.gif" id="loading"/>
+		<p id="copyright" style="color:#482000;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">技术支持：V积分 · 鼎川物联Copyright 2012-2019</p>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+	    <li>
+	      	<p class="title list_left">
+				<span class="title">[=monwhere]</span><br />
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_left"><span style="color:[=color];">[=money]</span></p>
+      	</li>
+    </script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script type="text/javascript" src="/static/js/vve/21tpl.js?v=2"></script>
+	<script src="/v/js/cfg.js?v=2.0.6"></script>
+	<script src="/v/js/publictip.js?v=3"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=2"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mybag.js?v=1.1.3" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  	ini_wxshare(vge.sxqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>V积分码源工具箱</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/alertTip.css?v=1"/>
+		<link rel="stylesheet" type="text/css" href="css/query.css?v=1.0.5"/>
+	</head>
+	<body>
+		<div class="msg_box" style="display: none;">
+			<p>
+				<span>所属企业</span>
+				<select name="">
+					<option value="" ></option>
+				</select>
+			</p>
+		</div>
+		<input type="button" name="" id="btn" value="查询" style="display: none;"/>
+		<div class="content" style="display: none;">
+			<p>
+				<span>所属企业</span>
+				<b class="shortName"></b>
+			</p>
+			<p>
+				<span>产品名称</span>
+				<b class="skuName"></b>
+			</p>
+			<p>
+				<span>辅料箱码/垛码</span>
+				<b class="batchDesc"></b>
+			</p>
+			<p>
+				<span>该箱/垛码数量</span>
+				<b class="vcodeCounts"></b>
+			</p>
+			<p>
+				<span>激活工厂</span>
+				<b class="activateFactoryName"></b>
+			</p>
+			<p>
+				<span>激活时间</span>
+				<b class="activateTime"></b>
+			</p>
+			<p>
+				<span>激活人员</span>
+				<b class="activateUserName"></b>
+			</p>
+			<p>
+				<span>手机号</span>
+				<b class="activatePhone"></b>
+			</p>
+		</div>
+		<div id="alertTip">
+			<div id="alertContent">
+				<p class="alertTitle"></p>
+				<p class="alertContent"></p>
+				<span id="alertBtn"></span>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.4.2"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/alertTip.js?v=1" type="text/javascript" charset="utf-8"></script>
+	<script src="js/query.js?v=1.6.5" type="text/javascript" charset="utf-8"></script>
+	
+</html>

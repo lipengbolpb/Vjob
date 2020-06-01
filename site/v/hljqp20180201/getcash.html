@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤豪情龙江</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.4" />
+		<link rel="stylesheet" type="text/css" href="css/jiuwang.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1"/>
+		<link rel="stylesheet" href="/v/hbqp-common2.0/css/happyNewYear.css?v=4.4">
+	</head>
+
+	<body>
+		<div class="happyNewYear" style="z-index: 10;">
+		    <div class="curtain">
+		        <img src="/v/hbqp-common2.0/img/happyNewYear/curtain-bg.png" class="curtain-bg">
+		        <img src="/v/hbqp-common2.0/img/happyNewYear/curtain-left.png" class="curtain-left">
+		        <img src="/v/hbqp-common2.0/img/happyNewYear/curtain-right.png" class="curtain-right">
+		        <img src="/v/hbqp-common2.0/img/happyNewYear/curtain-logo.png" class="curtain-logo">
+		        <div class="textTop">
+		            <img src="/v/hbqp-common2.0/img/happyNewYear/text-1.png" class="text-1">
+		            <div class="foamBox1">
+		                <img src="/v/hbqp-common2.0/img/happyNewYear/text-1-mask.png" class="text-1-foam text-foam">
+		            </div>
+		        </div>
+		        <div class="textBottom">
+		            <img src="/v/hbqp-common2.0/img/happyNewYear/text-2.png" class="text-2">
+		            <div class="foamBox2">
+		                <img src="/v/hbqp-common2.0/img/happyNewYear/text-2-mask.png" class="text-2-foam text-foam">
+		            </div>
+		        </div>
+		        <img src="/v/hbqp-common2.0/img/happyNewYear/beer.png" class="beer">
+		    </div>
+		</div>
+		<img src="img/logo.png" class="logo" />
+		<img src="img/index.png?v=1" class="index" />
+		<div class="cash">
+			<div class="cash_box">
+				<p class="money"></p>
+				<p class="tip"><span>温馨提示：红包大于1元可提现</span></p>
+			</div>
+			<div id="btn">
+			</div>
+			<p class="rule_box">
+				<a href="javascript:;" class="rule">活动规则</a>
+				<a href="javascript:;" class="pravite">隐私说明</a>
+			</p>
+			<img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/>
+		</div>
+		<div id="alert">
+			<img src="img/alert.png" class="alert" />
+		</div>
+		<img src="img/loading.gif" id="loading" />
+		<!--2018酒王-->
+		<div id="jw_box">
+			<img src="/v/vjfhls/img2018/icon-close.png" class="jw_close"/>
+			<div class="jw_content">
+				<img src="/v/vjfhls/img2018/jw_content_1.png"/>
+				<img src="/v/vjfhls/img2018/jw_content_2.png"/>
+				<img src="/v/vjfhls/img2018/jw_content_3.png"/>
+				<img src="/v/vjfhls/img2018/jw_content_4.png"/>
+			</div>
+			<img src="/v/vjfhls/img2018/jw_person.png" class="jw_person"/>
+			<div class="qrcode_box">
+				<img src="/v/vjfhls/img2018/heilj.png"/>
+			</div>
+		</div>
+		<!--2018酒王-->
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<!-- 84k -->
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/cfg.js?v=2.1.6"></script>
+    <script src="/v/js/publictip.js?v=1"></script>
+    <!-- 新年活动页 -->
+    <script src="/v/hbqp-common2.0/js/happyNewYear.js?v=8"></script>
+	<script src="js/getcash.js?v1.1.9" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		if(hwb < 1.5) { //矮屏幕手机 
+			$('p.rule_box').css({
+				'padding-top': '0'
+			});
+		}
+	</script>
+
+</html>

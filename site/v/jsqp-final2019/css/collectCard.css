@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background:#efca9e url(../img/card/bg.png) repeat bottom;
+    background-size:100% auto;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+/* 福卡列表层 */
+.card_box{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+.card_box .back{
+	position: absolute;
+	left: .5rem;
+	width: 1.5rem;
+	top: .5rem;
+}
+.horn{
+	position: absolute;
+	right: -.15rem;
+	top: -.15rem;
+	height: 3.15rem;
+	width: 3.15rem;
+	background: url(../img/card/horn.png) no-repeat right;
+	-webkit-background-size: 3.15rem auto;
+	overflow: hidden;
+}
+.horn span{
+	font-size: .5rem;
+	color: #fff;
+	transform: rotate(45deg) translateX(1rem);
+	display: block;
+	margin: 0.5rem auto 0;
+}
+.slogan{
+	width: 8.3rem;
+	display: block;
+	margin: .8rem auto 0;
+}
+.title{
+	font-size: .6rem;
+	color: #961d22;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.card_box .bigbag{
+	height: 11.65rem;
+	margin: 0.5rem auto;
+	overflow: hidden;
+	background: url(../img/card/circle-bg.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	padding: 1rem 0;
+	-webkit-box-sizing: border-box;
+	transform-origin: top;
+}
+.card_box .bigbag.scale{
+	transform: scale(.8);
+}
+.card_box .bigbag .bottle_bg{
+	height: 100%;
+	background: url(../img/card/bag-no.png) no-repeat center;
+	-w-webkit-background-size: 8.6rem auto;
+	background-size: 8.6rem auto;
+	padding-top: 3.75rem;
+	-webkit-box-sizing: border-box;
+}
+.card_box .bigbag .bottle_bg.finish{
+	background: url(../img/card/bag-finish.png) no-repeat center;
+	-w-webkit-background-size: 8.6rem auto;
+	background-size: 8.6rem auto;
+}
+.card_box .bigbag .bottle_bg img{
+	display: block;
+	margin: 0 auto;
+	height: 4.5rem;
+}
+.card_box .bottle_ls{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 .5rem;
+}
+.card_box .bottle_ls div{
+	position: relative;
+	width: 2.5rem;
+	background: url(../img/card/bag-s-no.png) no-repeat top;
+	background-size: 2.5rem auto;
+	text-align: center;
+}
+.card_box .bottle_ls div.finish{
+	background: url(../img/card/bag-s.png) no-repeat top;
+	--webkit-background-size: 2.5rem auto;
+	background-size: 2.5rem auto;
+}
+.card_box .bottle_ls div.finish i{
+	visibility: visible;
+}
+.card_box .bottle_ls div i{
+	font-style: normal;
+    background: #ff0000;
+    border-radius: 50%;
+    font-size: .4rem;
+    color: #fff;
+    position: absolute;
+    right: .1rem;
+    top: -0.3rem;
+    width: .6rem;
+    height: .6rem;
+    line-height: .6rem;
+	visibility: hidden;
+}
+.card_box .bottle_ls div img{
+	display: block;
+	height: 1.35rem;
+	margin: 1.1rem auto 0;
+}
+.card_box .bottle_ls div span{
+	font-size: .45rem;
+	color: #666;
+}
+.card_box .bottle_ls div.finish span{
+	color: #bf0a03;
+}
+#exchange{
+	width: 7.45rem;
+	height: 1.925rem;
+	text-align: center;
+	line-height: 1.925rem;
+	font-size: .8rem;
+	font-weight: bold;
+	color: #4c4c4c;
+	border-radius: .75rem;
+	background: #ccc;
+	margin: 0.75rem auto;
+	box-shadow: -2px 2px 4px #000;
+}
+#exchange.finish{
+	background: #f6bf62;
+	color: #8c0016;
+}
+/* 达标页面 */
+#finish{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background:#efca9e url(../img/card/bg.png) repeat bottom;
+	background-size:100% auto;
+	padding-bottom: 2rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	display: none;
+}
+#finish .bigbag{
+	height: 11.65rem;
+	width: 100%;
+	margin: 0.5rem auto;
+	overflow: hidden;
+	background: url(../img/card/circle-bg.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	padding: 1rem 0;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+}
+#finish .bigbag .bottle_bg{
+	height: 100%;
+	background: url(../img/card/bag-finish.png) no-repeat center;
+	-w-webkit-background-size: 8.6rem auto;
+	background-size: 8.6rem auto;
+	padding-top: 3.75rem;
+	-webkit-box-sizing: border-box;
+	color: #f5cf62;
+}
+#finish .bigbag .bottle_bg>span{
+	font-size: .8rem;
+	padding: 0 .5rem;
+	background: url(../img/card/icon-diamond.png) no-repeat left center,url(../img/card/icon-diamond.png) no-repeat right center;
+	background-size: .4rem auto,.4rem auto;
+}
+#finish .bigbag .bottle_bg>p{
+	font-size: 2rem;
+	font-weight: bold;
+}
+#finish .bigbag .bottle_bg>p>span{
+	font-size: .7rem;
+	border-radius: 50%;
+	width: .95rem;
+	height: .95rem;
+	line-height: .95rem;
+	background: #f5cf62;
+	color: #b41a15;
+	display: inline-block;
+	font-weight: normal;
+	position: relative;
+	bottom: .15rem;
+}
+#give_spack{
+	width: 7.45rem;
+	height: 1.925rem;
+	text-align: center;
+	line-height: 1.925rem;
+	font-size: .8rem;
+	font-weight: bold;
+	background: #f6bf62;
+	color: #8c0016;
+	border-radius: .75rem;
+	margin: 0.75rem auto;
+	box-shadow: -2px 2px 4px #000;
+}
+/* 提现 alert */
+#alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background:#efca9e url(../img/card/bg.png) repeat bottom;
+	background-size:100% auto;
+	display: none;
+}
+#alert>div{
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+}
+#alert>div img{
+	display: block;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	width: 80%;
+	transform: translate(-50%,-50%);
+}

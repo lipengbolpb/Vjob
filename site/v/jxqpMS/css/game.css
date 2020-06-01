@@ -1,0 +1,196 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑", "Microsoft YaHei";
+  background: #004623;
+  /* background-size: 100% auto; */
+  overflow: hidden;
+  position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+  outline: 0;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  -webkit-opacity: 1;
+}
+
+
+
+.game-wrap {
+  width: 100%;
+  height: 100%;
+  background: url('../img/z-game-bg.png') no-repeat top left;
+  background-size: 100% auto;
+  background-color: #e71c1b;
+  overflow: hidden;
+}
+
+.game-wrap .game-box {
+  width: 100%;
+  height: 15.671642rem;
+  margin-top: 9.296375rem;
+  position: relative;
+  overflow: hidden;
+}
+.game-wrap .game-box .game-disk {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.game-wrap .game-box .disk-bg {
+  width: 14.626866rem;
+  height: 14.648188rem;
+  position: absolute;
+  top: 0;
+  left: .682303rem;
+}
+.game-wrap .game-box .disk-bg.liang.hide {
+  opacity: 0;
+}
+.game-wrap .game-box .prize-disk {
+  height: 13.091684rem;
+  width: 13.091684rem;
+  background: url('../img/z-game-prizes.png') no-repeat center;
+  background-size: cover;
+  margin: .810235rem 1.492537rem;
+  position: relative;
+  z-index: 9;
+  transition: ease 4s;
+  -webkit-transition: ease 4s;
+  -moz-transition: ease 4s;
+}
+
+.game-wrap .game-box .btn-pointer {
+  height: 5.010661rem;
+  width: 3.432836rem;
+  background: url('../img/z-game-zhizhen.png') no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 4.221748rem;
+  left: 6.289979rem;
+  z-index: 11;
+}
+.game-wrap .game-box #btn-start {
+  width: 100%;
+  height: 3.432836rem;
+  margin-top: 1.492537rem;
+}
+.game-wrap .game-box .dizuo {
+  width: 12.260128rem;
+  height: 1.663113rem;
+  background: url('../img/z-game-dizuo.png') no-repeat center;
+  background-size: cover;
+  margin: -0.689659rem auto 0;
+  position: relative;
+  z-index: 0;
+}
+
+#dialog {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+#dialog .dialog-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dialog .dialog-content {
+  height: 15.223881rem;
+  width: 100%;
+} 
+#dialog .dialog-content .warn-tip {
+  /* margin-top: .938166rem; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .767591rem;
+  line-height: 1.23454rem;
+}
+#dialog .dialog-content .prize-content {
+  width: 11.002132rem;
+  height: 11.002132rem;
+  background: url('../img/z-game-tip.png') no-repeat center;
+  background-size: cover;
+  margin: 1.066098rem auto 0;
+}
+#dialog .prize-content img {
+  height: 2.473348rem;
+  width: 9.445629rem;
+  margin: 4.690832rem 1.066098rem 0;
+}

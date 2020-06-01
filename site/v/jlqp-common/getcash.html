@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>TSINGTAO青岛啤酒乐享吉林</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=2.2.15">
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f8e8f448c09ef3f0bf2e84ddad8e07d8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <img src="img/logo.png" class="logo">
+    <img src="img/loading.gif" class="loading" id="loading">
+    <div class="get">
+        <img src="img/slogan.png?v=4" class="slogan">
+        <div class="border"></div>
+        <div class="bg"></div>
+        <div class="hb">
+            <img src="img/hb-get.png" class="hbGet">
+            <img src="img/open.png" class="open">
+        </div>
+        <img src="img/beer.png" class="beer">
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+    </div>
+	<div class="cash">
+ 
+        <!-- 送酒上门按钮 -->
+        <img id="btn-to-home" src="img/btn-to-home-new.png">
+
+        <img src="img/hb-cash.png" class="hbCash">
+        <div class="msg">
+            <p class="congratulate">恭喜你获得</p>
+            <p class="prize">
+                <span>¥</span>
+                <span id="money">0.00</span>
+                <span>元</span>
+            </p>
+        </div>
+        <input type="button" value="立即提现" id="btn">
+        <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，
+            <br>不足1元的红包将存入零钱包</p>
+        <div class="link" style="text-align: center;">
+            <a class="rule">活动规则</a>
+            <a class="explain">隐私说明</a>
+        </div>
+		<p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>  <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+    </div>
+    <div class="repcash">
+        <p class="title">您已扫过</p>
+        <p class="only">每瓶仅限扫码一次</p>
+        <img src="img/beer.png" class="beer">
+        <input type="button" value="立即提现" id="repbtn">
+        <p class="earn">
+            您已于<span class="earnTime">undefined</span>扫过这瓶酒<br>并获得<span class="earnMoney">¥0元</span>
+        </p>
+        <div class="link" style="text-align: center;">
+            <a class="rule">活动规则</a>
+            <a class="explain">隐私说明</a>
+        </div>
+		<p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>  <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+    </div>
+    <div class="mask">
+        <p class="qin">亲，注意聊天消息里的【服务通知】
+            <br>看到这样的消息72小时内要点开收钱！</p>
+        <img src="img/alert.png" class="alert">
+        <input type="button" value="我知道了" class="ck">
+    </div>
+    <div id="sign">
+        <div class="sign_alert">
+            <div class="close close_1"></div>
+            <p class="days"></p>
+        </div>
+        <div class="content">
+            <div class="close"></div>
+            <img src="/v/jlqp-common/img2/sign_title.png" class="sign_title" />
+            <div id="progress_box2">
+                <div class="progress1">
+                    <p id="progress2"></p>
+                </div>
+                <span class="progress"></span>
+            </div>
+            <ul id='week'>
+                <li>周一</li>
+                <li>周二</li>
+                <li>周三</li>
+                <li>周四</li>
+                <li>周五</li>
+                <li>周六</li>
+                <li>周日</li>
+            </ul>
+            <ul id="check_box">
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+                <li><span class="checks"></span></li>
+            </ul>
+            <div class="sign_cash">
+                <p id="weekSignEarnMoney"></p>
+            </div>
+            <p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+        </div>
+        <div class="getSignCash">
+            <p class="weekSignEarnMoney"></p>
+        </div>
+    </div>
+    <div id="active">
+        <img src="/v/jlqp-common/img/20190725.jpg"  class="activeImg"/>
+        <img src="img/close.png" class="activeclose" id="activeclose">
+    </div>
+    <div id="sign_logo" class="sign_logo">
+        <img src="/v/jlqp-common/img2/light.png" class="light" />
+    </div>
+	<!-- 淘彩蛋 -->
+	<div class="taocd">
+		<input type="text" name="" id="tkl" value="￥fl701Yu1oY7￥ https://m.tb.cn/h.VauwylE" readonly/>
+		<div class="cdbox">
+			<img src="/v/jlqp-common/img/taocd.png" class="caidan" data-clipboard-action="copy" data-clipboard-target="#tkl">
+			<p class="close_cd"></p>
+		</div>
+    </div>
+    
+    <!-- toast -->
+    <div id="toast" style="display: none; width:5.6em;height:5.6em;font-size: 16px;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast"></i>
+            <p class="weui_toast_content">已完成</p>
+        </div>
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<!-- 新年活动页 -->
+<!-- <script src="js/happyNewYear.js?v=8"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.2.0"></script>
+<script src="/v/jlqp-common/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=5.8.23"></script>
+<!-- <script>
+    ini_wxshare(vge.jlqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script> -->
+<script type="text/javascript">
+	if(sessionStorage.activityVersion=='5'){
+		$('.slogan').attr('src','/v/jlqp-common/img/slogan_cg.png').css('width','11rem');
+		$('.beer').attr('src','/v/jlqp-common/img/beer_cg.png');
+	}
+</script>
+</html>

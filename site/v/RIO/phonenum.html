@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>锐澳RIO鸡尾酒</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=1.0.3" />
+		<style type="text/css">
+			#box {
+				background: url(/v/RIO/img/bg_phone.png) no-repeat center;
+				-webkit-background-size: 100%;
+				position: relative;
+			}
+			
+			img.logo_t {
+				width: 3.15rem;
+				margin: 1.15rem 0 0 .8rem;
+			}
+			
+			img.content {
+				width: 12.95rem;
+				margin: -.75rem auto 0;
+			}
+			
+			div.phonenum_box {
+				width: 9.75rem;
+				height: 7.5rem;
+				margin: 0.8rem auto 0;
+				overflow: hidden;
+				background: url(/v/RIO/img/button_1.png) no-repeat center;
+				-webkit-background-size: 100% auto;
+			}
+			
+			div.phonenum_box input {
+				border: 0;
+				text-align: center;
+				width: 7.75rem;
+				height: 1.5rem;
+				margin-left: .65rem;
+				margin-top: .2rem;
+				text-align: center;
+				font-size: .6rem;
+				color: #000;
+			}
+			
+			div.phonenum_box #btn {
+				width: 6.25rem;
+				height: 1.5rem;
+				margin: 1.5rem 0 0 1.7rem;
+			}
+			
+			img.logo_b{
+				margin: 0 auto;
+				width: 8rem;
+				position: absolute;
+				bottom: .5rem;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+			}
+			
+			@media only screen and (max-height: 519px) {
+				img.content {
+					width: 10rem;
+					margin: -.75rem auto 0;
+				}
+				div.phonenum_box {
+					width: 9.75rem;
+					margin: 0.4rem auto 0;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<img src="/v/RIO/img/logo_t.png?v=1" class="logo_t" />
+			<img src="/v/RIO/img/write_phone.png" class="content" />
+			<div class="phonenum_box">
+				<input type="tel" name="" id="phonenum" value="" placeholder="输  入  手  机  号" maxlength="11" />
+				<p id="btn"></p>
+			</div>
+			<img src="/v/RIO/img/logo.png" class="logo_b" />
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<!-- 84k -->
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=2.2.0"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="js/phone.js?v=2.0.0" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 牛位置
+			$('.content').css({'width':'10rem','margin':'-.75rem auto 0'});
+			$('.phonenum_box').css({'width':'9.75rem','margin':'0.4rem auto 0'});
+		}
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		});
+		document.querySelector('body').style.height = document.documentElement.clientHeight + 'px';
+	</script>
+</html>

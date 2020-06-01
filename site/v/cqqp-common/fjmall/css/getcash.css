@@ -1,0 +1,121 @@
+
+#cash{
+	width: 100%;	
+	height:100%;
+	overflow: hidden;
+	background: url(../img/cash-bg.png) no-repeat center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+#currentjf{
+	width: 11.1rem;
+	height: 16.2rem;
+	margin: 3.3rem auto 0;
+	background: url(../img/cash-border.png?v=1) no-repeat center;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#currentjf p{
+	margin: 4.8rem auto 0;
+	width: 1em;
+	font-size: 1.2rem;
+    letter-spacing: 1.2rem;
+    color: #124489;
+    line-height: 1em;
+    font-weight: bold;
+}
+#currentjf p span{
+	line-height: 1.7rem;
+	font-size: 1rem;
+	color: #dc0420;
+	letter-spacing:0;
+	-webkit-transform: translateX(-50%);
+	position: relative;
+	left: 50%;
+	display: block;
+	width: 3.5rem;
+	text-align: center;
+}
+#currentjf a{
+	display: block;
+    width: 3.5rem;
+    height: 6.45rem;
+    position: absolute;
+    right: 1.05rem;
+    top: 7.4rem;
+    background: url(../img/enter-bg.png) no-repeat center;
+    background-size: 1.5rem auto;
+    -webkit-background-size: 1.5rem auto;
+    font-size: .638rem;
+    color: #fff;
+    text-align: center;
+    line-height: .8rem;
+    padding: 1.65rem 1.4rem 0;
+    box-sizing: border-box;
+}
+.xianhe{
+	position: absolute;
+	left: 1rem;
+	top: 16rem;
+	width: 4rem;
+}
+#tip{
+	font-size: .56rem;
+	text-align: center;
+	color: #124489;
+	margin-top: .4rem;
+}
+.minheightscreen #currentjf{
+	margin: 1.5rem auto 0;
+}
+#attention{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+#attention .attention{
+	margin: 4.5rem auto 0;
+	width: 12.8rem;
+	position: relative;
+}
+#attention .attention img{
+	width: 100%;
+	display: block;
+}
+#attention .attention .togz{
+	width: 7.5rem;
+	height: 2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -3.75rem;
+	bottom: 3.2rem;
+}
+#attention .attention .close{
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1rem;
+	bottom: 0rem;
+}
+
+
+
+@media only screen and (max-height: 480px) {
+	#attention .attention{
+		margin: 2.5rem auto 0;
+		width: 11rem;
+	}
+	#attention .attention .togz{
+		bottom: 2.8rem;
+	}
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青花汾酒</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css?v=1.0.4"/>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.1"/>
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="cash">
+			<div id="currentjf">
+				<p></p>
+				<a>立即兑换</a>
+			</div>
+			<!-- <img src="img/xianhe.png"/ class="xianhe"> -->
+			<p id="tip"></p>
+		</div>
+		<div id="attention">
+			<div class="attention">
+				<img src="img/toattention.jpg?v=1.0.0"/>
+				<p class="togz"></p>
+				<span class="close"></span>
+			</div>
+		</div>
+		<div class="screen">
+			<img src="img/screen.jpg" class="screen_pic"/>
+		</div>
+
+		<div id="point-tip">
+			<div class="point-tip-cont">
+				<div class="tip-title">商城商品上架中</div>
+				<div class="tip-text">&nbsp;&nbsp;近期开放，敬请期待！</div>
+				<img src="./img/icon-close.png" alt="" class="close-img">
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/rem.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="js/getcash.js?v=1.1.3" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/screen.js?v=1.0.4" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机
+			document.getElementById("cash").className = 'minheightscreen';
+		}
+	</script>
+</html>

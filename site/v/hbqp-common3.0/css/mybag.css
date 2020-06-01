@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #009140;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+input[type='button'] {
+    box-shadow: 1px 1px 1px #000;
+}
+
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #009140;
+    z-index: 10;
+    display: none;
+}
+
+.qin {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    line-height: 1.2rem;
+}
+
+.alert {
+    width: 85%;
+    display: block;
+    margin: 2rem auto 0;
+    position: relative;
+}
+
+.ck {
+    position: absolute;
+    left: 25%;
+    bottom: 3.5rem;
+    /* margin: 2rem auto; */
+    width: 50%;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #fbc700 !important;
+    color: #d8201f;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px #ca8823 !important;
+    display: block;
+}
+
+.logo {
+    width: 25%;
+    margin: .8rem 0 0 5%;
+    display: block;
+    position: relative;
+}
+
+div.mybag_top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    /* display: none; */
+}
+
+div.content {
+    width: 100%;
+    min-height: 1rem;
+    margin: 3rem auto 0;
+    position: relative;
+	-webkit-transform-origin: top;
+}
+div.content.scale{
+	transform: scaleY(.95);
+}
+div.content_bg{
+    padding-top: 1.1rem;
+    height: 13.2rem;
+    margin:0 auto;
+    background: url(../img/qb-bg.png) no-repeat center;
+    background-size: auto 100%;
+}
+.content p {
+    color: #b36321;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.content p.contentTitle{
+	line-height: 1.675rem;	
+	font-size: .7778rem;
+}
+div.content p.contentMain {
+    margin: 0rem auto 0.8rem;
+    vertical-align: bottom;
+	line-height: 1.9rem;
+	overflow: hidden;
+}
+
+#num {
+    font-size: 2rem;
+    margin-right: 0.2rem;
+	font-weight: bold;
+}
+
+p.addmoney,
+p.balance {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: center;
+    margin-top: .3rem;
+}
+
+/*.balance {
+    margin-top: 0.5rem;
+}*/
+
+
+.btn {
+    width: 100%;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+}
+
+#btn {
+    width: 30%;
+    height: 1.6rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #fbc700;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d8201f;
+    z-index: 9;
+    margin: 0.5rem auto 0;
+    display: block;
+    box-shadow: 0px 5px 5px #5e5e5e;
+}
+
+.lt_xc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    background: #00833a;
+}
+.lt_xc_con{
+    width: 89%;
+    margin:1.3rem auto 0;
+    overflow: hidden;
+}
+.lt_xc_con .lt{
+    float:left;
+    width: 47.5%;
+    position: relative;
+}
+.lt_xc_con .lt-img{
+    width: 100%;
+}
+.lt_xc_con .xc{
+   position: relative;
+    width: 47.5%;
+    float: right; 
+}
+.lq-btn,.xc-btn{
+    position: absolute;
+    width: 36%;
+    right: 10%;
+    bottom: 20%;
+}
+.btn .notice {
+    margin: 0.8rem auto 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 0.5rem;
+    position: relative;
+}
+
+#show {
+    width: 20%;
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+}
+
+img.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+div.mybag_bottom {
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg.png?v=1') no-repeat bottom left;
+    background-size: 100% 100%;
+}
+
+div.mybag_bottom div.record {
+    width: 89%;
+    height: 100%;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: 5.5%;
+    top: 0;
+}
+
+div.mybag_bottom div.record input {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 1.2rem auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: none;
+    background: #fbc700 url('../img/up.png') no-repeat;
+    background-size: 3.5rem;
+    background-position: 50% 50%;
+    box-shadow: 0px 5px 5px #ca8823;
+}
+
+div.mybag_bottom div.record ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+    border-top: 1px #e3e3e3 solid;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+div.mybag_bottom div.record ul li {
+    border-bottom: 1px #e3e3e3 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+div.mybag_bottom div.record ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+    color: #000000;
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1) {
+    font-size: 0.7rem;
+    /* color: #000000; */
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2) {
+    color: #939393;
+    font-size: 0.6rem;
+}
+
+div.mybag_bottom div.record ul li p.money {
+    float: right;
+    font-size: 0.5rem;
+    line-height: 2rem;
+}
+
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1) {
+    font-size: 1rem;
+}
+
+div.mybag_bottom div.record p.getmore {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+}
+
+#no_list {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+    width: 100%;
+}
+
+.liantong {
+    width: 30%;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+}
+
+.footertext {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #b0b5c2;
+    font-size: 0.45rem;
+    z-index: 999;
+}
+
+.copyright a {
+    color: #d5d5d5;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+
+@media only screen and (min-aspect-ratio:320/520) {
+    .alert {
+        width: 80%;
+        margin: 1rem auto 0;
+    }
+    .ck{
+        bottom: 2rem;
+    }
+}
+@media only screen and (min-aspect-ratio:320/480) {
+    div.content {
+        margin: 3rem auto 0;
+    }
+    div.content_bg {
+        width: 72%;
+        padding-top: 1.4rem;
+        /* height: 11.8rem; */
+        margin: 0 auto;
+    }
+    .lt_xc {
+        height: 4rem;
+    }
+    .lt_xc_con {
+        width: 86%;
+        margin: .8rem auto 0;
+        overflow: hidden;
+    }
+}

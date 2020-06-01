@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>酒王之旅</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<!-- <meta content="maximum-dpr=2" name="flexible" /> -->
+        <link rel="stylesheet" type="text/css" href="css/share.css?v=1.0.3" />
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+		<script src="js/vue.js"></script>
+		<!-- <script src="https://cdn.bootcss.com/html2canvas/0.4.1/html2canvas.js"></script> -->
+
+	</head>
+
+	<body>
+		<div class="bg" id="app">
+			<!-- <img src="./img/h5analysis/paly.png" alt="" class="play" onclick="play()"> -->
+			<p class="nickname">{{nikeName}}</p>
+			<p class="designTitle"  v-if="scanCounts>=0 && scanCounts<5">养鱼标兵</p>
+			<p class="designTitle"  v-else-if="scanCounts>= 5 && scanCounts <= 10">酒桌秀才</p>
+			<p class="designTitle"  v-else-if="scanCounts>= 11 && scanCounts <= 15">三好酒王</p>
+			<p class="designTitle"  v-else-if="scanCounts>= 16 && scanCounts <= 20">齐鲁一哥</p>
+			<p class="designTitle"  v-else-if="scanCounts>20">江湖传说</p>
+			<p class="designTitle"  v-else>吃瓜群众</p>
+			<div class="botPart">
+				<div class="tipTxt">
+						<!-- 扫码瓶数为0 -->
+						<span class="tip" v-if = "scanCounts == 0">注：2019扫码瓶数为0</span>
+						<!-- 省外的 -->
+						<span class="tip" v-else>注：此活动仅限山东省内扫码用户</span>
+					</div>
+		
+					<p class="text">
+						<img src="img/h5analysis/share.png" alt="">
+					</p>
+		
+					<!-- <div class="text">
+						<span></span>
+						<div class="mask">
+							<p class="text">
+								2019年下半年：<br>
+								红包不停，更多好礼相送<br>
+								每月19日粉丝专属“要酒日”活动<br>
+								城市排名、好友PK（即将上线，敬请期待）
+							</p>
+						</div>
+					</div> -->
+					
+		
+					<div class="gzh">
+						<img src="img/h5analysis/gzh.jpeg?v=1.0.0" alt=""  style="width:2.43rem">
+						<!-- <img src="img/h5analysis/gzh.jpg" alt=""  style="width:2.43rem"> -->
+					</div>
+			</div>
+			
+		</div>
+
+
+
+	</body>
+
+	<script src="js/jquery.js"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=2.3.0"></script>
+	<script src="/static/js/wx/jsdk.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+
+	<script src="js/scene.js?v=1.2.2"></script>
+	
+	<script>
+		ini_wxshare(vge.sdqpappid);
+		// 隐藏微信右上角菜单
+		wx.ready(function() {
+			// wx.hideOptionMenu();
+			wx.hideToolbar();// 隐藏底部状态栏
+		});
+	</script>
+</html>

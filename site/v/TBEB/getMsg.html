@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤电商</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?50cc9b6cc7ce2fad567d5e43f2179d9c";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<style type="text/css">
+		html,body,img,p,a{
+			margin: 0;
+			padding: 0;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background: #fed40c url(images/fail_bg.png) no-repeat 1rem 1rem;
+			-webkit-background-size: 14.5rem 90%;
+			font-family: "微软雅黑";
+			color: #ffffff;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/getMsg.css"/>
+	<body>
+		<div id="wrap">	
+			<p class="tip">为确保您的账号安全，请填写验证信息</p>
+			<p id="tel_box"><input type="text" name="tel" id="tel" value="" placeholder="请输入手机号" maxlength="11"/></p>
+			<p id="yz_box"><input type="text" name="yz_code" id="yz_code" value="" placeholder="请输入验证码" maxlength="4"/><span id="get_yz">获取验证码</span></p>
+			<input type="button" name="btn" id="tj" value="提交信息" />
+			<p id="tips">客服电话：18561967156</p>
+		</div>
+		<div id="wrap1">
+			<p>您的账号存在可疑风险，为确保您的账号安全，请联系客服<br />电话：18561967156</p>
+		</div>
+	</body>
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=3.0.4"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="js/getMsg.js?v=2.0.1" type="text/javascript" charset="utf-8"></script>
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  ini_wxshare(vge.tbebappid);
+	  // 隐藏微信右上角菜单
+	  wx.ready(function() {
+	      wx.hideOptionMenu();
+	  });
+	</script>
+</html>

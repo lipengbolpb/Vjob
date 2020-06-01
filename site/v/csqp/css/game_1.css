@@ -1,0 +1,177 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	color: #fff;
+	overflow: hidden;
+}
+body{
+	background: url(../img3/bg.png) no-repeat left top;
+	-webkit-background-size: 100% auto;
+}
+img{
+	display: block;
+}
+div.top{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+div.top img.slogan{
+	position: absolute;
+	right:.4rem ;
+	top: .9rem;
+	width: 6.7rem;
+}
+div.bottom{
+	width: 100%;
+	height: 17.5rem;
+	position: absolute;
+	bottom: 0;
+	background: url(../img3/bottom_bg.png) no-repeat left top;
+	-webkit-background-size: 100%;
+}
+div.bottom img.light{
+	width: 99%;
+	height: 99%;
+	position: absolute;
+	top: 0.09rem;
+	left: 0.09rem;
+}
+div.bottom img.girl{
+	top: -3.2rem;
+	right: 0;
+	width: 4.7rem;
+	position: absolute;
+	z-index: 1;
+}
+div.bottom img.pan{
+	margin: 1.2rem auto;
+	width: 12.5rem;
+	-webkit-transform:rotate(0deg) ;
+	-webkit-transition: all 2s;
+}
+div.bottom img.bottle{
+	top: 5.15rem;
+	left: 50%;
+	margin-left: -.25rem;
+	width: .5rem;
+	position: absolute;
+	-webkit-transform:rotate(10deg);
+	-webkit-transform-origin: 50% 77%;
+	-webkit-transition: all 2s;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.bottom img.start{
+	width: 1.5rem;
+	position: absolute;
+	left: 50%;
+	top:7.3rem;
+	margin-left: .5rem;
+}
+div.bottom #translate{
+	width: 6rem;
+	height: 2.05rem;
+	border: 0;
+	outline: none;
+	background: url(../img3/button.png?v=1) no-repeat center;
+	-webkit-background-size: 100%;
+	display: block;
+	position: relative;
+	left: 47%;
+	top: -.8rem;
+	-webkit-transform: translate(-50%,0);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+}
+div.alert div.content{
+	width: ;
+	padding-top: 8.6rem;
+	height:9.9rem;
+	background-image: url(../img3/dmx.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: auto 100%;
+	margin-top: 1.5rem;
+	overflow: hidden;
+}
+div.alert div.content p{
+	font-size: 1rem;
+	width: 75%;
+	text-align: center;
+	margin: 1.2rem auto;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+div.alert div.content #again{
+	width: 5.5rem;
+	height: 1.9rem;
+	border: 0;
+	margin: 0 auto;
+	display: block;
+	background: url(../img3/button_again.png) no-repeat center;
+	-webkit-background-size: 100%;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	display: none;
+}
+div.mark p{
+	position: relative;
+	top: 15rem;
+	padding: 0.5rem 1rem;
+	border: 2px #fff solid;
+	background-color: rgba(0,0,0,.8);
+	color: #fff;
+	font-size: .7rem;
+	display: inline;
+	-webkit-border-radius: .4rem;
+}
+@media only screen and (max-height: 480px) {
+	div.bottom{
+		height: 13.5rem;
+	}
+	div.bottom img.pan{
+		width: 8.5rem;
+	}
+	div.bottom img.bottle{
+		top: 3.6rem;
+		margin-left: -.2rem;
+		width: .4rem;
+	}
+	div.bottom img.start{
+		top:5.3rem;
+	}
+}

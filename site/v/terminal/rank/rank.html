@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>扫码排名赛</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="rank.css?v=1.0.2"/>
+	</head>
+	<body>
+		<div id="app">
+			<template>
+				<div class="bg_top">
+					<div class="tab">
+						<p :class="tabId==1?'cur':''" @click="tab(1)">周赛排名</p>
+						<p :class="tabId==2?'cur':''" @click="tab(2)">月赛排名</p>
+					</div>
+					<!-- 比赛时间选择 -->
+					<div class="select_box">
+						<div class="changeDate">
+							<img src="img/icon_left.png" class="previous" :style="{'visibility':havePrevious?'visible':'hidden'}" @click="previous">
+							<span>{{tabId==2?month:(weekStart+'-'+weekEnd)}}</span>
+							<img src="img/icon_right.png" class="next" :style="{'visibility':haveNext?'visible':'hidden'}" @click="next">
+						</div>
+						<img src="img/icon_introduction.png?v=2" class="icon_introduction" @click="toRule">
+					</div>
+				</div>
+				<!-- 基本信息 已报名-->
+				<div class="rank_title noSign" v-if="isApply!=0">
+					<p class="area">{{largeArea}}</p>
+					<p class="myrank" v-if="rowNum!=0">我的排名<br /><span>{{rowNum}}</span></p>
+					<p class="myrank" v-else>我的排名<br /><span>未上榜</span></p>
+					<img :src="url" class="headimg">
+					<p class="mypoints">我的积分<br /><span>{{totalScanCounts|toThounds}}</span></p>
+					<p class="table_head">
+						<span class="rankNum">排名</span>
+						<span class="rankHead">头像</span>
+						<span class="tel">手机号</span>
+						<span class="rankPoints">积分</span>
+					</p>
+				</div>
+				<!-- 基本信息 未报名-->
+				<div class="rank_title signUp" v-else>
+					<p class="area">{{largeArea}}</p>
+					<p class="title">本人当{{tabId==2?'月':'周'}}的比赛情况</p>
+					<p class="tip">您未报名当{{tabId==2?'月':'周'}}比赛</p>
+					<p class="table_head">
+						<span class="rankNum">排名</span>
+						<span class="rankHead">头像</span>
+						<span class="tel">手机号</span>
+						<span class="rankPoints">积分</span>
+					</p>
+				</div>
+				<!-- 排名列表 -->
+				<div class="rank_list" v-if="rankingRecordLst.length>0">
+					<div class="list" v-for="(item,index) in rankingRecordLst">
+						<p class="rankNum">
+							<img :src="'img/icon_rank_'+item.rowNum+'.png'" class="rank" v-if="index<3&&item.rowNum!=0">
+							<span class="rank" v-else>{{item.rowNum}}</span>	
+						</p>
+						<p class="rankHead"><img :src="item.url" class="head"></p>
+						<span class="tel">{{item.phoneNumber|telPrivacy}}</span>
+						<span class="rankPoints">{{item.totalScanCounts|toThounds}}</span>
+					</div>
+				</div>
+				<!-- 活动未开始 当前-->
+				<div class="no_list" v-else-if="isNowRank&&isRankStart==0">
+					<img src="img/active_ready.png" >
+					<p>活动正式开始后，将会显示排名情况<br /><span>（正式开始时间，以通知为准）</span></p>
+				</div>
+				<!-- 当期未开启活动  -->
+				<div class="no_list" v-else>
+					<img src="img/active_ready.png" >
+					<!-- <p>本期活动未开启</p> -->
+				</div>
+				<!-- 报名提示按钮 -->
+				<div class="btn_box">
+					<p id="btn" @click="signUp" :class="['btn',isApply!=0?'isApply':'']">排名靠前，将会获得精美大奖</p>
+				</div>
+				<!-- 报名成功 -->
+				<div class="signUpSuc mask" v-show="showSignUpSuc">
+					<img src="img/signUpSuc.png" @click="showSignUpSuc=false">
+				</div>
+				<!-- 活动介绍 -->
+				<div class="introduction mask" v-show="showIntroduction">
+					<img src="img/introduction.png" @click="showIntroduction=false">
+				</div>
+			</template>
+		</div>
+		
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.2.4"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/tip.js"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+	<!-- <script src="vue.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="rank.js?v=1.1.1" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
+</html>

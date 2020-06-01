@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>扫码赚钱</title>
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/scan_reg.css">
+    <script src="/v/liby/js/jquery-1.8.3.min.js"></script>
+  </head>
+  <body>
+    <p class="toptxt" id="top_txt">完成注册，领取现金</p>
+    <div class="content">
+	  <ul id="content_ul">
+	    <li>
+		  <p>店铺名称：</p>
+		  <input type="text" maxlength="50">
+	    </li>
+	    <li>
+		  <p>店主名称：</p>
+		  <input type="text" maxlength="10">
+	    </li>
+	    <li class="chose_open">
+		  <p>选择城市：</p>
+		  <input type="text" readonly="readonly">
+		  <span class="enter"></span>
+	    </li>
+	    <li>
+		  <p>详细地址：</p>
+		  <input type="text" maxlength="50">
+	    </li>
+	  </ul>
+	  <ol id="content_ol">
+	    <li>
+		  <p>营业执照号：</p>
+		  <input type="text" maxlength="15">
+		  <span>推荐填写</span>
+	    </li>
+	    <li>
+		  <p>输入手机号：</p>
+		  <input type="tel" maxlength="11">
+		  <span id="get_code">获取验证码</span> 
+	    </li>
+	    <li>
+		  <p>验证码：</p>
+		  <input type="tel" maxlength="4">
+		  <span id="yzcode"></span>
+	    </li>
+	  </ol>
+    </div>
+    <p id="submit">领取现金</p>
+    <div class="chose-address">
+	  <div class="martotop">
+	    <header class="top">
+	      <p>所在地区</p>
+	      <img src="/v/liby/img/close_big.png" id="chose_close">
+	    </header>
+	    <div class="area-tab">
+	      <ul class="tabs">
+	        <li id="province" class="active">请选择</li>
+	        <li id="city">请选择</li>
+	        <li id="town">请选择</li>
+	      </ul>
+	      <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="province">
+	              </div>
+	            </div>
+	          </div>
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="city">
+	              </div>
+	            </div>
+	          </div>
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="town">
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+    </div>
+    <div id="reg_success">
+      <div id="success_tip">
+        <p>尊敬的店主</p>
+        <p>恭喜您完成信息完善，奖励领取成功~</p>
+        <img src="/v/liby/img/getbag.png">
+        <p id="record">查看获奖记录</p>
+      </div>
+    </div>
+    <script src="/static/js/vve/10core.js?v1"></script>
+    <script src="/v/js/cfg.js?v=4"></script>
+    <script src="/static/js/vve/11tool.js?v1"></script>
+    <script src="/static/js/vve/20ajx.js?v1"></script>
+    <!-- <script src="/v/liby/js/idangerous.swiper.js"></script> -->
+    <script src="/v/liby/js/tip.js"></script>
+    <script src="/v/liby/js/idangerous.swiper.js"></script>
+    <script src="/v/liby/js/chosecity.js?v=1"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v16"></script>
+    <script src="/v/liby/js/scan_reg.js?v=8"></script>
+  </body>
+</html>

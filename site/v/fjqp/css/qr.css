@@ -1,0 +1,364 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#animate-new-year {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: #ce281a;
+	z-index: 9;
+	display: none;
+}
+
+#animate-new-year .wrap-animate {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-origin: top left;
+	transform: translate(0, -31.982942rem) scale(3);
+}
+
+#animate-new-year .wrap-animate.wrap-animate-end {
+	transition: 0.7s linear;
+	transform: translate(0rem, 0rem)scale(1);
+}
+
+
+#animate-new-year .animate-box {
+	height: 100%;
+	width: 100%;
+	background: url(/v/fjqp/imgNewYear/bg.png) no-repeat top left;
+	background-size: 15.991471rem auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#animate-new-year .animate-box .animate-logo {
+	width: 3.219616rem;
+	height: 2.49467rem;
+	position: absolute;
+	top: 2.814499rem;
+	left: .724947rem;
+}
+
+#animate-new-year .animate-box .many-animal {
+	width: 100%;
+	height: 21.321962rem;
+	background: url(/v/fjqp/imgNewYear/manyanimal.png) no-repeat top left;
+	background-size: 100%;
+	position: absolute;
+	top: 3.496802rem;
+	left: 0;
+	z-index: 40;
+}
+
+#animate-new-year .animate-box .lights-animate {
+	height: 16.63113rem;
+	width: 100%;
+	position: absolute;
+	top: 3.539446rem;
+	left: 0;
+}
+
+#animate-new-year .lights-animate .light2 {
+	width: 1.535181rem;
+	height: 1.428571rem;
+	position: absolute;
+	top: .511727rem;
+	left: 4.904051rem;
+}
+
+#animate-new-year .lights-animate .light4 {
+	width: .916844rem;
+	height: .810235rem;
+	position: absolute;
+	top: 0;
+	left: 12.238806rem;
+}
+
+#animate-new-year .lights-animate .light6 {
+	width: 1.535181rem;
+	height: 1.727079rem;
+	position: absolute;
+	top: 2.558635rem;
+	left: 10.149254rem;
+}
+
+#animate-new-year .lights-animate .light5 {
+	width: 1.428571rem;
+	height: 1.321962rem;
+	position: absolute;
+	top: 3.667377rem;
+	left: 13.560768rem;
+}
+
+#animate-new-year .lights-animate .light1 {
+	width: 1.684435rem;
+	height: 1.599147rem;
+	position: absolute;
+	top: 4.136461rem;
+	left: 14.264392rem;
+}
+
+#animate-new-year .lights-animate .light3 {
+	width: 1.08742rem;
+	height: 1.002132rem;
+	position: absolute;
+	top: 7.420043rem;
+	left: 14.285714rem;
+}
+
+#animate-new-year .lights-animate .light11 {
+	width: 5.138593rem;
+	height: 4.328358rem;
+	position: absolute;
+	top: 12.465245rem;
+	left: 2.132196rem;
+	z-index: 61;
+}
+
+#animate-new-year .lights-animate .shitou {
+	width: 4.498934rem;
+	height: 6.609808rem;
+	position: absolute;
+	top: 9.253731rem;
+	left: .852878rem;
+	z-index: 60;
+}
+
+#animate-new-year .lights-animate .duilian {
+	width: 2.153518rem;
+	height: 3.731343rem;
+	position: absolute;
+	top: 12.110874rem;
+	left: 1.19403rem;
+	z-index: 56;
+}
+
+#animate-new-year .lights-animate .beer-text {
+	width: 13.923241rem;
+	height: 10.639659rem;
+	position: absolute;
+	top: 4.34968rem;
+	left: 1.19403rem;
+	transition: 0.7s linear;
+	opacity: 0;
+	transform: scale(0.6);
+}
+
+#animate-new-year .lights-animate .beer-text.beer-show {
+	opacity: 1;
+	transform: scale(1);
+}
+
+#animate-new-year .lights-animate .daniao {
+	width: 13.26226rem;
+	height: 12.857143rem;
+	position: absolute;
+	top: 11.34968rem;
+	/* left: 5.991471rem; */
+	left: 15.991471rem;
+	z-index: 69;
+	transform: rotate(35deg);
+}
+
+
+#animate-new-year .lights-animate .light7 {
+	width: 1.236674rem;
+	height: 1.556503rem;
+	position: absolute;
+	top: 3.624733rem;
+	left: 2.665245rem;
+}
+
+#animate-new-year .lights-animate .light8 {
+	width: 1.151386rem;
+	height: 1.279318rem;
+	position: absolute;
+	top: 4.179104rem;
+	left: 1.876333rem;
+}
+
+#animate-new-year .light-origin {
+	transform-origin: top;
+}
+
+#animate-new-year .lights-animate .light8-ani {
+	animation: square 1.5s linear both infinite .5s;
+}
+
+#animate-new-year .lights-animate .light7-ani {
+	animation: square 2s linear both infinite;
+}
+
+#animate-new-year .lights-animate .light6-ani {
+	animation: square 2s linear both infinite;
+}
+
+#animate-new-year .lights-animate .light11-ani {
+	animation: lantern 2s both infinite;
+}
+
+#animate-new-year .lights-animate .light2-ani {
+	animation: lantern 2s both infinite .3s;
+}
+
+#animate-new-year .lights-animate .light3-ani {
+	animation: lantern 1s both infinite .5s;
+}
+
+#animate-new-year .lights-animate .light4-ani {
+	animation: lantern 1.3s both infinite .8s;
+}
+
+#animate-new-year .lights-animate .light5-ani {
+	animation: lantern 1.5s both infinite .5s;
+}
+
+#animate-new-year .lights-animate .light1-ani,
+#animate-new-year .lights-animate .light13-ani {
+	animation: lantern 1.5s both infinite .5s;
+}
+
+#animate-new-year .animate-box .bottom-lights {
+	height: 5.970149rem;
+	width: 100%;
+	position: absolute;
+	top: 20.895522rem;
+	left: 0;
+}
+
+#animate-new-year .bottom-lights .light9 {
+	width: 3.603412rem;
+	height: 5.970149rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#animate-new-year .bottom-lights .light10 {
+	width: 2.324094rem;
+	height: 2.963753rem;
+	position: absolute;
+	top: 1.812367rem;
+	left: 7.356077rem;
+}
+
+#animate-new-year .bottom-lights .light12 {
+	width: 3.198294rem;
+	height: 5.970149rem;
+	position: absolute;
+	top: .085288rem;
+	right: 0;
+}
+
+#animate-new-year .bottom-box {
+	width: 100%;
+	height: 7.547974rem;
+	background: url(/v/fjqp/imgNewYear/bottom.png) no-repeat top left;
+	background-size: 15.991471rem auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 50;
+
+}
+
+#animate-new-year .animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+
+/* 灯动画 */
+/* 圆灯笼 */
+@keyframes lantern {
+
+	12%,
+	88% {
+		transform: rotate(-5deg);
+	}
+
+	50% {
+		transform: rotate(15deg);
+	}
+
+	0%,
+	25%,
+	75%,
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* 方灯笼 */
+@keyframes square {
+
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		transform: rotate(0)
+	}
+
+	12% {
+		transform: rotate(-8deg)
+	}
+
+	62% {
+		transform: rotate(-10deg)
+	}
+
+	37% {
+		transform: rotate(10deg)
+	}
+
+	88% {
+		transform: rotate(8deg)
+	}
+}
+
+#animate-new-year .loin {
+	-webkit-animation-name: loin;
+	animation-name: loin;
+}
+
+#animate-new-year .animated-loin {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+
+/* 狮动画 */
+@keyframes loin {
+
+	12%,
+	88% {
+		transform: rotate(5deg);
+	}
+
+	50% {
+		transform: rotate(-15deg);
+	}
+
+	0%,
+	25%,
+	75%,
+	100% {
+		transform: rotate(0deg);
+	}
+}

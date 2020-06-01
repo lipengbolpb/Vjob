@@ -1,0 +1,27 @@
+计划和进度 2016-08-31 14:40:19
+* 2016-09-10 16:22:18 创建空白页面，测试接口调用
+  复制接口调用代码
+  japi.html.js 所有接口，在此测试
+  
+* 2016-08-31 15:00:45 liby 代码版本管理
+1. 下载代码副本
+   git clone wangbiying@ali10.witoo.com.cn:/srv/liby.git
+2. 设置用户名字和邮件
+   git config --global user.name "wangbiying" 
+   git config --global user.email "wby@home.cn"
+3. 日常编辑工作： 添加或修改文件(html,css,js,pic...)
+4. 提交修改
+   git add .
+   git commit -m'修改了xxx，添加了yyy'
+   git push
+5. 软件在这里 https://git-scm.com/download/win
+6. 日常工作步骤：
+   1) git pull 从服务器更新代码
+   2) git status 查看本地修改情况
+   3) git diff <file> 查看具体修改内容
+   4) git add . 和 git commit -m'注释' 然后推送到远程服务器 git push
+
+* 2016-08-29 10:30:20 立白项目 网站代码
+1. 先搞定静态页面 —— 公共消息页面
+   http://vd.vjifen.com/liby/msg?scan-err
+# 不需要了 2016-09-10 16:21:24  2. biz服务器与wx3服务器直接通信，IP白名单+TCP

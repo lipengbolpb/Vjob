@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <!-- Note:注意你的less样式文件一定要在引入less.js前先引入。 -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="css/sign.less" />
+    <script>
+        less = {
+            env: 'development'
+        };
+    </script>
+    <script src="js/less.min.js"></script>
+    <script>
+        less.watch();
+    </script> -->
+    <link rel="stylesheet" href="css/sign.css?v=1.9">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/audio1.png" class="audio">
+        <div class="title">
+            <img src="img/sign-title.png">
+            <p>签到红包每周每位用户仅限领取一次哦！</p>
+        </div>
+        <div class="every">
+            <img src="img/sign-bg.png" class="bg">
+            <img src="" class="title signtitle">
+            <div class="bar">
+                <div class="progress">
+                    <div class="inner"></div>
+                </div>
+                <p class="scale"></p>
+            </div>
+            <div class="sign">
+                <ul>
+                    <li>
+                        <p>周一</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周二</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周三</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周四</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周五</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周六</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                    <li>
+                        <p>周日</p>
+                        <div class="select">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <img src="img/sign-hb.png" class="hb">
+                <img src="img/sign-used.png" class="used">
+                <p class="rough">还差<span class="day"></span>天<br>即可开启</p>
+                <p class="complete">¥<span id="money"></span>元</p>
+                <p class="notice">已自动存入您的零钱包，请注意查收</p>
+            </div>
+        </div>
+        <img src="img/back.png" class="back">
+        <!-- <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2017</p> -->
+    </div>
+    <audio id="bgm" loop src="music/bgm.mp3?v=1"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.0.0"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('bgm').setAttribute('src','/v/zzqp20171214/music/bgm.mp3?v=1');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    ini_wxshare(vge.zzqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function() {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="js/sign.js?v=1.33"></script>
+
+</html>

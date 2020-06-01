@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤豪情龙江</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body,html,img,p{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			body{
+				background:url(img/fail_bg.png) no-repeat left top ;
+				-webkit-background-size: 100%;
+			}
+			div.box{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: rgba(0,0,0,.7);
+			}
+			div.box div.tip_box{
+				width: 12.1rem;
+				height: 14.3rem;
+				margin: 4rem auto 0;
+				background: url(img/fail_tip_bg.png) no-repeat left top;
+				-webkit-background-size: 100%;
+				position: relative;
+			}
+			div.box div.tip_box img{
+				width: 7rem;
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 55%;
+				-webkit-transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="tip_box">
+				<img src="" id="tip"/>
+			</div>
+			<p id="batch" style="color: white;position: absolute;bottom: 5%;text-align: center;width: 100%;"></p>
+		</div>
+	</body>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/publictip.js?v=2.0.2"></script>
+    <script src="/v/js/cfg.js?v=2.0.8"></script>
+    <script>
+        var contant = document.getElementById('tip');
+        var args = vge.urlparse(location.href),
+        	batch = document.getElementById("batch"),
+        	batchName = sessionStorage.batchName===undefined?'':sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch(bizcode) {
+        case '1':
+            contant.src = '/v/hljqp20170705/img/fail_tip_6.png';
+            break;
+        case '2':
+            contant.src = '/v/hljqp20170705/img/fail_tip_2.png';
+            break;
+        case '3':
+            contant.src = '/v/hljqp20170705/img/fail_tip_5.png';
+            break;
+        case '4':
+            contant.src = '/v/hljqp20170705/img/fail_tip_4.png';
+            batch.innerHTML = batchName+'<br />服务热线：0451-51666057';
+            break;
+        case '5':
+            contant.src = '/v/hljqp20170705/img/fail_tip_5.png';
+            break;
+        case '6':
+            contant.src = '/v/hljqp20170705/img/fail_tip_6.png';
+            break;
+        case '11':
+            contant.src = '/v/hljqp20170705/img/fail_tip_2.png';
+            break; 
+        case '-1':
+            contant.src = '/v/hljqp20170705/img/fail_tip_-1.png';
+            break;      
+        case '18'://扫码专员
+        	contant.style.display='none';
+        	title_tip('尊敬的用户', '此码未被使用<br />活动批次：'+batchName, '我知道了');
+            break;     
+        default:
+            title_tip('尊敬的用户', bizcode+':'+sessionStorage.msg, '我知道了');
+            break;
+        }
+    </script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  	ini_wxshare(vge.hljqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	    function close(){
+	  	    	document.getElementById("alert_pub").style.display='none';
+				wx.closeWindow();
+			}
+	  	});
+	</script>
+</html>

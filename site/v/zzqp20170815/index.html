@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <title>红包奖不停，酒王赢大礼</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="'" />
+    <meta name="description" content="" />
+    <meta name="robots" content="all">
+    <meta name="Language" content="zh-CN" />
+    <meta name="publisher" content="">
+    <meta name="author" content="" />
+    <meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/guandao.css?v=1">
+    <link rel="stylesheet" href="css/public/global.css">
+    <link rel="stylesheet" href="css/public/layout.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dd9a4cf19c55d5312573ba49249e155d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style type="text/css">
+    	/* 屏蔽苹果手机更改样式 */
+		input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+		input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+			outline: 0; background-color: transparent;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+			opacity: 1;
+			-webkit-opacity:1;
+		}
+    	.question_box{
+    		width: 100%;
+    		height: 100%;
+    		overflow-x: hidden;
+    		position: fixed;
+    		z-index: 1000;
+    		font-size: .25rem;
+    		color: #000000;
+    		line-height: 1.2em;
+    		display: none;
+    	}
+    	#questionnaire{
+    		width: 100%;
+    		overflow: hidden;
+    		background:#FFFFFF url(img/bg/questionnaire.png) no-repeat left top;
+    		-webkit-background-size: 100% auto;
+    		padding-top: 4.5rem;
+    		min-height: 100%;
+    	}
+    	#questionnaire div._box{
+    		padding: .1rem 0;
+    		width: 88%;
+    		margin: 0 auto;
+    	}
+    	#questionnaire div._box textarea{
+    		width: 95%;height: 1rem;resize: none;
+    		border: 1px #ccc dashed;
+    	} 
+    	#questionnaire div._box p{
+    		margin: .1rem 0;
+    		position: relative;
+    		overflow: hidden;
+    		width: 100%;
+    	}
+    	#questionnaire div._box p label{
+    	}
+    	#questionnaire div._box p.title{
+    		line-height: 1.2em;
+    	}
+    	#questionnaire div._box p.title b{
+    		float: left;
+    	}
+    	#questionnaire div._box p input{
+    		opacity: 0;
+    		width: .3rem;
+    		float: left;
+    	}
+    	#questionnaire div._box p i{
+    		width: .3rem;
+    		height: .3rem;
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+    		background-repeat: no-repeat;
+    		background-position: center;
+    		/*background-image:url(img/bg/check.png) ;*/
+    		background-image:none;
+    		-webkit-background-size: 100%;
+    		z-index: 1;
+    	}
+    	#questionnaire div._box p em{
+    		width: .25rem;
+    		height: .25rem;
+    		position: absolute;
+    		left: .025rem;
+    		top: .025rem;
+    		border: 1px #ccc solid;
+    	}
+    	#questionnaire div._box p span{
+    		display: inline-block;
+    		width: 80%;
+    	}
+    	#qus_btn{
+    		width: 2rem;
+    		height: .7rem;
+    		font-size: .3rem;
+    		display: block;
+    		margin: .5rem auto 1rem;
+    		background: #0ddbc7;
+    		color: #fff;
+    		-webkit-border-radius: 5px;
+    	}
+    </style>
+</head>
+
+<body class="page page1">
+    <script>
+        function load(manifest, callback) {
+            for (var i = 0; i < manifest.length; i++) {
+                var images = [];
+                var count = 0;
+                images[i] = new Image();
+                images[i].src = "img/" + manifest[i].src;
+                images[i].classname = manifest[i].class;
+                images[i].onload = function () {
+                    count++;
+                    var itemClass = this.classname;
+                    //进度
+                    var progress = parseInt((count / manifest.length) * 100);
+                    $(".loadTxt").text(progress + "%");
+                    if (itemClass) {
+                        var w = this.width / 100 + "rem";
+                        $("." + itemClass).width(w);
+                        $("." + itemClass).attr("src", this.src);
+                    }
+                    if (count >= manifest.length) {
+                        callback();
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #Loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #231c14;
+            z-index: 100;
+        }
+
+        .loadTxt {
+            top: 4.5rem;
+            width: 1rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            border-radius: 1rem;
+            background: #040f08;
+            color: #fff;
+            font-size: .24rem;
+        }
+
+        .t_center {
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%)
+        }
+
+        .v_center {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%)
+        }
+
+        .g_center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%)
+        }
+    </style>
+    <div class="question_box">
+		<div id="questionnaire">
+		</div>
+	</div>
+    <div id="Loading">
+        <p class="loadTxt t_center">0%</p>
+    </div>
+    <div class="index">
+        <div class="sg"></div>
+        <div class="dd"></div>
+        <img src="img/guandao2/i1.png" class="i1">
+        <img src="img/guandao2/i2.png" class="i2">
+    </div>
+    <div id="cj">
+        <div class="sg" style="z-index:1"></div>
+        <img src="img/guandao/he.png" class="he">
+        <div class="dd" style="z-index:1"></div>
+        <div class="gz">
+            <img src="img/guandao/gz5.png" class="gz5">
+            <img src="img/guandao/gz4.png" class="gz4">
+            <img src="img/guandao/gz3.png" class="gz3">
+            <img src="img/guandao/gz2.png" class="gz2">
+            <img src="img/guandao/gz1.png" class="gz1">
+        </div>
+        <img src="img/guandao2/bt.png?v=1" class="bt">
+        <img src="img/guandao/hb.png" class="hb">
+        <img src="img/guandao2/ticket1.png" class="tic">
+        <img src="img/guandao2/guan.png" class="guan">
+        <img src="img/guandao/xz.gif" class="xz">
+        <div class="ks" id="shake" style="z-index:99999;"></div>
+    </div>
+    <a class="_rules0" onclick="$('#ruleTier').fadeIn();"></a>
+
+    <!--公用弹窗-->
+    <div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+        <div class="fail">
+            <h2>很抱歉</h2>
+            <p class="tips"></p>
+            <!--<a class="close">ok</a>-->
+        </div>
+        <img src="img/bg/logo2.png" class="logo2" />
+    </div>
+    <!--规则-->
+    <div class="pop_container mainBg" id="ruleTier" style="display:none;">
+        <img src="img/bg/beer5.png" class="beer5" />
+        <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a>
+    </div>
+    <!--二维码已经扫过-->
+    <div class="pop_container" id="noprizeTier3" style="display:none;"><a class="_close"></a>
+        <div class="fail">
+            <img style="width: 100%;" src="img/bg/fail2.png?v=3" />
+            <a class="tohj" href="/v/zzqp20170815/huanju.html" style="position: absolute;width: 2rem;height: .6rem;top: 1.6rem;"></a>
+            <a class="tomy" href="/zzqp20170815/txo/myList" style="position: absolute;width: 2rem;height: .6rem;top: 2.4rem;"></a>
+        </div>
+    </div>
+    <!--一等奖已扫过-->
+    <div id="firstprize" style="width: 100%;height: 100%;overflow: hidden;text-align: center;position: absolute;z-index: 1111111;background-color: rgba(0,0,0,.85);display: none;">
+        <img src="/v/zzqpNew/img/bg/geted.png" style="position: static;width: 5rem;margin: 1rem auto 0;" />
+        <p class="time" style="color: #FFFFFF;font-size: .25rem;margin: .5rem auto 0;">扫码中奖时间：<span id="time"></span></p>
+        <img src="/v/zzqpNew/img/bg/stub.png" style="position: static;width: 5rem;margin: 1rem auto 0;" />
+    </div>
+	
+    <script src="js/base/rem.js"></script>
+    <script src="js/base/jquery-1.9.1.min.js"></script>
+    <script src="js/public/custom.js"></script>
+    <script src="js/public/global.js"></script>
+    <style>
+        #btn-a1 {
+            display: block;
+            position: absolute;
+            top: .14rem;
+            right: .2rem;
+            width: 1.05rem;
+            height: 1.05rem;
+            z-index: 1000;
+        }
+
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg)
+            }
+            to {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        .rotate000 {
+            -webkit-animation: 9.5s linear 0s infinite rotate forwards;
+            -webkit-animation-play-state: running;
+        }
+
+        #btn-a1 p {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-size: 1.05rem;
+            line-height: 9999px;
+            overflow: hidden;
+        }
+
+        .kais {
+            background: url(img/bg/audio1.png) no-repeat center;
+            background-size: contain;
+        }
+
+        .kais2 {
+            background: url(img/bg/audio2.png) no-repeat center;
+            background-size: contain;
+        }
+
+        ._audio {
+            width: .41rem;
+            position: absolute;
+            top: 2%;
+            right: .2rem;
+            z-index: 1000;
+            display: none
+        }
+    </style>
+    <div>
+        <audio id="bgMusic" autoplay loop src="/v/zzqp20170815/music/bg.mp3?v=2"></audio>
+    </div>
+    <img src="img/bg/audio1.png" class="_audio" alt="">
+    <div id="btn-a1" class="film-container rotate000">
+        <p class="kais"> <i class="fa fa-music"></i></p>
+        <p class="kais2" style="display: none;"><i class="fa fa-music"></i> <i class="fa fa-minus"></i></p>
+    </div>
+    <audio id="xiuxiu" src="music/gz.mp3?v=1"></audio>
+    <audio id="chua" src="music/cj.mp3?v=1"></audio>
+    <script type="text/javascript">
+        var audio = document.getElementById('bgMusic');
+        // 音乐相关
+        function initMusic() {
+            var el = $("#bgMusic")
+            if (el && el.length > 0 && el.attr("src")) {
+                // 音乐相关
+
+                $('#btn-a1').on("touchstart", function (ev) {
+                    if (audio.paused) {
+                        audio.play(); $('btn-a1').addClass('btn-a1');
+                        $(".kais").stop();
+                        $('.film-container').addClass('rotate000');
+                    } else {
+                        audio.pause(); $('btn-a1').removeClass('btn-a1');
+                        $(".kais").stop();
+                        $('.film-container').removeClass('rotate000');
+                    }
+                });
+                $(document).one('touchstart', function () {
+                    //audio.play();
+                });
+            }
+        }
+        initMusic();
+    </script>
+    <script src="/static/js/vve/10core.js"></script>
+    <script src="/static/js/vve/11tool.js"></script>
+    <script src="/static/js/vve/12event.js"></script>
+    <script src="/static/js/vve/20ajx.js"></script>
+    <script src="/v/js/cfg.js?v=1.2"></script>
+    <script src="/v/js/publictip.js?v=1.0.1"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v=1"></script>
+    <!--<script>
+        ini_wxshare(vge.zzqpappid);
+        // 隐藏微信右上角菜单
+        wx.ready(function () {
+            wx.hideOptionMenu();
+        });
+    </script>-->
+    <script>
+        document.addEventListener("WeixinJSBridgeReady", function () { 
+            document.getElementById('xiuxiu').setAttribute('src','/v/zzqp20170815/music/gz.mp3?v=1');
+            document.getElementById('xiuxiu').load();
+            document.getElementById('chua').setAttribute('src','/v/zzqp20170815/music/cj.mp3?v=1');
+            document.getElementById('chua').load();
+        }, false);
+    </script>
+    <script type="text/javascript" src="js/guandao.js?v=4.7"></script>
+    <script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

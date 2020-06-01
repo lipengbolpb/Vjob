@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.0.0"/>
+	</head>
+	<body>
+		<div class="cash_warp">
+			<img src="img/slogan.png" class="slogan"/>
+			<img src="img/caishen.png" class="caishen"/>
+			<img src="img/open.png" class="open" id="open"/>
+			<img src="img/yuanbao_1.png" class="yuanbao"/>
+			<img src="img/bottom_bottle.png" class="bottom"/>
+		</div>
+		<div class="cash_content">
+			<div class="top">
+				<div class="duilian_bg">
+					<img src="img/duilian_0.png" class="duilian"/>
+				</div>
+				<img src="img/cash_bg.png" class="cash_bg"/>
+				<img src="img/yuanbao.png" class="yuanbao_1"/>
+				<p class="money_msg">
+					
+				</p>
+			</div>
+			<div class="bottom">
+				<img src="img/logo_2.png" class="logo"/>
+				<p class="tip"></p>
+				<div id="btn">查看红包余额</div>
+				<!--<img src="img/loading.gif"/>-->
+				<p class="rule_box">
+					<a href="javascript:;" id="rule">活动规则</a>
+					<a href="javascript:;" id="private">隐私说明</a>
+				</p>
+			</div>
+		</div>
+		<div class="alert">
+			<img src="img/alert_tip.png" id="alert"/>
+		</div>
+		<div class="audio_box"><audio src="bang.mp3" preload id="audio"></audio></div>
+	</body>
+	
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=11.0.1" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/publictip.js?v13"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=11.2.7" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		document.addEventListener("WeixinJSBridgeReady", function () { 
+	        document.getElementById('audio').setAttribute('src','/v/gxqp20171214/bang.mp3?v=1');
+	        document.getElementById('audio').load();
+	    }, false);
+	</script>
+</html>

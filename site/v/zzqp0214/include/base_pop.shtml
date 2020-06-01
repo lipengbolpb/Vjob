@@ -1,0 +1,124 @@
+
+<!--公用弹窗-->
+<div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <h2>很抱歉</h2>
+    <p>呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <!--<a class="close">ok</a>-->
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+<!--摇签未中奖提示-->
+<div class="pop_container" id="noprizeTier" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <p>呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--填写信息提交成功-->
+<div class="pop_container" id="prizeTier" style="display:none;"><a class="_close"></a>
+  <div class="success">
+    <p>您的信息已提交成功！<br>请耐心等待工作人员跟您联系。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--填写信息提交失败-->
+<div class="pop_container" id="noprizeTier2" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <p>呜呜~开了个小差~<br>关闭页面，重新再试一次吧。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--二维码已经扫过-->
+<div class="pop_container" id="noprizeTier3" style="display:none;"><a class="_close"></a>
+  <div class="fail2">
+    <img src="img/bg/fail2.png" />
+    <a class="close" href="huanju.shtml"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--pk赢-->
+<div class="pop_container pk pk1 bg"><a class="_close"></a>
+  <div class="succ">
+    <p>8.8元</p>
+    <a href="myJp.shtml"></a>
+  </div>
+</div>
+<!--pk输-->
+<div class="pop_container pk pk2 bg"><a class="_close"></a>
+  <div class="fail">
+    <a href="huanju.shtml"></a>
+  </div>
+</div>
+<!--填写信息姓名电话-->
+<div id="ipt" class="bg pop_container"><a class="_close"></a>
+  <div class="ipt">
+    <input type="text" class="name"><div class="sta1 right"></div>
+    <input type="tel" class="tel"><div class="sta2 wrong"></div>
+    <!--提交按钮，提交失败执行tj2();-->
+    <a class="sub" onclick="tj1();"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2">
+</div>
+
+<!--提现成功-->
+<div class="tx tx1 bg"><a class="_close"></a>
+  <div><img src="img/zj/txcg.png" /><a class="back" href="index.shtml"></a><a class="huanju" href="huanju.shtml"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--提现失败-->
+<div class="tx tx2 bg"><a class="_close"></a>
+  <div><img src="img/zj/txsb.png" /><a class="back" href="index.shtml"></a><a class="huanju" href="huanju.shtml"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+
+<!--风云榜-->
+<div id="fyb" class="bg pop_container"><a class="_close"></a>
+  <div class="fyb">
+    <ul>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+    </ul>
+    <a class="back" onclick="$('#fyb').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--我的奖品列表-->
+<div id="fyb2" class="bg pop_container"><a class="_close"></a>
+  <div class="fyb">
+    <ul>
+      <li><p class="name">中奖红包</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">0.98元</a></p></li>
+      <li class="bg"><p class="name">一等奖</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="ylq">已领取</a></p></li>
+      <li><p class="name">中奖红包</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+      <li class="bg"><p class="name">一等奖</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+    </ul>
+    <a class="back" onclick="$('#fyb2').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+
+<!--分享层-->
+<div id="_share"></div>

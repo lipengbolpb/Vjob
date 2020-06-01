@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/personal.css?v=2.1">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/audio1.png" class="audio">
+        <!-- <img src="img/my.png" class="my"> -->
+        <img src="img/loading.gif" class="loading">
+        <div class="my-prize">
+            <img src="img/myprize-head.png" class="prize-head">
+            <div class="prize-list clearfix">
+                <img src="img/myprize-title.png" class="prize-title">
+                <div class="record">
+                    <ul id="prizeUl">
+
+                    </ul>
+                </div>
+                <input type="button" id="prize-back" value="返回">
+            </div>
+        </div>
+        <div class="control">
+            <img src="img/my.png" class="my">
+            <div class="top">
+                <img src="img/personal-card.png" class="card">
+            </div>
+            <div class="bottom">
+                <img src="img/personal-point.png" class="point">
+            </div>
+            <img src="img/personal-border.png" class="border">
+            <p class="notice">我的零钱包余额：
+                <span id="total">0.00元</span>
+            </p>
+            <input type="button" value="立即提现" id="tx">
+            <div class="mask">
+                <p class="qin">亲，注意聊天消息里的【服务通知】
+                    <br>看到这样的消息72小时内要点开收钱！</p>
+                <img src="img/alert.png" class="alert">
+                <input type="button" value="我知道了" class="iknow">
+            </div>
+        </div>
+        <div class="sign">
+            <!-- <img src="img/audio1.png" class="audio"> -->
+            <div class="title">
+                <img src="img/sign-title.png">
+                <p>签到红包每周每位用户仅限领取一次哦！</p>
+            </div>
+            <div class="every">
+                <img src="img/sign-bg.png" class="bg">
+                <img src="img/sign-title-get.png?v=1" class="title signtitle">
+                <div class="bar">
+                    <div class="progress">
+                        <div class="inner"></div>
+                    </div>
+                    <p class="scale">1/2</p>
+                </div>
+                <div class="sign">
+                    <ul>
+                        <li>
+                            <p>周一</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周二</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周三</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周四</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周五</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周六</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                        <li>
+                            <p>周日</p>
+                            <div class="select">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <img src="img/sign-hb.png" class="hb">
+                    <img src="img/sign-used.png" class="used">
+                    <p class="rough">还差<span class="day"></span>天<br>即可开启</p>
+                    <p class="complete">¥
+                        <span id="money"></span>元</p>
+                    <p class="notice">已自动存入您的零钱包，请注意查收</p>
+                </div>
+            </div>
+            <img src="img/back.png" class="back cardback">
+        </div>
+        <div class="points">
+            <div class="mybag_top">
+                <div class="title">
+                    <img src="img/personal-title.png">
+                    <p>积分可进入积分商城兑换好礼，快快行动吧</p>
+                </div>
+                <div class="msg">
+                    <p>当前剩余</p>
+                    <p>
+                        <span class="num pointNum">0</span>积分</p>
+                    <img src="img/personal-hb.png" class="hb">
+                    <a href="javascript:;" class="ck" id="show">查看详细记录</a>
+                </div>
+                <div class="btns">
+                    <input type="button" value="进入积分商城" class="enter">
+                    <input type="button" value="返回我的主页" class="pointback">
+                </div>
+                <div class="link">
+                    <a href="javascript:;" class="rule">活动规则</a>
+                    <a href="javascript:;" class="explain">隐私说明</a>
+                </div>
+            </div>
+            <div class="mybag_bottom">
+                <div class="record">
+                    <input type="button" name="" id="hide" value="收起" />
+                    <ul id="mon_list">
+
+                    </ul>
+                    <p id="more" class="getmore">加载更多</p>
+                    <p id="no_list" class="nolist">您还没有积分记录哦</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bgm" loop preload src="music/bgm.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.0.0"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('bgm').setAttribute('src', '/v/zzqp20180401/music/bgm.mp3?v=1');
+        document.getElementById('bgm').setAttribute('loop', 'loop');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    ini_wxshare(vge.zzqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="js/personal.js?v=1.32"></script>
+
+</html>

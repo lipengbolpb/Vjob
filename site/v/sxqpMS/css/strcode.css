@@ -1,0 +1,185 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+}
+body{
+	background:#fada69 url(../img/str_bg.png?v=1.0.4) no-repeat left top;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border:0;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+::-webkit-input-placeholder{
+     color: #333333;
+}
+input[type="button"]{
+	color: #ea5244;
+}
+div.mark{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+	text-align: center;
+	overflow: hidden;
+	display: none;
+}
+div.mark img.close{
+	width: 11rem;
+	margin: 1rem 0 0 3.5rem;
+	display: block;
+}
+div.mark img.tip{
+	width: 9rem;
+	display: block;
+	margin: 2rem auto;
+}
+div.mark p.time{
+	color: #fff699;
+	font-size: 0.65rem;
+	display: none;
+}
+div.mark p.time span{
+	color: white;
+}
+#btn_tip{
+	width: 5.75rem;
+	height: 1.65rem;
+	background: transparent;
+	margin-top: 15.5rem;
+	text-align: center;
+	line-height: 1.65rem;	
+	font-size: 1rem;
+	font-weight: normal;
+	border-radius: 0.45rem;
+	-webkit-border-radius: 0.45rem;
+	color: #fff226;
+	position: relative;
+	z-index: 1;
+	background-color: #e60012;
+	font-family: "微软雅黑","Microsoft YaHei";
+	letter-spacing:0.1rem;
+}
+div.strcode{
+	width: 89%;
+	position: absolute;
+	top: 9rem;
+	left: 5.5%;
+	/* overflow: hidden; */
+}
+div.strcode p{
+	width: 85%;
+	margin: 0 auto .6rem;
+	font-size: 0.55rem;
+	color: #531b08;
+	background: url(../img/tip_border.png?v=1.0.3) no-repeat center;
+	-webkit-background-size: 100%;
+} 
+div.strcode p span{
+	display: inline-block;
+	padding-left: 0.8rem;
+	margin-left: -0.8rem;
+	background: url(../img/tip_icon.png?v=1.0.3) no-repeat left;
+	-webkit-background-size: auto 90%;
+	background-size: auto 90%; 
+}
+div.strcode div.import{
+	height: 1.9rem;
+	border-bottom: 1px #531b08 solid;
+	border-top: 1px #531b08 solid;
+	width: 98%;
+}
+div.strcode div.telcode{
+	height: 1.9rem;
+	border-bottom: 1px #531b08 solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+#str_code{
+	color: #000000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#telcode{
+	color: #000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#vertion_code{
+	color: #000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+div.strcode div.vertion{
+	height: 1.9rem;
+	border-bottom: 1px #531b08 solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+div.strcode input[type="text"]{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: none;
+	background: 0;
+	text-indent: 0.1rem;
+	font-size: 0.7rem;
+}
+#yz_code{
+	float: left;
+	display: inline-block;
+	width: 70%;
+}
+#get_yz{
+	float: right;
+	display: inline-block;
+	border-left: 1px solid #531b08;
+	width: 30%;
+	text-align: center;
+	color: #b83d14;
+	height: 100%;
+}
+#btn{
+	width: 40%;
+	height: 2rem;
+	margin:1rem auto;
+	display: block;
+	background: #f0592a;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	font-size: 0.9rem;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[disabled]{
+	color: #ffffff;
+}
+
+/* 针对iphone4 */
+@media only screen and (max-device-height:480px){
+	#btn{
+		margin:0.2rem auto 0.2rem;
+	}
+	div.strcode p{
+		margin-bottom: 0;
+	} 
+	div.mark div.hb{
+		top: 2.5rem;
+	}
+	div.mark  div.title{
+		top: 7rem;
+	}
+	#btn_tip{
+		margin-top: 16rem;
+	}
+}

@@ -1,0 +1,117 @@
+body,html{background: #F0EFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;overflow: hidden;}
+.toptxt{line-height: 42px; font-size: 15px; color: #333;}
+.content ul{background: #fff; margin-bottom: 5px;}
+.content ul li{overflow: hidden; border-bottom: 1px solid #F3F3F3;}
+.content ul li p{float: left; width: 90px; padding-left: 5%; height: 44px; line-height: 44px; font-size: 14px; color: #333; text-align: right;}
+.content ul li input, .content ol li input{float: left; width: 62%; padding: 10px 0; line-height: 24px; color: #333; border: none; font-size: 14px;}
+.content ul li:nth-child(1) p{background: url(/v/liby/img/dianname.png) 15% center no-repeat; background-size: 15px;}
+.content ul li:nth-child(2) p{background: url(/v/liby/img/dianzhu.png) 15% center no-repeat; background-size: 15px;}
+.content ul li:nth-child(3) p{background: url(/v/liby/img/chosecity.png) 15% center no-repeat; background-size: 15px;}
+.content ul li:nth-child(4) p{background: url(/v/liby/img/detailadd.png) 15% center no-repeat; background-size: 15px;}
+.content ul li:nth-child(3) input{width: 60%;}
+.content ol{background: #fff; border-bottom: 1px solid #F3F3F3; padding-top: 4px;}
+.content ol li{overflow: hidden; border-top: 1px solid #F3F3F3;}
+.content ol li p{float: left; width: 108px; padding-left: 5%; height: 44px; line-height: 44px; font-size: 14px; color: #333; text-align: right;}
+.content ol li:nth-child(1) p{background: url(/v/liby/img/yingye.png) 15% center no-repeat; background-size: 15px;}
+.content ol li:nth-child(2) p{background: url(/v/liby/img/phone.png) 15% center no-repeat; background-size: 15px;}
+.content ol li:nth-child(3) p{width: 58px; text-align: center; color: #EA5955;}
+.content ol li:nth-child(1) input{width: 40%;}
+.content ol li:nth-child(2) input{width: 32%;}
+.content ol li:nth-child(3) input{width: 55%;}
+.content ol li span{color: #7A7572; float: right; font-size: 13px; margin-right: 15px;}
+.content ol li:nth-child(1) span{ line-height: 44px;}
+.content ol li:nth-child(2) span{ width: 74px; line-height: 38px; margin-top: 3px; background: #E9E7E8;}
+.content ul li:nth-child(3) span,.content ol li:nth-child(3) span, #inform_box .chose_open .enter{float: right; width: 6px; height: 10px; background: url('/v/liby/img/s_arow.png') center center no-repeat; background-size: 100%; margin-top: 17px; margin-right: 15px;}
+.chose_store .enter{float: right; width: 6px; height: 10px; background: url('/v/liby/img/s_arow.png') center center no-repeat; background-size: 100%; margin-top: 17px; margin-right: 15px;}
+.content ol li:nth-child(3) .error{width: 16px; height: 16px; margin-top: 14px; background: url('/v/liby/img/error_log.png') center center no-repeat; background-size: 100%;}
+#submit{margin: 30px 0 30px 3%; width: 94%; background: #04BE01; border-radius: 5px; color: #fff; font-size: 16px; line-height: 40px;}
+/*地址选择层*/
+.chose-address{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; background: rgba(0,0,0,0.3); display: none;}
+.chose-address > div{margin-top: 46%; background: #fff; width: 100%; height: 100%;}
+.top{position: relative; font-size: 15px; line-height: 20px; padding-top: 16px;}
+.top img{position: absolute; right: 12px; top: 18px; height: 13px; width: 13px;}
+/*tab切换样式*/
+.tabs {width: 96%; padding-left: 4%;/* overflow: hidden;*/ height: 32px; border-bottom: 1px solid #e5e5e5; font-size: 14px; color: #2b2b2d;}
+.tabs li{float: left; text-align: center; margin-right: 26px; height: 32px; line-height: 32px; border-bottom: 1px solid #e5e5e5;}
+.tabs .active{ height: 32px; line-height: 32px; border-bottom: 1px solid #EA5551;}
+.tabs #city{display: none;}
+.tabs #town{display: none;}
+.swiper-container { height: 400px; width: 100%;}
+.swiper-slide {height: 100%; width: 100%; background: none; color: #2b2b2d; font-size: 14px;}
+.content-slide {height: 100%; overflow-y: auto;}
+.content-slide div{height: auto;}
+.content-slide p{height: 40px; padding-left: 4%; line-height: 40px; text-align: left; overflow: hidden;}
+.content-slide p span{float: left; margin-right: 20px;}
+.content-slide .active1{color: #EA5551;}
+.content-slide .active1 em{float: left; width: 14px; height: 14px; margin-top: 14px; background: url(http://photo.no5.com.cn/page/mobile/images/2016/chose-al-blue.png) 0 center no-repeat; background-size: 14px;}
+/*注册成功提示*/
+#reg_success{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 101; background: rgba(62,58,57,1); display: none;}
+#success_tip{margin-top: 20%; width: 84%; margin-left: 8%; background: #fff; border-radius: 5px; padding: 12px 0 0;}
+#success_tip p:nth-child(1){line-height: 24px; color: #333; font-size: 16px; margin: 0 5%;}
+#success_tip p:nth-child(2){line-height: 30px; color: #666; font-size: 13px; margin: 0 5% 14px;}
+#success_tip img{width: 40%; margin-bottom: 26px;}
+#success_tip #record{color: #04BE01; font-size: 14px; line-height: 44px; border-top: 1px solid #e5e5e5; padding: 0 5%;}
+
+/*店铺信息页*/
+#inform_box{margin-top: 15px; margin-bottom: 25px; width: 100%; background: #fff; text-align: left;padding-left:12px;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;}
+#inform_box li{border-bottom: 1px solid #e5e5e5;line-height: 44px; overflow: hidden;}
+#inform_box li input{border: none; color: #666; font-size: 16px; padding: 12px 0; line-height: 20px; width: 69%;}
+#inform_box li span{
+	float: left;width: 3.2rem;font-size: 16px;
+}
+#inform_box .chose_open input{width:70%; float: left;}
+#inform_box .chose_open .enter{margin-right: 0;}
+#inform_box .chose_store .enter{margin-right: 0;}
+#btn{width: 90%; height: 42px; line-height: 42px; background: #04BE01; color: #fff; margin-left: 5%; font-size: 18px; border-radius: 5px;margin-top: 2rem;}
+#btn img{
+	width: 1.2rem;
+	margin-top: .2rem;
+}
+#address{
+	background: url(../img/location.png) no-repeat right;
+	-webkit-background-size: .7rem auto;
+}
+#store{
+	background: url(../img/right.png) no-repeat right;
+	-webkit-background-size: .4rem auto;
+}
+#store_msg{
+	width: 100%;
+	height:80%;
+	margin: 0;
+	top: 20%;
+	position: relative;
+	background: white;
+}
+#store_msg img{
+	position: absolute;
+    right: 12px;
+    top: 14px;
+    height: 13px;
+    width: 13px;
+    padding: 10px;
+    margin-top: -10px;
+}
+#store_msg input{
+	height: 40px;
+	line-height: 41px;
+	border: 0;
+	width: 100%;
+	text-indent: 12px;
+	font-size: 16px;
+	border-bottom: 1px red solid;
+}
+#store_msg ul{
+	height: 91%;
+	padding-bottom: .5rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+}
+#store_msg ul li{
+	height: 40px;
+    padding-left: 4%;
+    line-height: 40px;
+    text-align: left;
+    overflow: hidden;
+    border-bottom: 1px #ccc solid;
+}

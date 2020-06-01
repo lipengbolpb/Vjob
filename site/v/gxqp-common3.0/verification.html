@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大奖兑奖</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/verification/verification.css?v=1.0.6"/>
+	</head>
+	<body>
+		<div id="box">
+			<div class="msg_box">
+				<img src="" class="title">
+				<div class="qrcode">
+					<span>中奖码：</span>
+					<input type="text" name="" id="qrcode" value="" readonly/>
+				</div>
+				<div class="prizeName">
+					<span>中奖产品：</span>
+					<input type="text" name="" id="prizeName" value="" readonly/>
+				</div>
+				<div class="earnTime">
+					<span>中奖时间：</span>
+					<input type="text" name="" id="earnTime" value="" readonly/>
+				</div>
+				<div class="endTime">
+					<span>兑奖截止：</span>
+					<input type="text" name="" id="endTime" value="" readonly/>
+				</div>
+				<div class="contact">
+					<span>联系人：</span>
+					<input type="text" name="" id="contact" value="" readonly/>
+				</div>
+				<div class="tel">
+					<span>联系电话：</span>
+					<input type="text" name="" id="tel" value="" readonly/>
+				</div>
+				<div class="checkUserName">
+					<span>兑奖人员：</span>
+					<input type="text" name="" id="checkUserName" value="" readonly/>
+				</div>
+				<div class="checkTime">
+					<span>兑奖时间：</span>
+					<input type="text" name="" id="checkTime" value="" readonly/>
+				</div>
+				<div class="verificationRemark">
+					<span>兑奖备注：</span>
+					<input type="text" name="" id="verificationRemark" value="" placeholder="请输入"/>
+				</div>
+			</div>
+			<img src="img/verification.png?v=1" class="sign">
+			<p class="tip">注：请兑奖人完善个人信息，进行兑奖</p>
+			<p id="verification">进行兑奖</p>
+		</div>
+		<div class="alert">
+			<div class="alertContent">
+				<p class="title">提示</p>
+				<p class="content">兑奖成功</p>
+				<p class="alertBtn">确定</p>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=12.2.1"></script>
+	<script src="/v/js/publictip.js?v=11.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/verification/verification.js?v=11.1.3" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#box').css('height',$('body').height()+'px');
+		var win_h = $(window).height();//关键代码
+		window.addEventListener('resize', function () {
+			if($(window).height() < win_h){
+				$('#verification').css('visibility', 'hidden');
+			}else{
+				$('#verification').css('visibility', 'visible');
+			}
+		});
+		$("input").blur(function(){
+			setTimeout(() => {
+				var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+			}, 100);
+		})
+	</script>
+</html>

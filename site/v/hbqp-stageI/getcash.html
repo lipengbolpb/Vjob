@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒乐享河北</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=1.9.1">
+    <link rel="stylesheet" href="css/double.css?v=3.7.3">
+    <link rel="stylesheet" href="css/sign.css?v=1.1.8">
+    <!-- <link rel="stylesheet" href="css/sale.css?v=1.0.0"> -->
+</head>
+
+<body>
+    <!-- 拆红包层 -->
+   <!-- <div class="get">
+        <img src="img/open.png" class="open">
+    </div> -->
+    <!-- 2.0版红包页 -->
+    <div class="get">
+        <img src="img/logo.png?v=1" class="logo">
+		<!-- <img src="img/20190423/double-rule.png" class="doubleRule"> -->
+        <img src="img/20190423/slogan.png?v=1.0.0" class="slogan">
+        <div class="hb">
+            <img src="img/20190423/open.png" class="open">
+			<p class="cash_tip">即日起开箱扫码有<br />机会赢取互动好礼</p>
+        </div>
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+    </div>
+	<div class="double_rule_box">
+		<div>
+			<img src="img/20190423/double_rule.png?v=1" >
+		</div>
+		<img src="img/close.png" onclick="$('.double_rule_box').fadeOut(1)" class="close_rule">
+	</div>
+    <!-- 拆开层 -->
+    <div class="cash">
+        <img src="img/rule.png" class="rule">
+        
+        <p class="title"></p>
+       
+        <p class="main">
+            <!-- 中出红包和积分 -->
+            <!-- <img src="img/winCard.png" alt="" class="winCard"> -->
+        </p>
+
+        <p class="time"></p>
+        <input type="button" value="查看红包余额" class="btn" id="btn">
+        <p class="notice">红包累计大于等于1元后可提现<br>不足1元的红包将存入零钱包</p>
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+    </div>
+    <div id="sign_logo" class="sign_logo"></div>
+    <!-- 一码双奖通知按钮 -->
+    <div class="doubleBtn">
+        <img src="img/double/icon.png">
+        <span class="doubleBtnNum">0</span>
+        <p class="doubleBtnTitle"></p>
+    </div>
+    <!-- 联通流量层 -->
+    <div class="liantong">
+        <img src="img/ad_bg.png" class="liantong-bg">
+        <img src="img/close.png" class="liantong-close">
+        <img src="img/ad_btn.png" class="liantong-btn">
+    </div>
+    <!-- 提现成功遮罩层 -->
+    <div class="mask">
+        <img src="img/alert.png" class="alert">
+        <input type="button" class="iknow" value="我知道了">
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+    </div>
+    <img src="img/logo.png?v=1" class="logo">
+
+    <!-- 活动规则 -->
+    <div class="signRule">
+        <div class="signInner">
+            <div class="top">
+                <img src="img/sign/back.png" class="back" id="signBack">
+                <!-- <img src="img/logo.png?v=1" class="logo"> -->
+            </div>
+            <div class="bottom">
+                <textarea name="" id="signContent" cols="35" rows="22" readonly="readonly" class="content"></textarea>
+            </div>
+        </div>
+    </div>
+	<!-- 广告 -->
+	<div class="active">
+	    <img src="img/20190627.png?v=2">
+	    <img src="img/close.png" class="activeClose">
+	</div>
+    <!-- 一码双奖 -->
+    <!-- 通知按钮 -->
+    <!-- <div class="doubleBtn">
+        <img src="img/double/icon.png">
+        <span class="doubleBtnNum">0</span>
+        <p class="doubleBtnTitle"></p>
+    </div> -->
+    <!-- 滚动宣传 -->
+    <!-- <div class="doubleTransform">
+        <p class="doubleTransformP">您的红包累计已领取
+            <span class="doubleTransformMoney"></span>元
+            <span class="doubleNbsp"></span>二重惊喜活动累计支数
+            <span class="doubleTransformNum"></span>支</p>
+        <p class="doubleTransformP">您的红包累计已领取
+            <span class="doubleTransformMoney"></span>元
+            <span class="doubleNbsp"></span>二重惊喜活动累计支数
+            <span class="doubleTransformNum"></span>支</p>
+    </div> -->
+    <div class="double">
+        <!-- 广告宣传 -->
+        <!-- <div class="doubleAd">
+            <img src="img/double/ad_slogan.png" class="doubleAdSlogan">
+            <div class="doubleAdContent">
+                <p class="doubleAdTitle"></p>
+                <textarea name="" id="doubleAdMain" cols="30" rows="7" readonly="readonly"></textarea>
+            </div>
+            <img src="img/double/close.png" class="doubleAdClose">
+        </div> -->
+        <!-- 二重惊喜 -->
+        <!-- <div class="doubleSurprise">
+            <div class="doubleSurpriseBox" style="position: relative;top: 45%;left: 50%;transform: translate(-50%,-50%);">
+                <div class="doubleSurpriseTop">
+                    <img src="img/double/surprise-top.png">
+                    <p>奖池动态</p>
+                    <div id="doubleSurpriseList">
+                        <ul class="doubleSurpriseList">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="doubleSurpriseBottom">
+                    <img src="img/double/surprise-bottom.png">
+                    <p>幸运用户</p>
+                    <ul class="doubleSurpriseLucky">
+
+                    </ul>
+                </div>
+                <img src="img/double/close.png" class="doubleSurpriseClose">
+            </div>
+
+        </div> -->
+        <!-- 本次中奖弹窗 -->
+        <div class="doubleAlert">
+            <div class="doubleAlertMain">
+                <img src="img/20190423/double-alert.png" class="">
+				<p class="doubleAlertYes">点击抽奖</p>
+                <input type="button" value="点击抽奖" class="doubleAlertYes">
+            </div>
+        </div>
+        <!-- 抽中实物奖 -->
+        <div class="doubleGet">
+            <img src="" class="doubleGetBtn">
+			<img src="img/20190423/hand.png" class="hand">
+        </div>
+        <!-- 未抽中实物奖 -->
+        <div class="doubleNone">
+			<img src="img/logo.png?v=1" class="logo">
+            <img src="img/20190423/no_prize.png" class="doubleNoneImg">
+        </div>
+        <!-- 填写中奖信息 -->
+        <div class="doubleInfo">
+			<img src="img/logo.png?v=1" class="logo">
+			<img src="img/sign/back.png" class="back" id="infoBack">
+            <!-- <img src="img/footer.png" class="doubleInfoFooter"> -->
+            <!-- <img src="img/beer.png" class="doubleInfoBeer"> -->
+            <p class="doubleInfoTitle">信息填写</p>
+            <div class="doubleInfoText">
+                <div>
+                    <span>丨</span>姓名:
+                    <input type="text" placeholder="张三" maxlength="10" class="doubleName">
+                </div>
+                <div>
+                    <span>丨</span>邮寄地址:
+                    <input type="text" placeholder="省、市、县、区/街道" maxlength="50" class="doubleAddress">
+                </div>
+               <!-- <div>
+                    <span>丨</span>身份证号:
+                    <input type="text" placeholder="请输入身份证号" maxlength="18" class="doubleIdcard">
+                </div> -->
+                <div>
+                    <span>丨</span>电话:
+                    <input type="text" placeholder="请输入手机号" maxlength="11" class="doubleTel">
+                </div>
+                <div>
+                    <span>丨</span>
+                    <input type="text" placeholder="验证码" maxlength="4" class="doubleCode">
+                    <input type="button" value="获取验证码" class="doubleYz">
+                </div>
+            </div>
+			<p class="doubleListRuleP info">兑奖说明</p>
+			<img src="img/20190423/zhang.png"  class="zhang">
+            <input type="button" value="提交" class="doubleInfoBtn">
+			<p class="doubleInfoTip">温馨提示：信息务必填写正确哟！</p>
+        </div>
+        <!-- 领取成功 -->
+        <div class="doubleSuccess">
+            <div class="doubleSuccessBox" style="position: relative;top: 45%;left: 50%;transform: translate(-50%,-50%);">
+                <img src="img/double/success.png">
+                <input type="button" value="确定" class="doubleSuccessBtn">
+            </div>
+        </div>
+        <!-- 奖品列表 -->
+        <div class="doubleList">
+            <div class="doubleListBack"></div>
+            <!-- <input type="button" value="活动说明>" class="doubleListRule"> -->
+            <p class="doubleListRuleP">兑奖说明</p>
+            <div class="doubleListTitle">
+                <img src="img/double/list-title.png">
+                <p>
+                    <span class="doubleListNum"></span>
+                    <span>支</span>
+                </p>
+                <p>二重惊喜
+                    <br>活动累计支数</p>
+            </div>
+            <div class="doubleListBottom">
+                <img src="img/double/list-bg.png" class="doubleListLine">
+                <div class="doubleListMain">
+                    <div class="doubleListBtns">
+                        <a href="javascript:;" class="doubleListYes">已领奖品</a>
+                        <a href="javascript:;" class="doubleListNo doubleActive">未领奖品</a>
+                    </div>
+                    <!-- 没有记录 -->
+                    <img src="" class="doubleListNone">
+                    <!-- 有未领取记录 -->
+                    <ul class="doubleListDetailed">
+                        <p class="doubleGetMore"></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 已领奖信息弹框 -->
+        <div class="doubleListAlert">
+            <div class="doubleListAlertBox">
+                <h1>领奖信息</h1>
+                <div>
+                    姓名：
+                    <input type="text" value="" class="doubleListName" readonly="readonly">
+                </div>
+                <div>
+                    邮寄地址：
+                    <input type="text" value="" class="doubleListAddress" readonly="readonly">
+                </div>
+                <!-- <div>
+                    身份证号：
+                    <input type="text" value="" class="doubleListIdcard" readonly="readonly">
+                </div> -->
+                <div>
+                    电话：
+                    <input type="text" value="" class="doubleListTel" readonly="readonly">
+                </div>
+                <img src="img/double/close.png" class="doubleListAlertClose">
+            </div>
+        </div>
+    </div>
+    <img src="img/loading.gif" class="loading" id="loading">
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.2.5"></script>
+<script src="js/getcash.js?v=1.5.5"></script>
+<script src="js/double.js?v=1.0.0"></script>
+<!-- <script src="js/sign.js?v=2.7"></script> -->
+<!-- <script src="js/sale.js?v=2.0"></script> -->
+<script>
+    // ini_wxshare(vge.hbqpappid);
+    // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+
+    $('.doubleName,.doubleAddress,.doubleIdcard,.doubleTel,.doubleCode').blur(function () {
+        setTimeout(() => {
+            //滚动到顶部
+            window.scrollTo(0, 0);
+            //滚动到底部
+            // window.scrollTo(0, document.documentElement.clientHeight);
+            window.scrollTo(0, $(this).offset().top);
+        }, 100);
+    });
+</script>
+
+</html>

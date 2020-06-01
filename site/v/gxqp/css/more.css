@@ -1,0 +1,235 @@
+html{
+	height: 100%;
+	font-size: 100%;
+}
+body{
+	height: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+ 
+/* 
+ @-webkit-keyframes scroll{
+ 	0%{
+		-webkit-transform:scaleY(100%);
+		transform-origin: bottom;
+ 	}
+ 	100%{
+		-webkit-transform:scaleY(0);
+		transform-origin: bottom;
+ 	}
+ }
+  @-webkit-keyframes change{
+ 	0%{
+		top: 8.5%;
+ 	}
+ 	100%{
+		top: 51%;
+ 	}
+ }  */
+
+ img{
+ 	display: block;
+ }
+.wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #00974a;
+}
+.head {
+	width: 100%;
+	height: 8.5%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.wrap .bg {
+	width: 100%;
+	height: 60%;
+}
+.couplet{
+	width: 100%;
+	height: 43.2%;
+	position: absolute;
+	top: 8.5%;
+}
+.post-left{
+	width: 14.84%;
+	height: 43.2%;
+	position: absolute;
+	left: 0;
+	bottom: 48.5%;
+	/* transition: all 2.0s linear 0.01s; */
+	/* -webkit-transition:all 2.0s linear 0.01s; */
+	/* animation: scroll 2s linear both; */
+}
+/* .post-left.start{
+	height: 0;
+} */
+.post-right{
+	width: 14.84%;
+	height: 43.2%;
+	position: absolute;
+	right: 0;
+	bottom: 48.5%;
+	/* transition:all 2.0s linear 0.01s; */
+	/* -webkit-transition:all 2.0s linear 0.01s; */
+	/* animation: scroll 2s linear both; */
+}
+/* .post-right.start{
+	height: 0;
+} */
+.leftDown{
+	width: 16.4%;
+	height: 1.2%;
+	position: absolute;
+	left: 0;
+	top: 8.5%;
+	/* transition:all 2.0s linear 0.01s;  */
+	/* -webkit-transition:all 2.0s linear 0.01s;  */
+	/* animation: change 2s linear both; */
+}
+/* .leftDown.start{
+	top: 51%;
+} */
+.rightDown{
+	width: 17.2%;
+	height: 1.29%;
+	position: absolute;
+	right: 0;
+	top: 8.5%;
+	/* transition:all 2.0s linear; */
+	/* -webkit-transition:all 2.0s linear 0.01s; */
+	/* animation: change 2s linear both; */
+}
+/* .rightDown.start{
+	top: 51%;
+} */
+.page{
+	width: 100%;
+	height: 100%;
+}
+.text{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.cloud{
+	width: 100%;
+	height: 56%;
+	position: absolute;
+	top: 15%;
+	left: 0;
+}
+.moneynum {
+	width: 100%;
+	height: 15%;
+	position: absolute;
+	top: 50%;
+	color: #ffffff;
+}
+.moneynum .tittle{
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 3%;
+	font: 16px '微软雅黑'
+}
+.moneynum .box {
+	margin-top: -5%;
+	position: absolute;
+	left: 50%;
+	width: 40%;
+	height: 50%;
+	text-align: center;
+	margin-left: -18%;
+}
+#money {
+	color: #fff226;
+	font-size: 1.4em;
+	font-family: '微软雅黑';
+}
+#dollor {
+	text-align: center;
+	color: #fff226;
+	font-size: 1.3em;
+	font-family: '微软雅黑';
+	line-height: 4.5em;
+	width: 100%;
+}
+.prompt {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	bottom: 16%;
+	color: #ffffff;
+}
+.prompt p {
+	width: 80%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.7em;
+	line-height: 150%;
+	font-family: '微软雅黑';
+	background:url('../img/clock.png') no-repeat; 
+	padding-left: 7%;
+	background-size: 5%;
+	background-position:0% 7%;
+}
+.btn button{
+	position: absolute;
+	bottom: 8%;
+	left:26.9%;
+	width: 46.3%;
+	height: 6.5%;
+	background-color: #f7ab00;
+	border: none;
+	color: #ffffff;
+	border-radius: 10px;
+	font: 100% '微软雅黑';
+	line-height: 100%;
+}
+.print {
+	position: absolute;
+	bottom: 1.79%;
+	left: 26.9%;
+	width: 46.3%;
+	font: 0.8em '微软雅黑'
+}
+.print .right {
+	float: right;
+}
+.print a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+@media only screen and (max-device-height:480px){
+	html{
+		height: 100%;
+		overflow: hidden;
+	}
+	body{
+		height: 100%;
+		font-size: 14px;
+		overflow: hidden;
+		}
+	.moneynum .box {
+	margin-top: -5%;
+	position: absolute;
+	left: 50%;
+	width: 40%;
+	height: 50%;
+	text-align: center;
+	margin-left: -18%;
+	}
+}

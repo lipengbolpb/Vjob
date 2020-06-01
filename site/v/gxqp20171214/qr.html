@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>青啤广西</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2">
+  <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+  <style>
+  	img{width: 10%; margin-left: 45%; margin-top: 56%;}
+  	html,body,#location{
+  		width: 100%;
+  		height: 100%;
+  		overflow: hidden;
+  		margin: 0;
+  		padding: 0;
+  	}
+  	#location{
+  		background-color: rgba(0,0,0,.7);
+  		position: fixed;
+  		left: 0;top: 0;
+  		display: none;
+  		z-index: 1000000;
+  	}
+  	#location img{
+  		display: block;
+  		width: 80%;
+  		margin: 10% auto;
+  	}
+  </style>
+  </head>
+  <body>
+    <p id="info"></p>
+    <!--<img src="/static/img/bigload.gif" alt="">-->
+    <div id="toast" style="display: none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">已完成</p>
+      </div>
+    </div>
+    <div id="location">
+    	<img src="/v/qpgx/location.png"/>
+    </div>
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <div class="weui_loading">
+          <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+      </div>
+    </div>
+  </body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js?v=11"></script> <!-- 84k -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<!--<script src="/v/js/60webcfg.js?v=19"></script>-->
+	<script src="/v/js/cfg.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/publictip.js?v=17"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v2"></script>
+  <script src="js/qr.js?v=11.0.6"></script>
+</html>

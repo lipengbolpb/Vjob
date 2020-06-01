@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青花汾酒</title>
+	</head>
+	<body>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script type="text/javascript">
+		var args = vge.urlparse(location.href),
+			openid = args.openid;
+		
+		sessionStorage.openid = openid;
+		
+		location.replace('http://'+location.host+'/v/fjmall/index.html');
+	</script>
+</html>

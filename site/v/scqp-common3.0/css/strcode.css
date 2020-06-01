@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #b0cbbc;
+    overflow-x: hidden;
+    position: relative;
+    /* padding-bottom: 5rem; */
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+    border: 0;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #848484;
+}
+
+input[type='button'] {
+    box-shadow: 1px 1px 1px #000;
+}
+
+.wrap {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.logo {
+    width: 32%;
+    margin: .8rem 0 0 5%;
+    display: block;
+    position: relative;
+}
+
+.slogan {
+    width: 60%;
+    margin: 1rem 0 0 35%;
+    display: block;
+    position: relative;
+}
+.sloganmask{
+    /* width: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 0; */
+}
+.sloganBox{
+    width: 100%;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    /* display: none; */
+}
+.mask {
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    left: 0%;
+    display: none;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: #009040;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.err{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+.content {
+    margin-top: .2rem;
+    width: 100%;
+    text-align: center;
+    color: #009040;
+    font-size: 0.7rem;
+}
+
+.border {
+    width: 100%;
+    margin-top: 1rem;
+}
+.icon{
+    width: 8%;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(0,-50%);
+}
+#btn_tip {
+    width: 60%;
+    height: 2rem;
+    background: transparent;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.65rem;
+    font-size: 0.75rem;
+    font-weight: normal;
+    border-radius: 0.45rem;
+    -webkit-border-radius: 0.45rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    background-color: #fa6b5a;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    letter-spacing: 0.1rem;
+}
+
+div.strcode {
+    width: 90%;
+    margin: 2.5rem auto 0;
+    position: relative;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+p.tip {
+    font-size: 0.5rem;
+    color: #000000;
+    line-height: 0.8rem;
+    width: 90%;
+    margin: 0.3rem auto;
+    position: relative;
+}
+
+/* p.tip span {
+    display: inline-block;
+    padding-left: 0.8rem;
+    margin-left: -0.8rem;
+    background: url(../img/clock.png?v=1.0.2) no-repeat left;
+    -webkit-background-size: auto 90%;
+    background-size: auto 90%;
+} */
+
+div.strcode div.import {
+    height: 2.25rem;
+    border-bottom: 1px #e5e5e5 solid;
+    border-top: 1px #e5e5e5 solid;
+    width: 100%;
+    position: relative;
+}
+
+div.strcode div.telcode {
+    height: 2.25rem;
+    border-bottom: 1px #e5e5e5 solid;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+#str_code {
+    color: #000000;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    text-indent: 2.2rem;
+}
+
+#telcode_box {
+    color: #000000;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    text-indent: 2.2rem;
+}
+
+#vertion_code {
+    color: #000000;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    text-indent: 2.2rem;
+}
+
+div.strcode div.vertion {
+    height: 2.25rem;
+    border-bottom: 1px #e5e5e5 solid;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+div.strcode input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    background: 0;
+    text-indent: 0.1rem;
+    font-size: 0.7rem;
+}
+
+#vertion_code {
+    float: left;
+    display: inline-block;
+    width: 70%;
+}
+
+#vertion_btn {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    float: right;
+    display: inline-block;
+    border-left: 1px solid #08984f;
+    width: 30%;
+    text-align: center;
+    color: #08984f;
+    height: 0.8rem;
+    box-shadow: 0 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#btn {
+    width: 50%;
+    height: 1.6rem;
+    display: block;
+    margin: 3.5rem auto 1rem;
+    background: #e5e5e5;
+    color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    box-shadow: 1px 3px 1px #86a192;
+    position: relative;
+}
+
+input[disabled] {
+    color: #ffffff;
+}
+
+.batch {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    color: black !important;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    font-weight: bold;
+    background-color: aliceblue;
+    margin: 2rem auto 0 !important;
+    font-size: 20px !important;
+}
+
+/* .copyright {
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100% !important;
+    text-align: center;
+    color: #5a5b5d !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+} */
+.copyright {
+    clear: both;
+    position: relative;
+    margin-top: -1rem;
+    height: 1rem;
+    width: 100%;
+    text-align: center;
+    color: #5a5b5d;
+    font-size: 0.45rem;
+}
+
+.copyright a {
+    color: #53565a;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+.footerPush {
+    height: 1rem;
+}
+.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    pointer-events: none;
+    z-index: 999;
+    display: none;
+}
+
+.footertext {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    pointer-events: none;
+}

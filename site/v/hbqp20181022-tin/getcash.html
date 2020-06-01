@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享河北</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.5" />
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+	</head>
+
+	<body>
+		<img src="img/logo.png" class="logo" />
+		<img src="img/index.png?v=1" class="index" />
+		<div class="cash">
+			<div class="cash_box">
+				<p class="money"></p>
+				<p class="tip"><span>温馨提示：红包大于1元可提现</span></p>
+			</div>
+			<div id="btn">
+			</div>
+			<p class="rule_box">
+				<a href="javascript:;" class="rule">活动规则</a>
+				<a href="javascript:;" class="pravite">隐私说明</a>
+			</p>
+		</div>
+		<div id="alert">
+			<img src="img/alert.png" class="alert" />
+		</div>
+		<img src="img/loading.gif" id="loading" />
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<!-- 84k -->
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/cfg.js?v=2.1.6"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="js/getcash.js?v1.2.0" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		if(hwb < 1.5) { //矮屏幕手机 
+			$('p.rule_box').css({
+				'padding-top': '0'
+			});
+		}
+	</script>
+
+</html>

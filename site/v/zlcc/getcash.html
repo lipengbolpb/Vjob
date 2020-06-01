@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中粮长城</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1"/>
+	</head>
+	<body>
+		<div class="wxmark" id="alert">
+			<img src="img/alert_tip.png"/>
+		</div>
+		<img src="img/cash.png" class="cash"/>
+		<p class="title">获得红包</p>
+		<p class="money"></p>
+		<input type="button" name="btn" id="btn" value="查看我的账户" />
+		<p class="time"></p>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=1.0.3"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.0.4" type="text/javascript" charset="utf-8"></script>
+	<script>
+      ini_wxshare(vge.zlccappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+</html>

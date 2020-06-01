@@ -1,0 +1,135 @@
+#dialogue{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg1.jpg') no-repeat center/100% 100% ;display: none}
+#dialogue .gn1{ width: 2.75rem; position: absolute;right:0;top: 21%  }
+#dialogue .dia1{ width: 2.9rem; position: absolute;left: 2.7rem; top: 3%; display: none }
+#dialogue .dia2{ width: 3.37rem; position: absolute;left: .3rem; top: 23%; display: none }
+#dialogue .dia3{ width: 4.05rem; position: absolute;left: .6rem; top: 11%; display: none }
+#dialogue .happy1{ width: 5.39rem; position: absolute;left: 0;bottom: 0 }
+#dialogue .happy2{ width: 1.79rem; position: absolute;left: 0;bottom: 2.6rem; display: none }
+#dialogue .sad1{ width: 5.39rem; position: absolute;left: 0;bottom: 0; display: none}
+#dialogue .hand{ width: 5.35rem; height: 1.4rem; position: absolute;left: 0;bottom: 0;
+	background: url('../img/guifei/hand1.png') no-repeat center/contain;display: none  }
+#dialogue .hand2{-webkit-animation:hand .8s infinite;}
+@-webkit-keyframes hand{
+	0%,100%,49%{background: url('../img/guifei/hand1.png') no-repeat center/contain;}
+	50%,99%{background: url('../img/guifei/hand2.png') no-repeat center/contain;}
+}
+.menu{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg2.jpg') no-repeat center/100% 100%; display: none }
+.menu .btn1{ width: 1.74rem; height: 3.89rem; position: absolute;left: 0; top: 60%;
+	 background: url('../img/guifei/btn1.png') no-repeat center/contain;
+	-webkit-animation:btn1 3s .5s infinite;}
+.menu .btn2{ width: 2.7rem; height: 3.84rem; position: absolute;left: 1.83rem;bottom: 0;
+	 background: url('../img/guifei/btn2.png') no-repeat center/contain;
+	-webkit-animation:btn2 3s 1s infinite;}
+.menu .btn3{ width: 1.74rem; height: 3.89rem; position: absolute;right: 0; top: 60%;
+	 background: url('../img/guifei/btn3.png') no-repeat center/contain;
+	 -webkit-animation:btn1 3s 1.5s infinite;}
+.menu .zha{width: 5.17rem; height: 7.26rem;position: absolute;left: .3rem;top: 17%;
+	background: url('../img/guifei/zha1.png') no-repeat center/contain;
+	-webkit-animation:zha 1s infinite; }
+@-webkit-keyframes zha{
+	0%,49%,100%{background: url('../img/guifei/zha1.png') no-repeat center/contain;}
+	50%,99%{background: url('../img/guifei/zha2.png') no-repeat center/contain;}
+}
+@-webkit-keyframes btn1{
+	0%,6%,12%,18%,24%,100%{ -webkit-transform:translateY(0); }
+	3%,15%{ -webkit-transform:translateY(-.05rem); }
+	9%,21%{ -webkit-transform:translateY(.05rem); }
+}
+@-webkit-keyframes btn2{
+	0%,6%,12%,18%,24%,100%{ -webkit-transform:translateX(0); }
+	3%,15%{ -webkit-transform:translateX(-.05rem); }
+	9%,21%{ -webkit-transform:translateX(.05rem); }
+}
+.lottery{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg3.jpg') no-repeat center/100% 100%; display:none  }
+.lottery .jp0{ width: 100%; position: absolute; bottom: 0; -webkit-transform:translateY(4rem); height: 43%;
+	-webkit-animation:jp0 1.5s forwards linear;}
+@-webkit-keyframes jp0{
+	0%{ -webkit-transform:translateY(4rem);}
+	100%{-webkit-transform:translateY(0);}
+}
+.lottery .jp{ width: 5.03rem; position: absolute; top: 11%; left:.68rem; display: none; height: 41%  }
+.lottery .cj{ width: 5rem; height: 2rem; position: absolute;left: .7rem;top: 57% }
+.zj1{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg_zj1.jpg') no-repeat center/100% 100%; display: none}
+.zj1 .jp_1{ width: 3.66rem; position: absolute;left: 0; top: 32%;-webkit-transform:translateX(-4rem);
+	-webkit-animation:jp1 2s forwards linear}
+@-webkit-keyframes jp1{
+	0%{ -webkit-transform:translate(-5rem,-.5rem);}
+	20%{ -webkit-transform:translate(-4rem,0);}
+	40%{ -webkit-transform:translate(-3rem,-.5rem);}
+	60%{ -webkit-transform:translate(-2rem,0);}
+	80%{ -webkit-transform:translate(-1rem,-.5rem);}
+	100%{ -webkit-transform:translate(0,0);}
+}
+.zj1 .comeon{ width: 4.26rem; position: absolute;left: 0; top: 66%; opacity: 0;
+	-webkit-animation:opa 2s forwards linear}
+@-webkit-keyframes opa{
+	0%{ opacity: 0}
+	100%{ opacity: 0.4}
+}
+.ck{ width: 1.56rem;height: .68rem;position: absolute;
+	background: url('../img/guifei/ck1.png') no-repeat center/contain }
+.zj1 .ck{ left: 4rem; top: 34% }
+.zj2{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg_zj2.jpg') no-repeat center/100% 100%; display: none}
+.zj2 .love1{ width: .3rem; position: absolute; left: 1.55rem; top: 42.6%;-webkit-transform:scale(0.5);opacity: 0;
+	-webkit-animation:love1 2s .6s forwards linear}
+@-webkit-keyframes love1{
+	0%{ -webkit-transform:translate(0,0) scale(0.5); opacity: 0.8; }
+	20%{ -webkit-transform:translate(.2rem,.2rem) scale(0.8); opacity: 1; }
+	40%{ -webkit-transform:translate(.4rem,-.1rem) scale(1); opacity: 1; }
+	60%{ -webkit-transform:translate(.8rem,.4rem) scale(1.2); opacity: 1; }
+	80%{ -webkit-transform:translate(1.4rem,-.5rem) scale(1.4); opacity: 1; }
+	99%{ -webkit-transform:translate(2.6rem,.8rem) scale(2); opacity: 0.8; }
+	100%{ -webkit-transform:translate(2.6rem,.8rem) scale(2); opacity: 0; }
+}
+.zj2 .money{ width: 2rem; height: .3rem; position: absolute;left: 3.57rem; top: 67%; text-align: center;
+	color: #c92e31;font-size: .28rem; font-weight: bold }
+.zj2 .ck{ left: 4rem;top: 81% }
+.zj3{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg_zj3.jpg') no-repeat center/100% 100%; display: none}
+.zj3 .oy1{ width: 1.12rem; position: absolute;left: 3.2rem; top: 40%;
+	 -webkit-animation:oy1 2s .5s forwards}
+.zj3 .oy2{ width: 3.36rem;position: absolute;left: .3rem;bottom: 0; height: 38%;
+	 -webkit-animation:oy2 2s .5s forwards}
+@-webkit-keyframes oy1{
+	0%,33%,67%,100%{-webkit-transform:rotate(0)}
+	16%,50%,81%{-webkit-transform:rotate(20deg)}
+}
+@-webkit-keyframes oy2{
+	0%,50%,100%{-webkit-transform:rotate(0);-webkit-transform-origin:left bottom; }
+	25%,75%{-webkit-transform:rotate(30deg);-webkit-transform-origin:left bottom;}
+}
+.zj3 .oy3{ width: 2.47rem;position: absolute;left: 1.5rem;bottom: 0; height: 19.5%}
+.zj3 .ck{ left: 4.05rem;top: 32% }
+.zj4{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg_zj4.jpg') no-repeat center/100% 100%; display: none}
+.zj4  .pp1_1{ width: .17rem; position: absolute;left: 1.1rem;top: 41%;-webkit-transform:scale(0.5);
+	 -webkit-animation:pp1_1 1.2s forwards linear; opacity: 0}
+@-webkit-keyframes pp1_1{
+	0%{-webkit-transform:translate(0,0) scale(0.5); opacity: 1}
+	25%{-webkit-transform:translate(-.1rem,-.1rem) scale(0.7); opacity: 1}
+	50%{-webkit-transform:translate(.1rem,-.2rem) scale(0.9); opacity: 1}
+	75%{-webkit-transform:translate(-.1rem,-.35rem) scale(1.1); opacity: 1}
+	100%{-webkit-transform:translate(.2rem,-.7rem) scale(1.2); opacity: 1}
+}
+.zj4  .pp3_1{ width: .17rem; position: absolute;left: 2.7rem; top: 41%;-webkit-transform:scale(0.5);
+	-webkit-animation:pp1_1 1.2s .5s forwards linear; opacity: 0}
+.zj4  .pp3_2{ width: .31rem; position: absolute;left: 2.9rem; top: 34%; display: none}
+.zj4  .pp2{ width: .17rem; position: absolute;left: 1rem; top: 41%;-webkit-transform:scale(0.5);
+	-webkit-animation:pp1_1 1.2s 1.5s forwards linear; opacity: 0}
+.zj4 .ck{ left: 4.05rem;top: 31% }
+.zj5{ width: 100%;height:100%;position: absolute;top: 0; overflow:hidden;
+	background: url('../img/guifei/bg_zj5.jpg') no-repeat center/100% 100%; display: none}
+.zj5 .sb{ width: 1.71rem;position: absolute;left: .8rem;top: 43%;
+	 -webkit-animation:sb 2.5s .5s forwards}
+@-webkit-keyframes sb{
+	0%,15%,25%,55%,65%,100%{-webkit-transform:rotate(0); -webkit-transform-origin:80% 80%}
+	10%,30%,50%,70%,90%{-webkit-transform:rotate(-5deg); -webkit-transform-origin:80% 80%}
+	20%,40%,80%{-webkit-transform:rotate(15deg); -webkit-transform-origin:80% 80%}
+}
+.zj5 .ck{width: 1.56rem;height: .68rem;position: absolute;left: 2.7rem;top: 85%;
+	background: url('../img/guifei/ck2.png') no-repeat center/contain}

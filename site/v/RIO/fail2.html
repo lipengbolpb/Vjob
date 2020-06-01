@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>锐澳RIO鸡尾酒</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=1.0.3" />
+		<style type="text/css">
+			html,
+			body {
+				background: #fff;
+			}
+			
+			p.title {
+				font-size: .8rem;
+				color: #000;
+				padding-left: .5rem;
+				background: url(/v/RIO/img/tip_border.png) no-repeat left;
+				-webkit-background-size: .15rem auto;
+				margin: 1.25rem 0 1.3rem 1.6rem;
+			}
+			
+			img.fail_pic {
+				width: 4.625rem;
+				margin: 1rem auto;
+			}
+			
+			p.tip {
+				color: red;
+				font-size: .7rem;
+				width: 80%;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			#btn {
+				position: absolute;
+				bottom: 2rem;
+				left: 50%;
+				margin-left: -2.225rem;
+				width: 4.45rem;
+				height: 1.8rem;
+				-webkit-border-radius: .3rem;
+				background: #de0000;
+				font-size: .65rem;
+				color: #fff;
+				border: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p class="title">温馨提示</p>
+		<img src="/v/RIO/img/fail_tip_person.png" class="fail_pic" />
+		<p class="tip"></p>
+		<input type="button" name="btn" id="btn" value="我知道了" />
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<!-- 84k -->
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=2.0.7"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script type="text/javascript">
+		ini_wxshare(vge.rioappid);
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+			e.preventDefault();
+		});
+		document.getElementById("btn").addEventListener('click', function() {
+			wx.closeWindow();
+		}, false);
+		var args = vge.urlparse(location.href),
+			bizcode = args.bizcode;
+
+		switch(bizcode) {
+			case '1':
+				document.getElementsByClassName('tip')[0].innerHTML = '请扫描合法二维码参与活动';
+				break;
+			case '3':
+				document.getElementsByClassName('tip')[0].innerHTML = '来晚了哟，本期活动已结束';
+				break;
+			case '4':
+				document.getElementsByClassName('tip')[0].innerHTML = '二维码暂未激活<br />保留好二维码日后再抽奖吧<br /><br />批次名称：'+ sessionStorage.batchName;
+				break;
+			case '5':
+				document.getElementsByClassName('tip')[0].innerHTML = '来晚了哟，本期活动已结束';
+				break;
+			case '6':
+				document.getElementsByClassName('tip')[0].innerHTML = '网络不给力，请稍后再试';
+				break;
+			case '12':
+				document.getElementsByClassName('tip')[0].innerHTML = '您的操作过于频繁，请明天再试';
+				break;
+			case '13':
+				document.getElementsByClassName('tip')[0].innerHTML = '您的操作过于频繁，请明天再试';
+				break;
+			case '-1':
+				document.getElementsByClassName('tip')[0].innerHTML = '系统升级中...';
+				break;
+			case '19':
+				document.getElementsByClassName('tip')[0].innerHTML = '请扫描合法二维码参与活动';
+				break;	
+			default:
+				document.getElementsByClassName('tip')[0].innerHTML = sessionStorage.msg;
+				break;
+		}
+	</script>
+
+</html>

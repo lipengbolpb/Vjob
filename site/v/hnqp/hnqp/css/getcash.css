@@ -1,0 +1,385 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,ul,li{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+em{
+	font-style: normal;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[disabled],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-opacity:1; 
+opacity: 1; }
+::-webkit-input-placeholder{
+     color: #814900;
+}
+#loading{
+    position: fixed;
+    z-index: 9999;
+    width: 2rem;
+    left: 50%;
+    margin-left: -1rem;
+    top: 39%;
+}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+#alert img{
+	width: 100%;
+}
+div.openhb{
+	width: 100%;
+	height: 100%;
+	background:url(../img/hb-bg.png?v=2) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	overflow: hidden;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+div.openhb img.slogan{
+	position: absolute;
+	left: 3.8rem;
+	top: 2.0rem;
+	width: 8rem;
+}
+
+div.openhb div.hb div.hbcover{
+	width: 100%;
+	position: relative;
+}
+div.openhb div.hb img{
+	width: 100%;
+	display: block;
+}
+div.openhb div.hb img.hb_cover{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: all 1s;
+	-webkit-transition: all 1s;
+	transform-origin: top;
+	-webkit-transform-origin: top;
+}
+div.openhb div.hb img.hb_cover.rotate{
+	transform: rotateX(-180deg);
+	-webkit-transform: rotateX(-180deg);
+}
+div.openhb div.hb img.open{
+	z-index: 10;
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	/* 去除移动端点击事件出发边框 */
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);  
+	tap-highlight-color:rgba(0, 0, 0, 0); 
+}
+div.openhb div.hb img.open.rotate{
+	transform: rotateY(-360deg);
+	-webkit-transform: rotateY(-360deg);
+}
+div.openhb div.beer{
+	width: 54%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+div.openhb div.beer img{
+	width: 100%;
+	display: block;
+}
+div.openhb p.over{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+}
+@media only screen and (max-device-height:480px ) {
+	div.openhb div.hb{
+		width: 50%;
+		padding: 0 2rem;
+		position: absolute;
+		top: 40%;
+		left: 12.5%;
+		background: url(../img/hb-shadow.png) no-repeat bottom;
+		background-size: 100% auto;
+		-webkit-background-size: 100% auto;
+	}	
+	div.openhb div.hb img.open{
+		position: absolute;
+		top: 1.2rem;
+		left: 2.5rem;
+		width: 3rem;
+	}
+	div.openhb img.slogan{
+		position: absolute;
+		left: 4rem;
+		top: 2rem;
+		width: 8rem;
+	}
+	div.getmoney{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		background:#FABD00 url(../img/hb-tip-bg.png?v=2) no-repeat left top;
+		background-size: 100% 53%;
+		-webkit-background-size: 100% 53%;
+	}	
+	
+	div.getmoney div.msg{
+		position: absolute;
+		top: 55%;
+		left: 5%;
+		width: 90%;
+		text-align: center;
+	}
+	div.getmoney div.msg input.tomybag{
+		height: 1.5rem;
+		margin-top:1.1rem;
+		padding: 0 0.5rem;
+		border-radius: 0.4rem;
+		-webkit-border-radius: 0.4rem;
+		color: #E8380D;
+		font-size: 0.75rem;
+		background:#ffed67;
+		outline: none;
+	}
+	div.getmoney div.msg p.rule{
+		margin-top: 0.5rem;
+		font-size: 0.7rem;
+	}
+	div.getmoney div.money{
+		position: absolute;
+		top: 33%;
+		left: 0;
+		width: 100%;
+		font-size: 1rem;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	div.getmoney div.money p{
+		display: inline-block;
+	}
+	div.getmoney div.money p span{
+		font-size: 1.7rem;
+		position: relative;
+		top: 0.1rem;
+	}
+}
+@media only screen and (min-device-height:481px ) {
+	div.openhb div.hb{
+		width: 62.5%;
+		padding: 0 2rem;
+		position: absolute;
+		top: 36%;
+		left: 6.5%;
+		background: url(../img/hb-shadow.png) no-repeat bottom;
+		background-size: 100% auto;
+		-webkit-background-size: 100% auto;
+	}
+	div.openhb div.hb img.open{
+		position: absolute;
+		top: 1.2rem;
+		left: 3.1rem;
+		width: 3.9rem;
+	}	
+	div.getmoney{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		background:#FABD00 url(../img/hb-tip-bg.png?v=1) no-repeat left top;
+		background-size: 100% 54%;
+		-webkit-background-size: 100% 54%;
+	}	
+	div.getmoney div.msg{
+		position: absolute;
+		top: 54.7%;
+		left: 5%;
+		width: 90%;
+		text-align: center;
+	}
+	div.getmoney div.msg input.tomybag{
+		height: 1.5rem;
+		margin-top:1.8rem;
+		padding: 0 0.5rem;
+		border-radius: 0.4rem;
+		-webkit-border-radius: 0.4rem;
+		color: #E8380D;
+		font-size: 0.75rem;
+		background:#ffed67;
+		outline: none;
+	}
+	div.getmoney div.msg p.rule{
+		margin-top: 1rem;
+		font-size: 0.7rem;
+	}
+	div.getmoney div.money{
+		position: absolute;
+		top: 35%;
+		left: 0;
+		width: 100%;
+		font-size: 1.2rem;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	div.getmoney div.money p{
+		display: inline-block;
+	}
+	div.getmoney div.money p span{
+		font-size: 1.8rem;
+		position: relative;
+		top: 0.1rem;
+	}
+}
+
+div.getmoney div.msg p.tip{
+	padding: 0.2rem 0.67rem 0.7rem 1.16rem;
+	font-size: 0.6rem;
+	color: #814900;
+	margin-bottom: 0.1rem;
+	text-align: left;
+} 
+div.getmoney div.msg p.tip span.wxtip{
+	display: inline-block;
+	padding-left: 1rem;
+	margin-left: -1rem;
+	background: url(../img/clock.png) no-repeat left;
+	-webkit-background-size: auto 90%;
+	background-size: auto 90%; 
+}
+div.getmoney div.msg div.getbtn{
+	width: 100%;
+	height: 2rem;
+	background: #fff9cd;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	color: #f9bd00;
+	font-size: 0.8rem;
+	position: relative;
+	text-align: left;
+}
+div.getmoney div.msg div.getbtn span.sign{
+	position: absolute;
+	top: 2.1rem;
+	left: 0;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	color: #E8380D;
+	font-size: 0.6rem;
+	padding-top: 0.2rem;
+	background: url(../img/progress-sign.png) no-repeat top;
+	background-size: auto 0.3rem;
+	-webkit-background-size: auto 0.3rem;
+	transition: all 1.5s 1s;
+	-webkit-transition: all 1.5s 1s;
+}
+div.getmoney div.msg div.getbtn p{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	line-height: 2rem;
+	text-align: center;
+	font-size: 0.7rem;
+}
+div.getmoney div.msg div.getbtn input{
+	height: 101%;
+	width: 0;
+	background:#E8380D;
+	float: left;
+	line-height: 2rem;
+	outline: none;
+	color: #FFFFFF;
+	font-size: 1rem;
+	transition: all 1.5s 1s;
+	-webkit-transition: all 1.5s 1s;
+}
+div.getmoney div.msg div.getbtn i{
+	padding:0 0.4rem;
+	height: 100%;
+	background: url(../img/glass.png) no-repeat right top;
+	background-size:auto 100%;
+	-webkit-background-size:auto 100%;
+	float: left;
+	margin-left: -0.2rem;
+}
+
+div.getmoney div.msg span.sign em{
+	font-size: 0.68rem;
+}
+
+div.getmoney div.msg p.rule a{
+	text-decoration: none;
+	padding: 0 0.3rem;
+	color: #824a00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

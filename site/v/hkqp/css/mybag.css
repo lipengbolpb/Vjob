@@ -1,0 +1,493 @@
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.55rem;
+    color: #d8cc93;
+    pointer-events: none;
+}
+
+/* 提现成功提示 */
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 1;
+}
+
+.mask .qin {
+    width: 100%;
+    margin-top: 4.8rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.mask .alert {
+    width: 13rem;
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+.mask .ck {
+    width: 50%;
+    height: 2.2rem;
+    margin: 2rem auto 0;
+    display: block;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    color: #f6243c;
+    background-color: #fcc833;
+    box-shadow: 2px 2px 2px #004040;
+    border-top-left-radius: 20px 50%;
+    border-top-right-radius: 20px 50%;
+    border-bottom-right-radius: 20px 50%;
+    border-bottom-left-radius: 20px 50%;
+    z-index: 1;
+    position: relative;
+}
+
+div.mybag_top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    background: url('../img/cash-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.mybag_top .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mybag_top .content{
+    width:100%;
+    position:absolute;
+    top:3rem;
+    left: 0;
+}
+.mybag_top .content .mybag{
+    width:70%;
+    position:absolute;
+    top: 0;
+    left: 15%;
+}
+.mybag_top .content .msg{
+    width:70%;
+    position:absolute;
+    top: 7rem;
+    left:15%;
+}
+.mybag_top .content .msg p{
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    color:#ffffff;
+}
+.mybag_top .content .msg .title{
+    color:#ffffff;
+    font-size:0.7rem;
+}
+.mybag_top .content .msg .total{
+    margin: 0.5rem auto 0;
+    color:#ffffff;
+    font-size:0.9rem;
+    font-weight:bold;
+}
+.mybag_top .content .msg .total #num{
+    font-size:1.8rem;
+    color:#fcc833;
+}
+.mybag_top .content .msg .top{
+    margin: 0.5rem auto 0;
+    font-size: 0.8rem;
+    text-align: left;
+    position: absolute;
+    top: 3.5rem;
+    left: 15%;
+}
+.mybag_top .content .msg .top span{
+    color:#fcc833;
+}
+.mybag_top .content .msg .top span:nth-of-type(1){
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.mybag_top .content .msg .bottom{
+    font-size: 0.8rem;
+    text-align: left;
+    position: absolute;
+    top: 5.5rem;
+    left: 15%;
+}
+.mybag_top .content .msg .bottom span{
+    color:#fcc833;
+}
+.mybag_top .content .msg .bottom span:nth-of-type(1){
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#show {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.65rem;
+    text-decoration: underline;
+    position: relative;
+    /* z-index: 9; */
+    top: 4rem;
+}
+#btn {
+    /* z-index: 9; */
+    /* margin: 1rem auto 0; */
+    position:absolute;
+    top: 20rem;
+    left: 25%;
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight:bold;
+    color: #f6243c;
+    background-color: #fcc833;
+    box-shadow: 2px 2px 2px #004040;
+    border-top-left-radius: 20px 50%;
+    border-top-right-radius: 20px 50%;
+    border-bottom-right-radius: 20px 50%;
+    border-bottom-left-radius: 20px 50%;
+}
+.notice{
+    width:100%;
+    text-align: center;
+    color:#ffffff;
+    font-size:0.55rem;
+    position: absolute;
+    top: 23rem;
+}
+
+
+img.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+div.mybag_bottom {
+    width: 100%;
+    height: 100%;
+    background-color: #00a6ae;
+}
+
+div.mybag_bottom div.record {
+    width: 89%;
+    height: 100%;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: 5.5%;
+    top: 0;
+}
+
+div.mybag_bottom div.record input {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight:bold;
+    color: #f6243c;
+    background-color: #fcc833;
+    box-shadow: 2px 2px 2px #004040;
+    border-top-left-radius: 20px 50%;
+    border-top-right-radius: 20px 50%;
+    border-bottom-right-radius: 20px 50%;
+    border-bottom-left-radius: 20px 50%;
+}
+
+div.mybag_bottom div.record ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+    border-top: 1px #80d3d7 solid;
+}
+
+div.mybag_bottom div.record ul li {
+    border-bottom: 1px #80d3d7 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+div.mybag_bottom div.record ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+    color: #ffffff;
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1) {
+    font-size: 0.7rem;
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+
+div.mybag_bottom div.record ul li p.money {
+    float: right;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+
+div.mybag_bottom div.record p.getmore {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+}
+
+#no_list {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+    width: 100%;
+}
+
+@media only screen and (max-height:500px) and (min-width:320px) {
+    .mybag_top .content{
+        top: 2rem;
+    }
+    #btn{
+        top: 19rem;
+    }
+    .notice{
+        top: 22rem;
+    }
+    .mybag_top .content{
+        width: 90%;
+        left: 5%;
+    }
+    .mybag_top .content .msg{
+        top: 6.5rem;
+    }
+    .mybag_top .content .msg .total{
+        margin: 0 auto;
+    }
+    .mybag_top .content .msg .top{
+        top: 2.5rem;
+    }
+    .mybag_top .content .msg .bottom{
+        top: 4.5rem;
+    }
+    #show{
+        top: 3rem;
+    }
+    #btn{
+        top: 17.5rem;
+    }
+    .notice{
+        top: 20.5rem;
+    }
+}
+@media only screen and (max-height:450px) and (min-width:320px) {
+    .mybag_top .content{
+        top: 0.5rem;
+    }
+    #btn{
+        top: 16rem;
+    }
+    .notice{
+        top: 18.5rem;
+    }
+}
+@media only screen and (max-height:550px) and (min-width:360px) {
+    .mybag_top .content{
+        top: 0.5rem;
+    }
+    #btn{
+        top: 16rem;
+    }
+    .notice{
+        top: 18.5rem;
+    }
+    .mybag_top .content{
+        top: 2rem;
+    }
+    #btn{
+        top: 19rem;
+    }
+    .notice{
+        top: 22rem;
+    }
+    .mybag_top .content{
+        width: 90%;
+        left: 5%;
+    }
+    .mybag_top .content .msg{
+        top: 6.5rem;
+    }
+    .mybag_top .content .msg .total{
+        margin: 0 auto;
+    }
+    .mybag_top .content .msg .top{
+        top: 2.5rem;
+    }
+    .mybag_top .content .msg .bottom{
+        top: 4.5rem;
+    }
+    #show{
+        top: 3rem;
+    }
+    #btn{
+        top: 17.5rem;
+    }
+    .notice{
+        top: 20.5rem;
+    }
+    .mybag_top .content{
+        top: 1.5rem;
+    }
+    #btn{
+        top: 17rem;
+    }
+    .notice{
+        top: 19.5rem;
+    }
+}
+@media only screen and (max-height:600px) and (min-width:380px) {
+    .mybag_top .content{
+        top: 0.5rem;
+    }
+    #btn{
+        top: 16rem;
+    }
+    .notice{
+        top: 18.5rem;
+    }
+    .mybag_top .content{
+        top: 2rem;
+    }
+    #btn{
+        top: 19rem;
+    }
+    .notice{
+        top: 22rem;
+    }
+    .mybag_top .content{
+        width: 90%;
+        left: 5%;
+    }
+    .mybag_top .content .msg{
+        top: 6.5rem;
+    }
+    .mybag_top .content .msg .total{
+        margin: 0 auto;
+    }
+    .mybag_top .content .msg .top{
+        top: 2.5rem;
+    }
+    .mybag_top .content .msg .bottom{
+        top: 4.5rem;
+    }
+    #show{
+        top: 3rem;
+    }
+    #btn{
+        top: 17.5rem;
+    }
+    .notice{
+        top: 20.5rem;
+    }
+    .mybag_top .content{
+        top: 2rem;
+    }
+    #btn{
+        top: 17.5rem;
+    }
+    .notice{
+        top: 20rem;
+    }
+}
+@media only screen and (max-height:550px) and (min-width:380px) {
+    .mybag_top .content{
+        top: 0.5rem;
+    }
+    #btn{
+        top: 16rem;
+    }
+    .notice{
+        top: 18.5rem;
+    }
+    .mybag_top .content{
+        top: 2rem;
+    }
+    #btn{
+        top: 19rem;
+    }
+    .notice{
+        top: 22rem;
+    }
+    .mybag_top .content{
+        width: 90%;
+        left: 5%;
+    }
+    .mybag_top .content .msg{
+        top: 6.5rem;
+    }
+    .mybag_top .content .msg .total{
+        margin: 0 auto;
+    }
+    #btn{
+        top: 17.5rem;
+    }
+    .notice{
+        top: 20.5rem;
+    }
+    .mybag_top .content{
+        top: 1.5rem;
+    }
+    #btn{
+        top: 17rem;
+    }
+    .notice{
+        top: 19.5rem;
+    }
+}
+@media only screen and (max-height:550px) and (min-width:400px) {
+    .mybag_top .content{
+        top: 0.5rem;
+    }
+    #btn{
+        top: 16rem;
+    }
+    .notice{
+        top:18.5rem;
+    }
+}

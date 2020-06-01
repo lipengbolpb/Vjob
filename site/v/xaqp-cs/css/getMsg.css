@@ -1,0 +1,173 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: #009040;
+	color: #FFFFFF;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+::-webkit-input-placeholder{
+     color: #E0E0E0;
+     font-size: 0.8rem;
+}
+img.logo{
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+}
+img.slogan{
+    width: 80%;
+    display: block;
+    margin:2rem auto 0;
+}
+img.footer{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    pointer-events:none;
+}
+#wrap{
+	width: 100%;
+	height: 100%;
+	/* padding-top: 4rem; */
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.65);
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#wrap p{
+	padding-left: 1rem;
+	border-bottom: 1px #FFFFFF solid;
+	overflow: hidden;
+}
+#wrap .tip{
+	padding: 0;
+	font-size: 0.7rem;
+	text-align: center;
+	margin: 4rem 0 2rem;
+	border: 0;
+}
+#tel_box{
+	border-top: 1px #FFFFFF solid;
+}
+#wrap input{
+	border: 0;
+}
+#wrap p span,a,input{
+	height: 2rem;
+	line-height: 2rem;
+	color: #FFFFFF;
+}
+#wrap p span{
+	padding: 0 0.2rem;
+}
+#wrap p input{
+	font-size: 0.8rem;
+}
+#tel{
+	width: 95%;
+}
+#name{
+	font-size: 0.7rem;
+	width: 50%;
+}
+#yz_code{
+	width: 10rem;
+}
+#get_yz{
+	height: 100%;
+	width: 3.8rem;
+	font-size: 0.7rem;
+	float: right;
+	text-align: center;
+	padding-left: 0.2rem;
+	border-left: 1px #FFFFFF solid;
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+#tj{
+	width: 7.8rem;
+	height: 1.9rem;
+	display: block;
+	margin: 3rem auto 1rem;
+	background: #ffd46c;
+	-webkit-border-radius: 0.5rem;
+	color: #882700;
+	font-size: 0.875rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#wrap #tips{
+	border: 0;
+	padding: 0;
+	margin:2rem auto;
+	width: 100%;
+	font-size: 0.7rem;
+	text-align: center;
+}
+#wrap1{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
+	text-align: center;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#wrap1 p{
+	font-size: 0.7rem;
+    margin: 5rem auto 2rem;
+    color: #FFFFFF;
+    line-height: 1.2rem;
+}
+#wrap1 img.qrcode{
+	width:40%;
+}
+img.loading{
+	width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+#copyright{
+    position: fixed;
+    margin: 1rem auto 0;
+    top: 95%;
+    width: 100%;
+    text-align: center;
+    font-size: 0.55rem;
+    color: #d8cc93;
+    border-bottom:none !important;
+    padding:0 !important;
+}

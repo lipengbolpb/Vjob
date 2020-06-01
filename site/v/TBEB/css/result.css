@@ -1,0 +1,519 @@
+@charset "utf-8";
+html,body,img,p,a,span,input,ul,li{
+	margin: 0;
+	padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+ul,li{
+	list-style: none;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fed40c;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+/*--------积分页面----------*/
+img.logo{
+	position: absolute;
+	left: 1rem;
+	width: 2.5rem;
+	top: 1rem;
+}
+div.playbeer{
+	width: 14rem;
+	height: 14.75rem;
+	margin: 1rem auto 0;
+	background: url(../images/playbeer.png) no-repeat right top;
+	-webkit-background-size: auto 100%;
+	overflow: hidden;
+	position: relative;
+}
+div.playbeer div.jf{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	display: none;
+}
+/*-----随机配图-------*/
+div.playbeer img.gd_pic{
+	width: 10rem;
+	margin-top: 3rem;
+}
+div.playbeer img.toggle{
+	-webkit-animation: swim 2.5s infinite;
+}
+@-webkit-keyframes swim{
+	0%,50%,100%{
+		-webkit-transform: rotate(20deg);
+	}
+	25%,75%{
+		-webkit-transform: rotate(-10deg);
+	}
+}
+/*-----积分1-------*/
+div.playbeer img.top_pic_1{
+	width: 8rem;
+	margin-top: 3rem;
+}
+div.playbeer img.bottom_pic{
+	width: 10rem;
+	position: absolute;
+	bottom: 1.5rem;
+	left: 2rem;
+}
+/*--------积分2--------*/
+div.playbeer img.top_pic_2{
+	height: 7.5rem;
+	position: absolute;
+	right: 4rem;
+	top: 3rem;
+	margin-left: -2rem;
+}
+div.playbeer img.bottom_pic{
+		width: 10rem;
+		position: absolute;
+		bottom: 1.5rem;
+		left: 2rem;
+}
+div.playbeer img.anim_pic_2{
+	width: 3.6rem;
+	position: absolute;
+	top: 12rem;
+	right: 9rem;
+}
+/*--------积分3-----------*/
+div.playbeer img.top_pic_3{
+	width: 9rem;
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+/*--------积分5-----------*/
+div.playbeer img.top_pic_5{
+	width: 5rem;
+	margin-top: 3rem;
+}
+/*--------积分8-----------*/
+div.playbeer img.top_pic_8{
+	width: 3.75rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.9rem;
+	bottom: 5rem;
+}
+/*--------积分9-----------*/
+div.playbeer img.top_pic_9{
+	width: 9rem;
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+/*--------积分10----------*/
+div.playbeer img.top_pic_10{
+	width: 7.5rem;
+	margin-top: 3rem;
+}
+/*-------积分11-------*/
+div.playbeer img.anim_pic_11{
+	width: 3.6rem;
+	position: absolute;
+	top: 12rem;
+	right: 9rem;
+}
+
+
+@media only screen and (max-height: 480px) {
+	div.playbeer img.bottom_pic_2{
+		width: 8rem;
+		bottom: 1.5rem;
+		left: 3rem;
+	}
+	div.playbeer img.anim_pic_2{
+		top: 10.5rem;
+		right: 8.5rem;
+	}
+	div.playbeer img.anim_pic_11{
+		top: 10.5rem;
+		right: 8.5rem;
+	}
+	div.playbeer img.top_pic_1{
+		width: 6rem;
+		margin-top: 2rem;
+	}
+	div.playbeer img.top_pic_10{
+		width: 6rem;
+		margin-top: 2rem;
+	}
+	div.playbeer img.top_pic_5{
+		width: 4rem;
+		margin-top: 2rem;
+	}
+	div.playbeer img.top_pic_2{
+		height: 6.5rem;
+		position: absolute;
+		right: 3rem;
+		top: 3.2rem;
+		margin-left: -2rem;
+	}
+	div.playbeer img.gd_pic{
+		width: 9rem;
+		margin-top: 3rem;
+	}
+}
+
+
+
+
+
+
+
+span.Num{
+	display: inline-block;
+	height: 1.85rem;
+	line-height: 1.85rem;
+	background: url(../images/jifen_icon.png) no-repeat left;
+	padding-left: 2rem;
+	margin-top: 0.6rem;
+	-webkit-background-size: auto 1.85rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #001d8e;
+}
+span.Num i{
+	padding-right: .2rem;
+}
+/*-------酒量值页面-------*/
+#toBarrel{
+	width: 7.1rem;
+	height: 2.5rem;
+	border: 0;
+	margin: 1.2rem auto 0;
+	display: block;
+	background: url(../images/button_2.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+p.rule{
+	margin-top: .8rem;
+}
+p.rule a{
+	color: #383633;
+	font-size: .7rem;
+	padding: 0 2rem;
+}
+div.myBarrel{
+	width: 100%;
+	height: 100%;
+	background: #FED40C;
+}
+div.myBarrel img.slogan{
+	width: 11rem;
+	margin: 2rem auto 0;
+}
+div.myBarrel img.bottle{
+	position: absolute;
+	z-index: 1;
+}
+div.myBarrel img.bottle1{
+	left: 8.7rem;
+	top: 5.5rem;
+	width: 2.25rem;	
+	display: block;
+}
+div.myBarrel img.bottle1.shak{
+	-webkit-animation: shaking .8s 1s;
+}
+div.myBarrel img.bottle2{
+	left: 7.25rem;
+	top: 5.75rem;
+	width: 4.15rem;
+	display: none;
+}
+div.myBarrel img.bottle3{
+	left: 5.45rem;
+	top: 5.5rem;
+	width:5.9rem;
+	display: none;
+}
+div.myBarrel img.bottle4{
+	left: 8.8rem;
+	top: 5.5rem;
+	width: 2.65rem;
+	visibility: hidden;
+	-webkit-transition: all .4s linear;
+}
+div.myBarrel img.bottle4.rotate{
+	-webkit-transform: rotate(118deg);
+}
+div.myBarrel img.barrelWrap{
+	z-index: 2;
+	height: 10.8rem;
+	width: 8.73;
+	left: 3.46rem;
+	top: 9rem;
+}
+div.myBarrel div.barrel{
+	height: 11rem;
+	background: url(../images/barrel.png) no-repeat center;
+	-webkit-background-size: auto 11rem;
+	margin-top: 1.3rem;
+	width: 11.3rem;
+	left: 50%;
+	margin-left: -5.8rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;	
+}
+div.myBarrel div.barrel img.beer_mark{
+	height: 11.5rem;
+	width: 11.5rem;
+	position: absolute;
+	bottom: -.35rem;
+	display: block;
+	left: 49%;
+	-webkit-transform: translate(-50%,0);
+	z-index: 2;
+}
+div.myBarrel div.barrel img.beer{
+	position: absolute;
+	width:32rem;
+	bottom: -5.9rem;
+	left: -20rem;
+	display: none;
+}
+@-webkit-keyframes beerwave{
+	0%{
+		left: -20rem;
+	}
+	100%{
+		left: -4rem;
+	}
+}
+div.myBarrel p{
+	margin-top: .7rem;
+	font-size: .8rem;
+	color: #383633;
+	font-weight: bold;
+}
+div.myBarrel p span{
+	font-size: 1rem;
+	color: #001D8E;
+}
+div.myBarrel a{
+	color: #6f6c6a;
+	font-size: .7rem;
+	margin-top: .7rem;
+	display: block;
+}
+@-webkit-keyframes shaking{
+	0%,40%,80%{
+		-webkit-transform: rotate(-10deg);
+	}
+	20%,60%,100%{
+		-webkit-transform: rotate(10deg);
+	}
+}
+/*--------红包页面----------*/
+div.cash_page{
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background-color: rgba(0,0,0,.8);
+	display: none;
+}
+div.cash_page img{
+	position: absolute;
+}
+div.cash_page div.cash{
+	position: absolute;
+	width: 100%;
+	height: 15.75rem;
+}
+div.cash_page div.cash_1{
+	text-align: center;
+	display: block;
+	left: -90%;
+	top: -2rem;
+}
+div.cash_page div.cash_1.jump{
+	-webkit-animation: jump .7s 1s both;
+}
+@-webkit-keyframes jump{
+	0%{
+		left: -80%;	
+		top: -2rem;
+	}
+	20%{
+		top: -5rem;
+	}
+	40%{
+		top: -1rem;
+	}
+	60%{
+		top: -3rem;
+	}
+	80%{
+		top: -0.5rem;
+	}
+	90%{
+		top: -0.8rem;
+	}
+	100%{
+		left: 0;
+		top: 0;
+	}
+}
+div.cash_page div.cash_1 img.cash_1{
+	height: 11.6rem;
+	width: 9.5rem;
+	left: 50%;
+	bottom: 0;
+	margin-left: -4.75rem;
+}
+div.cash_page div.cash_1 img.look{
+	left: 50%;
+	margin-left:-3rem;
+	height: 3.2rem;
+	bottom: 2rem;
+	display: none;
+}
+div.cash_page div.cash_1 img.look_1{
+	display: block;
+}
+div.cash_page div.cash_1 img.look_2{
+	
+}
+div.cash_page div.cash_1 img.look_3{
+
+}
+div.cash_page div.cash_2{
+	display: none;
+}
+div.cash_page div.cash_2 img.cash_2{
+	height: 11.6rem;
+	width: 9.5rem;
+	left: 50%;
+	bottom: 0;
+	margin-left: -4.75rem;
+	z-index: 1;
+}
+div.cash_page div.cash_2 img.cash_hand{
+	left: 50%;
+	margin-left: -6.7rem;
+	width: 13.2rem;
+	bottom:1rem;
+	z-index: 2;
+}
+div.cash_page div.cash_2 img.cash_hand.hands{
+	-webkit-animation: hands .8s .5s linear  both;
+}
+@-webkit-keyframes hands{
+	0%,35%,75%{
+		-webkit-transform: rotate(10deg);
+	}
+	20%,65%,90%{
+		-webkit-transform: rotate(-10deg);
+	}
+	100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+div.cash_page div.cash_2 img.cash_boy{
+	left: 50%;
+	margin-left: -2.25rem;
+	width: 4.5rem;
+	bottom: 10.7rem;
+}
+div.cash_page div.cash_2 img.cbh{
+	left: 50%;
+	margin-left: -4.7rem;
+	width: 9.5rem;
+	bottom: 9.2rem;
+	z-index: 1;
+}
+div.cash_page div.cash_3{
+	display: none;
+}
+div.cash_page div.cash_3 img.tx_tip{
+	margin: 1.2rem auto 0;
+	width: 9rem;
+	display: block;
+	position: static;
+}
+div.cash_page div.cash_3 img.cash_3{
+	width: 13.4rem;
+	left: 50%;
+	margin-left: -6.7rem;
+	bottom: 0;
+}
+div.cash_page div.cash_3 p{
+	color: #ffea0e;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	font-size: .9rem;
+}
+div.cash_page div.cash_3 p.p1{
+	bottom: 5.2rem;
+}
+div.cash_page div.cash_3 p.money{
+	bottom:2.5rem;
+	font-weight: bold;
+}
+div.cash_page div.cash_3 p.money span{
+	font-size: 1.7rem;
+}
+div.cash_page #toBag{
+	width: 8.65rem;
+	height: 3rem;
+	background: url(../images/button_4.png) no-repeat center;
+	-webkit-background-size: 100%;
+	border: 0;
+	margin-top: 16rem;
+}
+div.cash_page p.tip{
+	color: #ffffff;
+	font-size: 0.6rem;
+	padding: 0 .5rem;
+	margin-top: 1rem;
+}
+
+
+
+
+
+@media only screen and (max-height: 480px) {
+	#toBarrel{
+		margin: .5rem auto 0;		
+	}
+	p.rule{
+		margin-top: .3rem;
+	}
+	div.playbeer{
+		width: 13rem;
+		height: 13rem;
+	}
+	div.cash_page p.tip{
+		margin-top: 0.5rem;
+	}
+}
+

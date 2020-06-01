@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华南</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=1.32">
+    <link rel="stylesheet" href="css/sign.css?v=1.1.5">
+    <!-- <link rel="stylesheet" href="css/sale.css?v=1.0.0"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1"/> -->
+</head>
+
+<body>
+    <!-- 拆红包层 -->
+    <div class="get">
+        <img src="img/open.png" class="open">
+    </div>
+    <!-- 拆开层 -->
+    <div class="cash">
+        <img src="img/rule.png" class="rule">
+		<img src="/v/hnqp-common3.0/img/icon_game.png"  class="icon_game">
+        <p class="title"></p>
+        <p class="main"></p>
+        <p class="time"></p>
+        <input type="button" value="查看红包余额" class="btn" id=btn>
+        <p class="notice">红包累计大于等于1元后可提现<br>不足1元的红包将存入零钱包</p>
+        <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p>
+		<!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+    </div>
+    <div id="sign_logo" class="sign_logo"></div>
+    <!-- 联通流量层 -->
+    <div class="liantong">
+        <img src="img/ad_bg.png" class="liantong-bg">
+        <img src="img/close.png" class="liantong-close">
+        <img src="img/ad_btn.png" class="liantong-btn">
+    </div>
+	<!--2018酒王-->
+	<!-- <div id="jw_box">
+		<img src="/v/vjfhls/img2018/icon-close.png" class="jw_close"/>
+		<div class="jw_content">
+			<img src="/v/vjfhls/img2018/jw_content_1.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_2.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_3.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_4.png"/>
+		</div>
+		<img src="/v/vjfhls/img2018/jw_person.png" class="jw_person"/>
+		<div class="qrcode_box">
+			<img src="/v/vjfhls/img2018/huanan.png"/>
+		</div>
+	</div> -->
+	<!--2018酒王-->
+    <!-- 广告 -->
+    <div class="active">
+        <img src="/v/hkqp/img/20190428.png">
+        <img src="/v/hkqp/img/close_black.png" class="activeClose">
+    </div>
+    <!-- 提现成功遮罩层 -->
+    <div class="mask">
+        <img src="img/alert.png" class="alert">
+        <input type="button" class="iknow" value="我知道了">
+        <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p>
+    </div>
+    <img src="img/logo.png" class="logo">
+    <!-- 幕布层 -->
+    <!-- <div class="curtain">
+        <img src="img/curtain-bg.png" class="curtain-bg">
+        <img src="img/curtain-left.png" class="curtain-left">
+        <img src="img/curtain-right.png" class="curtain-right">
+        <img src="img/curtain-logo.png" class="curtain-logo">
+        <div class="textTop">
+            <img src="img/text-1.png" class="text-1">
+            <div class="foamBox1">
+                <img src="img/text-1-mask.png" class="text-1-foam text-foam">
+            </div>
+        </div>
+        <div class="textBottom">
+            <img src="img/text-2.png" class="text-2">
+            <div class="foamBox2">
+                <img src="img/text-2-mask.png" class="text-2-foam text-foam">
+            </div>
+        </div>
+        <img src="img/beer.png" class="beer">
+    </div> -->
+
+    <div class="sign">
+        <div class="signMain">
+            <img src="img/sign/close.png" class="signClose">
+            <img src="img/sign/bg_top.png" class="bgTop">
+            <div class="mainTop">
+                <div class="signProgress">
+                    <div class="progressTitle">
+                        <p>0%</p>
+                    </div>
+                    <div class="outter">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <div class="signContent">
+                    <div class="signLeft">
+                        <img src="img/sign/on_left.png">
+                    </div>
+                    <div class="signMiddle">
+
+                    </div>
+                    <div class="signRight">
+                        <img src="img/sign/on_right.png">
+                    </div>
+                </div>
+            </div>
+            <img src="img/sign/bg_middle.png" class="bgMiddle">
+            <div class="mainBottom">
+                <div class="signMask">
+                    <img src="img/sign/mask.png?v=1">
+                </div>
+            </div>
+            <img src="img/sign/bg_bottom.png" class="bgBottom">
+            <img src="img/sign/ck.png" class="signCk">
+        </div>
+    </div>
+    <div class="signRule">
+        <div class="signInner">
+            <div class="top">
+                <img src="img/sign/back.png" class="back" id="signBack">
+                <img src="img/sign/logo.png" class="logo">
+            </div>
+            <div class="bottom">
+                <textarea name="" id="signContent" cols="30" rows="50" readonly="readonly" class="content"></textarea>
+            </div>
+        </div>
+    </div>
+    <img src="img/loading.gif" class="loading" id="loading">
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.13"></script>
+<script src="js/getcash.js?v=2.15"></script>
+<script src="js/sign.js?v=2.7"></script>
+<!-- <script src="js/sale.js?v=2.0"></script> -->
+<script>
+    ini_wxshare(vge.hnqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

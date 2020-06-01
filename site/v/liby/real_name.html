@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>实名认证</title>
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/real_name.css">
+  </head>
+  <body>
+	<p class="realtip" id="real_suc">银行转账需实名认证，请完善个人信息</p>
+	<ul id="realname_box">
+	  <li>
+		<p>真实姓名：</p>
+		<input type="text" maxlength="10">
+		<span id="name_tip"></span>
+	  </li>
+	  <li>
+		<p>身份证号：</p>
+		<input type="text" maxlength="18">
+		<span id="delete"></span>
+	  </li>
+	</ul>
+	<p id="btn">下一步</p>
+    <div id="reg_success">
+      <div id="success_tip">
+    	<p>实名认证说明</p>
+    	<p>为保证积分账户资金安全，请输入本人的真实姓名</p>
+    	<img src="/v/liby/img/real_name.png">
+    	<p id="record">我知道了</p>
+      </div>
+    </div>
+    
+    <script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=4"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+	<script src="/v/liby/js/idcard.js?v6"></script>
+    <script src="/v/liby/js/tip.js"></script>
+    <script src="/v/liby/js/real_name.js?v=2"></script>
+  </body>
+</html>

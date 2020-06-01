@@ -1,0 +1,596 @@
+
+#detailBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg10.png') no-repeat top left;
+    background-size: 100% 100%;
+    display:none;
+    z-index: 99;
+}
+#detail{
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    width: 22%;
+    height: 70px;
+    background: url('../img/btn.png') no-repeat top left;
+    background-size: 100% 100%;
+    border:none;
+    z-index: 100;
+    cursor: pointer;
+}
+div.between div.top img.lineNorth{
+    position: absolute;
+    width: 30%;
+    top: 30%;
+    left: 10%;
+}
+div.between div.top img.lineSouth{
+    position: absolute;
+    width: 38%;
+    top: 56%;
+    left: 20%;
+}
+div.between div.top img.lineAll{
+    position: absolute;
+    width: 23%;
+    top: 76%;
+    left: 26%;
+}
+div.between div.top div.listNorth{
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 42%;
+    background: url(../img/bg9.png?v=1) no-repeat top left;
+    background-size: 100% 100%;
+    /* height:150px; */
+}
+div.between div.top div.listSouth{
+    position: absolute;
+    width: 30%;
+    top: 44%;
+    left: 60%;
+    background: url(../img/bg9.png?v=1) no-repeat top left;
+    background-size: 100% 100%;
+    /* height:100px; */
+}
+div.between div.top div.listAll{
+    position: absolute;
+    width: 30%;
+    top: 75%;
+    left: 50%;
+    background: url(../img/bg9.png?v=1) no-repeat top left;
+    background-size: 100% 100%;
+    /* height:50px; */
+}
+div.between div.top p.titleNorth{
+    position: absolute;
+    top: 27%;
+    left: 26%;
+    font-size: 0.65rem;
+    color: #90eaff;
+}
+div.between div.top p.titleSouth{
+    position: absolute;
+    top: 53%;
+    left: 42%;
+    font-size: 0.65rem;
+    color: #90eaff;
+}
+div.between div.top p.titleAll{
+    position: absolute;
+    top: 73%;
+    left: 38%;
+    font-size: 0.65rem;
+    color: #90eaff;
+}
+#ulNorth{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ulSouth{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ulAll{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ulNorth li{
+    width:33%;
+    height:50px;
+    line-height: 50px;
+    float: left;
+    font-size: 0.55rem;
+    color:#ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+#ulNorth li:hover{
+    text-decoration: underline;
+}
+#ulSouth li{
+    width:33%;
+    height:50px;
+    line-height: 50px;
+    float: left;
+    font-size: 0.55rem;
+    color:#ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+#ulSouth li:hover{
+    text-decoration: underline;
+}
+#ulAll li{
+    width:33%;
+    height:50px;
+    line-height: 50px;
+    float: left;
+    font-size: 0.55rem;
+    color:#ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+#ulAll li:hover{
+    text-decoration: underline;
+}
+div.son{
+    width:99%;
+	height:92%;
+	margin:3% auto;
+}
+div.son div.left div.bottom{
+	height:79%;
+    margin-top:2%;
+    overflow: hidden;
+}
+div.son div.right div.top{
+    height: 55%;
+}
+div.son div.right div.bottom{
+    height: 44%;
+}
+div.son div.core{
+    background: url('../img/bg11.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+div.son div.month{
+    background: url('../img/bg7.png') no-repeat top left;
+    background-size: 100% 100%;
+    width: 100%;
+    left: 0%;
+}
+#areaTitle{
+    width: 45%;
+    display: block;
+    margin: 5% auto 0;
+}
+#areaIcon{
+    width:50%;
+    display: block;
+    margin:0 auto;
+}
+#rank{
+	width:95%;
+	height:100px;
+}
+div.son img.lookTitle{
+    display: block;
+    width:30%;
+    margin:0 auto;
+}
+div.son #btnAccumulate{
+
+}
+div.son #btnList{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+}
+
+div.son #btnList li.monthBtn{
+    width:12.5%;
+    height:45%;
+    margin:0 2% 0;
+    float: left;
+}
+div.son #btnList li:nth-of-type(1){
+    width:12.5%;
+    height:45%;
+    margin:0 auto;
+}
+div.son #btnList li input{
+    width:100%;
+    height:75%;
+    vertical-align: super;
+    outline: none;
+    border:none;
+    background-color: #0e304c;
+    border:1px solid #30c2eb;
+    color:#84d8f0;
+    border-radius:7px;
+    font-size:0.45rem;
+    cursor: pointer;
+}
+div.son #btnList li:nth-of-type(1) input{
+    width:100%;
+    height:75%;
+    vertical-align: super;
+    outline: none;
+    border:none;
+    background-color: #0e304c;
+    border:1px solid #30c2eb;
+    color:#84d8f0;
+    border-radius:7px;
+    font-size:0.45rem;
+}
+div.son div.total div.content{
+    width:100%;
+    height:40%;
+    overflow: hidden;
+}
+div.son div.total div.left{
+    width:40%;
+    height:100%;
+    float: left;
+}
+div.son div.total div.right{
+    width:45%;
+    float: left;
+    height: 100%;
+    margin-left: 5%;
+}
+div.son div.total div.left p{
+    color:#3e91d7;
+    font-size:0.45rem;
+    float: right;
+    width:100%;
+    height:25%;
+    margin:0;
+    text-align:right;
+    line-height: 320%;
+}
+div.son div.total div.right p{
+    color:#a4faff;
+    font-size:0.5rem;
+    float: left;
+    width:100%;
+    height:25%;
+    margin:0;
+    text-align:left;
+    line-height: 300%;
+}
+div.son div.total div.right p span{
+    font-size:0.4rem;
+    color:#3e91d7;
+    float: right;
+}
+div.son div.total{
+    position: relative;
+}
+div.son div.total img.line{
+    width:100%;
+    position: absolute;
+    top: 85%;
+    left: 0;
+}
+div.son div.total p.time{
+    width: 100%;
+    height:auto;
+    margin:0;
+    position: absolute;
+    bottom:5.5%;
+    font-size:0.4rem;
+    color:#3e91d7;
+    text-align: center;
+}
+div.son div.total p.time span{
+    font-size:0.4rem;
+    color:#3e91d7;
+    text-align: center;
+}
+
+/* 月度看板选中按钮的样式 */
+.active{
+    color:#00fff6 !important;
+}
+/* 月度看板没有月份的样式 */
+.nohaved{
+    color:#135192 !important;
+    border:1px solid #071b44 !important;
+}
+
+div.son div.right div.real{
+    position: relative;
+}
+div.son div.right div.real img.freshTitle{
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 32.5%;
+}
+div.son div.right div.real input{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5%;
+    background: url(../img/right.png) no-repeat top left;
+    background-size: 100% auto;
+    outline: none;
+    border: none;
+}
+#next{
+    right: 10%;
+    background: url(../img/right.png) no-repeat top left;
+    background-size: 100% auto;
+    cursor: pointer;
+    opacity: 0.5;
+    top: 6%;
+}
+#prev{
+    left:10%;
+    background: url(../img/left.png) no-repeat top left;
+    background-size: 100% auto;
+    cursor: pointer;
+    opacity: 0.5;
+    top: 6%;
+}
+#container{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    /* overflow: hidden; */
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 地图 */
+div.map #mapSon{
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    top: 22%;
+    left: 2%;
+}
+#mask0{
+    width: 33.1%;
+    height: 54.3%;
+    position: absolute;
+    top: 28.55%;
+    left: 10.35%;
+}
+div.map #mapSon2{
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    top: 22%;
+    left: 2%;
+}
+
+div.son div.map div.title{
+    width: 100%;
+    margin-top: 5%;
+} 
+div.son div.map div.title p:nth-of-type(1){
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #a4faff;
+}
+div.son div.map div.title p:nth-of-type(2){
+    width: 100%;
+    text-align: center;
+    font-size: 0.55rem;
+    color: #a4faff;
+    margin-top: 2%;
+}
+
+div.son div.map div.infoSon{
+	width:38%;
+	height:20%;
+	position: absolute;
+	top:25%;
+	right:4%;
+}
+div.son div.map div.infoSon img{
+	width:40%;
+	display:block;
+	margin:0 auto;
+}
+div.son div.map div.infoSon p{
+    line-height: 400%;
+}
+
+div.son div.map div.infototalSon{
+    width: 42%;
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+}
+div.son div.map div.infototalSon img{
+	width:40%;
+	display:block;
+	margin:0 auto;
+}
+div.son div.map div.infototalSon p{
+    line-height: 400%;
+}
+div.map div.totalSon{
+	width:100%;
+	height:50%;
+}
+div.map div.totalSon div{
+	width:8%;
+	height:100%;
+	float:left;
+	background:url('../img/map-bg.png') no-repeat top left;
+	background-size:100% 100%;
+	color:#a4faff;
+	text-align: center;
+	line-height:250%;
+	font-size:0.8rem;
+	font-weight:bold;
+}
+div.map div.totalSon div ul{
+	height:100%;
+	overflow: hidden;
+	width:100%;
+	position: relative;
+}
+div.map div.totalSon div ul li{
+	list-style: none;
+	width:100%;
+	box-sizing:border-box;
+    transition:all 0.5s linear;
+    cursor:pointer;
+}
+div.map div.totalSon div:nth-of-type(4){
+	background:none;
+}
+div.map div.totalSon div:nth-of-type(8){
+	background:none;
+}
+div.map div.totalSon div:nth-of-type(12){
+	background:none;
+}
+div.map div.totalSon div p{
+	font-size:0.8rem;
+}
+div.son div.map div.infoSon img.totlaTitle{
+    width: 50%;
+}
+
+#back{
+    width:20%;
+    height: 70px;
+    position: absolute;
+    top: 85%;
+    right:25%;
+    background: url('../img/back.png') no-repeat top left;
+    background-size:100% 100%;
+    border: none;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#control{
+    position: relative;
+    top: -11rem;
+    /* right: 0; */
+    left: 8.2rem;
+    width: 8rem;
+    border-radius: 50%;
+    /* z-index: 99; */
+    pointer-events: none;
+}
+#control div.outside{
+	width: 8.5rem;
+    height: 8.5rem;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+#control div.outside div.close{
+	width:1.5rem;
+	height:1.5rem;
+	background-color: #20ceb3;
+	border-radius:50%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	transition:all 0.2s linear;
+	background:url('../img/control-add.png?v=2') no-repeat top left;
+    background-size:100% 100%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#control div.outside div.contentSon{
+	width:100%;
+	height:100%;
+	background:url('../img/control-bg.png?v=1') no-repeat top left;
+	background-size:100% 100%;
+	border-radius:50%;
+	display: none;
+}
+#control div.outside p{
+	font-size:13px;
+	max-width:100px;
+	text-align:left;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	position: absolute;
+	top:50%;
+	left:50%;
+	color:#8ae1f9;
+    cursor:pointer;
+}
+#control div.outside p:hover{
+    text-decoration: underline;
+}
+#control div.outside p.all{
+	position: absolute;
+    top: 7.7rem;
+    left: 3.5rem;
+    color: #00c0ff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    pointer-events: auto;
+}
+.events{
+    pointer-events: auto;
+}
+div.left{
+    overflow: hidden;
+}
+#end0{
+    color: #3e91d7;
+    font-size: 0.45rem;
+}
+#end1{
+    color: #3e91d7;
+    font-size: 0.45rem;
+}
+#end2{
+    color: #3e91d7;
+    font-size: 0.45rem;
+}
+#end3{
+    color: #3e91d7;
+    font-size: 0.45rem;
+}

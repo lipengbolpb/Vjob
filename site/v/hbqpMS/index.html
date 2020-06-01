@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>抽奖赢好礼</title>
+    <script src="/static/js/rem.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <link rel="stylesheet" href="css/index.css?v=8">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="head">
+                <img src="img/slogan.png" class="slogan">
+            </div>
+            <div class="box" id="luck">
+                <ul class="ul-1">
+                    <li class="luck-unit luck-unit-0">
+                        <img src="img/active.png" class="border border-0">
+                    </li>
+                    <li class="luck-unit luck-unit-1">
+                        <img src="img/active.png" class="border border-1">
+                    </li>
+                    <li class="luck-unit luck-unit-2">
+                        <img src="img/active.png" class="border border-2">
+                    </li>
+                    <li class="luck-unit luck-unit-3">
+                        <img src="img/active.png" class="border border-3">
+                    </li>
+                </ul>
+                <ul class="ul-2">
+                    <li class="luck-unit luck-unit-9">
+                        <img src="img/active.png" class="border border-9">
+                    </li>
+                    <li id="btn">
+                        <img src="img/btn.png" class="btn">
+                    </li>
+                    <li class="luck-unit luck-unit-4">
+                        <img src="img/active.png" class="border border-4">
+                    </li>
+                </ul>
+                <ul class="ul-3">
+                    <li class="luck-unit luck-unit-8">
+                        <img src="img/active.png" class="border border-8">
+                    </li>
+                    <li class="luck-unit luck-unit-7">
+                        <img src="img/active.png" class="border border-7">
+                    </li>
+                    <li class="luck-unit luck-unit-6">
+                        <img src="img/active.png" class="border border-6">
+                    </li>
+                    <li class="luck-unit luck-unit-5">
+                        <img src="img/active.png" class="border border-5">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="alert">
+            <img src="" class="result">
+            <div>
+                <p class="line1"></p>
+            </div>
+			<p class="tip"><span>关闭此页面即视为放弃领奖！</span><br />由于手机尺寸、网络等客观原因和人为原因会导致转盘显示异常，中奖结果以最终弹出的中奖提示为准，在此声明！</p>
+        </div>
+    </div>
+	<div id="toast" style="display: none;">
+	  <div class="weui_mask_transparent"></div>
+	  <div class="weui_toast">
+	    <i class="weui_icon_toast"></i>
+	    <p class="weui_toast_content">已完成</p>
+	  </div>
+	</div>
+	
+	<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+	  <div class="weui_mask_transparent"></div>
+	  <div class="weui_toast" style="background: none;">
+	    <div class="weui_loading">
+	      <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+	    </div>
+	    <p class="weui_toast_content">数据加载中</p>
+	  </div>
+	</div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=9.0.0"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/font.js"></script>
+<script src="js/index.js?v=3.9"></script>
+
+</html>

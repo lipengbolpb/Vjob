@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒华南</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/strcode.css?v=1.4" />
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/loading.gif" class="loading">
+        <img src="img/logo.png" class="logo">
+        <img src="img/strcode_football.png" class="football">
+        <div class="mask">
+            <p class="title"></p>
+            <p class="content"></p>
+            <img src="img/strcode-border.png" class="border">
+        </div>
+        <div class="strcode">
+            <p class="tip">
+                <span class="wxtip">温馨提示：</span>先输入瓶盖二维码上方的6位字符，再输入瓶盖二维码下方6位字符，输入完成后点击“领取红包”
+            </p>
+            <div class="import">
+                <input type="text" name="" id="str_code" value="" placeholder="输入12位字母数字瓶盖码" maxlength="12" />
+            </div>
+            <div class="telcode" id="telcode">
+                <input type="text" name="" id="telcode_box" value="" placeholder="输入您的手机号" maxlength="11" />
+            </div>
+            <div class="vertion" id="vertion">
+                <input type="text" id="vertion_code" value="" placeholder="输入验证码" maxlength="6">
+                <input type="button" id="vertion_btn" value="获取验证码">
+            </div>
+            <input type="button" name="" id="btn" value="领取红包" disabled="disabled" />
+        </div>
+        <img src="img/cash_footer.png" class="footer">
+        <p class="batch"></p>
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/vve/10core.js?v=28"></script>
+<script src="/static/js/vve/11tool.js?v=21"></script>
+<script src="/static/js/vve/20ajx.js?v18"></script>
+<script src="/v/js/cfg.js?v=1.2"></script>
+<script src="/v/js/publictip.js?v=22"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="js/strcode.js?v=1.23" type="text/javascript" charset="utf-8"></script>
+<script>
+    ini_wxshare(vge.hnqpappid);
+    wx.ready(function () {
+        wx.hideOptionMenu();
+        wx.getLocation({
+            type: 'wgs84',
+            complete: locationed //接口调用完成时执行的回调函数，无论成功或失败都会执行。
+        });
+    });
+
+    function locationed(res) {
+        sessionStorage.latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+        sessionStorage.longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+        sessionStorage.speed = res.speed; // 速度，以米/每秒计
+        sessionStorage.accuracy = res.accuracy; // 位置精度
+    }
+</script>
+
+</html>

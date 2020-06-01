@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/details.css?v=1.1.1" />
+	</head>
+
+	<body>
+		<div class="content">
+		</div>
+		<div class="btn_box">
+			<input type="button" name="" id="btn" value="立即兑换" />
+		</div>
+		<div id="alert">
+			<div class="window_res window">
+				<p class="tip">兑换奖品</p>
+				<img src="img/sucess.png" />
+				<p class="tip_msg">您可以到兑换记录里查看本次的兑换详情哦~</p>
+			</div>
+			<div class="window_msg window">
+				<p class="tip">填写兑奖信息</p>
+				<input type="text" name="" id="name" placeholder="※ 真实姓名" maxlength="6" />
+				<input type="text" name="" id="tel" placeholder="※ 手机号" maxlength="11" />
+				<input type="text" name="" id="idcard" placeholder="※ 身份证号" maxlength="18" />
+				<input type="text" name="" id="address" placeholder="※ 收货地址" maxlength="50" />
+				<input type="button" name="btn_msg" id="cancel_msg" value="下次再说" />
+				<input type="button" name="btn_msg" id="btn_msg" value="提交信息" />
+			</div>
+			<div class="window_confirm window">
+				<p class="tip">兑换奖品</p>
+				<p class="confrim">确定使用<span></span>积分兑换?</p>
+				<p class="confrim_msg">请您做好决定，确定后不可再修改哦</p>
+				<p class="a_box">
+					<a href="javascript:;" class="cancel">取消</a>
+					<a href="javascript:;" class="determine">确定</a>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=1"></script>
+    <script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/cfg.js?v=10.1.0"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/details.js?v=1.4.6" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		pushHistory(); //左上角返回监测
+		window.addEventListener("popstate", function(e) { 
+			if(sessionStorage.reload) {
+				sessionStorage.removeItem('reload');
+				location.href = '/v/zzqp20171214/IntegralMall/index.html';
+			}
+		}, false);
+
+		function pushHistory() {
+			var state = {
+				title: "title",
+				url: "#"
+			};
+			window.history.pushState(state, "title", "#");
+		}
+	</script>
+
+</html>

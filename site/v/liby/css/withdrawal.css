@@ -1,0 +1,44 @@
+body{background: #F0EFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.tocard{line-height: 42px; font-size: 15px; text-align: left; padding-left: 15px;}
+#no_card, #hav_card{overflow: hidden; line-height: 44px; padding: 0 15px; background: #fff;}
+#chose_band,#cash_confirm{position: fixed; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; z-index: 100; background: rgba(0,0,0,0.6); display: none;}
+/*#cash_confirm{display: block;}*/
+#chose_band > div, #cash_confirm > div{margin-top: 15%; width: 100%; background: #fff; height: 100%; position: relative;}
+#chose_band > div > p,#cash_confirm > div > p{line-height: 46px; font-size: 16px; color: #333; border-bottom: 1px solid #eee;}
+#chose_band > div > span{position: absolute; top: 16px; left: 18px; width: 9px; height: 15px; background: url('/v/liby/img/goback.png') 0 0 no-repeat; background-size: 100%;}
+#cash_confirm > div > span{position: absolute; top: 15px; right: 16px; width: 15px; height: 15px; background: url('/v/liby/img/close_big.png') 0 0 no-repeat; background-size: 100%;}
+#band_list li,#new_card,#confirm_list li{border-bottom: 1px solid #eee; overflow: hidden; line-height: 44px; padding: 0 15px;}
+#band_list li img,#new_card img{float: left; height: 28px; margin: 8px 0;}
+#no_card img{float: left; height: 20px; margin: 11px 0;}
+#hav_card img{float: left; height: 26px; margin: 9px 0;}
+#band_list li p,#no_card p,#hav_card p,#new_card p{float: left; color: #333; font-size: 14px; padding-left: 8px;}
+#band_list li span{float: right; width: 14px; height: 11px; margin-top: 17px;}
+#band_list li .b_chose{background: url('/v/liby/img/band_chose.png') 0 0 no-repeat; background-size: 100%;}
+#no_card span, #hav_card span,#new_card span{float: right; width: 9px; height: 15px; margin-top: 14px; background: url('/v/liby/img/s_arow.png') center center no-repeat; background-size: 100%;}
+#confirm_list li p:nth-child(1){float: left; color: #666; font-size: 14px;}
+#confirm_list li p:nth-child(2){float: right; color: #EA554F; font-size: 14px;}
+#confirm_list li:nth-child(1) p:nth-child(2){width: 200px; color: #666;}
+#confirm_btn{position: fixed; bottom: 26px; background: #04BE01; color: #fff; font-size: 18px; width: 94%; margin-left: 3%; border-radius: 5px; line-height: 40px;}
+
+.money_box{margin-top: 10px; background: #fff;}
+.money_box > p{font-size: 13px; color: #999; padding-left: 15px; line-height: 40px; text-align: left;}
+#money_list{overflow: hidden;}
+#money_list li{float: left; width: 32.6%; border: 1px solid #eee; color: #333; padding: 5px 0px 8px;}
+#money_list li:nth-child(3n){ border-right: none; width: 33.5%;}
+#money_list li:nth-child(3n-2){ border-left: none; }
+#money_list li p:nth-child(1){line-height: 22px; font-size: 17px;}
+#money_list li p:nth-child(2){line-height: 20px; font-size: 12px; color: #999;}
+#money_list li.chose_mon{border-color: #EA5453;}
+#money_list li.chose_mon p{ color: #EA5453;}
+
+.bot_btn{position: fixed; bottom: 20px; width: 100%;}
+.bot_btn > div{width: 121px; margin: 0 auto; font-size: 13px; color: #999; overflow: hidden;}
+.bot_btn p{float: left;}
+.bot_btn span{float: left; margin: 0 5px;}
+/*注册成功提示*/
+#reg_success{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 101; background: rgba(0,0,0,0.5); display: none;}
+#success_tip{margin-top: 15%; width: 84%; margin-left: 8%; background: #fff; border-radius: 5px; padding: 12px 0 0;}
+#success_tip p:nth-child(1){line-height: 24px; color: #333; font-size: 16px; margin: 0 5%;}
+#success_tip p:nth-child(2){line-height: 18px; padding: 6px 0; color: #666; font-size: 13px; margin: 0 6% 14px;}
+#success_tip img{width: 36%; margin-bottom: 26px;}
+#success_tip #know{color: #04BE01; font-size: 14px; line-height: 44px; border-top: 1px solid #e5e5e5; padding: 0 5%;}

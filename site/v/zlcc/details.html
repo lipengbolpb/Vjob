@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中粮长城</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/details.css?v1.0.4"/>
+	</head>
+	<body>
+		<div class="head">
+			<div class="pic">
+				<img src="" id="headurl"/>
+			</div>
+		</div>
+		<div class="msg">
+			<p class="details">红包记录 <img src="img/reddot.png" alt="" class="dot" style="display: none;"/></p>
+			<p class="person">个人信息</p>
+		</div>
+		<div class="cash_list">
+			<div class="title">
+				<i class="back"></i>
+				<p class="time"></p>
+				<p class="msg"><span id="num"></span>   <span id="money"></span></p>
+			</div>
+			<div class="record">
+				<ul id="mon_list">
+					
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="details" id="details">
+			<ul id="inform_box">
+			  	<li class="chose_open">
+			  		<span>所在区域</span>
+				    <input type="text" readonly="readonly" value="" id="address">
+				</li>
+				<li class="chose_store" >
+					<span>终端门店</span>
+					<input type="text" value="" readonly="readonly" id="store">
+				</li>
+			  	<li><span>联系电话</span><input type="tel" value="" id="phoneNum" readonly="readonly"></li>
+			  	<li><span>绑定时间</span><input type="tel" value="" id="time" readonly="readonly"></li>
+	    	</ul>
+	    	<input type="button" name="back" id="back" value="返回首页" />
+		</div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+      	<li style=[=imgUrl]>
+			<p class="title list_left">
+				<span class="title">[=monwhere]</span>
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_right"><span>[=money]</span></p>
+		</li>
+    </script>
+	<script src="../../static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=1.0.3"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/details.js?v=1.1.2" type="text/javascript" charset="utf-8"></script>
+	<script>
+      ini_wxshare(vge.zlccappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+</html>

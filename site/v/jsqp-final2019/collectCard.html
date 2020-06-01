@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>江苏青啤</title>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/collectCard.css?v=1.0.2"/>
+	</head>
+	<body>
+		<div class="card_box">
+			<img src="img/card/back.png" class="back">
+			<p class="horn">
+				<span>最高88元</span>
+			</p>
+			<img src="img/card/slogan.png" class="slogan">
+			<p class="title">集齐5个福袋，100%开出吉利红包</p>
+			<div class="bigbag">
+				<div class="bottle_bg">
+					<img src="img/card/fu-no.png" class="bottle">
+				</div>
+			</div>
+			<div class="bottle_ls">
+				<div class="bottle_box">
+					<i></i>
+					<img src="img/card/bottle-agt-s-no.png" class="bottle_s">
+					<span>奥古特</span>
+				</div>
+				<div class="bottle_box">
+					<i></i>
+					<img src="img/card/bottle-bp-s-no.png" class="bottle_s">
+					<span>白啤</span>
+				</div>
+				<div class="bottle_box">
+					<i></i>
+					<img src="img/card/bottle-cs-s-no.png" class="bottle_s">
+					<span>纯生</span>
+				</div>
+				<div class="bottle_box">
+					<i></i>
+					<img src="img/card/bottle-hydt-s-no.png" class="bottle_s">
+					<span>鸿运当头</span>
+				</div>
+				<div class="bottle_box">
+					<i></i>
+					<img src="img/card/bottle-jd-s-no.png" class="bottle_s">
+					<span>经典</span>
+				</div>
+			</div>
+			<p id="exchange">立即兑换</p>
+		</div>
+		<div id="finish">
+			<div>
+				<p class="horn">
+					<span>最高88元</span>
+				</p>
+				<img src="img/card/slogan.png" class="slogan">
+				<p class="title">您已获得红包，快点击提现吧</p>
+			</div>
+			<div class="bigbag">
+				<div class="bottle_bg">
+					<span class="bag_title">恭喜您获得</span>
+					<p class="money">0.00<span>元</span></p>
+				</div>
+			</div>
+			<p id="give_spack">立即提现</p>
+		</div>
+		<div id="alert">
+			<img src="img/card/slogan.png" class="slogan">
+			<div>
+				<img src="img/card/attention.png" class="i_know">
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/static/js/vve/21tpl.js"></script>
+	<script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/publictip.js?v=3.0.1"></script>
+	<script src="/static/js/font.js"></script>
+	<script src="/v/js/cfg.js?v=2.8.3"></script>
+	<script src="js/collectCard.js?v=1.1.0" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机
+			$('.bigbag').addClass('scale');
+			$('.bottle_ls').css('marginTop','-2.2rem');
+		}
+	</script>
+</html>

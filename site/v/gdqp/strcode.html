@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒华南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?5b4d3f7153d3e4018a3fab95724e346d";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/strcode.css?v=2.0.53"/>
+	</head>
+	<body>
+		<div class="mark">
+			<div class="slogn"></div>
+			<div class="hb"></div>
+			<div class="title">
+				<p></p>
+			</div>
+			<input type="button" id="btn_tip" value="我知道了" />
+		</div>
+		<div class="strcode">
+			<p class="tip">
+				<span class="wxtip">温馨提示：</span>先输入瓶盖二维码上方的6位字符，再输入瓶盖二维码下方6位字符，输入完成后点击“领取红包”
+			</p>
+			<div class="import">
+				<input type="text" name="" id="str_code" value="" placeholder="输入12字母数字瓶盖码" maxlength="12" />
+			</div>
+			<div class="telcode" id="telcode">
+				<input type="text" name="" id="telcode_box" value="" placeholder="输入您的手机号" />
+			</div>
+			<div class="vertion" id="vertion">
+				<input type="text" id="vertion_code" placeholder="输入验证码">
+				<input type="button" id="vertion_btn" value="获取验证码">
+			</div>
+			<input type="button" name="" id="btn" value="领取红包" disabled="disabled" />
+		</div>
+		<p id="batch" style="position: fixed;font-size: 0.8rem;text-align: center;color: #ffffff;bottom: 5%;width: 100%;z-index:1000;"></p>
+	</body>
+	
+	<script src="/static/js/vve/10core.js?v=128"></script>
+    <script src="/static/js/vve/11tool.js?v=121"></script>
+    <script src="/static/js/vve/20ajx.js?v18"></script>
+    <script src="/v/js/cfg.js?v=13.0.2"></script>
+    <script src="/v/js/publictip.js?v=122"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="js/strcode.js?v=12.3.2" type="text/javascript" charset="utf-8"></script>
+    <script>
+    function locationed(res){
+        sessionStorage.latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+        sessionStorage.longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+        sessionStorage.speed = res.speed; // 速度，以米/每秒计
+        sessionStorage.accuracy = res.accuracy; // 位置精度
+        // dom_location.innerHTML=[latitude,longitude,speed,accuracy].join(', ');
+    }
+	</script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+//      pushHistory(); //左上角返回监测
+//      window.addEventListener("popstate", function(e) { //拆红包后禁止后退到扫码页面
+//          wx.closeWindow();
+//      }, false); 
+//      function pushHistory() { 
+//          var state = { 
+//              title: "title", 
+//              url: "#"
+//          }; 
+//          window.history.pushState(state, "title", "#"); 
+//      } 
+           // 隐藏微信右上角菜单
+//    wx.ready(function() {
+//        wx.hideOptionMenu();
+//    });
+    </script>
+    <script>
+      ini_wxshare(vge.hnqpappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+    <script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>
+
+
+
+
+

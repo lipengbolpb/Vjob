@@ -1,0 +1,228 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 850px;
+	font-family: "微软雅黑","Microsoft YaHei";
+	/* overflow-x: hidden; */
+	overflow: hidden;
+	background:url('../img/prize_bg.png') no-repeat top left;
+	background-size:100% 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[disabled],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-opacity:1; 
+opacity: 1; }
+::-webkit-input-placeholder{
+     color: #ffffff;
+}
+input{
+	font-size: 100%;
+	color: #fff;
+	-webkit-tap-highlight-color: transparent;
+}
+input[type="text"]{
+	text-indent: 1em;
+}
+input {-webkit-appearance:none; /*去除input默认样式*/}
+
+
+div.getted{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-color: rgba(0,0,0,0.7);
+	/* display:none; */
+}
+div.getted img.gettedLogo{
+	width:4.1rem;
+	display: block;
+	margin:5rem auto 0;
+}
+div.getted p{
+	text-align:center;
+	color:#ffffff;
+	margin-top:1rem;
+}
+div.getted p:nth-of-type(1){
+	font-size:1rem;
+}
+div.getted p:nth-of-type(2){
+	font-size:0.8rem;
+}
+
+div.cash{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-color: rgba(0,0,0,0.7);
+	display:none;
+}
+div.cash img.prizeLogo{
+	width:75%;
+	display:block;
+	margin:5rem auto 0;
+}
+div.cash input.getBtn{
+	width:50%;
+	height:3rem;
+	display:block;
+	margin:2rem auto 0;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color: #ffdc45;
+	color:#ea5244;
+	font-size:1.2rem;
+}
+div.cash p{
+	text-align:center;
+	color:#ffffff;
+}
+div.cash p:nth-of-type(1){
+	font-size:0.8rem;
+	margin-top:1rem;
+}
+div.cash p:nth-of-type(2){
+	font-size:0.7rem;
+	margin-top:0.5rem;
+}
+img.logo{
+	position: absolute;
+	width:9.5rem;
+	left:0.8rem;
+	top:1.6rem;
+}
+div.wrap{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	display:none;
+}
+div.wrap img.bg{
+	width:90%;
+	display:block;
+	margin:3rem auto 0;
+}
+div.wrap img.tip{
+	display:block;
+	width:90%;
+	margin:6rem auto 0;
+}
+div.wrap div.name{
+	margin-top:0.5rem;
+}
+div.wrap div.yzcode{
+	border-bottom:1px solid #ffffff;
+}
+div.wrap div{
+	width:100%;
+	height:3rem;
+	border-top:1px solid #ffffff;
+}
+div.wrap div input{
+	display:block;
+	margin:0 auto;
+	width:90%;
+	height:100%;
+	border:none;
+	color:#ffffff;
+	font-size:0.8rem;
+}
+div.wrap div input.code{
+	width:60%;
+	float:left;
+	margin-left:5%;
+}
+div.wrap div input.get{
+	width:34%;
+	float:left;
+	border-left:1px solid #ffffff;
+	color:#ffe782;
+	border-radius: 0;
+	-webkit-border-radius:0;
+}
+div.wrap input.btn{
+	display:block;
+	margin:1.5rem auto 0;
+	width:80%;
+	height:3rem;
+	background-color:#ffe782;
+	border:none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	color:#db938c;
+	font-family: "微软雅黑","Microsoft YaHei";
+	font-size:1.2rem;
+}
+div.wrap p{
+	width: 95%;
+    margin: 1rem auto;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+}
+div.wrap div.bottom{
+	border:none;
+	width:60%;
+	height:2rem;
+	margin:1rem auto;
+}
+div.wrap div.bottom a{
+	text-decoration:underline;
+	color:#ffffff;
+	font-size:0.8rem;
+}
+div.wrap div.bottom a.explain{
+	float:left;
+}
+div.wrap div.bottom a.rule{
+	float:right;
+}
+@media only screen and (max-height:700px) and (min-width:361px) {
+	html,body{
+		height:900px;
+	}
+}
+@media only screen and (max-height:650px) and (min-width:375px) {
+	html,body{
+		height:850px;
+	}
+}
+@media only screen and (max-height:560px) and (min-width:320px) {
+	html,body{
+		height:800px;
+	}
+	div.cash img.prizeLogo{
+		width:70%;
+	}
+	div.cash input.getBtn{
+		margin:1rem auto 0;
+	}
+}
+@media only screen and (max-height:530px) and (min-width:360px) {
+	div.cash img.prizeLogo{
+		width:65%;
+	}
+	div.getted img.gettedLogo{
+		width:60%;
+	}
+}
+@media only screen and (max-height:440px) and (min-width:320px) {
+	div.cash img.prizeLogo{
+		width:65%;
+		margin:3.5rem auto 0;
+	}
+	div.cash input.getBtn{
+		height:2.5rem;
+	}
+	div.getted img.gettedLogo{
+		width:53%;
+		margin: 4rem auto 0;
+	}
+}

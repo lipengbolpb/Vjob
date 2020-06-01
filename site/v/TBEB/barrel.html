@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤电商</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/result.css?v=1.1.4"/>
+		<link rel="stylesheet" type="text/css" href="css/barrel.css?v=1"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?0581ae7a5be8091125d4ee2d546fb0d0";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+	</head>
+	<body>
+		<div style="width: 100%;height: 100%;overflow-x:hidden;position: relative;">
+			<div class="myBarrel">
+				<img class="logo" src="/v/TBEB/images/logo.png"/>
+				<img src="/v/TBEB/images/slogan_2.png" class="slogan"/>
+				<img src="/v/TBEB/images/bottle_1.png" class="bottle bottle1"/>
+				<img src="/v/TBEB/images/bottle_2.png" class="bottle bottle2"/>
+				<img src="/v/TBEB/images/bottle_3.png" class="bottle bottle3"/>
+				<img src="/v/TBEB/images/bottle_4.png" class="bottle bottle4"/>
+				<img src="/v/TBEB/images/barrel_shape.png" class="bottle barrelWrap"/>
+				<div class="barrel">
+					<img src="/v/TBEB/images/beer_mark.png" class="beer_mark"/>
+					<img src="/v/TBEB/images/beer_wave.png" class="beer"/>
+				</div>
+				<p>老铁，您的酒量已达<span class="beerNum"></span>升</p>
+				<button class="toDetails"></button>
+				<button class="toRanks"></button>
+			</div>
+		</div>
+		<div class="mybag_bottom">
+			<div class="record">
+				<input type="button" name="" id="hide" value="" />
+				<ul id="mon_list">
+					
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有酒量记录哦</p>
+			</div>
+		</div>
+		<script id="onenote_tpl" type="text/html">
+	      	<li>
+		      	<p class="title list_left">
+					<span class="title">获得酒量</span><br />
+					<span class="time">[=gettime]</span>
+				</p>
+				<p class="money title list_left"><span>[=barrel]</span>升</p>
+	      	</li>
+	    </script>
+	</body>
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=3.0.4"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/barrel.js?v=2.2.4" type="text/javascript" charset="utf-8"></script>
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/wx/jsdk.js?v1"></script>
+  	<!--<script>
+	  ini_wxshare(vge.tbebappid);
+	  // 隐藏微信右上角菜单
+	  wx.ready(function() {
+	      wx.hideOptionMenu();
+	  });
+	</script>-->
+</html>

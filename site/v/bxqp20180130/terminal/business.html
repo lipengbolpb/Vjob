@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>业代注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/business.css?v1"/>
+	</head>
+	<body>
+		<div id="wrap">	
+			<p class="tip">终端促销业代注册，请输入以下信息</p>
+			<p id="user_box"><input type="text" id="user" value="" placeholder="请输入姓名" maxlength="8"/></p>
+			<p id="usercode_box" style="display: none;"><input type="text" id="usercode" value="" placeholder="请输入业代编号" maxlength="10"/></p>
+			<p id="tel_box"><input type="text"  id="tel" value="" placeholder="请输入手机号" maxlength="11"/></p>
+			<p id="yz_box"><input type="text" name="yz_code" id="yz_code" value="" placeholder="请输入验证码" maxlength="4"/><span id="get_yz">获取验证码</span></p>
+			<input type="button" name="btn" id="tj" value="提交信息" />
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.3.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tip.js"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/business.js?v=2.2.4" type="text/javascript" charset="utf-8"></script>
+	<script>
+      ini_wxshare(vge.terminalappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+	<script type="text/javascript">
+		$("input,select").blur(function(){
+			setTimeout(() => {
+				var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+			}, 100);
+		})
+	</script>
+
+</html>

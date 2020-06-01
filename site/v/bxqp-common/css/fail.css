@@ -1,0 +1,227 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background: url(../img/bg.png) repeat left top;
+    background-size: 150% auto;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+.logo {
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+}
+.bg{
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+}
+.title{
+    margin-top:4rem;
+    width:100%;
+    color:#fff699;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.content{
+    margin-top:1rem;
+    width:100%;
+    color:#fff699;
+    text-align: center;
+    font-size:0.7rem;
+}
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #d8cc93;
+    font-size: 0.5rem;
+}
+
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:bold;
+    font-size: 0.9rem;
+    background-color: aliceblue;
+}
+
+
+.get {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.cash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #009040;
+    display: none;
+}
+
+
+.slogan {
+    display: block;
+    width: 13rem;
+    margin: 1.5rem auto 0;
+}
+
+.border {
+    width: 100%;
+    height: 4.5rem;
+    margin: 1.5rem auto 0;
+    background: url(../img/border.png) no-repeat top left;
+    background-size: 100% auto;
+}
+
+.hb {
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    width: 100%;
+}
+
+.hbGet {
+    position: absolute;
+    top: 0;
+    left: 3.75rem;
+    width: 8.5rem;
+}
+
+.open {
+    position: absolute;
+    top: 1.2rem;
+    left: 6.25rem;
+    width: 3.5rem;
+}
+
+.get .beer {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1rem;
+    width: 3.2rem;
+    pointer-events: none;
+}
+
+.hbCash {
+    display: block;
+    margin: 3.5rem auto 0;
+    width: 10rem;
+}
+
+.msg {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+}
+.congratulate {
+    margin: 2rem auto 0;
+    text-align: center;
+    width: 100%;
+    color: #fff699;
+    font-size: 0.75rem;
+}
+#btn {
+    display: block;
+    margin: 1rem auto 0;
+    width: 9rem;
+    height: 2.2rem;
+    outline: none;
+    border: none;
+    background-color: #f1d35a;
+    color: #ca0013;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}

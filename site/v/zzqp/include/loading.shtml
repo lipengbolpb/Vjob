@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="css/base/loading.css">
+<!--<div id="loadDiv"><div class="loader-container">
+  <div class="meter" id="loginnum">0</div>
+  <span class="runner"></span>
+</div></div>-->
+<div id="loadDiv">
+<div id="circularG"><div id="loadNum">0%</div>
+<div id="circularG_1" class="circularG">
+</div>
+<div id="circularG_2" class="circularG">
+</div>
+<div id="circularG_3" class="circularG">
+</div>
+<div id="circularG_4" class="circularG">
+</div>
+<div id="circularG_5" class="circularG">
+</div>
+<div id="circularG_6" class="circularG">
+</div>
+<div id="circularG_7" class="circularG">
+</div>
+<div id="circularG_8" class="circularG">
+</div>
+</div>
+</div></div>
+<script src="js/base/preloadjs-0.6.1.min.js"></script>
+<script>
+        /* Loading... */
+        var queue = new createjs.LoadQueue();
+        queue.on("progress", function (e) {
+            //console.log(e.progress);
+            $('#loadNum').text(parseInt(e.progress * 100) + '%');
+        }, this);
+        queue.on("complete", function (e) {
+           $('#loadDiv').fadeOut();
+        }, this);
+        queue.loadManifest([
+	'img/location/item1.png',
+	'img/location/item1_1.jpg',
+	'img/location/item1_2.jpg',
+	'img/location/item1_3.png',
+	'img/location/item1_4.png',
+	'img/location/item2_1.png',
+	'img/location/item3_1.png'
+	]);
+    </script>

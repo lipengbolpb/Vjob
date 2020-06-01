@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒辽宁</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/fail.css?v=1.13">
+</head>
+
+<body>
+    <img src="img/logo.png" class="logo">
+    <img src="img/footer.png" class="footer">
+    <p class="title" style="font-size: 1rem;width: 60%;margin: 5rem auto 0;"></p>
+    <p class="content">关注公众号，获得更多惊喜</p>
+    <img src="img/qrcode.png" class="qrcode">
+    <!-- <img src="img/liantong.png" class="liantong"> -->
+    <p id="batch"></p>
+    <div class="link" style="text-align: center;">
+        <a class="rule">活动规则</a>
+        <!-- <a class="explain">隐私说明</a> -->
+    </div>
+    <!-- <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2018</p> -->
+    <div class="cash" id="cash">
+        <img src="img/hb-cash.png" class="hbCash">
+        <div class="msg">
+            <p class="congratulate">离红包只差一点点
+                <br />再扫一瓶试试吧~</p>
+        </div>
+        <input type="button" value="查看红包记录" id="btn">
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=4.1"></script>
+<script>
+    var PROJECT = 'lnqp';
+    var PHONE_NUM = '15801152037';
+    var args = vge.urlparse(location.href),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        bizcode = args.bizcode;
+    var content = document.getElementsByClassName('content')[0],
+        title = document.getElementsByClassName('title')[0],
+        batch = document.getElementById('batch'),
+        qrcode = document.getElementsByClassName('qrcode')[0];
+    // document.getElementsByClassName('liantong')[0].addEventListener('click', function () {
+    //     window.location.href = 'https://m.10010.com/queen/qingdaobeer/qdbeer.html';
+    // });
+    // if (sessionStorage.msg.length > 5) {
+    //     title.style.fontSize = '1rem';
+    // }
+    // if (sessionStorage.msg == '请先关注公众号再参加活动') {
+    // qrcode.style.display = 'block';
+    // }
+    title.textContent = sessionStorage.msg;
+    var RULE_URL = 'https://mp.weixin.qq.com/s?__biz=MzA3MTA2MjM3Mw==&mid=503561525&idx=1&sn=e50a6f9346316699bfc97fc5a144d448&chksm=04c45b3f33b3d2296c92ea92d650b9a662f32e490a881228023bc33f6371037e900cd952ccb0#rd';
+    var Ms_prizeType = sessionStorage.Ms_prizeType === undefined ? '1' : sessionStorage.Ms_prizeType;
+    // 1-电视秒杀
+    // 2-商场秒杀
+    // 3-文章秒杀
+    // 无-电视秒杀
+    //活动规则
+    $('.rule').on('click', function () {
+        window.location.href = RULE_URL;
+    });
+    //隐私说明
+    // $('.explain').on('click', function () {
+    //     window.location.href = EXPLAIN_URL;
+    // });
+    // content.textContent = '稍安勿躁，敬请关注';
+    // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    ini_wxshare(vge.lnqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

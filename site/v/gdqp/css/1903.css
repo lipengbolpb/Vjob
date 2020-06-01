@@ -1,0 +1,271 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+
+
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+div.wxmark img{
+	width: 100%;
+}
+/*红包页面*/
+div.packets{
+	width: 100%;
+	height: 100%;
+	background:  #019040 url('../img/1903_bg.png?v=2.1.0') no-repeat top left;
+	background-size:100% auto;
+	overflow: hidden;
+	/*display: none;*/
+}
+div.packets div.cap{
+	width:7.5rem;
+	height: 8rem;
+	background: url('../img/1903_cash.png?v=2.1.0') no-repeat top left;
+	background-size: 100% auto;
+	margin:6rem auto 0;
+	overflow: hidden;
+}
+.bottom{
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+#money{
+	color: #fff699;
+	text-align: center;
+	margin-top: 4.3rem;
+	font-size: 1rem;
+}
+#doller1{
+	color: #fff699;
+	text-align: center;
+	font-size:1.5rem;
+	font-weight: 700;
+}
+div.packets div.msg{
+	width: 90%;
+	height: 35%;
+	margin:0.2rem auto;
+	position: relative;
+	z-index: 4;
+}
+div.packets div.msg p.prompt{
+	color:#ffffff;
+	font-size: 0.58rem;
+	padding-left:1rem;
+	background: url('../img/clock.png?v=2.1.0') no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+div.packets div.progress{
+	width: 100%;
+	height: 2rem;
+	background: #fff9cd;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	color: #f9bd00;
+	font-size: 0.8rem;
+	position: relative;
+	text-align: center;
+	margin-top: 0.5rem;
+}
+div.packets div.progress span.sign{
+	position: absolute;
+	top: 2.1rem;
+	left: 0;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	color: #ffffff;
+	font-size: 0.6rem;
+	padding-top: 0.2rem;
+	background: url(../img/nib.png?v=2.1.1) no-repeat top;
+	background-size: 0.3rem 0.2rem;
+	-webkit-background-size: 0.3rem 0.2rem;
+	transition: all 1.5s ;
+	-webkit-transition: all 1.5s ;
+}
+div.packets div.progress p{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	color: #009944;
+	font-size: 0.7rem;
+	line-height: 2rem;
+	text-align: center;
+}
+div.packets div.progress input{
+	height: 101%;
+	width: 0;
+	background:#ffe100;
+	border-radius: 0.5rem;	
+	-webkit-border-radius: 0.5rem;
+	float: left;
+	line-height: 2rem;
+	padding-right: 0.4rem;
+	margin-right: -0.4rem;
+	outline: none;
+	color: #FFFFFF;
+	font-size: 1rem;
+	transition: all 1.5s ;
+	-webkit-transition: all 1.5s ;
+}
+div.packets div.progress i{
+	padding:0 0.4rem;
+	height: 100%;
+	background: url(../img/cup.png?v=2.1.1) no-repeat right top;
+	background-size:auto 100%;
+	-webkit-background-size:auto 100%;
+	float: left;
+	display: block;
+}
+div.packets div.progress #doller2{
+	font-size: 0.68rem;
+	font-style: normal;
+}
+#scroll{
+	border: none;
+	display: block;
+	color: #009944;
+}
+#btn{
+	width: 5.75rem;
+	height: 1.5rem;
+	background-color: #ffed66;
+	margin: 3.5rem auto;
+	border: none;
+	-webkit-border-radius: 0.3rem;
+	color: #009944;
+	text-align: center;
+	font-size: 0.67rem;
+	line-height: 0.67rem;
+}
+div.packets div.msg p.rule{
+	margin: 3.5rem auto 0;
+	width: 5.75rem;
+	height: 1rem;
+	font-size: 0.6rem;
+}
+#left{
+	float: left;
+	color: #ffffff;
+}
+#right{
+	float: right;
+	color: #ffffff;
+}
+
+@media only screen and (min-device-height:641px){
+	div.packets div.msg{
+		margin:1.2rem auto;
+	}
+}
+@media only screen and (max-device-height:640px){
+	div.packets div.msg{
+		margin:0.4rem auto;
+	}
+	div.packets div.msg div.rule{
+		margin: 2.5rem auto 0;
+	}
+}
+@media only screen and (max-device-height:550px){
+	div.packets div.msg{
+		margin:0 auto;
+	}
+	div.packets div.progress{
+		margin-top: 0.1rem;
+	}
+	div.getcash div.slogn{
+		width: 40%;
+		height: 25%;
+		position: absolute;
+		top: 3.2rem;
+		left: 4.5rem;
+	}
+	div.getcash div.hb{
+		width: 48%;
+		height: 42%;
+		position: absolute;
+		top: 40%;
+		left: 23%;
+	}
+}
+/* 针对iphone4 */
+@media only screen and (max-device-height:480px){
+	html,body{
+		font-family: 'Heiti SC';
+		/* font-family: ' Microsoft YaHei'; */
+	}
+	div.packets div.msg{
+		margin:0 auto;
+	}
+	div.packets div.progress{
+		margin-top: 1rem;
+	}
+	div.getcash div.slogn{
+		width: 40%;
+		height: 25%;
+		position: absolute;
+		top: 3.2rem;
+		left: 4.5rem;
+	}
+	div.getcash div.hb{
+		width: 45%;
+		height: 42%;
+		position: absolute;
+		top: 40%;
+		left: 25%;
+	}
+	div.packets{
+		background-size:100% auto;
+		overflow: hidden;
+	}
+	div.packets div.cap{
+		width:5.6rem;
+		height: 6rem;
+		background-size: 100% auto;
+		margin:5.5rem auto 0;
+	}
+	#text{
+		margin-top: 2rem;
+		font-size: 0.55rem;
+	}
+	#money{
+		margin-top: 2.9rem;
+	}
+	#btn{
+		margin: 3.3rem auto;
+	}
+	div.packets div.msg div.rule{
+		margin: 3rem auto 0;
+	}
+}
+
+

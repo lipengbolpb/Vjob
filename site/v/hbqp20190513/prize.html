@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享河北</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/prize.css?v1.1.9"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<style type="text/css">
+			.check{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 9999;
+				display: none;
+				background-color: rgba(0,0,0,.7);
+			}
+			#geted{
+				width: 12rem;
+				position: absolute;
+				left: 50%;
+				margin-left: -6rem;
+				top: 5rem;
+			}
+			#tip_1{
+				margin-top: 20rem;
+				text-align: center;
+			    font-size: 0.6rem;
+			    color: #FFFFFF;
+			}
+			div.msg_box #msglist .servers{
+			    height: 1rem;
+			    border: 0;
+			    font-size: .6rem;
+			    width: 100%;
+			    margin-top: -1rem;
+			    text-align: center;
+                line-height: initial;
+                display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/logo.png" class="logo" />
+		<img src="img/index.png?v=2" class="index" />
+		<div class="check">
+			<img src="img/geted.png" id="geted"/>
+			<p id="tip_1">扫码时间</p>
+		</div>
+		<img src="img/loading.gif" id="loading"/>
+		<div class="msg_box">
+			<img src="" class="prize"/>
+			<div class="my_prize">
+				<!-- <span id="prize_num">0</span> -->
+				<span class="prize_title">我的奖品</span>
+			</div>
+			<div id="msglist">
+				<img src="img/border-notel.png?v=7" class="pic_tip"/>
+				<p class="servers">拨打时间：工作日 8:00-17:00</p>
+				<p class="user_box"><input class="l" type="text" maxlength="8" name="user" id="user" value="" placeholder="您的姓名"/></p>
+				<p class="address_box"><input class="l" type="text" name="user" id="address" value="" maxlength="50" placeholder="收货地址"/></p>
+				<p class="tel_box"><input class="l" type="text" name="user" id="tel" value="" maxlength="11" placeholder="手机号"/></p>
+				<p class="yz_box"><input type="text" class="l" name="user" id="yzcode" value="" maxlength="4" placeholder="验证码"/><span  id="get_yz" class="l">获取验证码</span></p>
+			</div>
+			<div id="btn"></div>
+			<p class="tip"></p>
+			<p class="rule_box">
+				<a href="javascript:;" id="rule">活动规则</a>
+				<a href="javascript:;" id="private">隐私说明</a>
+			</p>
+		</div>
+		<div class="attention_box">
+			<img src="img/logo.png" class="logo" alt="">
+			<img src="img/success.png" class="prize_success" alt="">
+			<div class="main">
+	            <img src="img/qrcode.png" class="qrcode">
+	            <ul>
+	                <li>长按二维码识别</li>
+	                <li>关注"青啤啤酒乐享河北"公众号</li>
+	                <li>查看"我的红包"</li>
+	            </ul>
+	        </div>
+			<img src="img/attention_bottom.png?v=1" class="attention_bot" alt="">
+		</div>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+	<script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="/v/js/cfg.js?v2.1.6" type="text/javascript" charset="utf-8"></script>
+	<script src="js/prize.js?v=2.2.8" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+  	<!--<script>
+	  	ini_wxshare(vge.hljqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>-->
+</html>

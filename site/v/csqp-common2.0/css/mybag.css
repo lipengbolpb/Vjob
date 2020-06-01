@@ -1,0 +1,542 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #009040;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+input[type='button'] {
+    box-shadow: 1px 1px 1px #000;
+}
+
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #009040;
+    z-index: 10;
+    display: none;
+}
+
+.qin {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    line-height: 1.2rem;
+}
+
+.alert {
+    position: absolute;
+    top: 8rem;
+    left: 7.5%;
+    width: 85%;
+}
+
+.ck {
+    position: absolute;
+    top: 21rem;
+    left: 25%;
+    width: 50%;
+    margin-bottom: 1rem;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #f1d35a !important;
+    color: #b60006;
+    font-size: 0.8rem;
+}
+
+.logo {
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+div.mybag_top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+div.content {
+    width: 100%;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+div.content img.mybag {
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+div.content p {
+    color: #ffffff;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 5.5rem;
+    width: 100%;
+}
+
+div.content p span:nth-of-type(1) {
+    color: #fff699;
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+div.content p span:nth-of-type(2) {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0.62rem;
+}
+
+div.msg {
+    width: 100%;
+    position: absolute;
+    top: 10.5rem;
+    z-index: 9;
+    text-align: center;
+}
+
+div.msg p {
+    text-align: left;
+    font-size: 0.75rem;
+    color: #ffffff;
+}
+
+div.msg p img {
+    width: 0.9rem;
+    vertical-align: sub;
+    margin-right: 0.5rem;
+}
+
+div.msg p.top {
+    width: 80%;
+    margin-left: 25%;
+}
+
+div.msg p.bottom {
+    width: 80%;
+    margin-left: 25%;
+    margin-top: 0.1rem;
+    margin-bottom: -.2rem;
+}
+
+div.msg p.bottom img {
+    width: 0.8rem;
+    margin-left: 0.1rem;
+}
+
+div.msg p span {
+    vertical-align: baseline;
+}
+
+div.msg p span:nth-of-type(1) {
+    font-size: 1.2rem;
+    color: #fff699;
+}
+
+div.msg p span:nth-of-type(2) {
+    color: #fff699;
+}
+
+#btn {
+    width: 58%;
+    height: 2.2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #f1d35a;
+    border: none;
+    font-size: 0.9rem;
+    color: #ca0013;
+    z-index: 9;
+    margin: 0.5rem auto 0;
+    display: block;
+    /* box-shadow: 5px 5px 5px #e28403; */
+}
+
+.notice {
+    margin: 0.5rem auto 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+#tomall{
+    height: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 4.2rem;
+}
+#show,#showjf {
+    visibility: visible;
+    width: 50%;
+    margin: 0.2rem auto 0;
+    color: #fff699;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    padding: 0 .7rem;
+}
+#totalVpoints{
+    text-align: center;
+    color: white;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+img.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+div.mybag_bottom {
+    width: 100%;
+    height: 100%;
+}
+
+div.mybag_bottom div.record {
+    width: 89%;
+    height: 100%;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: 5.5%;
+    top: 0;
+}
+
+div.mybag_bottom div.record input {
+    width: 75%;
+    height: 2.5rem;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border: none;
+    background: #f1d35a url('../img/up.png') no-repeat;
+    background-size: 3.5rem;
+    background-position: 50% 50%;
+    /* box-shadow: 5px 5px 5px #e28403; */
+}
+
+div.mybag_bottom div.record ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+    border-top: 1px #80c8a0 solid;
+}
+
+div.mybag_bottom div.record ul li {
+    border-bottom: 1px #80c8a0 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+div.mybag_bottom div.record ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+    color: #ffffff;
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1) {
+    font-size: 0.7rem;
+}
+
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+
+div.mybag_bottom div.record ul li p.money {
+    float: right;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+
+div.mybag_bottom div.record p.getmore {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+}
+/* 积分列表 */
+div.jf_bottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+    transition: all .5s;
+    background: #009040;
+}
+
+div.jf_bottom div.record {
+    width: 89%;
+    height: 100%;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: 5.5%;
+    top: 0;
+}
+
+div.jf_bottom div.record input {
+    width: 75%;
+    height: 2.5rem;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border: none;
+    background: #f1d35a url('../img/up.png') no-repeat;
+    background-size: 3.5rem;
+    background-position: 50% 50%;
+    /* box-shadow: 5px 5px 5px #e28403; */
+}
+
+div.jf_bottom div.record ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+    border-top: 1px #80c8a0 solid;
+}
+
+div.jf_bottom div.record ul li {
+    border-bottom: 1px #80c8a0 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+div.jf_bottom div.record ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+    color: #ffffff;
+}
+
+div.jf_bottom div.record ul li p.title span:nth-of-type(1) {
+    font-size: 0.7rem;
+}
+
+div.jf_bottom div.record ul li p.title span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+
+div.jf_bottom div.record ul li p.money {
+    float: right;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+div.jf_bottom div.record ul li p.money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+
+div.jf_bottom div.record p.getmore {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+}
+
+#no_list,#no_list_jf {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff699;
+    display: none;
+    width: 100%;
+}
+
+.liantong {
+    width: 30%;
+    position: absolute;
+    top: 21rem;
+    left: 35%;
+}
+
+.footertext{
+    position: absolute;
+    bottom: 1rem;
+    left: 5%;
+    width: 25%;
+    z-index: 11;
+    pointer-events: none;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #b0b5c2;
+    font-size: 0.45rem;
+    z-index: 999;
+}
+.copyright a{
+    color: #d5d5d5;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+
+@media only screen and (min-aspect-ratio:320/510) {
+    div.content img.mybag {
+        width: 60%;
+    }
+    div.content {
+        margin: 2.5rem auto 0;
+    }
+    div.content p {
+        top: 5rem;
+    }
+    div.msg {
+        top: 9.3rem;
+    }
+    div.msg p {
+        font-size: 0.7rem;
+    }
+    div.msg p span:nth-of-type(1) {
+        font-size: 1.1rem;
+    }
+    div.msg p.top {
+        margin-left: 27%;
+    }
+    div.msg p.bottom {
+        margin-left: 27%;
+    }
+    #btn {
+        width: 60%;
+        height: 2rem;
+    }
+    .liantong {
+        width: 25%;
+        top: 19.5rem;
+        left: 37.5%;
+    }
+    .qin{
+        top: 3.5rem;
+    }
+    .alert{
+        top: 7rem;
+        width: 70%;
+        left: 15%;
+    }
+    .ck{
+        top: 18rem;
+    }
+}
+
+@media only screen and (min-aspect-ratio:320/510) {
+    div.content {
+        margin: 1.5rem auto 0;
+    }
+    div.msg {
+        top: 8.3rem;
+    }
+    .liantong {
+        top: 18rem;
+    }
+    .logo {
+        width: 20%;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+}

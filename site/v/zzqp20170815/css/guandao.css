@@ -1,0 +1,146 @@
+.kais{
+	background-size: contain !important}
+#btn-a1{ top: 2% !important}
+
+
+
+#cj{width: 100%;height:100%;position: absolute;top: 0; overflow:hidden; display: none;
+	background: url('../img/guandao2/bg2.jpg') no-repeat center/100% 100%}
+#cj .he{width: 100%;position: absolute;top: -1%;z-index: 1}
+#cj .gz{width: 100%;height: 100%;position: absolute;top: 0}
+#cj .gz.rot{ -webkit-animation: rot 2s infinite}
+@-webkit-keyframes rot{
+	0%{ -webkit-transform: rotate3d(0,1,0,0)}
+	100%{ -webkit-transform: rotate3d(0,1,0,360deg)}
+}
+#cj .gz1{width: 2.73rem;position: absolute;left: 2rem;top: 40%; -webkit-animation: dl 1s forwards;-webkit-transform: translateY(-8rem)}
+#cj .gz2{width: 2.33rem;position: absolute;left: 3.6rem;top: 45%; -webkit-animation: dl 1s .5s forwards;-webkit-transform: translateY(-8rem)}
+#cj .gz3{width: 2.33rem;position: absolute;left: .8rem;top: 44.5%; -webkit-animation: dl 1s 1s forwards;-webkit-transform: translateY(-8rem)}
+#cj .gz4{width: 1.91rem;position: absolute;left: 1rem;top: 46%; -webkit-animation: dl 1s 1.5s forwards;-webkit-transform: translateY(-8rem)}
+#cj .gz5{width: 1.91rem;position: absolute;left: 3rem;top: 46%; -webkit-animation: dl 1s 2s forwards;-webkit-transform: translateY(-8rem)}
+#cj .bt{width: 3.83rem;position: absolute;left: 1.2rem;top: 11%}
+#cj .hb{ width: 1.86rem;position: absolute;left: 2.32rem; top: 13%;z-index: 1}
+@-webkit-keyframes dl{
+	0%{ -webkit-transform: translateY(-8rem)}
+	100%{ -webkit-transform: translateY(0)}
+}
+#cj .ks{width: 2.42rem;height: 2.21rem;position: absolute;left: 1.99rem;bottom: 0;
+    background: url(../img/guandao/ks1.png) no-repeat center/contain;
+    animation: ks .6s infinite;
+	-webkit-animation: ks .6s infinite;}
+@-webkit-keyframes ks{
+	0%{background: url(../img/guandao/ks1.png) no-repeat center/contain;}
+	50%{background: url(../img/guandao/ks2.png) no-repeat center/contain;}
+}
+#cj .tic{width: 1.15rem;position: absolute;left: .2rem;top: 25%;display: none;
+	-webkit-animation: tic 2s infinite}
+#cj .guan{width: .88rem;left: 5.2rem;top: 25%;position: absolute;display: none;
+	-webkit-animation: guan 2s infinite}
+@-webkit-keyframes tic{
+	0%{ -webkit-transform: translate(0,0)}
+	50%{-webkit-transform: translate(0,.2rem)}
+}
+@-webkit-keyframes guan{
+	0%,100%{ -webkit-transform: rotate(-10deg)}
+	50%{-webkit-transform: rotate(10deg)}
+}
+#cj .xz{width: 6.4rem;position: absolute;left: -.1rem;top: 34%; display: none}
+
+
+
+#zj{width: 100%;height:100%;position: absolute;top: 0; overflow:hidden; display: none;
+	background: url('../img/guandao2/zj_bg.jpg') no-repeat center/100% 100%; z-index: 1}
+#zj .jp1_1{ width: 2.3rem; left: 2.1rem; top: 17.5% }
+#zj .jp1_2{width: 100%;top: 2.2rem;}
+#zj .jp1_2_1{width: 100%;top: 50%; display: none}
+._rules0{ width: 1.4rem; height: .4rem;position: absolute;right: .2rem;bottom: 2%;z-index: 2 }
+#zj .ck{width: 2.05rem;height: 1.09rem;position: absolute;left: .6rem;top: 77%;
+	background: url('../img/zj/ck.png') no-repeat center/contain}
+#zj .ck2{width: 2.05rem;height: 1.09rem;position: absolute;right: .8rem;top: 77%;
+	background: url('../img/zj/ck2.png') no-repeat center/contain}
+#zj .money{ font-size: .5rem;color: #fde336;width: 2rem;text-align: center;position: absolute;
+	left: 3.3rem;top: 42%; font-weight: bold;display: none ;}
+#zj .money strong{ font-weight: bold; }
+#zj .cq{ width: 2rem;height: 1rem;position: absolute;left: 2.2rem;top: 85%;display: none; }
+
+@media only screen and (max-height: 680px) and (min-width:410px) {
+	#zj .money{
+        top:40%;
+    }
+}
+@media only screen and (max-height: 620px) and (min-width:360px) {
+	#zj .money{
+        top:41%;
+    }
+}
+@media only screen and (max-height: 520px) and (min-width:360px) {
+	#zj .money{
+        top:45%;
+    }
+}
+@media only screen and (max-height: 480px) and (min-width:320px) {
+	#zj .money{
+        top:45%;
+    }
+}
+@media only screen and (max-height: 450px) and (min-width:320px) {
+	#zj .money{
+        top:47%;
+    }
+}
+@media only screen and (max-height: 420px) and (min-width:320px) {
+	#zj .money{
+        top:43%;
+    }
+    #zj .jp1_2{
+        top:1.5rem;
+    }
+}
+
+
+
+
+
+.top{ width: 5rem;height: .9rem;position: absolute;left: 2rem;top: 5% }
+.top .head{ width: .6rem;height: .6rem;position: absolute;left: .2rem;top: .15rem }
+.top .head img{max-width: 100%; max-height:100%;position: absolute;left: 50%;top: 50%;
+	-webkit-transform:translate(-50%,-50%);border-radius: .3rem;}
+.top .name{ width:2rem;height: .3rem;line-height: .3rem;position: absolute;left: 1rem;color: #fff;
+ 	font-size: .22rem;top: .3rem;}
+#zj .myjp{ width: 4.6rem;height: .73rem;background: #fff;position: relative;left: .9rem;top: 54%;
+	margin-top: .2rem }
+#zj .myjp .p1{ width: 1.5rem;text-align: center;height: .73rem;line-height: .73rem;color: #93672c;
+	font-size: .22rem;float: left;}
+#zj .myjp .p2{ width: 1.5rem;text-align: left;height: .73rem;line-height: .73rem;color: #990000;
+	font-size: .36rem;float: left; font-weight: bold;}
+#zj .myjp a{ width: .78rem;height: .38rem;position: absolute;float: right;top: .18rem;color: #fff;
+	text-align: center;background: url('../img/zj/lq.png') no-repeat center/contain ;font-size: .22rem;
+	line-height: .38rem;right: .2rem}
+#zj .myjp .p2{ width: 2.5rem; }
+#zj .myjp .p2 img{ width: .7rem; position: relative; float:left; }
+
+
+
+
+.index{width: 100%;height: 100%;position: absolute;top: 0;background: url(../img/guandao2/bg1.jpg) no-repeat center/100% 100%}
+.sg{width: 6.08rem;height: 4.02rem;position: absolute;left: .16rem;top: 6%;background-image: url(../img/guandao2/i3.png);
+	background-size:100% 100%;-webkit-background-size:100% 100%;
+	-webkit-animation: sg 2s infinite}
+@-webkit-keyframes sg{
+	0%{ background-image: url(../img/guandao2/i3.png);}
+	50%{background-image: url(../img/guandao2/i4.png);}
+}
+.dd{width: 6.08rem;height: .54rem;position: absolute;left: .16rem;top: 0%;background-image: url(../img/guandao2/i5.png);
+	background-size:100% 100%;-webkit-background-size:100% 100%;
+	-webkit-animation: dd 2s infinite
+}
+@-webkit-keyframes dd{
+	0%{background-image: url(../img/guandao2/i5.png);}
+	50%{background-image: url(../img/guandao2/i6.png);}
+}
+.index .i1{width: 1.85rem;position: absolute;left: .5rem;top: 24%; -webkit-animation: tit 2s infinite}
+.index .i2{width: 2.28rem;position: absolute;right: .5rem;top: 50%; -webkit-animation: tit 2s .8s infinite}
+@-webkit-keyframes tit{
+	0%{ -webkit-transform: translate(0,0)}
+	50%{ -webkit-transform: translate(0,-5px)}
+}

@@ -1,0 +1,550 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: url(../img/getcash_bg.png) no-repeat left top;
+	-webkit-background-size: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+#active{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#active img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+@-webkit-keyframes left_move{
+ 	0%{
+		-webkit-transform: translate(0,0);
+ 	}
+ 	50%{
+ 		-webkit-transform: translate(3px,-10px);
+ 	}
+ 	100%{
+		-webkit-transform: translate(0,0);
+ 	}
+}
+@-webkit-keyframes right_move{
+ 	0%{
+		-webkit-transform: translate(0,0);
+ 	}
+ 	50%{
+ 		-webkit-transform: translate(-2px,8px);
+ 	}
+ 	100%{
+		-webkit-transform: translate(0,0);
+ 	}
+}
+@-webkit-keyframes show{
+ 	0%{
+		opacity:0;
+ 	}
+ 	50%{
+ 		opacity:1;
+ 	}
+ 	100%{
+		opacity:0;
+ 	}
+}
+@-webkit-keyframes hide{
+ 	0%{
+		opacity:1;
+ 	}
+ 	50%{
+ 		opacity:0;
+ 	}
+ 	100%{
+		opacity:1;
+ 	}
+}
+@-webkit-keyframes hb_move{
+	0%{
+		-webkit-transform: translate(0,0);
+ 	}
+ 	50%{
+ 		-webkit-transform: translate(0,3px);
+ 	}
+ 	100%{
+		-webkit-transform: translate(0,0);
+ 	}
+}
+@-webkit-keyframes hb_move_small{
+	0%{
+		-webkit-transform: translate(0,0);
+ 	}
+ 	50%{
+ 		-webkit-transform: translate(0,1px);
+ 	}
+ 	100%{
+		-webkit-transform: translate(0,0);
+ 	}
+}
+#open{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+#open img{
+	position: absolute;
+}
+#open img.logo{
+	width:6.5rem;
+	left:0.8rem;
+	top:0.6rem;
+}
+#open img.slogan{
+	width:88%;
+	left:6%;
+	top:1rem;
+}
+#open div.dishBox{
+	position: absolute;
+    top: 43%;
+    left: 0%;
+    width: 100%;
+    height: 35%;
+}
+#open img.dish{
+	width:75%;
+	left:2rem;
+}
+#open img.fireLeftSmall{
+	width:18%;
+	top:6.5rem;
+	left:4rem;
+	animation:show 0.5s linear infinite;
+	-webkit-animation:show 0.5s linear infinite;
+}
+#open img.fireLeftBig{
+	width:20%;
+	top:6.2rem;
+	left:4rem;
+	animation:hide 0.5s linear infinite;
+	-webkit-animation:hide 0.5s linear infinite;
+}
+#open img.fireMiddleSmall{
+	width:15%;
+	top:6.5rem;
+	left:8.5rem;
+	animation:show 0.8s 0.4s linear infinite;
+	-webkit-animation:show 0.8s 0.4s linear infinite;
+}
+#open img.fireMiddleBig{
+	width:16%;
+	top:6.2rem;
+	left:8.3rem;
+	animation:hide 0.8s 0.4s linear infinite;
+	-webkit-animation:hide 0.8s 0.4s linear infinite;
+}
+#open img.fireRightSmall{
+	width:10%;
+	top:5.5rem;
+	left:10.6rem;
+	animation:show 0.4s 0.4s linear infinite;
+	-webkit-animation:show 0.4s 0.4s linear infinite;
+}
+#open img.fireRightBig{
+	width:15%;
+	top:4.7rem;
+	left:10.5rem;
+	animation:hide 0.4s 0.4s linear infinite;
+	-webkit-animation:hide 0.4s 0.4s linear infinite;
+}
+#open img.cai{
+	width:20%;
+	top:2.5rem;
+	left:1.4rem;
+	animation:hb_move 1s linear infinite;
+	-webkit-animation:hb_move 1s linear infinite;
+}
+#open img.doufu{
+	width:8%;
+	top:3.3rem;
+	left:10.9rem;
+	animation:hb_move 1s 0.5s linear infinite;
+	-webkit-animation:hb_move 1s 0.5s linear infinite;
+}
+#open img.fish{
+	width:11%;
+	top:8.2rem;
+	left:6.6rem;
+	animation:hb_move 1s 0.8s linear infinite;
+	-webkit-animation:hb_move 1s 0.8s linear infinite;
+}
+#open img.hbMiddle{
+	width:15%;
+	top:5.3rem;
+	left:7.9rem;
+	animation:hb_move_small 0.8s 0.4s linear infinite;
+	-webkit-animation:hb_move_small 0.8s 0.4s linear infinite;
+}
+#open img.hbRight{
+	width:16%;
+	top:4.3rem;
+	left:10.5rem;
+	animation:hb_move_small 0.4s 0.4s linear infinite;
+	-webkit-animation:hb_move_small 0.4s 0.4s linear infinite;
+}
+#open img.ou{
+	width:8%;
+	top:7.7rem;
+	left:5rem;
+	animation:hb_move_small 0.5s 0.5s linear infinite;
+	-webkit-animation:hb_move_small 0.5s 0.5s linear infinite;
+}
+#open img.hand{
+	width:100%;
+	right:-14.5rem;
+	top:4.5rem;
+}
+#open img.hand_hb{
+	width:100%;
+	right:-4.5rem;
+	top:4.5rem;
+	display:none;
+}
+.active{
+	transform:translate(-10rem,0);
+	transition:all 0.8s;
+}
+.route1{
+	transform:rotate(-20deg);
+	transform-origin:right center;
+	transition:all 0.15s ease;
+}
+.route2{
+	transform:rotate(35deg);
+	transform-origin:right center;
+	transition:all 0.15s ease;
+}
+
+
+#open img.cloud_down{
+	width:100%;
+	bottom:0;
+	position:fixed;
+}
+#open img.left{
+	width:5rem;
+	bottom:0.5rem;
+	left:0.8rem;
+	animation:left_move 0.7s linear infinite;
+	-webkit-animation:left_move 0.7s linear infinite;
+	position:fixed;
+}
+#open img.right{
+	width:4.1rem;
+	bottom:0.8rem;
+	right:0.5rem;
+	animation:right_move 0.7s linear infinite;
+	-webkit-animation:right_move 0.7s linear infinite;
+	position:fixed;
+}
+#open img.cloud_up{
+	width:95%;
+	bottom:0;
+	position:fixed;
+}
+@-webkit-keyframes bighb{
+	0%{
+		-webkit-transform: translate(0,0) rotate(-10deg);
+ 	}
+ 	50%{
+ 		-webkit-transform: translate(0,3px) rotate(-10deg);
+ 	}
+ 	100%{
+ 		-webkit-transform: translate(0,0) rotate(-10deg);
+ 	}
+}
+#open div.myhb{
+	width: 17%;
+    position: absolute;
+    top: 4.65rem;
+    left: 4.6rem;
+    animation: bighb 0.5s linear infinite;
+    -webkit-animation: bighb 0.5s linear infinite;
+}
+
+@-webkit-keyframes scale{
+	0%{
+		-webkit-transform: translate(0,0) translateZ(0) rotate(40deg) scale(1,1);
+		transform-origan:center center;
+ 	}
+ 	20%{
+ 		-webkit-transform: translate(3rem,-6rem) translateZ(0) rotate(330deg) scale(1.5,1.5);
+ 		transform-origan:center center;
+ 	}
+ 	30%{
+ 		-webkit-transform: translate(-2rem,-4rem) translateZ(0) rotate(0deg) scale(2.5,2.5);
+ 		transform-origan:center center;
+ 	}
+ 	60%{
+ 		-webkit-transform: translate(-4rem,0rem) translateZ(0) rotate(-350deg) scale(3.5,3.5);
+ 		transform-origan:center center;
+ 	}
+ 	100%{
+ 		-webkit-transform: translate(-4rem,9rem) translateZ(0) rotate(-360deg) scale(4.5,4.5);
+ 		transform-origan:center center;
+ 	}
+}
+.hb{
+	width: 17%;
+	height:4rem;
+    position: absolute;
+    top: -4.8rem;
+    left: 10.5rem;
+    z-index:1;
+    display:block;
+    animation:scale 1.2s linear both;
+    -webkit-animation:scale 1.2s linear both;
+}
+.hbRoute{
+	width:15%;
+	position:absolute;
+	top:4.2rem;
+	left:3.8rem;
+	animation:scale 0.5s linear both;
+	-webkit-animation:scale 0.5s linear both;
+}
+#open img.bag{
+	width:100%;
+}
+#open img.open{
+	width:39%;
+	position: absolute;
+	left: 30.5%;
+	top:0.6rem;
+}
+#open div.myhb2{
+	width: 76.9%;
+    position: absolute;
+    top: -2.8rem;
+    left: 1.77rem;
+	display:none;
+	z-index:1;
+}
+#open div.myhb2 img.open{
+	top:2.6rem;
+}
+.kai{
+	transform:rotateY(180deg);
+	transform-origin:center;
+	transition:all 0.5s linear;
+}
+#open div.cashBox{
+	width: 84%;
+    position: absolute;
+    top: 6.7rem;
+    left: 1.35rem;
+	display:none;
+}
+#open div.cashBox img.repscan{
+	width: 11rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    z-index: 1;
+    display:none;
+}
+#open div.cashBox img.cash{
+	width:100%;
+}
+#open div.cashBox p.title{
+	width:100%;
+	position:absolute;
+	top:2.8rem;
+	text-align:center;
+	color:#77030e;
+	font-size:0.9rem;
+}
+#open div.cashBox p.balance{
+	width:100%;
+	position:absolute;
+	top:4.2rem;
+	text-align:center;
+	color:#f02800;
+	font-size:1.8rem;
+	font-weight:600;
+}
+#open div.cashBox p.balance span{
+	font-size:1rem;
+}
+#open div.cashBox p.balance span:nth-of-type(2){
+	font-size:1.8rem;
+}
+#btn{
+	width:8rem;
+	height:2rem;
+	background-color: #ffdc45;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	text-align:center;
+	color:#ea5244;
+	font-size:0.8rem;
+	position:absolute;
+	top:10rem;
+	left:2.6rem;
+	border:none;
+}
+#notice{
+	width:100%;
+	position: absolute;
+	top:14rem;
+	text-align:center;
+	color:#ffffff;
+	font-size:0.5rem;
+	line-height:0.8rem;
+}
+div.link{
+	width:58%;
+	position:absolute;
+	top:17rem;
+	left:3rem;
+}
+div.link #explain{
+	float:left;
+	font-size:0.7rem;
+	color:#ffffff;
+	text-decoration:underline;
+}
+div.link #rule{
+	float:right;
+	font-size:0.7rem;
+	color:#ffffff;
+	text-decoration:underline;
+}
+@media only screen and (max-height:600px) and (min-width:361px) {
+	#open div.cashBox{
+		width: 83.5%;
+		top:5.8rem;
+	}
+	#btn{
+		top:9rem;
+	}
+	#notice{
+		top:12.5rem;
+	}
+	div.link{
+		top:15.5rem;
+		left:2.6rem;
+	}
+}
+@media only screen and (max-height:570px) and (min-width:321px) {
+	#open div.cashBox{
+		width: 83.5%;
+		top:6rem;
+	}
+	#btn{
+		top:9rem;
+	}
+	#notice{
+		top:12.5rem;
+	}
+	div.link{
+		top:15.5rem;
+		left:2.6rem;
+	}
+}
+@media only screen and (max-height:540px) and (min-width:321px) {
+	#open div.cashBox{
+		width: 83.5%;
+		top:4rem;
+	}
+	#btn{
+		top:9rem;
+	}
+	#notice{
+		top:12.5rem;
+	}
+	div.link{
+		top:15.5rem;
+		left:2.6rem;
+	}
+	#open div.myhb2{
+    	top: -3.85rem;
+	}
+	@-webkit-keyframes scale{
+		0%{
+			-webkit-transform: translate(0,0) rotate(40deg) scale(1,1);
+			transform-origan:center center;
+ 		}
+ 		20%{
+ 			-webkit-transform: translate(3rem,-6rem) rotate(330deg) scale(1.5,1.5);
+ 			transform-origan:center center;
+ 		}
+ 		30%{
+ 			-webkit-transform: translate(-1rem,-5rem) rotate(0deg) scale(2.5,2.5);
+ 			transform-origan:center center;
+ 		}
+ 		60%{
+ 			-webkit-transform: translate(-4rem,0rem) rotate(-350deg) scale(3.5,3.5);
+ 			transform-origan:center center;
+ 		}
+ 		100%{
+ 			-webkit-transform: translate(-4rem,8rem) rotate(-360deg) scale(4.5,4.5);
+ 			transform-origan:center center;
+ 		}
+	}
+}
+@media only screen and (max-height:440px) {
+	#open div.cashBox{
+    	top: 1.6rem;
+	}
+	@-webkit-keyframes scale{
+		0%{
+			-webkit-transform: translate(0,0) rotate(40deg) scale(1,1);
+			transform-origan:center center;
+ 		}
+ 		20%{
+ 			-webkit-transform: translate(3rem,-6rem) rotate(330deg) scale(1.5,1.5);
+ 			transform-origan:center center;
+ 		}
+ 		30%{
+ 			-webkit-transform: translate(-1rem,-5rem) rotate(0deg) scale(2.5,2.5);
+ 			transform-origan:center center;
+ 		}
+ 		60%{
+ 			-webkit-transform: translate(-4rem,-2rem) rotate(-350deg) scale(3.5,3.5);
+ 			transform-origan:center center;
+ 		}
+ 		100%{
+ 			-webkit-transform: translate(-4rem,6rem) rotate(-360deg) scale(4.5,4.5);
+ 			transform-origan:center center;
+ 		}
+	}
+	#open div.myhb2{
+    	top: -5.85rem;
+	}
+}
+
+/*加载中秋动画的备用盒子*/
+#midAutumn_box{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+	background: #fff;
+}

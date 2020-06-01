@@ -1,0 +1,227 @@
+#midAutumn{
+	width: 100%;
+	height: 100%;
+	background: url(/v/sdqp/imgMidAutumn/bg_t.png) no-repeat left top,url(/v/sdqp/imgMidAutumn/bg_b.png) no-repeat center 14.85rem,url(/v/sdqp/imgMidAutumn/bg.png?v=1) no-repeat left top;
+	background-size: 100% 14.85rem,100% 60%,100% auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	visibility: hidden;
+}
+#midAutumn img{
+	display: block;
+}
+#midAutumn .midlogo{
+	width: 5rem;
+}
+#moon_box{
+	width: 12.5rem;
+	height: 13.5rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url(/v/sdqp/imgMidAutumn/moon_light.png) no-repeat top;
+	background-size: 100% auto;
+}
+#moon_box>.moon_1{
+	width: 12rem;
+	position: absolute;
+	right: 0;
+	top: .6rem;
+}
+#moon_box>div{
+	width: 12rem;
+	position: absolute;
+	right: 0;
+	height: 0;
+	overflow: hidden;
+}
+#moon_box>div.moon_2_box{
+	bottom: .8rem;
+	transform-origin: bottom;
+}
+#moon_box>div.moon_2_box.ani{
+	animation: moon_2 1s linear both;
+}
+#moon_box>div.moon_2_box img{
+	position: absolute;
+	bottom: 0;
+}
+#moon_box>div.moon_3_box{
+	top: .4rem;
+}
+#moon_box>div.moon_3_box.ani{
+	animation: moon_3 1s linear 1s both;
+}
+#moon_box>div>img{
+	width: 12rem;
+}
+@-webkit-keyframes moon_2{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+@-webkit-keyframes moon_3{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+
+#midAutumn>.person_1_box{
+	position: absolute;
+	z-index: 1;
+	width: 8.5rem;
+	top: 48%;
+	left: -5%;
+}
+#midAutumn>.person_1_box.ani{
+	animation: person_1 2.8s linear both;
+}
+@-webkit-keyframes person_1{
+	0%{
+		left: -25%;
+		top: 53%;
+	}
+	30%{
+		left: -15%;
+		top: 58%;
+	}
+	80%{
+		left: 0%;
+		top: 48%;
+	}
+	100%{
+		left: -5%;
+		top: 50%;
+	}
+}
+#midAutumn>.person_1_box>div{
+	position: absolute;
+	right: .15rem;
+	top: 0;
+	width: .4rem;
+	height: .6rem;
+}
+#midAutumn>.person_1_box>div .foam_over{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	transform-origin: bottom;
+	overflow: hidden;
+}
+#midAutumn>.person_1_box>div .foam_over.ani{
+	animation: foam .5s linear 2s both;
+}
+#midAutumn>.person_1_box>div img{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+#midAutumn>.person_1_box>img{
+	width: 100%;
+	margin-top: .2rem;
+}
+#midAutumn>.person_2_box{
+	position: absolute;
+	z-index: 1;
+	width: 7.5rem;
+	top: 42%;
+	right: -15%;
+}
+#midAutumn>.person_2_box.ani{
+	animation: person_2 2.8s linear both;
+}
+@-webkit-keyframes person_2{
+	0%{
+		right: -15%;
+		top: 42%;
+	}
+	25%{
+		right: -8%;
+		top: 44%;
+	}
+	75%{
+		right: 5%;
+		top: 46%;
+	}
+	90%{
+		right: 0%;
+		top: 48%;
+	}
+	100%{
+		right: -3%;
+		top: 46%;
+	}
+}
+#midAutumn>.person_2_box>div{
+	position: absolute;
+	left: .5rem;
+	top: .5rem;
+	width: .4rem;
+	height: .6rem;
+}
+#midAutumn>.person_2_box>div .foam_over{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	transform-origin: bottom;
+	overflow: hidden;
+}
+#midAutumn>.person_2_box>div .foam_over.ani{
+	animation: foam .5s linear 2s both;
+}
+#midAutumn>.person_2_box>div img{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+@-webkit-keyframes foam{
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+}
+#midAutumn>.person_2_box>img{
+	width: 100%;
+}
+/* 三只兔子 */
+#midAutumn .rabbit{
+	position: absolute;
+}
+#midAutumn .rabbit_1{
+	width: 2.7rem;
+	left: 0;
+	top: 40%;
+}
+#midAutumn .rabbit_2{
+	width: 5.8rem;
+	right: 2.1rem;
+	top: 9.8rem;
+}
+#midAutumn .rabbit_3{
+	width: 14rem;
+	right: 0rem;
+	bottom: 2.85rem;	
+}
+/*  end */
+#midAutumn .bottom{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#midAutumn .product{
+	width: 4.2rem;
+	position: absolute;
+	bottom: 1.3rem;
+	right: 1.1rem;
+}

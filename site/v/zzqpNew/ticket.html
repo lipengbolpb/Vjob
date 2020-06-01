@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>红包奖不停，酒王赢大礼</title>
+<link rel="stylesheet" type="text/css" href="css/ticket.css?v=1.0.1">
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--[if lt IE 9]>
+<script>
+    window.location.href='http://windows.microsoft.com/zh-CN/internet-explorer/download-ie';
+</script>
+<![endif]-->
+<!--public-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0f6d8bdeef4ce0a4b1f72c37c3759968";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link rel="stylesheet" href="css/public/global.css?v=1.0.0">
+<link rel="stylesheet" href="css/public/layout.css?v=1.0.0">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+<body class="page page1">
+<div id="ticket">
+	<div class="ticket">
+		<p id="str">XXXXXXXXXXX</p>
+	</div>
+	<img src="img/ticket/beer.png" class="beer10">
+	<img src="img/ticket/mei.png" class="mei">
+</div>
+<!--#include file="include/footer.html" --> 
+<!--公用弹窗-->
+<div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <h2>很抱歉</h2>
+    <p>呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <!--<a class="close">ok</a>-->
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+
+<!--分享层-->
+<div id="_share"></div>
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script type="text/javascript" src="/static/js/vve/21tpl.js?v=2"></script>
+<script src="/v/js/cfg.js?v=1.0.3"></script>
+<script src="/v/js/publictip.js?v=1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var args = vge.urlparse(location.href);
+    var str = document.querySelector('#str');
+    str.innerHTML = args.ticketCode;
+</script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script>
+  ini_wxshare(vge.zzqpappid);
+  // 隐藏微信右上角菜单
+  wx.ready(function() {
+      wx.hideOptionMenu();
+  });
+</script>
+</body>
+<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+</html>

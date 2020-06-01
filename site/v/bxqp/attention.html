@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>青岛啤酒欢聚北京</title>
+        <script>
+            
+        </script>
+ 		<script src="js/rem.js" type="text/javascript"></script>
+        <style>
+        	html,body,img,p{
+       			margin: 0;
+       			padding: 0;
+        	}
+            html,body{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background:url('img/bg.png') no-repeat top left;
+                -webkit-background-size: 100%;
+                text-align: center;
+            }
+            img{
+                position:absolute;
+            }
+            img.logo{
+                width:3rem;
+                top:1rem;
+                left:1rem;
+            }
+            img.slogan{
+                width:13rem;
+                top:3rem;
+                left:1.5rem;
+            }
+            img.notice{
+                width:80%;
+                top:11rem;
+                left:1.6rem;
+            }
+            img.code{
+                width:70%;
+                top:14rem;
+                left:2.4rem;
+                z-index: 1;
+            }
+            img.footer{
+                width:100%;
+                left: 0;
+                bottom:0;
+            }
+            img.beer{
+                width:25%;
+                bottom:0rem;
+                right:0rem;
+            }
+            @media only screen and (max-height: 520px) and (min-width:360px) {
+                img.slogan{
+                    top: 2rem;
+                }
+                img.notice{
+                    top: 8rem;
+                }
+                img.code{
+                    top: 10.5rem;
+                }
+            }
+            @media only screen and (max-height: 460px) and (min-width:320px) {
+                img.slogan{
+                    top: 2rem;
+                }
+                img.notice{
+                    top: 9rem;
+                }
+                img.code{
+                    top: 12rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="img/logo.png" class="logo">
+        <img src="img/slogan.png" class="slogan">
+        <img src="img/notice.png" class="notice">
+        <img src="img/code.png?v=1" class="code">
+        <img src="img/footer.png" class="footer">
+        <img src="img/beer.png" class="beer">
+        <p id="copyright" style="color:#ffffff;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">技术支持：V积分 · 鼎川物联Copyright 2012-2017</p>
+    </body>
+    <script src="/static/js/font.js"></script>
+</html>

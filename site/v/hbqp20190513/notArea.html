@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒乐享河北</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: url(img/bg.png) repeat-y left top;
+            -webkit-background-size: 100% auto;
+            font-family: "微软雅黑", "Microsoft YaHei";
+        }
+        .title1{
+        	text-align: center;
+        	color:#fff;
+        	font-size:1.6rem;
+        	padding-top:5rem;
+        }
+        .title2{
+        	text-align: center;
+    		color: #fff;
+    		padding-top:1rem;
+    		font-size:12px;
+        }
+        .title3{
+        	text-align: center;
+        	color:#fff;
+        	font-size:1.2rem;
+        	padding-top:4rem;
+        }
+		.qrcode{
+			margin:1.5rem auto 0;
+			display:block;
+			width:11rem;
+		}
+		img.logo {
+            width: 3rem;
+            margin: .825rem 0 0 .825rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    	<img src="img/logo.png" class="logo" />
+        <p class="title1">大侠，您不在活动区域哦</p>
+        <p class="title2">活动区域：河北省、天津市辖区</p>
+        <p class="title3">关注公众号，获得更多惊喜</p>
+        <img src="img/qrcode.png" alt="" class="qrcode">
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.2"></script>
+<script src="/v/js/cfg.js?v=2.1.8"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    ini_wxshare(vge.hbqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

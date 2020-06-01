@@ -1,0 +1,184 @@
+/*订单详情*/
+#order_details_page{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	background: #f9f9f9;
+	padding-bottom:4rem;
+	box-sizing: border-box;
+}
+#order_details_page .title{
+	height: 4.75rem;
+	background: url(../img/order-details-bg.png) no-repeat top;
+	background-size: 100% 4.35rem;
+	-webkit-background-size: 100% 4.35rem;
+	margin: 0 .6rem;
+	overflow: hidden;
+}
+#order_details_page .title p{
+	text-align: center;
+	font-size: .75rem;
+	font-weight: bold;
+	color: #111114;
+	margin: 2rem auto 0;
+}
+#order_details_page .title p span{
+	font-weight: normal;
+	color: #66615e;
+	font-size: .7rem;
+}
+#order_details_page .shr_msg{
+	font-size: .61rem;
+	color: #666665;
+	background: #fff;
+	margin-bottom: .4rem;
+}
+#order_details_page .shr_msg>p{
+	border-bottom: 2px #f5f5f5 solid;
+	line-height: 1.5rem;
+	padding: 0 .6rem;
+}
+#order_details_page .shr_msg>ul{
+	padding: 0 .6rem .5rem;
+}
+#order_details_page .shr_msg>ul li{
+	display: flex;
+	display: -webkit-flex;
+}
+#order_details_page .shr_msg>ul li>p:nth-of-type(1){
+	width: 1.5rem;
+}
+#order_details_page .shr_msg>ul li>p:nth-of-type(2){
+	max-width: 90%;
+}
+
+#order_details_page .goods_msg{
+	background: #fff;
+	margin-bottom: .4rem;
+}
+#order_details_page .goods_msg>p{
+	border-bottom: 2px #f5f5f5 solid;
+	line-height: 1.5rem;
+	padding: 0 .6rem;
+	font-size: .61rem;
+}
+#order_details_page .goods_msg>div{
+	display: flex;
+	display: -webkit-flex;
+	padding: 0 .6rem;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(1){
+	width: 30%;
+	padding: 0 .3rem;
+    box-sizing: border-box;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(2){
+	width: 61%;
+	padding-top: .6rem;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(2) p.goodsname{
+	font-size: .72rem;
+	line-height: 1.1em;
+	margin-bottom: .5rem;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(2) p.price{
+	font-size: .63rem;
+	color: #6b6c69;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(2) p.price span{
+	font-size: .83rem;
+	color: #d00c0c;
+	font-weight: bold;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(2) p.btn{
+	background: #084192;
+	color: #fff;
+	font-size:.56rem ;
+	width: 3rem;
+	height: .9rem;
+	text-align: center;
+	border-radius: .1rem;
+	line-height: .9rem;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(3){
+	width: 9%;
+}
+#order_details_page .goods_msg>div>div:nth-of-type(3)>p{
+	font-size: .72rem;
+	text-align: center;
+	padding-top: .55rem;
+	color: #6b6c69;
+}
+#order_details_page .goods_msg img{
+	width: 100%;
+	margin-top: .3rem;
+}
+
+#order_details_page .order_msg{
+	font-size: .61rem;
+	color: #666665;
+	background: #fff;
+	margin-bottom: .4rem;
+}
+#order_details_page .order_msg>p{
+	border-bottom: 2px #f5f5f5 solid;
+	line-height: 1.5rem;
+	padding: 0 .6rem;
+}
+#order_details_page .order_msg>ul{
+	padding: 0 .6rem;
+}
+#order_details_page .order_msg>ul li{
+	display: flex;
+	display: -webkit-flex;
+	line-height: 1rem;
+	overflow: hidden;
+	height: 1rem;
+}
+#order_details_page .order_msg>ul li>p:nth-of-type(1){
+	width: 2.8rem;
+}
+#order_details_page .order_msg>ul li>p:nth-of-type(2){
+	max-width: 80%;
+	width: 75%;
+}
+#order_details_page .order_msg>ul li textarea{
+	height: 1rem;
+	border: 0;
+	outline: none;
+	line-height: 1rem;
+	color: #666665;
+	width: auto;
+}
+#order_details_page .order_msg>ul li .copy{
+	border: 1px #0b4091 solid;
+	border-radius: 2px;
+	padding: 0 .3rem;
+	line-height: .6rem;
+	color: #0b4091;
+	float: right;
+	margin-top: .2rem;
+	font-size: .44rem;
+}
+/*订单详情End*/
+#btn_box{
+	height: 2.95rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	background: #fff;
+}
+#recvice{
+	width: 14.75rem;
+	height: 2.1rem;
+	margin: .45rem auto;
+	text-align: center;
+	line-height: 2.1rem;
+	color: #fff;
+	background: #0b4091;
+	font-size: .75rem;
+	border-radius: 2px;
+}

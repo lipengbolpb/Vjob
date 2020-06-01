@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>我的订单</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/order.css?v=7" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="title" id="title">
+      <span>累计订单：</span><span id="sum"></span>
+    </div>
+    
+    <div class="content"><ul class="box" id="orders"></ul></div>
+	<p id="more">点击加载更多…</p>
+    
+    <!-- template begin -->
+    <script type="template" id="tpl-li">
+      <li data="<%-data%>">
+      <div class="code">订单编号：<sapn><%-code%></sapn><span><%-count%>件</span></div>
+      <div class="name"><%-name%></div>
+      <div class="time">提交时间：<%-time.substr(0,19)%></div>
+      <img src="img/rebate_arrow.png" class="arrow">
+      <div class="detail_data" style="display:none"></div>
+      </li>
+    </script>
+    <!-- template end-->
+    
+    <div id="toast" style="display: none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">已完成</p>
+      </div>
+    </div>
+    
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <div class="weui_loading">
+          <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+      </div>
+    </div>
+    
+  </body>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="/static/js/ejs.min.js"></script>
+  <script src="/static/js/wx/jsdk.js?v12"></script>
+  <script src="/static/js/vve/10core.js?v=18"></script>
+  <script src="/static/js/vve/11tool.js?v=23"></script>
+  <script src="/static/js/vve/20ajx.js?v18"></script>
+  <script src="/static/js/vve/22nav.js?v=1"></script>
+  <script src="/v/js/cfg.js?v=1"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/order.js?v=13"></script>
+</html>

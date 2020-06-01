@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒乐享河北</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/fail.css?v=1.12">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/logo.png?v=1" class="logo">
+        <img src="img/fail-bg.png?v=1" class="footer">
+        <p class="title"></p>
+        <p class="content"></p>
+        <p id="batch"></p>
+        <div class="cash" id="cash">
+            <img src="img/hb-cash.png?v=1" class="hbCash">
+            <div class="msg">
+                <p class="congratulate">离红包只差一点点
+                    <br />再扫一瓶试试吧~</p>
+            </div>
+            <input type="button" value="查看红包记录" id="btn">
+        </div>
+        <!-- <div class="lt">
+            <img src="img/lt-bg.png?v=1" class="ltbg">
+            <img src="img/lt-btn.png?v=1" class="ltbtn">
+        </div> -->
+		<div class="lt">
+		    <img src="img/lt.png?v=1" alt="" class="lt-img">
+		    <img src="img/lq-btn.png?v=1" alt="" class="lq-btn">
+		</div>
+        <div class="footerPush"></div>
+    </div>
+    <!-- <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p> -->
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=2.2.3"></script>
+<script>
+    var PROJECT = 'hbqp-common3.0';
+    var PHONE_NUM = '15321413736';
+    var args = vge.urlparse(location.href),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        bizcode = args.bizcode;
+    var content = document.getElementsByClassName('content')[0],
+        title = document.getElementsByClassName('title')[0],
+        batch = document.getElementById('batch');
+    document.getElementsByClassName('lq-btn')[0].addEventListener('click', function () {
+        window.location.href = 'https://m.10010.com/queen/qingdaobeer/qdbeer.html';
+    });
+    // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+    switch (bizcode) {
+        case '1': //二维码不存在
+            title.textContent = '这个二维码不存在';
+            content.textContent = '';
+            break;
+        case '2': //二维码已被使用
+            if (sessionStorage.earnTime == '' || sessionStorage.earnTime == undefined || sessionStorage.earnTime ==
+                'undefined') {
+                content.textContent = '';
+            } else {
+                var time = sessionStorage.earnTime === undefined ? '' : sessionStorage.earnTime;
+                content.innerHTML = '<span style="color:#d9231f;">扫码时间:</span><span style="color:#d9231f">' + time +
+                    '</span><br><span style="color:#d9231f;">再扫一瓶试试看</span>';
+            }
+            title.textContent = '这个二维码已被扫';
+            break;
+        case '3': //二维码已过期
+            title.textContent = '这个二维码已过期';
+            content.textContent = '这么好的酒，要学会珍惜哦';
+            break;
+        case '4': //活动未开始
+            title.style.fontSize = '2rem';
+            title.textContent = '活动未开始';
+            content.textContent = '心急喝不了好啤酒，再等等哦';
+            batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+            break;
+        case '5': //活动已结束
+            title.style.fontSize = '2rem';
+            title.textContent = '活动已截止';
+            content.textContent = '好酒不等人，下次早点来哦';
+            break;
+        case '6': //二维码异常
+            title.style.fontSize = '2rem';
+            title.textContent = '系统繁忙';
+            content.textContent = '稍等片刻，畅想欢聚时刻';
+            break;
+        case '17': //酒品已过期
+            title.style.fontSize = '1.5rem';
+            title.textContent = '好酒美味 更需趁早';
+            content.innerHTML = '您扫的这瓶酒<br />所属产品批次活动已结束';
+            break;
+        case '19': //未入库
+            document.getElementById("cash").style.display = 'block';
+            document.getElementById("btn").addEventListener('click', function () {
+                location.href = 'http://' + location.host + '/' + PROJECT + '/too/mybag';
+            }, false);
+            title.style.fontSize = '1.5rem';
+            title.textContent = '';
+            content.innerHTML = '';
+            break;
+        case '-1': //系统升级中
+            title.style.fontSize = '2rem';
+            title.textContent = '系统升级中';
+            content.textContent = '稍安勿躁，敬请关注';
+            break;
+        case '18': //扫码专员
+            content.style.display = 'none';
+            title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+            break;
+        case '20':
+            title.style.fontSize = '2rem';
+            title.textContent = '二维码未激活';
+            content.textContent = '';
+            batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+            break;
+        default:
+            title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+            break;
+    }
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    ini_wxshare(vge.hbqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

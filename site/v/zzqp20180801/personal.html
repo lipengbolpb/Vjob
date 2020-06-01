@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/personal.css?v=1.13">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="mybag_top">
+            <img src="img/audio1.png" class="audio">
+            <div class="my">
+                <img src="img/my.png">
+            </div>
+            <div class="my-prize">
+                <img src="img/myprize-head.png" class="prize-head">
+                <div class="prize-list clearfix">
+                    <img src="img/myprize-title.png" class="prize-title">
+                    <div class="record">
+                        <ul id="prizeUl">
+
+                        </ul>
+                    </div>
+                    <input type="button" id="prize-back" value="返回">
+                </div>
+            </div>
+            <div class="personalTitle">
+                <img src="img/personal-title.png">
+                <p>积分可进入积分商城兑换好礼，快快行动吧</p>
+            </div>
+            <div class="personalMain">
+                <p>当前剩余</p>
+                <p>
+                    <span id="total">0</span>
+                    <span>积分</span>
+                </p>
+            </div>
+            <a href="javascript:;" class="ck" id="show">查看详细记录</a>
+            <input type="button" value="点击进入积分商城" class="mall">
+            <img src="img/personal-border.png" class="border">
+            <p class="wallet">我的零钱包余额：
+                <span class="money"></span>
+            </p>
+            <input type="button" value="立即提现" class="btn" disabled="disabled">
+        </div>
+        <div class="mybag_bottom">
+            <div class="record">
+                <input type="button" name="" id="hide" value="收起" />
+                <ul id="mon_list">
+
+                </ul>
+                <p id="more" class="getmore">加载更多</p>
+                <p id="no_list" class="nolist">您还没有积分记录哦</p>
+            </div>
+        </div>
+        <div class="mask">
+            <p class="qin">亲，注意聊天消息里的【服务通知】
+                <br>看到这样的消息72小时内要点开收钱！</p>
+            <img src="img/alert.png" class="alert">
+            <input type="button" value="我知道了" class="iknow">
+        </div>
+    </div>
+    <audio id="bgm" loop preload src="music/bgm.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.2.0"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('bgm').setAttribute('src', '/v/zzqp20180801/music/bgm.mp3?v=1');
+        document.getElementById('bgm').setAttribute('loop', 'loop');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    // ini_wxshare(vge.zzqpappid);
+    // // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+</script>
+<script src="js/personal.js?v=2.4"></script>
+
+</html>

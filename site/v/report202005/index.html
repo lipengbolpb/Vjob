@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>终端促销日报</title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+	<script src="js/rem.js"></script>
+	<script src="js/rem.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index-sku.css?v=0.03">
+	<link rel="stylesheet" type="text/css" href="css/index-terminal.css?v=0.02">
+	<link rel="stylesheet" type="text/css" href="css/weui.min.css?v=1">
+	<script type="text/javascript" src="js/echarts.min.js?=0.01"></script>
+</head>
+
+<body>
+	<p id="info"></p>
+	<div id="toast" style="display: none;">
+		<div class="weui_mask_transparent"></div>
+		<div class="weui_toast">
+			<i class="weui_icon_toast"></i>
+			<p class="weui_toast_content"></p>
+		</div>
+	</div>
+
+	<div id="loadingToast" class="weui_loading_toast" style="display:none;z-index:999">
+		<div class="weui_mask_transparent"></div>
+		<div class="weui_toast">
+			<div class="weui_loading">
+				<div class="weui_loading_leaf weui_loading_leaf_0"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_1"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_2"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_3"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_4"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_5"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_6"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_7"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_8"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_9"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_10"></div>
+				<div class="weui_loading_leaf weui_loading_leaf_11"></div>
+			</div>
+			<p class="weui_toast_content" id="inner"></p>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<div class="header">
+		<input type="button" value="消费者数据" id="btn_box">
+		<input type="button" value="终端数据" id="btn_lid">
+	</div>
+	<div id="report-terminal" style="display: none;">
+		<!-- 概况表格 -->
+		<p class="basicTitle">运营数据概览</p>
+		<!-- 箱码 -->
+		<table class="basic basic_box">
+			<tr>
+				<td>
+					<img src="img/icon-address.png"><span class="itemName"></span></td>
+				<td>
+					<img src="img/icon-date.png">
+				</td>
+				<td>
+					<img src="img/icon-total.png">累计</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-box.png">消费箱数</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-money.png">消费金额</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-join.png">参与终端</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-add.png">新增终端</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-going.png">中出积分</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-change.png">兑出积分</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-qian.png">单箱费用</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-point.png">单箱积分</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<!-- 盖码 -->
+		<table class="basic basic_lid hidden">
+			<tr>
+				<td>
+					<img src="img/icon-address.png"><span class="itemName"></span></td>
+				<td>
+					<img src="img/icon-date.png">
+				</td>
+				<td>
+					<img src="img/icon-total.png">累计</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-box.png">消费瓶数</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-money.png">消费金额</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-join.png">参与终端</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-join.png">参与人数</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-add.png">新增人数</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/icon-qian.png">单瓶费用</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<!-- skuList -->
+		<p class="skulistTitle">sku列表</p>
+		<table class="skulist">
+
+		</table>
+		<!-- 7天趋势图 -->
+		<div class="trend">
+			<p class="title">历史七天趋势图</p>
+			<div class="tool">
+				<p id="tool_date"></p>
+				<p id="tool_box"></p>
+				<p id="tool_money"></p>
+				<p id="tool_num"></p>
+				<p id="tool_point"></p>
+			</div>
+			<div id="trend"></div>
+		</div>
+		<!-- 华丽的分割线 -->
+		<img src="img/line.png" class="line">
+		<!-- 二级区域排名图 -->
+		<div class="rank">
+			<p class="title"></p>
+			<div id="rank"></div>
+		</div>
+		<!-- 二级区域明细 -->
+		<p class="subTitle"></p>
+		<table class="sub">
+
+		</table>
+		<!-- 底部统计 -->
+		<div class="footer">
+			<div class="plus">
+				<img src="img/icon-plus.png">
+				<p>账户剩余金额</p>
+				<p>
+					<span class="limitVpoints"></span>
+					<span>元</span>
+				</p>
+			</div>
+			<div class="expect">
+				<img src="img/icon-expect.png">
+				<p>预计使用天数</p>
+				<p>
+					<span class="limitDay"></span>
+					<span>天</span>
+				</p>
+			</div>
+		</div>
+		<!-- 版权声明 -->
+		<p class="copyright">本服务由V积分大数据中心提供</p>
+	</div>
+
+	<div id="report-sku" style="display: none;">
+		<div class="control">
+			<div class="outside">
+				<!-- <img src="img/bg.png" class="bg"> -->
+				<div class="close"></div>
+				<div class="content">
+					<p class="all">全部</p>
+				</div>
+			</div>
+			<!-- 回到顶部 -->
+			<img src="img/top.png" class="top" id="toTop">
+			<img src="img/loading.gif" class="loading">
+		</div>
+		<div class="wrap">
+
+			<div class="select1">
+				<p>日报概况</p>
+				<ul>
+					<li>
+						<span id="address"><img src="img/address.png?v=1"></span>
+						<span id="date"><img src="img/date.png?v=1"></span>
+						<span><img src="img/up.png?v=1">累计</span>
+					</li>
+					<li>
+						<span><img src="img/scan.png?v=1">开瓶扫码量</span>
+						<span id="bottle"></span>
+						<span id="bottleTotal"></span>
+					</li>
+					<li class="return">
+						<span><img src="img/return.png?v=1">返利积分</span>
+						<span id="money"></span>
+						<span id="moneyTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/rec.png?v=1">扫码消费者</span>
+						<span id="customer"></span>
+						<span id="customerTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/add.png?v=1">新增消费者</span>
+						<span id="add"></span>
+						<span id="addTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/man.png?v=1">人均消费量</span>
+						<span id="average"></span>
+						<span id="averageTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/clock.png?v=3">开瓶新鲜度</span>
+						<span id="fresh"></span>
+						<span id="freshTotal"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="select5">
+				<p>七天趋势图</p>
+				<div class="tool">
+					<p id="tool_date"></p>
+					<p id="tool_one"></p>
+					<p id="tool_two"></p>
+					<p id="tool_three"></p>
+				</div>
+				<div id="seven"></div>
+				<div class="btns">
+					<input type="button" value="用户趋势" id="btnUser">
+					<input type="button" value="扫码趋势" id="btnScan">
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="select2">
+				<p>区域日扫码排名</p>
+				<div id="excel"></div>
+			</div>
+			<div class="select3">
+				<ul>
+					<li class="title">
+						<span>排名</span>
+						<span>区域</span>
+						<span>扫码数量</span>
+						<span id="freshName"></span>
+						<span>累计扫码数量</span>
+						<span>累计消费者</span>
+					</li>
+					<ul id="mon_list">
+
+					</ul>
+					<li class="else">
+						<span>其他</span>
+						<span id="elseNum"></span>
+						<span id="elseCustomer"></span>
+						<span id="elseNumTotal"></span>
+						<span id="elseCustomerTotal"></span>
+					</li>
+					<li class="total">
+						<span>合计</span>
+						<span id="totalNum"></span>
+						<span id="totalCustomer"></span>
+						<span id="totalNumTotal"></span>
+						<span id="totalCustomerTotal"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="select4">
+				<div class="left">
+					<img src="img/points.png?v=1">
+					<p>账户剩余金额</p>
+					<p><span id="surplusMoney"></span>元</p>
+				</div>
+				<div class="right">
+					<img src="img/time.png?v=1">
+					<p>预计使用天数</p>
+					<p><span id="surplusDate"></span>天</p>
+				</div>
+			</div>
+			<p class="copyright">本服务由V积分大数据中心提供</p>
+		</div>
+	</div>
+</body>
+<script id="onenote_tpl" type="text/html">
+	<li>
+		<span>[=rank]</span>
+		<span>[=city]</span>
+		<span>[=num]</span>
+		<span>[=freshLev]</span>
+		<span>[=numTotal]</span>
+		<span>[=customerTotal]</span>
+	</li>
+</script>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="js/index-sku.js?v=0.10"></script>
+<script src="js/index-terminal.js?v=0.05"></script>
+<script src="js/toTop.js?v=1"></script>
+<script src="/static/js/font.js"></script>
+
+   <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+	 <script>eruda.init();</script> -->
+<script>
+	$(function () {
+		// 获取url传递的参数
+		var queryDate = sessionStorage.queryDate,
+				company = sessionStorage.company,
+				type = sessionStorage.type;
+
+		// 本项目是将终端日报和一品一码日报合并, 两个项目html 的fontsize设置不一致,
+		// tab切换页签时调整fontSize
+		// 保存rem.js设置的fontSize
+		var htmlFontSize = $('html').css('font-size');
+
+		$('#btn_box').on('click', showSku);
+		$('#btn_lid').on('click', showTerminal);
+		$("title").html("终端促销日报[" + queryDate.substr(5, 6).replace('-', '.') + ']');
+		if (type == '1') { //显示消费者数据
+			showSku()
+		} else if (type == '2') { // 显示终端
+			showTerminal()
+		}
+
+		function showSku() { //显示箱sku
+			// t_loading('报表加载中');
+			$('#btn_box').css({
+				'background': '#19b5fe url(img/header-box-selected.png) no-repeat 14px center auto',
+				'color': '#ffffff',
+				'backgroundColor': '#19b5fe',
+			});
+			$('#btn_lid').css({
+				'background': 'url(img/header-lid.png) no-repeat 14px center auto',
+				'color': '#98999a',
+				'backgroundColor': '',
+			});
+			$('#report-terminal').hide();
+			setTimeout(function () { // 延时改变fontsize,防止重绘闪屏
+				$('html').css('font-size', parseFloat(htmlFontSize) / 1.45 + 'px');
+				$('#report-sku').show();
+				if (skuPartFn.hasCall) return
+				skuPartFn()
+				skuPartFn.hasCall = true
+			}, 5)
+
+		}
+
+		function showTerminal() { //显示盖码
+			// t_loading('报表加载中');
+			$('#btn_box').css({
+				'background': 'url(img/header-box.png) no-repeat 18px center auto',
+				'color': '#98999a',
+				'backgroundColor': '',
+			});
+			$('#btn_lid').css({
+				'background': '#19b5fe url(img/header-lid-selected.png) no-repeat 18px center auto',
+				'backgroundColor': '#19b5fe',
+				'color': '#ffffff'
+			});
+			$('#report-sku').hide();
+			setTimeout(function () {
+				$('html').css('font-size', htmlFontSize)
+				$('#report-terminal').show();
+				if (terminalPartFn.hasCall) return
+				terminalPartFn()
+				terminalPartFn.hasCall = true
+			}, 5)
+
+		}
+	
+	})
+</script>
+
+</html>

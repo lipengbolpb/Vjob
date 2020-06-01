@@ -1,0 +1,137 @@
+#jw_box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+	left: 0;
+	top:0 ;
+	overflow: hidden;
+	background:#150b0c  url(/v/vjfhls/img2018/jw_bg.png) no-repeat bottom;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	display: none;
+}
+#jw_box .jw_close{
+	width: 1.5rem;
+	height: 1.5rem;
+	display: block;
+	position: absolute;
+	right: .8rem;
+	top: .8rem;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#jw_box .jw_content{
+	position: absolute;
+	width: 100%;
+	left: 1rem;
+	top: .9rem;
+	z-index: 2;
+}
+#jw_box .jw_content img{
+	left: 0;
+	position: absolute;
+	transition: all .8s linear;
+	opacity: 0;
+	height: .5rem;
+	top: .5rem;
+}
+#jw_box .jw_content img:nth-of-type(2){
+	transition-delay: .8s;
+	top: 1.7rem;
+}
+#jw_box .jw_content img:nth-of-type(3){
+	transition-delay: 1.6s;
+	height: 1.8rem;
+	top:2.85rem;
+}
+#jw_box .jw_content img:nth-of-type(4){
+	transition-delay: 2.4s;
+	height: 1.8rem;
+	top: 5.25rem;
+}
+#jw_box .jw_person{
+	width: 13.5rem;
+	position: absolute;
+	right: 0.2rem;
+	bottom:5rem ;
+}
+#jw_box .jw_person.move{
+	animation: jwperson 5s linear both 10;
+}
+#jw_box .qrcode_box{
+	width: 12rem;
+	height: 15rem;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: .8rem;
+	background: url(/v/vjfhls/img2018/jw_qr_bg.png) no-repeat bottom;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;	
+}
+@-webkit-keyframes jwperson{
+	20%{
+		right: 1.5rem;
+		bottom: 6rem;
+	}
+	40%{
+		right: 0.2rem;
+		bottom: 5rem;
+	}
+	60%{
+		right: 1rem;
+		bottom: 5rem;
+	}
+	80%{
+		right: 0.2rem;
+		bottom: 6rem;
+	}
+	0%,100%{
+		right: 0.2rem;
+		bottom:5rem ;
+	}
+}
+#jw_box .qrcode_box img{
+	width: 3.9rem;
+	display: block;
+	position: absolute;
+	bottom: 0.25rem;
+	left: .25rem;
+}
+.jw_btn{
+	width: 3rem;
+	display: block;
+	position: absolute;
+	left:1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+     -webkit-animation: game .8s linear both infinite;
+}
+
+@-webkit-keyframes game {
+    20%,
+    60% {
+        -webkit-transform: rotate(-5deg);
+    }
+    40%,
+    80% {
+        -webkit-transform: rotate(5deg);
+    }
+    0%,
+    10%,
+    90%,
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}

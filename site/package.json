@@ -1,0 +1,27 @@
+{
+    "main": "web.js",
+    "name": "网站",
+    "description": "UI",
+    "version": "0.0.2",
+    "private": true,
+    "author": {
+        "name": "zsl",
+        "email": "zhshenglin@163.com"
+    },
+    "dependencies": {
+        "ejs": ">=2.4.1",
+        "memjs": "git://github.com/alevy/memjs.git#master",
+        "crypto-js": ">=3.1.6"
+    },
+    "devDependencies":{
+        "memcached":">=2.2.1",
+        "pm2":"*"
+    },
+    "engines": {
+        "node": "5.6.0"
+    },
+    "scripts": {
+        "start": "node web.js"
+    }
+}
+

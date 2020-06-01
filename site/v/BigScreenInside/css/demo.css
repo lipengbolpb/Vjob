@@ -1,0 +1,77 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	background:url('../img/bg.png') no-repeat top left;
+	background-size:100% 100%;
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+div.container-fluid{
+	height:100%;
+}
+div.container-fluid div.row:nth-of-type(1){
+	height: 55%;
+}
+div.container-fluid div.row:nth-of-type(1) div{
+	height:100%;
+}
+div.container-fluid div.row:nth-of-type(1) div.weather{
+	height: 30%;
+	background:url('../img/bg2.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(1) div.week{
+	margin-top:1.4%;
+	height: 69%;
+	background:url('../img/bg3.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(1) div.map{
+	height: 100%;
+	background:url('../img/bg1.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(1) div.real{
+	height: 69%;
+	background:url('../img/bg4.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(1) div.add{
+	margin-top:1.4%;
+	height: 30%;
+	background:url('../img/bg5.png') no-repeat top left;
+	background-size:100% 100%;
+}
+
+div.container-fluid div.row:nth-of-type(2){
+	height: 35%;
+	margin-top:1%;
+}
+div.container-fluid div.row:nth-of-type(2) div{
+	height:100%;
+}
+div.container-fluid div.row:nth-of-type(2) div.core{
+	background:url('../img/bg6.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(2) div.month{
+	background:url('../img/bg7.png') no-repeat top left;
+	background-size:100% 100%;
+}
+div.container-fluid div.row:nth-of-type(2) div.total{
+	background:url('../img/bg8.png') no-repeat top left;
+	background-size:100% 100%;
+}
+
+img.logo{
+	width:80%;
+
+}

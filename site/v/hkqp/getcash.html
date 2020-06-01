@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒TSINGTAO海南</title>
+    <script src="js/rem.js"></script>
+    <!-- <link rel="stylesheet" href="/v/ymqp-common2.0/css/happyNewYear.css?v=2.0.0"> -->
+    <link rel="stylesheet" href="css/layout.css?v=1.0">
+    <link rel="stylesheet" href="css/getcash.css?v=1.9.19">
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1"/> -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f8e8f448c09ef3f0bf2e84ddad8e07d8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- 春节 start -->
+    <!-- <div class="happyNewYear">
+        <div class="curtain">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-bg.png" class="curtain-bg">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-left.png" class="curtain-left">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-right.png" class="curtain-right">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-logo.png" class="curtain-logo">
+            <div class="textTop">
+                <img src="/v/ymqp-common2.0/img/happyNewYear/text-1.png" class="text-1">
+                <div class="foamBox1">
+                    <img src="/v/ymqp-common2.0/img/happyNewYear/text-1-mask.png" class="text-1-foam text-foam">
+                </div>
+            </div>
+            <div class="textBottom">
+                <img src="/v/ymqp-common2.0/img/happyNewYear/text-2.png" class="text-2">
+                <div class="foamBox2">
+                    <img src="/v/ymqp-common2.0/img/happyNewYear/text-2-mask.png" class="text-2-foam text-foam">
+                </div>
+            </div>
+            <img src="/v/ymqp-common2.0/img/happyNewYear/beer.png" class="beer">
+        </div>
+    </div> -->
+    <!-- 春节 end -->
+    <img src="img/loading.gif" class="loading" id="loading">
+    <!-- 拆红包页 -->
+    <div class="get">
+        <img src="img/header.png" class="header">
+        <img src="img/slogan.png" class="slogan">
+        <div class="myhb">
+            <img src="img/get-hb.png" class="hb">
+            <img src="img/get-open.png" class="open">
+        </div>
+        <img src="img/spoondrift.png" class="spoondrift">
+        <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2017</p>
+    </div>
+    <!-- 拆开页 -->
+    <div class="cash">
+        <!-- 送酒上门按钮 -->
+        <img id="btn-to-home" src="img/btn-to-home-new.png">
+        
+        <img src="img/header.png" class="header">
+        <div class="myhb">
+            <img src="img/hb-cash.png" class="hbCash">
+            <div class="msg">
+                <p class="congratulate">恭喜你获得</p>
+                <p class="prize">
+                    <span>¥</span>
+                    <span id="money">0.00</span>
+                    <span>元</span>
+                </p>
+            </div>
+            <div class="rescan">
+                <p class="title">您已扫过</p>
+                <p class="earnTime"></p>
+                <p class="content">扫码并获得<span class="gettedMoney"></span>元</p>
+            </div>
+        </div>
+        <input type="button" value="立即提现" id="btn">
+        <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，
+            <br>不足1元的红包将存入零钱包</p>
+        <div class="link">
+            <a class="rule">活动规则</a>
+            <a class="explain">隐私说明</a>
+        </div>
+        <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn" /> -->
+    </div>
+    <div class="mask">
+        <p class="qin">亲，注意聊天消息里的【服务通知】
+            <br>看到这样的消息72小时内要点开收钱！</p>
+        <img src="img/alert.png?v=1" class="alert">
+        <input type="button" value="我知道了" class="ck">
+    </div>
+    <!--2018酒王-->
+	<!-- <div id="jw_box">
+		<img src="/v/vjfhls/img2018/icon-close.png" class="jw_close"/>
+		<div class="jw_content">
+			<img src="/v/vjfhls/img2018/jw_content_1.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_2.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_3.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_4.png"/>
+		</div>
+		<img src="/v/vjfhls/img2018/jw_person.png" class="jw_person"/>
+		<div class="qrcode_box">
+			<img src="/v/vjfhls/img2018/hainan.png"/>
+		</div>
+	</div> -->
+    <div id="active">
+        <img src="" class="activeImg">
+        <img src="img/close.png" class="close">
+    </div>
+
+    <!-- toast -->
+    <div id="toast" style="display: none; width:5.6em;height:5.6em;font-size: 16px;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast"></i>
+            <p class="weui_toast_content">已完成</p>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<!-- 新年活动页 -->
+<!-- <script src="/v/ymqp-common2.0/js/happyNewYear.js?v=8"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=1.06"></script>
+<script src="/static/js/zeroText.js?v=1" type="text/javascript" charset="utf-8"></script>
+<script src="/v/jlqp-common/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=1.11.24"></script>
+
+</html>

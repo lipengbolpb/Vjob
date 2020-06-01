@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤一品一码[日报]</title>
+    	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    	<link rel="stylesheet" type="text/css" href="css/index.css?v=42">
+    	<script type="text/javascript" src="js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="select1">
+				<p>日报概况</p>
+				<ul>
+					<li>
+						<span id="address"><img src="img/address.png?v=1"></span>
+						<span id="date"><img src="img/date.png?v=1"></span>
+						<span><img src="img/up.png?v=1">累计</span>
+					</li>
+					<li>
+						<span><img src="img/scan.png?v=1">开瓶扫码量</span>
+						<span id="bottle"></span>
+						<span id="bottleTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/return.png?v=1">返利金额</span>
+						<span id="money"></span>
+						<span id="moneyTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/rec.png?v=1">扫码消费者</span>
+						<span id="customer"></span>
+						<span id="customerTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/add.png?v=1">新增消费者</span>
+						<span id="add"></span>
+						<span id="addTotal"></span>
+					</li>
+					<li>
+						<span><img src="img/man.png?v=1">人均消费量</span>
+						<span id="average"></span>
+						<span id="averageTotal"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="line"></div>
+			<div class="select2">
+				<p>区域日扫码排名</p>
+				<div id="excel"></div>
+			</div>
+			<div class="select3">
+				<ul>
+					<li class="title">
+						<span>排名</span>
+						<span>区域</span>
+						<span>扫码数量</span>
+						<span>当日消费者</span>
+						<span>累计扫码数量</span>
+						<span>累计消费者</span>
+					</li>
+					<ul id="mon_list">
+						
+					</ul>
+					<li class="else">
+						<span>其他</span>
+						<span id="elseNum"></span>
+						<span id="elseCustomer"></span>
+						<span id="elseNumTotal"></span>
+						<span id="elseCustomerTotal"></span>
+					</li>
+					<li class="total">
+						<span>合计</span>
+						<span id="totalNum"></span>
+						<span id="totalCustomer"></span>
+						<span id="totalNumTotal"></span>
+						<span id="totalCustomerTotal"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="select4">
+				<div class="left">
+					<img src="img/points.png?v=1">
+					<p>账户剩余金额</p>
+					<p><span id="surplusMoney"></span>元</p>
+				</div>
+				<div class="right">
+					<img src="img/time.png?v=1">
+					<p>预计使用天数</p>
+					<p><span id="surplusDate"></span>天</p>
+				</div>
+			</div>
+		</div>
+	</body>
+    <script id="onenote_tpl" type="text/html">
+        <li>
+            <span>[=rank]</span>
+            <span>[=city]</span>
+            <span>[=num]</span>
+            <span>[=customer]</span>
+            <span>[=numTotal]</span>
+            <span>[=customerTotal]</span>
+        </li>
+    </script>
+    <script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script type="text/javascript" src="js/index.js?v=71"></script>
+</html>

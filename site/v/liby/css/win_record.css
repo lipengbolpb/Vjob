@@ -1,0 +1,20 @@
+body{background: #FFF6C1; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.topbgimg{background: url("/v/liby/img/banner_bg.png") 0 0 no-repeat; background-size: 100%; width: 100%; height: 100%;}
+.myprize{overflow: hidden; background: rgba(255,255,255,0.3); height: 40px; line-height: 40px; color: #B46602; font-size: 16px; padding: 0 15px; margin-top: 2px; border-bottom: 1px solid #FFEC90; margin-bottom: 16px;}
+.myprize p:nth-child(1){float: left;}
+.myprize p:nth-child(2){float: right;}
+.myprize p:nth-child(2) span{color: #EA615B;}
+.prize_box{border-top: 1px solid #EEEADE; padding: 5px 15px 0;}
+.prize_list, .name_list{background: #FEF08F; text-align: left;}
+.prize_list li, .name_list li{border-bottom: 1px solid #FEDA6A; color: #B46602; font-size: 14px; padding-left: 30px; height: 44px; line-height: 44px;}
+.prize_list li:nth-child(1){background: url("/v/liby/img/jiang1.png") 5px center no-repeat; background-size: 20px;}
+.prize_list li:nth-child(2){background: url("/v/liby/img/jiang2.png") 5px center no-repeat; background-size: 20px;}
+.prize_list li:nth-child(3){background: url("/v/liby/img/jiang3.png") 5px center no-repeat; background-size: 20px;}
+.prize_list li:nth-child(4){background: url("/v/liby/img/jiangte.png") 5px center no-repeat; background-size: 20px;}
+.prize_list li:nth-child(5){background: url("/v/liby/img/jiangte.png") 5px center no-repeat; background-size: 20px;}
+.namelist_box{padding: 12px 15px 15px;}
+.name_tit{overflow: hidden; margin-bottom: 5px;}
+.name_tit span{float: left; color: #fff; font-size: 14px; width: 90px; height: 26px; line-height: 26px; background: url(/v/liby/img/txt_bg.png) center center no-repeat; background-size: 100%;}
+.name_list li{padding: 0 10px; overflow: hidden;}
+.name_list li p:nth-child(1){float: left;}
+.name_list li p:nth-child(2){float: right;}

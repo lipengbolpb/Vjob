@@ -1,0 +1,366 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: url(../img/bg.png) no-repeat left top;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+
+img.logo{
+    width:20%;
+    position: absolute;
+    top:1rem;
+    left:5%;
+    z-index: 2;
+}
+img.slogan{
+    width: 80%;
+    display: block;
+    margin:2rem auto 0;
+}
+img.footer{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    z-index: 1;
+    pointer-events:none;
+}
+
+#cash{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left: 0;
+	display: none;
+	/* z-index:1; */
+    overflow: hidden;
+    /* transition: all 0.3s linear both; */
+}
+#cash div{
+    width: 75%;
+    height: 2rem;
+    position: absolute;
+    top: 10rem;
+    left: 12.5%;
+}
+#cash img.hb{
+	width:100%;
+	position:absolute;
+	top: 0;
+	left:0;
+}
+#cash img.open{
+    width: 35%;
+    position: absolute;
+    top: 3.5rem;
+    left: 32.5%;
+    -webkit-transition: all 1s linear;
+}
+@-webkit-keyframes change{
+    0%{
+       -webkit-transform: rotateY(0deg);
+    }
+    100%{
+       -webkit-transform: rotateY(360deg);
+    }
+}
+.active{
+    -webkit-animation:change 1s linear both;
+}
+
+#get{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+    overflow: hidden;
+    z-index:2;
+}
+#get div.hbbox{
+	width:100%;
+	position:absolute;
+	top:7rem;
+}
+#get div.hbbox img.hb{
+	width:80%;
+	display:block;
+	margin:0 auto;
+}
+#get div.hbbox p{
+	text-align:center;
+	position:absolute;
+	top:4.5rem;
+	width: 100%;
+	color:#d32526;
+}
+#get div.hbbox p.word{
+    top: 3rem;
+    font-size: 0.8rem;
+}
+#get div.hbbox p span{
+	color:#d32526;
+	font-size:1.2rem;
+	font-weight:600;
+	vertical-align:middle;
+}
+#get div.hbbox p span:nth-of-type(2){
+	font-size:1.8rem;
+}
+#get div.hbbox img.pic{
+	width: 82%;
+	display: block;
+	margin:-8rem auto 0;
+}
+#get #btn{
+	width:50%;
+	height:2rem;
+	background-color: #ffe037;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	border:none;
+	position: absolute;
+	top: 17rem;
+	left: 4rem;
+	color:#fa4a11;
+	font-size:0.8rem;
+}
+#get p.notice{
+	width: 100%;
+	color:#ffffff;
+	font-size:0.48rem;
+	position:absolute;
+	top:20rem;
+	text-align: center;
+	line-height: 0.8rem;
+}
+#get a.rule{
+	font-size:0.6rem;
+	color:#fff68f;
+	text-decoration:underline;
+	position:absolute;
+	top:22rem;
+	left: 6.8rem;
+}
+#get div.mask{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+#get img.rule{
+	position: absolute;
+    top: 2.5rem;
+    left: 10%;
+    width: 80%;
+}
+#get img.close{
+	position:absolute;
+	top: 2rem;
+	right:6%;
+	width:8%;
+}
+
+#mask{
+	width: 100%;
+	height:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 3;
+	display: none;
+}
+#mask img{
+	width: 70%;
+	display:block;
+	margin:5rem auto 0;
+}
+img.loading{
+	width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+#ad{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    display: none;
+}
+#ad img.ad{
+    width:80%;
+    display: block;
+    margin:1rem auto 0;
+}
+#ad a.close{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.1rem;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #000000;
+}
+#ad img.adClose{
+    width: 10%;
+    position: absolute;
+    bottom: 3rem;
+    right: 45%;
+}
+
+.game1{
+	position: absolute;
+    width: 3rem;
+    top: 4rem;
+    left: 0.2rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+	z-index: 10;
+	-webkit-animation: game .8s linear both infinite;
+}
+.game2{
+	z-index: 10;
+	position: absolute;
+    width: 3rem;
+    top: 4rem;
+    right: 0;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+	-webkit-animation: game .8s linear both infinite;
+}
+@-webkit-keyframes game{
+	20%,60%{
+		-webkit-transform: rotate(-5deg);
+	}
+	40%,80%{
+		-webkit-transform: rotate(5deg);
+	}
+	0%,10%,90%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+@media only screen and (max-height: 520px) and (min-width:360px) {
+	#cash div{
+        width: 65%;
+        top: 9rem;
+        left: 17.5%;
+    }
+    #get div.hbbox{
+        top:5rem;
+    }
+    #get #btn{
+        top:15rem;
+    }
+    #get p.notice{
+        top:18rem;
+    }
+    #get a.rule{
+        top:20rem;
+    }
+    
+}
+@media only screen and (max-height: 520px){
+   #ad img.adClose {
+        bottom: 2rem;
+        right: 45%;
+    }
+    #ad img.ad {
+        width: 78%;
+    } 
+}
+@media only screen and (max-height: 520px) and (min-width:380px){
+    #cash div{
+        width: 65%;
+        top: 9rem;
+        left: 17.5%;
+    }
+    #get div.hbbox{
+        top:3rem;
+    }
+    #get #btn{
+        top:13rem;
+    }
+    #get p.notice{
+        top:16rem;
+    }
+    #get a.rule{
+        top:18rem;
+    }
+}
+@media only screen and (max-height: 470px) and (min-width:320px) {
+	#cash div{
+        width: 65%;
+        top: 9.5rem;
+        left: 17.5%;
+    }
+    #get div.hbbox{
+        top:5rem;
+    }
+    #get #btn{
+        top:15rem;
+    }
+    #get p.notice{
+        top:18rem;
+    }
+    #get a.rule{
+        top:20rem;
+    }
+}
+@media only screen and (max-height: 440px) and (min-width:320px) {
+    img.slogan{
+        width:70%;
+    }
+	#cash div{
+        width: 55%;
+        top: 8.5rem;
+        left: 22.5%;
+    }
+    #cash img.open{
+        top:2.5rem;
+    }
+    #get div.hbbox{
+        top:3rem;
+    }
+    #get #btn{
+        top:13rem;
+    }
+    #get p.notice{
+        top:16rem;
+    }
+    #get a.rule{
+        top:18rem;
+    }
+}

@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--[if lt IE 9]>
+<script>
+    window.location.href='http://windows.microsoft.com/zh-CN/internet-explorer/download-ie';
+</script>
+<![endif]-->
+<!--public-->
+<link rel="stylesheet" href="css/public/global.css">
+<link rel="stylesheet" href="css/public/layout.css">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+

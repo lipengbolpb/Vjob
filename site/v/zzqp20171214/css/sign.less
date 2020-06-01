@@ -1,0 +1,284 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    .wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        background:url('../img/personal-bg.png') repeat top left;
+        background-size:100% auto;
+        .title{
+            width:100%;
+            position:absolute;
+            img{
+                width:45%;
+                position: absolute;
+                top: 1rem;
+                left: 27.5%;
+            }
+            p{
+                width:100%;
+                position: absolute;
+                top:3rem;
+                text-align: center;
+                font-size:0.7rem;
+                color: #9a1820;
+            }
+        }
+        .main{
+            width:100%;
+            margin-top: 6rem;
+            position: absolute;
+            display: none;
+            .success{
+                width: 82%;
+                position: absolute;
+                left: 12%;
+            }
+            p{
+                width:100%;
+                text-align:center;
+                color:#ff5237;
+                position: absolute;
+                top: 4rem;
+                font-size: 0.75rem;
+                font-weight: bold;
+            }
+            .ck{
+                width:50%;
+                height:2.2rem;
+                outline: none;
+                border: none;
+                position: absolute;
+                top: 12rem;
+                left:25%;
+                background: #f6bf62 url('../img/calender.png') no-repeat;
+                background-size:1rem auto;
+                background-position:1rem 50%;
+                border-radius:8px;
+                text-indent:1rem;
+                color:#ffffff;
+                font-size:0.7rem;
+            }
+        }
+        .every{
+            width:100%;
+            margin-top: 5rem;
+            position: absolute;
+            .bg{
+                width: 90%;
+                position: absolute;
+                top: 0;
+                left: 9%;
+            }
+            .bar{
+                width: 60%;
+                height: 1rem;
+                position: absolute;
+                top: 5rem;
+                left: 20%;
+                .progress{
+                    width:75%;
+                    height:12px;
+                    float: left;
+                    padding-right:3px;
+                    background-color: #a43a21;
+                    border-top-left-radius: 8px 50%;
+                    border-top-right-radius: 8px 50%;
+                    border-bottom-right-radius: 8px 50%;
+                    border-bottom-left-radius:8px 50%;
+                    .inner{
+                        width:33%;
+                        height:8px;
+                        margin-top:2px;
+                        margin-left:3px;
+                        background: url('../img/inner-bg.png') repeat top left;
+                        background-size:auto 100%;
+                        border-top-left-radius: 8px 50%;
+                        border-top-right-radius: 8px 50%;
+                        border-bottom-right-radius: 8px 50%;
+                        border-bottom-left-radius:8px 50%;
+                    }
+                }
+                .scale{
+                    font-size:16px;
+                    margin-top:-4px;
+                    float: right;
+                    color:#a43a21;
+                    margin-right:5%;
+                }
+            }
+            .sign{
+                width: 65%;
+                position: absolute;
+                top: 6.5rem;
+                left: 17.5%;
+                ul{
+                    width:100%;
+                    list-style: none;
+                    li{
+                        width:12%;
+                        float: left;
+                        font-size:12px;
+                        color:#a43a21;
+                        margin: 0 1%;
+                        p{
+                            width:100%;
+                            text-align:center;
+                        }
+                        .select{
+                            width: 0.9rem;
+                            height: 0.8rem;
+                            border: 4px solid #ffa900;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            img{
+                                width:120%;
+                                margin-left:15%;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom{
+                width: 40%;
+                position: absolute;
+                top: 9rem;
+                left: 30%;
+                .hb{
+                    width:100%;
+                }
+                .used{
+                    position: absolute;
+                    width: 40%;
+                    right: 10%;
+                    bottom: 12%;
+                }
+                .rough{
+                    width:100%;
+                    text-align:center;
+                    position: absolute;
+                    top: 3.5rem;
+                    font-size: 0.8rem;
+                    line-height:1.5rem;
+                    color:#f3ca92;
+                    display: none;
+                }
+                .complete{
+                    width: 100%;
+                    text-align: center;
+                    position: absolute;
+                    top: 4rem;
+                    font-size: 0.9rem;
+                    line-height: 1.5rem;
+                    color: #f3ca92;
+                    font-weight:bold;
+                    // display: none;
+                    #money{
+                        font-size:1.2rem;
+                    }
+                }
+                .notice{
+                    width:140%;
+                    text-align:center;
+                    position: absolute;
+                    top:8.5rem;
+                    left:-20%;
+                    color:#999999;
+                    font-size:0.5rem;
+                }
+            }
+        }
+        .copyright{
+            position: absolute;
+            bottom:10px;
+            font-size:12px;
+            color:#9a1820;
+            width:100%;
+            text-align:center;
+        }
+    }
+}

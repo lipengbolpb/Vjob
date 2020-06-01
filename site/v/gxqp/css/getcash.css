@@ -1,0 +1,110 @@
+html{
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	height: 100%;
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+@-webkit-keyframes change{
+ 	0%{
+		opacity: 1;
+ 	}
+ 	100%{
+		opacity: 0;
+ 	}
+ }
+ @-webkit-keyframes scroll{
+ 	0%{
+		-webkit-transform:rotateX(270deg);
+		opacity: 1;
+ 	}
+ 	
+ 	100%{
+		-webkit-transform:rotateX(360deg);
+		opacity: 1;
+ 	}
+ }
+.home {
+	width: 100%;
+	height: 100%;
+	-webkit-perspective: 2000px;
+}
+.home .bg {
+	width: 100%;
+	height: 100%;
+}
+.hbbg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hb {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0%;
+	top: -5%;
+}
+#hbHead {
+	width: 43%;
+	height: 10%;
+	position: absolute;
+	left: 29%;
+	top: 51%;
+	-webkit-transition: all 0.5s linear ;
+	-webkit-transform-origin: top; 
+}
+#hbHeadUp {
+	width: 43%;
+	height: 10%;
+	position: absolute;
+	left: 29%;
+	top: 42%;
+	opacity: 0;
+	-webkit-transform: rotateX(270deg);
+}
+#bi {
+	width: 18%;
+	height: 11.3%;
+	position: absolute;
+	top: 55%;
+	left: 43%;
+	-webkit-transition: all 1s linear ;
+	-webkit-transform-origin: 50%; 
+
+	/* 去除移动端点击事件出发边框 */
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);  
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);  
+	tap-highlight-color:rgba(0, 0, 0, 0); 
+}
+#cash {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.home:hover .bi {
+	-webkit-transform: rotateY(360deg);
+	-webkit-animation:change 1.2s linear both;
+} 
+.home:hover .hbHead {
+	-webkit-transform: rotateX(90deg);
+} 
+.home:hover .hbHeadUp {
+	-webkit-transform-origin: bottom;
+	-webkit-animation:scroll 0.5s linear 0.5s both;
+} 
+

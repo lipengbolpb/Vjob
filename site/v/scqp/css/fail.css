@@ -1,0 +1,109 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url('../img/fail_bg_2.png?v=1') no-repeat top left;
+    -webkit-background-size: 100%;
+    text-align: center;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+div.mask{
+    width:100%;
+    height:100%;
+    /* background-color: rgba(0,0,0,0.8);  */
+}
+div.wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	/* background-color: rgba(0,0,0,0.8); */
+}
+img.logo{
+    position:absolute;
+    width:6.5rem;
+    left:0.8rem;
+    top:0.6rem;
+}
+img.slogan{
+	display: block;
+	margin:1rem auto 0;
+	width: 13rem;
+}
+img.dish{
+	position:absolute;
+	width:75%;
+	top:11.5rem;
+	left:2rem;
+}
+img.code{
+	width: 12rem;
+	position:absolute;
+    top:15.5rem;
+    left:2rem;
+}
+img.notice{
+    width:13rem;
+    position:absolute;
+    top:13rem;
+    left:1.5rem;
+}
+img.cloud{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#contant{
+	position: absolute;
+    width: 62%;
+    top: 5.5rem;
+    left: 3.2rem;
+    z-index: 1;
+}
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:600;
+    background-color: aliceblue;
+}
+@media only screen and (max-height:540px) {
+    #contant{
+        width: 55%;
+        left: 3.6rem;
+    }
+}
+@media only screen and (max-height:440px){
+    #contant{
+        width: 52%;
+        left: 3.8rem;
+    }
+}
+
+.cash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: auto;
+	z-index:100 ;
+	display: none;
+}
+.cash img{
+	width: 100%;
+	height: 100%;
+}

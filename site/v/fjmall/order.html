@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css?v=1.0.4" />
+		<link rel="stylesheet" type="text/css" href="css/index.css?v=1.4.2" />
+
+	</head>
+	<body>
+		<div id="all-wrap">
+				<!--订单管理-->
+				<div id="order_page" style="display: block;">
+					<div class="scroll_box">
+						<div class="order_page_nav">
+							<p state="all">全部</p>
+							<p class="cur" state="send">待发货</p>
+							<p state="receive">已发货</p>
+							<p state="finish">已完成</p>
+						</div>
+						<div class="order-list">
+
+						</div>
+						<!-- <divclass="no-order-box"> -->
+						<img src="img/no-order.png" alt="" class="no-order-tip">
+						<!-- </div> -->
+					</div>
+				</div>
+				<!--订单管理End-->
+				<div class="screen">
+					<img src="img/screen.jpg" class="screen_pic" />
+				</div>
+
+				<div class="to-home-btn" style=""></div>
+				<!-- <div id="tab-box">
+				<div class="indexbtn">
+					<a id="indexbtn">商城</a>
+				</div>
+				<div class="shopcartbtn">
+					<i>0</i>
+					<a id="shopcartbtn">购物车</a>
+				</div>
+				<div class="personbtn">
+					<a id="personbtn">我的</a>
+				</div>
+			</div> -->
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/rem.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="js/router.js"></script>
+	<script src="js/order.js?v=1.2.6" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/screen.js?v=1.0.4" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// document.getElementById("indexbtn").addEventListener('click', function() {
+		// 	location.replace('http://'+location.host+'/v/fjmall/index.html#/index');
+		// }, false)
+		// document.getElementById("personbtn").addEventListener('click', function() {
+		// 	location.replace('http://'+location.host+'/v/fjmall/index.html#/person');
+		// }, false)
+		// document.getElementById("shopcartbtn").addEventListener('click', function() {
+		// 	location.replace('http://'+location.host+'/v/fjmall/index.html#/shopcart');
+		// }, false)
+		// $('.indexbtn').css('background-image', 'url(/v/fjmall/img/icon-index.png)');
+		// $('.indexbtn a').css('color', '#999');
+		// $('.personbtn').css('background-image', 'url(/v/fjmall/img/icon-person-selected.png)');
+		// $('.personbtn a').css('color', '#003e92');
+		// $('.shopcartbtn').css('background-image', 'url(/v/fjmall/img/icon-shopcart.png)');
+		// $('.shopcartbtn a').css('color', '#999');
+		//cookie Util
+		var cookieUtil = {
+			//添加cookie
+			setCookie: function(name, value, expires) {
+				var cookieText = encodeURIComponent(name) + "=" + encodeURIComponent(value) + ";path=/";
+				if (expires) {
+					var exp = new Date();
+					exp.setTime(exp.getTime() + expires*24*60*60*1000);
+					cookieText += "; expires=" + exp.toGMTString();
+				}
+				document.cookie = cookieText;
+			},
+			//获取cookie
+			getCookie: function(name) {
+				var cookieText = decodeURIComponent(document.cookie);
+				var cookieArr = cookieText.split("; ");
+				for (var i = 0; i < cookieArr.length; i++) {
+					var arr = cookieArr[i].split("=");
+					if (arr[0] == name) {
+						return arr[1];
+					}
+				}
+				return null;
+			},
+			//删除cookie
+			unsetCookie: function(name) {
+				document.cookie = encodeURIComponent(name) + "=; expires=" + new Date(0);
+			}
+		};
+		
+		var cartArr = cookieUtil.getCookie("car") ? JSON.parse(cookieUtil.getCookie("car")) : [];
+		$('.shopcartbtn i').html(cartArr.length);
+	</script>
+	<script type="text/javascript">
+		if(document.documentElement.clientHeight/document.documentElement.clientWidth>1.95){
+			$('html,body').css({'padding-bottom':'20px','box-sizing':'border-box','position':'relative','background':'#fff'});
+		}
+	</script>
+</html>

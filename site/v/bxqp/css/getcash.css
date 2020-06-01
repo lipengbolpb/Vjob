@@ -1,0 +1,322 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+input{
+	-webkit-tap-highlight-color: transparent;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+}
+
+
+#get{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background:url('../img/bg.png') no-repeat top left;
+	background-size:100% 100%;
+	-webkit-background-size:100% 100%;
+	display:none;
+	/* opacity:0; */
+}
+#get img{
+	position:absolute;
+}
+#get img.logo{
+	width:3rem;
+	top:1rem;
+	left:1rem;
+}
+#get img.slogan{
+	width:13rem;
+	top:3rem;
+	left:1.5rem;
+}
+#get img.hb{
+	width:10rem;
+	top:8.5rem;
+	left:3rem;
+	z-index: 1;
+}
+#get img.footer{
+	width:100%;
+	left: 0;
+	bottom:0;
+}
+#get img.beer{
+	width:25%;
+	bottom:0rem;
+	right:0rem;
+}
+
+#cash{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background:url('../img/cash_bg.png') no-repeat top left;
+	background-size:100% 100%;
+	-webkit-background-size:100% 100%;
+	display:none;
+}
+#cash img{
+	position:absolute;
+}
+#cash img.logo{
+	width:3rem;
+	top:1rem;
+	left:1rem;
+}
+#cash img.hb{
+	width:10rem;
+	top:3rem;
+	left:3rem;
+}
+#cash div.repcash{
+	width:100%;
+	position: absolute;
+	top:8rem;
+	z-index:1;
+	display:none;
+}
+#cash div.repcash img{
+	width: 70%;
+	position: absolute;
+	top:0;
+	left:15%;
+}
+#cash div.repcash p{
+	font-size:0.55rem;
+	color:#ffffff;
+	position: absolute;
+	top:4rem;
+}
+#cash p:nth-of-type(1){
+	width:100%;
+	color:#fff699;
+	font-size:1rem;
+	text-align:center;
+	position:absolute;
+	top:8.5rem;
+}
+#cash p:nth-of-type(2){
+	width:100%;
+	color:#fff699;
+	font-size:1rem;
+	font-weight:bold;
+	text-align:center;
+	position:absolute;
+	top:11rem;
+}
+#cash p:nth-of-type(2) span:nth-of-type(1){
+	font-size:1.2rem;
+	vertical-align: sub;
+}
+#cash p:nth-of-type(2) span:nth-of-type(2){
+	font-size:1.8rem;
+	vertical-align: sub;
+}
+#cash #btn{
+	width:7rem;
+	height:2rem;
+	border:none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color: #ffcc00;
+	position:absolute;
+	top:16rem;
+	left:4.5rem;
+	font-size:0.7rem;
+	color:#eb5718;
+}
+#cash p:nth-of-type(3){
+	width:100%;
+	text-align:center;
+	font-size:0.5rem;
+	color:#ffffff;
+	position:absolute;
+	top:19rem;
+	line-height:0.8rem;
+}
+#cash div.link{
+	width:40%;
+	position:absolute;
+	top:21rem;
+	left:30%;
+}
+#cash div.link a{
+	font-size:0.55rem;
+	color:#fff68f;
+	text-decoration:underline;
+}
+#cash div.link a:nth-of-type(1){
+	float:left;
+}
+#cash div.link a:nth-of-type(2){
+	float:right;
+}
+#cash img.footer{
+	width:100%;
+	bottom:0;
+}
+#cash img.beer{
+	width:23%;
+	bottom:0rem;
+	right:0rem;
+}
+#cash img.loading{
+	width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+#mask{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	display:none;
+}
+#mask img{
+	display:block;
+	width:80%;
+	position: absolute;
+	top:4rem;
+	left:1.6rem;
+}
+
+@media only screen and (max-height: 540px) and (min-width:360px) {
+    #cash #btn{
+    	top: 15.5rem;
+    }
+    #cash p:nth-of-type(3){
+    	top:18rem;
+    }
+    #cash div.link{
+    	top:19.8rem;
+    }
+    #cash img.beer{
+    	width:20%;
+    }
+}
+@media only screen and (max-height: 500px) and (min-width:320px) {
+	#cash #btn{
+    	top: 15.5rem;
+    }
+    #cash p:nth-of-type(3){
+    	top:18rem;
+    }
+    #cash div.link{
+    	top:19.8rem;
+    }
+    #cash img.beer{
+    	width:20%;
+    }
+}
+@media only screen and (max-height: 450px) and (min-width:320px) {
+	#cash div.repcash{
+		top:7rem;
+	}
+	#cash img.hb{
+		top:2.5rem;
+	}
+	#cash #btn{
+    	top: 15rem;
+    }
+    #cash p:nth-of-type(3){
+    	top:17.5rem;
+    }
+    #cash div.link{
+    	top:19.3rem;
+    }
+    #cash img.beer{
+    	width:18%;
+    }
+}
+@media only screen and (max-height: 520px) and (min-width:380px) {
+	#cash img.hb{
+		width:9rem;
+		left:3.5rem;
+		top:2rem;
+	}
+	#cash p:nth-of-type(1){
+		top:6.5rem;
+	}
+	#cash p:nth-of-type(2){
+		top:9rem;
+	}
+	#cash #btn{
+    	top: 13.5rem;
+    }
+    #cash p:nth-of-type(3){
+    	top:16rem;
+    	font-size:0.45rem;
+    }
+    #cash div.link{
+    	top:17.5rem;
+    }
+    #cash div.repcash{
+		top:6rem;
+	}
+	#mask img{
+    	width: 70%;
+    	top: 4rem;
+    	left: 2.4rem;
+    }
+}
+@media only screen and (max-height: 440px) and (min-width:320px) {
+	#cash img.hb{
+		width:9rem;
+		left:3.5rem;
+		top:1.5rem;
+	}
+	#cash p:nth-of-type(1){
+		top:6rem;
+	}
+	#cash p:nth-of-type(2){
+		top:8.5rem;
+	}
+	#cash #btn{
+    	top: 13rem;
+    }
+    #cash p:nth-of-type(3){
+    	top:15.5rem;
+    }
+    #cash div.link{
+    	top:17.5rem;
+    }
+    #mask img{
+    	width: 70%;
+    	top: 4rem;
+    	left: 2.4rem;
+    }
+    #get img.slogan{
+    	top:2rem;
+    }
+    #get img.hb{
+    	top: 7.5rem;
+    	width: 9rem;
+    	left: 3.5rem;
+    }
+}	

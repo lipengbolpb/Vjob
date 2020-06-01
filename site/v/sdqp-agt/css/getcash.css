@@ -1,0 +1,498 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+i,em{
+	font-style: normal;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+body{
+	background: url(../img/bg.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+/* 首页 */
+#get{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/bg.png) no-repeat center;
+	background-size: 100% 100%;
+	z-index: 1;
+	visibility: hidden;
+}
+#get .index{
+	width: 100%;
+	display: block;
+}
+#get .slogan{
+	width: 11.8rem;
+	display: block;
+	position: absolute;
+	left: 2.51rem;
+	top: 7.05rem;
+	z-index: 1;
+}
+#get .slogan.fly{
+	animation: fly 1s linear both;
+}
+@-webkit-keyframes fly{
+	0%{
+		width: 11.8rem;
+		top: 7.05rem;
+		left: 2.51rem;
+		opacity: 1;
+	}
+	99%{
+		opacity: 1;
+	}
+	100%{
+		width: 13.8rem;
+		top: -7.5rem;
+		left: 1.51rem;
+		opacity: 0;
+	}
+}
+#get .goldMedal_box{
+	width: 100%;
+	position: absolute;
+	top: 13rem;
+	left: 0;
+	transition: all 1s linear;
+}
+#get .goldMedal_box .goldMedal{
+	position: absolute;
+	top: 0;
+	left:2.45rem;
+	width: 10.4rem;
+    display: block;
+	transition: all 1s linear;
+}
+#get .goldMedal_box .light{
+	width: 5rem;
+    display: block;
+    position: absolute;
+    right: 3.2rem;
+    top: 3rem;
+	transform-origin: left 80%;
+}
+#get .goldMedal_box .light.ani{
+	animation: rotateLight .8s linear both;
+}
+@-webkit-keyframes rotateLight{
+	0%{
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+	80%{
+		transform: rotate(226deg);
+		opacity: .7;
+	}
+	100%{
+		transform: rotate(270deg);
+		opacity: 0;
+	}
+}
+.scale{
+	transform-origin: top;
+	transform: scaleY(.9);
+}
+
+/* 红包页面 */
+#cash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	visibility: hidden;
+}
+#cash img.logo{
+	width: 3.25rem;
+	display: block;
+	margin: .8rem 0 0 .8rem;
+}
+#cash .rule{
+	width: 2.625rem;
+	position: absolute;
+	right: 0;
+	top: .8rem;
+	z-index: 2;
+}
+#cash .coin{
+	width: 13.5rem;
+    margin: 6.5rem auto 0;
+    display: block;
+    transform: translateX(-.6rem);
+}
+#cash .money_box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform-style: preserve-3d;
+}
+
+#cash .totalMoney{
+	color: #fbc700;
+    font-size: .76rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    left: 0;
+    letter-spacing: .08rem;
+    text-align: center;
+}
+#cash .money_box .goldMedal{
+	width: 15.3rem;
+    display: block;
+    position: absolute;
+    left: 0rem;
+    top: -0.4rem;
+    perspective: 500px;
+    transform: rotateY(0deg);
+    /* backface-visibility: hidden; */
+    z-index: 1;
+}
+#cash .money_box .goldMedal.ani{
+	animation: rotate_1 .8s linear both;
+}
+#cash .money_box .goldMedal_cash{
+	width: 15rem;
+	display: block;
+	position: absolute;
+	left: .4rem;
+	top: 0;
+	perspective: 500;
+	transform:rotateY(180deg);
+	/* backface-visibility: hidden; */
+}
+#cash .money_box .goldMedal_cash.ani{
+	animation:rotate_2 .8s linear both;
+}
+@-webkit-keyframes rotate_1{
+	0%{
+		transform:rotateY(0);
+		opacity: 1;
+	}
+	49%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+		transform:rotateY(180deg);
+	}
+}
+@-webkit-keyframes rotate_2{
+	0%{
+		transform:rotateY(180deg);
+		opacity: 0;
+	}
+	49%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+		transform:rotateY(0deg);
+	}
+}
+#cash .money_box .coin_left{
+	position: absolute;
+	top: 13.9rem;
+	left: 1.8rem;
+	width: 3.6rem;
+	z-index: 1;
+}
+#cash .money_box .coin_right{
+	position: absolute;
+	top: 13.5rem;
+	right:3.2rem;
+	width: 3.9rem;
+}
+.money_vis{
+	position: absolute;
+	width: 100%;
+	top:7.5rem;
+	text-align: center;
+	height: 0;
+	overflow: hidden;
+	transition: all .5s linear;
+}
+#cash .money_box p.title{
+	font-size: .78rem;
+	color: #996600;
+}
+#cash .money_box p.money{
+	font-size: .8rem;
+	color: #cc3333;
+}
+#cash .money_box p.money span{
+	font-size: 2rem;
+	font-weight: bold;
+}
+#cash .btn{
+	width: 7.75rem;
+	height:2.25rem;
+	background-image:  url(../img/button_1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	margin: 1.45rem auto .5rem;
+}
+#cash .tip{
+	font-size: .472rem;
+	color: #cccc66;
+	text-align: center;
+	line-height: .6rem;
+}
+.hide{
+	opacity: 0;
+	transition: all .15s;
+}
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #b0b5c2;
+    font-size: 0.45rem;
+    z-index: 999;
+}
+
+.copyright a {
+    color: #d5d5d5;
+    font-size: 0.5rem;
+    text-decoration: underline !important;
+}
+/* 广告 */
+.active {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+    background: rgba(0,0,0,0.5);
+}
+
+.active img:nth-of-type(1) {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.active img:nth-of-type(2) {
+    width: 10%;
+    position: absolute;
+    top: 0.5rem;
+    right: 5%;
+}
+
+
+
+/* wineTravel */
+.travelMask{
+    position: absolute;
+    z-index:2;
+    background-color:rgba(0, 0, 0, 0.7);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;      
+}
+.wineTravel{
+    position: absolute;;
+    display:none;
+    width:12.95rem;
+    height:20.95rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:3;
+    background-image: url(../img/wineTravel/toast.png?v=1.0);
+    background-size:100% 100%;
+}
+.text{
+    position: absolute;
+    top: .8rem;
+    left: .5rem;
+    /* position:absolute;
+    top:1.1rem;
+    left:.75rem; */
+}
+.text img{
+    width:7rem;
+    height:2.6rem;
+}
+.textMask{
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    /* animation: wrapper-gradient 2s linear; */
+}
+.textMask img{
+    /* animation: img-gradient 2s linear; */
+}
+@keyframes wrapper-gradient {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+@keyframes img-gradient {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.wineTravel .botPart{
+    position: absolute;
+    top: 58%;
+    left:0;
+    width:100%;
+}
+
+.wineTravel .gzh{
+    padding-bottom:.8rem;
+}
+.wineTravel .gzh img{
+    position: relative;
+    width:4.2rem;
+    left: 34%;
+}
+.wineTravel .gzh div{
+    text-align: center;
+    font-size:.26rem;
+    color:#fff;
+}
+.wineTravel .tip{
+    font-size:.7rem;
+    color:#fff;
+    text-align:center;
+} 
+
+/* .wineTravel .btn{
+    position: fixed;
+    bottom:1.2rem;
+    width:100%;
+    text-align:center;
+}
+.travelBtn{
+    width:7.7rem;
+    height:1.5rem;
+} */
+.closeToast{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+}
+
+.traEntry{
+    position: absolute;
+    right: 1%;
+    top: 8%;
+    height: 4rem;
+}
+
+
+/* 城市酒王小程序入口 */
+div.alert_jw{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top:0%;
+	z-index: 10;
+	background: rgba(0,0,0,.8);
+	justify-content: center;
+	flex-direction: column;
+	display: none;
+}
+div.alert_jw img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	transform: translateX(4%);
+}
+div.alert_jw p{
+	width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: -40px;
+    margin: 0 auto;
+    z-index: 1;
+    right: -38%;
+}
+.toast_jw{
+	position: absolute;
+    top: 8%;
+}
+.icon_jw{
+	width: 20%;
+	position: absolute;
+	right: 2%;
+	top: 10%;
+	visibility: hidden;
+}
+/* 淘彩蛋 */
+div.taocd{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	background: rgba(0,0,0,.8);
+	display: none;
+}
+div.taocd img{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+div.taocd p{
+	position: absolute;
+	top: 20rem;
+	width: 2rem;
+	height: 2rem;
+	left: 50%;
+	margin-left: -1rem;
+}
+div.taocd input{
+	position: absolute;
+	top: 10rem;
+	left: 5rem;
+	z-index: -1;
+	border: 0;
+}

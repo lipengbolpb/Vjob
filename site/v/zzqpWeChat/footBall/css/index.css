@@ -1,0 +1,116 @@
+html, body {
+    -ms-touch-action: none;
+    background: #888888;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    height: 100%;
+}
+.user-box{
+	left:50%;
+    position: absolute;
+}
+.swap-img{
+	position:absolute;
+	left:50%;
+	margin-left:-21.666666666666616%;
+	top:18%;
+	display:none;
+}
+.call-box,.rule-box{
+	position:absolute;
+	left:50%;
+	top:0;
+	height:100vh;
+	background:rgba(0,0,0,0.5);
+	display:none;
+}
+.call-main{
+	width:91.48148148148149%;
+	height:0;
+	padding-bottom:96%;
+	margin: 20% auto 0;
+	position: relative;
+}
+.call-val-box{
+	float: right;
+    width: 38%;
+    border-radius: 10px;
+    background: #eee;
+    text-align: center;
+    height: 72%;
+    margin: 2.2% 0;
+}
+#callVal{
+	width: 88%;
+    height: 96%;
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+}
+.user-main{
+	position: absolute;
+    top: 17.5%;
+    width: 100%;
+	height: 20%;
+}
+.user-img-box{
+	width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+	position: absolute;
+    left: 8%;
+}
+.user-name-box{
+	position: absolute;
+    color: #e0b924;
+    left: 35%;
+    width: 30%;
+    font-size: 1.2rem;
+    top: 6.5%;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.user-points-box{
+	position: absolute;
+    color: #e0b924;
+    left: 35%;
+    width: 30%;
+    font-size: 1.2rem;
+    top: 60%;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.duihuan{
+	background: url(128.png) 50% 50%/100% no-repeat;
+    width: 14.58%;
+    height: 0;
+    padding-bottom: 8.91%;
+    position: absolute;
+    top: 29%;
+    left: 75%;
+}
+.call-btn{
+	background: url(122.png) 50% 50%/100% no-repeat;
+    width: 44.33%;
+    height: 0;
+    padding-bottom: 17.814%;
+    position: absolute;
+    top: 75%;
+    left: 27.835%;
+}
+.x_call1,.y_call1,.z_call1{background:url(123.png) 50% 50%/100% 100%;}
+.y_call1,.z_call1 { background:url(125.png) 50% 50%/100% 100%;}
+.x_call2,.y_call2,.z_call2{background:url(124.png) 50% 50%/100% 100%;}
+.y_call2,.z_call2 { background:url(126.png) 50% 50%/100% 100%;}
+.call-val-10{
+    float: right;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 2.8rem;
+}
+.closeRuleBtn{
+	position: absolute;
+    right: 0%;
+    top: 1.5%;
+}

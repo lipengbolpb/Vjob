@@ -1,0 +1,197 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+body{
+	background: url(../img/bg-repeat.png) repeat top left;
+	background-size: 2.2rem;
+}
+p,div,input,span{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#ck_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+#ck_box .title{
+	font-size: 1.38rem;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 2.2rem;
+}
+#ck_box .qd_tip{
+	color: #f4e288;
+	font-size: .61rem;
+}
+#ck_box .progress_box{
+	width: 100%;
+	overflow: hidden;
+	margin: .9rem auto;
+}
+#ck_box .progress_box .num{
+	font-size: .61rem;
+	color: #f4e288;
+}
+#ck_box .progress_box .progress{
+	width: 8.6rem;
+	height: .75rem;
+	margin: 0 auto;
+	border: 2px #fff solid;
+	border-radius: .6rem;
+	overflow: hidden;
+}
+#ck_box .progress_box .progress img{
+	display: block;
+	height: 100%;
+	width: 0%;
+}
+#ck_box .card_box{
+	width: 9.5rem;
+	height: 13rem;
+	margin: 0 auto 0;
+	position: relative;
+	background-image: url(../img/ac-alert-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	position: relative;
+	/*background: none;*/
+}
+.rotate{
+	transition: all 1s linear;
+	transform: rotateY(360deg);
+}
+#ck_box .card_box.fail{
+	background-image: url(../img/qiandao-fail.png);
+}
+#ck_box .card_box img{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+#ck_box .card_box .ck_tip{
+	font-size: .72rem;
+	color: #fff;
+	line-height: 1.65rem;
+	text-align: center;
+	position: absolute;
+	bottom: 1.2rem;
+	width: 100%;
+	/*display: none;*/
+}
+#ck_box>.tip{
+	font-size: .6rem;
+	text-align: center;
+	color: #fff;
+}
+#qd-alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.8);
+	position: absolute;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#qd-alert img.result{
+	width: 9.5rem;
+	display: block;
+	margin: 3rem auto 1rem;
+}
+#qd-alert i{
+	width: 1.5rem;
+	height: 1.5rem;
+	display: block;
+	margin: 0 auto;
+	background: url(../img/icon-close.png) no-repeat center;
+	background-size: 100%;
+}

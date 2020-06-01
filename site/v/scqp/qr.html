@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>青岛啤酒欢聚四川</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="/v/sdqp/css/qr.css?v=1.0.3" />   
+   <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: "微软雅黑", "Microsoft YaHei";
+        }
+
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none
+        }
+        /* 屏蔽苹果手机更改样式 */
+
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"],
+        input[type="tel"],
+        input[type="text"],
+        button,
+        textarea {
+            -webkit-appearance: none;
+        }
+
+        input[type="tel"],
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"],
+        input[type="tel"],
+        input[type="text"] {
+            outline: 0;
+            background-color: transparent;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            opacity: 1;
+            -webkit-opacity: 1;
+        }
+
+        /* img {
+            width: 10%;
+            margin-left: 45%;
+            margin-top: 56%;
+        } */
+
+        div.location {
+            width: 100%;
+            height: 100%;
+            background: url(/v/scqp/img/location.jpg?v=1) no-repeat top left;
+            background-size: 100% 100%;
+            overflow-x: hidden;
+            display: none;
+        }
+
+        div.fail {
+            width: 100%;
+            height: 100%;
+            background: url(/v/scqp/img/location_2.jpg?v=1) no-repeat top left;
+            background-size: 100% 100%;
+            overflow-x: hidden;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="location" id="location">
+    </div>
+    <div class="fail" id="fail">
+    </div>
+    <p id="info"></p>
+
+    <div id="toast" style="display: none;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast"></i>
+            <p class="weui_toast_content">已完成</p>
+        </div>
+    </div>
+
+    <div id="midAutumn">
+        <img src="/v/sdqp/imgMidAutumn/logo.png" class="midlogo">
+        <!-- 月亮 -->
+        <div id="moon_box">
+            <img src="/v/sdqp/imgMidAutumn/moon_1.png" class="moon_1">
+            <div class="moon_2_box">
+                <img src="/v/sdqp/imgMidAutumn/moon_2.png" class="moon_1">
+            </div>
+            <div class="moon_3_box">
+                <img src="/v/sdqp/imgMidAutumn/moon_3.png" class="moon_1">
+            </div>
+        </div>
+        <!-- 飞行员 -->
+        <div class="person_1_box">
+            <div class="foam_box">
+                <div class="foam_over">
+                    <img src="/v/sdqp/imgMidAutumn/foam_left.png" class="foam">
+                </div>
+            </div>
+            <img src="/v/sdqp/imgMidAutumn/person_left.png" class="person_1">
+        </div>
+        <div class="person_2_box">
+            <div class="foam_box">
+                <div class="foam_over">
+                    <img src="/v/sdqp/imgMidAutumn/foam_right.png" class="foam">
+                </div>
+            </div>
+            <img src="/v/sdqp/imgMidAutumn/person_right.png" class="person_2">
+        </div>
+        <img src="/v/sdqp/imgMidAutumn/rabbit_1.png" class="rabbit_1 rabbit">
+        <img src="/v/sdqp/imgMidAutumn/rabbit_2.png" class="rabbit_2 rabbit">
+        <img src="/v/sdqp/imgMidAutumn/rabbit_3.png" class="rabbit_3 rabbit">
+        <img src="/v/sdqp/imgMidAutumn/bottom.png" class="bottom">
+        <img src="/v/sdqp/imgMidAutumn/product.png" class="product">
+    </div>
+
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <div class="weui_loading">
+                <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+            </div>
+            <p class="weui_toast_content">数据加载中</p>
+        </div>
+    </div>
+</body>
+
+<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<!-- <script src="/static/js/jquery-2.2.4.min.js"></script> -->
+<!-- 84k -->
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=11.0.10"></script>
+<script src="/v/js/publictip.js?v=11"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/scqp/js/qr.js?v=13.7.38"></script>
+
+</html>

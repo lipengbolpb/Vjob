@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>青岛啤酒浙江省区</title>
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?4900a2217246623703b60ad534dc4461";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+ 	<link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2">
+ 	<link rel="stylesheet" type="text/css" href="/v/qpzj/css/cash.css?v=1.0.9">
+  </head>
+  <body>
+	<div id="mask">
+		<img src="/v/qpzj/img/alert_tip.png?v=1.0">
+	</div>
+	<div id="wrapper" style="height: 100%;">
+	  <div class="topbanner">
+		  <img src="/v/qpzj/img/zhang.png" class="repscan"/>
+		  <p class="time"></p>
+			<img src="/v/qpzj/img/bg_004.jpg">
+			<div class="moneybox">
+			  <p class="moneytip">恭喜你获得</p>
+			  <p class="moneynum"><span id="money"></span>元</p>
+			</div>
+	  </div>
+	  <div class="messagebox">
+		<img src="/v/qpzj/img/wish.png" id="message">
+		<p id="one_tip">温馨提示：<span id="tip_one">根据微信平台要求，红包金额累计大于等于1元后，即可提现</span></p>
+	  </div>
+	  <div id="progress_box">
+		<div id="btn_box">
+		  <p id="btn">再扫几个瓶盖攒够一元，即可发送红包</p>
+		</div>
+		<div class="pro_wrap">
+		  <div id="progress" style="width: 0%" ></div>
+		  <p id="ping" style="position:absolute; top:0px; left:0;"></p>
+		</div>
+		<div id="pointer" style="position:absolute; top:0px; left:-7%;">￥0.0</div>
+	  </div>
+	  <img src="/v/qpzj/img/game1.png" class="game1"/>
+	  <img src="/v/qpzj/img/game2.png" class="game2"/>
+	  <button id="bag_skip">查看我的红包</button>
+	  <div id="bottom">
+		<span id="rule">活动规则</span>
+		<span id="private">隐私说明</span>
+	  </div>
+	</div>
+	<script src="/static/js/vve/10core.js?v=2"></script>
+	<script src="/static/js/vve/11tool.js?v=2"></script>
+	<script src="/static/js/vve/20ajx.js?v=22"></script>
+	<script src="/v/js/cfg.js?v=23.2.2"></script>
+	<script src="/v/js/publictip.js?v=2"></script>
+	<script>
+	  var bot_fix=document.getElementById('bottom');
+	  var clientHeight = 0,clientWidth = 0;
+	  getClientHeight();
+	  function getClientHeight() {
+	      if (document.body.clientHeight && document.documentElement.clientHeight) {
+	          clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+	          clientWidth = (document.body.clientWidth < document.documentElement.clientWidth) ? document.body.clientWidth : document.documentElement.clientWidth;
+	      } else {
+	          clientHeight = (document.body.clientHeight > document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+	          clientWidth = (document.body.clientWidth > document.documentElement.clientWidth) ? document.body.clientWidth : document.documentElement.clientWidth;
+	      }
+	  }
+	  
+	  setTimeout(function  () {
+	      if (clientHeight-34<473) {//屏幕需要滚动
+	          bot_fix.style.position='relative';
+	          bot_fix.style.top=0;
+	      } else{
+	          bot_fix.style.position='relative';
+	          bot_fix.style.top=0;
+	      }
+	  },100);
+	</script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/qpzj/repcash.js?v=22.0"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<!--<script>
+      ini_wxshare(vge.qpzjappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+    <script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+/*签到按钮*/
+
+#sign_logo {
+    position: absolute;
+    right: .5rem;
+    top: .8rem;
+    height: 2.4rem;
+    width: 5rem;
+    background: url('../img/sign/sign_logo_2.png?v=1') no-repeat right;
+    -webkit-background-size: auto 100%;
+    display: none;
+    z-index: 1;
+}
+
+#sign_logo .light {
+    position: absolute;
+    right: -1rem;
+    bottom: -.5rem;
+    width: 3rem;
+    -webkit-animation: light 2s infinite;
+    visibility: hidden;
+}
+
+@-webkit-keyframes light {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+/* 混合签到红包 */
+
+.sign {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.sign .main {
+    width: 80%;
+    height: 100%;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.sign .bgTop {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign .bgMiddle {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign .bgBottom {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign .signCk {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign .main .mainTop {
+    width: 100%;
+    background: #ffffff;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.sign .main .signProgress {
+    width: 60%;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+.sign .signProgress .outter {
+    width: 100%;
+    height: 12px;
+    padding: 0 2px;
+    background: #a43a21;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sign .signProgress .inner {
+    width: 0%;
+    height: 8px;
+    background: url(../img/sign/progress-bg.png) repeat-x left top;
+    border-radius: 10px;
+    margin: 2px auto;
+    float: left;
+    transition: all 0.3s linear;
+}
+
+.sign .signProgress .progressTitle {
+    width: 35px;
+    height: 25px;
+    background: url(../img/sign/progress-title.png) no-repeat top left;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -27px;
+    left: -10%;
+    transition: all 0.3s linear;
+}
+
+.sign .signProgress .progressTitle p {
+    width: 100%;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #a43a21;
+}
+
+.sign .signContent {
+    width: 100%;
+    height: 7rem;
+    margin: 1rem auto 0;
+    position: relative;
+}
+
+.sign .signContent .signLeft {
+    width: 8%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.sign .signContent .signLeft img {
+    width: 100%;
+}
+
+.sign .signContent .signMiddle {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    margin-left: 0;
+    /* pointer-events: none; */
+}
+
+.sign .signContent .signMiddle .swiper {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.sign .signContent .signMiddle .signHb {
+    width: 35%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.sign .signContent .signMiddle .more {
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    display: none;
+    overflow: hidden;
+}
+
+.sign .signContent .signMiddle .more p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #f74435;
+    margin: 1rem auto 0;
+}
+
+.sign .signContent .signMiddle .more span {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f74435;
+}
+
+.sign .signContent .signMiddle .more span:nth-of-type(2) {
+    font-size: 2rem;
+}
+
+.sign .signContent .signMiddle .less {
+    width: 100%;
+    height: 7rem;
+    text-align: center;
+    /* display: none; */
+}
+
+.sign .signContent .signMiddle .less p:nth-of-type(1) {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #f74435;
+    /* margin: 1rem auto 0; */
+    margin: 0 auto 0;
+}
+
+.sign .signContent .signMiddle .less span {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f74435;
+}
+
+.sign .signContent .signMiddle .less span:nth-of-type(2) {
+    font-size: 2rem;
+}
+
+.sign .signContent .signMiddle .less input {
+    display: block;
+    width: 50%;
+    height: 1.8rem;
+    margin: 0.5rem auto 0;
+    color: #ffffff;
+    background: #f74435;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.sign .mainTop .signNotice {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem auto 0;
+    font-size: 0.5rem;
+    color: #999999;
+}
+
+.sign .signContent .signRight {
+    width: 8%;
+    /* height: 100%; */
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.sign .signContent .signRight img {
+    width: 100%;
+}
+
+.sign .main .mainBottom {
+    width: 100%;
+    background: #ffffff;
+    background-size: 100% auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sign .mainBottom .skuList {
+    width: 95%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-conten: space-between;
+    align-items: center;
+}
+
+.sign .mainBottom .detailsLeft {
+    width: 85%;
+    /* display: inline-block; */
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-conten: space-between;
+    align-items: center;
+}
+
+.sign .detailsLeft span {
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: #9e3702;
+}
+
+.sign .detailsLeft span:nth-of-type(1) {
+    width: 70%;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sign .detailsLeft img {
+    width: 10%;
+    vertical-align: middle;
+}
+
+.sign .detailsLeft .signTitleLeft {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.sign .detailsLeft .signTitleRight {
+    width: 11.5%;
+}
+
+.sign .detailsLeft span.signNum {
+    width: 25%;
+    /* font-size: 1.1rem; */
+    font-size: 0.8rem;
+    color: #fb5138;
+    margin-top: -0.2rem;
+}
+
+.sign .slider p.signNotice {
+    width: 100%;
+    text-align: center;
+    color: #802c00;
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.sign .mainBottom .detailsRight {
+    width: 20%;
+    display: inline-block;
+}
+
+.sign .detailsRight input {
+    float: right;
+    background: #ffbd11;
+    outline: none;
+    border: none;
+    border: 1px solid #8e1b00;
+    width: 100%;
+    height: 1.7rem;
+    font-weight: bold;
+    font-size: 0.55rem;
+    color: #8e1b00;
+    border-radius: 5px;
+}
+
+.sign .mainBottom .skuLine p {
+    width: 100%;
+    text-align: center;
+}
+
+.sign .skuLine {
+    height: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sign .skuLine .line {
+    display: inline-block;
+    width: 40%;
+    border-top: 1px solid #8e1b00;
+}
+
+.sign .skuLine .txt {
+    color: #8e1b00;
+    vertical-align: sub;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.sign .slider {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: #ffffff;
+    display: none;
+}
+
+.sign .signMask {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    display: none;
+    overflow: hidden;
+}
+
+.sign .signMask img {
+    /* height: 65%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    max-height: 120px;
+}
+
+.sign .signClose {
+    width: 10%;
+    position: absolute;
+    right: -5%;
+    top: 0.5rem;
+}
+
+.signRule {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #007835;
+    z-index: 2;
+    display: none;
+}
+
+.signRule .signInner {
+    width: 95%;
+    height: 96.5%;
+    background: url('../img/sign/rule_bg.png') repeat-y top left;
+    background-size: 100% auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.signRule .top {
+    width: 100%;
+}
+
+.signRule .back {
+    position: absolute;
+    width: 10%;
+    top: 0.5rem;
+    right: 5%;
+}
+
+.signRule .logo {
+    width: 25%;
+    display: block;
+    margin: 1rem auto;
+    position: static;
+}
+
+.signRule .content {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    color: #ffffff;
+    /* color: red; */
+    font-size: 0.6rem;
+    line-height: 1rem;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.signTotal{
+    color: #de0800;
+    font-size: 0.55rem;
+    text-align: center;
+    margin-top: -0.5rem;
+}

@@ -1,0 +1,562 @@
+
+
+#report-terminal .wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #2e2e2e;
+}
+
+div.header {
+    width: 65%;
+    height: 40px;
+    border: 1px solid #19b5fe;
+    margin: 30px auto 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+/* 头部两个按钮 */
+
+div.header #btn_box {
+    width: 50%;
+    height: 100%;
+    color: #98999a;
+    float: left;
+    background:  url('../img/header-box-selected.png') no-repeat 14px 53%;
+    background-size: 12px auto;
+    text-indent: 14px;
+    font-size: 14px;
+}
+
+div.header #btn_lid {
+    width: 50%;
+    height: 100%;
+    background: #2e2e2e;
+    color: #98999a;
+    float: right;
+    background: url('../img/header-lid.png') no-repeat 14px 53%;
+    background-size: 12px auto;
+    text-indent: 8px;
+    font-size: 14px;
+}
+
+/* 第一个表格 */
+
+#report-terminal .basicTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    /* margin-top: 2rem; */
+}
+
+#report-terminal .basic {
+    width: 90%;
+    margin: 0.5rem auto 0;
+    color: #ffffff;
+    font-size: 0.45rem;
+    text-align: center;
+    line-height: 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+#report-terminal .basic tr,
+#report-terminal td {
+    border: 1px solid #cbcbcb;
+}
+
+#report-terminal .basic tr:nth-of-type(1),
+#report-terminal .basic tr:nth-of-type(1) td {
+    border-top: none;
+}
+
+#report-terminal .basic tr:last-of-type,
+#report-terminal .basic tr:last-of-type td {
+    border-bottom: none;
+}
+
+#report-terminal .basic tr,
+#report-terminal .basic tr td:nth-of-type(1) {
+    border-left: none;
+}
+
+#report-terminal .basic tr,
+#report-terminal .basic tr td:last-of-type {
+    border-right: none;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td {
+    background: #19b5fe;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(1) {
+    background: #20ceb3;
+}
+
+#report-terminal .basic tr:nth-of-type(1) img {
+    margin-right: 0.2rem;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(1) img {
+    width: 0.5rem;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(2) img {
+    width: 0.5rem;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(3) img {
+    width: 0.5rem;
+}
+
+#report-terminal .basic tr td:nth-of-type(2),
+#report-terminal .basic tr td:nth-of-type(3) {
+    text-align: right;
+    padding-right: 0.2rem;
+}
+
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(2),
+#report-terminal .basic tr:nth-of-type(1) td:nth-of-type(3) {
+    text-align: center;
+}
+
+#report-terminal .basic tr td:nth-of-type(1) img {
+    width: 0.5rem;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+}
+
+#report-terminal .hidden {
+    display: none;
+}
+
+/* skulist */
+
+#report-terminal .skulistTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+#report-terminal .skulist {
+    width: 90%;
+    margin: 0.5rem auto 0;
+    color: #ffffff;
+    font-size: 0.45rem;
+    text-align: center;
+    line-height: 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+#report-terminal .skulist tr,
+#report-terminal td {
+    border: 1px solid #cbcbcb;
+}
+
+#report-terminal .skulist tr td:nth-of-type(1) {
+    width: 40%;
+}
+
+#report-terminal .skulist tr td:nth-of-type(2) {
+    width: 15%;
+}
+
+#report-terminal .skulist tr td:nth-of-type(3) {
+    width: 15%;
+}
+
+#report-terminal .skulist tr td:nth-of-type(4) {
+    width: 15%;
+}
+
+#report-terminal .skulist tr td:nth-of-type(5) {
+    width: 15%;
+}
+
+#report-terminal .skulist tr:nth-of-type(1),
+#report-terminal .skulist tr:nth-of-type(1) td {
+    border-top: none;
+}
+
+#report-terminal .skulist tr:last-of-type,
+#report-terminal .skulist tr:last-of-type td {
+    border-bottom: none;
+    line-height: 1rem;
+    padding: 5px;
+}
+
+#report-terminal .skulist tr,
+#report-terminal .skulist tr td:nth-of-type(1) {
+    border-left: none;
+}
+
+#report-terminal .skulist tr,
+#report-terminal .skulist tr td:last-of-type {
+    border-right: none;
+}
+
+#report-terminal .skulist tr:nth-of-type(1) td {
+    background: #19b5fe;
+}
+
+#report-terminal .skulist tr:nth-of-type(1) td:nth-of-type(1) {
+    background: #20ceb3;
+}
+
+#report-terminal .skulist tr td:nth-of-type(2),
+#report-terminal .skulist tr td:nth-of-type(3),
+#report-terminal .skulist tr td:nth-of-type(4),
+#report-terminal .skulist tr td:nth-of-type(5) {
+    text-align: right;
+    padding-right: 0.2rem;
+}
+
+#report-terminal .skulist tr:nth-of-type(1) td:nth-of-type(2),
+#report-terminal .skulist tr:nth-of-type(1) td:nth-of-type(3) {
+    text-align: center;
+}
+
+#report-terminal .skulist tr:nth-of-type(1) td {
+    text-align: center;
+    padding: 0;
+}
+
+/* 7天趋势图 */
+
+#report-terminal div.trend {
+    width: 100%;
+    margin: 8rem auto 2rem;
+    position: relative;
+}
+
+#report-terminal #trend {
+    width: 100%;
+    height: 20rem;
+}
+
+#report-terminal div.trend p.title {
+    width: 100%;
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.1rem;
+    position: absolute;
+    top: -5.5rem;
+}
+
+#report-terminal div.trend div.tool {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: -4rem;
+    background-color: #3e3e3e;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#report-terminal div.trend div.tool p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.45rem;
+    line-height: 1rem;
+    color: #ffffff;
+    margin-left: 5%;
+}
+
+#report-terminal div.trend div.tool p span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+#report-terminal div.trend div.tool p:nth-of-type(2) span {
+    background: #19b5fe;
+}
+
+#report-terminal div.trend div.tool p:nth-of-type(3) span {
+    background: #20ceb3;
+}
+
+#report-terminal div.trend div.tool p:nth-of-type(4) span {
+    background: #f7bc1e;
+}
+
+#report-terminal div.trend div.tool p:nth-of-type(5) span {
+    background: #ffffff;
+}
+
+#report-terminal div.trend div.tool p:nth-of-type(1) {
+    color: #999999;
+    padding-left: 7%;
+    background: url('../img/icon-date.png') no-repeat 0% 50%;
+    background-size: 0.6rem;
+    line-height: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 1px solid #656565;
+    width: 84%;
+}
+
+#report-terminal div.trend div.tool p:last-of-type {
+    margin-bottom: 0.2rem;
+}
+
+#report-terminal div.trend div.legend {
+    width: 40%;
+    position: absolute;
+    top: -1.5rem;
+    left: 5%;
+}
+
+#report-terminal div.trend div.legend p {
+    font-size: 0.5rem;
+    float: left;
+    width: 50%;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+#report-terminal div.trend div.legend p span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#report-terminal div.trend div.legend p:nth-of-type(1) span {
+    background: #19b5fe;
+}
+
+#report-terminal div.trend div.legend p:nth-of-type(2) span {
+    background: #20ceb3;
+}
+
+#report-terminal div.trend div.legend p:nth-of-type(3) span {
+    background: #fcd91d;
+}
+
+#report-terminal div.trend div.legend p:nth-of-type(4) span {
+    background: #ffffff;
+}
+
+/* 华丽的分割线 */
+
+#report-terminal img.line {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 二级区域排名 */
+
+#report-terminal .toolTipP {
+    color: #ffffff;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    text-align: left;
+    margin-left: 0.2rem;
+}
+
+#report-terminal .circle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#report-terminal .toolTipPIco {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+    /* padding-right: 10%; */
+}
+
+#report-terminal div.rank {
+    width: 100%;
+    margin: 5rem auto 0;
+    position: relative;
+}
+
+#report-terminal div.rank p.title {
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.7rem;
+    position: absolute;
+    top: -2rem;
+}
+
+#report-terminal #rank {
+    width: 100%;
+    height: 10rem;
+}
+
+#report-terminal p.subTitle {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    margin: 2rem auto;
+}
+
+#report-terminal .sub {
+    width: 90%;
+    margin: 1.25rem auto 2rem;
+    color: #ffffff;
+    font-size: 0.45rem;
+    text-align: center;
+    line-height: 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+#report-terminal .sub tr:nth-of-type(1) {
+    line-height: 0.8rem;
+    background: #20ceb3;
+    border-top: none;
+}
+
+#report-terminal .sub tr:nth-of-type(1) td {
+    padding: 0.5rem 0;
+    border-top: none;
+}
+
+#report-terminal .sub tr td:nth-of-type(1) {
+    width: 8%;
+}
+
+#report-terminal .sub tr td:nth-of-type(2) {
+    width: 20%;
+    padding: 5px;
+}
+
+#report-terminal .sub tr {
+    border-left: none;
+    border-right: none;
+    line-height: 0.8rem;
+}
+
+#report-terminal .sub tr td:nth-of-type(1),
+#report-terminal .sub tr td:last-of-type {
+    border-left: none;
+    border-right: none;
+}
+
+#report-terminal .sub tr td:nth-of-type(3),
+#report-terminal .sub tr td:nth-of-type(4),
+#report-terminal .sub tr td:nth-of-type(5),
+#report-terminal .sub tr td:nth-of-type(6) {
+    text-align: right;
+    padding-right: 1%;
+}
+
+#report-terminal .sub tr:last-of-type td:nth-of-type(1),
+#report-terminal .sub tr:last-of-type td:nth-of-type(2) {
+    border-right: none;
+    border-left: none;
+}
+
+#report-terminal .sub tr:last-of-type {
+    background: #19b5fe;
+    border-bottom: none;
+    line-height: 1rem;
+}
+
+#report-terminal .sub tr:last-of-type td {
+    border-bottom: none;
+}
+
+#report-terminal .sub tr:nth-of-type(1) td {
+    text-align: center;
+}
+
+/* 底部 */
+
+#report-terminal .footer {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+#report-terminal .footer div.plus {
+    float: left;
+    width: 50%;
+}
+
+#report-terminal .footer div.expect {
+    float: right;
+    width: 50%;
+    border-left: 1px solid #979797;
+    box-sizing: border-box;
+}
+
+#report-terminal .footer div img {
+    display: block;
+    height: 2rem;
+    margin: 1rem auto 0;
+}
+
+#report-terminal .footer div p:nth-of-type(1) {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#report-terminal .footer div:nth-of-type(1) p:nth-of-type(2) {
+    color: #20ceb3;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+#report-terminal .footer div:nth-of-type(2) p:nth-of-type(2) {
+    color: #19b5fe;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+/* 版权声明 */
+
+#report-terminal .copyright {
+    width: 100%;
+    font-size: 0.5rem;
+    color: #71757e;
+    text-align: center;
+    margin: 11rem auto 0.5rem;
+	padding-bottom: env(safe-area-inset-bottom);
+}

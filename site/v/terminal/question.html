@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>调查问卷</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js"></script>
+		<style type="text/css">
+			/* 屏蔽苹果手机更改样式 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			input[type="tel"],
+			input[type="text"],
+			button,
+			textarea {
+				-webkit-appearance: none;
+			}
+			
+			input[type="tel"],
+			input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			input[type="tel"],
+			input[type="text"] {
+				outline: 0;
+				background-color: transparent;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				opacity: 1;
+				-webkit-opacity: 1;
+			}
+			
+			.question_box {
+				width: 100%;
+				height: 100%;
+				overflow-x: hidden;
+				position: fixed;
+				z-index: 1000;
+				font-size: .25rem;
+				color: #000000;
+				line-height: 1.2em;
+				/*display: none;*/
+			}
+			
+			#questionnaire {
+				overflow: hidden;
+				-webkit-background-size: 100% auto;
+				width: 800%;
+			}
+			
+			#questionnaire div._box {
+				padding: .1rem .4rem;
+				width: 12%;
+				margin: 0 auto;
+				float: left;
+				-webkit-box-sizing: border-box;
+			}
+			
+			#questionnaire div._box textarea {
+				width: 95%;
+				height: 1rem;
+				resize: none;
+				border: 1px #ccc dashed;
+			}
+			
+			#questionnaire div._box p {
+				margin: .1rem 0;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			
+			#questionnaire div._box p label {
+				height: .4rem;
+    			display: block;
+			}
+			
+			#questionnaire div._box p.title {
+				line-height: 1.2em;
+			}
+			
+			#questionnaire div._box p.title b {
+				float: left;
+			}
+			
+			#questionnaire div._box p input {
+				opacity: 0;
+				width: .3rem;
+				float: left;
+			}
+			
+			#questionnaire div._box p i {
+				width: .3rem;
+				height: .3rem;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-repeat: no-repeat;
+				background-position: center;
+				/*background-image:url(img/check.png) ;*/
+				background-image: none;
+				-webkit-background-size: 100%;
+				z-index: 1;
+			}
+			
+			#questionnaire div._box p em {
+				width: .25rem;
+				height: .25rem;
+				position: absolute;
+				left: .025rem;
+				top: .025rem;
+				border: 1px #ccc solid;
+			}
+			
+			#questionnaire div._box p span {
+				display: inline-block;
+				width: 80%;
+			}
+			
+			#qus_btn {
+				width: 2rem;
+				height: .7rem;
+				font-size: .3rem;
+				display: block;
+				margin: .5rem auto 1rem;
+				background: #0ddbc7;
+				color: #fff;
+				-webkit-border-radius: 5px;
+				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+				-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+				-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+				-o-tap-highlight-color:rgba(0, 0, 0, 0);
+				tap-highlight-color:rgba(0, 0, 0, 0);
+			}
+			#title{
+			    text-align: left;
+			    font-size: .3rem;
+			    font-weight: bold;
+			    line-height: 2em;
+			    padding-left: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="question_box">
+			<p id="title" style="text-align: center;padding: 0;">答题完毕，红包到账！<span id="current" style="color: dodgerblue;"></span>/<span id="max"></span></p>
+			<div id="questionnaire">
+				
+			</div>
+			<input type="button" name="qus_btn" id="qus_btn" value="下一步" style="display: none;"/>
+		</div>
+
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+    <script src="/static/js/vve/11tool.js"></script>
+    <script src="/static/js/vve/12event.js"></script>
+    <script src="/static/js/vve/20ajx.js"></script>
+    <script src="/v/js/cfg.js?v=1.2.4"></script>
+    <script src="/v/js/publictip.js?v=1.0.1"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v=1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/question.js?v=1.1.8" type="text/javascript" charset="utf-8"></script>
+</html>

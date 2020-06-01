@@ -1,0 +1,580 @@
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1
+    /*兼容IE */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    background: #030b1d url('../img/personal-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.fail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.wrap .audio {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 8%;
+    z-index: 999;
+}
+
+@-webkit-keyframes bgm-round {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+.running {
+    animation: bgm-round 3s linear infinite forwards;
+    -webkit-animation: bgm-round 3s linear infinite forwards;
+}
+
+.header {
+    width: 100%;
+    min-height: 4rem;
+    margin: 1rem auto 0;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+}
+
+.sloganBox {
+    width: 65%;
+    height: 3rem;
+    float: left;
+    margin-left: 5%;
+    position: relative;
+}
+
+.slogan {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@-webkit-keyframes lightRuning {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 80%;
+    }
+}
+
+.light {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    animation: lightRuning 1.5s linear infinite;
+    -webkit-animation: lightRuning 1.5s linear infinite;
+}
+
+@-webkit-keyframes bling {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.star {
+    width: 60%;
+    height: 6rem;
+    position: absolute;
+    top: -6rem;
+    left: 20%;
+    z-index: -1;
+    animation: bling 1s linear infinite;
+    -webkit-animation: bling 1s linear infinite;
+}
+
+.main {
+    width: 80%;
+    min-height: 6.5rem;
+    margin: 0.5rem auto 0;
+    background: url('../img/prize-content-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.prize {
+    width: 85%;
+    min-height: 6.5rem;
+    position: relative;
+    margin: 1rem auto 0;
+    display: none;
+}
+
+.prize img:nth-of-type(1) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prize img:nth-of-type(2) {
+    width: 40%;
+    position: absolute;
+    top: 0.5rem;
+    left: -3%;
+}
+
+.prize img:nth-of-type(3) {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    display: none;
+}
+
+.prize p {
+    text-align: left;
+    color: #fff600;
+    position: absolute;
+    width: 100%;
+    margin: 0 40%;
+}
+
+.prize p:nth-of-type(1) {
+    top: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.prize p:nth-of-type(2) {
+    top: 1.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.prize a {
+    width: 100%;
+    display: block;
+    text-align: left;
+    position: absolute;
+    top: 3.8rem;
+    left: 40%;
+    font-size: 0.55rem;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@-webkit-keyframes shake {
+    0% {
+        /* transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform-origin: 60% 10%;
+        -webkit-transform-origin: 60% 10%; */
+        transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+    }
+    50% {
+        /* transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform-origin: 60% 10%;
+        -webkit-transform-origin: 60% 10%; */
+        transform: rotateZ(30deg);
+        -webkit-transform: rotateZ(30deg);
+    }
+    100% {
+        /* transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform-origin: 60% 10%;
+        -webkit-transform-origin: 60% 10%; */
+        transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+    }
+}
+
+div.main img.beer {
+    position: absolute;
+    display: block;
+    width: 15%;
+    top: 25%;
+    left: 10%;
+    /* transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%); */
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    animation: shake 1s linear infinite;
+    -webkit-animation: shake 1s linear infinite;
+}
+
+.main p {
+    width: 100%;
+    color: #fff600;
+    text-align: left;
+    font-weight: bold;
+}
+
+.main p:nth-of-type(1) {
+    font-size: 0.75rem;
+    margin: 1.5rem 0 0 35%;
+}
+
+.main p:nth-of-type(2) {
+    font-size: 0.8rem;
+    margin: 0 0 1rem 35%;
+}
+
+.main p:nth-of-type(2) span:nth-of-type(1) {
+    font-size: 2rem;
+}
+
+.btns {
+    width: 80%;
+    margin: 1rem auto 0;
+}
+
+.btns .mall,
+.personal {
+    width: 100%;
+    height: 2.2rem;
+    margin: 1rem auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@-webkit-keyframes flexible {
+    0% {
+        width: 22%;
+    }
+    50% {
+        width: 17%;
+    }
+    100% {
+        width: 22%;
+    }
+}
+
+.btns .wingLeft,
+.wingRight {
+    display: block;
+    width: 22%;
+    height: 1.8rem;
+    animation: flexible 1.5s linear infinite;
+    -webkit-animation: flexible 1.5s linear infinite;
+}
+
+.btns .mallBtn,
+.personalBtn {
+    width: 50%;
+    height: 2.2rem;
+    background: url(../img/btn-border.png) no-repeat top left;
+    background-size: 100% 100%;
+    margin: 0 2%;
+    position: relative;
+}
+
+@-webkit-keyframes moveToLeft {
+    0% {
+        left: 15%;
+    }
+    50% {
+        left: 5%;
+    }
+    100% {
+        left: 15%;
+    }
+}
+
+@-webkit-keyframes moveToRight {
+    0% {
+        left: 15%;
+    }
+    50% {
+        left: 20%;
+    }
+    100% {
+        left: 15%;
+    }
+}
+
+.btnTop {
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: 15%;
+    animation: moveToLeft 1.5s linear infinite;
+    -webkit-animation: moveToLeft 1.5s linear infinite;
+}
+
+.btnBottom {
+    position: absolute;
+    width: 65%;
+    bottom: 0;
+    left: 15%;
+    animation: moveToRight 1.5s linear infinite;
+    -webkit-animation: moveToRight 1.5s linear infinite;
+}
+
+.mallTitle {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.personalTitle {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ufo {
+    width: 50%;
+    position: absolute;
+    bottom: 1rem;
+    left: 25%;
+    pointer-events: none;
+}
+
+.ufo .ufoTop {
+    width: 60%;
+    position: absolute;
+    top: -4.5rem;
+    left: 20%;
+    transform-origin: 80% 0%;
+}
+
+@-webkit-keyframes lightAnimate {
+    0% {
+        height: 7rem;
+    }
+    50% {
+        height: 4rem;
+    }
+    100% {
+        height: 7rem;
+    }
+}
+
+.ufo .ufoLight {
+    width: 50%;
+    height: 7rem;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.ufo .ufoBottom {
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+.fail .failContent {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5rem auto 0;
+}
+
+.fail .failTip {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 1.5rem auto 0;
+}
+
+.fail .failUfo {
+    width: 30%;
+    position: absolute;
+    bottom: 1rem;
+    left: 35%;
+}
+
+.fail .failClose {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    display: none;
+}
+
+#batch {
+    position: absolute;
+    bottom: 0.5rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: aliceblue;
+}
+
+@media only screen and (min-aspect-ratio:320/500) {
+    .main {
+        margin: 0.2rem auto 0;
+        min-height: 5.5rem;
+    }
+    .btns {
+        margin: 0 auto;
+    }
+    .btns .mall,
+    .personal {
+        height: 1.5rem;
+    }
+    .header {
+        margin: 1rem auto 0;
+    }
+    .prize {
+        min-height: 5rem;
+        margin: 0.5rem auto 0;
+    }
+}
+
+@media only screen and (min-aspect-ratio:320/460) {
+    .main {
+        margin: 0 auto 0;
+        min-height: 4rem;
+    }
+}
+
+/*加载中秋动画的备用盒子*/
+#midAutumn_box{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+	background: #fff;
+}

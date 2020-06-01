@@ -1,0 +1,313 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+    font-family: "微软雅黑","Microsoft YaHei";
+    background-color:#125b2a;
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+ul,li{
+	list-style: none;
+}
+
+@-webkit-keyframes active{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+div.control{
+	width:1.5rem;
+	height:1.5rem;
+	position:absolute;
+	top:0.5rem;
+	right:0.5rem;
+	z-index:999;
+}
+div.control img{
+	width:100%;
+}
+.active{
+	animation:active 1.5s linear infinite;
+}
+
+div.wrap{
+    width:90%;
+    height:94%;
+    border-radius:10px;
+    background:url('../img/bg.png') no-repeat top left;
+    background-size:100% 100%;
+    display: block;
+    margin:5% auto;
+    overflow: hidden;
+    position: relative;
+}
+
+div.banner{
+	width:100%;
+	height:15rem;
+	position:relative;
+}
+div.banner img.slogan{
+    width:85%;
+    display: block;
+    margin:1rem auto 0;
+}
+@-webkit-keyframes rock{
+	0%{
+		transform:rotate(10deg);
+	}
+	8%{
+		transform:rotate(-15deg);
+	}
+	16%{
+		transform:rotate(35deg);
+	}
+	24%{
+		transform:rotate(-15deg);
+	}
+	32%{
+		transform:rotate(35deg);
+	}
+	40%{
+		transform:rotate(10deg);
+	}
+	100%{
+		transform:rotate(10deg);
+	}
+}
+div.banner img.rock{
+	transform:rotate(10deg);
+	width:30%;
+	top:8rem;
+	left:60%;
+    animation:rock 2s linear infinite;
+    position: absolute;
+}
+
+div.charge{
+    width:100%;
+	height:12rem;
+	position: absolute;
+    bottom:0;
+}
+div.charge input{
+    width:45%;
+    height:3rem;
+    display: block;
+    margin:1rem auto 0;
+    border:none;
+    outline: none;
+}
+div.charge input.three{
+    background: url('../img/three.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+div.charge input.five{
+    margin:2rem auto 0;
+    background: url('../img/five.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+@-webkit-keyframes game{
+	0%{
+		transform: rotate(0deg) translate(0,0%);
+	}
+	10%{
+		transform: rotate(0deg) translate(0,-10%);
+	}
+	25%{
+		transform: rotate(40deg) translate(0,-10%);
+	}
+	40%{
+		transform: rotate(-40deg) translate(0,-10%);
+	}
+	55%{
+		transform: rotate(40deg) translate(0,-10%);
+	}
+	70%{
+		transform: rotate(-40deg) translate(0,-10%);
+	}
+	85%{
+		transform: rotate(40deg) translate(0,-10%);
+	}
+	100%{
+		transform: rotate(0deg) translate(0,0%);
+	}
+}
+div.game{
+	width:100%;
+	height:12rem;
+	position: absolute;
+	bottom:0;
+    transform-origin:50% 40%;
+    display: none;
+}
+.gamemove{
+	animation:game 1s linear both;
+}
+div.game img.base{
+	display:block;
+	width:80%;
+	margin:3rem auto 0;
+}
+@-webkit-keyframes cover{
+	0%{
+		transform: rotate(-70deg) translate(0%,0%);
+	}
+	45%,100%{
+		transform: rotate(0deg) translate(140.5%,22.5%);
+	}
+}
+div.game img.cover{
+	width: 71%;
+    position: absolute;
+    top: -4.2rem;
+    left: -85%;
+    transform: rotate(-70deg);
+    transform-origin:35% 40%;
+}
+.coverRotate{
+	animation:cover 1.4s linear alternate 2;
+}
+div.game img.dice1{
+	width: 20%;
+    position: absolute;
+    top: 2.8rem;
+    left: 30%;
+}
+div.game img.dice2{
+	width: 20%;
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+}
+div.game img.dice3{
+	width: 20%;
+    position: absolute;
+    top: 4.8rem;
+    left: 21%;
+}
+div.game img.dice4{
+	width: 20%;
+    position: absolute;
+    top: 5rem;
+    left: 40%;
+}
+div.game img.dice5{
+	width: 19%;
+    position: absolute;
+    top: 4.8rem;
+    left: 60%;
+}
+
+div.game img.dice6{
+	width: 20%;
+    position: absolute;
+    top: 2.8rem;
+    left: 40%;
+}
+div.game img.dice7{
+    width: 20%;
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+}
+div.game img.dice8{
+    width: 20%;
+    position: absolute;
+    top: 4.7rem;
+    left: 30%;
+}
+
+#three{
+    display: none;
+}
+#five{
+    display: none;
+}
+img.back{
+    width: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+div.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color:rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    display: none;
+}
+div.mask #res3{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    display: none;
+}
+div.mask #res5{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    display: none;
+}
+div.mask img{
+    width:20%;
+    margin: 0 2%;
+}
+div.mask div{
+    text-align: center;
+}
+div.mask #btn{
+    width:40%;
+    height: 2.5rem;
+    margin:18rem auto 0;
+    background: url('../img/btn.png') no-repeat top left;
+    background-size: 100% 100%;
+    border:none;
+    display: block;
+    position: relative;
+}
+
+@media only screen and (max-height:520px) and (min-width:360px) {
+	div.banner img.rock{
+		top: 7.5rem;
+	}
+}
+@media only screen and (max-height:550px) and (min-width:380px) {
+	div.banner img.rock{
+		top: 7.5rem;
+	}
+	div.banner{
+		top:-1rem;
+	}
+}
+@media only screen and (max-height:450px) and (min-width:320px) {
+	div.banner img.rock{
+		top: 7.5rem;
+	}
+	div.banner{
+		top:-1rem;
+	}
+	div.game{
+		bottom:-1rem;
+	}
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>充值记录</title>
+ 	<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/cash_record.css">
+  </head>
+  <body>
+	<ol id="all_notes">
+	  <li class="month_box">
+		<div class="month_all">
+		  <p>2015年9月</p>
+		  <p>充值：<span>120.00</span>元</p>
+		</div>
+		<ul class="month_notes">
+		  <li>
+			<div>
+			  <p>充值订单：<span>CT201607061234567890</span></p>
+			  <p>3月22日 18:23</p>
+			</div>
+			<div>
+			  <p>￥20.0</p>
+			  <p class="cash_ing">充值中</p>
+			</div>
+		  </li>
+		  <li>
+			<div>
+			  <p>充值订单：<span>CT201607061234567890</span></p>
+			  <p>3月22日 18:23</p>
+			</div>
+			<div>
+			  <p>￥20.0</p>
+			  <p class="cash_suc">充值成功</p>
+			</div>
+		  </li>
+		  <li>
+			<div>
+			  <p>充值订单：<span>CT201607061234567890</span></p>
+			  <p>3月22日 18:23</p>
+			</div>
+			<div>
+			  <p>￥20.0</p>
+			  <p class="cash_fail">充值失败</p>
+			</div>
+		  </li>
+		  <li>
+			<div>
+			  <p>充值订单：<span>CT201607061234567890</span></p>
+			  <p>3月22日 18:23</p>
+			</div>
+			<div>
+			  <p>￥30.0</p>
+			  <p class="cash_suc">充值成功</p>
+			</div>
+		  </li>
+		  <li>
+			<div>
+			  <p>充值订单：<span>CT201607061234567890</span></p>
+			  <p>3月22日 18:23</p>
+			</div>
+			<div>
+			  <p>￥50.0</p>
+			  <p class="cash_suc">充值成功</p>
+			</div>
+		  </li>
+		</ul>
+	  </li>
+	</ol>
+	<p id="more">点击查看更多</p>
+
+    <div id="toast" style="display: none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">已完成</p>
+      </div>
+    </div>
+    
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <div class="weui_loading">
+          <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+      </div>
+    </div>
+        
+    <script src="/v/liby/js/jquery-1.8.3.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=4"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+	<script src="/v/liby/js/charge_record.js?v=7"></script>
+  </body>
+</html>

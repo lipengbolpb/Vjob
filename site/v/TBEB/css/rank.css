@@ -1,0 +1,153 @@
+@charset "utf-8";
+html,body,img,p,a,span,input,ul,li{
+	margin: 0;
+	padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+ul,li{
+	list-style: none;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fed40c;
+	font-family: "微软雅黑";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+.title{
+	display: block;
+	margin: 1rem auto 0;
+	width: 14rem;
+}
+div.rank_box{
+	height:9rem;
+	width: 11.1rem;
+	padding: .8rem .9rem 2.5rem 1rem;
+	background: url(../images/rank_bg.png) no-repeat top;
+	-webkit-background-size:auto 100% ;
+	margin: 0.1rem auto 0;
+	overflow: hidden;
+	position: relative;
+}
+div.rank_box ul{
+	margin:0rem auto 0;
+	width: 10.8rem;
+	height: 8.8rem;
+	overflow-x: hidden;
+	position: relative;
+	left: .1rem;
+	-webkit-overflow-scrolling : touch;
+}
+div.rank_box ul li{
+	height: 2rem;
+	padding-top: .25rem;
+	background: #fed40c;
+	overflow: hidden;
+}
+div.rank_box ul li:nth-of-type(odd){
+	background: #feb403;
+}
+div.rank_box ul li:nth-of-type(even){
+	background: #fed40c;
+}
+div.rank_box ul li:nth-of-type(11){
+	border-top: 1px #000 dashed;
+}
+div.rank_box ul li .l{
+	float: left;
+}
+div.rank_box ul li .r{
+	float: right;
+}
+div.rank_box ul li img{
+	height: 1.3rem;
+	width: 1.3rem;
+	margin: .25rem;
+	-webkit-border-radius: 50%;
+	display: block;
+}
+div.rank_box ul li div.jwmsg{
+	height: 1.8rem;
+	width: 5rem;
+	overflow: hidden;
+}
+div.rank_box ul li div.jwmsg p{
+	height: 0.9rem;
+	line-height: .9rem;
+	text-align: left;
+}
+div.rank_box ul li div.jwmsg p.nickname{
+	color: #000;
+	display: block;
+	font-size: .6rem;
+	width: 5rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+div.rank_box ul li div.jwmsg p.ranks{
+	color: #9b6804;
+	font-size: .5rem;
+	padding-left: .6rem;
+	background: url(../images/rank_1.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank_box ul li:nth-of-type(2) div.jwmsg p.ranks{
+	background: url(../images/rank_2.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank_box ul li:nth-of-type(3) div.jwmsg p.ranks{
+	background: url(../images/rank_3.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank_box ul li:nth-of-type(4) div.jwmsg p.ranks{
+	background:none;
+}
+div.rank_box ul li span.rankNum{
+	font-size: .5rem;
+	color: #000;
+	margin-right: .3rem;
+	line-height: 1.8rem;
+}
+div.rank_box ul li span.rankNum i{
+	color: #7e4901;
+	font-size: .8rem;
+}
+div.rank_box .tip{
+	text-align: center;
+	font-size: .5rem;
+	color: #000;
+	line-height: 1.2rem;
+}
+.back{
+	width: 6rem;
+	height: 2.1rem;
+	background: url(../images/back.png) no-repeat center;
+	-webkit-background-size: 100%;
+	margin: 0.5rem auto;
+	display: block;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+@media only screen and (max-height: 519px){
+	.title,.rank_box{
+		-webkit-transform-origin: top;
+		-webkit-transform: scaleY(.9);
+	}
+	div.rank_box{
+		margin: -.5rem auto;
+	}
+	.back{
+		margin: -1rem auto;
+	}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<script src="/v/gxqp201703/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/v/gxqp201703/css/prize.css?v=1.0.0"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?75cd71d976264f5d5c9fed96c4f5da77";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<img src="/v/gxqp201703/img/prize-t.png"/>
+		</div>
+		<div class="msg">
+			<p class="tip"><span class="icon">温馨提示：</span>填写您的姓名和身份证信息，点击“提交”后拨打0771-3806691核实身份</p>
+			<div class="msg_box">
+				<div class="user_box box">
+					<input type="text" name="user" id="user" value="" placeholder="您的姓名" maxlength="8"/>
+				</div>
+				<div class="idcard_box box" style="display:none;">
+					<input type="text" name="idcard" id="idcard" value="" placeholder="输入身份证号" maxlength="18"/>
+				</div>
+				<div class="tel_box box">
+					<input type="text" name="tel" id="tel" value="" placeholder="输入手机号" maxlength="11"/>
+				</div>
+			</div>
+			<input type="button" name="btn" id="btn" value="提交" class="tj"/>
+			<p class="tip2">温馨提示：中奖者需提供完整的中奖瓶盖及中奖产品空瓶，以及个人身份证复印件供我公司或我公司委托的第三方核实确认</p>
+			<p class="rule_box">
+				<a id="private" href="javascript:;">隐私说明</a>
+				<a id="rule" href="javascript:;">活动规则</a>
+			</p>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=11"></script>
+	<script src="/static/js/vve/11tool.js?v=11"></script>
+	<script src="/static/js/vve/20ajx.js?v=12"></script>
+	<script src="/v/js/cfg.js?v=12" type="text/javascript" charset="utf-8"></script>
+  	<script src="/v/js/publictip.js?v13"></script>
+  	<script src="/static/js/vve/idcard.js?v6"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/gxqp201703/js/prize.js?v=11.1.0" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v13"></script>
+	<script>
+		// 隐藏微信右上角菜单
+		wx.ready(function() {
+			wx.hideOptionMenu();
+		});
+		var height = document.documentElement.clientHeight || document.body.clientHeight;
+		if (height !== "undefined"){
+			document.getElementsByTagName("body")[0].style.height = height + "px";
+		}
+	</script>
+</html>

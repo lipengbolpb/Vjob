@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒东南营销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?1.1.7"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?83f9ea786770450ffc9c3f1550f206b0";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="wxmark" id="alert">
+			<img src="img/alert.png"/>
+			<input type="button" name="close" id="close" value="我知道啦~" />
+		</div>
+		<div class="tj_mark">
+			<p id="lj_tip"></p>
+		</div>
+		<div class="cash">
+			<img src="img/logo.png" class="logo"/>
+			<img src="img/slogan.png" class="slogan"/>
+			<div class="msg">
+				<div id="jwbtn">
+					<img src="img/jw_bottle.png" class="bottle"/>
+				</div>
+				<p class="title">共喝青岛啤酒</p>
+				<p class="num"></p>
+				<div style="display: inline-block;text-align: left;" class="msg_box"><p class="balance">账户余额：<span id="dom_balance"></span><span class="r">元</span></p><p class="sent">已领红包：<span id="add_money"></span><span class="r">元</span></p></div>
+				<div class="btn_box">
+					<input type="button" name="" id="details" value="查看详细记录" />
+					<input type="button" name="" id="tx" value="立即提现"/>
+				</div>
+			</div>
+			<img src="img/bottom_coin.png" class="bt_1"/>
+			<img src="img/bottom_bg.png" class="bt_2"/>
+			<img src="img/fly.png" class="fly fly_1"/>
+			<img src="img/fly.png" class="fly fly_2"/>
+		</div>
+		<div class="rank">
+			<img src="img/logo.png" class="logo"/>
+			<img src="img/slogan.png" class="slogan"/>
+			<img src="img/jw_slogan.png" class="slogan_2"/>
+			<div class="rankMsg">
+				<img src="img/jw_tip.png" class="rank_title"/>
+				<p class="rank_tip">以下榜单显示月度前3名，实时更新。</p>
+				<ul id="rankList" class="rankList">
+				</ul>
+				<ul id="rankListOld" class="rankList">
+				</ul>
+				<ul class="tjxx">
+					<li><span class="l">姓名：</span><input class="l" type="text" name="" id="name" value="" placeholder="" maxlength="8"/></li>
+					<li><span class="l">手机号：</span><input class="l" type="text" name="" id="tel" value="" placeholder="" maxlength="11"/></li>
+					<li><span class="l">地址：</span><input class="l" type="text" name="" id="address" value="" placeholder="请按省-市-区/县" maxlength="50"/></li>
+				</ul>
+				<p id="rank_tip" style="display: none;">距离第1名还差<span></span>罐，加油！</p>
+				<div class="btn_box">
+					<input type="button" name="" id="old" value="上月度排名" />
+					<input type="button" name="" id="back" value="关闭"/>
+					<input type="button" name="" id="back2" value="返回"/>
+					<input type="button" name="" id="tj" value="提交"/>
+				</div>
+			</div>
+			<img src="img/bottom_coin.png" class="bt_1"/>
+			<img src="img/bottom_bg.png" class="bt_2"/>
+			<img src="img/fly.png" class="fly fly_1"/>
+			<img src="img/fly.png" class="fly fly_2"/>
+		</div>
+		<div class="bottom">
+			<div class="record">
+				<div id="hide">收起</div>
+				<ul id="mon_list">
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+      	<li>
+	      	<p class="title list_left">
+				<span class="title">[=monwhere]</span><br />
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_left"><span style="color:[=color];">[=money]</span></p>
+      	</li>
+    </script>
+    <script id="onenote_tpl_2" type="text/html">
+      	<li>
+			<img src='[=headurl]' class="headimg l"/>
+			<div class="jwmsg l">
+				<p class="nickname">[=nickname]</p>
+				<p class="ranks" style='[=bg];'>[=ranks]</p>
+			</div>
+			<span class="rankNum r"><i>[=ranknum]</i>罐</span>
+		</li>
+    </script>
+    <script id="onenote_tpl_3" type="text/html">
+      	<li>
+			<img src='[=headurl]' class="headimg l"/>
+			<div class="jwmsg l">
+				<p class="nickname">[=nickname]</p>
+				<p class="ranks" style='[=bg];'>[=ranks]<span class="rankNum bt_rankNum" style="display:[=vis];"><i>[=ranknum]</i>罐</span></p>
+			</div>
+			<span class="rankNum r rg_rankNum" style="display: [=dis];"><i>[=ranknum]</i>罐</span>
+			<span class="lqdj r" style="display: [=vis];" dis=[=disable]>[=html]</span>
+		</li>
+    </script>
+  	<script src="/static/js/jquery-2.2.4.min.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="/v/js/cfg.js?v=2.0.3"></script>
+  	<script src="/v/js/publictip.js?v=1"></script>
+    <script src="js/mybag.js?v=1.3.5" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script>
+	  	ini_wxshare(vge.fjqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>
+</html>

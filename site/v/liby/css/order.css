@@ -1,0 +1,15 @@
+.title{ height: 43px; background: #e02810;}
+.title span{ color: #ffffff; font-size: 16px; line-height: 43px;}
+.title span:first-child{margin-left:10px}
+.title span:nth-child(2){float:right; margin-right:20px}
+
+.content{ background: #eee; font-size:14px}
+.content .box{ }
+.box li{width:100%; margin-bottom:10px;background-color:#fff}
+.box li div{padding:10px}
+.box .code{border-bottom:1px solid #ccc;}
+.box .code span:last-child{float:right; margin-right:10px}
+.box .name{padding-bottom:0px}
+.box .time{font-size:12px;}
+.box li .arrow{width:8px;height:14px;float:right;margin-right:10px;margin-top:-38px;}
+#more{color: #B5B5B5; font-size: 14px; line-height: 38px;text-align:center}

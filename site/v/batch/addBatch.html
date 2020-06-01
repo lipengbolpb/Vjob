@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>V积分码源工具箱</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/alertTip.css?v=1"/>
+		<link rel="stylesheet" type="text/css" href="css/addBatch.css?v=1.0.3"/>
+	</head>
+	<body>
+		<p class="title title_area">请选择要激活的批次的所属区域</p>
+		<div class="msg_box">
+			<p>
+				<select name="">
+					<option value="">所属企业</option>
+				</select>
+			</p>
+			<p id="tel_box" style="display: none;">
+				<input type="text" name="" id="tel" value="" maxlength="11" placeholder="请输入手机号"/>
+			</p>
+			<p id="yz_box" style="display: none;">
+				<input type="text" name="" id="yz_code" value="" maxlength="4" placeholder="请输入验证码"/>
+				<span id="get_yz">获取验证码</span>
+			</p>
+		</div>
+		<p class="title title_area">输码激活</p>
+		<div class="msg_box">
+			<p id="batch_box">
+				<span>箱/垛码</span>
+				<input type="text" name="" id="batch" value="" maxlength="" placeholder=""/>
+			</p>
+		</div>
+		<input type="button" name="" id="btn" value="激活" />
+		<div id="alertTip">
+			<div id="alertContent">
+				<p class="alertTitle"></p>
+				<p class="alertContent"></p>
+				<span id="alertBtn"></span>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.4.2"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/alertTip.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/addbatch.js?v=1.3.2" type="text/javascript" charset="utf-8"></script>
+</html>

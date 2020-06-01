@@ -1,0 +1,73 @@
+@charset "utf-8";
+body,html,p,img,input{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:white;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#alert img{
+	width: 100%;
+}
+
+img.cash{
+	display: block;
+	width: 2.3rem;
+	margin: 3.2rem auto 1rem;
+}
+p.title{
+	color: #171717;
+	font-size: .8rem;
+	margin-bottom: 1rem;
+}
+p.money{
+	font-size: 1.6rem;
+	transform: scaleX(1.1);
+}
+#btn{
+	height: 1.9rem;
+	width: 13.7rem;
+	border: 0;
+	margin-top: 4.5rem;
+	-webkit-border-radius:.2rem;
+	background: #d84e43;
+	color: white;
+	font-size: .7rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.time{
+	position: absolute;
+	bottom: 1.6rem;
+	width: 100%;
+	text-align: center;
+	font-size: .65rem;
+	color: #a6a6a6;
+}

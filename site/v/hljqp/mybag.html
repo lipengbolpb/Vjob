@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>青啤豪情龙江</title>
+		<script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?7a0456e524bd6f5439659fcce4533def";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1.18"/>
+	</head>
+	<body>
+		<div class="mybag_top">
+			<div class="draw">
+				<img src="img/hb_mybag.png?v=1" class="hb">
+				<img src="img/tag.png?v=1" class="tag">
+				<p>共喝青岛啤酒</p>
+				<p><span id="bottle"></span>瓶</p>
+				<p>账户余额：<span id="add_money"></span><span>元</span></p>
+				<p>已领红包：<span id="total_money"></span><span>元</span></p>
+			</div>
+			<input type="button" value="立即提现" class="btn">
+			<div class="msg">
+				<p>(根据微信平台要求，红包累计大于等于1元后可提现，不足1元的红包将存入零钱包)</p>
+				<a href="javascript:;" id="show">查看详细记录>></a>
+			</div>
+		</div>
+		<div class="mybag_bottom">
+			<div class="record">
+				<input type="button" id="hide"/>
+				<ul id="mon_list">
+					
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="wxmark">
+			<img src="img/alert_tip.png?v=1"/>
+		</div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+      	<li>
+	      	<p class="title list_left">
+				<span class="title">[=monwhere]</span><br />
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money list_left" style="color:[=color]"><span>[=money]</span>元</p>
+      	</li>
+    </script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script type="text/javascript" src="/static/js/vve/21tpl.js?v=2"></script>
+	<script src="/v/js/cfg.js?v=1.6"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="js/mybag.js?v=1.32" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=2"></script>
+	<script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>

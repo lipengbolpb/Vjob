@@ -1,0 +1,124 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ebebeb;
+    text-align: center;
+	font-family: '微软雅黑';
+	color: #333333;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+ul,li{
+	list-style: none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+input,select,optgroup,option{
+	-webkit-tap-highlight-color: transparent;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+	border: 0;
+	font-family: "微软雅黑";
+	outline: none;
+}
+p.title{
+	padding-left: .65rem;
+	font-size: .65rem;
+	text-align: left;
+	margin: .8rem auto -.2rem;
+}
+div.msg_box{
+	margin: .3rem auto 0;
+	border-bottom: 1px #bcbcbc solid;
+	border-top: 1px #bcbcbc solid;
+	background: #fff;
+	width: 100%;
+	text-align: left;
+	padding-left:.65rem;
+	-webkit-box-sizing: border-box;
+}
+div.msg_box p{
+	height: 1.85rem;
+	line-height: 1.85rem;
+	font-size: .7rem;
+	border-top: 1px #ccc solid;
+}
+div.msg_box p:first-child{
+	/*background: url(../img/right.png) no-repeat 95%;*/
+	/*-webkit-background-size: auto .55rem;*/
+	border: 0;
+}
+div.msg_box p select{
+	float: left;
+	height: 100%;
+	width: 14rem;
+	font-size: .68rem;
+	margin-left: .2rem;
+	background: #fff;
+}
+div.msg_box p span{
+	float: left;
+	height: 100%;
+	display: block;
+	width: 3rem;
+}
+#yz_code{
+	width: 5rem;
+}
+#get_yz{
+	width: 5rem;
+	float: right;
+	color: #1aab16;
+	border-left: 1px #ccc solid;
+	text-align: center;
+}
+div.msg_box p input{
+	height: 100%;
+	width: 11rem;
+	float: left;
+	font-size: .68rem;
+	margin-left: .2rem;
+}
+#batchList{
+	width: 94%;
+	margin: .5rem auto 0;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	background: #fff;
+	-webkit-border-radius: 5px;
+}
+#batchList li{
+	text-align: left;
+	height: 1.65rem;
+	width: 96%;
+	margin: 0 auto;
+	line-height: 1.65rem;
+	font-size: .65rem;
+	border-bottom: 1px #ccc solid;
+}
+#batchList li:last-child{
+	border: 0;
+}
+#btn{
+	display: block;
+	margin: 1.7rem auto;
+	height: 2rem;
+	width: 15.2rem;
+	background: #1aac19;
+	border:1px #3a883d solid;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	font-size: .7rem;
+}
+#btn[disabled]{
+	background: #a3dfa3;
+	border:1px #94c794 solid;
+}

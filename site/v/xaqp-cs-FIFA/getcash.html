@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青啤汉斯陕西销售</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=2.16">
+    <link rel="stylesheet" href="css/sign.css?v=2.6">
+    <link rel="stylesheet" href="css/sale.css?v=2.7">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/logo_2.png?v=2" class="getLogo">
+        <!-- 获取红包页 -->
+        <div class="get">
+            <img src="img/get_coco.png?v=2" class="getCoco">
+            <img src="img/get_football.png?v=2" class="getFootball">
+            <img src="img/get_bottle.png?v=2" class="getBottle">
+            <img src="img/milk_1.png?v=2" class="milk1">
+            <img src="img/milk_2.png?v=2" class="milk2">
+            <img src="img/milk_3.png?v=2" class="milk3">
+            <img src="img/get_cup.png?v=2" class="getCup">
+            <img src="img/get_tittle.png?v=2" class="getTittle">
+            <img src="img/get_color.png?v=2" class="getColor">
+            <img src="img/foam.png?v=2" class="foam">
+        </div>
+        <!-- 拆开红包页 -->
+        <div class="cash">
+            <div class="cashMask">
+                <div class="mask">
+                    <img src="img/mask.png?v=2">
+                </div>
+                <div class="hb">
+                    <img src="img/cash_hb.png?v=2" class="cashHb">
+                    <p class="msg">
+                        ¥<span class="money"></span>元
+                    </p>
+                    <div class="cashZero">
+                        <p>再喝一瓶试试看</p>
+                        <p>你离红包
+                            <br>只差一点点</p>
+                    </div>
+                </div>
+                <input type="button" value="立即提现" class="btn">
+                <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，
+                    <br>不足1元的红包将存入零钱包</p>
+                <div class="link">
+                    <a href="javascript:;" class="rule">活动规则</a>
+                    <a href="javascript:;" class="explain">隐私说明</a>
+                </div>
+                <img src="img/game1.png" class="game1"/>
+            </div>
+            <img src="img/mybag_footer.png?v=2" class="cashFooter">
+        </div>
+        <!-- kb竞猜 -->
+        <div class="ad">
+            <img src="img/get_close.png?v=2" class="adClose">
+            <img src="img/ad_football.png?v=3" class="adFootball">
+            <img src="img/ad_tap.png?v=2" class="adTap">
+        </div>
+        <!-- 活动广告页 -->
+        <div class="active">
+            
+        </div>
+        <!-- 捆绑促销 -->
+        <div id="sale_icon"></div>
+        <div class="sale">
+            <div class="saleMain">
+                <img src="img/sale/sale-bg.png?v=2" class="saleBg">
+                <img src="img/sale/sale-close.png?v=2" class="saleClose">
+                <img src="img/sale/sale-slogan.png?v=2" class="saleSlogan">
+                <div class="saleBtns">
+                    <img src="img/sale/sale-prev.png?v=2" class="salePrev">
+                    <input type="button" value="" class="saleType">
+                    <img src="img/sale/sale-next.png?v=2" class="saleNext">
+                </div>
+                <div class="saleNotice">
+                    <p class="saleNoticeTop"></p>
+                    <p class="saleNoticeBottom">¥
+                        <span id="saleMoney"></span>元</p>
+                    <p class="saleNoticeOver1">（本次活动，红包总计
+                        <span class="saleNoticeOver1Num"></span>个，先到先得）</p>
+                    <p class="saleNoticeOver2">本次活动，红包总计
+                        <span class="saleNoticeOver2Num"></span>个
+                        <br>先到先得，抢完为止</p>
+                </div>
+                <div class="saleContent">
+                </div>
+                <p class="saleRule">活动说明</p>
+            </div>
+        </div>
+        <!-- 签到 -->
+        <div id="sign">
+            <div class="sign_alert">
+                <div class="close close_1"></div>
+                <p class="days"></p>
+            </div>
+            <div class="content">
+                <div class="close"></div>
+                <img src="img/sign/sign_title.png?v=2" class="sign_title" />
+                <div id="progress_box2">
+                    <div class="progress1">
+                        <p id="progress2"></p>
+                    </div>
+                    <span class="progress"></span>
+                </div>
+                <ul id='week'>
+                    <li>周一</li>
+                    <li>周二</li>
+                    <li>周三</li>
+                    <li>周四</li>
+                    <li>周五</li>
+                    <li>周六</li>
+                    <li>周日</li>
+                </ul>
+                <ul id="check_box">
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                    <li>
+                        <span class="checks"></span>
+                    </li>
+                </ul>
+                <div class="sign_cash">
+                    <p id="weekSignEarnMoney"></p>
+                </div>
+                <p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+            </div>
+            <div class="getSignCash">
+                <p class="weekSignEarnMoney"></p>
+            </div>
+        </div>
+        <div id="sign_logo" class="sign_logo">
+            <img src="img/sign/light.png?v=2" class="light" />
+        </div>
+        <!-- 活动说明 -->
+        <div class="signRule">
+            <div class="signInner">
+                <div class="top">
+                    <img src="img/sign/back.png" class="back" id="signBack">
+                    <img src="img/sign/logo_2.png" class="logo">
+                </div>
+                <div class="bottom">
+                    <textarea name="" id="signContent" cols="30" rows="50" class="content"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.2"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="js/sign.js?v=2.47"></script>
+<script src="js/sale.js?v=2.42"></script>
+<script src="js/getcash.js?v=1.6"></script>
+<script>
+    ini_wxshare(vge.xaqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

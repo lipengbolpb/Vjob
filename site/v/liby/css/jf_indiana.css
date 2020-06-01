@@ -1,0 +1,24 @@
+body{background: #FFF6C1; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.top_sum{margin-top: 3px; background: #FFFAD4; color: #B56703; font-size: 16px; overflow: hidden; line-height: 42px; padding: 0 12px;}
+.top_sum p:nth-child(1){float: left;}
+.top_sum p:nth-child(1) span{color: #EB5650;}
+.top_sum p:nth-child(2){float: right; padding-right: 20px; background: url(/v/liby/img/db_record.png) right center no-repeat; background-size: 10%;}
+.top_banner{background: url(/v/liby/img/banner_bg.png) 0 0 no-repeat; background-size: 100%;}
+.zhuan_bot{background: url(/v/liby/img/zhuan_bot.png) center bottom no-repeat; background-size: 56%; padding-bottom: 15px;}
+.zhuan_tip{line-height: 24px; font-size: 18px; color: #EB5650; padding: 18px 0;}
+.zhuan_tip span{font-weight: bold;}
+.prize_set,.active_rule{margin-bottom: 10px; padding: 0 12px;}
+.prize_tit{background: url(/v/liby/img/txt_bg.png) 0 0 no-repeat; background-size: 100%; line-height: 26px; width: 90px; font-size: 14px; color: #fff; margin-bottom: 6px;}
+.prize_list,.active_list{ background: #FEF08F; padding: 6px 8px;}
+.prize_list li{overflow: hidden; padding: 10px 0px; font-size: 13px; color: #B96C00; width: 100%; }
+.prize_list li img{float: left; width: 19px; height: 18px; margin: 6px 5px 0;}
+.prize_list li .prize_dj{float: left; line-height: 32px; width: 18%;}
+.prize_list li .prize_xq{float: right; height: 32px; text-align: left; width: 66%; margin-left: 5%; display:table; }
+.prize_list li .prize_xq p{vertical-align:middle; display:table-cell; line-height: 16px;}
+.active_list li{line-height: 24px; font-size: 13px; color: #B96C00; text-align: left;}
+.result_mask{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); padding-top: 30%; display: none;}
+.result_box{width: 80%; margin-left: 10%; background: #fff; border-radius: 5px;}
+.result_tit{line-height: 30px; padding-top: 12px; color: #222; font-size: 15px;}
+.result_con{line-height: 20px; font-size: 13px; color: #888;}
+.result_img{width: 30%; margin-top: 10px; margin-bottom: 15px;}
+.result_btn{width: 100%; line-height: 38px; border-top: 1px solid #e5e5e5; font-size: 14px; color: #00BF08;}

@@ -1,0 +1,1126 @@
+ul,
+li {
+    list-style: none;
+}
+
+div.double {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
+
+/* 上部滚动条 */
+div.doubleTransform {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    white-space: nowrap;
+    /* transition: all 5s linear; */
+    /* -webkit-transition: all 5s linear; */
+    display: none;
+    font-size: 0;
+}
+
+div.doubleTransform p {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    height: 1rem;
+    transition: all 5s linear;
+    -webkit-transition: all 5s linear;
+    width: 150%;
+    margin-left: 0%;
+}
+
+div.doubleTransform p span.doubleNbsp {
+    display: inline-block;
+    width: 20%;
+}
+
+/* 按钮 */
+@-webkit-keyframes game {
+
+    20%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+    }
+
+    40%,
+    80% {
+        -webkit-transform: rotate(10deg);
+    }
+
+    0%,
+    10%,
+    90%,
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+div.doubleBtn {
+    width: 15%;
+    position: absolute;
+    top: 5rem;
+    left: 1%;
+    display: none;
+}
+
+div.doubleBtn img {
+    width: 100%;
+    -webkit-animation: game .8s linear both infinite;
+}
+
+div.doubleBtn p {
+    text-align: center;
+    width: 100%;
+    font-size: 0.55rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: -0.5rem auto 0;
+}
+
+div.doubleBtn span.doubleBtnNum {
+    width: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.5rem;
+    text-align: center;
+    display: block;
+    background-color: #e60012;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0rem;
+    right: -10%;
+}
+
+/* 广告页 */
+div.doubleAd {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: #15ab4a;
+    display: none;
+}
+
+div.doubleAd div {
+    width: 75%;
+    margin: 3.5rem auto 0;
+    position: relative;
+}
+
+div.doubleAd div img.doubleAdImg {
+    width: 100%;
+}
+
+div.doubleAd div input.doubleCk {
+    position: absolute;
+    bottom: 1rem;
+    right: 10%;
+    width: 30%;
+    height: 1rem;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: #852700;
+    font-size: 0.6rem;
+    border-top-left-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+div.doubleAd img.doubleAdClose {
+    width: 10%;
+    position: absolute;
+    top: 0.5rem;
+    right: 5%;
+}
+
+div.doubleAd img.doubleAdSlogan {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.doubleAd div.doubleAdContent {
+    width: 90%;
+    height: 16rem;
+    position: absolute;
+    top: 6rem;
+    left: 5%;
+    background: url('../img/double/ad_content.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+div.doubleAd div.doubleAdContent p {
+    width: 100%;
+    text-align: center;
+    margin: 7.5rem auto 0;
+    color: #fee44f;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#doubleAdMain {
+    width: 90%;
+    background: #d13e37;
+    color: #ffffff;
+    left: 10%;
+    margin: 0.5rem auto 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border: none;
+    outline: none;
+    font-size: 0.55rem;
+    line-height: 0.8rem;
+    text-align: left;
+}
+
+/* 二重惊喜 */
+div.doubleSurprise {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+div.doubleSurprise img.doubleSurpriseClose {
+    width: 10%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+div.doubleSurprise div.doubleSurpriseTop {
+    width: 90%;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+div.doubleSurprise div.doubleSurpriseTop img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+div.doubleSurprise div.doubleSurpriseTop p {
+    color: #058e44;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 4.2rem;
+}
+
+div.doubleSurprise div.doubleSurpriseTop #doubleSurpriseList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList {
+    width: 70%;
+    max-height: 4rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+}
+
+div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList::-webkit-scrollbar {
+    display: none;
+}
+
+div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList li {
+    color: #00451e;
+    font-size: 0.65rem;
+    text-align: left;
+    border-bottom: 1px dotted #00451e;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList li:first-child {
+    transition: margin-top 1s linear;
+}
+
+div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList li span:nth-of-type(2) {
+    color: #eb3101;
+    font-weight: bold;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom {
+    width: 90%;
+    margin: 0 auto 0;
+    position: relative;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom p {
+    color: #058e44;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 1.5rem;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky {
+    width: 70%;
+    max-height: 5rem;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky::-webkit-scrollbar {
+    display: none;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li {
+    color: #00451e;
+    font-size: 0.65rem;
+    text-align: left;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px dotted #00451e;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li:first-child {
+    transition: margin-top 1s linear;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li span:nth-of-type(1) {
+    width: 22%;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li span:nth-of-type(2) {
+    width: 44%;
+}
+
+div.doubleSurprise div.doubleSurpriseBottom ul.doubleSurpriseLucky li span:nth-of-type(3) {
+    width: 34%;
+}
+
+/* 本次中奖弹窗 */
+div.doubleAlert {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+div.doubleAlert div.doubleAlertMain {
+    width: 90%;
+    height: 70%;
+    margin: 2rem auto 0;
+    background: url('../img/double/alert-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+div.doubleAlert div.doubleAlertMain p {
+    width: 100%;
+    text-align: center;
+    color: #ef7b1c;
+    font-weight: bold;
+}
+
+div.doubleAlert div.doubleAlertMain p:nth-of-type(1) {
+    margin-top: 7rem;
+    font-size: 1.2rem;
+}
+
+div.doubleAlert div.doubleAlertMain p:nth-of-type(2) {
+    font-size: 1.5rem;
+}
+
+div.doubleAlert div.doubleAlertMain p:nth-of-type(3) span {
+    color: #1681e5;
+}
+
+div.doubleAlert div.doubleAlertMain div.doubleAlertLine {
+    width: 65%;
+    height: 1px;
+    border-top: 1px solid #ef7b1c;
+    margin: 1rem 17.5%;
+}
+
+div.doubleAlert div.doubleAlertMain span.doubleAlertNum {
+    color: #d9271e;
+    margin: 0 5%;
+}
+
+div.doubleAlert div.doubleAlertBtn {
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto 0;
+}
+
+div.doubleAlert div.doubleAlertBtn input {
+    width: 25%;
+    height: 1.5rem;
+    margin: 0 5%;
+    outline: none;
+    border: none;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+div.doubleAlert div.doubleAlertBtn input:nth-of-type(1) {
+    background: #e5dec9;
+    color: #b0aca1;
+}
+
+div.doubleAlert div.doubleAlertBtn input:nth-of-type(2) {
+    background: #f78313;
+    color: #ffefaf;
+}
+
+/* 抽中实物奖 */
+div.doubleGet {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #009040;
+    display: none;
+}
+
+div.doubleGet div.doubleGetMain {
+    width: 80%;
+    height: 65%;
+    margin: 2rem auto 0;
+    background: url('../img/double/get-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+div.doubleGet div.doubleGetMain p.doubleGetTitle {
+    width: 100%;
+    text-align: center;
+    color: #ef7b1c;
+    margin: 4.5rem auto 0;
+    font-size: 1rem;
+}
+
+div.doubleGet div.doubleGetMain p.doubleGetPrize {
+    width: 100%;
+    text-align: center;
+    color: #ef7b1c;
+    font-size: 1.2rem;
+}
+
+div.doubleGet div.doubleGetMain img.doubleGetPrizeImg {
+    width: 50%;
+    display: block;
+    margin: 0.8rem auto 1rem;
+}
+
+div.doubleGet input.doubleGetBtn {
+    width: 50%;
+    height: 2rem;
+    background: #f1d35a;
+    color: #ca0013;
+    outline: none;
+    border: none;
+    margin: 1rem auto 0;
+    display: block;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+/* 未中奖 */
+div.doubleNone {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #009040;
+    display: none;
+}
+
+div.doubleNone img.doubleNoneImg {
+    width: 80%;
+    display: block;
+    margin: 4rem auto 0;
+}
+
+div.doubleNone input.doubleNoneBtn {
+    width: 50%;
+    height: 2rem;
+    background: #f1d35a;
+    color: #ca0013;
+    outline: none;
+    border: none;
+    margin: 1rem auto 0;
+    display: block;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+/* 填写中奖信息 */
+div.doubleInfo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #009040;
+    display: none;
+    overflow: hidden;
+}
+
+div.doubleInfo img.doubleInfoFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+div.doubleInfo img.doubleInfoBeer {
+    width: 48%;
+    position: absolute;
+    bottom: 1rem;
+    right: 5%;
+    z-index: 1;
+}
+
+div.doubleInfo p.doubleInfoTitle {
+    width: 100%;
+    text-align: center;
+    color: #ffeb8f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem auto 0;
+}
+
+div.doubleInfo div.doubleInfoText {
+    width: 80%;
+    margin: 1rem auto 0;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+div.doubleInfo input {
+    outline: none;
+    border: none;
+}
+
+div.doubleInfo div.doubleInfoText {
+    color: #000000;
+    font-size: 0.7rem;
+    position: relative;
+    z-index: 1;
+}
+
+div.doubleInfo div.doubleInfoText span {
+    color: #999999;
+}
+
+div.doubleInfo div.doubleInfoText div {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-indent: 0.8rem;
+    border-top: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+div.doubleInfo div.doubleInfoText div:nth-of-type(1) {
+    border: none;
+}
+
+div.doubleInfo div.doubleInfoText div input {
+    height: 2.5rem;
+    font-size: 0.7rem;
+    width: 72%;
+}
+
+div.doubleInfo div.doubleInfoText div:nth-of-type(2) input {
+    width: 62%;
+}
+
+div.doubleInfo div.doubleInfoText div:nth-of-type(3) input {
+    width: 62%;
+}
+
+input::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+div.doubleInfo div.doubleInfoText div:nth-of-type(4) input:nth-of-type(1) {
+    width: 35%;
+    /* float: left; */
+}
+
+div.doubleInfo div.doubleInfoText div:nth-of-type(4) input:nth-of-type(2) {
+    width: 40%;
+    float: right;
+    border-left: 1px solid #cccccc;
+    color: #009040;
+}
+
+div.doubleInfo input.doubleInfoBtn {
+    width: 50%;
+    height: 2rem;
+    background: #fddb00;
+    color: #ca0013;
+    outline: none;
+    border: none;
+    margin: 1rem auto 0;
+    display: block;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
+    border-top-right-radius: 15% 50%;
+    border-bottom-right-radius: 15% 50%;
+    font-size: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* 领取成功 */
+div.doubleSuccess {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+div.doubleSuccess img {
+    width: 80%;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+div.doubleSuccess input {
+    width: 50%;
+    height: 2rem;
+    background: #ffe991;
+    color: #c90700;
+    outline: none;
+    border: none;
+    margin: 1rem auto 0;
+    display: block;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
+    border-top-right-radius: 15% 50%;
+    border-bottom-right-radius: 15% 50%;
+    font-size: 0.75rem;
+}
+
+/* 奖品列表 */
+div.doubleList {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fcf137;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+div.doubleList div.doubleListBack {
+    width: 10%;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+    background: url('../img/double/back.png') no-repeat top left;
+    background-size: 100% auto;
+}
+
+div.doubleList input.doubleListRule {
+    width: 18%;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 4rem;
+    right: 2%;
+    background: #f78415;
+    color: #005e2a;
+    border-radius: 10px;
+    font-size: 0.5rem;
+}
+
+div.doubleList p.doubleListRuleP {
+    text-align: center;
+    font-size: 0.5rem;
+    position: absolute;
+    top: 5rem;
+    left: 9%;
+    text-decoration: underline;
+    color: #005e2a;
+}
+
+div.doubleList img.doubleMyprize {
+    width: 60%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+div.doubleList div.doubleListTitle {
+    width: 55%;
+    margin: 2rem auto 0;
+    position: relative;
+}
+
+div.doubleList div.doubleListTitle img {
+    width: 100%;
+}
+
+div.doubleList div.doubleListTitle p:nth-of-type(1) {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: 1.5rem;
+    left: 36%;
+    color: #009040;
+    pointer-events: none;
+}
+
+div.doubleList div.doubleListTitle p:nth-of-type(1) span:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+div.doubleList div.doubleListTitle p:nth-of-type(1) span:nth-of-type(2) {
+    font-size: 0.8rem;
+    margin-left: 1%;
+}
+
+div.doubleList div.doubleListTitle p:nth-of-type(2) {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 4rem;
+    font-size: 0.6rem;
+    color: #009040;
+    line-height: 0.8rem;
+}
+
+div.doubleList div.doubleListBottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+}
+
+div.doubleList div.doubleListBottom img.doubleListLine {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+div.doubleList div.doubleListBottom div.doubleListMain {
+    width: 100%;
+    height: 100%;
+    background: #009040;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+div.doubleList div.doubleListBottom div.doubleListMain p.doubleGetMore {
+    text-align: center;
+    font-size: 1rem;
+    color: #faff60;
+    margin: 1rem auto;
+    /* display: none; */
+}
+
+div.doubleList div.doubleListBottom div.doubleListMain p.doubleGetMoreHave {
+    text-align: center;
+    font-size: 1rem;
+    color: #faff60;
+    margin: 1rem auto;
+    /* display: none; */
+}
+
+div.doubleList div.doubleListBottom div.doubleListMain p.doubleNoList {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #faff60;
+    margin: 1rem auto;
+    /* display: none; */
+}
+
+div.doubleList div.doubleListBtns {
+    width: 50%;
+    height: 1rem;
+    margin: 1rem auto 0;
+}
+
+div.doubleList div.doubleListBtns a {
+    color: #bfdd56;
+    font-size: 0.65rem;
+    height: 1rem;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+div.doubleList div.doubleListBtns a.doubleListYes {
+    float: left;
+}
+
+div.doubleList div.doubleListBtns a.doubleListNo {
+    float: right;
+}
+
+div.doubleList img.doubleListNone {
+    width: 70%;
+    display: block;
+    margin: 1.5rem auto 0;
+    display: none;
+}
+
+div.doubleListAlert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+div.doubleListAlertBox {
+    width: 80%;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+}
+
+div.doubleListAlertBox h1 {
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+img.doubleListAlertClose {
+    width: 10%;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+
+div.doubleListAlertBox div {
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #cccccc;
+    font-size: 0.7rem;
+    text-indent: 0.5rem;
+    pointer-events: none;
+}
+
+div.doubleListAlertBox div:nth-of-type(4) {
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+div.doubleListAlertBox div input {
+    font-size: 0.7rem;
+    color: #999999;
+    outline: none;
+    border: none;
+    width: 65%;
+}
+
+div.doubleList ul.doubleListDetailed {
+    width: 95%;
+    height: 55%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0.5rem auto;
+    display: none;
+}
+
+div.doubleList ul.doubleListDetailed li {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+div.doubleList ul.doubleListDetailed li:last-child {
+    margin-bottom: 1rem;
+}
+
+div.doubleList ul.doubleListDetailed li div {
+    width: 45%;
+}
+
+div.doubleList ul.doubleListDetailed img:nth-of-type(1) {
+    width: 20%;
+}
+
+div.doubleList ul.doubleListDetailed img:nth-of-type(2) {
+    width: 2.2%;
+}
+
+div.doubleList ul.doubleListDetailed img:nth-of-type(3) {
+    width: 17%;
+}
+
+div.doubleList ul.doubleListDetailed li input {
+    outline: none;
+    border: none;
+    background-color: #f78617;
+    color: #ffffff;
+    height: 1.1rem;
+    width: 15%;
+    border-top-left-radius: 0.5rem 0.5rem;
+    border-bottom-left-radius: 0.5rem 0.5rem;
+    border-top-right-radius: 0.5rem 0.5rem;
+    border-bottom-right-radius: 0.5rem 0.5rem;
+    margin-right: 2%;
+    font-size: 0.6rem;
+}
+
+div.doubleList ul.doubleListDetailed li div p {
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+div.doubleList ul.doubleListDetailed li div p:nth-of-type(2),
+div.doubleList ul.doubleListDetailed li div p:nth-of-type(3) {
+    color: #999999;
+}
+
+
+div.doubleList ul.doubleListDetailedHave {
+    width: 95%;
+    height: 55%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0.5rem auto;
+    display: none;
+}
+
+div.doubleList ul.doubleListDetailedHave li {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+div.doubleList ul.doubleListDetailedHave li:last-child {
+    margin-bottom: 1rem;
+}
+
+div.doubleList ul.doubleListDetailedHave li div {
+    width: 45%;
+}
+
+div.doubleList ul.doubleListDetailedHave img:nth-of-type(1) {
+    width: 20%;
+}
+
+div.doubleList ul.doubleListDetailedHave img:nth-of-type(2) {
+    width: 2.2%;
+}
+
+div.doubleList ul.doubleListDetailedHave img:nth-of-type(3) {
+    width: 17%;
+}
+
+div.doubleList ul.doubleListDetailedHave li input {
+    outline: none;
+    border: none;
+    background-color: #f78617;
+    color: #ffffff;
+    height: 1.1rem;
+    width: 15%;
+    border-top-left-radius: 0.5rem 0.5rem;
+    border-bottom-left-radius: 0.5rem 0.5rem;
+    border-top-right-radius: 0.5rem 0.5rem;
+    border-bottom-right-radius: 0.5rem 0.5rem;
+    margin-right: 2%;
+    font-size: 0.6rem;
+}
+
+div.doubleList ul.doubleListDetailedHave li div p {
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+div.doubleList ul.doubleListDetailedHave li div p:nth-of-type(2),
+div.doubleList ul.doubleListDetailedHave li div p:nth-of-type(3) {
+    color: #999999;
+}
+
+.doubleActive {
+    font-weight: bold !important;
+    color: #faff60 !important;
+    border-bottom: 2px solid #f78d22;
+}
+
+.doubleGray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+@media only screen and (min-aspect-ratio:320/480) {
+
+    /* 广告页 */
+    div.doubleAd div {
+        margin: 1.5rem auto 0;
+    }
+
+    div.doubleAd img.doubleAdClose {
+        margin: 0.5rem auto 0;
+    }
+
+    div.doubleGet div.doubleGetMain img.doubleGetPrizeImg {
+        width: 40%;
+    }
+    div.doubleAd div.doubleAdContent{
+        height: 14rem;
+    }
+    div.doubleAd div.doubleAdContent p{
+        margin: 6.5rem auto 0;
+    }
+}
+
+@media only screen and (min-aspect-ratio:320/550) {
+
+    /* 二重惊喜 */
+    div.doubleSurprise div.doubleSurpriseTop {
+        width: 85%;
+        margin: 1rem auto 0;
+    }
+
+    div.doubleSurprise div.doubleSurpriseBottom {
+        width: 85%;
+    }
+
+    div.doubleSurprise img.doubleSurpriseClose {
+        margin: 0.5rem auto 0;
+    }
+
+    /* 本次中奖弹框 */
+    div.doubleAlert div.doubleAlertMain {
+        height: 80%;
+        margin: 1rem auto 0;
+    }
+
+    /* 抽中实物奖 */
+    div.doubleGet div.doubleGetMain {
+        margin: 1rem auto 0;
+    }
+
+    div.doubleGet div.doubleGetMain img.doubleGetPrizeImg {
+        width: 45%;
+    }
+
+    /* 未抽中实物奖 */
+    div.doubleNone img.doubleNoneImg {
+        margin: 3rem auto 0;
+        width: 75%;
+    }
+
+    /* 填写中奖信息 */
+    div.doubleInfo p.doubleInfoTitle {
+        margin: 1rem auto 0;
+    }
+
+    div.doubleSurprise div.doubleSurpriseTop ul.doubleSurpriseList {
+        max-height: 4.2rem;
+        top: 5rem;
+    }
+}

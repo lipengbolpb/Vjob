@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>提现</title>
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/withdrawal.css">
+  </head>
+  <body>
+	<p class="tocard">到账银行卡</p>
+	<div id="no_card" style="display:none">
+	  <img src="/v/liby/img/gray_add.png" alt="">
+	  <p>添加银行卡</p>
+	  <span></span>
+	</div>
+	<div id="hav_card">
+	  <img src="/v/liby/img/gh_logo.png" alt="">
+	  <p>中国工商银行(3224)</p>
+	  <span></span>
+	</div>
+	<div class="money_box" id="money_box">
+	  <p>当前可用<span id="sum_code">20,050</span>积分，选择提现金额：</p>
+	  <ul id="money_list">
+		<li jifen="1,050" jfkey="">
+		  <p><span>10</span>元</p>
+		  <p>手续费<span>0.50</span>元</p>
+		</li>
+		<li jifen="2,070"><!--  class="chose_mon" -->
+		  <p><span>20</span>元</p>
+		  <p>需<span>2070</span>积分</p>
+		</li>
+	  </ul>
+	</div>
+	<div class="bot_btn">
+	  <div>
+		<p id="record">提现记录</p>
+		<span>|</span>
+		<p id="question">常见问题</p>
+	  </div>
+	</div>
+	<div id="chose_band">
+	  <div>
+		<p>选择支付方式</p>
+		<span id="chose_cancel"></span>
+		<ol id="band_list">
+		  <li>
+			<img src="/v/liby/img/gh_logo.png" alt="">
+			<p>中国工商银行(9588)</p>
+			<span class="b_chose"></span>
+		  </li>
+		  <li>
+			<img src="/v/liby/img/zh_logo.png" alt="">
+			<p>中国招商银行(9555)</p>
+			<span></span>
+		  </li>
+		  <li>
+			<img src="/v/liby/img/jh_logo.png" alt="">
+			<p>中国建设银行(9556)</p>
+			<span></span>
+		  </li>
+		</ol>
+		<div id="new_card">
+		  <img src="/v/liby/img/add_logo.png" alt="">
+		  <p>使用新卡提现</p>
+		  <span></span>
+		</div>
+	  </div>
+	</div>
+	<div id="cash_confirm">
+	  <div>
+		<p>提现详情</p>
+		<span id="confirm_cancel"></span>
+		<ol id="confirm_list">
+		  <li></li>
+		  <li>
+			<p>提现金额</p>
+			<p><span id="money_code">20.00</span>元</p>
+		  </li>
+		  <li>
+			<p>提现手续费</p>
+			<p><span id="sxf_code">0.70</span>元</p>
+		  </li>
+		  <li>
+			<p>消耗积分</p>
+			<p><span id="jf_code">2,070</span>积分</p>
+		  </li>
+		</ol>
+		<div id="confirm_btn">确认提现</div>
+	  </div>
+	</div>
+    <div id="reg_success">
+      <div id="success_tip">
+    	<p>提现申请提交成功</p>
+    	<p>预计3个工作日内可到账，遇节假日顺延~~</p>
+    	<img src="/v/liby/img/cash_suc.png">
+    	<p id="know">我知道了</p>
+      </div>
+    </div>
+    
+    <script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=4"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+    <script src="/v/liby/js/tip.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="/v/liby/js/withdrawal.js?v=9"></script>
+  </body>
+</html>

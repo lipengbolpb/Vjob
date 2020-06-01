@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>汾酒</title>
+ 		<script src="/static/js/rem.js" type="text/javascript"></script>
+        <style>
+            html,body{
+                margin:0;
+                padding:0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background:url(img/bg_rep.png?v=1) repeat-y top left;
+                -webkit-background-size: 100% auto;
+            }
+            #box{
+            	width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            #box img{
+            	position: absolute;
+            	display: block;
+            }
+            #box img.m_t{
+            	width:7rem;
+            	top: .5rem;
+            	left: .9rem;
+            }
+            #box img.tree{
+            	width:6rem;
+            	top: 1rem;
+            	left: 0rem;
+            }
+            #box img.bird{
+            	width:5.4rem;
+            	top:.8rem;
+            	right: 0.3rem;
+            }
+            #box img.slogan{
+            	width:4.9rem;
+            	top:3.8rem;
+            	left: 50%;
+            	-webkit-transform: translateX(-50%);
+            }
+            #box img.m_m{
+            	width:3.8rem;
+            	top:11.6rem;
+            	right: 0rem;
+            }
+            #box img.qr_code{
+            	height:5.8rem;
+            	top:15rem;
+            	left: 50%;
+            	-webkit-transform: translateX(-50%);
+            }
+            img.m_b{
+            	position: absolute;
+            	bottom: 0;
+            	left: 0.8rem;
+            	width:14rem ;
+            }
+            
+        </style>
+    </head>
+    <body>
+    	<div id="box">
+    		<img src="img/mountain_t.png" class="m_t"/>
+	    	<img src="img/tree.png" class="tree"/>
+	    	<img src="img/bird.png" class="bird"/>
+	    	<img src="img/slogan.png" class="slogan"/>
+	    	<img src="img/mountain_m.png" class="m_m"/>
+	    	<img src="img/qr.png?v=2" class="qr_code"/>
+    	</div>
+    	<img src="img/mountain_b.png" class="m_b"/>
+    </body>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/wx/jsdk.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		})
+	</script>
+</html>

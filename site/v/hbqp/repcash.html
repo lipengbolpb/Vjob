@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>青岛啤酒乐享河北</title>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?acba8e1901dbdf8c50444e26492354a1";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+ 		<link rel="stylesheet" type="text/css" href="css/repcash.css?v=1.4.6">
+ 		<script src="js/rem.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        	var body = document.getElementsByTagName('body')[0];
+			var H = document.documentElement.clientHeight || document.body.clientHeight,
+				W = document.documentElement.clientWidth || document.body.clientWidth;
+//			 if(H > 416 || W > 320){
+//			 	body.innerHTML += '<audio src="/v/hbqp/knock.mp3?v=1" preload="preload" id="knock" style="position:absolute;width: 0;height: 0;"></audio>'
+//			 }
+        </script>
+        <!-- 摇一摇图标 -->
+        <div class="shakeIco"></div>
+        <div style="opacity: 0;"><audio src="/v/hbqp/knock.mp3?v=1" preload="preload" id="knock" style="position:absolute;width: 0;height: 0;"></audio></div>
+    	<!-- 拆红包页面 -->
+        <div class="getcash">
+            <img src="img/logo.png?v=1.0.2" class="logo">
+            <img src="img/slogn.png?v=1.0.2" class="slogn">
+            
+            
+            <div class="treeDown1"></div>
+            <div class="treeDown2"></div>
+            <img src="img/leaves.png?v=1.0.0" alt="" class="leaves">
+            <img src="img/stem.png?v=1.0.0" alt="" class="stem">
+            <i id="iconHb1"></i>
+            <i id="iconHb2"></i>
+            <i id="iconHb3"></i>
+            <span id="iconBi1"></span>
+            <span id="iconBi2"></span>
+            <span id="iconBi3"></span>
+            <span id="iconBi4"></span>
+            <span id="iconBi5"></span>
+
+            <span id="iconBi6"></span>
+            <span id="iconBi7"></span>
+            <span id="iconBi8"></span>
+            <span id="iconBi9"></span>
+            <span id="iconBi10"></span>
+            <img src="img/footer.png?v=1.0.2" class="footer">
+        </div>
+        <!-- 红包页面 -->
+        <div class="mark" style="opacity: 0;">
+        	<div id="zajizhu" style="position: absolute;left: 0;top: 0;width: 100%;height: 85%;z-index: 10000;"></div>
+        	<div class="pig">
+        		<img id="hammer" class="hammer" src="img/hammer.png?v=1.0.2" alt="" />
+        		<div class="toast">
+        			<img src="" alt="" id="toast"/>
+        		</div>
+        		<div class="hand">
+        			<img id="hand" class="hand" src="img/hand.png?v=1.0.2" alt="" />
+        		</div>
+        		<div class="pig_pic">
+        			<img id="pig" class="pig" src="img/max-pig.png?v=1.0.2"/>
+        			<div class="pic_box">
+        				<img class="pic_lf" id="pic_lf" style="left: 15%;" src="img/pig-left.png?v=1.0.2"/>
+        				<img class="pic_rgt" style="left: 46.5%;" id="pic_rgt" src="img/pig-right.png?v=1.0.2"/>
+        				<img style="opacity: 0;" src="img/gold-coin.png?v=1.0.2" id="gold-coin"/>
+        			</div>
+        			<div class="hmark">
+		        		<span id="totalAccountMoney"></span>
+		        	</div>
+        		</div>
+        		<div id="ro_light"></div>
+        		<div class="msg">
+        			<img id="repscan" src="img/rep-scan.png?v=2"/>
+        			<h1 id="title"><span>青岛啤酒</span><br />恭喜你获得</h1>
+        			<p><span id="currentMoney"></span>元</p>
+        		</div>
+        		<p class="tip"><img id="tip" src="" alt="" /></p>
+        	</div>
+        	<div class="title">
+				<input type="button" class="tomybag" id="" value="存入我的零钱包" />
+				<p class="tip">
+					<span class="wxtip">温馨提示：</span><span id="prompt">根据微信平台要求，红包累计大于等于1元后可提现。不足1元的红包我们为您贴心准备了零钱包功能，快点击上方按钮存钱吧~</span>
+				</p>
+				<p class="rule">
+					<a href="javascript:;" id="dom_rule" style="text-decoration:underline;">活动规则</a>
+					<a href="javascript:;" id="dom_private" style="text-decoration:underline;">隐私说明</a>
+				</p>
+			</div>
+        </div>
+        
+        <div class="wxmark">
+			<img src="img/alert_tip.png"/>
+		</div>
+    </body>
+
+    <script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=1.0.4"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+    <script src="js/repcash.js?v=1.6.5"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script>
+      ini_wxshare(vge.hbqpappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+</html>

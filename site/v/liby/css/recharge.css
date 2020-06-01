@@ -1,0 +1,41 @@
+body{background: #EFEFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.hav_tip{height: 30px; line-height: 30px; font-size: 12px; color: #fff; background: #ff5657; position: relative; padding-left: 10px; text-align: left;}
+.hav_tip a{/*text-decoration: underline;*/ color: #fff; border-bottom: 1px solid #fff;}
+.hav_tip span{position: absolute; top: 8px; right: 8px; background: #000; width: 12px; height: 12px; background: url(/v/liby/img/can2.png) 0 0 no-repeat; background-size: 100%;}
+.no_tip{height: 10px; background: #EFEFF4;}
+.tel_box{padding: 10px 0 8px 15px; background: #fff; text-align: left; color: 4a4a4a; position: relative;}
+#tel_code{line-height: 30px; font-size: 20px; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0); outline:0; border: 0px;}
+input::-webkit-input-placeholder{font-size: 16px; line-height: 30px;} input::input-placeholder{font-size: 16px; line-height: 30px;}
+#opera{line-height: 20px; font-size: 12px; height: 20px;}
+#cancel{position: absolute; right: 10px; top: 16px;  display: none;  height: 14px; width: 14px; background: url(/v/liby/img/cancel.png) center center no-repeat; background-size: 100%;}
+.my_point{padding: 20px 0 2.5px 15px; line-height: 16.5px; font-size: 12px; color: #000; text-align: left;}
+#chose_mon{padding: 0 10px; overflow: hidden;}
+#chose_mon li{float: left; width: 30%; margin: 0 3% 10px 0; background: #fff; padding: 8px 0;}
+li.c_money {border: 1px solid #ff5657; border-radius: 3px; color: #ff5657;}
+li.n_money {border: 1px solid #d7d7d7; border-radius: 3px; color: #808080;}
+#chose_mon li:nth-child(3){margin-right: 0;}
+#chose_mon p:nth-child(n){font-size: 20px; line-height: 28px;}
+#chose_mon p:nth-child(2n){font-size: 11px; line-height: 15px;}
+#s_tip{padding-top: 10px; font-size: 12px; line-height: 16.5px; color: #808080;}
+#bot_fix{width: 40%; overflow: hidden; position: absolute; margin-left: 30%; padding-bottom: 10px;}
+#bot_fix a{color: #808080; font-size: 13px; width: 49.5%; float: left; line-height: 18px;}
+#bot_fix span{display: inline-block; width: 0px; height: 14px; margin-top: 2px; border-right: 1px solid #d8d8d8; float: left;}
+#mask{background: #000; opacity: 0.6; filter: alpha(opacity=60); position: fixed; top: 0px; left: 0px; display: none; width: 100%; height: 100%; z-index: 100;}
+#confirm{background: #fff; width: 100%; position: absolute; bottom: 0; z-index: 101; display: none;}
+#firm_close{position: absolute; top: 18px; left: 10px; width: 14px; height: 14px; background: url(/v/liby/img/can.png) 0 0 no-repeat; background-size: 100%; z-index: 102;}
+.firm_tit{line-height: 50px; border-bottom: 1px solid #D7D7D7; font-size: 16px; color: #000;}
+#confirm ul{padding-left: 10px; color: #000; font-size: 16px;}
+#confirm ul li{line-height: 43px; border-bottom: 1px solid #D7D7D7; overflow: hidden; padding-right: 10px;}
+.ul_left{float: left; width: 30%; text-align: left;}
+.ul_rgh{float: right; width: 65%; text-align: right;}
+.need_box{padding: 20px 10px 0px 10px; line-height: 25px; font-size: 18px; overflow: hidden;}
+.btn_box{margin: 110px 15px 15px 15px;}
+#btn{background: #ff5657; color: #fff; font-size: 18px; line-height: 40px; border-radius: 4px; border: 1px solid #d54849; width: 100%;}
+
+/*充值成功提示*/
+#reg_success{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 101; background: rgba(0,0,0,0.5); display: none;}
+#success_tip{margin-top: 15%; width: 84%; margin-left: 8%; background: #fff; border-radius: 5px; padding: 12px 0 0;}
+#success_tip p:nth-child(1){line-height: 24px; color: #333; font-size: 16px; margin: 0 5%;}
+#success_tip p:nth-child(2){line-height: 18px; padding: 6px 0; color: #666; font-size: 13px; margin: 0 6% 14px;}
+#success_tip img{width: 36%; margin-bottom: 26px;}
+#success_tip #know{color: #04BE01; font-size: 14px; line-height: 44px; border-top: 1px solid #e5e5e5; padding: 0 5%;}

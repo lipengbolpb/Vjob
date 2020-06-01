@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/verification/register.css?v=1.0.2"/>
+		<link rel="stylesheet" href="css/verification/LArea.css">
+	</head>
+	<body>
+		<div class="box">
+			<div class="msg_box">
+				<p class="title">兑奖人员注册，请输入以下信息</p>
+				<div class="area_box">
+					<span>选择地区：</span>
+					<input type="text" name="" id="area" value="" placeholder="请选择>" readonly/>
+				</div>
+				<div class="address_box">
+					<span>详细地址：</span>
+					<input type="text" name="" id="address" value="" placeholder="请输入" maxlength="50"/>
+				</div>
+				<div class="name_box">
+					<span>姓名：</span>
+					<input type="text" name="" id="name" value="" placeholder="请输入" maxlength="6"/>
+				</div>
+				<div class="tel_box">
+					<span>手机号：</span>
+					<input type="text" name="" id="tel" value="" placeholder="请输入" maxlength="11"/>
+				</div>
+				<div class="yz_box">
+					<span>验证码：</span>
+					<input type="text" name="" id="yz_code" value="" placeholder="请输入" maxlength="4"/>
+					<span id="get_yz">获取验证码</span>
+				</div>
+				<p class="tip"></p>
+			</div>
+			<input id="addressval" type="hidden" />
+			<p class="register">提交注册</p>
+		</div>
+		<div class="alert">
+			<div class="alertContent">
+				<p class="title">信息已经提交成功</p>
+				<p class="content">正在审核中</p>
+				<p class="alertBtn">我知道了</p>
+			</div>
+		</div>
+		<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+			<div class="weui_mask_transparent"></div>
+			<div class="weui_toast" style="width: 4.6em;min-height: 4.6em;margin-left: -1.8em;">
+				<div class="weui_loading">
+					<div class="weui_loading_leaf weui_loading_leaf_0"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_1"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_2"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_3"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_4"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_5"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_6"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_7"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_8"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_9"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_10"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_11"></div>
+				</div>
+				<p class="weui_toast_content">数据加载中</p>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=7.1"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/verification/LAreaData2.js"></script>
+	<script src="js/verification/LArea.js"></script>
+	<script src="js/verification/register.js?v=1.6" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var area = new LArea();
+		area.init({
+			'trigger': '#area',
+			'valueTo': '#addressval',
+			'keys': {
+				id: 'value',
+				name: 'text'
+			},
+			'type': 2,
+			'data': [provs_data, citys_data, dists_data]
+		});
+		$('.box').css('height',$('body').height()+'px');
+		$('#area').on('input',function(){
+			if($(this).val()!=''){
+				$(this).css('textAlign','left');
+			}
+		});
+		$('.box').css('height',$('body').height()+'px');
+		var win_h = $(window).height();//关键代码
+		window.addEventListener('resize', function () {
+			if($(window).height() < win_h){
+				$('.register').css('visibility', 'hidden');
+			}else{
+				$('.register').css('visibility', 'visible');
+			}
+		});
+		$("input").blur(function(){
+			setTimeout(() => {
+				var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+			}, 100);
+		})
+	</script>
+</html>

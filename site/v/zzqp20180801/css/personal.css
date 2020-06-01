@@ -1,0 +1,538 @@
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1
+    /*兼容IE */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+}
+
+body .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap .audio {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 8%;
+    z-index: 999;
+}
+
+@-webkit-keyframes bgm-rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.running {
+    -webkit-animation: bgm-rotate 3s linear infinite forwards;
+    -webkit-animation-play-state: running;
+}
+
+.mybag_top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    background: #030b1d url('../img/personal-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.mybag_bottom {
+    width: 100%;
+    height: 100%;
+    background: #030b1d url('../img/personal-bootom.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.mybag_bottom input {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 1rem auto;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #005920;
+    /* box-shadow: 2px 2px 2px #888888; */
+    box-shadow: 0px 4px 2px #ac9c22;
+    outline: none;
+    border: none;
+    background-color: #fae540;
+    border-top-left-radius: 25px 50%;
+    border-top-right-radius: 25px 50%;
+    border-bottom-right-radius: 25px 50%;
+    border-bottom-left-radius: 25px 50%;
+}
+
+.mybag_bottom .record {
+    width: 89%;
+    height: 100%;
+    padding-bottom: 1rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: 5.5%;
+    top: 0;
+}
+
+.mybag_bottom .record ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+    border-top: 1px #8998b0 solid;
+}
+
+.mybag_bottom .record ul li {
+    border-bottom: 1px #8998b0 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+.mybag_bottom .record ul li .title {
+    float: left;
+    line-height: 0.9rem;
+    color: #ffffff;
+}
+
+.mybag_bottom .record ul li .title span:nth-of-type(1) {
+    font-size: 0.7rem;
+}
+
+.mybag_bottom .record ul li .title span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+
+.mybag_bottom .record ul li .money {
+    float: right;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.mybag_bottom .record ul li .money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+
+.mybag_bottom .record .getmore {
+    text-align: center;
+    margin: 1rem 0;
+    color: #ffffff;
+    display: none;
+}
+
+.mybag_bottom .record .nolist {
+    text-align: center;
+    margin: 1rem 0;
+    color: #ffffff;
+    display: none;
+    width: 100%;
+}
+
+.my {
+    width: 13%;
+    margin: 0.5rem 80% 0;
+}
+
+.my img {
+    width: 100%;
+}
+body .wrap .my-prize {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none;
+}
+
+body .wrap .my-prize .prize-list {
+    width: 80%;
+    margin: 3rem auto 0;
+    background: url('../img/personal-bootom.png') no-repeat top left;
+    background-size: 100% 120%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+body .wrap .my-prize .prize-head {
+    width: 50%;
+    position: absolute;
+    top: 0.5rem;
+    left: 25%;
+}
+
+body .wrap .my-prize .prize-title {
+    width: 50%;
+    display: block;
+    margin: 1rem auto 0.5rem;
+}
+
+body .wrap .my-prize #prize-back {
+    width: 60%;
+    height: 2.2rem;
+    display: block;
+    margin: 1rem auto;
+    color: #005920;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #fae540;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 2px #ac9c22;
+    border-top-left-radius: 25px 50%;
+    border-top-right-radius: 25px 50%;
+    border-bottom-right-radius: 25px 50%;
+    border-bottom-left-radius: 25px 50%;
+}
+
+body .wrap .my-prize .record {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body .wrap .my-prize .record ul {
+    width: 100%;
+    height: 10rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    -webkit-overflow-scrolling: touch;
+    background-color: #27a5df;
+}
+
+body .wrap .my-prize .record li {
+    width: 87%;
+    list-style: none;
+    height: 2rem;
+    background-color: #27a5df;
+    padding: 0.2rem 1rem;
+}
+
+body .wrap .my-prize .record li .left {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+
+body .wrap .my-prize .record li .right {
+    width: 25%;
+    height: 100%;
+    float: right;
+}
+
+body .wrap .my-prize .record li p {
+    font-size: 0.5rem;
+    color: #ffffff;
+}
+
+body .wrap .my-prize .record li p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+}
+
+body .wrap .my-prize .record li p:nth-of-type(2) {
+    margin-top: 0.2rem;
+}
+
+body .wrap .my-prize .record li .right input {
+    width: 100%;
+    height: 1.2rem;
+    display: block;
+    margin: 0.45rem auto;
+    border: none;
+    outline: none;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #037329;
+    background-color: #fff601;
+    border-top-left-radius: 15px 50%;
+    border-top-right-radius: 15px 50%;
+    border-bottom-right-radius: 15px 50%;
+    border-bottom-left-radius: 15px 50%;
+}
+.personalTitle {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.personalTitle img {
+    width: 100%;
+}
+
+.personalTitle p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0.2rem;
+}
+
+.personalMain {
+    width: 80%;
+    min-height: 6.5rem;
+    margin: 1rem auto 0;
+    background: url('../img/personal-main.png') no-repeat top left;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.personalMain p {
+    width: 100%;
+    color: #fff600;
+    text-align: left;
+    font-weight: bold;
+}
+
+.personalMain p:nth-of-type(1) {
+    font-size: 0.75rem;
+    margin: 1.5rem 0 0 35%;
+}
+
+.personalMain p:nth-of-type(2) {
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0 35%;
+}
+
+.personalMain p:nth-of-type(2) span:nth-of-type(1) {
+    font-size: 2rem;
+}
+
+a.ck {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    text-decoration: underline;
+    color: #ffffff;
+    margin-top: 0.3rem;
+}
+
+input.mall {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 1rem auto 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #005920;
+    box-shadow: 0px 5px 2px #7b7219;
+    outline: none;
+    border: none;
+    background-color: #fae540;
+    border-top-left-radius: 25px 25px;
+    border-top-right-radius: 25px 25px;
+    border-bottom-right-radius: 25px 25px;
+    border-bottom-left-radius: 25px 25px;
+}
+
+.border {
+    width: 100%;
+}
+
+input.btn {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 0.5rem auto 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0px 5px 2px #888888;
+    outline: none;
+    border: none;
+    background-color: #888888;
+    border-top-left-radius: 25px 25px;
+    border-top-right-radius: 25px 25px;
+    border-bottom-right-radius: 25px 25px;
+    border-bottom-left-radius: 25px 25px;
+}
+
+.wallet {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 0.65rem;
+    margin: 0.5rem auto 0;
+}
+
+.money {
+    color: #fff600;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.mask .qin {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.65rem;
+    margin-top: 4rem;
+}
+
+.mask .alert {
+    width: 80%;
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+.mask .iknow {
+    width: 50%;
+    height: 2.2rem;
+    display: block;
+    margin: 2rem auto 0;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #f6bf62;
+    color: #9a1820;
+    border-top-left-radius: 25px 50%;
+    border-top-right-radius: 25px 50%;
+    border-bottom-right-radius: 25px 50%;
+    border-bottom-left-radius: 25px 50%;
+}
+ 
+@media only screen and (min-aspect-ratio:320/500) {
+    .personalMain{
+        margin: 0.2rem auto 0;
+    }
+    .personalTitle p{
+        margin-top: 0;
+    }
+    a.ck{
+        margin-top: 0;
+    }
+    input.mall{
+        width: 40%;
+        height: 1.8rem;
+        margin: 0.5rem auto 0rem;
+    }
+    .wallet{
+        margin: 0 auto;
+    }
+    input.btn{
+        width: 40%;
+        height: 1.8rem;
+        margin: 0.3rem auto 0;
+    }
+    .mybag_bottom input{
+        width: 40%;
+        height: 1.8rem;
+    }
+}

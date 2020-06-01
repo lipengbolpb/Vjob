@@ -1,0 +1,530 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+	background:#060d1d url(../img/bg.png) no-repeat left top;
+	-webkit-background-size: 100% auto;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: white;
+}
+img{
+	display: block;
+}
+div.up{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+}
+div.up img.slogan{
+	margin: -0.5rem auto 0;
+	width: 14rem;
+	-webkit-transform: translateX(.5rem);
+}
+#ani_1{
+	height: 1.1rem;
+	position: absolute;
+	top: 2rem;
+	right:5rem;
+	-webkit-transform: rotateY(180deg);
+}
+#ani_1 .rabbit_1{
+	height: 100%;
+}
+#ani_1 .lantern{
+	width: .25rem;
+	position: absolute;
+	left: .76rem;
+	top: .29rem;
+	-webkit-transform-origin: top;
+	-webkit-animation: rabbit_1 linear 3s infinite;
+}
+#ani_2{
+	height: 8.8rem;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#ani_2 .rabbit_2{
+	position: absolute;
+	bottom: 0;
+	height: 1.55rem;
+	left: 50%;
+	margin-left: -.5rem;
+}
+#ani_2 .cash_s{
+	width: 8.4rem;
+	height: 10.5rem;
+	position: absolute;
+	bottom:0.6rem;
+	-webkit-transform: scale(.12);
+	left: 50%;
+	background: url(../img/cash.png) no-repeat center;
+	-webkit-background-size: 100%;
+	margin-left: -4.2rem;
+	-webkit-transform-origin: bottom;
+	z-index: 10;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#ani_2 .cash_s.ready{
+	-webkit-animation: rabbit_2 linear 4s 1 both;
+}
+#ani_2 .cash_s img.open{
+	width: 3rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 50%;
+	margin-left: -1.5rem;
+	-webkit-transform: rotateY(0);
+	-webkit-transition: all 1s linear;
+}
+#ani_2 .cash_s img.open.rotate{
+	-webkit-transform: rotateY(360deg);
+}
+@-webkit-keyframes rabbit_1{
+	15%,70%{
+		-webkit-transform:rotate(-10deg);
+	}
+	45%,90%{
+		-webkit-transform:rotate(10deg);
+	}
+	0%,100%{
+		-webkit-transform:rotate(0deg);
+	}
+}
+@-webkit-keyframes rabbit_2{
+	9%,45%{
+		bottom: .6rem;
+		-webkit-transform:scale(.12) rotate(25deg);
+	}
+	27%{
+		bottom: .6rem;
+		-webkit-transform:scale(.12) rotate(-25deg);
+	}
+	0%,54%{
+		bottom: .6rem;
+		-webkit-transform:scale(.12) rotate(0deg);
+	}
+	60%{
+		bottom: 1.1rem;
+		-webkit-transform:scale(.12) rotate(0deg);
+	}
+	66%{
+		bottom: .6rem;
+		-webkit-transform:scale(.12) rotate(0deg);
+	}
+	72%{
+		bottom: 2rem;
+		-webkit-transform:scale(.4) rotate(0deg);
+	}
+	95%,100%{
+		bottom: -12rem;
+		-webkit-transform:scale(1) rotate(0deg);
+	}
+}
+
+img.light{
+    position: absolute;
+    pointer-events:none;
+    transform-origin:50% 80%;
+}
+img.light1{
+    width: 1.5rem;
+    top:18.5rem;
+    left: 65%;
+    animation: light1 linear 4s infinite;
+}
+img.light2{
+    width: 1rem;
+    top: 15rem;
+    left: 10%;
+    animation: light2 linear 5s infinite;
+}
+img.light3{
+    width: 0.75rem;
+    top: 15rem;
+    left: 35%;
+    animation: light3 linear 6s infinite;
+}
+img.light4{
+    width: 0.75rem;
+    top: 23rem;
+    left: 55%;
+    opacity: 0;
+    animation: light4 linear 5s infinite;
+}
+img.light5{
+    width: 1.2rem;
+    top: 18rem;
+    left: 85%;
+    opacity: 0;
+    animation: light5 linear 4s 1s infinite;
+}
+img.light6{
+    width: 1rem;
+    top: 16rem;
+    left: 25%;
+    opacity:0;
+    animation: light6 linear 3s 2s infinite;
+}
+img.light7{
+    width: 1.5rem;
+    top: 12rem;
+    left: 10%;
+    opacity: 0;
+    animation: light7 linear 3s both;
+}
+img.light8{
+    width: 1.8rem;
+    top: 5rem;
+    left: 72%;
+    animation: light8 linear 3s both;
+}
+
+@-webkit-keyframes light1{
+    0%{top: 18rem;opacity: 0;transform:rotate(0deg);}
+    20%{top: 15.9rem;opacity: 0.5;transform:rotate(-10deg);}
+    40%{top: 13.8rem;opacity: 1;transform:rotate(0deg);}
+    60%{top: 11.7rem;opacity: 1;transform:rotate(15deg);}
+    80%{top: 9.6rem;opacity: 0.5;transform: rotate(0deg);}
+    100%{top: 7.5rem;opacity: 0;transform:rotate(0deg);}
+}
+@-webkit-keyframes light2{
+    0%{top: 19rem;left: 10%;opacity: 0;transform:rotate(0deg);}
+    20%{top: 16.4rem;left: 9%;opacity: 0.5;transform:rotate(-10deg);}
+    40%{top: 13.8rem;left: 9%;opacity: 1;transform:rotate(0deg);}
+    60%{top: 11.2rem;left: 11%;opacity: 1;transform:rotate(15deg);}
+    80%{top: 8.6rem;left: 13%;opacity: 0.5;transform: rotate(0deg);}
+    100%{top: 6rem;left: 9%;opacity: 0;transform:rotate(0deg);}
+}
+@-webkit-keyframes light3{
+    0%{top: 15rem;opacity: 0;}
+    20%{top: 13.4rem;opacity: 1;}
+    50%{top: 11rem;opacity: 1;}
+    80%{top: 8.6rem;opacity: 1;}
+    100%{top: 7rem;opacity: 0;}
+}
+@-webkit-keyframes light4{
+    0%{top: 23rem;left:55%;opacity: 0;}
+    20%{top: 20.4rem;left:54%;opacity: 1;}
+    50%{top: 16.5rem;left:56%;opacity: 0.7;}
+    80%{top: 12.6rem;left:52%;opacity: 1;}
+    100%{top: 10rem;left:50%;opacity: 0;}
+}
+@-webkit-keyframes light5{
+    0%{top: 18rem;left:85%;opacity: 0;transform:rotate(0deg);}
+    25%{top: 15.5rem;left:86%;opacity: 1;transform:rotate(10deg);}
+    50%{top: 12rem;left:84%;opacity: 0.7;transform:rotate(0deg);}
+    75%{top: 7.5rem;left:82%;opacity: 1;transform:rotate(10deg);}
+    100%{top: 4rem;left:80%;opacity: 0;transform:rotate(-5deg);}
+}
+@-webkit-keyframes light6{
+    0%{top: 16rem;left:25%;opacity: 0;transform:rotate(0deg);}
+    25%{top: 13.5rem;left:25%;opacity: 1;transform:rotate(0deg);}
+    50%{top: 11rem;left:27%;opacity: 0.7;transform:rotate(10deg);}
+    75%{top: 8.5rem;left:24%;opacity: 1;transform:rotate(0deg);}
+    100%{top: 6rem;left:22%;opacity: 0;transform:rotate(-5deg);}
+}
+@-webkit-keyframes light7{
+    0%{top: 12rem;left:10%;opacity: 0;transform:rotate(0deg);}
+    25%{top: 10rem;left:10%;opacity: 1;transform:rotate(0deg);}
+    50%{top: 8rem;left:8%;opacity: 0.7;transform:rotate(10deg);}
+    75%{top: 6rem;left:12%;opacity: 1;transform:rotate(0deg);}
+    100%{top: 4rem;left:15%;opacity: 0;transform:rotate(-5deg);}
+}
+@-webkit-keyframes light8{
+    0%{top: 5rem;left:72%;opacity: 0;transform:rotate(0deg);}
+    20%{top: 3rem;left:72%;opacity: 1;transform:rotate(5deg);}
+    40%{top: 2rem;left:70%;opacity: 0.7;transform:rotate(-5deg);}
+    60%{top: 2rem;left:70%;opacity: 0.7;transform:rotate(-5deg);}
+    80%{top: -1.5rem;left:74%;opacity: 1;transform:rotate(0deg);}
+    100%{top: -5rem;left:76%;opacity: 0;transform:rotate(10deg);}
+}
+
+img.tianan{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+div.down{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    display: none;
+    background: url('../img/bg_5.png') no-repeat top left;
+    background-size:100% 100%;
+}
+#btn{
+	position: absolute;
+	width: 100%;
+	bottom: -2rem;
+	background: url(../img/button_1.png) no-repeat center;
+	-webkit-background-size: 100%;
+	height: 2.2rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.rule_box{
+	position: absolute;
+	bottom: 25%;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+p.rule_box a{
+	color: #fff;
+	text-decoration: underline;
+	padding: 0 2rem;
+	font-size: .5rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.alert{
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#060d1d url(../img/bg_3.png) no-repeat left top;
+	-webkit-background-size: 100% auto;
+	display: none;
+}
+div.alert img{
+	margin: 4.3rem auto 0;
+	width: 12.5rem;
+	-webkit-transform: translateX(.5rem);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.down .bottom_bg{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+div.down .loading{
+	width: 2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1rem;
+	top: 40%;
+	z-index: 100;
+	display: none;
+}
+div.down #ani_11{
+	height: 13.6rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.down #ani_11 .rabbit_11{
+	height: 1.9rem;
+	position: absolute;
+    bottom: 0;
+    left: 58%;
+    z-index: 1;
+    visibility: hidden;
+}
+div.down p.tip{
+	color: #c4c4c6;
+	font-size: .65rem;
+	text-align: center;
+	margin-top: 10rem;
+	position: relative;
+	z-index: 2;
+}
+@media only screen and (max-height: 519px) {
+	div.down #ani_11{
+		height: 11.5rem;
+	}
+	div.down p.tip{
+		margin-top: 7.5rem;
+	}
+}
+@media only screen and (max-height: 480px) {
+	div.down #ani_11{
+		height: 11.5rem;
+	}
+	div.down p.tip{
+		margin-top: 7.5rem;
+	}
+}
+div.down #ani_11 .lantern1{
+	width: .25rem;
+	position: absolute;
+	left: 67%;
+	bottom: .6rem;
+	-webkit-transform-origin: top;
+	visibility: hidden;
+	-webkit-animation: rabbit_11 linear 3s infinite;
+}
+div.down #ani_11 .rabbit_4{
+	position: absolute;
+	bottom: -.2rem;
+	height: 1.55rem;
+	left: 57%;
+	visibility: hidden;
+	z-index: 1;
+}
+div.down #ani_11 .pic_box{
+	position: absolute;
+	width: 1rem;
+	overflow: hidden;
+	height: 0rem;
+	bottom: 1.1rem;
+	left: 53%;
+	visibility: hidden;
+}
+div.down #ani_11 .pic_box img{
+	width: 100%;
+	position: absolute;bottom: 0;
+}
+@-webkit-keyframes rabbit_11{
+	15%,70%{
+		-webkit-transform:rotate(-10deg);
+	}
+	45%,90%{
+		-webkit-transform:rotate(10deg);
+	}
+	0%,100%{
+		-webkit-transform:rotate(0deg);
+	}
+}
+div.down p.title{
+	font-size: .8rem;
+	color: #c3421c;
+	text-align: center;
+	margin: 3rem auto .5rem;
+}
+div.down p.money{
+	font-size: 1rem;
+	color: #ba0001;	
+	text-align: center;
+	font-weight: bold;
+}
+div.down p.money span{
+	font-size: 1.4rem;
+}
+
+@-webkit-keyframes game{
+    20%,60%{
+        -webkit-transform: rotate(-5deg);
+    }
+    40%,80%{
+        -webkit-transform: rotate(5deg);
+    }
+    0%,10%,90%,100%{
+        -webkit-transform: rotate(0deg);
+    }
+}
+img.game{
+    z-index: 1;
+    position: absolute;
+    width: 3rem;
+    bottom: 10.5rem;
+    right: 0.5rem;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color:rgba(0, 0, 0, 0);
+    -o-tap-highlight-color:rgba(0, 0, 0, 0);
+    tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-animation: game .8s linear both infinite;
+}
+@media only screen and (max-height: 540px) and (min-width:320px) {
+	div.down p.tip{
+        margin-top:10rem;
+    }
+}
+@media only screen and (max-height: 470px) and (min-width:320px) {
+	div.down p.tip{
+        margin-top:9rem;
+    }
+}
+@media only screen and (max-height: 440px) and (min-width:320px) {
+	div.down p.tip{
+        margin-top:8rem;
+    }
+}
+@media only screen and (max-height: 540px) and (min-width:360px) {
+	div.down p.tip{
+        margin-top:9rem;
+    }
+}
+@media only screen and (max-height: 540px) and (min-width:400px) {
+	div.down p.tip{
+        margin-top:8rem;
+    }
+}
+
+
+#ad{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+#ad img.ad{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ad a.close{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.1rem;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #000000;
+}

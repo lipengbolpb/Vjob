@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?75cd71d976264f5d5c9fed96c4f5da77";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/v/gxqp201703/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/v/gxqp201703/css/getcash.css?v=1.0.3"/>
+	</head>
+	<body>
+		<div class="cash-bg">
+			<div class="hb">
+				<p class="tip">恭喜您获得</p>
+				<p class="money"><span id="current"></span>元</p>
+				<!--<img id="zero"  style="display: none;" src="img/0yuan.png"/>-->
+			</div>
+			<div class="zjc">
+				<img id="zjc" src=""/>
+			</div>
+			<input type="button" name="" id="tobag" value="存入我的零钱包" />
+			<p id="tip">根据微信平台要求，红包累计大于等于1元后自动提现，不足1元的红包我们为您贴心准备了零钱包功能</p>
+			<p class="gz_box">
+				<a href="javascript:;" id="private">隐私说明</a>
+				<a href="javascript:;" id="rule">活动规则</a>
+			</p>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=11" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/publictip.js?v13"></script>
+	<script src="/v/gxqp201703/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/gxqp201703/js/getcash.js?v=12.2.5" type="text/javascript" charset="utf-8"></script>
+	<script>
+      // 隐藏微信右上角菜单
+      function onBridgeReady(){
+			 WeixinJSBridge.call('hideOptionMenu');
+			}
+			
+			if (typeof WeixinJSBridge == "undefined"){
+			    if( document.addEventListener ){
+			        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+			    }else if (document.attachEvent){
+			        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+			        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+			    }
+			}else{
+			    onBridgeReady();
+			}
+   </script>
+</html>

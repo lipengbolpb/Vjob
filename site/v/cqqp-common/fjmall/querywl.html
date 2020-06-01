@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>物流查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+			#box{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background: url(img/cash-bg.png) no-repeat center;
+				background-size: 100% 100%;
+			}
+			img{
+				display: block;
+				width: 5rem;
+				margin: 1rem auto;
+				font-size: .67rem;
+			}
+			#box p:nth-of-type(1){
+				margin-top: 3rem;
+				padding-left: 3rem;
+				font-size: .6rem;
+			}
+			#box p:nth-of-type(1)>span:nth-of-type(2){
+				color: #003E92;
+			}
+			li{
+				font-size: .67rem;
+				list-style: none;
+				padding-left: 3rem;
+				line-height: 1.5rem;
+			}
+			#mzsm{
+				font-size: .5rem;
+				margin: 2rem auto;
+				padding: 0 1rem;
+				color: #666;
+			}
+		</style>
+	<body>
+		<div id="box">
+			<p>物流编号：<span class="wuliu"></span> <span class="copy" data-clipboard-text="">复制</span></p>
+			<li>1.点击复制按钮复制物流编号</li>
+			<li>2.长按识别二维码，打开小程序</li>
+			<li>3.粘贴物流编号查询</li>
+			<img src="img/querywl.jpg"/>
+			<p id="mzsm">免责声明：查询物流信息由第三方机构提供，该信息的真实性、准确性及完整性由相应第三方机构负责，本平台对此不承担任何责任。</p>
+		</div>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/clipboard.js?v=1" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script type="text/javascript">
+		$('.wuliu').text(sessionStorage.expressNumber);
+		$('.copy').attr('data-clipboard-text',sessionStorage.expressNumber);
+		$('.copy').on('click',function(){
+			new ClipboardJS('.copy');//fuzhi 
+			title_tip('尊敬的用户', '复制成功！赶紧识别下方二维码查询物流信息吧', '我知道了');
+		});
+	</script>
+</html>

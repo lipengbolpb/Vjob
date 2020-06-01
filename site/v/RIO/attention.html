@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>锐澳RIO鸡尾酒</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=1.0.3"/>
+		<style type="text/css">
+			img.fail_tip{
+				width: 10.875rem;
+				margin: 4.5rem auto 0;
+			}
+			img.qrcode{
+				width: 8.6rem;
+				margin: .75rem 0 0 4.45rem;
+				pointer-events: auto;
+			}
+			img.logo_b{
+				margin: 0 auto;
+				width: 9.1rem;
+				position: absolute;
+				bottom: .5rem;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="" class="fail_tip"/>
+			<img src="/v/RIO/img/qrcode_2.png" class="qrcode"/>
+			<img src="/v/RIO/img/logo.png"  class="logo_b"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		if(sessionStorage.prizeType=='H'){//5
+			document.getElementsByClassName('fail_tip')[0].src = '/v/RIO/img/yuan_5.png';
+		}else if(sessionStorage.prizeType=='I'){//96-10
+			document.getElementsByClassName('fail_tip')[0].src = '/v/RIO/img/yuan_10.png';
+		}
+	</script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 牛位置
+			$('.fail_tip').css({'width':'9rem','margin':'3rem auto 0'});
+			$('.qrcode').css({'width':'7rem','margin':'.75rem 0 0 4.8rem'});
+			$('.logo_b').css({'width':'8rem','margin':'0 auto'});
+		}
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		})
+	</script>
+</html>

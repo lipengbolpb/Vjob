@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤豪情龙江</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v1.0.2"/>
+		<link rel="stylesheet" type="text/css" href="css/jiuwang.css"/>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+	</head>
+	<body>
+		<img src="img/loading.gif" id="loading"/>
+		<div class="mybag">
+			<div class="cash_box">
+				<p class="title">共喝崂山啤酒</p>
+				<p class="num"><span></span>瓶</p>
+				<div class="msg_box">
+					<p class="balance">账户余额：<span id="dom_balance"></span><span class="r">元</span></p>
+					<p class="sent">已领红包：<span id="add_money"></span><span class="r">元</span></p>
+				</div>
+				<a href="javascript:;" id="details">查看详细记录>></a>
+			</div>
+			<div id="btn"></div>
+			<p class="tip">温馨提示：红包大于1元可提现</p>
+		</div>
+		<div class="details">
+			<div class="record">
+				<div id="hide"></div>
+				<ul id="mon_list">
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div id="alert">
+			<img src="img/alert.png" class="alert"/>
+		</div>
+		<!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon" />
+		<div id="jiuw_box">
+			<img src="/v/ymqp20180130/img/close.png" class="close" />
+			<div>
+				<img src="/v/hljqp20180201/img/jiuw_qrcode.jpg" id="jwqrcode" />
+			</div>
+		</div>-->
+	</body>
+	<script id="onenote_tpl" type="text/html">
+      	<li style="[=imgUrl]">
+	      	<p class="title list_left">
+				<span class="title">[=monwhere]</span><br />
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_left"><span style="color:[=color];">[=money]</span></p>
+      	</li>
+    </script>
+    <script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/v/js/cfg.js?v=2.1.6"></script>
+  	<script src="/v/js/publictip.js?v=1"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<!--<script>
+	  	ini_wxshare(vge.hljqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>-->
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 牛位置
+			$('div.cash_box').css({'height': '13.8rem','margin-top': '1rem'});
+			$('div.cash_box p.title').css({'margin-top': '5rem'});
+		}	
+	</script>	
+    <script src="js/mybag.js?v1.0.3" type="text/javascript" charset="utf-8"></script>
+</html>

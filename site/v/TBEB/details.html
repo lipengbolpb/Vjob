@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤电商</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/details.css?v=1.0.4"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?0581ae7a5be8091125d4ee2d546fb0d0";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="details">
+			<img class="logo" src="/v/TBEB/images/logo.png"/>
+			<div class="bottleNum">
+				<span style="opacity: 0;" id="bottleNum"></span>
+			</div>
+			<div style="display: inline-block;text-align: left;"><p class="balance" style="opacity: 0;"><span class="icon">账户余额</span>：<span></span>元</p><p class="cash" style="opacity: 0;margin-top: .3rem;"><span class="icon">已领红包</span>：<span></span>元</p></div>
+			<p class="button">
+				<input type="button" name="" id="details" />
+				<input type="button" name="" id="toBarrel" />
+			</p>
+			<p class="tip">(根据微信平台要求，红包累计大于等于1元后可自动提现，不足1元的红包将存入零钱包)</p>
+		</div>
+		<div class="mybag_bottom">
+			<div class="record">
+				<input type="button" name="" id="hide" value="" />
+				<ul id="mon_list">
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<script id="onenote_tpl" type="text/html">
+	      	<li>
+		      	<p class="title list_left">
+					<span class="title">[=monwhere]</span><br />
+					<span class="time">[=gettime]</span>
+				</p>
+				<p class="money title list_left"><span>[=money]</span></p>
+	      	</li>
+	   </script>
+	</body>
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=3.0.4"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="js/details.js?v=2.1.1" type="text/javascript" charset="utf-8"></script>
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  ini_wxshare(vge.tbebappid);
+	  // 隐藏微信右上角菜单
+	  wx.ready(function() {
+	      wx.hideOptionMenu();
+	  });
+	</script>
+</html>

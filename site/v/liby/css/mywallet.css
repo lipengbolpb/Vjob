@@ -1,0 +1,46 @@
+body{background: #EFEFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+#mask{background: #000; opacity: 0.6; filter: alpha(opacity=60); position: fixed; top: 0px; left: 0px; display: none; width: 100%; height: 100%; z-index: 100;}
+.alert{width: 84%; background: #fff; border-radius: 6px; position: fixed; top: 20%; left: 8%; z-index: 110; display: none;}
+.tip_tit{padding-top: 28px; padding-bottom: 8px; color: #4B4B4E; font-size: 13px;}
+.tip_con{font-size: 16px; line-height: 20px; color: #4A4A4A;}
+.tip_img{width: 30%; padding-top: 22px;}
+.tip_btn{width: 80%; color: #fff; background: #ff5657; line-height: 36px; font-size: 16px; margin-top: 25px; margin-bottom: 25px; border-radius: 4px;}
+#jia_msg{font-size: 14px; color: #343434; padding-top: 24px; line-height: 20px;}
+.top_box{padding: 10px;}
+.top_con{background: #fff; margin: 5px 0; overflow: hidden; position: relative; height: 10px;}
+#s_loading{display: none; width: 30px; height: 30px; position: fixed; left: 50%; top: 22%; margin-left: -15px;}
+#s_loading img{width: 100%;}
+#no_reb p,#no_reblist p,#no_market p,#no_market2 p{font-size: 14px; color: #9B9B9B; line-height: 20px; padding-top: 28px; padding-bottom: 40px;}
+#no_reb img{width: 36%; margin-top: 30px;}
+#no_market img,#no_market2 img{width: 42%; margin-top: 30px;}
+#no_reblist img{width: 36%; margin-top: 40px;}
+.three_btn{border-top: 1px solid #F1F1F1; overflow: hidden; font-size: 15px; color: #535354; margin: 3px 0;}
+.three_btn p{width: 20%; float: left; height: 40px; line-height: 40px; text-align: left; padding-left: 13.3%;}
+.three_btn p:nth-child(1){margin-right: 2%;}
+.three_btn p:nth-child(2){padding-left: 12%; width: 18.3%;}
+.three_btn p:nth-child(3){margin-left: 0%;}
+#rebate_btn{background: url(/v/liby/img/jifen.png) 21% 11px no-repeat; background-size: 16px 16px;}
+.cant_mon_y{background: url(/v/liby/img/sbtn_31.png) 17% 12px no-repeat; background-size: 20px 15px;}
+.cant_fare_y{background: url(/v/liby/img/sbtn_21.png) 21% 11px no-repeat; background-size: 15px 16px;}
+.rebmak_tit{color: #9F9FA2; font-size: 13px; line-height: 26px; padding-top: 20px; text-align: left; padding-left: 8%;}
+.my_sum{border-bottom: 1px solid #EBEBEB; margin-left: 3%; margin-right: 3%; padding-top: 5px; height: 54px; line-height: 54px; font-size: 17px; overflow: hidden;}
+.my_sum p:nth-child(1){float: left; width: 49%;text-align: left; padding-left: 1%;}
+.my_sum p:nth-child(2){float: right; width: 49%;text-align: right; padding-right: 1%;}
+.reb_his{font-size: 14px; height: 32px; line-height: 32px; margin: 0 3% 12px; background: #eee; color: #666;}
+#reb_list li{height: 35px; line-height: 35px; overflow: hidden; font-size: 13px;}
+#reb_list li p:nth-child(1){float: left; text-align: left; padding-left: 5%; color: #999; width: 60%; overflow: hidden;}
+#reb_list li p:nth-child(2){float: right; text-align: right; padding-right: 5%; color: #999;}
+#all_reblist,#all_maklist{height: 50px; line-height: 45px; width: 40%; font-size: 13px; color: #ccc;}
+#all_maklist{width: 52%;/* display: none;*/ font-size: 15px; line-height: 50px;}
+.mak_box{background: #fff; border-radius: 5px; margin-left: 4%; margin-right: 4%; padding-left: 3%; padding-right: 3%;}
+#mak_list{height: 138px; overflow: hidden;}
+#mak_list li{height: 45px; line-height: 45px; overflow: hidden; border-bottom: 1px solid #F8F8F8; font-size: 15px; color: #4A4A4A;}
+#mak_list li a{float: left; width: 100%; color: #4A4A4A;}
+#mak_list li img{float: left; width: 24px; height: 23px; padding: 11px 5px 0px 2%; }
+#mak_list li p{float: left; width: 34%; text-align: left; font-size: 16px;}
+#mak_list li span{float: right; width: 42%; text-align: right; color: #808080; font-size: 16px; padding-right: 16px; background: url('/v/liby/img/enter.png') right 15px no-repeat; background-size: 14px 14px;}
+#my_reb,#no_reb,#hav_reblist,#no_reblist,#three_btn,#no_market,#no_market2{display: none;}
+.padbot{padding-bottom: 20px;}
+em{font-style: normal; font-size: 13px; float: right; color: #808080;}
+.help_can{position: absolute; top: 5px; right: 5px; width: 12px; height: 12px;}
+#no_reblist span, #code_sum, #money_sum{color: #E9564F;}

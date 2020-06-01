@@ -1,0 +1,234 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	color: #606060;
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+div.top{
+	width:100%;
+	height: 38%;
+	background:url('../img/banner.png') no-repeat top left;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+div.top div.head{
+	width:4rem;
+	height: 4rem;
+	margin:10% auto 5%;
+	border-radius:2rem;
+}
+div.top div.head img{
+	width:100%;
+}
+div.top p#tel{
+	color: #ffffff;
+	text-align: center;
+	font-size: 0.9rem;
+}
+div.top div.bind{
+	position:absolute;
+	bottom:0.5rem;
+	width:100%;
+	height: 15%;
+	display: none;
+}
+div.top div.bind p{
+	width:60%;
+	height: 100%;
+	margin:0 auto;
+	color:#ffffff;
+	font-size: 0.7rem;
+	background:url('../img/border.png') no-repeat top left;
+	background-size:100% 100%;
+	text-align: center;
+	line-height: 1.5rem;
+}
+div.top div.unbind{
+	position:absolute;
+	bottom:0.5rem;
+	width:100%;
+	height: 15%;
+	font-size:0.7rem;
+}
+div.top div.unbind p{
+	line-height: 1.3rem;
+	color:#ffffff;
+}
+div.top div.unbind p:nth-child(1){
+	display: inline-block;
+	width:50%;
+	height:100%;
+	background:url('../img/icon6.png') no-repeat left 0.35rem;
+	padding-left: 1.2rem;
+	margin-left: 4%;
+	background-size: 1rem auto;
+}
+div.top div.unbind p:nth-child(2){
+	position: absolute;
+	right: 4%;
+	display: inline-block;
+	width:15%;
+	height:100%;
+	text-align: center;
+	background:url('../img/border2.png') no-repeat top left;
+	background-size: 100% 100%;
+}
+div.bottom{
+	width:100%;
+	height:62%;
+}
+div.bottom div.topLeft{
+	width:50%;
+	height: 50%;
+	float:left;
+	border-right:1px solid #e7e7e7;
+	border-bottom:1px solid #e7e7e7;
+}
+div.bottom div.topLeft div{
+	text-align: center;
+	width:100%;
+}
+div.bottom div.topLeft p:nth-child(1){
+	color:#ff5657;
+	display: inline-block;
+	height: 25%;
+	margin:20% auto 0;
+	font-size:0.75rem;
+	line-height:2.3rem;
+	border-bottom: 1px solid #e7e7e7;
+}
+div.bottom div.topLeft p:nth-child(1) span{
+	font-size: 1.2rem;
+}
+div.bottom div.topLeft p:nth-child(2){
+	font-size:0.8rem;
+	text-align: center;
+	margin-top:0.4rem;
+}
+div.bottom div.topLeft p:nth-child(3){
+	text-align: center;
+	margin-top:0.2rem;
+	font-size:0.8rem;
+}
+div.bottom div.topLeft p:nth-child(3) img{
+	width:0.8rem;
+}
+div.bottom div.topRight{
+	width:49%;
+	height: 50%;
+	float:left;
+	border-bottom:1px solid #e7e7e7;
+}
+div.bottom div.topRight img{
+	display: block;
+	width:2.3rem;
+	margin:2rem auto 0;
+}
+div.bottom div.topRight p{
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top:0.5rem;
+}
+div.bottom div.bottomLeft{
+	width:50%;
+	height: 50%;
+	float:left;
+	border-right:1px solid #e7e7e7;
+}
+div.bottom div.bottomLeft img{
+	display: block;
+	width:2.3rem;
+	margin:2rem auto 0;
+}
+div.bottom div.bottomLeft p{
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top:0.5rem;
+}
+div.bottom div.bottomRight{
+	width:49%;
+	height: 50%;
+	float:left;
+}
+div.bottom div.bottomRight img{
+	display: block;
+	width:2.3rem;
+	margin:2rem auto 0;
+}
+div.bottom div.bottomRight p{
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top:0.5rem;
+}
+i.middle{
+	width:0.4rem;
+	height:0.4rem;
+	background-color:#ffffff;
+	position:absolute;
+	top:68.5%;
+	left:49%;
+}
+i.top{
+	width:0.4rem;
+	height:0.4rem;
+	background-color:#ffffff;
+	position:absolute;
+	top:38%;
+	left:49%;
+}
+i.left{
+	width:0.4rem;
+	height:0.4rem;
+	background-color:#ffffff;
+	position:absolute;
+	top:68.5%;
+	left:0%;
+}
+i.right{
+	width:0.4rem;
+	height:0.4rem;
+	background-color:#ffffff;
+	position:absolute;
+	top:68.5%;
+	right:0%;
+}
+@media only screen and (max-height:560px ){
+	div.top div.bind{
+		margin-top:0.5rem;
+	}
+	div.top div.head{
+		margin:5% auto 3%;
+	}
+}
+@media only screen and (max-height:440px ){
+	div.top div.bind{
+		margin-top:0.3rem;
+	}
+	div.top div.head{
+		margin:5% auto 2%;
+	}
+	div.top div.bind p{
+		line-height: 1.3rem;
+	}
+}
+@media only screen and (min-width:375px ){
+	div.top div.head{
+		margin:5% auto 5%;
+	}
+	div.top div.bind p{
+		line-height: 1.3rem;
+	}
+}

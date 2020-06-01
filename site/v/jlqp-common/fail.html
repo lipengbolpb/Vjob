@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>TSINGTAO青岛啤酒乐享吉林</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/fail.css?v=1.4">
+</head>
+
+<body>
+    <img src="img/logo.png" class="logo">
+    <p class="title"></p>
+    <p class="content"></p>
+    <img src="img/fail-bg.png" class="bg">
+    <p id="batch"></p>
+    <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+    <div class="cash" id="cash">
+        <img src="img/hb-cash.png" class="hbCash">
+        <div class="msg">
+            <p class="congratulate">离红包只差一点点<br />再扫一瓶试试吧~</p>
+        </div>
+        <input type="button" value="查看红包记录" id="btn">
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=2.1.8"></script>
+<script>
+	if(sessionStorage.skukey=='201609141-010'){
+		$('.bg').attr('src','/v/jlqp-common/img/fail-bg_cg.png');
+	}
+    var PHONE_NUM = '15652287347';
+    var args = vge.urlparse(location.href),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        bizcode = args.bizcode;
+    var content = document.getElementsByClassName('content')[0],
+        title = document.getElementsByClassName('title')[0],
+        batch = document.getElementById('batch');
+    // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+    switch (bizcode) {
+        case '1': //二维码不存在
+            title.textContent = '这个二维码不存在';
+            content.textContent = '';
+            break;
+        case '2': //二维码已被使用
+            if (sessionStorage.earnTime == '' || sessionStorage.earnTime == undefined || sessionStorage.earnTime ==
+                'undefined') {
+                content.textContent = '';
+            } else {
+                var time = sessionStorage.earnTime === undefined ? '' : sessionStorage.earnTime;
+                content.innerHTML = '<span style="color:#ffd732;">扫码时间:</span><span>' + time +
+                    '</span><br><span style="color:#ffd732;">再扫一瓶试试看</span>';
+            }
+            title.textContent = '这个二维码已被扫';
+            break;
+        case '3': //二维码已过期
+            title.textContent = '这个二维码已过期';
+            content.textContent = '这么好的酒，要学会珍惜哦';
+            break;
+        case '4': //活动未开始
+            title.style.fontSize = '1.5rem';
+            title.textContent = '活动未开始';
+            content.textContent = '心急喝不了好啤酒，再等等哦';
+            batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+            break;
+        case '5': //活动已结束
+            title.style.fontSize = '1.5rem';
+            title.textContent = '活动已截止';
+            content.textContent = '好酒不等人，下次早点来哦';
+            break;
+        case '6': //二维码异常
+            title.style.fontSize = '1.5rem';
+            title.textContent = '系统繁忙';
+            content.textContent = '稍等片刻，畅想欢聚时刻';
+            break;
+        case '-1': //系统升级中
+            title.style.fontSize = '1.5rem';
+            title.textContent = '系统升级中';
+            content.textContent = '稍安勿躁，敬请关注';
+            break;
+        case '18': //扫码专员
+            content.style.display = 'none';
+            title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+            break;
+        case '19': //未入库
+        	document.getElementById("cash").style.display = 'block';
+        	document.getElementById("btn").addEventListener('click',function(){
+        		location.href = 'http://'+location.host+'/jlqp-common/too/mybag';
+        	},false);
+            title.style.fontSize = '1.5rem';
+            title.textContent = '';
+            content.innerHTML = '';
+            break;       
+        default:
+            title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+            break;
+    }
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    ini_wxshare(vge.jlqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+
+        function close() {
+            wx.closeWindow();
+        }
+    });
+</script>
+
+</html>

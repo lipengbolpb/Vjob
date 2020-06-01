@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>V积分码源工具箱</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/queryList.css?v=1.0.4" />
+		<link rel="stylesheet" type="text/css" href="css/alertTip.css?v=1" />
+		<link rel="stylesheet" type="text/css" href="css/mobiscroll_date.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobiscroll.css" />
+	</head>
+
+	<body>
+		<p class="title title_area"></p>
+		<div class="msg_box">
+			<p>
+				<span>所属企业</span>
+				<select name="">
+					<option value=""></option>
+				</select>
+			</p>
+			<p>
+				<span>时间</span>
+				<input type="text" name="" id="start" value="" maxlength="6" placeholder="开始时间" />
+				<i>至</i>
+				<input type="text" name="" id="end" value="" maxlength="6" placeholder="结束时间" />
+			</p>
+		</div>
+		<input type="button" name="" id="btn" value="查询" />
+		<div id="batchList">
+			<div class="batch_box" style="display: none;">
+			</div>
+			<p id="more" style="display: none;">加载更多</p>
+		</div>
+		<div id="alertTip">
+			<div id="alertContent">
+				<p class="alertTitle"></p>
+				<p class="alertContent"></p>
+				<span id="alertBtn"></span>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.4.2"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/alertTip.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mobiscroll_date.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mobiscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var maxHeight = $('body').height() - $('#btn').height()-$('.msg_box').height()-parseFloat($('.title').css('margin-top'))/0.5-parseFloat($('#btn').css('margin-top'))/.5;
+		$('.tb_a').css('width', $('.batch_box').width() * 0.1);
+		$('.tb_b,.tb_d,.tb_e').css('width', $('.batch_box').width() * 0.24);
+		$('.tb_c').css('width', $('.batch_box').width() * 0.15);
+		$('#batchList').css('height',maxHeight+'px');
+		$(function() {
+			var currYear = (new Date()).getFullYear();
+			var opt = {};
+			opt.date = {
+				preset: 'date'
+			};
+			opt.datetime = {
+				preset: 'datetime'
+			};
+			opt.time = {
+				preset: 'time'
+			};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+				display: 'modal', //显示方式 
+				mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+				startYear: currYear - 1, //开始年份
+				endYear: currYear + 1 //结束年份
+			};
+
+			$("#start,#end").mobiscroll($.extend(opt['date'], opt['default']));
+
+		});
+
+	</script>
+	<script src="js/queryList.js?v=1.5.0" type="text/javascript" charset="utf-8"></script>
+</html>

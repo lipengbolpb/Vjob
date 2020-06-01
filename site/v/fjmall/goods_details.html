@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css?v=1.0.4"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/goods_details.css?v=1.2.7"/>
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="goods_details">
+			
+		</div>
+		<div id="btn_box" style="display: none;">
+			<p id="addcart">加入购物车</p>
+			<p id="toexchange">立即兑换</p>
+		</div>
+		<div id="order">
+			<div class="address">
+				<div class="address_msg">
+				</div>
+			</div>
+			<!-- <p class="order-title">商品信息</p> -->
+			<div class="order-list">
+				<div class="order_msg">
+					<div>
+						<img src="" />
+					</div>
+					<div>
+						<p class="goodsname"></p>
+						<div>
+							<p class="price">积分：<span id="order_msg-price"></span></p>
+							<div class="numcon">
+								<p class="reduce">-</p>
+								<input type="text" name="" class="addgoods" value="1" readonly/>
+								<p class="add">+</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="save_box">
+				<div>
+					<p class="vpoints"><span></span>积分</p>
+					<!-- <p id="cancel">取消兑换</p> -->
+					<p id="exchange">立即兑换</p>
+				</div>
+			</div>
+		</div>
+		<div id="alert">
+			<!-- <img src="img/success-tip-bg.png" /> -->
+			<div class="tip-box-bg">
+				<p class="extip">
+					<span class="red">恭喜您</span>
+					<br>
+					<span class="blue">兑换商品成功</span>
+				</p>
+			</div>
+			<p class="tip-fail">*备注：部分商品兑换失败积分已返还，请查看订单列表</p>
+		<p class="confrim">查看订单</p>
+			<!-- 为你推荐 -->
+			<div class="recommend common-type-box">
+				<!-- <p class="rec-title">为/你/推/荐</p> -->
+				<p class="list-title rec-title">
+					<img src="./img/list-title-top.png" alt="" class="decorate">
+					<span class="title-text">为/你/推/荐</span>
+				</p>
+				<div class="rec-list">
+				</div>
+			</div>
+		</div>
+		<div class="screen">
+			<img src="img/screen.jpg" class="screen_pic"/>
+		</div>
+		<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+			<div class="weui_mask_transparent"></div>
+			<div class="weui_toast" style="width: 5.6em;min-height: 5.6em;margin-left: -2.8em;">
+				<div class="weui_loading">
+					<div class="weui_loading_leaf weui_loading_leaf_0"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_1"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_2"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_3"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_4"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_5"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_6"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_7"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_8"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_9"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_10"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_11"></div>
+				</div>
+				<p class="weui_toast_content">数据加载中</p>
+			</div>
+		</div>
+		
+		<div id="not-change" class="tip-wrap">
+			<div class="tip-content">
+				<img src="./img/icon-close-white.png" alt="" class="close-img">
+				<div class="tip-title">请确认兑换信息</div>
+				<div class="tip-text">兑换成功后，将无法变更邮寄地址</div>
+				<div class="tip-btn">
+					<div class="btn btn-default">我已确认(3)</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="point-tip">
+			<div class="point-tip-cont">
+				<div class="tip-title">积分不足</div>
+				<div class="tip-text">请再多攒点积分~</div>
+				<img src="./img/icon-close.png" alt="" class="close-img">
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/rem.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="js/goods_details.js?v=1.3.0" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/screen.js?v=1.0.4" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+// 		if(sessionStorage.url){
+// 			pushHistory();
+// 			window.addEventListener("popstate", function(e) {  
+// 				var url = sessionStorage.url;
+// 				sessionStorage.removeItem('url');
+// 				location.replace(url);
+// 			}, false); 
+// 		}
+// 		function pushHistory() {  
+//         var state = {  
+//             title: "title",  
+//             url: "#"  
+//         };  
+//         window.history.pushState(state, "title", "#");  
+    // } 
+	</script>
+</html>

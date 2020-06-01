@@ -1,0 +1,255 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: white;
+}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+div.wxmark img{
+	width: 100%;
+}
+
+div.mybag_top{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#009944 url(../img/bg5.png?v=2.1.1) no-repeat left top;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-webkit-transition:all 1s;
+	transition: all 1s;
+}
+div.msg{
+	width: 89%;
+	position: relative;
+	left: 5.5%;
+	top: 54%;
+	text-align: center;
+	color: #ffffff;
+}
+div.msg div.contant{
+	width: 71%;
+	height: 3rem;
+	margin:0 23%;
+}
+div.msg p{
+	margin: 0 auto;
+	font-size: 0.9rem;
+	display: inline-block;
+}
+div.msg p span{
+	font-size: 1.1rem;
+}
+div.msg p.all{
+	width: 9.35rem;
+	height: 2.8rem;
+	font-size: 0.75rem;
+	line-height: 2.7rem;
+	background: url(../img/bottle.png?v=2.1.1) no-repeat 2% top;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	margin-bottom: 0.85rem;
+}
+div.msg p.balance{
+	padding-left: 1.1rem;
+	background: url(../img/icon-money.png?v=2.1.1) no-repeat left;
+	background-size: 0.9rem;
+	margin-bottom: 0.55rem;
+	float: left;
+}
+div.msg p.sent{
+	padding-left: 1.1rem;
+	background: url(../img/icon-packets.png?v=2.1.1) no-repeat left;
+	background-size: 0.9rem;
+	margin-bottom: 0.55rem;
+	float: left;
+}
+
+div.msg div.btn{
+		width: 100%;
+		height: 1.95rem;
+		line-height: 1.95rem;
+		margin-top: 1rem;
+	
+}
+div.msg div.btn input{
+	height: 1.95rem;
+	width: 49%;
+	background: #ffe100;
+	border-radius:0.5rem;
+	font-size: 0.8rem;	
+	-webkit-border-radius: 0.5rem;	
+	color: #009944;
+}
+
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+	background: #009944;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+}
+div.mybag_bottom div.record input{
+	width: 100%;
+	height: 1.95rem;
+	margin-top: 1.05rem;
+	background: #ffe100;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	font-size: 0.8rem;
+	color: #009944;
+	background:#ffe100 url('../img/arrow.png') no-repeat center center;
+	background-size: auto 100%;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	/* height: 100%; */
+	/* overflow-y: auto; */
+	margin: 1.25rem 0;
+	border-top: 1px #3aac6e solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #3aac6e solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	color: #ffffff;
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #ffffff;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	color: #ffffff;
+}
+div.mybag_bottom div.record ul li p.money span{
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin-top: 2rem;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+#no_list{
+	font-size: 1rem; 
+	color: #ffffff; 
+	margin-top: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+div.list_left{
+	float: left;
+	color: #feffff;
+	font-size: 0.7rem;
+}
+div.list_rgh{
+	float: right;
+	color: #feffff;
+	font-size: 1.3rem;
+}
+@media only screen and (max-device-height:550px){
+	div.mybag_top{
+		background-size: 100% 50%;
+	}
+	div.msg{
+		top: 55%;
+	}
+	div.msg p.balance{
+		margin-bottom: 0.3rem;
+	}
+	div.msg p.sent{
+		margin-bottom: 0.3rem;
+	}
+	div.msg div.btn{
+		margin-top: 0.3rem;
+	}
+}
+/* 针对iphone4 */
+@media only screen and (max-device-height:480px){
+	html,body{
+		font-family: 'Heiti SC';
+	}
+	div.mybag_top{
+		background-size: 100% 45%;
+	}
+	div.msg{
+		top: 48%;
+	}
+	div.msg p.balance{
+		margin-bottom: 0.3rem;
+	}
+	div.msg p.sent{
+		margin-bottom: 0.3rem;
+	}
+	div.msg div.btn{
+		margin-top: 0.3rem;
+	}
+}
+@media only screen and (max-device-height:448px) {
+	
+	div.msg{
+		top: 60%;
+	}
+	div.msg p.balance{
+		margin-bottom: 0.3rem;
+	}
+	div.msg p.sent{
+		margin-bottom: 0.3rem;
+	}
+	div.msg div.btn{
+		margin-top: 0.1rem;
+	}
+	div.msg p.all{
+		margin-bottom: 0.3rem;
+	}
+}

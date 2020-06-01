@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>青岛啤酒畅享山东</title>
+ 		<link rel="stylesheet" type="text/css" href="css/fail.css?v=2.2">
+ 		<script src="js/rem.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="bg">
+            <img src="" id="icon">
+        </div>
+        <p id="batch" style="position: fixed;font-size: 0.8rem;text-align: center;color: red;bottom: 5%;width: 100%;z-index:1;"></p>
+    </body>
+    <script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/publictip.js?v=2.0.1"></script>
+    <script src="/v/js/cfg.js?v=1.1"></script>
+    <script>
+        var icon = document.querySelector('#icon');
+        var contant = document.getElementById('contant');
+        var args = vge.urlparse(location.href),
+        	batch = document.getElementById("batch"),
+        	batchName = sessionStorage.batchName===undefined?'':sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch(bizcode) {
+        case '1'://二维码不存在
+            icon.src = 'img/fail_unexist.png?v=2.0';
+            break;
+        case '2'://已经被扫过
+            icon.src = 'img/fail_used.png?v=2.0';
+            break;
+        case '3'://二维码过期
+            icon.src = 'img/fail_overtime.png?v=2.0';
+            break;
+        case '4'://活动未开始
+            icon.src = 'img/fail_unstart.png?v=2.0';
+            batch.innerHTML = batchName+'<br />服务热线：15311695989';
+            break;
+        case '5'://活动已截止
+            icon.src = 'img/fail_end.png?v=2.0';
+            break;
+        case '6'://二维码异常
+            icon.src = 'img/fail_unusual.png?v=2.0';
+            break;
+        case '11'://改码您已扫过，再来一瓶吧
+            icon.src = 'img/fail_used.png?v=2.0';
+            break; 
+        case '-1'://系统升级中
+            icon.src = 'img/fail_updata.png?v=2.0';
+            break; 
+        case '18'://扫码专员
+    		icon.style.display='none';
+    		title_tip('尊敬的用户', '此码未被使用<br />活动批次：'+batchName, '我知道了' );
+        	break;     
+      	default:
+        	title_tip('尊敬的用户', bizcode+':'+sessionStorage.msg, '我知道了');
+        	break;
+        }
+    </script>
+    <script src="/static/js/vve/10core.js"></script>
+    <script src="/static/js/vve/11tool.js"></script>
+    <script src="/static/js/vve/12event.js"></script>
+    <script src="/static/js/vve/20ajx.js"></script>
+    <script src="/v/js/cfg.js?v=4.0.0"></script>
+    <script src="/static/js/wx/jsdk.js?v=2"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  	ini_wxshare(vge.sdqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	    function close(){
+				wx.closeWindow();
+			}
+	  	});
+	</script>
+</html>

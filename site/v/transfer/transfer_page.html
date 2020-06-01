@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <title>九阳</title>
+        <meta name="format-detection" content="telephone=no" />
+        <!-- <script src="js/rem.js" type="text/javascript"></script> -->
+        <style>
+            /* html,body{
+                width: 100%;
+                height: 100%;
+                font-family: "微软雅黑","Microsoft YaHei";
+            }
+            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+            img{border:none}
+            table {border-collapse: collapse; border-spacing:0;}
+            a:link,a:visited,a:hover,a:active{
+                 text-decoration:none;
+            }
+            p{
+                font-size:1.1rem;
+                position:absolute;
+                text-align: center;
+                top:16rem;
+                width: 100%;
+                display: none;
+            }
+            img{
+                width: 55%;
+                position:absolute;
+                top:5rem;
+                left: 22.5%;
+                display: none;
+            } */
+        </style>
+    </head>
+    <body>
+        <!-- <img src="http://x.vjifen.com/v/linkfail.jpg" class="fail">
+        <p></p> -->
+    </body>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=3.0.1"></script>
+  	<script src="/v/js/publictip.js?v=1"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script>
+  		var args = vge.urlparse(location.href),
+  		    openid = args.openid,
+  		    hbopenid = args.hbopenid,
+  		    encrypt = args.encrypt,
+  		    sign = args.sign,
+            p = document.getElementsByTagName('p')[0],
+            img = document.getElementsByTagName('img')[0];
+        
+  		// alert('openid:'+openid);
+  		// alert('hbopenid:'+hbopenid);
+  		// alert('encrypt:'+encrypt);
+  		// alert('sign:'+sign);
+        
+        var stream = {"encrypt":encrypt,"sign":sign,"hbopenid":openid};
+        stream = JSON.stringify(stream);
+        console.log(stream);
+
+        $.ajax({
+            url:'http://47.94.178.150:80/DBTJOYInterface/gift/sendGift',
+            type:'POST', //GET
+            async:false,    //或false,是否异步
+            data:stream,
+            timeout:5000,    //超时时间
+            // dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+            success:function(res,textStatus,jqXHR){
+                console.log(res);
+                if(res.code == '0'){//成功
+                    if (res.redirect_uri == '') {
+                        // p.innerHTML = 'code:'+res.code+'<br>data:'+res.data;
+                        sessionStorage.money = res.data;
+                        window.location.replace('http://w.vjifen.com/v/transfer/getcash.html?bizcode=0');
+                    }else{
+                        console.log(res.redirect_uri+'?code='+res.code+'&data='+res.data);
+                        window.location.href = res.redirect_uri+'?code='+res.code+'&data='+res.data;
+                    }
+                }else if(res.code == '-1'){//系统升级中
+                    window.location.replace('http://w.vjifen.com/v/transfer/getcash.html?bizcode=1');
+                }else{//失败
+                    sessionStorage.data = res.data;
+                    window.location.replace('http://w.vjifen.com/v/transfer/getcash.html?bizcode=2');
+                }
+            },
+            error:function(xhr,textStatus){
+                console.log('错误');
+            },
+            complete:function(){
+                console.log('结束');
+            }
+        });
+
+  	</script>
+</html>

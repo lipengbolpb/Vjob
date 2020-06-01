@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>红包奖不停，酒王赢大礼</title>
+<link rel="stylesheet" type="text/css" href="css/poster.css">
+<link rel="stylesheet" type="text/css" href="css/base/animte.min.css">
+<!--#include file="include/base_link.html" -->
+</head>
+<body class="page page1">
+<div id="poster1" class="mainBg">
+	<img src="img/poster/index.png" class="index">
+    <a class="start" onClick="$('#poster2').fadeIn();"></a>
+    <a class="back2" href="javascript:history.go(-1)"></a>
+</div>
+<!--选择美神、爱神...-->
+<div id="poster2" class="mainBg">
+	<img src="img/bg/logo.png" class="logo">
+	<img src="img/poster/p1.png" class="p1" onclick="make(1)"><a class="a a1" onclick="make(1)"></a>
+    <img src="img/poster/p2.png" class="p2" onclick="make(2)"><a class="a a2" onclick="make(2)"></a>
+    <img src="img/poster/p3.png" class="p3" onclick="make(3)"><a class="a a3" onclick="make(3)"></a>
+    <img src="img/poster/p4.png" class="p4" onclick="make(4)"><a class="a a4" onclick="make(4)"></a>
+    <img src="img/poster/p5.png" class="p5" onclick="make(5)"><a class="a a5" onclick="make(5)"></a>
+    <a class="sure" href="javascript:history.go(-1)"></a>
+    <p class="tips">请选择一个您需要变身的神仙</p>
+</div>
+<!--上传、拍照-->
+<div id="poster3" class="mainBg">
+	<img src="img/bg/logo4.png" class="logo4">
+	<!--爱神-->
+	<div class="post ai">
+		<img src="img/poster/head.png" class="head" style="display:none">
+		<img src="img/poster/ai.png" class="bg2">
+	</div>
+    <!--财神-->
+	<div class="post cai">
+		<img src="img/poster/head.png" class="head" style="display:none">
+		<img src="img/poster/cai.png" class="bg2">
+	</div>
+    <!--酒神-->
+	<div class="post jiu">
+		<img src="img/poster/head.png" class="head" style="display:none">
+		<img src="img/poster/jiu.png" class="bg2">
+	</div>
+    <!--美神-->
+	<div class="post mei">
+		<img src="img/poster/head.png" class="head" style="display:none">
+		<img src="img/poster/mei.png" class="bg2">
+	</div>
+    <!--萌神-->
+	<div class="post meng">
+		<img src="img/poster/head.png" class="head" style="display:none">
+		<img src="img/poster/meng.png" class="bg2">
+	</div>
+    <!--上传前的按钮-->
+    <div class="bef"><a class="make"></a><a class="save1"></a><a class="change"></a></div>
+    <!--上传完成的按钮-->
+    <div class="aft"><!--<a class="save2"></a>--><a class="back" onclick="back1()"></a></div>
+</div>
+
+<!--#include file="include/footer.html" --> 
+<!--#include file="include/base_pop.html" --> 
+<!--#include file="include/base_js.html" --> 
+<script type="text/javascript" src="js/poster.js"></script>
+</body>
+</html>

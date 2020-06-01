@@ -1,0 +1,287 @@
+@charset "utf-8";
+body,html,p,img,input,i,em{
+	margin: 0;
+	padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: .24rem;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+/* 顶部背景 */
+.bg_top{
+	width: 100%;
+	overflow: hidden;
+	background:#01162d url(img/index_bg.png) no-repeat top center;
+	background-size: 100% auto;
+}
+#app{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background:#033669;
+	-webkit-overflow-scrolling: touch;
+}
+/* 标签卡 */
+.tab{
+	width: 100%;
+	display: flex;
+	height: 0.66rem;
+	background: #025bac;
+	border-radius: 0 0 0.33rem .33rem;
+	padding: 0 .08rem;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+.tab p{
+	width: 3.13rem;
+	height: 0.6rem;
+	text-align: center;
+	font-size: .27rem;
+	color: #fff;
+	line-height: 0.6rem;
+}
+.tab p:nth-of-type(1){
+	border-radius: 0 0 0.1rem .3rem;
+}
+.tab p:nth-of-type(2){
+	border-radius: 0 0 0.3rem .1rem;
+}
+.tab p.cur{
+	color: #ffbb05;
+	background-color: #2ca0fd;
+}
+/* 期数选择 */
+.select_box{
+	width: 100%;
+	height: 3.26rem;
+	background: url(img/rank_bg.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.icon_introduction{
+	position: absolute;
+	right: .52rem;
+	top: .22rem;
+	width: .96rem;
+}
+.select_box .changeDate{
+	display: flex;
+	margin:1.51rem auto 0;
+	width: 3.25rem;
+	height: .86rem;
+	align-items: center;
+	justify-content: space-between;
+	line-height: .36rem;
+}
+.select_box .changeDate img{
+	width: .18rem;
+	padding: 0 .16rem;
+}
+.select_box .changeDate span{
+	color: #fff;
+	font-size: .3rem;
+}
+/* 基本信息 */
+.rank_title{
+	width: 100%;
+	position: relative;
+	text-align: center;
+	background-color: #005cac;
+	height: 2.03rem;
+	margin-top: -.56rem;
+	overflow: hidden;
+	display: flex;
+	padding-bottom: .54rem;
+	box-sizing: border-box;
+	align-items: center;
+}
+/* 报名参加 */
+.rank_title.signUp{
+	flex-direction: column;
+	justify-content: center;
+}
+.rank_title .title{
+	color: #59aced;
+	font-size: .24rem;
+	line-height: .24rem;
+}
+.rank_title .tip{
+	color: #fff;
+	line-height: .74rem;
+	font-size: .42rem;
+}
+/* 未报名 */
+.rank_title.noSign{
+	flex-direction: row;
+	justify-content: center;
+}
+.rank_title.noSign .headimg{
+	width: .6rem;
+	height: .6rem;
+	border-radius: 50%;
+	display: block;
+	margin: 0 .46rem;
+}
+.rank_title.noSign .myrank,.rank_title.noSign .mypoints{
+	color: #59aced;
+	font-size: .27rem;
+	text-align: center;
+}
+.rank_title.noSign p span{
+	color: #fff;
+}
+.rank_title .area{
+	font-size: .188rem;
+	color: #fff;
+	background: url(img/area_bg.png) no-repeat center;
+	width: .57rem;
+	height: 1.11rem;
+	background-size: cover;
+	padding: 0 .13rem;
+	box-sizing: border-box;
+	line-height: .2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	left: .58rem;
+	top: 0;
+}
+.table_head{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: .54rem;
+	width: 100%;
+	display: flex;
+	background-color: #01529d;
+	font-size: .24rem;
+	color: #2371b4;
+	line-height: .54rem;
+}
+.rankNum{
+	width: 1.55rem;
+}
+.rankHead{
+	width: .7rem;
+}
+.tel{
+	width: 2.45rem;
+	overflow: hidden;
+}
+.rankPoints{
+	width: 1.7rem;
+}
+/* 排名列表 */
+.rank_list{
+	width: 100%;
+	overflow: hidden;
+	background-color: #033669;
+	padding-bottom: 1.2rem;
+}
+.rank_list .list{
+	width: 100%;
+	display: flex;
+	height: .85rem;
+	align-items: center;
+}
+.rankNum img{
+	width: .6rem;
+}
+.rankHead img{
+	width: .6rem;
+	height: .6rem;
+	border-radius: 50%;
+}
+.rank_list .rankNum{
+	font-size: .25rem;
+	color: #ffd04e;
+}
+.rank_list .tel{
+	color: #fff;
+}
+.rank_list .rankPoints{
+	color: #ffd04e;
+}
+/* 未开始 */
+.no_list{
+	width: 100%;
+	height: 3.88rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .26rem;
+	color: #fff;
+	flex-direction: column;
+}
+.no_list img{
+	width: 1.46rem;
+	margin-bottom: .2rem;
+}
+.no_list span{
+	font-size: .24rem;
+	color: #819bb4;
+}
+/* 按钮 */
+.btn_box{
+	width: 100%;
+	height: 1.08rem;
+	background-color: #012b53;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+#btn{
+	width: 3.82rem;
+	height: .8rem;
+	line-height: 1.15rem;
+	font-size: .18rem;
+	display: block;
+	margin: .12rem auto;
+}
+.btn_box .btn{
+	background: url(img/btn_signUp.png) no-repeat center;
+	background-size: 100% auto;
+	color: #ae7726;
+}
+.btn_box .btn.isApply{
+	background: url(img/btn_already.png) no-repeat center;
+	background-size: 100% auto;
+	color: #fff;
+}
+/* 遮罩及各种弹窗提示 */
+.mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,.7);
+	z-index: 999;
+}
+div.signUpSuc img{
+	width:100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+div.introduction img{
+	width:4.44rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}

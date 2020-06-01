@@ -1,0 +1,251 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: #e94c44;
+}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+div.wxmark img{
+	width: 100%;
+}
+
+div.mybag_top{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:url(../img/bag-bg.png) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	-webkit-transition:all 1s;
+	transition: all 1s;
+
+}
+div.msg{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	text-align: center;
+	color: #ffffff;
+}
+div.msg div.contant{
+	display: inline-block;
+	width:100%;
+	height: 8.5rem;
+	padding-top: 7.7rem;
+	background: url(../img/bag-hb.png) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+}
+div.msg div.contant p{
+	margin: 0 auto;
+	font-size: 1rem;
+	display: inline-block;
+}
+div.msg div.contant p span{
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #ffe845;
+}
+div.msg div.contant p.all{
+	border-bottom: 1px #facd8a solid;
+	line-height: 2.1rem;
+}
+div.msg div.contant p.balance{
+	margin-top: 0.5rem;
+	color: #ffe946;
+}
+div.msg div.contant p.sent{
+	margin-top: 0.5rem;
+	color: #ffe946;
+}
+div.msg p.tip{
+	display: inline-block;
+	font-size: 0.7rem;	
+	color: #fff17c;
+	padding: 1rem 0.7rem;
+	margin: 0.8rem auto 0;
+	background: url(../img/border.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+
+div.msg div.btn{
+	width: 100%;
+	height: 1.95rem;
+	line-height: 1.95rem;
+	margin-top: 0.8rem;
+	text-align: center;
+	
+}
+div.msg div.btn input{
+	height: 1.95rem;
+	width: 43%;
+	margin: 0 0.2rem;
+	background: #ffdc45;
+	border-radius:0.5rem;
+	font-size: 0.8rem;	
+	-webkit-border-radius: 0.5rem;	
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	background:url(../img/bag-repbg.png) repeat-x left top;
+	-webkit-background-size:auto 100%;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+}
+div.mybag_bottom div.record input{
+	width: 9.1rem;
+	height: 1.95rem;
+	display: block;
+	margin: 1.05rem auto 0;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	font-size: 0.8rem;
+	background:#ffdc45 url(../img/arrow.png?v=1) no-repeat center;
+	background-size:auto 100%;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	margin: 1.25rem 0;
+	border-top: 1px #3aac6e solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #3aac6e solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	color: #ffffff;
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #ffffff;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	color: #ffffff;
+}
+div.mybag_bottom div.record ul li p.money span{
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin-top: 2rem;
+	color: #ffdc45;
+	margin-bottom: 1rem;
+}
+#no_list{
+	font-size: 1rem; 
+	color: #ffdc45; 
+	margin-top: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+div.list_left{
+	float: left;
+	color: #feffff;
+	font-size: 0.7rem;
+}
+div.list_rgh{
+	float: right;
+	color: #feffff;
+	font-size: 1.3rem;
+}
+/* 针对iphone4 */
+@media only screen and (max-height:440px){
+	html,body{
+		font-family: 'Heiti SC';
+	}
+	div.mybag_top{	
+		background-size: 100%;
+		-webkit-background-size: 100%;
+	}
+	div.msg div.contant{
+		display: inline-block;
+		width:100%;
+		height: 8rem;
+		padding-top: 6rem;
+	}
+	div.msg p.tip{
+		font-size: 0.8rem;	
+		margin: 1rem 0;
+	}
+	div.msg p.balance{
+		margin-bottom: 0.3rem;
+	}
+	div.msg p.sent{
+		margin-bottom: 0.3rem;
+	}
+	div.msg div.btn{
+		margin-top: 0.3rem;
+	}
+}
+@media only screen and (max-height:440px) {
+	
+	div.msg p.balance{
+		margin-bottom: 0.3rem;
+	}
+	div.msg p.sent{
+		margin-bottom: 0.3rem;
+	}
+	div.msg div.btn{
+		margin-top: 0.1rem;
+	}
+	div.msg p.all{
+		margin-bottom: 0.3rem;
+	}
+}

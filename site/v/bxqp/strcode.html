@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒欢聚北京</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/strcode.css?v=1.1.4"/>
+	</head>
+	<body>
+		<img src="img/logo.png" class="logo" alt="" />
+		<img src="img/slogan.png" class="slogan" alt="" />
+		<div class="fail_tip">
+			<img src="" class="pic_tip" alt="" />
+			<p class="title">扫码时间：<span id="time"></span><br />再扫一瓶试试吧</p>
+		</div>
+		<div class="strcode">
+			<p class="tip">
+				温馨提示：先输入瓶盖二维码上方的6位字符，再输入二维码下方6位字符，输入完成后点击“领取红包”
+			</p>
+			<div class="import">
+				<input type="text" name="" id="str_code" value="" placeholder="输入12字母数字瓶盖码" maxlength="12" />
+			</div>
+			 <div class="telcode" id="telcode_box"> 
+				<input type="text" name="" id="telcode" value="" placeholder="输入您的手机号" />
+			</div>
+			 <div class="vertion" id="yz_box"> 
+				<input type="text" id="yz_code" value="" placeholder="输入验证码">
+				<input type="button" id="get_yz" value="获取验证码">
+			</div>
+			<input type="button" name="" id="btn" value="领取红包" disabled="disabled" />
+		</div>
+		<p id="copyright" style="color:#ffffff;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">技术支持：V积分 · 鼎川物联Copyright 2012-2017</p>
+	</body>
+	
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/vve/10core.js?v=28"></script>
+    <script src="/static/js/vve/11tool.js?v=21"></script>
+    <script src="/static/js/vve/20ajx.js?v18"></script>
+    <script src="/v/js/cfg.js?v=3.0.6"></script>
+    <script src="/v/js/publictip.js?v=22"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/strcode.js?v=1.3" type="text/javascript" charset="utf-8"></script>
+    <script>
+	    function locationed(res){
+	        sessionStorage.latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+	        sessionStorage.longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+	        sessionStorage.speed = res.speed; // 速度，以米/每秒计
+	        sessionStorage.accuracy = res.accuracy; // 位置精度
+	    }
+	</script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+   
+    <script>
+      	ini_wxshare(vge.bxqpappid);
+      // 隐藏微信右上角菜单
+      	wx.ready(function() {
+          	wx.hideOptionMenu();
+          	wx.getLocation({
+	            type: 'wgs84',
+	            complete:locationed//接口调用完成时执行的回调函数，无论成功或失败都会执行。
+	        });
+      	});
+       	$(document).ready(function () {//防止虚拟键盘弹出后页面布局被压缩
+	　　　　	$('body').height($('body')[0].clientHeight);
+		});
+    </script>
+   
+</html>
+
+
+
+
+

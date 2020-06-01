@@ -1,0 +1,202 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow-x: hidden;
+    background: #339933;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+input[type='button']{
+	/* box-shadow: 1px 1px 1px #000; */
+}
+body{
+	background: url(../img/bg.png?v=1) no-repeat center;
+	background-size: 100% 100%;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.logo {
+    width: 4.2rem;
+    top: 1rem;
+    left: 1rem;
+    margin: 1rem 1rem 0;
+}
+.slogan{
+	width: 8.1rem;
+	position: absolute;
+	top: 2rem;
+	right: .8rem;
+}
+.disc_box{
+	height: 14rem;
+	margin: 1.6rem auto 0;
+	overflow: hidden;
+	position: relative;
+}
+.disc_box .disc{
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+	transition: all 3s;
+}
+.disc_box .pointer{
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 3.625rem;
+}
+.content p.tip{
+	font-size:.556rem;
+	text-align: center;
+	color: #fff;
+	line-height: .625rem;
+	margin: 2rem auto;
+}
+.content .panda{
+	width: 4.4rem;
+	position: absolute;
+	right: 1.6rem;
+	top: 18.4rem;
+}
+
+/* 抽奖结果 */
+.alert{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.7);
+	overflow: hidden;
+	display: none;
+}
+.alert .result_box{
+	height: 12rem;
+	margin: 5rem auto 0;
+	padding: 1.8rem 0;
+	background-image: url(../img/prize_bg.png?v=1);
+	background-repeat: no-repeat;
+	background-position: 57% center;
+	background-size: auto 100%; 
+	text-align: center;
+	box-sizing: border-box;
+}
+.alert .result_box .title{
+	font-size: .889rem;
+	color: #ffff66;
+	line-height: 2.7rem;
+}
+.alert .result_box .prize{
+	height: 2.3rem;
+	display: block;
+	margin: 0 auto;
+}
+.alert .btn{
+	width: 5.7rem;
+	height: 1.8rem;
+	background: url(../img/btn_ll.png) no-repeat center;
+	background-size: 100%;
+	text-align: center;
+	line-height: 1.8rem;
+	font-size: .7778rem;
+	color: #fff;
+	margin: 1.5rem auto 0;
+	font-weight: bold;
+	display: none;
+}
+.alert p.tip{
+	font-size:.556rem;
+	text-align: center;
+	color: #fff;
+	line-height: .625rem;
+	margin: .5rem auto;
+}
+.time{
+	font-size: .56rem;
+	color: #fff;
+	position: absolute;
+	bottom: .5rem;
+	text-align: center;
+	width: 100%;
+}
+

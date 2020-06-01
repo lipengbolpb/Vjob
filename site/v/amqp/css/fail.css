@@ -1,0 +1,72 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url('../img/bg.png') no-repeat top left;
+    -webkit-background-size: 100%;
+    text-align: center;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+div.wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+img.logo{
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+}
+img.footer{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#contant{
+    display: block;
+    width: 65%;
+    z-index: 1;
+    position: absolute;
+    top: 4rem;
+    left: 17.5%;
+}
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:600;
+    background-color: aliceblue;
+}
+p.time{
+    width:100%;
+    text-align:center;
+    position: absolute;
+    top:10.5rem;
+    font-size:0.7rem;
+    color:#7d0000;
+    display: none;
+}
+
+@media only screen and (max-height: 440px) and (min-width:320px){
+    #contant{
+        top: 3.5rem;
+    }
+    p.time{
+        top:10rem;
+    }
+}

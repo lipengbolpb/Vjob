@@ -1,0 +1,33 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,ul,li{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background:url(../img/fail-bg.png?v=1) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+div.tip{
+	text-align: center;
+	position: absolute;
+	top: 56.25%;
+	left: 0;
+	width: 100%;
+}
+div.tip p{
+	display: inline-block;
+	font-size: 1rem;
+	color: #FFFFFF;
+	font-weight: bold;
+	max-width: 54%;
+}

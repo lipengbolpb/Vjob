@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>终端促销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.0.3"/>
+	</head>
+	<body>
+		<div class="wxmark" id="alert">
+			<img src="img/alert_tip.png"/>
+		</div>
+		<span class="tip">恭喜您，扫码成功</span>
+		<div class="cash_box">
+			<div class="repscan">
+				<img src="img/repscan.png"/>
+				<p></p>
+			</div>
+			<div class="cash_wrap">
+				<img src="img/open.png" id="open"/>
+				<img src="img/coin_l.png" class="coin_l coin"/>
+				<img src="img/coin_r.png" class="coin_r coin"/>
+			</div>
+			<div class="cash_content">
+				<p class="money odd"></p>
+				<img src="img/coin_l.png" class="coin_l coin"/>
+				<img src="img/coin_r.png" class="coin_r coin"/>
+			</div>
+		</div>
+		<div class="bottom">
+			<div id="btn">立即提现</div>
+			<a class="mall" href="javascript:;">进入积分商城</a>
+			<p class="tip_msg"></p>
+			<p class="a_box">
+				<!-- <a href="javascript:;" class="active">活动详情</a> -->
+				<a href="javascript:;" class="details">获奖记录</a>
+				<p id="copyright" style="color:#fff;width: 100%;font-size: 12px;text-align: center;position: absolute;bottom: .2rem;">本服务由V积分提供</p>
+			</p>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script> 
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=1.2.4"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.2.0" type="text/javascript" charset="utf-8"></script>
+	<!--<script>
+      ini_wxshare(vge.terminalappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+</html>

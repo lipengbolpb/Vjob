@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+*{ margin:0 auto; padding:0px;}
+html{ width:100%; height:100%;}
+body {
+	-webkit-text-size-adjust:none;
+	font-family:"Microsoft YaHei",'Avenir Heavy',"微软雅黑","黑体";
+	font-size:62.5%;
+	width:100%;
+	height:100%;
+    background: #F0EFF4;
+    text-align: center;
+}
+
+ul { list-style:none outside none;}
+a{ text-decoration:none;}
+img{ border:0px;}
+
+#wrapper{ width:100%; height:100%; position:relative; }
+#section{  position:relative;  }
+
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;outline: none; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input[type="tel"]{outline: none; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+.top_banner{width: 100%; display: block;}
+.div_tit{line-height: 32px; font-size: 16px; text-align: left; padding-left: 12px; color: #333;}
+.activity_box, .nearby_box, .nogps{background: #fff;}
+.activity_box{padding: 5px 0;}
+.activity_box li{overflow: hidden; background: #fff;}
+.activity_box li p:nth-child(1){width: 30%; float: left; line-height: 16px; padding: 8px 0; font-size: 13px; color: #888;}
+.activity_box li p:nth-child(2){width: 58%; float: left; line-height: 16px; padding: 8px 0; font-size: 14px; color: #444; text-align: left;}
+
+.readme{background-color:#fff;padding:10px 20px 10px 30px;font-size:14px; color:#888;}
+.readme li{ text-align:left}
+
+.nearby_box{/*display: none;*/}
+.nearby_box li{overflow: hidden; border-bottom: 1px solid #e5e5e5; padding: 10px 0 8px 12px;}
+.nearby_box li div:nth-child(1){float: left; width: 65%; text-align: left;}
+.nearby_box li div:nth-child(1) p:nth-child(1){color: #333; font-size: 15px; padding-bottom: 6px; line-height: 16px;}
+.nearby_box li div:nth-child(1) p:nth-child(2){color: #888; font-size: 13px; line-height: 15px;}
+.nearby_box li div:nth-child(2){float: right; width: 25%; height: 100%; text-align: center; color: #888; border-left: 1px solid #e5e5e5; margin-top: 4px; margin-bottom: 4px;}
+.nearby_box li div:nth-child(2) p:nth-child(1){height: 40px; background: url(/v/liby/img/loc_logo.png) center center no-repeat; background-size: 17px 25px;}
+.nearby_box li div:nth-child(2) p:nth-child(2){height: 16px; line-height: 16px;}
+
+.nogps{padding: 8px 12px; line-height: 20px; font-size: 14px; color: #888; text-align: left; display: none;}

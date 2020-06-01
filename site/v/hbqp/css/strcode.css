@@ -1,0 +1,202 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+}
+body{
+	background:url(../img/bg3.png?v=1.0.4) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border:0;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+::-webkit-input-placeholder{
+     color: #333333;
+}
+input[type="button"]{
+	color: #ea5244;
+}
+div.mark{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 999;
+	text-align: center;
+	display: none;
+	background-size: 100% 100%;
+	overflow-x: hidden;
+}
+div.mark div.slogn{
+	width: 10rem;
+	height: 7rem;
+	background: url('../img/slogn.png?v=1.0.3') no-repeat top left;
+	background-size: contain;
+	position: absolute;
+	top: 3.5rem;
+	left: 2.9rem;
+}
+div.mark div.hb{
+	width: 14rem;
+	height: 15rem;
+	background: url('../img/fail_hb.png?v=1.0.3') no-repeat top left;
+	background-size: contain;
+	position: absolute;
+	top: 2rem;
+	left: 1rem;
+}
+div.mark  div.title{
+	width: 6rem;
+	height: 5rem;
+	text-align: center;
+	position: absolute;
+	left: 5rem;
+	top: 6.5rem;
+	font-size: 0.9rem;
+}
+div.mark  div.title p{
+	color: #e60012;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: 800;
+}
+#btn_tip{
+	width: 5.75rem;
+	height: 1.65rem;
+	background: transparent;
+	margin-top: 15.5rem;
+	text-align: center;
+	line-height: 1.65rem;	
+	font-size: 1rem;
+	font-weight: normal;
+	border-radius: 0.45rem;
+	-webkit-border-radius: 0.45rem;
+	color: #fff226;
+	position: relative;
+	z-index: 1;
+	background-color: #e60012;
+	font-family: "微软雅黑","Microsoft YaHei";
+	letter-spacing:0.1rem;
+}
+div.strcode{
+	width: 89%;
+	position: absolute;
+	top: 9rem;
+	left: 5.5%;
+	/* overflow: hidden; */
+}
+div.strcode p{
+	width: 85%;
+	padding: 0.2rem 0.67rem 0.7rem 1.16rem;
+	font-size: 0.6rem;
+	color: #000000;
+	background: url(../img/tip_border.png?v=1.0.3) no-repeat center;
+	-webkit-background-size: 100%;
+	margin-bottom: 0.6rem;
+} 
+div.strcode p span{
+	display: inline-block;
+	padding-left: 0.8rem;
+	margin-left: -0.8rem;
+	background: url(../img/tip_icon.png?v=1.0.3) no-repeat left;
+	-webkit-background-size: auto 90%;
+	background-size: auto 90%; 
+}
+div.strcode div.import{
+	height: 2.25rem;
+	border-bottom: 1px #5c584f solid;
+	border-top: 1px #5c584f solid;
+	width: 98%;
+}
+div.strcode div.telcode{
+	height: 2.25rem;
+	border-bottom: 1px #4db27a solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+#str_code{
+	color: #000000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#telcode_box{
+	color: #000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#vertion_code{
+	color: #000;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+div.strcode div.vertion{
+	height: 2.25rem;
+	border-bottom: 1px #4db27a solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+div.strcode input[type="text"]{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: none;
+	background: 0;
+	text-indent: 0.1rem;
+	font-size: 0.7rem;
+}
+#vertion_code{
+	float: left;
+	display: inline-block;
+	width: 70%;
+}
+#vertion_btn{
+	float: right;
+	display: inline-block;
+	border-left: 1px solid #4db27a;
+	width: 30%;
+	text-align: center;
+	color: yellow;
+	height: 100%;
+}
+#btn{
+	width: 40%;
+	height: 2rem;
+	margin:1rem auto;
+	display: block;
+	background: #ffdb45;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	font-size: 0.9rem;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[disabled]{
+	color: #ffffff;
+}
+
+/* 针对iphone4 */
+@media only screen and (max-device-height:480px){
+	#btn{
+		margin:0.2rem auto 0.2rem;
+	}
+	div.strcode p{
+		margin-bottom: 0;
+	} 
+	div.mark div.hb{
+		top: 2.5rem;
+	}
+	div.mark  div.title{
+		top: 7rem;
+	}
+	#btn_tip{
+		margin-top: 16rem;
+	}
+}

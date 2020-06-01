@@ -1,0 +1,174 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: url(../img/bg.png) no-repeat left top;
+	-webkit-background-size: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+
+.cash_mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.6);
+	text-align: center;
+	display: none;
+	position: absolute;
+	z-index: 100;
+}
+.cash_mark p{
+	padding: 0 1rem;
+	margin-top:8rem;
+	font-size: 1rem;
+	color: #FFFFFF;
+}
+#open{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url('../img/cash-bg.png') no-repeat left top;
+	-webkit-background-size: 100% ;
+	display: none;
+}
+#open div.slogan{
+	margin: 3rem auto 0;
+	text-align: center;
+}
+#open div.slogan img{
+	display: block;
+	margin: 0 auto;
+	width: 13.15rem;
+}
+#open div.mycash{
+	margin: 2rem auto 0;
+	width: 11rem;
+	height: 13.8rem;
+	background:url(../img/cash.png) no-repeat center;
+	-webkit-background-size: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#open div.mycash img{
+	width: 4.3rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -2.15rem;
+	top: 1.65rem;
+}
+#open img.bottle{
+	width: 2.15rem;
+	position: absolute;
+	bottom: 0.5rem;
+	right: 1rem;
+}
+#cash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/bg.png) no-repeat left top;
+	-webkit-background-size: 100%;
+	text-align: center;
+	display: none;
+}
+#cash #repscan{
+	position: absolute;
+	top: 3.5rem;
+	width: 11rem;
+	left: 50%;
+	margin-left: -5.5rem;
+	display: none;
+}
+#cash p.money{
+	font-size: 1.56rem;
+	color: #e71000;
+	margin:4.5rem auto 0;
+	font-weight: bold;
+	height: 3.45rem;
+}
+#cash p.money span{
+	font-size: 2.62rem;
+}
+#cash input{
+	margin: 4rem auto 0;
+	background: #ffdc45;
+	-webkit-border-radius: 0.5rem;
+	height: 2.3rem;
+	width: 9rem;
+	border: 0;
+	color: #ea5244;
+	font-size: 1rem;
+}
+#cash #tips_box{
+	height: 1.4rem;
+	padding-left: 1.6rem;
+	background: url(../img/wechat-icon.png?v=1) no-repeat left;
+	-webkit-background-size:auto 1.1rem;
+	margin: 2.25rem 0 0 -1.6rem;
+	font-size: .6rem;
+	line-height: 1.4rem;
+	color: #000000;
+	display: inline-block;
+}
+#cash #tips_box p{
+	background: url(../img/tips.png?v=1) no-repeat left top;
+	padding: 0 .5rem;
+	-webkit-background-size:100%;
+}
+#cash #rule_box{
+	margin: 2.25rem auto 0;
+}
+#cash #rule_box a{
+	font-size: .7rem;
+	color: #000000;
+	text-decoration: underline;
+	padding:0 1rem;
+}
+@media only screen and (max-height: 480px) {
+	#open div.slogan{
+		margin: 2rem auto 0;
+	}
+	#open div.mycash{
+		margin: .7rem auto 0;
+	}
+	#cash p.money{
+		margin: 4.5rem auto 0;
+	}	
+	#cash input{
+		margin: 3rem auto 0;
+	} 
+	#cash #tips_box{
+		margin: 1.25rem 0 0 -1.6rem;
+	}
+	#cash #rule_box{
+		margin: 2.25rem auto 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

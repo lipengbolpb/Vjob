@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>红包奖不停，酒王赢大礼</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--[if lt IE 9]>
+<script>
+    window.location.href='http://windows.microsoft.com/zh-CN/internet-explorer/download-ie';
+</script>
+<![endif]-->
+<!--public-->
+<link rel="stylesheet" href="css/public/global.css?v=1.0.0">
+<link rel="stylesheet" href="css/public/layout.css?v=1.0.0">
+<link rel="stylesheet" type="text/css" href="css/myJp.css?v=1.0.0">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0f6d8bdeef4ce0a4b1f72c37c3759968";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="page page1">
+<!--炫耀卡-->
+<div id="xyk" class="mainBg" style="display: block;">
+	<div class="xyk">
+		<div class="top" style="left:.8rem">
+			<div class="head"><img id="Vhead" src=""></div>
+			<p class="name Vname" style="width:2rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;color:#fff;"></p>
+		</div>
+		<!--小酌君子-->
+		<div class="middle">
+			<p class="title">您的称号</p>
+			<img src="img/zj/xyk_1.png" class="mycard">
+			<p class="defeat" id="Vbeat">您打败了<span id="Vpercent"></span>的酒林高手！</p>
+			<img src="img/zj/card1.png" class="card">
+		</div>
+	</div>
+	<p class="tips" style="display:block"></p>
+	<a class="_share"></a>
+	<a class="_rules _rules2" style="background:none; bottom:1%;right:.3rem"></a>
+</div>
+<!--#include file="include/footer.html" --> 
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+
+<!--分享层-->
+<div id="_share" style="-webkit-background-size: 100%;z-index: 11111;"></div>
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<style>
+#btn-a1{ display:block; position:absolute; top: .14rem; right: .2rem; width: 1.05rem; height: 1.05rem; z-index: 1000;}
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+.rotate000{-webkit-animation:9.5s linear 0s infinite rotate forwards;-webkit-animation-play-state:running;}
+#btn-a1 p{ display:block; width:100%; height:100%; background-size: 1.05rem; line-height:9999px; overflow:hidden;}
+.kais { background:url(/v/zzqpNew/img/bg/audio1.png) no-repeat center; background-size: contain;}
+.kais2 {background:url(img/bg/audio2.png) no-repeat center; background-size: contain;}
+._audio{ width: .41rem; position: absolute;top:2%; right: .2rem;z-index: 1000; display: none}
+</style>
+<div><audio id="bgMusic" autoplay loop src="/v/zzqpNew/music/bg.mp3?v=1"></audio></div>
+<img src="img/bg/audio1.png" class="_audio" alt="">
+<div id="btn-a1" class="film-container rotate000">
+  <p class="kais"> <i class="fa fa-music"></i></p>
+  <p class="kais2" style="display: none;"><i class="fa fa-music"></i> <i class="fa fa-minus"></i></p>
+</div>
+
+<script type="text/javascript">
+    var audio = document.getElementById('bgMusic');
+	// 音乐相关
+    function initMusic() {
+        var el = $("#bgMusic")
+        if (el && el.length > 0 && el.attr("src")) {
+            // 音乐相关
+            
+            $('#btn-a1').on("touchstart", function (ev) {
+                if (audio.paused) {
+                    audio.play();$('btn-a1').addClass('btn-a1');
+                    //$(".kais2").stop().fadeOut(0);
+                    //$(".kais").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'running'});
+                } else {
+                    audio.pause();$('btn-a1').removeClass('btn-a1');
+                    //$(".kais").stop().fadeOut(0);
+                    //$(".kais2").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'paused'});
+                }
+            });
+            $(document).one('touchstart', function () {
+                //audio.play();
+            });
+        }
+    }
+    initMusic(); 
+
+</script> 
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/cfg.js?v=1.0.6"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="js/show.js?v=2.0.8"></script>
+</body>
+<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+</html>

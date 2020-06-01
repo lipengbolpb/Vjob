@@ -1,0 +1,100 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url('../img/bg.png') repeat top left;
+    text-align: center;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+div.wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+    left:0;
+    overflow: auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+    width: 85%;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+    width: 20%;
+}
+
+.record {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    top: 0.5rem;
+}
+
+.couplet {
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    top: 6.5rem;
+}
+.drum {
+    position: absolute;
+    top: 10rem;
+    left: 37.5%;
+    width: 25%;
+}
+.title{
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffd732;
+    font-weight: bold;
+}
+.content{
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+.bear {
+    position: absolute;
+    width: 20%;
+    left: 70%;
+    top: 19rem;
+    margin-bottom: 1rem;
+}
+#copyright{
+    position: absolute;
+    top: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #d8cc93;
+    font-size: 0.5rem;
+}
+#batch{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    background-color: #c0c0c0;
+    font-size: 0.9rem;
+    z-index: 1;
+}

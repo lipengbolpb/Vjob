@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>情人节，酒意情浓！</title>
+<link rel="stylesheet" type="text/css" href="css/ticket.css">
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--[if lt IE 9]>
+<script>
+    window.location.href='http://windows.microsoft.com/zh-CN/internet-explorer/download-ie';
+</script>
+<![endif]-->
+<!--public-->
+<link rel="stylesheet" href="css/public/global.css?v=1">
+<link rel="stylesheet" href="css/public/layout.css?v=1">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+
+</head>
+<body class="page page1">
+<!--我的奖品列表-->
+<div id="fyb2" class="bg pop_container" style="display:block"><a class="_close" href="myJp.html"></a>
+  <div class="fyb">
+    <ul>
+      <li><p class="level">一等奖</p><p class="name">歌诗达邮轮</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+      <li class="bg"><p class="level">一等奖</p><p class="name">歌诗达邮轮</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="ylq">已领取</a></p></li>
+      <li><p class="level">一等奖</p><p class="name">歌诗达邮轮</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+      <li class="bg"><p class="level">一等奖</p><p class="name">歌诗达邮轮</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+    </ul>
+    <a class="back" onclick="$('#fyb2').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+
+<!--公用弹窗-->
+<div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <h2>很抱歉</h2>
+    <p>呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <!--<a class="close">ok</a>-->
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+<!--摇签未中奖提示-->
+<div class="pop_container" id="noprizeTier" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <p>呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--填写信息提交成功-->
+<div class="pop_container" id="prizeTier" style="display:none;"><a class="_close"></a>
+  <div class="success">
+    <p>您的信息已提交成功！<br>请耐心等待工作人员跟您联系。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--填写信息提交失败-->
+<div class="pop_container" id="noprizeTier2" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <p>呜呜~开了个小差~<br>关闭页面，重新再试一次吧。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--二维码已经扫过-->
+<div class="pop_container" id="noprizeTier3" style="display:none;"><a class="_close"></a>
+  <div class="fail2">
+    <img src="img/bg/fail2.png" />
+    <a class="close" href="huanju.html"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--pk赢-->
+<div class="pop_container pk pk1 bg"><a class="_close"></a>
+  <div class="succ">
+    <p>8.8元</p>
+    <a href="myJp.html"></a>
+  </div>
+</div>
+<!--pk输-->
+<div class="pop_container pk pk2 bg"><a class="_close"></a>
+  <div class="fail">
+    <a href="huanju.html"></a>
+  </div>
+</div>
+<!--填写信息姓名电话-->
+<div id="ipt" class="bg pop_container"><a class="_close"></a>
+  <div class="ipt">
+    <input type="text" class="name"><div class="sta1 right"></div>
+    <input type="tel" class="tel"><div class="sta2 wrong"></div>
+    <!--提交按钮，提交失败执行tj2();-->
+    <a class="sub" onclick="tj1();"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2">
+</div>
+
+<!--提现成功-->
+<div class="tx tx1 bg"><a class="_close"></a>
+  <div><img src="img/zj/txcg.png" /><a class="back" href="index.html"></a><a class="huanju" href="huanju.html"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--提现失败-->
+<div class="tx tx2 bg"><a class="_close"></a>
+  <div><img src="img/zj/txsb.png" /><a class="back" href="index.html"></a><a class="huanju" href="huanju.html"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+
+<!--风云榜-->
+<div id="fyb" class="bg pop_container"><a class="_close"></a>
+  <div class="fyb">
+    <ul>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p>
+      <p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+      <li class="bg"><img src="img/zj/head3.png" class="head"><p class="name">微信ID<span>钢铁侠</span></p><p class="ranking">冠军<span>第一名</span></p><p class="num"><span>1280</span>罐</p></li>
+    </ul>
+    <a class="back" onclick="$('#fyb').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--我的奖品列表-->
+<div id="fyb2" class="bg pop_container"><a class="_close"></a>
+  <div class="fyb">
+    <ul>
+      <li><p class="name">中奖红包</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">0.98元</a></p></li>
+      <li class="bg"><p class="name">一等奖</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="ylq">已领取</a></p></li>
+      <li><p class="name">中奖红包</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+      <li class="bg"><p class="name">一等奖</p>
+      <p class="ranking">中奖时间<span>2017/03/28</span></p><p class="num"><a class="wlq">领取</a></p></li>
+    </ul>
+    <a class="back" onclick="$('#fyb2').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+
+<!--分享层-->
+<div id="_share"></div>
+ 
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<style>
+#btn-a1{ display:block; position:absolute; top: .14rem; right: .2rem; width: .500rem; height: .500rem; z-index: 1000;-webkit-animation:9.5s linear 0s infinite rotate forwards;-webkit-animation-play-state:running;}
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+#btn-a1 p{ display:block; width:100%; height:100%; background-size: .500rem; line-height:9999px; overflow:hidden;}
+.kais { background:url(/v/zzqp/img/bg/audio1.png) no-repeat center; background-size: contain;}
+.kais2 {background:url(/v/zzqp/img/bg/audio2.png) no-repeat center; background-size: contain;}
+._audio{ width: .41rem; position: absolute;top:2%; right: .2rem;z-index: 1000; display: none}
+</style>
+<div style="opacity: 0;">
+  <audio id="bgMusic" autoplay loop src="/v/zzqp/music/bg.mp3?v=7"></audio>
+</div>
+<img src="img/bg/audio1.png" class="_audio" alt="">
+<div id="btn-a1" class="film-container">
+  <p class="kais"> <i class="fa fa-music"></i></p>
+  <p class="kais2" style="display: none;"><i class="fa fa-music"></i> <i class="fa fa-minus"></i></p>
+</div>
+
+<script type="text/javascript">
+    var audio = document.getElementById('bgMusic');
+  // 音乐相关
+    function initMusic() {
+        var el = $("#bgMusic")
+        if (el && el.length > 0 && el.attr("src")) {
+            // 音乐相关
+            
+            $('#btn-a1').on("touchstart", function (ev) {
+                if (audio.paused) {
+                    audio.play();console.log('1');
+                    $(".kais2").stop().fadeOut(0);
+                    $(".kais").stop().fadeIn(0);
+          $('.film-container').css({'-webkit-animation-play-state':'running'});
+                } else {console.log('2');
+                    audio.pause();
+                    $(".kais").stop().fadeOut(0);
+                    $(".kais2").stop().fadeIn(0);
+          $('.film-container').css({'-webkit-animation-play-state':'paused'});
+                }
+            });
+            $(document).one('touchstart', function () {
+                //audio.play();
+            });
+        }
+    }
+    initMusic(); 
+
+</script> 
+</body>
+</html>

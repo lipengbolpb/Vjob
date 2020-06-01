@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青啤湖南</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/prize.css?v=1.3" />
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?908f7708c3a4f4aec843c2d81cf41f0d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style type="text/css">
+        .check {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            display: none;
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+        #geted {
+            width: 12rem;
+            position: absolute;
+            left: 50%;
+            margin-left: -6rem;
+            top: 5rem;
+        }
+
+        #tip_1 {
+            margin-top: 20rem;
+            text-align: center;
+            font-size: 0.6rem;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="check">
+        <img src="img/geted.png" id="geted" />
+        <p id="tip_1">温馨提示：点击“立即兑奖”填写中奖信息吧~</p>
+    </div>
+    <div class="content">
+        <div class="mark">
+            <img src="img/vocal-slogan.png" class="vocalSlogan">
+            <!-- <img class="slogan" src=""/ id="slogan">
+            <img class="stub" src=""/ id="stub">
+            <img class="pink-flower" src="img/pink-flower.png"/>
+            <img class="pink" src="img/pink.png"/>
+            <img class="blue-flower" src="img/blue-flower.png"/>
+            <img class="blue" src="img/blue.png"/>
+            <img class="green-flower" src="img/green-flower.png"/>
+            <img class="green" src="img/green.png"/> -->
+        </div>
+        <input type="button" name="" id="dj" value="立即兑奖" />
+        <p id="tip">温馨提示：点击“立即兑奖”填写中奖信息吧~</p>
+    </div>
+    <div class="msg_box">
+        <div id="active">
+            <i id="close">╳</i>
+            <img src="img/active.png" />
+        </div>
+        <div>
+            <div class="shuoming2">
+                <img id="shuoming2" src="img/shuoming2.png?v=1" />
+            </div>
+            <a id="look" href="javascript:;">查看一等奖兑奖方法>></a>
+            <div id="msglist">
+                <img src="img/msg-tip.png?v=2" />
+                <p class="user_box">
+                    <span class="l">您的姓名</span>
+                    <input class="l" type="text" maxlength="8" name="user" id="user" value="" />
+                </p>
+                <p class="id_box">
+                    <span class="l">输入身份证号</span>
+                    <input class="l" type="text" name="user" id="id" value="" maxlength="18" />
+                </p>
+                <p class="tel_box">
+                    <span class="l">输入手机号</span>
+                    <input class="l" type="text" name="user" id="tel" value="" maxlength="11" />
+                </p>
+                <p class="yz_box">
+                    <span class="l">验证码</span>
+                    <input type="text" class="l" name="user" id="yzcode" value="" maxlength="4" />
+                    <a href="javascript:;" id="get_yz" class="l">获取验证码</a>
+                </p>
+            </div>
+            <input type="button" name="tj" id="tj" value="提交" />
+            <p class="tip">温馨提示：中奖者需提供完整的中奖瓶盖及中奖产品空
+                <br />瓶，以及个人身份证复印件供我公司或我公司委托的第
+                <br />三方公司核实确认</p>
+            <!--您的信息已提交成功，请耐心等待主办方与您联系-->
+            <p class="shuom">
+                <a href="javascript:;" id="explain">活动说明</a>
+                <a href="javascript:;" id="guize">隐私说明</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v1"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.0"></script>
+<script src="/v/js/cfg.js?v5.2" type="text/javascript" charset="utf-8"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/prize.js?v=1.2.21" type="text/javascript" charset="utf-8"></script>
+<script>
+    ini_wxshare(vge.csqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script>
+    (function () {　　
+        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {　　　　
+            handleFontSize();　　
+        } else {　　
+            if (document.addEventListener) {　　　　
+                document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);　　　　
+            } else if (document.attachEvent) {　　　　
+                document.attachEvent("WeixinJSBridgeReady", handleFontSize);　　　　
+                document.attachEvent("onWeixinJSBridgeReady", handleFontSize);　　　　
+            }
+        }
+
+        function handleFontSize() {　　 // 设置网页字体为默认大小
+            　　
+            WeixinJSBridge.invoke('setFontSizeCallback', {　　
+                'fontSize': 0　　
+            });　　 // 重写设置网页字体大小的事件
+            　　
+            WeixinJSBridge.on('menu:setfont', function () {　　　　
+                WeixinJSBridge.invoke('setFontSizeCallback', {　　　　　　
+                    'fontSize': 0　　　　
+                });　　
+            });
+        }
+    })();
+</script>
+
+</html>

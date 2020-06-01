@@ -1,0 +1,32 @@
+#huanju .huanju{ width: 6.4rem;height: 100%;position: absolute;top: 0;left: 0;
+	/*background: url('../img/huanju/index.png') no-repeat center/contain;*/ }
+#huanju .a1{width:2.61rem;height: .89rem;position: absolute;left: 1.9rem;top: 51%;
+	background: url('../img/huanju/a1.png') no-repeat center/contain;
+	-webkit-animation:fuck 1s .5s forwards}
+#huanju .a2{width:2.61rem;height: .89rem;position: absolute;left: 1.9rem;top: 63%;
+	background: url('../img/huanju/a2.png') no-repeat center/contain;
+	-webkit-animation:fuck 1s .5s forwards}
+#huanju .a3{width:2.61rem;height: .89rem;position: absolute;left: 1.9rem;top: 75%;
+	background: url('../img/huanju/a3.png') no-repeat center/contain;
+	 -webkit-animation:fuck 1s .5s forwards}
+#huanju .beer2{width: 1.66rem;position: absolute;left: 2rem;top: 15%}
+#huanju .t1{width: 4.95rem;position: absolute;left: .72rem;top: 23%}
+#huanju .beer1{width: 1.01rem;position: absolute;left: 4.7rem;top: 20%}
+@-webkit-keyframes aa1{
+	0%,100%{ -webkit-transform:translateY(0); }
+	50%{ -webkit-transform:translateY(.2rem);}
+}
+@-webkit-keyframes aa2{
+	0%,100%{ -webkit-transform:translateY(0); }
+	90%{ -webkit-transform:translateY(.2rem);}
+}
+#huanju .beer{ width:1.23rem;position:absolute;left:3.7rem;bottom:.5rem; }
+#risk{ width: 100%;height: 100%;position: absolute;top: 0; display: none;}
+#risk .risk2{ width: 4.66rem; left: .7rem; top: 10%}
+.beer1{ -webkit-animation:fuck 1s .7s forwards !important;opacity: 0 }
+.beer2{ -webkit-animation:fuck 1s .7s forwards !important;opacity: 0 }
+@-webkit-keyframes fuck{
+	0%{  opacity: 0 }
+	10%,100%{ opacity: 1}
+}
+._rules{ background: none !important; bottom: 2 !important }

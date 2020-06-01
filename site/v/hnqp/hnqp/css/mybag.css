@@ -1,0 +1,211 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: white;
+}
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+#alert img{
+	width: 100%;
+}
+@media only screen and (max-device-height:480px ) {
+	div.mybag_top{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background:#fabd00 url(../img/mybag-bg-top.png?v1.1) no-repeat left top;
+		background-size: 100% 48%;
+		-webkit-background-size: 100% 48%;
+		-webkit-transition:all 1s;
+		transition: all 1s;
+	}
+	div.msg{
+		width: 89%;
+		position: relative;
+		left: 5.5%;
+		top: 51%;
+		text-align: center;
+		color: #814900;
+	}
+	div.msg div.btn{
+		width: 100%;
+		height: 1.95rem;
+		line-height: 1.95rem;
+		margin-top: 0.5rem;
+		font-size: 0.8rem;
+	}
+	div.msg div.btn input{
+		height: 1.95rem;
+		width: 49%;
+		background: #e8380d;
+		border-radius:0.5rem;
+		font-size: 0.8rem;	
+		-webkit-border-radius: 0.5rem;	
+	}
+}
+@media only screen and (min-device-height:481px ) {
+	div.mybag_top{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background:#fabd00 url(../img/mybag-bg-top.png?v1.2) no-repeat left top;
+		background-size: 100% 49%;
+		-webkit-background-size: 100% 49%;
+		-webkit-transition:all 1s;
+		transition: all 1s;
+	}
+	div.msg{
+		width: 89%;
+		position: relative;
+		left: 5.5%;
+		top: 54%;
+		text-align: center;
+		color: #814900;
+	}
+	div.msg div.btn{
+		width: 100%;
+		height: 1.95rem;
+		line-height: 1.95rem;
+		margin-top: 1rem;
+	
+	}
+	div.msg div.btn input{
+		height: 1.95rem;
+		width: 49%;
+		background: #e8380d;
+		border-radius:0.5rem;
+		font-size: 0.8rem;	
+		-webkit-border-radius: 0.5rem;	
+	}
+}
+
+div.msg p{
+	margin: 0 auto;
+	font-size: 0.9rem;
+	display: inline-block;
+}
+div.msg p span{
+	font-size: 1.1rem;
+}
+div.msg p.all{
+	width: 14.45rem;
+	line-height: 2rem;
+	background: url(../img/mgbag-jiu-diwen.png?v=1) no-repeat left top;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	margin-bottom: 0.85rem;
+}
+div.msg p.balance{
+	padding-left: 1.1rem;
+	background: url(../img/icon-money.png) no-repeat left;
+	background-size: 0.9rem;
+	margin-bottom: 0.55rem;
+}
+div.msg p.sent{
+	padding-left: 1.1rem;
+	background: url(../img/icon-mybag.png) no-repeat left;
+	background-size: 0.9rem;
+	margin-bottom: 0.55rem;
+}
+
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	background: #FABD00;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+}
+div.mybag_bottom div.record input{
+	width: 100%;
+	height: 1.95rem;
+	margin: 1.05rem 0;
+	background: #e8380d;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	background:#E8380D url(../img/mybag-gotop.png?v=1) no-repeat center;
+	background-size: auto 100%;
+	float: left;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #cb994c solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #CB994C solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	color: #814900;
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #9b6e33;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #814900;
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	color: #E8380D;
+	display: none;
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #E8380D;
+	display: none;
+}

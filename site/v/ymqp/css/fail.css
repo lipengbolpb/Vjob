@@ -1,0 +1,82 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url('../img/bg.png') no-repeat top left;
+    -webkit-background-size: 100%;
+    text-align: center;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+div.wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+img.logo{
+    width:95%;
+    display:block;
+    margin:0.3rem auto 0;
+}
+#contant{
+	display: block;
+    width:90%;
+    margin:3rem auto 0;
+    z-index: 1;
+}
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:600;
+    background-color: aliceblue;
+}
+p.time{
+    width:100%;
+    text-align:center;
+    position: absolute;
+    top:8rem;
+    font-size:0.65rem;
+}
+p.time span:nth-of-type(1){
+    color:#ffe036;
+}
+p.time span:nth-of-type(2){
+    color:#ffffff;
+}
+@-webkit-keyframes game{
+    20%,60%{
+        -webkit-transform: rotate(-5deg);
+    }
+    40%,80%{
+        -webkit-transform: rotate(5deg);
+    }
+    0%,10%,90%,100%{
+        -webkit-transform: rotate(0deg);
+    }
+}
+img.game{
+    z-index: 1;
+    position: absolute;
+    width: 3rem;
+    bottom: 4rem;
+    right: 0.5rem;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color:rgba(0, 0, 0, 0);
+    -o-tap-highlight-color:rgba(0, 0, 0, 0);
+    tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-animation: game .8s linear both infinite;
+}

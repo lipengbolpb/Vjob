@@ -1,0 +1,5 @@
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<!--#include file="../include/music.shtml" --> 

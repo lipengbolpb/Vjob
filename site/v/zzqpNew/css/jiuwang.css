@@ -1,0 +1,65 @@
+/*2017酒王战绩相关*/
+#jiuw_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+#jiuw_box img.close{
+    position: absolute;
+    top: 0.35rem;
+    left: .35rem;
+    width: 0.8rem;
+}
+#jiuw_box div{
+	/* height: 11rem; */
+	height: 4.5rem;
+	width: 100%;
+	position: absolute;
+	bottom: -11rem;
+	background: url(/v/ymqp20180130/img/jiuw_qrbg.png) no-repeat center;
+	-webkit-background-size: 100%;
+	-webkit-transition: all .6s;
+}
+#jiuw_box div img{
+	/* width: 4.48rem;
+	margin-left:9.9rem ;
+    margin-top: 2.77rem; */
+    width: 1.5rem;
+    margin-left: 4.2rem;
+    margin-top: 1.5rem;
+}
+#jw_icon{
+	/* width: 6.5rem;
+	position: absolute;
+	bottom: .35rem;
+    left: .35rem; */
+    width: 2.5rem;
+    position: absolute;
+    bottom: .35rem;
+    left: .1rem;
+	display: none;
+    -webkit-animation: jw_icon .8s linear both infinite;
+    z-index: 1;
+}
+@-webkit-keyframes jw_icon {
+    20%,
+    60% {
+        -webkit-transform: rotate(-8deg);
+    }
+    40%,
+    80% {
+        -webkit-transform: rotate(8deg);
+    }
+    0%,
+    10%,
+    90%,
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}

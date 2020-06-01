@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>加载中...</title>
+</head>
+<style>
+    .loading{
+            width: 150px;
+            height: 8px;
+            border-radius: 4px;
+            margin: 0 auto;
+            margin-top:60%;
+            position: relative;
+            background: lightblue;
+            overflow: hidden;
+        }
+        .loading span{
+            display:block;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            background: lightgreen;
+            -webkit-animation: changePosition 4s linear infinite;
+        }
+        @-webkit-keyframes changePosition{
+            0%{
+                -webkit-transform: translate(-150px);
+            }
+            50%{
+                -webkit-transform: translate(0);
+            }
+            100%{
+                -webkit-transform: translate(150px);
+            }
+        }
+</style>
+
+<body>
+<!--Loading-->
+    <div class="loading" id="app">
+        <span></span>
+        <div id="scanCounts">{{scanCounts}}</div>
+    </div>
+<!--Loading-->
+
+<script src="js/jquery.js"></script>
+<script src="js/vue.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=2.3.0"></script>
+<script>
+    function go(){
+        var args = vge.urlparse(location.href);
+        var openid = args.openid;
+        sessionStorage.removeItem('flag');
+    }
+    go();
+</script>
+<script src="js/scene.js?v=1.3.2"></script>
+
+
+
+
+<script>
+    function ready(){
+        var args = vge.urlparse(location.href);
+        var openid = args.openid;
+        setTimeout(function(){
+           var scanCounts =  $('#scanCounts').text();
+        //    vge.clog('time',[scanCounts]);
+        //    console.log(scanCounts);
+        //    if(scanCounts == 0 ||null || undefined){
+        //         window.location.href = 'http://' + location.host + '/v/sdqp/shareScene.html?openid='+ openid
+        //         //  window.location.href = '../sdqp/shareScene.html';
+        //     }else{
+        //         window.location.href = 'http://' + location.host + '/v/sdqp/swiperV.html?openid='+ openid
+        //         // window.location.href = '../sdqp/swiper.html';
+        //     }
+        },2000)
+        
+    }
+    ready();
+</script>
+
+</body>
+</html>

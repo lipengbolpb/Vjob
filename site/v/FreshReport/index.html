@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>青啤开瓶新鲜度日报</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/index.css?v=32">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 时间 -->
+        <div class="header">
+            <p id="lookDate"></p>
+        </div>
+        <!-- 概况 -->
+        <div class="basic">
+            <div class="left">
+                <div class="top">
+                    <img src="img/title-1.png">
+                    <span>新鲜度</span>
+                </div>
+                <div class="bottom">
+                    <p>
+                        <span id="dayFresh"></span>天</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <img src="img/title-2.png">
+                    <span>环比</span>
+                </div>
+                <div class="bottom">
+                    <p>
+                        <span id="dayFreshP"></span>
+                        <img src="" id="icon">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 一周新鲜度趋势 -->
+        <div class="trend">
+            <p>一周新鲜度趋势</p>
+            <div id="echartsTrend"></div>
+        </div>
+        <!-- sku排名 -->
+        <div class="sku">
+            <p class="skuTitle1">品种</p>
+            <div id="echartsSku"></div>
+        </div>
+        <!-- 表格 -->
+        <div class="excel">
+            <ul class="head">
+                <li>排名</li>
+                <li class="skuTitle2">品种</li>
+                <li>新鲜度</li>
+                <li>一周趋势</li>
+            </ul>
+            <ul class="main">
+
+            </ul>
+        </div>
+        <!-- 浮层图表 -->
+        <div class="mask">
+            <p class="legend"><i></i><span class="legendHtml"></span></p>
+            <div id="echartsMask"></div>
+            <div class="maskClose"><img src="img/close.png"></div>
+        </div>
+        <p class="copyright">本服务由V积分大数据中心提供</p>
+        <img src="img/loading.gif" class="loading">
+    </div>
+    <div class="control">
+        <div class="outside">
+            <div class="close"></div>
+            <div class="content">
+                <p class="all">全部</p>
+            </div>
+        </div>
+        <!-- 回到顶部 -->
+        <!-- <img src="img/top.png" class="top" id="toTop"> -->
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/index.js?v=3.17"></script>
+<!-- <script src="js/toTop.js?v=2"></script> -->
+
+</html>

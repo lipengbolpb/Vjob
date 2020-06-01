@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>锐澳RIO鸡尾酒</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css?v=1.0.3"/>
+		<style type="text/css">
+			div.fail_tip_box{
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+			img.fail_tip{
+				width: 12.75rem;
+				margin: 4.75rem auto 0;
+			}
+			img.qrcode{
+				width: 8.6rem;
+				margin: .75rem 0 0 4.45rem;
+				pointer-events: auto;
+			}
+			img.logo_b{
+				margin: 0 auto;
+				width: 9.1rem;
+				position: absolute;
+				bottom: .5rem;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+			}
+			p.time{
+				text-align: center;
+				font-size: .5rem;
+				color: #fff;
+				position: absolute;
+				bottom: .8rem;
+				width: 100%;
+				left: 0;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="fail_tip_box">
+				<img src="/v/RIO/img/fail_tip.png?v=1" class="fail_tip"/>
+				<p class="time"></p>
+			</div>
+			<img src="/v/RIO/img/qrcode_1.png" class="qrcode"/>
+			<img src="/v/RIO/img/logo.png"  class="logo_b"/>
+		</div>
+	</body>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 牛位置
+			$('.fail_tip').css({'width':'11rem','margin':'3rem auto 0'});
+			$('.qrcode').css({'width':'7rem','margin':'.75rem 0 0 4.8rem'});
+			$('.logo_b').css({'width':'8rem','margin':'0 auto'});
+		}
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		});
+		document.getElementsByClassName('time')[0].innerHTML = '扫码时间：'+sessionStorage.earnTime;
+	</script>
+</html>

@@ -1,0 +1,806 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+
+/* .test{
+  font-family: 'popular';
+  font-size: 50px;
+  text-shadow: none;
+} */
+.one .bg,.two .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/oneBg.png?v=1.0);
+    background-size: 100% 100%;
+	  position: relative;
+}
+.slide1,.slide2,.slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 2s linear infinite;
+	-webkit-animation: move 2s linear infinite;
+}
+.slide1 img,.slide2 img,.slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+
+@-webkit-keyframes move{
+	0%{
+		bottom: 5%;
+  }
+  50%{
+		bottom: 3%;
+	}
+	100%{
+		bottom: 5%;
+	}
+}
+
+.text img{
+  height: 2.933333rem;
+  /* width: 7.066667rem; */
+}
+/* .one .mask1,.one .mask2{
+  height: 2.933333rem;
+  width: 7.066667rem;
+  position: absolute;
+  top: 26%;
+  left: 15%;
+  background:transparent;
+  display: inline-block;
+  overflow: hidden;
+  animation: wrapper-gradient 3s linear;
+}
+.one .mask1 img,.one .mask2 img{
+  animation: img-gradient 3s linear;
+}
+.one .mask2 img{
+  left: 16%;
+  position: absolute;
+} */
+
+/* animation */
+.one .mask1,.one .mask2{
+  height:0;
+  width: 7.066667rem;
+  position: absolute;
+  top: 26%;
+  left: 15%;
+  background:transparent;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.one .mask1.ani,.one .mask2.ani{
+   animation: changeHei-gradient 3s linear both;  
+}
+/* .one .mask1 img,.one .mask2 img{
+display:none;
+} */
+.one .mask1 img{
+  height: 2.933333rem;
+}
+.one .mask2 img{
+  left: 16%;
+  position: absolute;
+}
+
+
+@keyframes changeHei-gradient {
+0% {
+ height:0;
+}
+100% {
+  height: 2.933333rem;
+}
+}
+/* .mask2{
+  display: none;
+} */
+
+@keyframes wrapper-gradient {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+@keyframes img-gradient {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo{
+  position:absolute;
+  bottom:30%;
+  right:4%;
+  height: 1.813333rem ;/* 136/75 */
+}
+
+.light{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height: 6.946667rem; /* 521/75 */
+  left:0;
+}
+
+
+
+
+/* two */
+
+.two .mask1{
+    height: 2.933333rem;
+    width: 7.066667rem;
+    position: absolute;
+    top: 26%;
+    left: 15%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 4s linear;
+  }
+  
+  .two .mask1 .text{
+    width:68%;
+    animation: img-gradient 4s linear;
+  }
+  .two .viewer{
+    position:absolute;
+    bottom:-40%;
+    left:0;
+    width:100%;
+    height:6rem ;/*406/75 */
+  }
+  .two .rise{
+    bottom:0;
+    transition: bottom 2s;
+  }
+
+  /* three */
+.three .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/twoBg.png?v=1.0);
+    background-size: 100% 100%;
+    position: relative;
+}
+.three .text img{
+    height:6rem; /* 388/75 */
+    width: 7.066667rem;
+}
+.three .mask{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 5s linear;
+}
+.three .mask img{
+    animation: img-gradient 5s linear;
+}
+
+/* five */
+.five .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/threeBg.png?v=1.0);
+    background-size: 100% 100%;
+	position: relative;
+}
+.five .slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 2s linear infinite;
+	-webkit-animation: move 2s linear infinite;
+}
+.five .slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+.five .text{
+    /* position: absolute;
+    top: 3.8rem;
+    left: .8rem; */
+}
+.five .text img{
+    /* height:5.173333rem; 388/75 */
+    width: 7.066667rem;
+    /* position: absolute;
+    top: 26%;
+    left: 15%; */
+}
+.five .mask{
+    height: 4.8rem;
+    /* width: 7.3rem; */
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 5s linear;
+}
+.five .text img{
+    height: 4.8rem;
+    /* width: 7.066667rem; */
+}
+.five .mask img{
+    animation: img-gradient 5s linear;
+}
+
+/*six */
+
+.six .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/fourBg.png?v=1.0);
+    background-size: 100% 100%;
+	position: relative;
+}
+.six .slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 4s linear infinite;
+	-webkit-animation: move 4s linear infinite;
+}
+.six .slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+.six .text img{
+    height: 3.8rem;
+    width: 7.066667rem;
+}
+.six .mask{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 3s linear;
+}
+.six .mask img{
+    animation: img-gradient 3s linear;
+}
+
+/* seven */
+.seven .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/sevenBg.png?v=1.0);
+    background-size: 100% 100%;
+	  position: relative;
+}
+.seven .slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 2s linear infinite;
+	-webkit-animation: move 2s linear infinite;
+}
+.seven .slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+.seven .mask1,.seven .mask2{
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    background: transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 6s linear;
+    width: 82%;
+}
+.seven .text{
+    position: relative;
+    top: 10%;
+    /* font-family: 'popular'; */
+    font-size: .42rem;
+    color: #fff;
+    text-shadow: none;
+    line-height: .66rem;
+    /* width: 100%; */
+    text-align: left;
+    animation: img-gradient 6s linear;
+  }
+/* .seven .mask1 img,.seven .mask2 img{
+    animation: img-gradient 5s linear;
+} */
+.seven .text span{
+    color:#00fffc;
+  }
+.seven .text img{
+    width: 7.6rem /* 596/75 */;
+    height: 6.6rem /* 454/75 */;
+
+    position: relative;
+}
+.seven .mask1 .text span:nth-child(2){
+  top: -.1rem;
+  position: absolute;
+  left: .4rem;
+}
+.seven .mask1 .text span:nth-child(3){
+  position: absolute;
+  top: -.1rem;
+  left: 4.6rem;
+}
+.seven .mask1 .text span:nth-child(4){
+  position: absolute;
+  top: 17%;
+  right: 2.6rem;
+}
+.seven .mask1 .text span:nth-child(5){
+  position: absolute;
+  top: 16%;
+  right: .6rem;
+}
+.seven .mask1 .text span:nth-child(6){
+  position: absolute;
+    top: 35%;
+    left: 34%;
+}
+.seven .mask1 .text span:nth-child(7){
+  position: absolute;
+  top: 44%;
+  left: 1rem;
+}
+.seven .mask1 .text span:nth-child(8){
+  position: absolute;
+  bottom: 28%;
+  left: .36rem;
+}
+.seven .mask1 .text span:nth-child(9){
+  position: absolute;
+  bottom: 29%;
+  right: 1.3rem;
+}
+
+
+
+.seven .mask2 .text span:nth-child(2){
+  top: -.08rem;
+  position: absolute;
+  left: .4rem;
+}
+.seven .mask2 .text span:nth-child(3){
+  position: absolute;
+  top: -.08rem;
+  left: 4.9rem;
+}
+.seven .mask2 .text span:nth-child(4){
+  position: absolute;
+  top: 9%;
+  left: 2.2rem;
+}
+.seven .mask2 .text span:nth-child(5){
+  position: absolute;
+  top: 19%;
+  right: 2.6rem;
+}
+.seven .mask2 .text span:nth-child(6){
+  position: absolute;
+  top: 60%;
+  left: 4%;
+}
+.seven .mask2 .text span:nth-child(7){
+  position: absolute;
+    top:59%;
+    right: 1.6rem;
+}
+.seven .shakeBottle{
+  display: block;
+  position: absolute;
+  width:1.2rem; /* 90/75 */
+  height:.986667rem; /* 74/75 */
+  bottom: 45%;
+  right: 28%;
+}
+
+/* eight */
+
+.eight .text{
+    position: relative;
+    top: 12%;
+    /* font-family: 'popular'; */
+    font-size: .46rem;
+    color: #fff;
+    text-shadow: none;
+    line-height: .7rem;
+    width: 100%;
+    text-align: left;
+    /* animation: img-gradient 5s linear; */
+  }
+.eight .text a{
+    display: inline-block;
+    padding-bottom:.4rem;
+  }
+.eight .text span{
+    color:#00fffc;
+  }
+  
+.eight .bg{
+      width:100%;
+      height:100%;
+      background-image: url(../img/h5analysis/eightBg.png?v=1.0);
+      background-size: 100% 100%;
+      position: relative;
+  }
+.eight .slide{
+      position:absolute;
+      bottom:3%;
+      left: 46%;
+      animation: move 2s linear infinite;
+      -webkit-animation: move 2s linear infinite;
+  }
+.eight .slide img{
+      height:1.013333rem; /* 76/75 */
+      width:1.2rem;/* 70/75 */
+  }
+.eight .text img{
+      width: 8rem; /* 596/75 */
+      height:4rem;
+      position: relative;
+      /* height: 4.4rem 280/75; */
+  }
+.eight .mask1,.eight .mask2{
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    background: transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 5s linear;
+    width: 88%;
+  }
+.eight .mask1 img,.eight .mask2 img{
+     /* position: relative;
+     animation: img-gradient 5s linear; */
+}
+.eight .txtPart{
+  position: relative;
+  animation: img-gradient 5s linear;
+}
+.eight .mask1 .txtPart span:nth-child(2){
+  position: absolute;
+  left: 40%;
+  top: 24%;
+}
+.eight .mask1 .txtPart span:nth-child(3){
+  position: absolute;
+  right: 20%;
+  top: 44%;
+}
+
+
+.eight .mask2 .txtPart span:nth-child(2){
+  position: absolute;
+  left: 40%;
+  top: 24%;
+}
+.eight .mask2 .txtPart span:nth-child(3){
+  position: absolute;
+  right: 20%;
+  top: 44%;
+}
+
+.eight .mask2 .txtPart span:nth-child(4){
+  position: absolute;
+  right: 16%;
+  top: 64%;
+  font-size: .36rem;
+}
+/* nine */
+
+.nine .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/nineBg.png?v=1.0);
+    background-size: 100% 100%;
+	position: relative;
+}
+.nine .slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 2s linear infinite;
+	-webkit-animation: move 2s linear infinite;
+}
+.nine .slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+
+.nine .text img{
+    width: 6.8rem;
+    height:3.6rem;
+}
+.nine .mask{
+    position: absolute;
+    top: 13%;
+    left: 15%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 3s linear;
+}
+.nine .mask img{
+    animation: img-gradient 3s linear;
+}
+
+/* ten */
+
+.ten .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/tenBg.png?v=1.0);
+    background-size: 100% 100%;
+	  position: relative;
+}
+.ten .slide{
+    position:absolute;
+    bottom:3%;
+    left: 46%;
+    animation: move 3s linear infinite;
+	  -webkit-animation: move 3s linear infinite;
+}
+.ten .slide img{
+    height:1.013333rem; /* 76/75 */
+    width:1.2rem;/* 70/75 */
+}
+.ten .text{
+    /* position: absolute;
+    top: 3.8rem;
+    left: .8rem; */
+}
+.ten .text img{
+    width: 90% /* 596/75 */;
+    /* height: 4.4rem 280/75; */
+    /* position: absolute;
+    top: 26%;
+    left: 15%; */
+}
+.ten .mask{
+    /* height: 2.933333rem; */
+    /* width: 7.3rem; */
+    position: absolute;
+    top: 18%;
+    left: 6%;
+    width: 90%;
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    animation: wrapper-gradient 3s linear;
+}
+.ten .mask img{
+    animation: img-gradient 3s linear;
+}
+.ten .redPacket{
+  display: block;
+  position: absolute;
+  width:3.466667rem;/* 260/75 */
+  height:4.266667rem; /* 320/75 */ 
+  bottom: 30%;
+  right: 24%;
+}
+
+/* elevent */
+.elevent .bg{
+    width:100%;
+    height:100%;
+    background-image: url(../img/h5analysis/prizeBg.png?v=1.1.0);
+    background-size: 100% 100%;
+	  position: relative;
+}
+.elevent .nickname{
+    font-size: .32rem;
+    color: #000;
+    position: relative;
+    top: 38%;
+    left: 20.6%;
+    font-weight: 500;
+    text-align: left;
+    width: 90%;
+    height: .48rem;
+}
+.elevent .designTitle{
+  font-size:.48rem ;/* 36/75 */
+  color:#e20202;
+  position: relative;
+  top: 41%; 
+}
+.elevent .text img{
+   /* width:6.8rem ;455/75 */
+   height:3.4rem; /* 250/75 */
+}
+.elevent .mask{
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+    background:transparent;
+    display: inline-block;
+    /* overflow: hidden; */
+    /* animation: wrapper-gradient 4s linear; */
+}
+.elevent .text{
+  position: relative;
+  /* top: 82%; */
+  top: 80%;
+  /* font-family: 'popular'; */
+  font-size: .46rem; /* 30/75 */
+  color:#fff;
+  text-shadow: none;
+  line-height:.8rem;
+  /* width:92%; */
+  text-align:center;
+  /* animation: img-gradient 4s linear; */
+}
+.elevent .text span{
+  color:#e50012;
+}
+
+.elevent .mask img{
+    /* animation: img-gradient 4s linear;
+    position: relative; */
+}
+.elevent .mask .textPart{
+  /* animation: img-gradient 4s linear; */
+  position: relative;
+}
+.elevent .prize1 span:nth-child(2){
+  position: absolute;
+  left: 36%;
+  top: 16%;
+  /* width: 1.4rem; */
+  text-align: center;
+  /* position: absolute;
+  left:36%;
+  top: 16%; */
+}
+.elevent .prize1 span:nth-child(3){
+  /* position: absolute;
+  left: 34%;
+  top: 36%; */
+  position: absolute;
+  left: 32%;
+  top: 36%;
+  width: 2rem;
+  text-align: center;
+}
+.elevent .prize1 span:nth-child(4){
+  position: absolute;
+  left: 82%;
+  top: 58%;
+}
+
+.elevent .prize1 span:nth-child(5){
+  position: absolute;
+  left: 64%;
+  top: 78%;
+}
+
+
+.elevent .prize2 span:nth-child(2){
+  /* position: absolute;
+  left: 38%;
+  top: 24%; */
+  position: absolute;
+  left: 38%;
+  top: 22%;
+  width: 1.8rem;
+  text-align: center;
+}
+.elevent .prize2 span:nth-child(3){
+  /* position: absolute;
+  left: 30%;
+  top: 50%; */
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  width: 2.2rem;
+  text-align: center;
+}
+.elevent .prize2 span:nth-child(4){
+  position: absolute;
+  left: 68%;
+  top: 77%;
+}
+
+.elevent .btn{
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+.elevent .btn img{
+  width:5.973333rem ;/* 448/75 */
+  height:1.04rem; /* 78/75 */
+}
+
+.elevent .play{
+  width: 1.4rem; /* 86/75 */
+  position: absolute;
+  right:3%;
+  top:6%;
+}
+.elevent .ewmPart{
+  display: none;
+}
+.elevent .ewm{
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  text-align: center;
+  font-size:.2667rem;
+  color:#fff;
+  width:70%;
+}
+.elevent .ewmImage{
+  position: absolute;
+  bottom: 2%;
+  right: 16%;
+  width: 1.47rem;
+  /* border: 4px solid #fff; */
+}
+.elevent .save{
+  position: absolute;
+  top: 84%;
+  right: 6%;
+  color: #fff;
+  font-size: .2rem;
+  background: #ffb200;
+  width: 80px;
+  height: 40px;
+  border-radius: 16px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  display:none;
+}
+
+/* canvas page */
+.twelve .bg{
+    width:100%;
+    height:100%;
+	  position: relative;
+}
+
+#canvasImg{
+    z-index: 1;
+    left: 0;
+    position: absolute;
+}
+
+
+#savepic{
+  left: 0;
+  position: absolute;
+  z-index:10;
+}

@@ -1,0 +1,95 @@
+<? include ../head.html ?>
+<!-- registerCSSFile:/static/css/weui.min.css -->
+<!-- registerCSS:
+     .lead {color:green;}
+     #container{padding:20px;}
+     #msg{padding:20px}
+  -->
+<!-- registerJS:
+     document.title='接口调用代码汇集';
+  -->
+
+<div class="container" id="container">
+  <p id="msg"></p>
+  <h4>--- 王碧莹begin ---</h4>
+  <a href="/liby/t/mywallet" class="weui_btn weui_btn_mini weui_btn_primary">我的钱包</a>
+  <a href="/liby/t/store_inform" class="weui_btn weui_btn_mini weui_btn_primary">店铺资料</a>
+  <a href="/liby/t/jf_indiana" class="weui_btn weui_btn_mini weui_btn_primary">积分夺宝</a>
+  <a href="/liby/msg" class="weui_btn weui_btn_mini weui_btn_primary">客服电话</a>
+  <a href="/liby/t/cash_record" class="weui_btn weui_btn_mini weui_btn_primary">提现记录</a>
+  <a href="/liby/t/charge_record" class="weui_btn weui_btn_mini weui_btn_primary">充值记录</a>
+  <a href="/liby/t/my_record" class="weui_btn weui_btn_mini weui_btn_primary">获奖记录</a>
+  <a href="/liby/t/add_card" class="weui_btn weui_btn_mini weui_btn_primary">添加银行卡</a>
+  <a href="/liby/t/real_name" class="weui_btn weui_btn_mini weui_btn_primary">实名认证</a>
+  <a href="/liby/t/reb_detail" class="weui_btn weui_btn_mini weui_btn_primary">返利详情</a>
+  <a href="/liby/t/scan_reg" class="weui_btn weui_btn_mini weui_btn_primary">完成注册</a>
+  <a href="/liby/t/scan_result" class="weui_btn weui_btn_mini weui_btn_primary">扫码赚钱</a>
+  <a href="/liby/t/win_record" class="weui_btn weui_btn_mini weui_btn_primary">中奖记录</a>
+  <a href="/liby/t/withdrawal" class="weui_btn weui_btn_mini weui_btn_primary">提现</a>
+  <h4>--- 王碧莹end ---</h4>
+  <a id="chkcode" href="javascript:;" class="weui_btn weui_btn_warn">手机获取验证码 ok</a>
+  <input id="vericode" class="weui-input" type="number" placeholder="请输入验证码">
+  <a id="save-shop-info" href="javascript:;" class="weui_btn weui_btn_primary">保存店铺信息接口 ok</a>
+  <a id="store-info" href="javascript:;" class="weui_btn weui_btn_primary">根据openid查询店铺信息 ok</a>
+  <a id="near-reseller" href="javascript:;" class="weui_btn weui_btn_default">附近经销商 ok</a>
+  <a id="wxscan" href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">微信扫一扫</a>
+  <a id="mywallet"  href="javascript:;" class="weui_btn weui_btn_warn">我的钱包 ok</a>
+  <a id="gift-list" href="javascript:;" class="weui_btn weui_btn_default">根据openid查询用户红包列表接口</a>
+  <a id="activity" href="javascript:;" class="weui_btn weui_btn_warn">活动详情</a>
+  <a id="location" href="javascript:;" class="weui_btn weui_btn_warn">根据经纬度获取地址</a>
+  <a id="qrscan" href="javascript:;" class="weui_btn weui_btn_warn">调用扫码接口</a>
+  <a id="real-name" href="javascript:;" class="weui_btn weui_btn_warn">实名认证</a>
+  <div class="button_sp_area">
+    <a id="get-gift" href="javascript:;" class="weui_btn weui_btn_plain_default">用户累计金额大于1元时，点击领取接口</a>
+    <a id="drawings" href="javascript:;" class="weui_btn weui_btn_plain_primary">提现</a>
+    
+    <a id="replenish" href="javascript:;" class="weui_btn weui_btn_mini weui_btn_primary">充值</a>
+  </div>
+  
+</div>
+
+<div id="toast" style="display: none;">
+  <div class="weui_mask_transparent"></div>
+  <div class="weui_toast">
+    <i class="weui_icon_toast"></i>
+    <p class="weui_toast_content">已完成</p>
+  </div>
+</div>
+
+<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+  <div class="weui_mask_transparent"></div>
+  <div class="weui_toast">
+    <div class="weui_loading">
+      <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+      <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+    </div>
+    <p class="weui_toast_content">数据加载中</p>
+  </div>
+</div>
+
+<script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+<!-- <script type="text/javascript" src="/static/js/jquery-browser.js"></script> -->
+<!-- <script src="/static/bs/js/bootstrap.min.js"></script> -->
+<!-- <script src="/static/js/ejs.min.js"></script> -->
+<!-- <script src="/static/js/echarts.min.js"></script> -->
+
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/v/js/cfg.js?v=11"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v16"></script>
+
+<? include ../foot.html ?>
+
+<!-- registerJSFile:/v/liby/japi.js?v=24 -->

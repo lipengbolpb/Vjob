@@ -1,0 +1,76 @@
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url('../img/fail-bg.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.main{
+    position: absolute;
+    top: 2rem;
+    left: 12.5%;
+    width: 75%;
+}
+.fail-content{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.title{
+    position:absolute;
+    top: 9rem;
+    left: 0;
+    width:100%;
+    color:#ffffff;
+    text-align: center;
+    font-size: 1.7rem;
+    /* font-size: 1.2rem; */
+    font-weight: bold;
+}
+.content{
+    position:absolute;
+    top: 12.5rem;
+    left: 0;
+    width:100%;
+    color:#ffffff;
+    text-align: center;
+    font-size:0.7rem;
+    /* font-size:0.55rem; */
+}
+.copyright{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #d8cc93;
+    font-size: 0.5rem;
+}
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:bold;
+    font-size: 0.9rem;
+    background-color: aliceblue;
+}
+@media only screen and (max-height:450px) and (min-width:320px) {
+    .main{
+        top: 1rem;
+    }
+}
+@media only screen and (max-height:500px) and (min-width:360px) {
+    .main{
+        top: 1rem;
+    }
+}
+@media only screen and (max-height:550px) and (min-width:400px) {
+    .main{
+        top: 1rem;
+    }
+}

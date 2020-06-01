@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+.toDetails,.toRanks{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+	margin: .5rem .7rem;
+}
+.toDetails{
+	width: 4rem;
+	height: 1.5rem;
+	background: url(../images/details_2.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+.toRanks{
+	width: 4.8rem;
+	height: 1.5rem;
+	background: url(../images/button_rank.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	background: #FED40C;
+	-webkit-transition:all 1s;
+	transition: all 1s;
+	overflow: hidden;
+	position: fixed;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	color: #333333;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+}
+div.mybag_bottom div.record input{
+	width: 8.85rem;
+	height: 2.95rem;
+	margin: 1.05rem 0;
+	background:url(../images/pack_up.png) no-repeat center;
+	background-size:auto 100%;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #ccaa0a solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #ccaa0a solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+	text-align: left;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	color: #333333;
+	font-size: 0.9rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #7b7869;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.6rem;
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+}
+#no_list{
+	text-align: center;
+	font-size: 1rem;
+	margin: 1rem 0;
+	color: #856c00;
+}
+
+
+
+
+
+
+
+
+

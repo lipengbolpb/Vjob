@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒畅享山东</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=2.39" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/jiuwang.css" /> -->
+</head>
+
+<body>
+    <div class="wxmark" id="wxmark">
+        <img src="img/alert_tip.png?v=2.1" class="alert" id="alert">
+    </div>
+    <div class="mark" id="mark">
+        <img src="img/sun.png?v=2.0" class="sun">
+        <img src="img/bag_mark.png?v=2.0" class="bagMark">
+        <img src="img/star_1.png?v=2.0" class="star1">
+        <img src="img/star_2.png?v=2.0" class="star2">
+        <img src="img/star_3.png?v=2.0" class="star3">
+        <div class="noticeMark">
+            <p class="p1">累计金额</p>
+            <p class="p2">￥<span id="tolMoney"></span>元</p>
+        </div>
+    </div>
+    <div class="bg">
+        <img src="img/logo.png?v=2.0" class="logo">
+        <div class="bag">
+            <img src="img/bag.png?v=2.0">
+            <div class="notice">
+                <!-- <img style="display: none;" id="repscan" src="img/zhang.png"/> -->
+                <img style="display: none;" id="repscan" src="img/rep-scan.png" />
+                <p class="p1" id="title">恭喜您获得</p>
+                <p class="p2"><span id="span1">￥</span><span id="money"></span><span id="span2">元</span></p>
+            </div>
+            <input type="button" value="" id="btn">
+        </div>
+        <div class="msg">
+            <p>根据微信平台要求，红包累计大于等于1元后可自动提现。不足1元的红包我们为您贴心准备了零钱包功能，快点击上方按钮存钱吧~</p>
+            <div class="rule">
+                <a href="javascript:;" class="left" id="left">活动规则</a>
+                <a href="javascript:;" class="right" id="right">隐私说明</a>
+            </div>
+        </div>
+    </div>
+    <!-- 活动广告页 -->
+    <div class="active">
+        <!-- <img src="img/logo.png" class="logo logo1"> -->
+        <img src="/v/sdqp-common2.0/img/20190430.png" class="activeMain">
+        <img src="img/close.png" class="activeClose">
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script type="text/javascript" src="/static/js/vve/21tpl.js?v=2"></script>
+<script src="/v/js/cfg.js?v=2.1.1"></script>
+<script src="/v/js/publictip.js?v=1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=2"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=3.1" type="text/javascript" charset="utf-8"></script>
+<!--<script>
+      ini_wxshare(vge.sdqpappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+
+</html>

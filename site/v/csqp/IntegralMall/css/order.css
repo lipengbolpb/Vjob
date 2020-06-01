@@ -1,0 +1,361 @@
+
+/*个人信息*/
+div.msg_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	background: #f0f0f0;
+	display: none;
+}
+#msg_box{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	border-top: 1px #f1f1f1 solid;
+}
+#msg_box p{
+	margin: 0 auto;
+	height: 2rem;
+	border-bottom: 1px #f1f1f1 solid;
+	background: #fff;
+	width: 100%;
+}
+#msg_box p span,#msg_box p input{
+	float: left;
+	display: block;
+	height: 100%;
+	font-size: .6rem;
+	color: #1e1e1e;
+	text-align: left;
+	line-height: 2rem;
+	border: 0;
+}
+#msg_box p span{
+	width: 30%;
+	box-sizing: border-box;
+	padding-left:1.5rem;
+}
+#msg_box p input{
+	width: 70%;
+	box-sizing: border-box;
+}
+#name_box span{
+	background: url(../img/icon_shr.png) no-repeat .7rem center;
+	background-size: auto .8rem;
+}
+#tel_box span{
+	background: url(../img/icon_lxdh.png) no-repeat .7rem center;
+	background-size: auto .8rem;
+}
+#address_box span{
+	background: url(../img/icon_shdz.png) no-repeat .7rem center;
+	background-size: auto .8rem;
+}
+#address2_box span{
+	background: url(../img/icon_xxdz.png) no-repeat .7rem center;
+	background-size: auto .8rem;
+}
+#saveMsg{
+	border: 0;
+	display: block;
+	margin: 1.6rem auto;
+	height: 1.9rem;
+	width: 8.75rem;
+	background: #2aa1fd;
+	-webkit-border-radius: .95rem;
+	color: #fff;
+	font-size: .56rem;
+}
+/*订单信息*/
+#order_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #fff;
+	/*display: none;*/
+}
+#order_box div.addressMsg{
+	width: 100%;
+	box-sizing: border-box;
+	padding:0 1.8rem 0 2rem;
+	background: url(../img/icon_location.png) no-repeat .6rem center,url(../img/icon_moreaddress.png) no-repeat 97% center;
+	-webkit-background-size: auto .85rem,auto .85rem;
+}
+#order_box div.addressMsg p:nth-of-type(1){
+	font-size: .65rem;
+	padding: .25rem 0;
+}
+#order_box div.addressMsg p:nth-of-type(1) span.sh_tel{
+	float: right;
+}
+#order_box div.addressMsg p:nth-of-type(2){
+	font-size: .56rem;
+	padding:0 0 .25rem;
+}
+#order_box .goods_box{
+	height: 5rem;
+	width: 100%;
+	background: #f0f0f0 url(../img/border-bg.png) no-repeat top;
+	-webkit-background-size: 100% auto;
+	box-sizing: border-box;
+	padding: .55rem 0 .45rem;
+}
+#order_box .goods_box div.goods_msg{
+	height: 100%;
+	background: #fff;
+	width: 100%;
+}
+#order_box .goods_box div.goods_msg img{
+	width: 3.15rem;
+	max-height: 3.15rem;
+	float: left;
+	margin: .5rem 0 0 .4rem;
+}
+#order_box .goods_box div.goods_msg p{
+	height: 3.15rem;
+	margin:.5rem .65rem 0 0;
+	line-height: 3.15rem;
+	float: right;
+	font-size: .55rem;
+	text-align: right;
+}
+#order_box .order_msg{
+	width: 100%;
+	background: #f0f0f0;
+	box-sizing: border-box;
+	padding-bottom: .4rem;
+}
+#order_box .order_msg>div{
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 .65rem;
+}
+#order_box .order_msg>div p{
+	font-size: .55rem;
+	height: 2rem;
+	line-height: 2rem;
+	overflow: hidden;
+}
+#order_box .order_msg>div p:nth-of-type(1){
+	border-bottom: 1px #ececec solid;
+}
+#order_box .order_msg>div p span{
+	float: right;
+}
+#order_box .order_msg>div p span em{
+	font-size: .45rem;
+	color: #fff;
+	background: #00a0e9;
+	padding: .1rem .3rem;
+	margin-right: .3rem;
+	border-radius: 2px;
+}
+#order_box .order_msg>div p span i{
+	color: #ff261c;
+	font-size: .65rem;
+}
+#order_box  #tjdd{
+	border: 0;
+	display: block;
+	margin: 1.6rem auto;
+	height: 1.9rem;
+	width: 8.75rem;
+	background: #eb6100;
+	-webkit-border-radius: .95rem;
+	color: #fff;
+	font-size: .56rem;
+}
+/*------------弹窗-------------*/
+#alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+#alert div.window{
+	width: 13.8rem;
+	min-height: 9rem;
+	background: #fff;
+	-webkit-border-radius:5px;
+	margin: 7rem auto;
+	overflow: hidden;
+	text-align: center;
+	color: #1e9dfc;
+	font-size: .7rem;
+}
+#alert div.window p.tip{
+	line-height: 1.9rem;
+	width: 10.5rem;
+	margin: 0 auto;
+	border-bottom: 1px #ccc solid;
+}
+#alert div.window_res{
+	display: none;
+}
+#alert div.window_res img{
+	width: 7rem;
+	margin: .65rem auto .9rem;
+}
+#alert div.window_res p.tip_msg{
+	padding: 0 .4rem;
+	font-size: .7rem;
+	color: #000;
+}
+#alert div.window_res #res_btn{
+	width: 7.5rem;
+	height: 1.625rem;
+	font-size: .5rem;
+	color: #fff;
+	border-radius: .8rem;
+	background: #00a0e9;
+	margin:.6rem auto;
+}
+#alert div.window_confirm{
+	display: none;
+}
+#alert div.window_confirm img{
+	width: 7rem;
+	margin: .65rem auto .9rem;
+}
+#alert div.window_confirm p.confrim{
+	padding: 0 .4rem;
+	font-size: .7rem;
+	color: #000;
+}
+#alert div.window_confirm p.confrim_msg{
+	font-size: .6rem;
+	line-height: 1.1rem;
+	color:#656565;
+}
+#alert div.window_confirm .a_box{
+	width: 100%;
+	padding: 0;
+	margin: 1.3rem auto 0;
+}
+#alert div.window_confirm .a_box a{
+	color: #989898;
+	background: #eeeeee;
+	width:50%;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: .65rem;
+	text-decoration: none;
+	display: inline-block;
+	-webkit-tap-highlight-color:transparent;
+	float: left;
+}
+#alert div.window_confirm .a_box a.determine{
+	background: #19b5fe;
+	color: #fff;
+}
+
+/*地址管理*/
+#addressList{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: #fff;
+	display: none;
+}
+#addressList div.addAddress{
+	width: 100%;
+	height: 2.1rem;
+	background:url(../img/border-bg.png) no-repeat bottom;
+	-webkit-background-size: 100% auto;
+}
+#addressList div.addAddress p{
+	height: 100%;
+	line-height: 2.1rem;
+	box-sizing: border-box;
+	padding:0 1.8rem 0 2rem;
+	background: url(../img/icon_add.png) no-repeat .6rem center,url(../img/icon_moreaddress.png) no-repeat 97% center;
+	-webkit-background-size: auto .85rem,auto .85rem;
+}
+#addressList div.address_list_box{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 .6rem;
+}
+#addressList div.address_list{
+	width: 125%;
+	overflow: hidden;
+	padding: .5rem 0;
+	border-bottom: 1px #f4f4f4 solid;
+}
+#addressList div.address_list div.radio{
+	float: left;
+	width: 10%;
+	height: 2rem;
+	position: relative;
+}
+#addressList div.address_list div.radio p{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	left: 0;
+	width: .55rem;
+	height: .55rem;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px #f0f0f0 solid;
+}
+#addressList div.address_list.checked div.radio p{
+	border: 1px #00a0e9 solid;
+	background: #00a0e9;
+}
+#addressList div.address_list div.addlist{
+	width: 70%;
+	overflow: hidden;
+	float: left;
+}
+#addressList div.address_list div.addlist p{
+	overflow: hidden;
+}
+#addressList div.address_list div.addlist em{
+	font-size: .45rem;
+	color: #fff;
+	background:#00a0e9 url(../img/icon_xiugai.png) no-repeat .2rem center;
+	background-size: auto .6rem;
+	padding:.1rem .1rem .1rem .85rem;
+	float: right;
+	border-radius: 2px;
+}
+#addressList div.address_list div.delete{
+	height: 2rem;
+    float: right;
+    width: 15%;
+    text-align: center;
+    line-height: 2rem;
+    background: red;
+    color: #fff;
+}
+#addressList div:last-child{
+	border: 0;
+}
+
+
+
+
+
+
+
+
+

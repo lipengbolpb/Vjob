@@ -1,0 +1,256 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+i,em{
+	font-style: normal;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+body{
+	background: url(../img/bg.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/* 红包主页 */
+.mybag{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.mybag img.logo{
+	width: 3.25rem;
+	display: block;
+	margin: .8rem 0 0 .8rem;
+}
+.mybag .todetails{
+	width: 2.625rem;
+	position: absolute;
+	right: 0;
+	top: .8rem;
+}
+.mybag .loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 10;
+    display: none;
+}
+.mybag .content{
+	height: 9.9rem;
+	width: 14.55rem;
+	background: url(../img/mybag-bg.png) no-repeat center;
+	background-size: 100% auto;
+	margin: 2rem auto 0;
+	transform: translateX(.325rem);
+	display: flex;
+	color: #993300;
+}
+.mybag .content .num{
+	width: 38%;
+	text-align: center;
+	padding-top: 4.25rem;
+}
+.mybag .content .num p{
+	width: 3.4rem;
+	float: right;
+}
+.mybag .content .num p.totalNum{
+	font-size: .89rem;
+}
+.mybag .content .num p.totalNum span{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.mybag .content .num p.totalNum span.toolang{
+	font-size: .9rem;
+}
+.mybag .content .num>p:nth-of-type(1){
+	color: #cc3333;
+}
+.mybag .content .num>p:nth-of-type(2){
+	font-size:.62rem;
+	line-height: 1rem;
+}
+.mybag .content .money{
+	width: 62%;
+	padding-top: 3.75rem;
+	font-size:.62rem;
+	line-height: 1.1rem;
+}
+.mybag .content .money>p{
+	text-indent: .6rem;
+}
+.mybag .content .money span{
+	color: #cc3333;	
+}
+.mybag .content .money span i{
+	font-weight: bold;
+	font-size: .8rem;
+}
+.mybag .btn{
+	width: 7.75rem;
+	height:2.25rem;
+	background: url(../img/button_4.png) no-repeat center;
+	background-size: 100%;
+	margin: 1.45rem auto .5rem;
+}
+.mybag .tip{
+	font-size: .472rem;
+	color: #cccc66;
+	text-align: center;
+	line-height: .6rem;
+}
+.mybag .txTips{
+    text-align: center;
+    color: #fbc601;
+    font-size: .8rem;
+    padding-top: .8rem;
+    font-weight: 560;
+}
+.freezeTip{
+	font-size: .6rem;
+	text-align: center;
+	text-decoration: underline;
+	color: #FFF226;
+	line-height: 2rem;
+}
+/* 提现遮罩 */
+.mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	background: url(../img/bg.png) no-repeat center;
+	background-size: 100% 100%;
+	display: none;
+}
+.mark .logo{
+	width: 3.25rem;
+	display: block;
+	margin: .8rem 0 0 .8rem;
+}
+.mark_pic{
+	width: 12.925rem;
+	display: block;
+	margin: 1.2rem auto;
+}
+.txOK{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top:2.8rem;
+}
+.mark_btn{
+	width: 7.75rem;
+	height:2.25rem;
+	background: url(../img/button_3.png) no-repeat center;
+	background-size: 100%;
+	margin: 3.45rem auto .5rem;
+}
+/* 详细记录 */
+.record{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	overflow-x: hidden;
+	background: url(../img/bg.png) no-repeat center;
+	background-size: 100% 100%;
+	color: #ffcc66;
+	-webkit-overflow-scrolling: touch;
+	display: none;
+}
+.record .hide{
+	width: 7.75rem;
+	height:2.25rem;
+	background: url(../img/button_3.png) no-repeat center;
+	background-size: 100%;
+	margin: 1.9rem auto .5rem;
+}
+.record .more{
+	text-align: center;
+	font-size: 1rem;
+}
+.record  ul {
+    width: 13.75rem;
+    overflow: hidden;
+    margin:0 auto 0.6rem;
+    border-top: 1px #f78563 solid;
+}
+
+.record  ul li {
+    border-bottom: 1px #f78563 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+.record  ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+}
+
+.record  ul li p.title span:nth-of-type(1) {
+    font-size: 0.7rem;
+}
+
+.record  ul li p.title span:nth-of-type(2) {
+    font-size: 0.6rem;
+}
+
+.record  ul li p.money {
+    float: right;
+    font-size: .77rem;
+    line-height: 2rem;
+}
+
+.record  ul li p.money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+/* 冻结金额提示框 */
+.freezeAlert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+.freezeAlert img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+.freezeAlert div{
+	width: 100%;
+	background: rgba(0,0,0,.7);
+	height: 100%;
+}
+.freezeAlert .closeTip{
+	width: 1.5rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}

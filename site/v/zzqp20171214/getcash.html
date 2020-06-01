@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <!-- Note:注意你的less样式文件一定要在引入less.js前先引入。 -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="css/getcash.less" />
+    <script>
+        less = {
+            env: 'development'
+        };
+    </script>
+    <script src="js/less.min.js"></script>
+    <script>
+        less.watch();
+    </script> -->
+    <link rel="stylesheet" href="css/getcash.css?v=1.8">
+    <link rel="stylesheet" href="css/jiuwang.css?v=1.2">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/audio1.png" class="audio">
+        <div class="head">
+            <img src="img/logo.png" class="logo">
+            <img src="img/getcash-slogan.png" class="slogan">
+        </div>
+        <div class="main">
+            <div class="points">
+                <p class="title">恭喜您，本次获得</p>
+                <p class="content">
+                    <span>+</span>
+                    <span id="accumulate"></span>
+                    <span>积分</span>
+                </p>
+            </div>
+            <div class="gift clearfix">
+                <img src="" class="prize">
+                <img src="img/bescan.png" class="mybescan">
+                <div class="title tedeng">
+                    <p class="prizeTitle">恭喜您，中奖啦！</p>
+                    <p class="peizeType"></p>
+                    <a href="javascript:;" class="ck">点击此链接去兑奖>></a>
+                </div>
+            </div>
+            <div class="rescan">
+                <p>您已扫过</p>
+                <p class="earn">您已于
+                    <span class="earnTime"></span>扫过这瓶酒</p>
+                <p>并获得
+                    <span class="get"></span>
+                </p>
+            </div>
+            <div class="verify clearfix">
+                <div class="left">
+                    <img src="" class="verify-img">
+                    <img src="img/bescan.png" class="bescan">
+                </div>
+                <div class="right">
+                    <p>大奖已被扫</p>
+                    <p>扫码时间：<span class="giftEarnTime"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <img src="img/getcash-personal.png" class="personal">
+            <img src="img/getcash-sign.png" class="sign">
+            <img src="img/getcash-mall.png" class="mall">
+        </div>
+        <div class="footer">
+            <img src="img/getcash-city.png" class="city">
+            <img src="img/getcash-football.png" class="football">
+        </div>
+        <div class="mask">
+            <p class="title">恭喜你获得1张
+                <span class="cardtype"></span>
+            </p>
+            <img src="" class="card">
+            <img src="img/getcash-close.png" class="close cardClose">
+            <p class="notice">获得的卡片可以到个人中心里面查看，快去喝青岛啤酒集卡吧</p>
+        </div>
+        <div class="reach">
+            <img src="img/sign-getcash-bg.png" class="reach-bg">
+            <p>哎呦喂，厉害了~</p>
+            <p>请收下惊喜红包1枚</p>
+            <img src="img/sign-hb.png" class="hb">
+            <p>已自动存入您的零钱包，
+                <br>请进入"个人中心"进行提现</p>
+            <p>¥
+                <span id="money"></span>元</p>
+            <img src="img/getcash-close.png" class="close singClose">
+        </div>
+        <div class="fail">
+            <img src="img/close.png" class="fail-close">
+            <img src="img/fail-used-title.png" class="fail-title">
+            <p class="content">稍等片刻，马上欢聚</p>
+            <img src="img/fail-used-bg.png" class="fail-bg">
+            <p id="batch"></p>
+        </div>
+        <!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon"/>
+        <div id="jiuw_box">
+    	    <img src="/v/ymqp20180130/img/close.png" class="close"/>
+    	    <div>
+    		    <img src="/v/zzqp20171214/img/jiuw_qrcode.jpg" id="jwqrcode"/>
+    	    </div>
+        </div>-->
+    </div>
+    <audio id="xiuxiu" src="music/xiuxiu.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+    <audio id="bgm" loop preload src="music/bgm.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.0.0"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('xiuxiu').setAttribute('src','/v/zzqp20171214/music/xiuxiu.mp3?v=1');
+        document.getElementById('xiuxiu').load();
+        document.getElementById('bgm').setAttribute('src','/v/zzqp20171214/music/bgm.mp3?v=1');
+        document.getElementById('bgm').setAttribute('loop','loop');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    ini_wxshare(vge.zzqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function() {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="js/getcash.js?v=1.63"></script>
+</html>

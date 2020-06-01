@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>每日项目到款通知</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css?v=1.1"/>
+	</head>
+	<body>
+		<div id="box">
+			<p class="title">每日项目到款通知</p>
+			<table border="" cellspacing="" cellpadding="">
+				<thead>
+					<tr><th><p class="brand">品牌</p></th><th><p class="province">充值省区</p></th><th><p>项目经理</p></th><th><p class="arr_money">到款金额(元)</p></th></tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+				<tfoot>
+					<tr><td colspan="3">合计</td><td id="priceTotal"></td></tr>
+				</tfoot>
+			</table>
+			<p class="endTime"></p>
+			<!-- <button type="button">我知道了</button> -->
+		</div>
+		
+		<p id="info"></p>
+		<div id="toast" style="display: none;">
+		    <div class="weui_mask_transparent"></div>
+		    <div class="weui_toast">
+		        <i class="weui_icon_toast"></i>
+		        <p class="weui_toast_content">已完成</p>
+		    </div>
+		</div>
+		
+		<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+		    <div class="weui_mask_transparent"></div>
+		    <div class="weui_toast">
+		        <div class="weui_loading">
+		            <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+		            <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+		        </div>
+		        <p class="weui_toast_content">数据加载中</p>
+		    </div>
+		</div>
+	</body>
+	<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/static/js/vve/21tpl.js"></script>
+	<script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/publictip.js?v=3.0.1"></script>
+	<script src="/static/js/font.js"></script>
+	<script type="text/javascript">
+		var html = '';
+		var args = vge.urlparse(location.href);
+		getMsg()
+		function getMsg() {
+			// var requrl = 'http://192.168.1.123:8090/Finance/system/findArrivalShowList/'+args.date+'.do';
+			var requrl = 'http://101.200.61.20:9008/Finance/system/findArrivalShowList/'+args.date+'.do';
+			vge.ajxget(requrl, 5000, function(r) {
+				try {
+					var o = JSON.parse(r);
+					console.log(o)
+					document.getElementById("priceTotal").innerHTML = transfNum(o.priceTotal);
+					document.getElementsByClassName('endTime')[0].innerHTML = '数据截止时间：'+o.dataUpTime;
+					showList(o.dayList);
+				} catch (e) {
+					vge.clog('errmsg', [requrl, e]);
+				}
+			}, function(err) {
+				vge.clog('errmsg', [requrl, err]);
+			});
+		}
+		function showList(list){
+			if(list.length<1){
+				return false;
+			}else{
+				for(var i=0;i<list.length;i++){
+					html += `<tr>
+						<td>${list[i].companyName}</td>
+						<td>${list[i].province}</td>
+						<td><p>${list[i].projectName}</p></td>
+						<td>${transfNum(list[i].price)}</td>
+					</tr>`;
+				}
+				document.getElementsByTagName('tbody')[0].innerHTML = html;
+			}
+		}
+		function transfNum(num) {
+			if(num < 1000) {
+				return num;
+			} else {
+				var str = num + '',
+					reg = /\*/g;
+				var arr = '',
+					Int = '',
+					Float = '',
+					resStr1 = [],
+					resStr2 = [];
+				if(str.indexOf(".") !== -1) {
+					arr = str.split(".");
+					Int = arr[0].split('');
+					Float = arr[1].split('');
+				} else {
+					Int = str.split('');
+				}
+				Int = Int.reverse();
+				for(var i = 0; i < Int.length; i++) {
+					resStr1.push(Int[i]);
+					if(i % 3 === 2) {
+						resStr1.push(',');
+					}
+				}
+				resStr1 = resStr1.reverse().join('*');
+				resStr1 = resStr1.replace(reg, '');
+				if(resStr1[0] == ',') {
+					resStr1 = resStr1.substr(1, resStr1.length);
+				}
+				for(var j = 0; j < Float.length; j++) {
+					resStr2.push(Float[j]);
+					if(j % 3 === 2) {
+						resStr2.push(',');
+					}
+				}
+				resStr2 = resStr2.join('*');
+				resStr2 = resStr2.replace(reg, '');
+				if(resStr2[resStr2.length - 1] == ',') {
+					resStr2 = resStr2.substr(0, resStr2.length - 1);
+				}
+				if(Float.length < 1) {
+					return resStr1;
+				} else {
+					return resStr1 + '.' + resStr2;
+				}
+			}
+		}
+	</script>
+</html>

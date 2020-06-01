@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青啤电商</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/result.css?v=1.1.6" />
+    <style>
+        html,
+        body {
+            background: #fed40c;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .title {
+            width: 90%;
+            margin: 0.5rem auto 0;
+            display: block;
+        }
+
+        .notice {
+            width: 80%;
+            margin: 0.5rem auto 1rem;
+            display: block;
+        }
+
+        .btn {
+            width: 35%;
+            position: absolute;
+            top: 19.5rem;
+            left: 32.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="images/over-title.png" class="title">
+        <img src="images/over-notice.png" class="notice">
+        <img src="images/over-btn.png" class="btn" id="btn">
+    </div>
+    <div class="cash_page">
+        <div class="cash_1 cash">
+            <img src="/v/TBEB/images/cash_1.png" class="cash_1" />
+            <img src="/v/TBEB/images/look_1.png" class="look_1 look" />
+            <img src="/v/TBEB/images/look_2.png" class="look_2 look" />
+            <img src="/v/TBEB/images/look_3.png" class="look_3 look" />
+        </div>
+        <div class="cash_2 cash">
+            <img src="/v/TBEB/images/cash_2.png" class="cash_2" />
+            <img src="/v/TBEB/images/cash_hand.png" class="cash_hand" />
+            <img src="/v/TBEB/images/cash_boy.png" class="cash_boy" />
+            <img src="/v/TBEB/images/cash_boy_hand.png" class="cbh" />
+        </div>
+        <div class="cash_3 cash">
+            <img src="/v/TBEB/images/tx_tip.png" alt="" class="tx_tip" style="display: none;" />
+            <img src="/v/TBEB/images/cash_3.png" class="cash_3" />
+            <p class="p1">被你抓到</p>
+            <p class="money"><span></span>元</p>
+        </div>
+        <input type="button" name="toBag" id="toBag" value="" />
+        <p class="tip">根据微信平台要求，红包累计大于等于1元后可提现，不足1元的红包我们为您贴心准了零钱包功能</p>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/v/js/cfg.js?v=3.0.4"></script>
+<script src="/v/js/publictip.js?v=3.0.0"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var args = vge.urlparse(location.href),
+		openid = sessionStorage.openid,
+		hbopenid = sessionStorage.hbopenid;
+	if(args.openid){
+		hbopenid = args.openid;
+    }
+    var totalAccountMoney = sessionStorage.totalAccountMoney===undefined?undefined:sessionStorage.totalAccountMoney,
+		currentMoney = sessionStorage.currentMoney===undefined?undefined:sessionStorage.currentMoney,
+		currentVpoints = sessionStorage.currentVpoints/1000;
+    $('#btn').on('click',give_spack);
+    function give_spack() { //提现
+        var javai = vge.tbeb + '/DBTECQPInterface/gifts/getGiftspack';
+        var req = {
+            "openid": openid,
+            "hbopenid": hbopenid
+        };
+        vge.callJApi(javai, req,
+            function (jo) {
+                if (jo.result.code == '0') {
+                    if (jo.result.businessCode === '0') {
+                        $('.tx_tip').css('display', 'block');
+                        $('.tip').html('老铁，手气挺不错啊！红包累计金额为' + totalAccountMoney + '元，已自动提现至您的微信零钱包里，请留意“微信支付”消息~');
+                        tx = true;
+                    } else if (jo.result.businessCode === '1') { //1
+                        title_tip('提 示', '您的红包金额不足1元！', '我知道了');
+                        tx = false;
+                    } else if (jo.result.businessCode === '4') { //1
+                        title_tip('提 示', '提现处理中，请稍后查看详细记录', '我知道了');
+                        tx = false;
+                    } else if (jo.result.businessCode === '-2') { //-2
+                        title_tip('提 示', '提现操作过于频繁，请稍后再试！', '我知道了');
+                    } else if (jo.result.businessCode === '2') { //1
+                        title_tip('尊敬的用户', '呜呜，系统开了个小差，请稍后重试！', '我知道了');
+                        tx = false;
+                    } else if (jo.result.businessCode === '3') { //1
+                        title_tip('尊敬的用户',
+                            '<p style="text-align:left;padding:0 12px;">根据国家法规对支付服务实名制的要求，请到微信中进行实名认证。</p><br /><p style="text-align:left;padding:0 12px;">实名认证方法：进入【微信】->【我】->【钱包】->【···】->【支付管理】，即可实名认证。</p>',
+                            '我知道了');
+                        tx = false;
+                    } else if (jo.result.businessCode === '-1') { //-1
+                        title_tip('提 示', '提现操作过于频繁，请稍后再试！', '我知道了');
+                        tx = false;
+                    } else {
+                        title_tip('尊敬的用户', '呜呜，系统开了个小差，请稍后重试！', '我知道了');
+                        tx = false;
+                    }
+                } else if (jo.result.code == '-1') {
+                    title_tip('尊敬的用户', '系统升级中...', '我知道了');
+                    tx = false;
+                } else { //code!='0'
+                    title_tip('尊敬的用户', '呜呜，系统开了个小差，请稍后重试！', '我知道了');
+                    tx = false;
+                }
+            });
+    }
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒辽宁</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/ck.css?v=1.2.2"/>
+	</head>
+	<body>
+		<div id="ck_box">
+			<img src="img/ad.png" alt="" class="ad">
+			<img src="img/slogan.png" class="slogan"/>
+			<p class="title">关注“青岛啤酒辽宁”公众号，每天有<i></i>次抽卡机会</p>
+			<div class="shadowBox">
+				<div class="card_box">
+					<p class="ck_tip"></p>
+				</div>
+				<p class="tip"></p>
+			</div>
+		</div>
+		<div id="ck-alert">
+			<div class="fail">
+				<img src="img/weizhongjiang.png"/>
+			</div>
+			<div class="success">
+				<p class="title"></p>
+				<p class="tip">获得的卡片可到“我的集卡”中查看</p>
+				<div class="result">
+					<img src="" class="ck-result"/>
+					<!-- <img src="img/cj-top.png" class="ck-up"/> -->
+				</div>
+				<i class="icon-close"></i>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=1.0.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ck.js?v=1.1.5" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机
+			$('#ck-alert .success .result').css('transform','scale(.8)');
+		}else if(hwb>1.85){
+			$('body').addClass('screen');
+		}
+	</script>
+</html>

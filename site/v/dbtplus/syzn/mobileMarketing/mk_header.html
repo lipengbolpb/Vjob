@@ -1,0 +1,31 @@
+<?php
+	$str = end(explode("/", $_SERVER["REQUEST_URI"]));
+?>
+
+<!-- start dbt_mkbanner -->
+<div class="dbt_mkbanner pr">
+	<div class="dbt_mkbanner_content">
+		<a href="mk_02.php" class="dbt_mkbanner_content_1">
+		</a>
+		<a href="mk_02.php" class="dbt_mkbanner_content_2 none">
+		</a>
+		<a href="mk_02.php" class="dbt_mkbanner_content_3 none">
+		</a>
+	</div>
+	<div class="pa dbt_mkbanner_pages"></div>
+</div>
+<!-- end dbt_mkbanner -->
+
+<!-- start dbt_mkmenu -->
+<div class="dbt_mkmenu">
+	<div class="mainWidth clearfix">
+		<ul class="fl dbt_mkmenu_list">
+			<li><a href="mk_index.php" <?php echo $str === "mk_index.php" ? 'class="active"' : ''?>>首页</a></li>
+			<li><a href="mk_01.php" <?php echo $str === "mk_01.php" ? 'class="active"' : ''?>>方案概述</a></li>
+			<li><a href="mk_02.php" <?php echo $str === "mk_02.php" ? 'class="active"' : ''?>>产品方案</a></li>
+			<li><a href="mk_03.php" <?php echo $str === "mk_03.php" ? 'class="active"' : ''?>>客户案例</a></li>
+		</ul>
+		<a href="../index.php" class="fr dbt_mkmenu_back">返回首页</a>
+	</div>
+</div>
+<!-- end dbt_mkmenu -->

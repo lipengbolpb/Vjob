@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享山西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			body{
+				background:#060d1d url(img/bg.png) no-repeat left top;
+				-webkit-background-size: 100% auto;
+			}
+			img{
+				display: block;
+			}
+			img.slogan{
+				margin: 0rem auto 0;
+				width: 14rem;
+				-webkit-transform: translateX(.5rem);
+			}
+			#ani_1{
+				height: 1.1rem;
+				position: absolute;
+				top: 2.5rem;
+				right:4.7rem;
+				-webkit-transform: rotateY(180deg);
+			}
+			#ani_1 .rabbit_1{
+				height: 100%;
+			}
+			#ani_1 .lantern{
+				width: .25rem;
+				position: absolute;
+				left: .76rem;
+				top: .29rem;
+				-webkit-transform-origin: top;
+				-webkit-animation: rabbit_1 linear 3s infinite;
+			}
+			#ani_2{
+				height: 8.8rem;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#ani_2 .rabbit_2{
+				position: absolute;
+				bottom: 0;
+				height: 1.55rem;
+				left: 50%;
+				margin-left: -.5rem;
+			}
+			#ani_2 .cash_s{
+				width: .8rem;
+				position: absolute;
+				bottom: .5rem;
+				left: 50%;
+				margin-left: -.4rem;-webkit-transform-origin: bottom;
+				-webkit-animation: rabbit_2 linear 3s infinite;
+			}
+			p{
+				font-size: .6rem;
+				color: #fff;
+				font-family: "微软雅黑";
+				text-align: center;
+				padding: 0 1.1rem;
+				margin: 3rem auto 0;
+			}
+			img.qr{
+				margin: 1rem auto 0;
+				width: 6.5rem;
+			}
+			@-webkit-keyframes rabbit_1{
+				15%,70%{
+					-webkit-transform:rotate(-10deg);
+				}
+				45%,90%{
+					-webkit-transform:rotate(10deg);
+				}
+				0%,100%{
+					-webkit-transform:rotate(0deg);
+				}
+			}
+			@-webkit-keyframes rabbit_2{
+				15%,70%{
+					-webkit-transform:rotate(-25deg);
+				}
+				45%,90%{
+					-webkit-transform:rotate(25deg);
+				}
+				0%,100%{
+					-webkit-transform:rotate(0deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/slogan.png?v=1" class="slogan"/>
+		<div id="ani_1">
+			<img src="img/rabbit_1.png" class="rabbit_1"/>
+			<img src="img/lantern.png" class="lantern"/>	
+		</div>
+		<div id="ani_2">
+			<img src="img/rabbit_2.png" class="rabbit_2"/>
+			<img src="img/small_cash.png" class="cash_s"/>
+		</div>
+		<p>长按屏幕识别二维码，关注“青岛啤酒乐享山西”公众号，查看“我的红包”</p>
+		<img src="img/qr.png" class="qr"/>
+	</body>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+</html>

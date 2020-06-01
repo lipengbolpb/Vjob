@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>青岛啤酒畅享山东</title>
+		<script src="/static/js/rem.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.2"/>
+	</head>
+	<body>
+		<div id="get">
+			<div class="scalebox">
+				<img src="img/index_bg.png" class="index">
+				<img src="img/index-slogan.png" class="slogan">
+				<div class="goldMedal_box">
+					<img src="img/goldMedal.png" class="goldMedal">
+					<img src="img/light.png" class="light">
+				</div>
+			</div>
+			<p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+		</div>	
+		<div id="cash">
+			<img src="img/logo.png" class="logo hide">
+			<img src="img/rule.png" class="rule hide">
+			<img src="img/coin.png" class="coin hide">
+			<div class="money_box">
+				<img src="img/goldMedal.png" class="goldMedal">
+				<img src="img/goldMedal_cash.png" class="goldMedal_cash">
+				<img src="img/coin-front-left.png" class="coin_left hide">
+				<img src="img/coin-front-right.png" class="coin_right hide">
+				<div class="money_vis">
+					<p class="title">恭喜您获得</p>
+					<p class="money"></p>
+				</div>
+			</div>
+			<!-- <p class="totalMoney"></p> 账户余额 -->
+
+			<p class="btn hide"></p>
+			<!-- <p class="tip hide">红包累计大于等于1元后可提现<br />不足1元的红包将存入零钱包</p> -->
+			<p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+		</div>
+		<!-- 活动广告页 -->
+		<div class="active">
+		    <img src="/v/sdqp-common2.0/img/ad_dw.jpg?v=1.0" class="activeImg">
+		    <img src="/v/sdqp-common2.0/img/close.png" class="activeClose">
+		</div>
+		
+		<!-- 城市酒王小程序 -->
+		<img src="/v/sdqp-prs/img/icon_jw.png" class="icon_jw">
+		<div class="alert_jw">
+			<div class="toast_jw">
+				<p class="close"></p>
+				<img src="/v/sdqp-prs/img/alert_jw.png?v=2" class="alert_jw">
+			</div>
+		</div>
+
+
+		<!-- 酒王之旅的toast -->
+		<!-- <img src="img/wineTravel/entry.png" alt="" class="traEntry">
+		<div class="travelMask">
+				<div class="wineTravel">
+					<img src="img/wineTravel/close.png?v=1.0" alt="" class="closeToast" >
+					<div class="text">
+						<div class="textMask">
+							<img src="img/wineTravel/toastText.png?v=1.0" alt="">
+						</div>
+					</div>
+					<div  class="botPart">
+						<div class="gzh">
+							<img src="img/wineTravel/gzh.jpeg?v=1" alt="">
+							<div>长按识别二维码</div>
+						</div>
+						<div class="tip">
+							关注公众号查看的我的酒王之旅
+						</div>
+					</div>
+				</div>
+		</div> -->
+		<!-- 淘彩蛋 -->
+		<div class="taocd">
+			<input type="text" name="" id="tkl" value="￥fl701Yu1oY7￥ https://m.tb.cn/h.VauwylE" readonly/>
+			<div class="cdbox">
+				<img src="/v/jlqp-common/img/taocd.png" class="caidan" data-clipboard-action="copy" data-clipboard-target="#tkl">
+				<p class="close_cd"></p>
+			</div>
+		</div>
+
+	</body>
+
+     <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script> -->
+
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=1.0.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/jlqp-common/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.1.4" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机 
+			$('.scalebox,#get').addClass('scale');
+		}
+
+		// 2s后显示弹出
+		// $(function () {
+		// 	setTimeout(function () {
+		// 		$(".travelMask").fadeIn(1000);
+		// 		$(".wineTravel").fadeIn(1000);
+		// 	}, 2000);
+			
+		// 	$('.closeToast').on('click',function(){
+		// 		$(".travelMask").fadeOut(600);
+		// 		$(".wineTravel").fadeOut(600);
+		// 	})
+			
+		// 	$('.traEntry').on('click',function(){
+		// 		$(".travelMask").fadeIn(1000);
+		// 		$(".wineTravel").fadeIn(1000);
+		// 	})
+		// 	// $('.travelBtn').on('click', function() {
+		// 	//     window.location.href = 'http://' + location.host + '/v/sdqp/load.html';
+		// 	// });
+		// });
+	</script>
+</html>

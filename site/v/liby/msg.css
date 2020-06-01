@@ -1,0 +1,7 @@
+@charset "utf-8";
+.liby-icon-kftel:before{content:url(/v/img/104x104电话.png)}
+.liby-scan-errcode:before{content:url(/v/img/104x104px不是活动二维码.png)}
+.liby-scan-gameover:before{content:url(/v/img/104x104px活动过期.png)}
+.liby-scan-nostart:before{content:url(/v/img/104x104px活动未开始.png)}
+.liby-scan-used:before{content:url(/v/img/104x104px码已扫过.png)}
+.liby-scan-neterr:before{content:url(/v/img/104x104px网络故障.png)}

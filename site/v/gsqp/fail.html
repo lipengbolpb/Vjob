@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒甘肃销售</title>
+    <link rel="stylesheet" type="text/css" href="css/fail.css?v=1.2">
+    <script src="js/rem.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/logo.png" class="logo">
+        <img src="img/fail.png?v=1" class="fail">
+        <p id="title"></p>
+        <p id="notice"></p>
+    </div>
+    <!-- <img src="/v/qpzj/img/game1.png" class="game1" /> -->
+    <!-- <img src="/v/qpzj/img/game2.png" class="game2" /> -->
+    <p id="batch"></p>
+    <div class="cash" id="cash">
+        <img src="img/hb-cash.png" class="hbCash">
+        <div class="msg">
+            <p class="congratulate">离红包只差一点点
+                <br />再扫一瓶试试吧~</p>
+        </div>
+        <input type="button" value="查看红包记录" id="btn">
+    </div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=2.2.0"></script>
+<script>
+    var PROJECT = 'gsqp';
+    var PHONE_NUM = '0931-4536003';
+    var title = document.getElementById('title'),
+        notice = document.getElementById('notice');
+    var args = vge.urlparse(location.href),
+        ms = args.ms,
+        batch = document.getElementById("batch"),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        earnTime = sessionStorage.earnTime === undefined ? '' : sessionStorage.earnTime,
+        bizcode = args.bizcode;
+    if (ms == 'true') {
+        // 秒杀
+        title.innerHTML = sessionStorage.msg;
+    } else {
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch (bizcode) {
+            case '1': //二维码不存在
+                title.innerHTML = '这个二维码不存在';
+                break;
+            case '2': //二维码已被使用
+                if (earnTime == '') {
+                    notice.style.display = 'none';
+                }
+                title.innerHTML = '这个二维码已被扫';
+                notice.innerHTML = '扫码时间:' + earnTime + '<br>再扫一瓶试试看';
+                break;
+            case '3': //二维码已过期
+                title.innerHTML = '这个二维码已过期';
+                notice.innerHTML = '这么好的啤酒,要学会珍惜哦';
+                break;
+            case '4': //活动未开始
+                title.innerHTML = '活动未开始';
+                notice.innerHTML = '心急喝不了好啤酒,再等等哦';
+                batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+                break;
+            case '5': //活动已结束
+                title.innerHTML = '活动已截止';
+                notice.innerHTML = '好酒不等人,下次早点来哦';
+                break;
+            case '6': //二维码异常
+                title.innerHTML = '二维码异常';
+                notice.innerHTML = '稍等片刻,畅想欢聚时刻';
+                break;
+            case '-1': //系统升级中
+                title.innerHTML = '系统升级中';
+                notice.innerHTML = '稍安勿躁,敬请关注';
+                break;
+            case '17': //酒品已过期
+                title.innerHTML = '好酒美味 更需趁早';
+                notice.innerHTML = '您扫的这瓶酒<br />所属产品批次活动已结束';
+                break;
+            case '18': //扫码专员
+                title.style.display = 'none';
+                notice.style.display = 'none';
+                title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+                break;
+            case '19': //未入库
+                document.getElementById("cash").style.display = 'block';
+                document.getElementById("btn").addEventListener('click', function () {
+                    location.href = 'http://' + location.host + '/' + PROJECT + '/too/mybag';
+                }, false);
+                title.style.fontSize = '1.5rem';
+                title.innerHTML = '';
+                notice.innerHTML = '';
+                break;
+            case '20':
+                title.innerHTML = '二维码未激活';
+                notice.innerHTML = '';
+                batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+                break;
+            default:
+                title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+                break;
+        }
+    }
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js"></script>
+
+</html>

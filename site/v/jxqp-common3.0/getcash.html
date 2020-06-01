@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒江西省区</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=1.0.35">
+    <!-- <link rel="stylesheet" href="css/sign.css?v=1.1.5"> -->
+    <!-- <link rel="stylesheet" href="css/sale.css?v=1.0.0"> -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f8e8f448c09ef3f0bf2e84ddad8e07d8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- 拆红包层 -->
+    <div class="get">
+        <img src="img/open.png" class="open">
+    </div>
+    <!-- 拆开层 -->
+    <div class="cash">
+        <!-- 送酒上门按钮 -->
+        <img id="btn-to-home" src="img/btn-to-home-new.png">
+        <span class="desc-to-home">网购优惠，下单戳这里</span>
+
+
+        <img src="img/rule.png" class="rule">
+        <p class="title"></p>
+        <p class="main"></p>
+		<p class="ladder"></p>
+        <p class="time"></p>
+        <input type="button" value="查看红包余额" class="btn" id=btn>
+        <p class="notice">红包累计大于等于1元后可提现<br>不足1元的红包将存入零钱包</p>
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+	</div>	
+    <!-- <div id="sign_logo" class="sign_logo"></div> -->
+    <!-- 联通流量层 -->
+    <!-- <div class="liantong">
+        <img src="img/ad_bg.png" class="liantong-bg">
+        <img src="img/close.png" class="liantong-close">
+        <img src="img/ad_btn.png" class="liantong-btn">
+    </div> -->
+    <!-- 提现成功遮罩层 -->
+    <div class="mask">
+        <img src="img/alert.png" class="alert">
+        <input type="button" class="iknow" value="我知道了">
+        <p class="copyright">本服务由<a href="tel:4008365591">V积分</a>提供</p>
+	</div>	
+    <img src="img/logo.png" class="logo">
+	
+	<!-- 活动宣传 -->
+	<div class="active">
+		<img src=""  class="activImg">
+		<img src="/v/jxqp-common3.0/img/close.png" class="activeClose">
+	</div>
+    <!-- <div class="sign">
+        <div class="signMain">
+            <img src="img/sign/close.png" class="signClose">
+            <img src="img/sign/bg_top.png" class="bgTop">
+            <div class="mainTop">
+                <div class="signProgress">
+                    <div class="progressTitle">
+                        <p>0%</p>
+                    </div>
+                    <div class="outter">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <div class="signContent">
+                    <div class="signLeft">
+                        <img src="img/sign/on_left.png">
+                    </div>
+                    <div class="signMiddle">
+
+                    </div>
+                    <div class="signRight">
+                        <img src="img/sign/on_right.png">
+                    </div>
+                </div>
+            </div>
+            <img src="img/sign/bg_middle.png" class="bgMiddle">
+            <div class="mainBottom">
+                <div class="signMask">
+                    <img src="img/sign/mask.png?v=1">
+                </div>
+            </div>
+            <img src="img/sign/bg_bottom.png" class="bgBottom">
+            <img src="img/sign/ck.png" class="signCk">
+        </div>
+    </div>
+    <div class="signRule">
+        <div class="signInner">
+            <div class="top">
+                <img src="img/sign/back.png" class="back" id="signBack">
+                <img src="img/sign/logo.png" class="logo">
+            </div>
+            <div class="bottom">
+                <textarea name="" id="signContent" cols="30" rows="50" readonly="readonly" class="content"></textarea>
+            </div>
+        </div>
+    </div> -->
+    <img src="img/loading.gif" class="loading" id="loading">
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=1.6"></script>
+<script src="js/getcash.js?v=1.4.17"></script>
+<!-- <script src="js/sign.js?v=2.7"></script> -->
+<!-- <script src="js/sale.js?v=2.0"></script> -->
+<script>
+    ini_wxshare(vge.jxqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

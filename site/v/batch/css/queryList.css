@@ -1,0 +1,195 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ebebeb;
+    text-align: center;
+	font-family: '微软雅黑';
+	color: #333333;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+i,em{
+	font-style: normal;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+input,select,optgroup,option{
+	-webkit-tap-highlight-color: transparent;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+	border: 0;
+	font-family: "微软雅黑";
+	outline: none;
+}
+.l{
+	float: left;
+}
+.r{
+	float: right;
+}
+p.title{
+	padding-left: .65rem;
+	font-size: .65rem;
+	text-align: left;
+	margin: .8rem auto -.2rem;
+}
+div.msg_box{
+	margin: .3rem auto 0;
+	border-bottom: 1px #bcbcbc solid;
+	border-top: 1px #bcbcbc solid;
+	background: #fff;
+	width: 100%;
+	text-align: left;
+	padding-left:.65rem;
+	-webkit-box-sizing: border-box;
+}
+div.msg_box p{
+	height: 1.85rem;
+	line-height: 1.85rem;
+	font-size: .7rem;
+	border-top: 1px #ccc solid;
+}
+div.msg_box p:first-child{
+	border: 0;
+	background: url(../img/right.png) no-repeat 95%;
+	-webkit-background-size: auto .55rem;
+}
+div.msg_box p select{
+	float: left;
+	height: 100%;
+	width: 10rem;
+	font-size: .68rem;
+	margin-left: .2rem;
+	background: #fff;
+}
+div.msg_box p span{
+	float: left;
+	height: 100%;
+	display: block;
+	width: 3.5rem;
+}
+#yz_code{
+	width: 5rem;
+}
+#get_yz{
+	width: 5rem;
+	float: right;
+	color: #1aab16;
+	border-left: 1px #ccc solid;
+	text-align: center;
+}
+div.msg_box p input{
+	height: 100%;
+	float: left;
+	font-size: .68rem;
+	margin-left: .2rem;
+}
+i{
+	float: left;
+	margin-right: .5rem;
+}
+#start,#end{
+	width: 4rem;
+}
+#btn{
+	display: block;
+	margin: 1.7rem auto;
+	height: 2rem;
+	width: 15.2rem;
+	background: #1aac19;
+	border:1px #3a883d solid;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	font-size: .7rem;
+}
+#btn[disabled]{
+	background: #a3dfa3;
+	border:1px #94c794 solid;
+}
+div.batch_box{
+	width: 96%;
+	background: #fff;
+	margin: 0 auto 0;
+	border: 1px #ccc solid;
+	-webkit-border-radius: 5px;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+div.batch_box dl{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.35rem 0;
+	font-size: .58rem;
+	border-bottom: 1px #ccc solid;
+}
+div.batch_box dl dt{
+	width: 1.5rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    text-align: center;
+    border-right: 1px #ccc solid;
+    margin-right: .5rem;
+}
+div.batch_box dl dd{
+	text-align: left;
+}
+div.batch_box dl dd p.code{
+	border-bottom: 1px #ccc solid;
+	padding-bottom: .4rem;
+	line-height: 1em;
+	font-size: .5rem;
+	color: #676767;
+} 
+div.batch_box dl dd div.l{
+	margin-right: .3rem;
+}
+div.batch_box dl dd div.l p{
+	overflow: hidden;
+    line-height: 1rem;
+    color: #333333;
+    font-size: .5rem;
+    width: 9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+div.batch_box dl dd div.l span{
+	line-height: 1em;
+	font-size: .48rem;
+	color: #999999;
+}
+div.batch_box dl dd div.r{
+	width: 3.5rem;
+    overflow: hidden;
+}
+div.batch_box dl dd div.r p{
+	overflow: hidden;
+    line-height: 1rem;
+    color: #333333;
+    font-size: .5rem;
+}
+div.batch_box dl dd div.r span{
+	line-height: 1em;
+	font-size: .48rem;
+	color: #999999;
+}
+div.batch_box dl:last-child{
+	border: 0;
+}
+#batchList{
+	overflow-x:hidden;
+	-webkit-overflow-scrolling: touch;
+}
+#more{
+	font-size: .7rem;
+	color: #666666;
+	margin: .5rem auto 3rem;
+}

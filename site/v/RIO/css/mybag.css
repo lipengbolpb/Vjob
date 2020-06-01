@@ -1,0 +1,87 @@
+img.title{
+	width: 10.5rem;
+	margin-top: 2.1rem;
+	margin-left: 1.8rem;
+}
+p.tip{
+	font-size: .5rem;
+	color: #666666;
+	text-align: center;
+	margin: 0.5rem auto;
+}
+div.content_box{
+	width: 13rem;
+	margin: 0 auto;
+	height:0rem;
+	background: url(../img/mybag_bg.png) no-repeat center;
+	-webkit-background-size: 100%;
+	overflow: hidden;
+	padding-bottom: 0.5rem;
+}
+div.content{
+	width: 13rem;
+	margin: 0 auto;
+	height:99%;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+div.content ul {
+    width:11.4rem;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+
+div.content ul li {
+    border-bottom: 1px #000000 solid;
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+div.content ul li p.title {
+    float: left;
+    line-height: 0.9rem;
+    color: #000000;
+}
+
+div.content ul li p.title span:nth-of-type(1) {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+div.content ul li p.title span:nth-of-type(2) {
+    color: #777777;
+    font-size: 0.5rem;
+}
+
+div.content ul li p.money {
+    float: right;
+    font-size: .68rem;
+    line-height: 1.6rem;
+    color: #777; 
+    width: 4.1rem;
+    height: 1.6rem;
+    font-weight: bold;
+    margin-top: .2rem;
+    text-align: right;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.content ul li p.money.ss{
+	background: url(../img/button_3.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+div.content ul li p.money span:nth-of-type(1) {
+    font-size: 1.1rem;
+}
+#more {
+    text-align: center;
+    margin: 1rem 0;
+    color: #000000;
+    display: none;
+    width: 100%;
+    font-size: .7rem;
+}

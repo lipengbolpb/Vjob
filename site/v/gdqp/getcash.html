@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华南</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?5b4d3f7153d3e4018a3fab95724e346d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style type="text/css">
+        div.zhang {
+            width: 14rem;
+            height: 5.5rem;
+            font-size: .7rem;
+            background: url(/v/hnqp/img/rep-scan.png?v=1.0.0) no-repeat center;
+            -webkit-background-size: auto 100%;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, 0) rotate(-10deg);
+            text-align: center;
+            padding-top: .8rem;
+            line-height: 1.5rem;
+            top: 7rem;
+            color: #FFFFFF;
+            z-index: 1;
+        }
+
+        #loading {
+            position: fixed;
+            z-index: 9999;
+            width: 2rem;
+            left: 50%;
+            margin-left: -1rem;
+            top: 39%;
+        }
+
+        .active {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 20;
+            display: none;
+        }
+
+        .active img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+		.active img.close{
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			right: 0.5rem;
+			top: 0.5rem;
+		}
+		.copyright{
+			font-size: .45rem;
+			text-align: center;
+			position: absolute;
+			bottom: 5px;
+			width: 100%;
+			color: #fff;
+		}
+		.copyright a{
+			color: #d5d5d5;
+			font-size: 0.5rem;
+			text-decoration:underline !important;
+		}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=2.2.13">
+    <script src="js/rem.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- 春节 start -->
+    <!-- <div class="happyNewYear" style="z-index: 99;">
+        <div class="curtain">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-bg.png" class="curtain-bg">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-left.png" class="curtain-left">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-right.png" class="curtain-right">
+            <img src="/v/ymqp-common2.0/img/happyNewYear/curtain-logo.png" class="curtain-logo">
+            <div class="textTop">
+                <img src="/v/ymqp-common2.0/img/happyNewYear/text-1.png" class="text-1">
+                <div class="foamBox1">
+                    <img src="/v/ymqp-common2.0/img/happyNewYear/text-1-mask.png" class="text-1-foam text-foam">
+                </div>
+            </div>
+            <div class="textBottom">
+                <img src="/v/ymqp-common2.0/img/happyNewYear/text-2.png" class="text-2">
+                <div class="foamBox2">
+                    <img src="/v/ymqp-common2.0/img/happyNewYear/text-2-mask.png" class="text-2-foam text-foam">
+                </div>
+            </div>
+            <img src="/v/ymqp-common2.0/img/happyNewYear/beer.png" class="beer">
+        </div>
+    </div> -->
+    <!-- 春节 end -->
+    <div id="loading_box" style="width: 100%;height: 100%;overflow: hidden;z-index: 1000;position: absolute;left: 0;top: 0;display: none;"><img
+            src="/v/hnqp/img/loading.gif" id="loading" /></div>
+    <!-- 弹窗 -->
+    <div class="wxmark" id="wxmark">
+        <img src="img/alert_tip.png" />
+    </div>
+    <div class="active">
+		<img src="/v/hkqp/img/close_black.png" class="close">
+        <img src="/v/hkqp/img/20190428.png" id="active" />
+    </div>
+    <!-- 拆红包页面 -->
+    <div class="getcash">
+        <div class="logo"><img src="img/logo.png?v=2.1.0"></div>
+        <div class="slogn"><img src="img/slogn-cash.png?v=2.1.0"></div>
+        <div class="hb">
+            <img src="img/hb.png?v=2.1.0">
+            <!-- <div class="headUp"></div> -->
+            <div class="headDown"><img src="img/headDown.png?v=2.1.0"></div>
+            <div class="open" style="z-index: 1;"></div>
+        </div>
+        <div class="beer"><img src="img/beer.png?v=2.1.0"></div>
+        <div class="footer">
+            <img src="img/footer.png?v=2.1.0">
+            <p>活动截止：2018-12-31<br>兑奖截止：2019-03-31</p>
+        </div>
+    </div>
+    <!-- 红包页面 -->
+    <div class="packets">
+        <!-- 送酒上门按钮 -->
+        <img id="btn-to-home" src="img/btn-to-home-new.png">
+		<img src="/v/hnqp-common3.0/img/icon_game.png"  class="icon_game">
+        <div class="zhang" id="repscan">
+            您已扫过这个码，红包已入帐<br />
+            扫码入帐时间：<br /><span id="scan_time"></span>
+        </div>
+        <div class="cap">
+            <p id="text">恭喜你获得</p>
+            <p id="money"><span id="doller1"></span>元</p>
+        </div>
+        <div class="msg">
+            <p class="prompt">
+                根据微信平台要求，红包累计大于等于1元后可自动体现。不足1元的红包我们为您贴心准备了零钱包功能，快点击下方按钮存钱吧~
+            </p>
+            <div class="progress">
+                <p id="mark">再扫几个瓶盖攒够一元，即可发送红包</p>
+                <div style="position: absolute;left: 0;top: 0;width: 100%;
+                        height: 100%;overflow: hidden;"><input
+                        type="button" id="scroll" disabled="disabled" /><i></i></div>
+                <span class="sign">¥ <em id="doller2">0.00</em></span>
+                <button type="button" id="btn"></button>
+            </div>
+            <p class="rule">
+                <a href="javascript:;" id="left">活动规则</a>
+                <a href="javascript:;" id="right">隐私说明</a>
+            </p>
+        </div>
+		<!-- <p class="copyright">本产品服务由<a href="tel:4008365591">V积分</a>大数据中心提供</p> -->
+    </div>
+</body>
+
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/22nav.js"></script>
+<script src="/static/js/vve/30web.js"></script>
+<script src="/static/js/vve/31biglog.js"></script>
+<script src="/static/js/vve/32simplelog.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=13.0.7"></script>
+<script src="/v/js/publictip.js?v=13.0.1"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- 新年活动页 -->
+<!-- <script src="/v/ymqp-common2.0/js/happyNewYear.js?v=18"></script> -->
+<script src="/static/js/zeroText.js?v=11" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=14.5.16"></script>
+<script src="/static/js/wx/jsdk.js?v=13"></script>
+<script src="/static/js/font.js?v=13"></script>
+<script>
+    ini_wxshare(vge.hnqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

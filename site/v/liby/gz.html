@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>立白日化</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <style>
+      body{background: #F0EFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+      #reg_success{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 101; background: rgba(62,58,57,1); display: none;}
+      #success_tip{margin-top: 20%; width: 84%; margin-left: 8%; background: #fff; border-radius: 5px; padding: 12px 0 0;}
+      #success_tip p:nth-child(1){line-height: 24px; color: #333; font-size: 16px; margin: 0 5%;}
+      #success_tip p:nth-child(2){line-height: 30px; color: #666; font-size: 13px; margin: 0 5% 14px;}
+      #success_tip img{width: 40%; margin-bottom: 26px;}
+      #success_tip #record{color: #04BE01; font-size: 14px; line-height: 44px; border-top: 1px solid #e5e5e5; padding: 0 5%;}
+    </style>
+    
+  </head>
+  <body>
+    <div id="reg_success">
+      <div id="success_tip">
+        <p>尊敬的店主</p>
+        <p>恭喜您奖励领取成功~</p>
+        <img src="/v/liby/img/getbag.png">
+        <p id="record">查看获奖记录</p>
+      </div>
+    </div>
+    
+    <div id="toast" style="display: none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">已完成</p>
+      </div>
+    </div>
+    
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <div class="weui_loading">
+          <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+      </div>
+    </div>
+    
+  </body>
+  <script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+  <script src="/static/js/vve/10core.js?v1"></script>
+  <script src="/v/js/cfg.js?v=4"></script>
+  <script src="/static/js/vve/11tool.js?v1"></script>
+  <script src="/static/js/vve/20ajx.js?v=5"></script>
+  <script src="/v/liby/js/gz.js?v=4"></script>
+</html>

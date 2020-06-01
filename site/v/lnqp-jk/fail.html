@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒辽宁</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/fail.css?v=1" />
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="fail">
+				<div>
+					<img src=""/>
+					<p class="fali_tip"></p>
+					<!--心急喝不了好啤酒，再等等哦~-->
+				</div>
+			</div>
+			<p class="icon-close"></p>
+			<p id="batch" style="color: #fff;position: absolute;bottom: 0;left: 0;width: 100%;"></p>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=3.0.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script type="text/javascript">
+		var args = vge.urlparse(location.href),
+			batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+			PHONE_NUM = '15801152037',
+			bizcode = args.bizcode;
+		switch(bizcode) {
+			case '1': //二维码不存在
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-6.png');
+				$('.fali_tip').html('这个二维码不存在');
+				break;
+			case '2': //二维码已被使用
+				if(sessionStorage.earnTime == '' || sessionStorage.earnTime == undefined || sessionStorage.earnTime =='undefined') {
+					$('.fali_tip').html('');
+				} else {
+					var time = sessionStorage.earnTime === undefined ? '' : sessionStorage.earnTime.split('.')[0];
+					$('.fali_tip').html('扫码时间：'+time+'<br />再扫一瓶试试看');
+				}
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-2.png');
+				$('#fail img').addClass('h');
+				break;
+			case '3': //二维码已过期
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-3.png');
+				$('#fail img').addClass('h');
+				$('.fali_tip').html('下次请早哦~');
+				break;
+			case '4': //活动未开始
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-4.png');
+				$('.fali_tip').html('心急喝不了好酒，再等等哦~');
+				$('#batch').html(batchName + '<br />服务热线：' + PHONE_NUM);
+				break;
+			case '5': //活动已结束
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-5.png');
+				$('.fali_tip').html('过了这个村，我在下一个村等你~');
+				break;
+			case '6': //二维码异常
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-6.png');
+				$('.fali_tip').html('稍等片刻，码上欢聚');
+				break;
+			case '17': //酒品已过期
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip-5.png');
+				$('.fali_tip').html('您扫的这瓶酒<br />所属产品批次活动已结束');
+				break;
+			case '19': //未入库
+				location.href = 'http://' + location.host + '/v/lnqp/fail.html?bizcode=19';
+				document.getElementById("cash").style.display = 'block';
+				document.getElementById("btn").addEventListener('click', function() {
+					location.href = 'http://' + location.host + '/lnqp/too/mybag';
+				}, false);
+				break;
+			case '-1': //系统升级中
+				$('#fail img').attr('src','/v/lnqp-jk/img/fail-tip--1.png');
+				$('.fali_tip').html('稍安勿躁，敬请期待');
+				break;
+			case '18': //扫码专员
+				title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+				break;
+			default:
+				title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+				break;
+		}
+		$('.icon-close').on('click',function(){
+			wx.closeWindow();
+		})
+	</script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb>1.85){
+			$('body').addClass('screen');
+		}
+	</script>
+</html>

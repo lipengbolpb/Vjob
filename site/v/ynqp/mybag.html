@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒云南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1.0.4"/>
+	</head>
+	<body>
+		<div class="tx_mark" style="display: none;">
+			<img src="img/alert.png" class="tx_mark"/>
+		</div>
+		<div class="up">
+			<img src="img/logo.png" class="logo"/>
+			<img src="img/fail_bottle.png" class="bottle"/>
+			<div class="msg">
+				<p class="title">共喝青岛啤酒</p>
+				<p class="num">
+					<i id="num"></i>瓶
+				</p>
+				<div style="display: inline-block;text-align: left;" class="msg_box"><p class="balance">账户余额：<span id="dom_balance"></span><span class="r">元</span></p><p class="sent">已领金额：<span id="add_money"></span><span class="r">元</span></p></div>
+				<a href="javascript:;" class="details">查看详细记录</a>
+			</div>
+			<img src="img/bird_2.png" class="bird"/>
+			<div id="btn"></div>
+		</div>
+		<div class="down">
+			<div class="record">
+				<div id="hide">收起</div>
+				<ul id="mon_list">
+				</ul>
+				<p id="more" class="getmore">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="loading"><img src="/v/sxqp/img/loading.gif"/></div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+	    <li>
+	      	<p class="title list_left">
+				<span class="title">[=monwhere]</span><br />
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_left"><span style="color:[=color];">[=money]</span></p>
+      	</li>
+    </script>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+    <script src="/static/js/vve/10core.js?v1"></script>
+    <script src="/v/js/cfg.js?v=13.0.6"></script>
+    <script src="/v/js/publictip.js?v=13.0.0"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/vve/11tool.js?v1"></script>
+    <script src="/static/js/vve/20ajx.js?v=12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mybag.js?v=11.0.9" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  	ini_wxshare(vge.ynqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>
+</html>

@@ -1,0 +1,317 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/getcash_bg.png) repeat-y left top;
+	-webkit-background-size: 100%;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	display: block;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+
+/*加载中秋动画的备用盒子*/
+#midAutumn_box{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+	background: #fff;
+}
+/*---end---*/
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#alert img{
+	width: 100%;
+}
+div.getcash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/index_bg.png) no-repeat left top;
+	-webkit-background-size: 100%;
+	display: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.getcash img.bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+div.getcash img.logo{
+	position: absolute;
+	left:1.1rem;
+	top: 1.1rem;
+	width: 2.4rem;
+}
+div.getcash img.bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+div.getcash img.slogan{
+	width: 11.3rem;
+	margin: 1.5rem auto 0;
+}
+div.getcash div.cash_box{
+	position: relative;
+	width: 100%;
+}
+div.getcash div.cash_box img{
+	position: absolute;
+}
+div.getcash div.cash_box img.woman{
+	width: 2.6rem;
+	right: 1rem;
+	top: 3.2rem;
+	display: none;
+}
+div.getcash div.cash_box img.cash{
+	width: 13rem;
+	left: 50%;
+	z-index: 2;
+	margin-left: -5.5rem;
+}
+div.getcash div.cash_box img.cloud_1{
+	width: 6.9rem;
+	left: 2.1rem;
+	top: 14.6rem;
+	z-index: 3;
+}
+div.getcash div.cash_box img.cloud_2{
+	width: 5rem;
+	left: 9.5rem;
+	top: 11.5rem;
+}
+div.getcash div.cash_box img.cash.ani{
+	-webkit-animation: cash linear 2s both;
+}
+div.getcash div.cash_box img.cloud_1.ani{
+	-webkit-animation: cloud_1 linear .4s both;
+}
+div.getcash div.cash_box img.cloud_2.ani{
+	-webkit-animation: cloud_2 linear .4s both;
+}
+@-webkit-keyframes cloud_1{
+	0%{top: 14.6rem;}
+	100%{top: 9.6rem;}
+}
+@-webkit-keyframes cloud_2{
+	0%{top:11.5rem;}
+	100%{top:6.5rem;}
+}
+@-webkit-keyframes cash{
+	0%{top:5rem;}
+	20%{
+		top:0rem;
+		-webkit-transform: rotate(0deg);
+	}
+	59%{
+		-webkit-transform: rotate(0deg);
+	}
+	60%{
+		-webkit-transform: rotate(-10deg);
+	}
+	67%{
+		-webkit-transform: rotate(5deg);
+	}
+	74%{
+		-webkit-transform: rotate(-5deg);
+	}
+	81%{
+		-webkit-transform: rotate(10deg);
+	}
+	88%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+div.getcash div.cash_box img.man_1{
+	width: 3rem;
+	left: 10.5rem;
+	top:8.5rem;
+	z-index: 3;
+	display: none;
+}
+div.getcash div.cash_box img.man_2{
+	width: 3.6rem;
+	left: 0.5rem;
+	top:10.5rem;
+	z-index: 4;
+	display: none;
+}
+div.getcash div.cash_box img.light{
+	left: -1rem;
+	top:-8rem;
+	width: 18rem;
+	z-index: 6;
+	display: none;
+}
+@media only screen and (max-width: 480px) {
+	div.getcash{
+		overflow-x: hidden;
+	}
+	div.getcash img.slogan{
+		width: 10rem;
+		margin: .8rem auto 0;
+	}
+	div.cash_box{
+		-webkit-transform: scale(.9);
+	}
+}
+@media only screen and (max-width: 440px) {
+	div.getcash{
+		overflow-x: hidden;
+	}
+	div.getcash img.slogan{
+		width: 10rem;
+		margin: .8rem auto 0;
+	}
+	div.cash_box{
+		-webkit-transform: scale(.9);
+	}
+}
+
+div.repcash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+div.repcash img.repscan{
+	width: 12rem;
+	position: absolute;
+	left: 50%;
+	top: 7rem;
+	margin-left: -6rem;
+	display: none;
+	z-index: 11;
+}
+div.repcash div.cash_bg{
+	height: 14rem;
+	background: url(../img/cash_bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: auto 100%; 
+	margin: 3.5rem auto 0;
+	color: #fff69a;
+	text-align: center;
+	overflow: hidden;
+}
+div.repcash div.cash_bg p.title{
+	margin: 6.7rem auto 0;
+	font-size: 1.1rem;
+}
+div.repcash div.cash_bg p.money{
+	margin: .5rem auto 0;
+	font-size: 1.1rem;
+	/*font-weight: bold;*/
+	-webkit-transform: scaleX(1.1);
+}
+div.repcash div.cash_bg p.money span{
+	font-size: 1.8rem;
+	position: relative;
+	bottom: -.1rem;
+}
+#btn{
+	width: 7.8rem;
+	height: 1.9rem;
+	background: #ffdb45;
+	-webkit-border-radius: .5rem;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.9rem;
+	color: #e94944;
+	font-size: .8rem;
+	overflow: hidden;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#btn img{
+	width: 1.3rem;
+	display: block;
+	margin: .3rem auto;
+}
+div.repcash #tip{
+	font-size: .6rem;
+	color: white;
+	margin: 1.5rem auto ;
+	padding: 0 1rem;
+	text-align: center;
+}
+div.repcash p.rule_box{
+	text-align: center;
+}
+div.repcash p.rule_box a{
+	padding: 0 1rem;
+	font-size: .6rem;
+	color: white;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+@media only screen and (max-width: 480px) {
+	div.repcash div.cash_bg{
+		height: 13rem;
+		margin: 2rem auto 0;
+	}
+	div.repcash div.cash_bg p.title{
+		margin: 5.7rem auto 0;
+	}
+	div.repcash #tip{
+		margin: 1rem auto ;
+	}
+}
+
+
+
+
+

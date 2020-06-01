@@ -1,0 +1,281 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+
+div.wrap{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	background:url('../img/bg.png?v=1') top left/100% 100% no-repeat ;/*img position/size repeat color*/
+}
+div.shake{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+	display:block;
+	transition:all 1s linear both;
+}
+div.shake img.slogan{
+	display:block;
+	width:11rem;
+	margin:1.5rem auto 0;
+}
+@-webkit-keyframes yao{
+   0% { -webkit-transform: rotateZ(0deg); }
+   66% { -webkit-transform: rotateZ(0deg); }
+   77% { -webkit-transform: rotateZ(15deg); }
+   88% { -webkit-transform: rotateZ(-15deg); }
+   100% { -webkit-transform: rotateZ(0deg); }
+}
+div.shake img.mobile{
+	width:4.5rem;
+	margin-left:48%;
+}
+div.shake img.yao{
+	width:4.5rem;
+	margin-left:48%;
+	animation:yao 1s ease infinite;
+	-webkit-animation:yao 1.2s ease infinite;
+}
+div.shake img.ball1{
+	position:absolute;
+	width:10rem;
+	top:12.5rem;
+	left:3rem;
+	z-index:1;
+	transition:all 0.2s linear;
+}
+.up{
+	transform:translate(0,-6rem);
+	-webkit-transform:translate(0,-6rem);
+}
+div.shake img.ball2{
+	position:absolute;
+	width:10rem;
+	top:6.5rem;
+	left:3rem;
+	display: none;
+}
+div.shake img.ball3{
+	position:absolute;
+	width:16rem;
+	top:2rem;
+	left:0rem;
+	display: none;
+}
+div.shake img.man{
+	width:11rem;
+	position:absolute;
+	top:15rem;
+	left:2.5rem;
+	z-index:2;
+}
+@media only screen and (max-height:600px) and (min-width:321px) {
+	div.shake img.ball1{
+		top:12rem;
+	}
+	div.shake img.ball2{
+		top:6rem;
+	}
+	div.shake img.man{
+		top:14rem;
+	}
+}
+@media only screen and (max-height:550px) and (min-width:321px) {
+	div.shake img.ball1{
+		top:11rem;
+	}
+	div.shake img.ball2{
+		top:5rem;
+	}
+	div.shake img.man{
+		top:13rem;
+	}
+}
+@media only screen and (max-height:440px) {
+	div.shake img.ball1{
+		top:9.5rem;
+	}
+	div.shake img.ball2{
+		top:3.5rem;
+	}
+	div.shake img.man{
+		top:11.5rem;
+	}
+}
+
+.blur {	
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+       -moz-filter: blur(2px);
+        -ms-filter: blur(2px);    
+            filter: blur(2px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+@-webkit-keyframes swinging{
+   0% { -webkit-transform: rotateZ(0deg); }
+   20% { -webkit-transform: rotateZ(-45deg); }
+   40% { -webkit-transform: rotateZ(45deg); }
+   60% { -webkit-transform: rotateZ(-45deg); }
+   80% { -webkit-transform: rotateZ(45deg); }
+   100% { -webkit-transform: rotateZ(0deg); }
+}
+.swing{
+	-webkit-animation:swinging 0.7s ease-in-out 0s both;
+   	-moz-animation:swinging 0.7s ease-in-out 0s both;
+   	animation:swinging 0.7s ease-in-out 0s both;
+}
+
+div.getcash{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:rgba(0,0,0,0.6);
+	transition:all 1s linear;
+	opacity:0;
+}
+div.getcash img.title{
+	display:block;
+	width:11rem;
+	margin:1rem auto 0;
+}
+div.getcash div.draw{
+	width:9rem;
+	margin:0 auto;
+	position:relative;
+}
+div.getcash div.draw img.hb{
+	width:100%;
+}
+div.getcash div.draw p.tip{
+	color:#ffd46c;
+	font-size:1rem;
+	width:100%;
+	text-align:center;
+	position:absolute;
+	top:4.5rem;
+}
+div.getcash div.draw p.num{
+	color:#fff699;
+	font-size:1rem;
+	width:100%;
+	text-align:center;
+	position:absolute;
+	top:6.5rem;
+}
+div.getcash div.draw p.num span{
+	font-size:2rem;
+}
+div.getcash input.btn{
+	display:block;
+	width:8rem;
+	height:2rem;
+	margin:0.5rem auto 0;
+	border:none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color: #ffdc45;
+	font-size:0.9rem;
+	font-family: "微软雅黑","Microsoft YaHei";
+	color:#ea5244;
+}
+div.getcash div.msg{
+	width:82%;
+	margin:1.5rem auto 0;
+	text-align:center;
+	font-size:0.55rem;
+	color:#ffffff;
+}
+div.getcash div.msg div.bottom{
+	width:70%;
+	margin:1rem auto;
+}
+div.getcash div.msg a{
+	color:#ffffff;
+	text-decoration:underline;
+}
+div.getcash div.msg a.explain{
+	float:left;
+}
+div.getcash div.msg a.rule{
+	float:right;
+}
+@media only screen and (max-width:330px) {
+	div.getcash div.msg{
+		width:90%;
+	}
+}
+@media only screen and (max-height:550px) {
+	div.getcash div.msg{
+		margin:0.5rem auto 0;
+	}
+	div.getcash div.msg div.bottom{
+		margin:0.5rem auto;
+	}
+}
+@media only screen and (max-height:500px) {
+	div.getcash div.draw{
+		width:8rem;
+	}
+	div.getcash div.draw p.num{
+		top:6rem;
+	}
+	div.getcash div.msg{
+		margin:0.5rem auto 0;
+	}
+}
+div.alert{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-color:rgba(0,0,0,0.6);
+	display: none;
+}
+div.alert img{
+	display: block;
+	width:75%;
+	margin:4rem auto 0;
+}
+@media only screen and (max-height:550px){
+	div.alert img{
+		width:70%;
+	}
+}
+@media only screen and (max-height:450px){
+	div.getcash div.msg{
+		margin:0.2rem auto 0;
+	}
+	div.getcash div.msg div.bottom{
+		margin:0.2rem auto 0;
+	}
+	div.getcash img.title{
+		width:9rem;
+		margin:1rem auto 0;
+	}
+	div.getcash input.btn{
+		margin:0.2rem auto 0;
+	}
+}

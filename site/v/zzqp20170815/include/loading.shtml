@@ -1,0 +1,54 @@
+<script>
+function load(manifest,callback){
+  for (var i = 0 ; i < manifest.length ; i++) {
+    var images = [];
+    var count = 0;
+    images[i] = new Image();
+    images[i].src = "img/"+manifest[i].src;
+    images[i].classname = manifest[i].class;
+    images[i].onload = function (){
+      count++;
+      var itemClass = this.classname;
+      //进度
+      var progress = parseInt((count/manifest.length)*100);
+      $(".loadTxt").text(progress+"%");
+      if(itemClass){
+        var w = this.width/100 + "rem";
+        $("."+itemClass).width(w);
+        $("."+itemClass).attr("src",this.src);
+      }
+      if(count>=manifest.length){
+        callback();
+      }
+    }
+  }
+}
+
+
+</script>
+<style>
+#Loading{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #231c14;
+  z-index: 100;
+}
+.loadTxt{
+  top: 4.5rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background: #040f08;
+    color: #fff;
+    font-size: .24rem;
+}
+.t_center{position:absolute;left:50%;-webkit-transform:translateX(-50%)}
+.v_center{position:absolute;top:50%;-webkit-transform:translateY(-50%)}
+.g_center{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%)}
+</style>
+<div id="Loading">
+  <p class="loadTxt t_center">0%</p>
+</div>

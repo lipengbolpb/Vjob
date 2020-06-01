@@ -1,0 +1,164 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+p,div,input,span{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+body{
+	background: #f3f3f3;
+	/* background: url(../img/bg-repeat.png) repeat top left; */
+	/* background-size: 2.2rem; */
+}
+.ad{
+	width:100%;
+	/* height:2.25rem; */
+}
+#active_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#active_box .slogan{
+	width: 13.35rem;
+	display: block;
+	margin: .4rem auto 0.6rem;
+	transform: translateX(.3rem);
+}
+#active_list{
+	/* width: 13rem; */
+	height: 16rem;
+	margin: 0 auto;
+	background: url(../img/active-list.png?v=1.0.0) no-repeat center;
+	-webkit-background-size: 90% 100%;
+	background-size: 90% 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	flex-direction:column;
+}
+#active_list p{
+	height: 30%;
+	width: 100%;
+	position: relative;
+}
+#active_list p .spanTip{
+	position: absolute;
+	line-height: .725rem;
+	font-size: .556rem;
+	color: #363635;
+	left: 4.65rem;
+	top: 2.5rem;
+}
+
+.icon{
+	width: 3rem;
+    position: absolute;
+    padding: .8rem 1.2rem;
+}
+.spanTitle{
+	position: absolute;
+    left: 4.65rem;
+    top: .6rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+@media only screen and (min-aspect-ratio:320/480) {
+	#active_list{
+		height: 15rem;
+	}
+	.icon{
+		padding: .6rem 1.2rem;
+	}
+}
+
+@media only screen and (min-height:700px) {
+    #active_box .slogan{
+		margin-top: 1rem;
+	}
+	#active_list{
+		margin-top: 2rem;
+	}
+}

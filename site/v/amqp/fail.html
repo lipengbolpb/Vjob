@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>银麦啤酒敢为明天</title>
+        <script>
+
+        </script>
+ 		<link rel="stylesheet" type="text/css" href="css/fail.css?v=1.1">
+ 		<script src="js/rem.js" type="text/javascript"></script>
+    </head>
+    <body>
+      	<div class="wrap">
+            <img src="img/logo.png" class="logo">
+            <img src="img/footer.png" class="footer">
+            <p class="time">
+                <span>扫码时间:</span>
+                <span id="earnTime"></span>
+            </p>
+            <img src="img/fail_used.png" id="contant">
+        </div>
+        <p id="batch"></p>
+    </body>
+    <script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/cfg.js?v=2.0.2"></script>
+    <script>
+        var contant = document.getElementById('contant');
+        var args = vge.urlparse(location.href),
+            batch = document.getElementById("batch"),
+            dom_earnTime = document.getElementById("earnTime"),
+            dom_time = document.getElementsByClassName('time')[0],
+        	batchName = sessionStorage.batchName===undefined?'':sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch(bizcode) {
+        case '1'://二维码不存在
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_biz.png';
+            break;
+        case '2'://二维码已被使用
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_used.png';
+            if(sessionStorage.earnTime == ''){
+                dom_time.style.display = 'none';
+            }else{
+                dom_time.style.display = 'block';
+                dom_earnTime.innerHTML = sessionStorage.earnTime===undefined?'':sessionStorage.earnTime;
+            }
+            break;
+        case '3'://二维码已过期
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_timeover.png';
+            break;
+        case '4'://活动未开始
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_unstart.png';
+            batch.innerHTML = batchName+'<br />服务热线：18519813990';
+            break;
+        case '5'://活动已结束
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_over.png';
+            break;
+        case '6'://二维码异常
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_biz.png';
+            break;
+        case '-1'://系统升级中
+            contant.src = 'http://' + location.host + '/v/amqp/img/fail_up.png';
+            break;      
+        default:
+            bizcode=bizcode===''?'x':bizcode;
+            alert('出错了，请稍后再试！'+bizcode);
+            break;
+        }
+    </script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/font.js"></script>
+</html>

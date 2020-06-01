@@ -1,0 +1,486 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow-x: hidden;
+    background: #f69219 url(../img/prize_bg.png) no-repeat top;
+    -webkit-background-size: 100% auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: #b24a00;
+}
+
+.logo {
+    width: 3rem;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.repcash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.repcash img {
+    width: 60%;
+    display: block;
+    margin: 3rem auto;
+}
+
+.repcash p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.get {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+.get-new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+.prizetype {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #f69219 url(../img/prize_bg.png) no-repeat top;
+    -webkit-background-size: 100% auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.get .top {
+    margin: 0 auto;
+    width: 100%;
+    height: 12rem;
+}
+
+.get .top p.title {
+    color: #ca2525;
+    text-align: center;
+    font-size: .62rem;
+}
+
+.get .slogan {
+    display: block;
+    width: 12rem;
+    margin: 1rem auto 1rem;
+}
+
+.get div.prize_box {
+    width: 9rem;
+    height: 8.1rem;
+    background: url(../img/prizebg.png) no-repeat bottom;
+    -webkit-background-size: 100% auto;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.get div.prize_box img.gif_1 {
+    position: absolute;
+    width: 2.4rem;
+    bottom: 0;
+    left: .6rem;
+}
+
+.get div.prize_box img.prize_phone {
+    width: 3.6rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    pointer-events: none;
+    z-index: 1;
+    display: none;
+}
+
+.ck {
+    display: block;
+    margin: 1rem auto;
+    width: 50%;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: #ffe037 !important;
+    color: #cd2e37;
+    font-size: 0.75rem;
+    font-family: "微软雅黑";
+    -webkit-box-shadow: 0px 6px 2px #a18e4a;
+}
+
+.get .notice {
+    margin: 1rem auto 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.55rem;
+}
+
+.info .slogan {
+    width: 3.75rem;
+    display: block;
+    margin: 3.5rem auto 0;
+}
+
+.info .bottom_bg {
+    width: 100%;
+    margin-top: -3rem;
+}
+
+.info .wrap {
+    width: 85%;
+    min-height: 1rem;
+    margin: 0.8rem auto 0;
+    overflow-y: hidden;
+}
+
+.info .explain {
+    width: 80%;
+    margin: 1rem auto 0;
+    overflow: hidden;
+}
+
+.info .explain .title {
+    width: 25%;
+    float: left;
+}
+
+.info .explain .title p {
+    background-color: #f4231e;
+    color: #fef902;
+    font-size: 0.6rem;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.info .explain .content {
+    width: 72%;
+    float: right;
+    margin-top: -0.1rem;
+    margin-right: -0.2rem;
+    margin-bottom: 1rem;
+}
+
+.info .explain .content p:nth-of-type(1) {
+    color: #992211;
+    font-size: 0.6rem;
+    /* margin-top: .2rem; */
+}
+
+.info .explain .content p:nth-of-type(2) {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    color: #ba5204;
+    font-size: 0.55rem;
+}
+
+.info .explain a {
+    font-size: 0.55rem;
+    color: #fff8af;
+    margin: 5rem auto 0;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.info .explain .border {
+    width: 100%;
+    display: block;
+    margin: 0.8rem auto 0;
+}
+
+.info .warning {
+    width: 80%;
+    height: 2.5rem;
+    margin: 1rem auto 0;
+    background: url('../img/warning.png') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.info .warning .notice {
+    width: 7%;
+    float: left;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+.info .warning p {
+    float: right;
+    font-size: 0.45rem;
+    color: #c06119;
+    width: 86%;
+    line-height: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.info .msg {
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 0.8rem auto 0;
+}
+
+.info .msg input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    float: left;
+    border-bottom: 1px solid #cccccc;
+    background: url('../img/input-icon2.png') no-repeat;
+    background-position: 0.5rem;
+    color: #b24a00;
+}
+
+.info .msg .code,
+.yz {
+    border: none;
+}
+
+.info .msg .code {
+    width: 65%;
+}
+
+.info .msg .yz {
+    width: 34%;
+    border-left: 1px solid #cccccc;
+    color: #d7242a;
+    border-bottom: none;
+    background: none;
+}
+
+.info .change {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    display: none;
+}
+
+.info .change .change-content {
+    width: 70%;
+    margin: 3rem auto 0;
+    background-color: #199f41;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.info .change .change-content p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.info .change .change-content ul {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.info .change .change-content ul li {
+    color: #ffffff;
+    text-align: left;
+    font-size: 0.5rem;
+}
+
+.info .change .close {
+    width: 10%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+input {
+    font-size: 0.7rem;
+    color: #333333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+    text-indent: 2em;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+
+.info .tj {
+    width: 50%;
+    height: 2.2rem;
+    border-radius: 15px;
+    background-color: #ffe037;
+    color: #ca0013;
+    border: none;
+    outline: none;
+    margin: 1.5rem auto 0;
+    display: block;
+    font-size: 0.8rem;
+    font-family: "微软雅黑";
+    -webkit-box-shadow: 0px 6px 2px #a18e4a;
+}
+
+.info .alert {
+    color: #ffffff;
+    font-size: 0.5rem;
+    margin: 0.8rem auto 0;
+    line-height: 0.8rem;
+    width: 80%;
+    display: block;
+}
+
+.info .link {
+    width: 50%;
+    margin: 1rem auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.info a {
+    font-size: 0.65rem;
+    color: #b03505;
+    text-decoration: underline;
+}
+
+.info .rule {
+    /*float: left;*/
+}
+
+.info .secret {
+    float: right;
+}
+
+.info .beer {
+    margin: 2rem 1rem -3.5rem 70%;
+    width: 4rem;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}

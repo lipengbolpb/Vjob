@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="/v/sdqp/css/qr.css?v=1.0.3" />
+		<!-- <link rel="stylesheet" type="text/css" href="/v/fjqp/css/qr.css?v=0.0.4" /> -->
+    
+    <style>
+        /* img {
+            width: 10%;
+            margin-left: 45%;
+            margin-top: 56%;
+        } */
+
+        div.location {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/v/fjqp/img/location_1.png) no-repeat top left;
+            background-size: 100% 100%;
+            overflow-x: hidden;
+            display: none;
+        }
+
+        div.fail {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/v/fjqp/img/location_2.jpg) no-repeat top left;
+            background-size: 100% 100%;
+            overflow-x: hidden;
+            display: none;
+        }
+    </style>
+    <script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?83f9ea786770450ffc9c3f1550f206b0";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+  </head>
+  <body>
+  	<div class="location" id="location">
+    </div>
+    <div class="fail" id="fail">
+    </div>
+    <p id="info"></p>
+    <div id="toast" style="display: none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <i class="weui_icon_toast"></i>
+        <p class="weui_toast_content">已完成</p>
+      </div>
+    </div>
+
+    <div id="midAutumn">
+			<img src="/v/sdqp/imgMidAutumn/logo.png" class="midlogo">
+			<!-- 月亮 -->
+			<div id="moon_box">
+				<img src="/v/sdqp/imgMidAutumn/moon_1.png" class="moon_1">
+				<div class="moon_2_box">
+					<img src="/v/sdqp/imgMidAutumn/moon_2.png" class="moon_1">
+				</div>
+				<div class="moon_3_box">
+					<img src="/v/sdqp/imgMidAutumn/moon_3.png" class="moon_1">
+				</div>
+			</div>
+			<!-- 飞行员 -->
+			<div class="person_1_box">
+				<div class="foam_box">
+					<div class="foam_over">
+						<img src="/v/sdqp/imgMidAutumn/foam_left.png" class="foam">
+					</div>
+				</div>
+				<img src="/v/sdqp/imgMidAutumn/person_left.png" class="person_1">
+			</div>
+			<div class="person_2_box">
+				<div class="foam_box">
+					<div class="foam_over">
+						<img src="/v/sdqp/imgMidAutumn/foam_right.png" class="foam">
+					</div>
+				</div>
+				<img src="/v/sdqp/imgMidAutumn/person_right.png" class="person_2">
+			</div>
+			<img src="/v/sdqp/imgMidAutumn/rabbit_1.png" class="rabbit_1 rabbit">
+			<img src="/v/sdqp/imgMidAutumn/rabbit_2.png" class="rabbit_2 rabbit">
+			<img src="/v/sdqp/imgMidAutumn/rabbit_3.png" class="rabbit_3 rabbit">
+			<img src="/v/sdqp/imgMidAutumn/bottom.png" class="bottom">
+			<img src="/v/sdqp/imgMidAutumn/product.png" class="product">
+		</div>
+    
+    <div id="loadingToast" class="weui_loading_toast" style="display:none;">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+        <div class="weui_loading">
+          <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+          <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+      </div>
+    </div>
+    <!-- <div id="animate-new-year">
+      <div class="all-animate-box wrap-animate">
+        <div class="animate-box">
+          <img class="animate-logo" src="/v/fjqp/imgNewYear/logo.png">
+          <div class="many-animal"></div>
+          <div class="lights-animate">
+            <img class="light1 light-origin" src="/v/fjqp/imgNewYear/light1.png">
+            <img class="light2 light-origin" src="/v/fjqp/imgNewYear/light2.png">
+            <img class="light3 light-origin" src="/v/fjqp/imgNewYear/light3.png">
+            <img class="light4 light-origin" src="/v/fjqp/imgNewYear/light4.png">
+            <img class="light5 light-origin" src="/v/fjqp/imgNewYear/light5.png">
+            <img class="light6 light-origin" src="/v/fjqp/imgNewYear/light6.png">
+            <img class="light7 light-origin" src="/v/fjqp/imgNewYear/light7.png">
+            <img class="light8 light-origin" src="/v/fjqp/imgNewYear/light8.png">
+            <img class="light11 light-origin" src="/v/fjqp/imgNewYear/light11.png">
+            <img class="shitou" src="/v/fjqp/imgNewYear/shitou.png">
+            <img class="beer-text" src="/v/fjqp/imgNewYear/beer-text.png">
+            <img class="daniao" src="/v/fjqp/imgNewYear/daniao.png">
+          </div>
+          <div class="bottom-lights">
+            <img class="light9" src="/v/fjqp/imgNewYear/light9.png" alt="" srcset="">
+            <img class="light10" src="/v/fjqp/imgNewYear/light10.png" alt="" srcset="">
+            <img class="light12" src="/v/fjqp/imgNewYear/light12.png" alt="" srcset="">
+          </div>
+        </div>
+
+        <div class="bottom-box"></div>
+      </div>
+    </div> -->
+  </body>
+  <script src="/v/sdqp/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/jquery-2.2.4.min.js"></script>
+  <script src="/static/js/wx/jsdk.js?v12"></script>
+  <!-- <script src="/static/js/jquery-2.2.4.min.js"></script> 84k -->
+  <script src="/static/js/vve/10core.js?v1"></script>
+  <script src="/static/js/vve/11tool.js?v1"></script>
+  <script src="/static/js/vve/20ajx.js?v=2"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="/v/js/cfg.js?v=3.10.9"></script>
+  <script src="/v/js/publictip.js?v=1"></script>
+  <script src="js/qr.js?v=4.2.13"></script>
+</html>

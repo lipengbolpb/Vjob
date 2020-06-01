@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+<title>红包奖不停，酒王赢大礼</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/guandao.css?v=1.0.3">
+<link rel="stylesheet" href="css/public/global.css?v=1.0.0">
+<link rel="stylesheet" href="css/public/layout.css?v=1.0.1">
+<link rel="stylesheet" href="css/jiuwang.css?v=1.1">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0f6d8bdeef4ce0a4b1f72c37c3759968";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="page page1" style="height: 100%;">
+<script>
+function load(manifest,callback){
+  for (var i = 0 ; i < manifest.length ; i++) {
+    var images = [];
+    var count = 0;
+    images[i] = new Image();
+    images[i].src = "img/"+manifest[i].src;
+    images[i].classname = manifest[i].class;
+    images[i].onload = function (){
+      count++;
+      var itemClass = this.classname;
+      //进度
+      var progress = parseInt((count/manifest.length)*100);
+      $(".loadTxt").text(progress+"%");
+      if(itemClass){
+        var w = this.width/100 + "rem";
+        $("."+itemClass).width(w);
+        $("."+itemClass).attr("src",this.src);
+      }
+      if(count>=manifest.length){
+        callback();
+      }
+    }
+  }
+}
+
+
+</script>
+<style>
+#Loading{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #231c14;
+  z-index: 100;
+}
+.loadTxt{
+  top: 4.5rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background: #040f08;
+    color: #fff;
+    font-size: .24rem;
+}
+.t_center{position:absolute;left:50%;-webkit-transform:translateX(-50%)}
+.v_center{position:absolute;top:50%;-webkit-transform:translateY(-50%)}
+.g_center{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%)}
+</style>
+<div id="Loading">
+  <p class="loadTxt t_center">0%</p>
+</div><div id="cj" style="display:block">
+	<img src="img/guandao2/ship.png" class="ship">
+	<img src="img/guandao2/sole.png" class="sole">
+	<img src="img/guandao2/ticket1.png" class="pi1">
+	<img src="img/guandao2/ticket2.png" class="pi2">
+	<img src="img/guandao2/guan.png" class="guan">
+	<div class="lun">
+		<img src="img/guandao/l1.png" class="l1">
+		<img src="img/guandao/l2.png" class="l2">
+	</div>
+	<div class="gz_top">
+		<img src="img/guandao2/top1.png" class="top1"><img src="img/guandao2/top2.png" class="top2">
+	</div>
+	<div class="gz_mid">
+		<img src="img/guandao2/mid2.png" class="mid2"><img src="img/guandao2/mid1.png" class="mid1">
+	</div>
+	<div class="gz_bot">
+		<img src="img/guandao2/bot1.png" class="bot1"><img src="img/guandao2/bot2.png" class="bot2">
+	</div>
+	<img src="img/guandao2/lg.png" class="lg">
+	<img src="img/guandao2/lg2.png" class="lg2">
+	<img src="img/guandao2/hy.png" class="hy">
+	<img src="img/guandao2/qd.png" class="qd" id="shake">
+	<div class="letsgo"></div>
+	<div class="flash">
+		<img src="img/guandao2/flash1.png" class="flash1 top1">
+		<img src="img/guandao2/lucky.png" class="lucky">
+	</div>
+	<div class="gz1"><img src="img/guandao2/gz1.png" class=""></div>
+	<div class="gz2"><img src="img/guandao2/gz2_1.png" class=""></div>
+	<div class="gm">
+		<img src="img/guandao/gm1.png" class="gm1">
+		<img src="img/guandao/gm2.png" class="gm2">
+	</div>
+</div>
+
+<a class="_rules0" onclick="$('#ruleTier').fadeIn();"></a>
+<!--公用弹窗-->
+<div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <h2>很抱歉</h2>
+    <p class="tips">呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <!--<a class="close">ok</a>-->
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+  <!-- 活动已结束 -->
+  <img src="img/bg/over.png" class="timeover">
+</div>
+
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+<!--二维码已经扫过-->
+<div class="pop_container" id="noprizeTier3" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <img style="width: 100%;" src="img/bg/fail2.png?v=2"/>
+    <a class="tohj" href="/v/zzqpNew/huanju.html" style="position: absolute;width: 2rem;height: .6rem;top: 1.6rem;"></a>
+    <a class="tomy" href="/zzqpNew/txo/myList" style="position: absolute;width: 2rem;height: .6rem;top: 2.4rem;"></a>
+  </div>
+</div>
+
+<!--一等奖已扫过-->
+<div id="firstprize" style="width: 100%;height: 100%;overflow: hidden;text-align: center;position: absolute;z-index: 1111111;background-color: rgba(0,0,0,.85);display: none;">
+	<img src="/v/zzqpNew/img/bg/geted.png" style="position: static;width: 5rem;margin: 1rem auto 0;"/>
+	<p class="time" style="color: #FFFFFF;font-size: .25rem;margin: .5rem auto 0;">扫码中奖时间：<span id="time" ></span></p>
+	<img src="/v/zzqpNew/img/bg/stub.png" style="position: static;width: 5rem;margin: 1rem auto 0;"/>
+</div>
+<!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon"/>
+<div id="jiuw_box">
+    <img src="/v/ymqp20180130/img/close.png" class="close"/>
+    <div>
+    	<img src="/v/zzqpNew/img/bg/jiuw_qrcode.jpg" id="jwqrcode"/>
+    </div>
+</div>-->
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<style>
+#btn-a1{ display:block; position:absolute; top: .14rem; right: .2rem; width: 1.05rem; height: 1.05rem; z-index: 1000;}
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+.rotate000{-webkit-animation:9.5s linear 0s infinite rotate forwards;-webkit-animation-play-state:running;}
+#btn-a1 p{ display:block; width:100%; height:100%; background-size: 1.05rem; line-height:9999px; overflow:hidden;}
+.kais { background:url(/v/zzqpNew/img/bg/audio1.png) no-repeat center; background-size: contain;}
+.kais2 {background:url(img/bg/audio2.png) no-repeat center; background-size: contain;}
+._audio{ width: .41rem; position: absolute;top:2%; right: .2rem;z-index: 1000; display: none}
+</style>
+<div><audio id="bgMusic" autoplay loop src="/v/zzqpNew/music/bg.mp3?v=1"></audio></div>
+<img src="img/bg/audio1.png" class="_audio" alt="">
+<div id="btn-a1" class="film-container rotate000">
+  <p class="kais"> <i class="fa fa-music"></i></p>
+  <p class="kais2" style="display: none;"><i class="fa fa-music"></i> <i class="fa fa-minus"></i></p>
+</div>
+
+<div><audio src="/v/zzqpNew/music/gz.mp3" preload  id="music_2" ></audio></div>
+<script type="text/javascript">
+    var audio = document.getElementById('bgMusic');
+	// 音乐相关
+    function initMusic() {
+        var el = $("#bgMusic")
+        if (el && el.length > 0 && el.attr("src")) {
+            // 音乐相关
+            
+            $('#btn-a1').on("touchstart", function (ev) {
+                if (audio.paused) {
+                    audio.play();$('btn-a1').addClass('btn-a1');
+                    //$(".kais2").stop().fadeOut(0);
+                    //$(".kais").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'running'});
+                } else {
+                    audio.pause();$('btn-a1').removeClass('btn-a1');
+                    //$(".kais").stop().fadeOut(0);
+                    //$(".kais2").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'paused'});
+                }
+            });
+            $(document).one('touchstart', function () {
+                //audio.play();
+            });
+        }
+    }
+    initMusic(); 
+
+</script> 
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=1.0.6"></script>
+<script src="/v/js/publictip.js?v=1.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script>
+  ini_wxshare(vge.zzqpappid);
+  // 隐藏微信右上角菜单
+  wx.ready(function() {
+      wx.hideOptionMenu();
+  });
+</script>
+<script type="text/javascript" src="js/guandao.js?v=2.5.5"></script>
+<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

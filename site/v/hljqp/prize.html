@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>青啤豪情龙江</title>
+		<script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?7a0456e524bd6f5439659fcce4533def";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+		<link rel="stylesheet" type="text/css" href="css/prize.css?v=1.7"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<img src="" class="bg">
+			<img src="" class="tip">
+			<div class="name">
+				<input type="text" placeholder="您的姓名" id="name">
+			</div>
+			<div class="idcard" style="display:none;">
+				<input type="text" placeholder="您的身份证号" id="idcard" maxlength="18">
+			</div>
+			<div class="address">
+				<input type="text" placeholder="地址" id="address">
+			</div>
+			<div class="tel">
+				<input type="text" placeholder="输入手机号" id="tel" maxlength="11">
+			</div>
+			<div class="yzcode">
+				<input type="text" placeholder="输入验证码" class="code" maxlength="4">
+				<input type="button" value="获取验证码" class="get">
+			</div>
+			<input type="button" value="提交" class="btn">
+			<p class="notice">温馨提示：中奖者需提供完整的中奖瓶盖及中奖产品空瓶，以及个人身份证复印件供我公司或我公司委托的第三方核实确认</p>
+			<div class="bottom">
+				<a href="javascript:;" class="explain">隐私说明</a>
+				<a href="javascript:;" class="rule">活动规则</a>
+			</div>
+		</div>
+		<script src="/static/js/jquery-2.2.4.min.js"></script>
+		<script src="/static/js/vve/10core.js?v1"></script>
+		<script src="/static/js/vve/11tool.js?v1"></script>
+		<script src="/static/js/vve/20ajx.js?v1"></script>
+		<script src="/static/js/vve/idcard.js"></script>
+		<script src="/v/js/publictip.js"></script>
+		<script src="/v/js/cfg.js?v1.6" type="text/javascript" charset="utf-8"></script>
+		<script src="js/prize.js?v=1.58" type="text/javascript" charset="utf-8"></script>
+		<script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+	</body>
+</html>

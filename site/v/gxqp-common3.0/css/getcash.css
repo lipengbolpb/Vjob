@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    /* background: #009140; */
+    background: url('../img/body-bg.png') repeat top left;
+    background-size: 100% auto;
+    overflow: hidden;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+
+
+.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    pointer-events: none;
+    z-index: 999;
+    display: none;
+}
+
+/* 幕布层 */
+.beer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.curtain {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.curtain .curtain-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.curtain .curtain-left {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    transition: all 0.5s linear;
+}
+
+.curtain .curtain-right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    transition: all 0.5s linear;
+}
+
+.curtain .curtain-logo {
+    width: 20%;
+    margin: .8rem 0 0 5%;
+    display: block;
+    position: absolute;
+}
+
+.curtainLeftAnimate {
+    /* animation: curtainLeft 0.5s linear both; */
+    animation: curtainLeft 4s linear both;
+}
+
+.curtainRightAnimate {
+    /* animation: curtainRight 0.5s linear both; */
+    animation: curtainRight 4s linear both;
+}
+
+@-webkit-keyframes curtainLeft {
+
+    0% {
+        left: 0%;
+    }
+
+    12% {
+        left: -15%;
+    }
+
+    75% {
+        left: -15%;
+    }
+
+    100% {
+        left: -60%;
+    }
+}
+
+@-webkit-keyframes curtainRight {
+
+    0% {
+        right: 0%;
+    }
+
+    12% {
+        right: -15%;
+    }
+
+    75% {
+        right: -15%;
+    }
+
+    100% {
+        right: -60%;
+    }
+}
+
+/* 从下往上渐显 */
+@keyframes wrapper-gradient {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes img-gradient {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 从上往下渐显 */
+@keyframes wrapper-gradient-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes img-gradient-down {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.textBoxAnimate {
+    animation: wrapper-gradient 1s 0.5s ease-out both;
+}
+
+.textImgAnimate {
+    animation: img-gradient 1s 0.5s ease-out both;
+}
+
+.textBoxAnimateDown {
+    animation: wrapper-gradient-down 1.5s 1.2s linear both;
+}
+
+.textImgAnimateDown {
+    animation: img-gradient-down 1.5s 1.2s linear both;
+}
+
+.textTop {
+    height: 2.4rem;
+    width: 45%;
+    position: absolute;
+    top: 7rem;
+    left: 27.5%;
+    overflow: hidden;
+    display: none;
+}
+
+.textTop img {
+    height: 100%;
+    width: 100%;
+}
+
+.textBottom {
+    width: 45%;
+    height: 2rem;
+    position: absolute;
+    top: 9.2rem;
+    left: 27.5%;
+    overflow: hidden;
+    display: none;
+}
+
+.textBottom img {
+    width: 100%;
+    height: 100%;
+}
+
+.foamBox1 {
+    width: 100%;
+    height: 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.foamBox2 {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.text-foam {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 拆红包层 */
+.get {
+    width: 100%;
+    height: 100%;
+    background:#009040 url('/v/gxqp-final2019/img/20190617/bg.png?v=1') no-repeat top;
+    background-size: 100% auto;
+    overflow: hidden;
+    position: relative;
+    display: none;
+	box-sizing: border-box;
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.get .slogan{
+	width: 11rem;
+	display: block;
+	margin: 5.85rem auto .5rem;
+}
+.logo {
+    width: 4.2rem;
+    display: block;
+    position: absolute;
+    top: .8rem;
+    left: 5%;
+}
+.get .hb{
+	height: 12rem;
+	background: url(/v/gxqp-final2019/img/20190617/cash.png) no-repeat center;
+	-webkit-background-size: auto 100%; 
+	background-size: auto 100%;
+	overflow: hidden;
+}
+.get .hb .open {
+    width: 4rem;
+	display: block;
+	margin: 1.5rem auto;
+	
+}
+.get .hb .open.rotate{
+	animation: rotate 1s linear both;
+}
+@-webkit-keyframes rotate{
+	0%{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+	99%{
+		opacity: 1;
+		transform: rotateY(360deg);
+	}
+	100%{
+		opacity: 0;
+		transform: rotateY(360deg);
+	}
+}
+.get .hb .cash_tip{
+	font-size: .61rem;
+	text-align: center;
+	color: #ffed5c;
+}
+
+/* 拆开红包层 */
+.cash {
+    width: 100%;
+    height: 100%;
+    background: #009140 url('../img/bg.png?v=1') no-repeat bottom left;
+    background-size: 100% auto;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+}
+
+/* .cash .logo {
+    width: 25%;
+    margin: .8rem 0 0 5%;
+    display: block;
+    position: absolute;
+} */
+
+.cash .rule {
+    width: 20%;
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+}
+
+.cash p {
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.cash .title {
+    margin: 7rem auto 0;
+    font-size: 0.9rem;
+}
+
+.cash .main {
+    font-size: 2.4rem;
+    margin: 0.5rem auto 0;
+    font-weight: bold;
+    position: relative;
+    /* left: -3%; */
+}
+
+.cash .yuan {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 1.6rem;
+}
+
+.cash .time {
+    font-size: 0.7rem;
+    display: none;
+    margin-top: 0.3rem;
+}
+
+.cash .btn {
+    width: 50%;
+    height: 2.2rem;
+    position: absolute;
+    left: 25%;
+    bottom: 3.8rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #fbc700;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d8201f;
+    /* z-index: 9; */
+    margin: 0.5rem auto 0;
+    display: block;
+    box-shadow: 0px 5px 5px #ca8823;
+}
+
+.cash .notice {
+    font-size: 0.5rem;
+    position: absolute;
+    width: 100%;
+    bottom: 1.5rem;
+    left: 0;
+}
+
+/* 联通流量 */
+.liantong_btn {
+    width: 30%;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+}
+.liantong {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #004522;
+    display: none;
+}
+
+.liantong .liantong-bg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.liantong .liantong-btn {
+    width: 40%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 30%;
+}
+
+.liantong .liantong-close {
+    width: 10%;
+    position: absolute;
+    top: 0.8rem;
+    right: 5%;
+}
+
+/* 提现成功遮罩层 */
+.mask {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #009140 url('../img/bg.png?v=1') no-repeat bottom left;
+    background-size: 100% auto;
+    overflow: hidden;
+    display: none;
+}
+
+.mask .logo {
+    width: 25%;
+    margin: .8rem 0 0 5%;
+    display: block;
+    position: absolute;
+}
+
+.mask .alert {
+    width: 85%;
+    display: block;
+    margin: 7rem auto 0;
+    position: relative;
+}
+
+.mask .iknow {
+    width: 50%;
+    height: 2.2rem;
+    position: absolute;
+    left: 25%;
+    bottom: 3.5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #fbc700;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d8201f;
+    /* z-index: 9; */
+    margin: 0.5rem auto 0;
+    display: block;
+    box-shadow: 0px 5px 5px #ca8823;
+}
+
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #b0b5c2;
+    font-size: 0.45rem;
+    z-index: 999;
+}
+
+.copyright a {
+    color: #d5d5d5;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+
+@media only screen and (min-aspect-ratio:320/520) {
+    .mask .alert {
+        width: 80%;
+        margin: 5rem auto 0;
+    }
+
+    .mask .iknow {
+        bottom: 2rem;
+    }
+}

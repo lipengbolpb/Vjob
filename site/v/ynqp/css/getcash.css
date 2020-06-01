@@ -1,0 +1,485 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	color: #472710;
+}
+body{
+	background: url(../img/bg_mybag.png) no-repeat center;
+	-webkit-background-size: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none;display: block;}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+i,em{
+	font-style: normal;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+.r{
+	float: right;
+}
+/*加载中秋动画的备用盒子*/
+#midAutumn_box{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+	background: #fff;
+}
+/*---end---*/
+/*---------动画---------*/
+div.ani{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+div.ani img{
+	position: absolute;
+}
+div.ani img.fea{
+	-webkit-transition: all 1.5s;
+}
+div.ani img.fea_l{
+	height: 110%;
+	left: 0;
+	top: -10%;
+	z-index: 2;
+}
+div.ani img.fea_l.ani{
+	left: -100%;
+}
+div.ani img.fea_r{
+	height: 110%;
+	right: 0;
+	top: -10%;
+}
+div.ani img.fea_r.ani{
+	right: -100%;
+}
+div.ani img.fea_rb{
+	right: 0;
+	bottom: 0;
+	width: 80%;
+}
+div.ani img.fea_rb.ani{
+	right: -100%;
+	bottom: -100%;
+}
+div.ani img.fea_b{
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+}
+div.ani img.fea_b.ani{
+	bottom: -100%;
+}
+div.ani img.left_1{
+	width: 50%;
+	z-index: 5;
+	top: 33%;
+	left: 0;
+	-webkit-transform-origin:40% 40%;
+}
+div.ani img.left_1.fea1{
+	-webkit-animation: fea1 1.5s both;
+}
+div.ani img.left_1.ani{
+	left: -100%;
+}
+div.ani img.right_1{
+	width:76%;
+	z-index: 1;
+	right: 5%;
+	top: -5%;
+	-webkit-transform-origin:80% 20%;
+}
+div.ani img.right_1.fea2{
+	-webkit-animation: fea2 1.5s both;	
+}
+div.ani img.right_1.ani{
+	right: -100%;
+	top: -100%;
+}
+div.ani img.right_2{
+	z-index: 5;
+	top: 26%;
+	right: 0;
+	width: 83%;
+	-webkit-transform-origin:70% 50%;
+}
+div.ani img.right_2.fea1{
+	-webkit-animation: fea1 1.5s both;
+}
+div.ani img.right_2.ani{
+	right: -100%;
+}
+@-webkit-keyframes fea1{
+	from{
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(5deg);
+	}
+}
+@-webkit-keyframes fea2{
+	60%{
+		-webkit-transform: rotate(-8deg);
+	}
+	0%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+
+/*---------拆红包---------*/
+div.up{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.logo{
+	width: 2.3rem;
+	margin: 1rem auto 0;
+}
+div.up .slogan{
+	width: 11rem;
+	margin: .5rem auto 0;
+}
+div.up .cash_box{
+	margin-top: -2.5rem;
+	position: relative;
+}
+div.up .cash_box img{
+	position: absolute;
+}
+div.up .cash_box img.bird{
+	width: 13rem;
+	margin: 0 auto;
+	position: static;
+}
+div.up .cash_box img.cash{
+	top: 4rem;
+	width: 9.6rem;
+	left: 50%;
+	margin-left: -4.1rem;
+}
+div.up .cash_box img.open_border{
+	width: 8.3rem;
+	top: 6.7rem;
+	left: 50%;
+	-webkit-transition: all 1s;
+	-webkit-transform: translateX(-50%);
+	z-index: 1;
+}
+div.up .cash_box img.open{
+	width: 5.65rem;
+	top: 8rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	z-index: 2;
+}
+div.up .cash_box img.bottle{
+	width: 5.65rem;
+	right: 1.8rem;
+	top: 11rem;
+}
+/*--------钱-------*/
+div.down{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+div.down div.money_box{
+	margin: 1rem auto ;
+}
+div.down div.money_box img{
+	display: inline-block;
+}
+div.down div.money_box img.icon{
+	width: 1.3rem;
+}
+div.down div.money_box img.yuan{
+	width: 1.6rem;
+}
+div.down div.money_box span{
+	font-size: 2rem;
+	color: #920d06;
+	font-weight: bold;
+}
+div.down .sc{
+	width: 4.8rem;
+	margin: 0.5rem auto 0;
+}
+#btn{
+	height: 2.45rem;
+	margin: 1rem auto;
+	background: url(../img/button_1.png) no-repeat center;
+	-webkit-background-size:auto 100%;
+	line-height: 2.5rem;
+	font-size: .9rem;
+}
+div.down .tip{
+	padding: 0 2%;
+	font-size: .55rem;
+}
+div.down .rule_box{
+	text-align: center;
+	overflow: hidden;
+	margin-top: .5rem;
+}
+div.down .rule_box a{
+	width: 1.3rem;
+	height: 2.9rem;
+	display: inline-block;
+	margin: 0 .2rem;
+}
+div.down .explain{
+	background: url(../img/pravite.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+}
+div.down .rule{
+	background: url(../img/rule.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+}
+div.tx_mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.85);
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+div.tx_mark img{
+	width: 100%;
+	display: block;
+	margin: 3.5rem auto;
+}
+@media only screen and (max-height: 480px) {
+	div.up{
+		-webkit-transform: scaleY(.9);
+		-webkit-transform-origin: top;
+	}
+	div.down div.money_box{
+		margin: .5rem auto ;
+	}
+	#btn{
+		margin: .5rem auto;
+	}
+	div.tx_mark img{
+		display: block;
+		margin: 3.5rem auto;
+	}
+}
+
+
+div.loading{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+}
+div.loading img{
+	width: 2rem;
+	margin: 11rem auto 0;
+}
+
+
+
+/* 联通流量 */
+/* .ad {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../img/ad_bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 5;
+}
+.ad .logo1{
+    position: absolute;
+    top: 0rem;
+    left: 5%;
+    width: 2.3rem;
+}
+.ad .adTitle {
+    width: 65%;
+    display: block;
+    margin: 2.5rem auto 0;
+}
+
+.ad .adCover {
+    width: 50%;
+    display: block;
+    margin: -1rem auto 0;
+}
+
+.ad .adClose {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+}
+
+@-webkit-keyframes finger {
+    0% {
+        top: 10.5rem;
+    }
+    50% {
+        top: 12rem;
+    }
+    100% {
+        top: 10.5rem;
+    }
+}
+
+.ad .adFinger {
+    pointer-events: none;
+    width: 10%;
+    position: absolute;
+    top: 10.5rem;
+    right: 37%;
+    animation: finger 1s linear infinite;
+    -webkit-animation: finger 1s linear infinite;
+} */
+
+
+
+/* 20200618淘彩蛋广告 */
+.ad0618 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.ad0618 .adImg {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.ad0618 .close {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 淘口令 */
+.taocd618 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+}
+
+.taocdToast {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cdbox618 {
+    height: 12.5rem;
+    position: relative;
+    margin-top: -1.6rem;
+}
+
+#tkl618 {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    z-index: -1;
+    opacity: 0;
+}
+
+.caidan618 {
+    width: 13.44rem;
+    height: auto;
+}
+
+.close_cd618 {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.58rem;
+}
+
+.copy-caidan {
+    height: 1.62rem;
+    width: 7.04rem;
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    margin-left: -3.77rem;
+
+    animation: shake 2s linear both infinite;
+    -webkit-animation: shake 2s linear both infinite;
+}
+
+@keyframes shake {
+    0%,
+    50%,
+    100% {
+        transform: rotate(0)
+    }
+
+    6%,
+    32% {
+        transform: rotate(10deg)
+    }
+
+    19%,
+    44% {
+        transform: rotate(-10deg)
+    }
+}
+

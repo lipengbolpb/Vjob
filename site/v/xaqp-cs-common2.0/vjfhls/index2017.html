@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>酒王战绩</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css?v=1.2.6" />
+		<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+	</head>
+
+	<body>
+		<div id="loadDiv">
+			<img src="img/loading2.gif" />
+		</div>
+		<div id="teach">
+			<img src="img/teach.png"/>
+		</div>
+		<div class="index" style="visibility: hidden;">
+			<div class="page_box">
+				<img src="img/book.png?v=1" class="pagebg" />
+				<div class="head">
+					<div class="head_box">
+						<img src="img/headimg.png" class="headimg" />
+					</div>
+				</div>
+				<div class="wenzi_box">
+					<img src="img/index_wz.png" class="wenzi" />
+				</div>
+			</div>
+			<img src="img/open.png" class="open" />
+		</div>
+		<div class="page" style="visibility: hidden;">
+			<div class="page_box  page_1" style="z-index: 10;">
+				<p class="name"></p>
+				<p class="day"></p>
+				<img src="img/page_1.png" class="page_pic" />
+			</div>
+			<div class="page_box page_2" style="z-index: 9;">
+				<p class="year"></p>
+				<p class="month"></p>
+				<p class="day"></p>
+				<p class="Season"></p>
+				<p class="beer"></p>
+				<img src="img/spring.png" class="page_pic" />
+			</div>
+			<div class="page_box page_3" style="z-index: 8;">
+				<p class="num"></p>
+				<p class="money"></p>
+				<p class="max_money"></p>
+				<img src="img/page_2.png" class="page_pic" />
+			</div>
+			<div class="page_box page_4" style="z-index: 7;">
+				<p class="month"></p>
+				<p class="day"></p>
+				<p class="beernum"></p>
+				<img src="img/page_3.png?v=1" class="page_pic" />
+			</div>
+			<div class="page_box page_5" style="z-index: 6;">
+				<p class="num"></p>
+				<p class="rank"></p>
+				<p class="title"></p>
+				<img src="img/page_4.png?v=1" class="page_pic" />
+			</div>
+			<div class="page_box page_6" style="z-index: 5;">
+				<a href="javascript:;" id="goback"></a>
+				<a href="javascript:;" id="share"></a>
+				<img src="img/page_5.png?v=2" class="page_pic" />
+			</div>
+			<img src="img/pageturn.png" class="page_l" />
+			<img src="img/page_bg.png?v=1" class="pagebg" />
+		</div>
+		<div id="nomsg">
+			<img src="img/inform_1.png?v=1" class="inform" />
+		</div>
+		<div id="share_box">
+			<img src="img/share.png?v=3"/>
+		</div>
+		<ul id="nav">
+			<li class="cur"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+			<div class="weui_mask_transparent" style="background: #fff;"></div>
+			<div class="weui_toast" style="width: 5.6em;min-height: 5.6em;margin-left: -2.8em;">
+				<div class="weui_loading">
+					<div class="weui_loading_leaf weui_loading_leaf_0"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_1"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_2"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_3"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_4"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_5"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_6"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_7"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_8"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_9"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_10"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_11"></div>
+				</div>
+				<p class="weui_toast_content">数据加载中</p>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/v/js/cfg.js?v=2.0.3"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="/static/js/font.js"></script>
+	<script src="js/index.js?v=1.5.0" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb<1.5){//矮屏幕手机
+			$('.index .page').css({'-webkit-transform': 'scaleY(.9)'});
+		}
+	</script>
+</html>

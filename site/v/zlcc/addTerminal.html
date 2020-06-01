@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>终端促销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css"/>
+		<link rel="stylesheet" type="text/css" href="css/scan_reg.css?v=1.0.2">
+	</head>
+	<body>
+		<ul id="inform_box">
+		  	<li class="chose_open">
+		  		<span>选择地区</span>
+			    <input type="text" readonly="readonly" value="" placeholder="地区填写" id="address">
+			</li>
+			<li class="chose_store" >
+				<span>终端门店</span>
+				<input type="text" value="" maxlength="50" placeholder="填写门店街道、名称、门牌号等" readonly="readonly" id="store" style="background: none;">
+			</li>
+		  	<li><span>联系电话</span><input type="text" value="" maxlength="14" placeholder="手机号、固定电话均可" id="phoneNum" readonly="readonly"></li>
+		  	<li><span>联 系 人</span><input type="text" value="" maxlength="50" placeholder="终端联系人" id="person" readonly="readonly"></li>
+		  	<li><span>门店地址</span><input type="text" value="" maxlength="50" placeholder="终端门店详细地址" id="s_address" readonly="readonly"></li>
+    	</ul>
+    	<div id="btn">提交</div>
+	    <div class="chose-address click_box">
+		  	<div class="martotop">
+			    <header class="top">
+			      <p>所在地区</p>
+			      <img src="/v/zlcc/img/close_big.png" id="chose_close">
+			    </header>
+			    <div class="area-tab">
+				    <ul class="tabs">
+				        <li id="province" class="active">请选择</li>
+				        <li id="city">请选择</li>
+				        <li id="town">请选择</li>
+				    </ul>
+			      	<div class="swiper-container">
+			        	<div class="swiper-wrapper">
+				          	<div class="swiper-slide">
+				            	<div class="content-slide">
+				              		<div class="province">
+				              		</div>
+				            	</div>
+				          	</div>
+				          	<div class="swiper-slide">
+				            	<div class="content-slide">
+				              		<div class="city">
+				              		</div>
+				            	</div>
+				          	</div>
+				          	<div class="swiper-slide">
+				            	<div class="content-slide">
+				              		<div class="town">
+				              		</div>
+				            	</div>
+				          	</div>
+			        	</div>
+			      	</div>
+			    </div>
+		  </div>
+    	</div>
+    	<div class="chose-address chose-store" style="z-index: 99;overflow: hidden;">
+    		<div id="store_msg">
+    			<input type="text" id="search" value="" placeholder="输入店名、街道名等关键词搜索" />
+    			<img src="/v/zlcc/img/close_big.png" id="store_close">
+    			<ul id="mon_list">
+    			</ul>
+    		</div>
+    	</div>
+    	<script id="onenote_tpl" type="text/html">
+	      	<li terminalKey=[=terminalKey]>[=TerminalName]</li>
+	    </script>
+	</body>
+	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=1.0.3"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+ 	<script src="/static/js/wx/jsdk.js?v12"></script>
+ 	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+ 	<script src="js/idangerous.swiper.js"></script>
+ 	<script src="js/tip.js"></script>
+ 	<script src="js/chosecity.js?v=1" type="text/javascript" charset="utf-8"></script>
+ 	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/addTerminal.js?v=1.0.8" type="text/javascript" charset="utf-8"></script>
+	<script>
+      ini_wxshare(vge.terminalappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>
+</html>

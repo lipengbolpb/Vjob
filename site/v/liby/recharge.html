@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>手机话费充值</title>
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/recharge.css">
+  </head>
+  <body>
+    <!-- 	<div id="top" class="hav_tip">
+		    <p>暂时无法充值，如有疑问请<a href="http://mp.weixin.qq.com/s?__biz=MzAxOTQ4ODQyMw==&mid=447602826&idx=1&sn=f0ac129c05f3421b91a7db69dd0831d6#rd">点击此处</a></p>
+		    <span id='tip_close'></span>
+	</div> -->
+	<div class="tel_box">
+	  <input type="tel" placeholder="请输入手机号码" maxlength="11" id="tel_code" value="">
+	  <p id="opera"></p>
+	  <span id="cancel"></span>
+	</div>
+	<p class="my_point">今天可充值<span id="times">2</span>次，余额<span id="vs_code">2500</span>积分，选择充值金额</p>
+	<ul id="chose_mon">
+	  <li class="n_money" fee="0.20">
+		<p><span>10</span>元</p>
+		<p>需<span>1020</span>积分</p>
+	  </li>
+	  <li class="n_money" fee="0">
+		<p><span>100</span>元</p>
+		<p>需<span>9970</span>积分</p>
+	  </li>
+	</ul>
+    <!-- 	// <script id="mon_tpl" type="text/html">
+      // 	<li class="n_money" fee="[=fee]">
+      // 		<p><span>[=xc_money]</span>元</p>
+      // 		<p>需<span>[=nd_code]</span>积分</p>
+      // 	</li>
+      // </script> -->
+	<p id="s_tip"></p>
+	<div id="bot_fix">
+	  <a href="javascript:void(0)" id="note_btn">充值记录</a>
+	  <span></span>
+	  <a href="http://mp.weixin.qq.com/s?__biz=MzAxOTQ4ODQyMw==&mid=447602826&idx=1&sn=f0ac129c05f3421b91a7db69dd0831d6#rd">常见问题</a>
+	</div>
+	<div id="mask"></div>
+	<div id="confirm">
+	  <p src="/v/liby/img/can.png" id="firm_close"></p>
+	  <p class="firm_tit">兑换话费详情</p>
+	  <ul>
+		<li>
+		  <p class="ul_left">充值信息</p>
+		  <p class="ul_rgh"><span id="que_tel"></span><span id="que_opera"></span><span id="que_mon"></span>元</p>
+		</li>
+		<li>
+		  <p class="ul_left">手续费</p>
+		  <p class="ul_rgh"><span id="que_fee"></span>元</p>
+		</li>
+	  </ul>
+	  <div class="need_box">
+		<span class="ul_left">消耗积分</span>
+		<span class="ul_rgh" id="que_code"></span>
+	  </div>
+	  <div class="btn_box">
+		<button id="btn">确认充值</button>
+	  </div>
+	</div>
+  </body>
+  <div id="reg_success">
+    <div id="success_tip">
+      <p>充值申请提交成功</p>
+      <p>预计2小时内可充值成功，请注意查收短信~~</p>
+      <img src="/v/liby/img/cash_suc.png">
+      <p id="know">我知道了</p>
+    </div>
+  </div>
+  
+  <script src="/static/js/vve/10core.js?v1"></script>
+  <script src="/v/js/cfg.js?v=4"></script>
+  <script src="/static/js/vve/11tool.js?v1"></script>
+  <script src="/static/js/vve/20ajx.js?v=2"></script>
+  <script src="/static/js/vve/22nav.js?v=2"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="/static/js/wx/jsdk.js?v12"></script>
+  
+  <script src="/v/liby/js/tip.js"></script>
+  <script src="/v/liby/js/recharge.js?v=7"></script>
+</html>

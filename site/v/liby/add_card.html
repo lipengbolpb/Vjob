@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>添加银行卡</title>
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/real_name.css?v=2">
+  </head>
+  <body>
+	<p class="realtip">请绑定持卡人本人的银行卡</p>
+	<ul id="addcard_box">
+	  <li>
+		<p>持卡人：</p>
+		<input type="text" maxlength="10">
+		<span id="name_tip"></span>
+	  </li>
+	  <li>
+		<p>发卡银行：</p>
+		<input type="text" readonly="readonly" id="band_name">
+		<span id="chose_btn">选择开户银行</span>
+	  </li>
+	  <li>
+		<p>卡号：</p>
+		<input type="number" maxlength="24">
+		<span id="delete"></span>
+	  </li>
+	</ul>
+	<p id="btn">下一步</p>
+	<div id="chose_band">
+	  <div>
+		<p>选择开户银行</p>
+		<span id="chose_cancel"></span>
+		<ol id="band_list">
+		  <li>
+			<img src="/v/liby/img/gh_logo.png" alt="">
+			<p>中国工商银行(9588)</p>
+			<span></span>
+		  </li>
+		  <li>
+			<img src="/v/liby/img/zh_logo.png" alt="">
+			<p>中国招商银行(9555)</p>
+			<span></span>
+		  </li>
+		  <li>
+			<img src="/v/liby/img/jh_logo.png" alt="">
+			<p>中国建设银行(9556)</p>
+			<span></span>
+		  </li>
+		  <li>
+			<img src="/v/liby/img/zgyh_logo.png" alt="">
+			<p>中国银行(9557)</p>
+			<span></span>
+		  </li>
+		</ol>
+	  </div>
+	</div>
+    <div id="reg_success">
+      <div id="card_tip">
+    	<p>持卡人说明</p>
+    	<p>为了您的积分账户资金安全，只能绑定用户本人的银行卡。</p>
+    	<img src="/v/liby/img/band_card.png">
+    	<p id="know1">我知道了</p>
+      </div>
+      <div id="success_tip">
+    	<p>添加银行卡成功</p>
+    	<p>恭喜您成功添加一张银行卡，现在开始可以将积分提现了~~~</p>
+    	<img src="/v/liby/img/card_suc.png">
+    	<p id="know2">我知道了</p>
+      </div>
+    </div>
+
+    <script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=4"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+    <script src="/v/liby/js/tip.js"></script>
+    <script src="/v/liby/js/add_card.js?v=7"></script>
+  </body>
+</html>

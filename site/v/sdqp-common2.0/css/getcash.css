@@ -1,0 +1,1326 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background: #029348;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+/*加载中秋动画的备用盒子*/
+#midAutumn_box {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    position: absolute;
+    background: #fff;
+}
+
+/*---end---*/
+#active {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#active img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@-webkit-keyframes animated-open {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+.kai {
+    -webkit-animation: animated-open 1s linear both;
+    animation: animated-open 1s linear both;
+}
+
+.logo {
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    z-index: 1;
+}
+
+.get {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+	background: #029348;
+	z-index: 4;
+}
+
+/* 跑马灯 */
+.pmd{
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 1000%;
+	z-index: 4;
+}
+.pmd p{
+	float: left;
+	padding:.5rem;
+	font-size: .5rem;
+	color: #fff699;
+	text-align: center;
+	white-space: nowrap;
+}
+/* 大奖弹出提示 */
+
+.getPrize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+	background: #009040 ;
+	z-index: 3;
+}
+.getPrize .getBtn{
+	display: none;
+}
+.getPrize.newGet{
+	background: #fff url(/v/hbqp-common3.0/img/20190423/double_prize_bg.png) no-repeat top;
+    background-size: 100% auto;
+    z-index:4;
+}
+.getPrize.newGet .getBtn{
+	width: 12.9rem;
+	position: absolute;
+	right: 0;
+	top: 2.7rem;
+	box-shadow: 0px 0px 60px #009140;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
+	-o-tap-highlight-color: rgba(0, 0, 0, 0);
+	tap-highlight-color: rgba(0, 0, 0, 0);
+	display: block;
+}
+.getPrize .top {
+    margin: 0 atuo;
+    width: 100%;
+    height: 14.5rem;
+    
+}
+
+@media only screen and (max-device-height:480px ){
+	.getPrize .top {
+	    margin: 0 atuo;
+	    width: 100%;
+	    height: 10.5rem;
+	}
+}
+.getPrize .logo {
+    width: 3rem;
+    top: 1rem;
+    left: 1rem;
+    margin: 1rem 1rem 0;
+	position: static;
+}
+
+.getPrize .slogan {
+    display: block;
+    width: 13rem;
+    margin: 0 auto;
+}
+
+.getPrize .beer {
+    margin: 0rem 1rem 1rem 70%;
+    width: 4.2rem;
+    bottom: 0;
+    pointer-events: none;
+	position: absolute;
+}
+.getPrize .ck {
+    display: block;
+    margin: 1rem auto 0;
+    width: 45%;
+    height: 1.7rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #f1d35a !important;
+    color: #ca0013;
+    font-size: 0.75rem;
+}
+
+.getPrize .notice {
+    margin: 1rem auto 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.55rem;
+}
+/* 大奖弹出End */
+.cash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #029348;
+    display: none;
+}
+
+.repcash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #029348;
+    display: none;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #029348;
+    display: none;
+}
+
+.slogan {
+    display: block;
+    margin: 1.5rem auto 0;
+    width: 70%;
+}
+
+.border {
+    width: 100%;
+    height: 4.5rem;
+    margin: 1.5rem auto 0;
+    background: url(../img/border.png) no-repeat top left;
+    background-size: 100% auto;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: #029348;
+}
+
+.hb {
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    width: 100%;
+}
+
+.hbGet {
+    position: absolute;
+    top: 0;
+    left: 3.75rem;
+    width: 8.5rem;
+}
+
+.open {
+    position: absolute;
+    top: 1.2rem;
+    left: 6.25rem;
+    width: 3.5rem;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.get .beer {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1rem;
+    width: 13%;
+    pointer-events: none;
+}
+
+.hbCash {
+    display: block;
+    margin: 3rem auto 0;
+    width: 75%;
+}
+
+#btn {
+    display: block;
+    margin: .8rem auto 0;
+    width: 9rem;
+    height: 2.2rem;
+    outline: none;
+    border: none;
+    background-color: #f1d35a;
+    color: #ca0013;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.notice {
+    width: 100%;
+    text-align: center;
+    margin: .8rem auto 0;
+    color: #ffffff;
+    font-size: 0.55rem;
+}
+
+.cash .link {
+    width: 45%;
+    margin: .8rem auto;
+}
+
+.cash .link a {
+    font-size: 0.65rem;
+    color: #fff68f;
+    text-decoration: underline;
+}
+
+.cash .link a:nth-of-type(1) {
+    float: left;
+}
+
+.cash .link a:nth-of-type(2) {
+    float: right;
+}
+
+.cash .totalMoney{
+    color: #fbc700;
+    font-size: .76rem;
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: 1.5rem; */
+    left: 0;
+    letter-spacing: .08rem;
+    text-align:center;
+}
+
+.msg {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+}
+
+.congratulate {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    color: #fff699;
+    font-size: 0.75rem;
+}
+/* 19红包 */
+.fyj{
+	text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff699;
+}
+.yjrtip{
+	font-size: .6rem;
+    text-align: center;
+    color: #fff699;
+}
+/* 19红包 */
+.ladder-1 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.5rem auto -0.5rem;
+}
+
+.ladder-2 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.ladder-3 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.ladder-4 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    color: #fff699;
+    font-size: 0.75rem;
+}
+
+.prize {
+    margin: 0.5rem auto 0;
+    text-align: center;
+    width: 100%;
+    color: #fff699;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#money {
+    font-size: 2rem;
+}
+
+.qin {
+    width: 100%;
+    margin-top: 4.5rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+}
+
+.alert {
+    width: 80%;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+.ck {
+    display: block;
+    margin: 1.5rem auto 0;
+    outline: none;
+    border: none;
+    width: 9rem;
+    height: 2.2rem;
+    background-color: #f1d35a !important;
+    color: #ca0013;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.repcash .title {
+    margin-top: 4rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #fff699;
+    text-align: center;
+}
+
+.repcash .only {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #fff699;
+    text-align: center;
+    font-weight: bold;
+}
+
+.repcash .beer {
+    display: block;
+    margin: 1rem auto 0;
+    width: 10%;
+}
+
+#repbtn {
+    display: block;
+    margin: 1rem auto 0;
+    width: 9rem;
+    height: 2.2rem;
+    outline: none;
+    border: none;
+    background-color: #f1d35a;
+    color: #ca0013;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.repcash .earn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.65rem;
+    color: #ffffff;
+    line-height: 1rem;
+}
+
+.repcash .earn span {
+    color: #fff699;
+}
+
+.repcash .earn span:nth-of-type(2) {
+    font-weight: bold;
+}
+
+.repcash .link {
+    width: 45%;
+    margin: 1rem auto;
+}
+
+.repcash .link a {
+    font-size: 0.65rem;
+    color: #fff68f;
+    text-decoration: underline;
+}
+
+.repcash .link a:nth-of-type(1) {
+    float: left;
+}
+
+.repcash .link a:nth-of-type(2) {
+    float: right;
+}
+
+.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    pointer-events: none;
+    z-index: 999;
+    display: none;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #b0b5c2;
+    font-size: 0.45rem;
+}
+
+.copyright a {
+    color: #d5d5d5;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+
+.toast {
+    position: absolute;
+    top: 13rem;
+    height: 2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    /* display: none; */
+}
+
+.active,.activeBehind,.activeCoupon,.active19{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 5;
+}
+.activeBehind{
+	background: rgba(0,0,0,.8);
+}
+.active img.activeMain,.active19 img.img19,.active_dw img.active_con ,.activeCoupon img.CouponImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.active .activeClose,.active19 .close19,.active_dw .active_close,.activeCoupon .activeClose {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+}
+/* 关闭广告Tx */
+.active .closeTx,.active19 .close19{
+    width: 24%;
+    right: 3%;
+}
+.active_dw {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 4;
+}
+
+.activeBehind img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+	transform: translateY(-50%);
+}
+
+.activeBehind img.activeClose {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 1.5rem;
+    right: 5%;
+    left: auto;
+}
+.activeS{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	display: none;
+	background: rgba(0,0,0,.8);
+	flex-direction: column;
+	justify-content: center;
+}
+.activeS img.activeSImg {
+    display: block;
+	width: 75%;
+	margin: 0 auto;
+}
+.activeS img.activeSClose {
+    display: block;
+    width: 1.5rem;
+    margin: 1rem auto 0;
+}
+.ad {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../img/ad_bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 2;
+}
+
+.ad .adTitle {
+    width: 65%;
+    display: block;
+    margin: 2.5rem auto 0;
+}
+
+.ad .adCover {
+    width: 50%;
+    display: block;
+    margin: -1rem auto 0;
+}
+
+.ad .adClose {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+}
+
+@-webkit-keyframes finger {
+    0% {
+        top: 10.5rem;
+    }
+
+    50% {
+        top: 12rem;
+    }
+
+    100% {
+        top: 10.5rem;
+    }
+}
+
+.ad .adFinger {
+    pointer-events: none;
+    width: 10%;
+    position: absolute;
+    top: 10.5rem;
+    right: 37%;
+    animation: finger 1s linear infinite;
+    -webkit-animation: finger 1s linear infinite;
+}
+
+.game1 {
+    position: absolute;
+    width: 3rem;
+    top: 12rem;
+    left: 0.2rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    -webkit-animation: game .8s linear both infinite;
+    /* visibility: hidden; */
+}
+
+.game2 {
+    position: absolute;
+    width: 3rem;
+    top: 12rem;
+    right: 0.2rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    -webkit-animation: game .8s linear both infinite;
+    /* visibility: hidden; */
+}
+
+@-webkit-keyframes game {
+
+    20%,
+    60% {
+        -webkit-transform: rotate(-5deg);
+    }
+
+    40%,
+    80% {
+        -webkit-transform: rotate(5deg);
+    }
+
+    0%,
+    10%,
+    90%,
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@media only screen and (min-aspect-ratio:360/530) {
+    .slogan {
+        width: 65%;
+    }
+
+    .hbGet {
+        width: 45%;
+        left: 27.5%;
+    }
+
+    .open {
+        left: 42.5%;
+        width: 15%;
+    }
+
+    .get .beer {
+        width: 10%;
+    }
+
+    .repcash .title {
+        margin-top: 3rem;
+    }
+
+    .repcash .only {
+        margin-top: 0.8rem;
+    }
+
+    .repcash .beer {
+        width: 8%;
+    }
+
+    #repbtn {
+        margin: 0.5rem auto 0;
+        height: 2rem;
+    }
+
+    .repcash .earn {
+        margin-top: 0.5rem;
+    }
+
+    .repcash .link {
+        margin: 0.5rem auto;
+    }
+
+    .qin {
+        margin-top: 4rem;
+    }
+
+    .alert {
+        width: 65%;
+    }
+
+    .ck {
+        margin: 1rem auto 0;
+    }
+
+    .toast {
+        top: 11.5rem;
+        height: 2rem;
+    }
+}
+
+@media only screen and (min-aspect-ratio:320/480) {
+    .hbCash {
+        margin: 2rem auto 0;
+        width: 75%;
+    }
+
+    .msg {
+        top: 7rem;
+    }
+
+    .prize {
+        font-size: 1rem;
+    }
+
+    #money {
+        font-size: 1.8rem;
+    }
+
+    #btn {
+        margin: 0.6rem auto 0;
+    }
+
+    .notice {
+        margin: 0.6rem auto 0;
+    }
+
+    .cash .link {
+        margin: 0.6rem auto 0;
+    }
+}
+
+
+
+/* 步步高升 新春贺岁 */
+.newyearAlert {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 3;
+}
+
+.newyearBox {
+    width: 85%;
+    /* margin: 3rem auto 0; */
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.newyearBox img {
+    width: 100%;
+}
+
+img.newyear-close {
+    width: 12%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.newyearContent {
+    width: 100%;
+    height: 7.5rem;
+    overflow-x: hidden;
+    border: .8rem solid transparent;
+    border-image-source: url("../img/newyear-2.png");
+    border-image-slice: 30 fill;
+    border-image-repeat: stretch;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.newyearContent p {
+    font-size: 0.6rem;
+    color: #d00202;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.newyearContent p:nth-of-type(1) {
+    margin: .2rem auto;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.newyearContent p:nth-of-type(2),
+.newyearContent p:nth-of-type(3),
+.newyearContent p:nth-of-type(4),
+.newyearContent p:nth-of-type(5),
+.newyearContent p:nth-of-type(6),
+.newyearContent p:nth-of-type(10) {
+    text-align: center;
+}
+
+.newyearContent p:nth-of-type(7),
+.newyearContent p:nth-of-type(8),
+.newyearContent p:nth-of-type(9),
+.newyearContent p:nth-of-type(11),
+.newyearContent p:nth-of-type(12),
+.newyearContent p:nth-of-type(13) {
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.newyearContent p:nth-of-type(8),
+.newyearContent p:nth-of-type(9),
+.newyearContent p:nth-of-type(11),
+.newyearContent p:nth-of-type(12) {
+    margin: 0;
+}
+
+.newyearContent p:nth-of-type(10){
+    margin-top: 0.5rem;
+}
+.get_vocal,.get_coupon,.get_ticket{
+    overflow: hidden;
+}
+
+.get_vocal .top,.get_coupon .top,.get_ticket .top{
+    height: 100%;
+}
+.get_vocal .top .slogan,.get_coupon .top .slogan,.get_ticket .top .slogan{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.get_vocal .ck,.get_coupon .ck,.get_ticket .ck{
+    background: #fbc601;
+    position: absolute;
+    font-weight: bold;
+    bottom: 3.5rem;
+    right: 2.5rem;
+    z-index: 3;
+    box-shadow: 0px 5px 5px #d37900;
+}
+.get_cm .slogan{
+    width: 62%!important;
+}
+.get_cm .ck{
+    margin: 6rem auto 0;
+}
+
+
+/* wineTravel */
+.travelMask{
+    position: absolute;
+    z-index:2;
+    background-color:rgba(0, 0, 0, 0.7);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;      
+}
+.wineTravel{
+    position: absolute;;
+    display:none;
+    width:12.95rem;
+    height:20.95rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:3;
+    background-image: url(../img/wineTravel/toast.png?v=1.0);
+    background-size:100% 100%;
+}
+.text{
+    position: absolute;
+    top: .8rem;
+    left: .5rem;
+    /* position:absolute;
+    top:1.1rem;
+    left:.75rem; */
+}
+.text img{
+    width:7rem;
+    height:2.6rem;
+}
+.textMask{
+    background:transparent;
+    display: inline-block;
+    overflow: hidden;
+    /* animation: wrapper-gradient 2s linear; */
+}
+.textMask img{
+    /* animation: img-gradient 2s linear; */
+}
+@keyframes wrapper-gradient {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+@keyframes img-gradient {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.wineTravel .botPart{
+    position: absolute;
+    top: 58%;
+    left:0;
+    width:100%;
+}
+
+.wineTravel .gzh{
+    padding-bottom:.8rem;
+}
+.wineTravel .gzh img{
+    position: relative;
+    width:4.2rem;
+    left: 34%;
+}
+.wineTravel .gzh div{
+    text-align: center;
+    font-size:.26rem;
+    color:#fff;
+}
+.wineTravel .tip{
+    font-size:.7rem;
+    color:#fff;
+    text-align:center;
+} 
+
+/* .wineTravel .btn{
+    position: fixed;
+    bottom:1.2rem;
+    width:100%;
+    text-align:center;
+}
+.travelBtn{
+    width:7.7rem;
+    height:1.5rem;
+} */
+.closeToast{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+}
+
+.traEntry{
+    position: absolute;
+    right:2%;
+    top:4%;
+    height: 4rem;
+}
+
+
+
+/* 城市酒王小程序入口 */
+div.alert_jw{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 10;
+	background: rgba(0,0,0,.8);
+	justify-content: center;
+	flex-direction: column;
+	display: none;
+}
+div.alert_jw img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	transform: translateX(4%);
+}
+div.alert_jw p{
+	width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: -40px;
+    margin: 0 auto;
+    z-index: 1;
+    right: -38%;
+}
+.icon_jw{
+	width: 20%;
+	position: absolute;
+	right: 2%;
+	top: 3%;
+	visibility: hidden;
+}
+/* 淘彩蛋 */
+div.taocd{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	background: rgba(0,0,0,.8);
+	display: none;
+}
+div.taocd img{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+div.taocd p{
+	position: absolute;
+	top: 20rem;
+	width: 2rem;
+	height: 2rem;
+	left: 50%;
+	margin-left: -1rem;
+}
+div.taocd input{
+	position: absolute;
+	top: 10rem;
+	left: 5rem;
+	z-index: -1;
+	border: 0;
+}
+
+#btn-to-home {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    /* z-index: 2; */
+    -webkit-animation: game .8s linear both infinite;
+}
+/* 跳转电商 */
+div.tomall{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 99;
+	background-color: rgba(0,0,0,.6);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+div.tomall div{
+	overflow: hidden;
+	position: relative;
+	width: 85%;
+}
+div.tomall .tomall{
+	width: 100%;
+	display: block;
+} 
+div.tomall .closeTx{
+	position: absolute;
+	width: 24%;
+	right: 3%;
+	top: .8rem;
+}
+
+
+
+/* 20200618淘彩蛋广告 */
+.ad0618 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:999;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.ad0618 .adImg {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.ad0618 .close {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 淘口令 */
+.taocd618 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+}
+
+.taocdToast {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cdbox618 {
+    height: 12.5rem;
+    position: relative;
+    margin-top: -1.6rem;
+}
+
+#tkl618 {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    z-index: -1;
+    opacity: 0;
+}
+
+.caidan618 {
+    width: 13.44rem;
+    height: auto;
+}
+
+.close_cd618 {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.58rem;
+}
+
+.copy-caidan {
+    height: 1.62rem;
+    width: 7.04rem;
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    margin-left: -3.77rem;
+
+    animation: shake 2s linear both infinite;
+    -webkit-animation: shake 2s linear both infinite;
+}
+
+@keyframes shake {
+    0%,
+    50%,
+    100% {
+        transform: rotate(0)
+    }
+
+    6%,
+    32% {
+        transform: rotate(10deg)
+    }
+
+    19%,
+    44% {
+        transform: rotate(-10deg)
+    }
+}

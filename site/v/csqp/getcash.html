@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤湖南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.3.8"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?22638add9232465779bfc340d945d285";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="break">
+			<img id="slogan" src="img/slogan.png?v=1"/>
+			<img id="break1" src="img/break1.png"/>
+			<img id="break2" src="img/break2.png"/>
+		</div>
+		<div class="wxmark" id="alert">
+			<img src="img/alert_tip.png"/>
+		</div>
+		<div class="active_tip" style="display: none;">
+			<img src="img/newYear.jpg" id="active_tip"/>
+		</div>
+		<div class="hb">
+			<img id="open" src="img/hbclose.png"/>	
+		</div>
+		<a href="javascript:;" id="explain">活动说明>></a>
+		<div id="active">
+			<i id="close">╳</i>
+			<img src="img/active.png"/>
+		</div>
+		<div class="mark_cash">
+			<div class="cash">
+				<img class="coin coin1" src="img/coin1.png"/>
+				<img class="coin coin2" src="img/coin2.png"/>
+				<img class="coin coin3" src="img/coin3.png"/>
+				<p class="tip">恭喜您获得</p>
+				<p class="current">¥<span id="current"></span>元</p>
+			</div>
+			<button id="game_1"></button>
+			<input type="button" name="tx" id="tx" value="立即提现"/>
+			<button id="game_2"></button>
+			<p id="tip">根据微信平台要求，红包累计大于等于1元后可提现，<br />不足1元的红包我们为您贴心准备了零钱包功能，<br />快点击下方按钮查看吧~</p>
+			<div>
+				<input type="button" name="tobag" id="tobag" value="查看我的红包" />
+				<input type="button" name="story" id="story" value="点击听故事">
+			</div>
+			<a href="javascript:;" id="explain1">活动说明>></a>
+			<div class="music">
+				<audio src="" id="myaudio"></audio>
+			</div>
+		</div>
+		<div id="sign">
+			<div class="sign_alert">
+				<div class="close close_1"></div>
+				<p class="days"></p>
+			</div>
+			<div class="content">
+				<div class="close"></div>
+				<img src="/v/sxqp20170926/img2/sign_title.png" class="sign_title"/>
+				<div id="progress_box2">
+					<div class="progress1">
+						<p id="progress2"></p>
+					</div>
+					<span class="progress"></span>
+				</div>
+				<ul id='week'>
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul id="check_box">
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+				</ul>
+				<div class="sign_cash">
+					<p id="weekSignEarnMoney"></p>
+				</div>
+				<p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+			</div>
+			<div class="getSignCash">
+				<p class="weekSignEarnMoney"></p>
+			</div>
+		</div>
+		<div id="sign_logo" class="sign_logo">
+			<img src="/v/sxqp20170926/img2/light.png" class="light"/>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=5.2"></script>
+	<script src="/v/js/publictip.js?v=3.0.0"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/zeroText.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.5.17" type="text/javascript" charset="utf-8"></script>
+	<script>
+      	ini_wxshare(vge.csqpappid);
+      	// 隐藏微信右上角菜单
+      	wx.ready(function() {
+      	    wx.hideOptionMenu();
+      	});
+    </script>
+</html>

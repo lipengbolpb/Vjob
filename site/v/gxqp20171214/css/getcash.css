@@ -1,0 +1,214 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,h4,h5,h6,input,li,ul,dl,dt,dd,ol{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	background: #fff;
+	color: #000;
+	font-size: .7rem;
+	line-height: 1.3rem;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li,dl,dt,dd,ol{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+img{
+	display: block;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #999;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: -webkit-radial-gradient(circle,#ba0000,#510000);
+	background: radial-gradient(circle,#ba0000,#510000);
+}
+body div.cash_warp{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	background: url(../img/bg_1.png) no-repeat top;
+	-webkit-background-size: 100% auto;
+}
+body div.cash_warp img{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+body div.cash_warp img.slogan{
+	width: 13.9rem;
+	top: .7rem;
+	z-index: 1;
+}
+body div.cash_warp img.caishen{
+	width: 13.1rem;
+	bottom: 4rem;
+}
+body div.cash_warp img.open{
+	width: 3.5rem;
+	bottom:6.8rem;
+	-webkit-transform: translate(0%);
+	-webkit-transform: rotateY(0deg);
+	margin-left: -1.75rem;
+	-webkit-transition: all 1s linear;
+	z-index: 1;
+}
+body div.cash_warp img.rotate{
+	-webkit-transform: rotateY(360deg);
+}
+body div.cash_warp img.yuanbao{
+	width: 100%;
+	bottom: 0;
+}
+body div.cash_warp img.bottom{
+	width: 100%;
+	bottom: 0;
+}
+div.cash_content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow-x: hidden;
+	left: 0;
+	top: 0;
+	text-align: center;
+	background: url(../img/bg.png) no-repeat top;
+	-webkit-background-size: 100% auto;
+	visibility: hidden;
+}
+div.cash_content div.top{
+	height: 17.1rem;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: 8px #c41414 solid;
+}
+div.cash_content div.top img{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+div.cash_content div.top img.yuanbao_1{
+	bottom: -3rem;
+	width: 100%;
+}
+div.cash_content div.top img.cash_bg{
+	bottom: 0;
+	width: 10.15rem;
+}
+div.cash_content div.top div.duilian_bg{
+	width: 100%;
+	height: 11.7rem;
+	background: url(../img/duilian.png) no-repeat center;
+	-webkit-background-size: 100% auto;
+	overflow: hidden;
+	position: relative;
+}
+div.cash_content div.top div.duilian_bg img{
+	width: 86%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+}
+div.cash_content div.top p.money_msg{
+	position: absolute;
+	width: 100%;
+	margin-top: -1rem;
+	color: #fada30;
+	font-size: .9rem;
+}
+div.cash_content div.top p.money_msg em{
+	font-size:2rem;
+}
+div.cash_content div.bottom{
+	width: 100%;
+	min-height: 1rem;
+	padding-bottom: 1rem;
+	position: relative;
+	background: #aa0001;
+	box-sizing: border-box;
+}
+div.cash_content div.bottom img.logo{
+	position: absolute;
+	left: 0;
+	top: -1rem;
+	width:6.2rem;
+}
+div.cash_content div.bottom p.tip{
+	font-size: .5rem;
+	color: #fff;
+	padding:  1rem;
+}
+#btn{
+	width: 8.3rem;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	font-size: .8rem;
+	color: #d60009;
+	background: #ffc600;
+	margin: 0 auto;
+	-webkit-border-radius: 0.5rem;
+	overflow: hidden;
+}
+#btn img{
+	height: 1.2rem;
+	margin: .3rem auto;
+}
+div.cash_content div.bottom .rule_box{
+	margin: .5rem auto 0;
+}
+div.cash_content div.bottom .rule_box a{
+	color: #fff;
+	font-size: .6rem;
+	padding: 0 2rem;
+}
+div.alert{
+	display: none;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;position: fixed;
+	z-index: 1000;
+	background-color: rgba(0,0,0,.7);
+}
+div.alert img{
+	width: 80%;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	-webkit-transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

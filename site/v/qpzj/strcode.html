@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>青岛啤酒浙江省区</title>
+  <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?4900a2217246623703b60ad534dc4461";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2">
+  <link rel="stylesheet" type="text/css" href="/v/qpzj/css/strcode.css?v=5">
+</head>
+<body>
+   <div class="warpper">
+      <div class="inner">
+         <img src="/v/qpzj/img/gai.png" class="pinggai">
+         <div class="tipbox">
+           <p class="tip">
+             温馨提示：先输入瓶盖二维码上方字符，再输入瓶盖二维码下方字符，输入完成后点击“领取红包”，注意区分字母大小写。
+           </p>
+           <img src="/v/qpzj/img/arow_yellow.jpg">
+         </div>
+         <ul class="message">
+            <li id="strcode_box">
+               <input type="txt" placeholder="输入11位字母数字瓶盖码" id="str_code" maxlength="11">
+            </li>
+            <li id="telcode_box">
+               <input type="tel" placeholder="输入您的手机号" id="tel_code" maxlength="11">
+            </li>
+            <li id="yz_box">
+               <input type="tel" placeholder="输入验证码" id="yz_code" maxlength="4">
+               <p id="get_yz">获取验证码</p>
+            </li>
+         </ul>
+         <button id="btn" class="cant" disabled>领取红包</button>
+         <!-- <input type="button" value=""> -->
+      </div>
+  </div>
+  <div id="mask"></div>
+  <div id="alert">
+     <img src="/v/qpzj/img/busy.png" id="biz_img">
+     <p id="know">我知道了</p>
+  </div>
+</body>
+   <script src="/static/js/vve/10core.js?v=28"></script>
+   <script src="/static/js/vve/11tool.js?v=221"></script>
+   <script src="/static/js/vve/20ajx.js?v18"></script>
+   <script src="/v/js/cfg.js?v=23.2.3"></script>
+   <script src="/v/js/publictip.js?v=22"></script>
+   <script src="/v/qpzj/strcode.js?v=22"></script>
+   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+   <script src="/static/js/wx/jsdk.js?v12"></script>
+   <script>
+    function locationed(res){
+        sessionStorage.latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+        sessionStorage.longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+        sessionStorage.speed = res.speed; // 速度，以米/每秒计
+        sessionStorage.accuracy = res.accuracy; // 位置精度
+
+        // dom_location.innerHTML=[latitude,longitude,speed,accuracy].join(', ');
+    }
+   // 隐藏微信右上角菜单
+    ini_wxshare(vge.qpzjappid);
+   wx.ready(function() {
+     wx.getLocation({
+         type: 'wgs84',
+         success: locationed
+     });
+      wx.hideOptionMenu();
+   });
+   </script>
+   <script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>

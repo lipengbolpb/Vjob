@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒东南营销</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/prize.css?v=1.0.6">
+</head>
+
+<body>
+    <div class="repcash">
+        <img src="" class="slogan">
+        <img src="img/geted.png" class="getted">
+        <p>扫码时间：
+            <span class="earnTime"></span>
+        </p>
+    </div>
+    <div class="get">
+        <div class="top">
+            <img src="img/logo.png" class="logo">
+            <img src="" class="slogan">
+            <!-- 根据奖项变动 -->
+            <div class="prize_box" style="display: none;">
+            	<p></p>
+            	<img src="" class="prize_slogan"/>
+            </div>
+        </div>
+        <!--俄罗斯margin:2rem auto 0;其余0;-->
+        <input type="button" value="立即兑奖" class="ck">
+        <p class="notice">温馨提示，点击"立即兑奖"填写兑奖信息吧！</p>
+        <img src="img/beer.png?v=1" class="beer">
+    </div>
+    <div class="info">
+        <img src="img/logo.png" class="logo">
+        <!--俄罗斯height:3rem;其余4rem-->
+        <img src="img/prize-ship-slogan2.png?v=1" class="slogan">
+        <div class="explain">
+        	<!-- 根据奖项变动 -->
+            <div class="title">
+                <p></p>
+            </div>
+            <div class="content">
+            </div>
+            <a href="javascript:;" class="ckff">查看兑奖方法>></a>
+            <img src="img/strcode-border.png" class="border">
+        </div>
+		<p style="text-align: center;color: #fff;font-size: .5rem;margin-bottom: -.5rem;">中奖者需提供完整的中奖拉环及中奖电话，作为兑奖依据</p>
+        <div class="warning">
+            <img src="img/notice.png" class="notice">
+            <!-- 根据奖项变动 -->
+            <p>温馨提示：请尽快拨打4006800899核实中奖者身份信息，以下信息须完整填写信息，否则无法兑奖。</p>
+        </div>
+        <div class="msg">
+            <input type="text" placeholder="姓名" class="name">
+            <!-- 根据奖项变动 -->
+            <input type="text" placeholder="输入身份证号" class="idcard" maxlength="18" style="display: none;">
+            <input type="text" placeholder="请输入收货地址(省-市-区/县-街道)" class="address" maxlength="50" style="display: none;">
+            <input type="text" placeholder="输入手机号" class="tel" maxlength="11">
+            <input type="text" placeholder="验证码" class="code" maxlength="4">
+            <input type="button" value="获取验证码" class="yz">
+        </div>
+        <input type="button" value="提交" class="tj" id="btn">
+        <p class="alert">温馨提示：
+            <br>中奖者需提供完整的中奖空箱及对应二维码，以及个人身份证证复印件供我公司或我公司委托的第三方公司核实确认。</p>
+        <div class="link">
+            <a href="javascript:;" class="rule">活动规则</a>
+            <a href="javascript:;" class="secret">隐私说明</a>
+        </div>
+        <img src="img/beer.png?v=1" class="beer">
+        <div class="change">
+            <div class="change-content">
+            	<!-- 根据奖项变动 -->
+                <p>活动说明及兑奖办法</p>
+                <ul>
+                    <li>俄罗斯之旅中奖者请拨打兑奖咨询电话：4006800899咨询兑奖事宜。俄罗斯之旅的兑付将根据整体中奖情况统一安排出行时间，具体时间将另行通知中奖者。逾期未要求兑付或逾期中出的奖项将不再兑付。</li>
+                    <li>俄罗斯之旅中奖者需提供完整的中奖拉环及中奖空罐，以及本人身份证复印件供我公司或我公司委托的第三方核实确认，待有奖拉环真实性及中奖者身份信息确认后即可安排兑付奖品。</li>
+                    <li>本次活动仅在中国举行，在该管辖区范围外购得的有奖产品，本公司将不予兑付。</li>
+                    <li>本次活动非线上促销，通过任何电子商务平台购得的有奖产品，本公司将不予兑付。</li>
+                    <li>注意事项：若遇不可抗力因素，本公司有权取消此活动；中奖者在兑奖过程中发生的任何费用，支出及奖品个人所得税由中奖者自行承担；奖品以实物为准，奖品图片仅供参考，我公司承诺所提供的奖品均为合格品；本次活动奖品不可兑换现金或作价销售。二维码因光线、网络、系统扫描摄像头等原因，可能存在个别扫码不成功情况，敬请谅解；活动详见扫码后网页活动告知。</li>
+                </ul>
+                <!--
+                	<li>小米电饭煲中奖者请拨打兑奖咨询电话：0592-3663963咨询兑奖事宜。逾期未要求兑付或逾期中出的奖项将不再兑付。</li>
+                    <li>小米电饭煲中奖者需提供完整的中奖拉环及中奖空罐，以及本人身份证复印件供我公司或我公司委托的第三方核实确认，待有奖拉环真实性及中奖者身份信息确认后即可安排兑付奖品。</li>
+                    <li>本次活动仅在福建省举行，在该管辖区范围外购得的有奖产品，本公司将不予兑付。</li>
+                    <li>本次活动非线上促销，通过任何电子商务平台购得的有奖产品，本公司将不予兑付。</li>
+                    <li>注意事项：若遇不可抗力因素，本公司有权取消此活动；中奖者在兑奖过程中发生的任何费用，支出及奖品个人所得税由中奖者自行承担；奖品以实物为准，奖品图片仅供参考，我公司承诺所提供的奖品均为合格品；本次活动奖品不可兑换现金或作价销售。二维码因光线、网络、系统扫描摄像头等原因，可能存在个别扫码不成功情况，敬请谅解；活动详见扫码后网页活动告知。</li>
+                -->
+                <!--
+                	<li>青岛啤酒有一套中奖者请拨打兑奖咨询电话：0592-3663963咨询兑奖事宜。逾期未要求兑付或逾期中出的奖项将不再兑付。</li>
+                    <li>青岛啤酒有一套中奖者需提供完整的中奖拉环及中奖空罐，以及本人身份证复印件供我公司或我公司委托的第三方核实确认，待有奖拉环真实性及中奖者身份信息确认后即可安排兑付奖品。</li>
+                    <li>本次活动仅在福建省举行，在该管辖区范围外购得的有奖产品，本公司将不予兑付。</li>
+                    <li>本次活动非线上促销，通过任何电子商务平台购得的有奖产品，本公司将不予兑付。</li>
+                    <li>注意事项：若遇不可抗力因素，本公司有权取消此活动；中奖者在兑奖过程中发生的任何费用，支出及奖品个人所得税由中奖者自行承担；奖品以实物为准，奖品图片仅供参考，我公司承诺所提供的奖品均为合格品；本次活动奖品不可兑换现金或作价销售。二维码因光线、网络、系统扫描摄像头等原因，可能存在个别扫码不成功情况，敬请谅解；活动详见扫码后网页活动告知。</li>
+                -->
+            </div>
+            <img src="img/close.png" class="close">
+        </div>
+        <img src="img/bg_1.png" class="bottom_bg"/>
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=1.5"></script>
+<script src="js/prize.js?v=2.8"></script>
+<script>
+    ini_wxshare(vge.fjqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function() {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

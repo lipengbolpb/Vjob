@@ -1,0 +1,291 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{/*去除下划线和去除点击时的蓝色背景样式*/
+    text-decoration:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);  
+	tap-highlight-color:rgba(0, 0, 0, 0); 
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+input{
+	-webkit-tap-highlight-color: transparent;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+}
+
+#mask{
+	width: 100%;
+	height:100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 1;
+	display: none;
+}
+#mask img{
+	display:block;
+	width:80%;
+	position: absolute;
+	top:4rem;
+	left:1.6rem;
+}
+div.mybag_top{
+	width:100%;
+	height:100%;
+	background: url('../img/cash_bg.png') no-repeat top left;
+	background-size:100% 100%;
+	-webkit-background-size: 100% 100%;
+	position:relative;
+	overflow:hidden;
+	transition: all 1s;
+}
+img.logo{
+	position:absolute;
+	width:3rem;
+	top:1rem;
+	left:1rem;
+}
+img.slogan{
+	width:70%;
+	display:block;
+	margin:1rem auto 0;
+}
+div.content{
+	width: 100%;
+	margin:2rem auto 0;
+	/* margin:0.5rem auto 0; */
+	position: relative;
+	text-align:center;
+	background: url('../img/cash_hb.png') no-repeat;
+	background-position:50% 50%;
+	background-size:70% auto;
+	min-height:15rem;
+}
+div.content img.hb{
+	width:70%;
+	display:block;
+	margin:3.5rem auto 0;
+}
+div.content p.totl{
+	font-size:1rem;
+	color:#fff699;
+	text-align:center;
+	position: absolute;
+	top: 5.5rem;
+	width:100%;
+}
+div.content p.bottle{
+	color: #451e00;
+	font-size:2rem;
+	font-weight:bold;
+	text-align:center;
+	position:absolute;
+	top:7rem;
+	width:100%;
+	color:#fff699;
+}
+div.content p.bottle span:nth-of-type(2){
+	font-size:0.9rem;
+	color:#ffffff;
+}
+
+div.content div.msg_box{
+	margin-top:9.5rem;
+}
+div.content div.msg_box p{
+	margin: 0 auto;
+    font-size: 0.8rem;
+    display: inline-block;
+    color:#ffffff;
+}
+div.content div.msg_box p.balance{
+	margin-top: 0.5rem;
+}
+div.content div.msg_box p.sent{
+	margin-top: 0.2rem;
+}
+div.content div.msg_box p span{
+	color:#fff699;
+}
+div.content div.msg_box p span:nth-of-type(1){
+	font-size:1.1rem;
+	font-weight:bold;
+}
+#btn{
+	width:50%;
+	height:2rem;
+	border-radius:10px;
+	-webkit-border-radius: 10px;
+	background-color: #ffcc00;
+	border:none;
+	margin:0.2rem auto 0;
+	display:block;
+	font-size:0.85rem;
+	color:#eb5718;
+}
+div.mybag_top p.notice{
+	color:#ffffff;
+	width:100%;
+	text-align:center;
+	font-size:0.55rem;
+	margin:1rem auto 0;
+}
+#show{
+	display:block;
+	text-align:center;
+	width:50%;
+	margin:1rem auto 0;
+	color: #fff699;
+	font-size:0.65rem;
+	text-decoration:underline;
+}
+img.loading{
+	width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+div.mybag_bottom{
+	width:100%;
+	height:100%;
+	background: url('../img/cash_bg.png') no-repeat top left;
+	background-size:100% 100%;
+	-webkit-background-size: 100% 100%;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+}
+div.mybag_bottom div.record input{
+	width: 50%;
+    height: 2rem;
+    margin: 1.05rem auto 1rem;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	background:#ffcc00;
+	background-size: auto 100%;
+	border:none;
+	display:block;
+	color:#eb5718;
+	font-size:0.8rem;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #90c9a2 solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #90c9a2 solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.9rem;
+	color:#ffffff;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #ffffff;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 2rem;
+	/* color: #ffdc45; */
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	color: #ffdc45;
+	display: none;
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #ffdc45;
+	display: none;
+	width:100%;
+}
+
+@media only screen and (max-height: 550px) and (min-width:360px) {
+    div.content img.hb{
+		margin:2.5rem auto 0;
+	}
+	#btn{
+		margin:0rem auto 0;
+	}
+	div.mybag_top p.notice{
+		margin:0.5rem auto 0;
+	}
+	#show{
+		margin:0.5rem auto 0;
+	}
+}
+@media only screen and (max-height: 550px) and (min-width:361px) {
+	div.content{
+		margin:0 auto;
+	}
+}
+@media only screen and (max-height: 470px) and (min-width:320px) {
+	div.content img.hb{
+		width:60%;
+		margin:2.5rem auto 0;
+	}
+	div.content p:nth-of-type(1){
+		top: 5.5rem;
+	}
+	div.content p:nth-of-type(2){
+		top:7rem;
+	}
+	div.content p.top{
+		top:8rem;
+	}
+	div.content p.bottom{
+		top: 9.5rem;
+	}
+	#btn{
+		margin:0rem auto 0;
+	}
+	div.mybag_top p.notice{
+		margin:0.5rem auto 0;
+	}
+	#show{
+		margin:0.5rem auto 0;
+	}
+}
+@media only screen and (max-height: 440px) and (min-width:320px) {
+	div.content{
+		margin:0 auto;
+	}
+}

@@ -1,0 +1,182 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+}
+body{
+	background:url(../img/bg.png?v=1.0.4) no-repeat left top;
+    /* -webkit-background-size: 100% 100%; */
+    background-size: cover;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+img{
+	display: block;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border:0;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+::-webkit-input-placeholder{
+     color: #b60006;
+}
+input[type="button"]{
+	color: #ea5244;
+}
+img.logo{
+	width: 20%;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+}
+img.slogan{
+	position: absolute;
+	left: 50%;
+	top: 2rem;
+	margin-left: -6rem;
+	width: 12rem;
+}
+img.footer{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+div.fail_tip{
+	height: 10rem;
+	background: url(../img/border.png) no-repeat center 9rem;
+	-webkit-background-size: 11rem auto;
+	overflow: hidden;
+	display: none;
+}
+div.fail_tip img.pic_tip{
+	height: 1.5rem;
+	margin: 4rem auto 1.5rem;
+}
+div.fail_tip p{
+	font-size: .75rem;
+	color:#b60006 ;
+	text-align: center;
+}
+div.strcode{
+	width: 89%;
+	position: absolute;
+	top: 11rem;
+	left: 5.5%;
+	/* overflow: hidden; */
+}
+div.strcode p{
+	width: 85%;
+	margin: 0 auto .6rem;
+	font-size: 0.55rem;
+	color: #b60006;
+} 
+div.strcode p span{
+	display: inline-block;
+	padding-left: 0.8rem;
+	margin-left: -0.8rem;
+	-webkit-background-size: auto 90%;
+	background-size: auto 90%; 
+}
+div.strcode div.import{
+	height: 1.9rem;
+	border-bottom: 1px #b60006 solid;
+	border-top: 1px #b60006 solid;
+	width: 98%;
+}
+div.strcode div.telcode{
+	height: 1.9rem;
+	border-bottom: 1px #b60006 solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+#str_code{
+	color: #b60006;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#telcode{
+	color: #b60006;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+#vertion_code{
+	color: #b60006;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+div.strcode div.vertion{
+	height: 1.9rem;
+	border-bottom: 1px #b60006 solid;
+	width: 98%;
+	margin: 0 auto;
+	display: none;
+}
+div.strcode input[type="text"]{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	outline: none;
+	background: 0;
+	text-indent: 0.1rem;
+	font-size: 0.7rem;
+}
+#yz_code{
+	float: left;
+	display: inline-block;
+	width: 70%;
+	color: #b60006;
+}
+#get_yz{
+	float: right;
+	display: inline-block;
+	border-left: 1px solid #b60006;
+	width: 30%;
+	text-align: center;
+	color: #b60006;
+	height: 100%;
+}
+#btn{
+	width: 50%;
+    height: 2.2rem;
+    margin: 2rem auto;
+    display: block;
+    background: #c0c0c0;
+    color:#ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: "微软雅黑","Microsoft YaHei";
+}
+input[disabled]{
+	color: #ffffff;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.55rem;
+    color: #e50110;
+}
+
+/* 针对iphone4 */
+@media only screen and (max-device-height:480px){
+	#btn{
+		margin:1rem auto;
+	}
+	/* div.strcode p{
+		margin-bottom: 0;
+	}  */
+	div.mark div.hb{
+		top: 2.5rem;
+	}
+	div.mark  div.title{
+		top: 7rem;
+	}
+	#btn_tip{
+		margin-top: 16rem;
+	}
+}

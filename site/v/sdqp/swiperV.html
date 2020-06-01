@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>酒王之旅</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <link rel="stylesheet" href="css/touchV1.0.css?v=1.7">  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination{
+        display: none;
+    }
+
+
+    /* #preloader {
+        background-image: url(../img/h5analysis/oneBg.png?v=1.0);
+        background-image: url(../img/h5analysis/twoBg.png?v=1.0);
+        background-image: url(../img/h5analysis/threeBg.png?v=1.0);
+        width:0px;
+        height: 0px;
+        display: inline;
+    } */
+
+    .nopage{
+        display: none;
+    }
+    .showpage{
+        display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container" id="app">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide one">
+        <div class="bg item" id="wrap">
+            <div class="text">
+                <div class="mask1">
+                    <img src="img/h5analysis/oneText.png" alt="" class="text">
+                </div>
+            </div>
+            <div class="show1">
+                <img src="img/h5analysis/logo.png" alt="" class="logo">
+                <img src="img/h5analysis/oneScene.gif" alt=""  class="light">
+            </div>
+
+            <div class="slide1" onclick="transLive();">
+                <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide two" >
+        <div class="bg item twoscene" id="wrap">
+            <div class="mask1">
+                <img src="img/h5analysis/twoText.png" alt="" class="text">
+            </div>
+            
+            <div class="show1">
+                <img src="img/h5analysis/viewer.png" alt="" class="viewer">
+            </div>
+
+            <div class="slide1">
+                <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide three">
+            <div class="bg item">
+                <div class="text">
+                    <div class="mask">
+                        <img src="img/h5analysis/wineDay.png" alt="" class="text">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide five">
+            <div class="bg item">
+                <div class="text">
+                    <div class="mask">
+                        <img src="img/h5analysis/mapText.png" alt="" class="text">
+                    </div>
+                </div>
+                <div class="slide">
+
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide  six">
+            <div class="bg item">
+                <div class="text">
+                    <div class="mask">
+                        <img src="img/h5analysis/fourText.png" alt="" class="text">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide seven">
+            <div class="bg item">
+                <!-- <span>{{msg1}}</span> -->
+                <div class="text">
+                    <!-- 2019扫码天数>=2 -->
+                    <div class="mask1" v-if=" yearScanDays>=2">
+                        <p class="text">
+                            <img src="img/h5analysis/sevenText1.png" alt="">
+                            <span>{{scanDate}}</span>
+                            <span v-if="firstSku == '201609141-020'">测试SKU</span>
+                            <span v-if="firstSku == '201609141-021'">白啤10度</span>
+                            <span v-if="firstSku == '201609141-022'">经典1903</span>
+                            <span v-if="firstSku == '241510936-001'">奥古特12度</span>
+                            <span v-if="firstSku == '241510936-002'">经典8度</span>
+                            <span v-if="firstSku == '241510936-003'">经典8度</span>
+                            <span v-if="firstSku == '241510936-004'">经典8度</span>
+                            <span v-if="firstSku == '241510936-005'">经典1903</span>
+                            <span v-if="firstSku == '241510936-006'">纯生8度</span>
+                            <span v-if="firstSku == '241510936-007'">白啤10度</span>
+                            <span v-if="firstSku == '241510936-008'">奥古特12度</span>
+                            <span v-if="firstSku == '241510936-009'">经典8度</span>
+                            <span v-if="firstSku == '241510936-010'">经典8度</span>
+                            <span v-if="firstSku == '241510936-011'">奥古特12度</span>
+                            <span v-if="firstSku == '241510936-012'">经典1903</span>
+                            <span v-if="firstSku == '241510936-013'">纯生8度</span>
+                            <span v-if="firstSku == '241510936-014'">白啤10度</span>
+                            <span v-if="firstSku == '241510936-015'">经典8度</span>
+                            <span v-if="firstSku == '241510936-016'">经典1903</span>
+                            <span v-if="firstSku == '241510936-017'">奥古特12度</span>
+                            <span v-if="firstSku == '241510936-018'">纯生8度</span>
+                            <span v-if="firstSku == '241510936-019'">白啤10度</span>
+                            <!-- <span v-else>无</span> -->
+                            <!-- <span v-else>  </span> -->
+
+                            <span>{{scanDays}}</span>
+                            <span>{{maxCounty}}</span>
+                            <span v-if="loveSku == '201609141-020'">测试SKU</span>
+                            <span v-if="loveSku == '201609141-021'">白啤10度</span>
+                            <span v-if="loveSku == '201609141-022'">经典1903</span>
+                            <span v-if="loveSku == '241510936-001'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-002'">经典8度</span>
+                            <span v-if="loveSku == '241510936-003'">经典8度</span>
+                            <span v-if="loveSku == '241510936-004'">经典8度</span>
+                            <span v-if="loveSku == '241510936-005'">经典1903</span>
+                            <span v-if="loveSku == '241510936-006'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-007'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-008'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-009'">经典8度</span>
+                            <span v-if="loveSku == '241510936-010'">经典8度</span>
+                            <span v-if="loveSku == '241510936-011'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-012'">经典1903</span>
+                            <span v-if="loveSku == '241510936-013'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-014'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-015'">经典8度</span>
+                            <span v-if="loveSku == '241510936-016'">经典1903</span>
+                            <span v-if="loveSku == '241510936-017'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-018'">纯生8度</span>
+                            <span v-if ="loveSku == '241510936-019'">白啤10度</span>
+                            <!-- <span v-else>无</span> -->
+                            <!-- <span v-else></span> -->
+                            <span>{{loveScan}}</span>
+                            <span>{{maxDate}}</span>
+                            <span>{{maxDateScan}}</span>
+                        </p>
+                        <!-- <p class="text" >
+                                1.<span>{{scanDate}}</span>，我们因在<span>青岛啤酒</span>人海中相识<br>
+                                2.时光匆匆，相识至今已有<span>{{scanDays}}</span>天，<span>{{maxCounty}}</span>是我们相遇最多的地方<br>
+                                3.2019上半年，
+                                <span v-if="loveSku == 201609141-020">测试SKU</span>
+                                <span v-else-if="loveSku == 201609141-021">白啤10度</span>
+                                <span v-else-if="loveSku == 201609141-022">经典1903</span>
+                                <span v-else-if="loveSku == 241510936-001">奥古特12度</span>
+                                <span v-else-if="loveSku == 241510936-002">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-003">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-004">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-005">经典1903</span>
+                                <span v-else-if="loveSku == 241510936-006">纯生8度</span>
+                                <span v-else-if="loveSku == 241510936-007">白啤10度</span>
+                                <span v-else-if="loveSku == 241510936-008">奥古特12度</span>
+                                <span v-else-if="loveSku == 241510936-009">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-010">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-011">奥古特12度</span>
+                                <span v-else-if="loveSku == 241510936-012">经典1903</span>
+                                <span v-else-if="loveSku == 241510936-013">纯生8度</span>
+                                <span v-else-if="loveSku == 241510936-014">白啤10度</span>
+                                <span v-else-if="loveSku == 241510936-015">经典8度</span>
+                                <span v-else-if="loveSku == 241510936-016">经典1903</span>
+                                <span v-else-if="loveSku == 241510936-017">奥古特12度</span>
+                                <span v-else-if="loveSku == 241510936-018">纯生8度</span>
+                                <span v-else="loveSku == 241510936-019">白啤10度</span>
+                                是你我的最爱，一共<span>{{loveScan}}</span>瓶<br>
+                                你喜欢的口味我最懂<br>
+                                4.<span>{{maxDate}}</span>，你一口气喝了<span>{{maxDateScan}}</span>瓶<br>
+                                欢聚时刻<br>
+                                故事就啤酒<br>
+                                永远是最开心的事
+                        </p> -->
+                    </div>
+                    <!-- 2019扫码天数<2 --> 
+                    <div class="mask2" v-if="yearScanDays < 2">
+                        <p class="text">
+                            <img src="img/h5analysis/sevenText2.png" alt="">
+                            <span>{{scanDate}}</span>
+                            <span v-if="loveSku == '201609141-020'">测试SKU</span>
+                            <span v-else-if="loveSku == '201609141-021'">白啤10度</span>
+                            <span v-else-if="loveSku == '201609141-022'">经典1903</span>
+                            <span v-else-if="loveSku == '241510936-001'">奥古特12度</span>
+                            <span v-else-if="loveSku == '241510936-002'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-003'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-004'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-005'">经典1903</span>
+                            <span v-else-if="loveSku == '241510936-006'">纯生8度</span>
+                            <span v-else-if="loveSku == '241510936-007'">白啤10度</span>
+                            <span v-else-if="loveSku == '241510936-008'">奥古特12度</span>
+                            <span v-else-if="loveSku == '241510936-009'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-010'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-011'">奥古特12度</span>
+                            <span v-else-if="loveSku == '241510936-012'">经典1903</span>
+                            <span v-else-if="loveSku == '241510936-013'">纯生8度</span>
+                            <span v-else-if="loveSku == '241510936-014'">白啤10度</span>
+                            <span v-else-if="loveSku == '241510936-015'">经典8度</span>
+                            <span v-else-if="loveSku == '241510936-016'">经典1903</span>
+                            <span v-else-if="loveSku == '241510936-017'">奥古特12度</span>
+                            <span v-else-if="loveSku == '241510936-018'">纯生8度</span>
+                            <span v-else-if="loveSku == '241510936-019'">白啤10度</span>
+                            <!-- <span v-else>无</span> -->
+                            <!-- <span v-else>缘分</span> -->
+                            <!-- <span>青岛啤酒</span> -->
+                            <span>{{maxCounty}}</span>
+                            <span>{{scanDays}}</span>
+                            <span>{{maxDate}}</span>
+                            <span>{{maxDateScan}}</span>
+                        </p>
+                        <!-- <p class="text">
+                                1.<span>{{scanDate}}</span>，我们因<span>青岛啤酒</span>在人海中相识，<span>{{maxCounty}}</span>是我们最初相遇的地方<br>
+                                2.时光匆匆，相识至今已有<span>{{scanDays}}</span>天，
+                                生活、工作忙忙碌碌<br>
+                                相聚很少<br>
+                                对你的关心未曾减少<br>
+                                3.<span>{{maxDate}}</span>，你一口气喝了<span>{{maxDateScan}}</span>瓶<br>
+                                一口啤酒<br>
+                                品味香与苦<br>
+                                就像多年走过的路
+                        </p> -->
+                    </div>
+                </div>
+                <img src="img/h5analysis/seven.gif" alt=""  class="shakeBottle">			
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide eight">
+        <div class="bg item">
+                <div class="text">
+                    <!-- 低金额红包 10为标椎   scanMoney<10 || -->
+                    <div class="mask1" v-if=" prizeCount == 0">
+                        <p class="txtPart">
+                            <img src="./img/h5analysis/eightText1.png" alt="" class="text">
+                            <span>{{scanMoney}}</span>
+                            <span>{{maxMoney}}</span>
+                        </p>
+
+                        <!-- <p  class="text">
+                                <a>2019上半年</a><br>
+                                幸运的你，领取了<span>{{scanMoney}}</span>元红包<br>
+                                手气最旺的一次，一下就抢到了<span>{{maxMoney}}</span>元<br>
+                                “要酒日”那天，幸运抢得了<span>青啤有一套</span><br>
+                                一般不出手，出手不一般<br>
+                                期待下次相遇，最好的还会想着留给你
+                        </p> -->
+                       
+                    </div>
+    
+                    <!-- 高金额红包   scanMoney>=10 &&  -->
+                    <div class="mask2" v-if="prizeCount>0">
+                            <p class="txtPart">
+                                <img src="./img/h5analysis/eightText2.png" alt="" class="text">
+                                <span>{{scanMoney}}</span>
+                                <span>{{maxMoney}}</span>
+                                <span>青啤有一套</span>
+                            </p>
+
+                            <!-- <p  class="text">
+                                    <a>2019上半年</a><br>
+                                    优秀的你，领取了<span>{{scanMoney}}</span>元红包<br>
+                                    手气最旺的一次，一下就抢到了<span>{{maxMoney}}</span>元<br>
+                                    “要酒日”那天，幸运抢得了<span>青啤有一套</span><br>
+                                    最高兴的就是看到你开心的样子
+                            </p> -->
+                       
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide nine">
+            <div class="bg item">
+                <div class="text">
+                    <div class="mask">
+                        <img src="img/h5analysis/nineText.png" alt="" class="text">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide ten">
+            <div class="bg item">
+                <div class="text">
+                    <div class="mask">
+                        <img src="img/h5analysis/tenText.png" alt="" class="text">
+                    </div>
+                </div>
+                <img src="img/h5analysis/ten.gif" alt="" class="redPacket">
+                <div class="slide">
+                    <img src="img/h5analysis/slideIcon.png" alt="" class="slideIcon">
+                </div>
+            </div>
+      </div>
+      <div class="swiper-slide elevent" id="shootImg">
+            <div class="bg item " id="sharePage">
+                <img src="img/h5analysis/paly.png" alt="" class="play" onclick="play()">
+                <p class="nickname">{{nikeName}}</p>
+                <p class="designTitle"  v-if="scanCounts<5">养鱼标兵</p>
+                <p class="designTitle"  v-else-if="scanCounts>= 5 && scanCounts <= 10">酒桌秀才</p>
+                <p class="designTitle"  v-else-if="scanCounts>= 11 && scanCounts <= 15">三好酒王</p>
+                <p class="designTitle"  v-else-if="scanCounts>= 16 && scanCounts <= 20">齐鲁一哥</p>
+                <p class="designTitle"  v-else="scanCounts>20">江湖传说</p>
+                <div class="text">
+                    <div class="mask">
+                         <!-- 实物奖个数>0 -->
+                        <p class="textPart prize1"  v-if="prizeCount > 0" >
+                            <img src="img/h5analysis/prize1.png?v=1" alt="">
+                            <span>{{scanCounts}}瓶</span>
+                            <span>{{scanMoney}}元</span>
+                            <span>{{prizeCount}}箱</span>
+                            <span v-if="loveSku == '201609141-020'">测试SKU</span>
+                            <span v-if="loveSku == '201609141-021'">白啤10度</span>
+                            <span v-if="loveSku == '201609141-022'">经典1903</span>
+                            <span v-if="loveSku == '241510936-001'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-002'">经典8度</span>
+                            <span v-if="loveSku == '241510936-003'">经典8度</span>
+                            <span v-if="loveSku == '241510936-004'">经典8度</span>
+                            <span v-if="loveSku == '241510936-005'">经典1903</span>
+                            <span v-if="loveSku == '241510936-006'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-007'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-008'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-009'">经典8度</span>
+                            <span v-if="loveSku == '241510936-010'">经典8度</span>
+                            <span v-if="loveSku == '241510936-011'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-012'">经典1903</span>
+                            <span v-if="loveSku == '241510936-013'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-014'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-015'">经典8度</span>
+                            <span v-if="loveSku == '241510936-016'">经典1903</span>
+                            <span v-if="loveSku == '241510936-017'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-018'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-019'">白啤10度</span>
+                            <!-- <span v-else>无</span> -->
+                        </p>
+                         <!-- 实物奖个数==0 -->
+                        <p class="textPart prize2" v-if="prizeCount == 0">
+                            <img src="img/h5analysis/prize2.png?v=1" alt="">
+                            <span>{{scanCounts}}瓶</span>
+                            <span>{{scanMoney}}元</span>
+                            <span v-if="loveSku == '201609141-020'">测试SKU</span>
+                            <span v-if="loveSku == '201609141-021'">白啤10度</span>
+                            <span v-if="loveSku == '201609141-022'">经典1903</span>
+                            <span v-if="loveSku == '241510936-001'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-002'">经典8度</span>
+                            <span v-if="loveSku == '241510936-003'">经典8度</span>
+                            <span v-if="loveSku == '241510936-004'">经典8度</span>
+                            <span v-if="loveSku == '241510936-005'">经典1903</span>
+                            <span v-if="loveSku == '241510936-006'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-007'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-008'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-009'">经典8度</span>
+                            <span v-if="loveSku == '241510936-010'">经典8度</span>
+                            <span v-if="loveSku == '241510936-011'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-012'">经典1903</span>
+                            <span v-if="loveSku == '241510936-013'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-014'">白啤10度</span>
+                            <span v-if="loveSku == '241510936-015'">经典8度</span>
+                            <span v-if="loveSku == '241510936-016'">经典1903</span>
+                            <span v-if="loveSku == '241510936-017'">奥古特12度</span>
+                            <span v-if="loveSku == '241510936-018'">纯生8度</span>
+                            <span v-if="loveSku == '241510936-019'">白啤10度</span>
+                            <!-- <span v-else>无</span> -->
+                        </p>
+                        <!-- <p class="text">
+                            2019年上半年：<br>
+                            共计喝了<span>{{scanCounts}}瓶</span>青岛啤酒<br>
+                            共计领取<span>{{scanMoney}}元</span>红包奖励<br>
+                            共计领取“要酒日”青啤有一套<span>1箱</span><br>
+                            我最爱喝的青岛啤酒是
+                            <span v-if="loveSku == 201609141-020">测试SKU</span>
+                            <span v-else-if="loveSku == 201609141-021">白啤10度</span>
+                            <span v-else-if="loveSku == 201609141-022">经典1903</span>
+                            <span v-else-if="loveSku == 241510936-001">奥古特12度</span>
+                            <span v-else-if="loveSku == 241510936-002">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-003">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-004">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-005">经典1903</span>
+                            <span v-else-if="loveSku == 241510936-006">纯生8度</span>
+                            <span v-else-if="loveSku == 241510936-007">白啤10度</span>
+                            <span v-else-if="loveSku == 241510936-008">奥古特12度</span>
+                            <span v-else-if="loveSku == 241510936-009">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-010">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-011">奥古特12度</span>
+                            <span v-else-if="loveSku == 241510936-012">经典1903</span>
+                            <span v-else-if="loveSku == 241510936-013">纯生8度</span>
+                            <span v-else-if="loveSku == 241510936-014">白啤10度</span>
+                            <span v-else-if="loveSku == 241510936-015">经典8度</span>
+                            <span v-else-if="loveSku == 241510936-016">经典1903</span>
+                            <span v-else-if="loveSku == 241510936-017">奥古特12度</span>
+                            <span v-else-if="loveSku == 241510936-018">纯生8度</span>
+                            <span v-else="loveSku == 241510936-019">白啤10度</span>
+                        </p> -->
+                        <!-- <img src="./img/h5analysis/prize.png" alt="" class="text"> -->
+                    </div>
+                </div>
+                <div class="btn" onclick="takeScreenshot()">
+                    <img src="img/h5analysis/btn.png" alt="">
+                </div>
+    
+                <div class="ewmPart">
+                    <div class="ewm">
+                        <p class="shareTxt">识别二维码参与活动<br>查看专属你的2019上半年青啤之旅</p>
+                    </div>
+                    <!-- <img src="img/h5analysis/test.png" alt="" class="ewmImage"> -->
+                    <!-- 上线版load页面二维码 -->
+                    <!-- <img src="img/h5analysis/ture.png" alt="" class="ewmImage"> -->
+                    <img src="img/h5analysis/shareEwm.jpg" alt="" class="ewmImage">
+                </div>
+            </div>
+            <div class="save" id="save">
+                长按屏幕保存
+            </div>
+            <div id="canvasImg">
+                
+            </div>
+            <img src="" alt=""  id="savepic">
+      </div>
+
+      <!-- <div class="swiper-slide twelve">
+            <div class="bg item " id="canvasImg">
+                <canvas></canvas>
+            </div>
+      </div> -->
+      
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+
+<!-- 本地 -->
+  <!-- <script src="../../static/js/vve/10core.js"></script>
+  <script src="../../static/js/vve/11tool.js"></script>
+  <script src="../../static/js/vve/12event.js"></script>
+  <script src="../../static/js/vve/20ajx.js"></script>
+  <script src="../js/cfg.js?v=2.3"></script> -->
+
+  <!-- 测试 -->
+  <script src="/static/js/vve/10core.js"></script>
+  <script src="/static/js/vve/11tool.js"></script>
+  <script src="/static/js/vve/12event.js"></script>
+  <script src="/static/js/vve/20ajx.js"></script>
+  <script src="/v/js/cfg.js?v=2.3.0"></script>
+
+
+
+  <script src="js/scene.js?v=1.3.3"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    //   function showImage(){
+    //     setTimeout(function(){
+    //         $('.one .mask1 img').show();
+    //         $('.one .mask2 img').show();
+    //     },30);
+    //   };
+    //   showImage();
+
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChangeTransitionStart: function(e){
+            $(".swiper-slide-active").find('.item').removeClass('nopage').addClass('showpage')
+            $(".swiper-slide-prev,.swiper-slide-next").find('.item').removeClass('showpage').addClass('nopage')
+            if($(".swiper-slide-active").find('.twoscene')){
+                $('.viewer').addClass("rise"); 
+            }
+        },
+        init:function(e){
+            setTimeout(function(){
+                $('.one .mask1').addClass('ani');
+                $('.one .mask2').addClass('ani');
+            },100)
+            // $('.one .mask1').addClass('ani');
+            // $('.one .mask2').addClass('ani');
+        }
+      }
+    });
+    
+    // setTimeout(function(){
+    //     $('.one .mask1').addClass('ani');
+    //     $('.one .mask2').addClass('ani');
+    // },2000)
+    
+
+    // 重播
+    function play(){
+        var args = vge.urlparse(location.href);
+        var openid = args.openid;
+        sessionStorage.removeItem('flag');
+        // window.location.reload();
+        window.location.href = 'http://' + location.host + '/v/sdqp/swiperV.html?openid='+ openid;
+        // window.location.href = '../sdqp/swiperV.html';
+    }
+
+    function takeScreenshot() {
+        $('.play').hide();
+        $('.btn').hide();
+        $('.ewmPart').show();
+        html2canvas(document.getElementById('shootImg')).then(function(canvas) {
+            document.getElementById('canvasImg').appendChild(canvas);
+            canvas.id = 'mycanvas';
+            document.getElementById("savepic").style.width = document.getElementById("mycanvas").style.width;
+            document.getElementById("savepic").style.height = document.getElementById("mycanvas").style.height;
+            console.log(canvas);
+            document.getElementById('save').style.display="block";
+            document.getElementById('save').style.zIndex="11";
+
+            // document.getElementById('save').style.display='none';
+            var dataUrl = canvas.toDataURL();
+            // alert(dataUrl)
+            document.getElementById("savepic").src = dataUrl;
+       
+
+            // document.getElementById('sharePage').style.display="none !important";
+            // document.getElementsByClassName('elevent bg').style.display='none';
+        });
+
+        
+        
+    }
+  </script>
+</body>
+</html>

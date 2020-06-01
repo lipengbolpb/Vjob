@@ -1,0 +1,450 @@
+#sale_icon {
+    width: 17%;
+    height: 4rem;
+    background: url(../img/sale/sale-icon.png) no-repeat top left;
+    background-size: 100% auto;
+    position: absolute;
+    top: 14rem;
+    left: 1%;
+    display: none;
+}
+
+div.sale {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow-x: hidden;
+    display: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.saleMain {
+    width: 95%;
+    min-height: 95%;
+    background: #ffcc01;
+    border-radius: 5px;
+    margin: 0 auto 0.5rem;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 1rem;
+}
+
+img.saleBg {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+img.saleSlogan {
+    width: 70%;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+img.saleClose {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+}
+
+div.saleBtns {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.saleBtns input {
+    width: 45%;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border: 5px solid #fff305;
+    background: #5a2d0c;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+div.saleBtns img {
+    width: 10%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.saleNotice {
+    width: 100%;
+    margin: 0.5rem auto 0;
+}
+
+div.saleNotice p.saleNoticeTop {
+    width: 100%;
+    text-align: center;
+    color: #5a2d0c;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+div.saleNotice p.saleNoticeBottom {
+    width: 100%;
+    text-align: center;
+    color: #de0800;
+    display: none;
+    font-weight: bold;
+}
+div.saleNotice p.saleNoticeBottom span{
+    font-size: 1.5rem;
+}
+div.saleNotice p.saleNoticeOver1{
+    width: 100%;
+    text-align: center;
+    color: #de0800;
+    font-size: 0.55rem;
+    display: none;
+}
+div.saleNotice p.saleNoticeOver2{
+    text-align: center;
+    color: #de0800;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: none;
+}
+div.saleContent {
+    width: 95%;
+    border-radius: 5px;
+    margin: 0.5rem auto 1rem;
+    position: relative;
+}
+
+div.saleContent div.saleAlso {
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    position: relative;
+    border-radius: 5px;
+}
+
+div.saleAlsoList {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.saleAlsoList p.saleAlsoListTitle {
+    width: 30%;
+    color: #000000;
+    font-size: 0.6rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+img.saleBeer {
+    width: 8%;
+}
+
+div.saleProgress {
+    width: 40%;
+    height: 0.6rem;
+    margin-left: 2%;
+    background-color: #804317;
+    border-top-left-radius: 10px 50%;
+    border-top-right-radius: 10px 50%;
+    border-bottom-right-radius: 10px 50%;
+    border-bottom-left-radius: 10px 50%;
+    position: relative;
+}
+
+div.saleInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #26a224;
+    border-top-left-radius: 10px 50%;
+    border-top-right-radius: 10px 50%;
+    border-bottom-right-radius: 10px 50%;
+    border-bottom-left-radius: 10px 50%;
+}
+
+div.saleNum {
+    min-width: 0.7rem;
+    height: 1.2rem;
+    background: #26a224;
+    position: absolute;
+    top: -50%;
+    right: -0.35rem;
+    border-radius: 5px;
+}
+
+div.saleNum p {
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #f3e700;
+}
+
+div.saleAlsoList p.saleAlsoListNum {
+    width: 15%;
+    font-size: 0.7rem;
+    color: #000000;
+    margin-left: 2%;
+}
+
+div.saleContent div.saleOr {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    border-radius: 5px;
+}
+
+div.saleOrA {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+}
+
+div.saleOrA div.saleOrAList {
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.saleOrA div.saleOrAList p.saleOrAListTitle {
+    width: 30%;
+    color: #000000;
+    font-size: 0.6rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+div.saleOrAList p.saleOrListNum {
+    width: 15%;
+    font-size: 0.7rem;
+    color: #000000;
+    margin-left: 2%;
+}
+
+img.saleIconA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+}
+
+img.saleIconB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+}
+
+img.saleAdd {
+    width: 7%;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+div.saleOrB {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+}
+
+div.saleOrB div.saleOrBList {
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.saleOrB div.saleOrBList p.saleOrBListTitle {
+    width: 30%;
+    color: #000000;
+    font-size: 0.6rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+div.saleOrBList p.saleOrListNum {
+    width: 15%;
+    font-size: 0.7rem;
+    color: #000000;
+    margin-left: 2%;
+}
+
+img.saleSplit {
+    width: 85%;
+    margin: 0.2rem auto;
+    display: block;
+}
+
+div.saleMix {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    border-radius: 5px;
+}
+
+div.saleMixA {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+}
+
+div.saleMixA div.saleMixAList {
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.saleMixA div.saleMixAList p.saleMixAListTitle {
+    width: 30%;
+    color: #000000;
+    font-size: 0.6rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+div.saleMixAList p.saleMixListNum {
+    width: 15%;
+    font-size: 0.7rem;
+    color: #000000;
+    margin-left: 2%;
+}
+
+div.saleMixB {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+}
+
+div.saleMixBTitle {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+div.saleMixBTitle p {
+    font-size: 0.7rem;
+    margin-left: 3%;
+}
+
+div.saleMixBList {
+    width: 50%;
+    float: left;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    border-right: 1px solid #bdab9e;
+}
+
+div.saleMixBList p {
+    width: 60%;
+    font-size: 0.6rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+div.saleMixBList img {
+    width: 15%;
+}
+
+p.saleRule {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #930500;
+    text-decoration: underline;
+    margin: 0.5rem auto 0;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+img.saleOver {
+    height: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+.show{
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+.hide{
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

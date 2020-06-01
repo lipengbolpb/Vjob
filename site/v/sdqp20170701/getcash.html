@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>青岛啤酒畅享山东</title>
+		<script>
+			//百度统计
+		</script>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=2.51">
+		<script src="js/rem.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<img src="img/loading.gif" class="loading">
+		<!-- 活动提示 -->
+		<!-- <div class="alert" id="alert">
+			<a href="javascript:;" class="qrClose">×</a>
+			<img src="img/qr_bottle.png" class="qrBt">
+			<img src="img/qr_title.png" class="qrTitle">
+			<img src="img/qr_heart.png" class="qrHerat">
+		</div> -->
+		<!-- 遮罩层 -->
+		<div id="mask">
+			<img src="img/logo.png" class="logo">
+			<img src="img/title.png" class="titleMask">
+			<img src="img/footer.png" class="footer">
+			<input type="button" value="我知道了" class="btnMask">
+		</div>
+		<!-- 获得红包 -->
+		<div id="cash">
+			<img src="img/logo.png" class="logo">
+			<img src="img/slogan.png?v=2" class="slogan">
+			<div class="mybag">
+				<img src="img/bag.png" class="bag">
+				<img src="img/open.png" class="open">
+			</div>
+			<img src="img/hb.png" class="hb">
+			<img src="img/cash_bg.png" class="cashbg">
+			<img src="img/footer.png" class="footer">
+			<img src="img/beer.png" class="beer">
+		</div>
+		<!-- 打开红包 -->
+		<div id="get">
+			<img src="img/logo.png" class="logo">
+			<p class="title">恭喜你获得</p>
+			<p class="getMoney"><span>¥</span><span id="money"></span><span>元</span></p>
+			<img src="img/hb.png" class="hb">
+			<img src="img/get_bg.png" class="getbg">
+			<img src="img/footer.png" class="footer">
+			<input type="button" value="" id="btn">
+			<p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，<br>不足1元的红包我们为您贴心准备了零钱包功能</p>
+			<div class="link">
+				<a href="javascript:;" class="rule">活动规则</a>
+				<a href="javascript:;" class="explain">隐私说明</a>
+			</div>
+		</div>
+		<!-- 自己重复扫 -->
+		<div id="repcash">
+			<img src="img/logo.png" class="logo">
+			<p class="rep">好酒可贵</p>
+			<p class="once">每瓶仅限扫码一次</p>
+			<img src="img/hb.png" class="hb">
+			<img src="img/get_bg.png" class="getbg">
+			<img src="img/footer.png" class="footer">
+			<p class="notice">
+				您已于<span id="earnTime"></span>扫过这瓶酒<br>并获得&nbsp;&nbsp;<span>¥</span><span id="repmoney"></span><span>元</span>
+			</p>
+			<input type="button" value="" id="repbtn">
+		</div>
+		<div id="sign">
+			<div class="sign_alert">
+				<div class="close close_1"></div>
+				<p class="days"></p>
+			</div>
+			<div class="content">
+				<div class="close"></div>
+				<img src="/v/sxqp20170926/img2/sign_title.png" class="sign_title" />
+				<div id="progress_box2">
+					<div class="progress1">
+						<p id="progress2"></p>
+					</div>
+					<span class="progress"></span>
+				</div>
+				<ul id='week'>
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul id="check_box">
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+				</ul>
+				<div class="sign_cash">
+					<p id="weekSignEarnMoney"></p>
+				</div>
+				<p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+			</div>
+			<div class="getSignCash">
+				<p class="weekSignEarnMoney"></p>
+			</div>
+		</div>
+		<div id="sign_logo" class="sign_logo">
+			<img src="/v/sxqp20170926/img2/light.png" class="light" />
+		</div>
+		<p id="copyright" style="color:#ffffff;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">技术支持：V积分 · 鼎川物联Copyright 2012-2017</p>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=2.3"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=3.3.1"></script>
+	<script src="/static/js/font.js"></script>
+	<script>
+		ini_wxshare(vge.sdqpappid);
+		// 隐藏微信右上角菜单
+		wx.ready(function() {
+			wx.hideOptionMenu();
+		});
+	</script>
+
+</html>

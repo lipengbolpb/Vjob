@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>终端促销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/strcode.css?v=1.0.2"/>
+	</head>
+	<body>
+		<div class="mark">
+			<p class="res_tip">请输入串码</p>
+			<p class="time">扫码时间：<span id="time"></span></p>
+		</div>
+		<div class="strcode">
+			<p class="tip">
+				温馨提示：先输入瓶盖二维码上方的6位字符，再输入二维码下方6位字符，输入完成后点击“领取红包”
+			</p>
+			<div class="import">
+				<input type="text" name="" id="str_code" value="" placeholder="输入12位字母数字瓶盖码" maxlength="12" />
+			</div>
+			 <div class="telcode" id="telcode_box"> 
+				<input type="text" name="" id="telcode" value="" placeholder="输入您的手机号" maxlength="11"/>
+			</div>
+			 <div class="vertion" id="yz_box"> 
+				<input type="text" id="yz_code" value="" placeholder="输入验证码" maxlength="4">
+				<span id="get_yz">获取验证码</span>
+			</div>
+			<input type="button" name="" id="btn" value="领取红包" disabled="disabled" />
+		</div>
+		<img src="/v/terminal/img/loading.gif" id="loading"/>
+		<p id="batch" style="position: fixed;bottom: 10%;text-align: center;width: 100%;font-size: 0.68rem;color: #fff;z-index: 100;"></p>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/v/js/cfg.js?v=1.1.9"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/strcode.js?v=1.2.2" type="text/javascript" charset="utf-8"></script>
+	<!--<script>
+      ini_wxshare(vge.terminalappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+</html>

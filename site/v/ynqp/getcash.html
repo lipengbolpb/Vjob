@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒云南</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.8" />
+    <link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+</head>
+
+<body>
+
+    <div class="ani">
+        <img src="img/feather_l.png" class="fea_l fea" />
+        <img src="img/feather_r.png" class="fea_r fea " />
+        <img src="img/feather_1.png" class="left_1 fea" />
+        <img src="img/feather_2.png" class="right_1 fea" />
+        <img src="img/feather_3.png" class="right_2 fea" />
+        <img src="img/feather_b.png" class="fea_b fea" />
+        <img src="img/feather_r_b.png" class="fea_rb fea" />
+    </div>
+    <div class="up">
+        <img src="img/logo.png" class="logo" />
+        <img src="img/slogan_fq.png" class="slogan" />
+        <div class="cash_box">
+            <img src="img/bird_1.png" class="bird" />
+            <img src="img/cash.png" class="cash" />
+            <img src="img/light.png" class="open_border" />
+            <img src="img/open.png" class="open" />
+            <img src="img/cash_bottle.png" class="bottle" />
+        </div>
+    </div>
+    <div class="down">
+        <img src="img/logo.png" class="logo" />
+        <div class="money_box">
+            <img src="img/icon.png" class="icon" />
+            <span id="currentMoney"></span>
+            <img src="img/yuan.png" class="yuan" />
+        </div>
+        <img src="img/sc_1.png" class="sc" />
+        <div id="btn"></div>
+        <p class="tip">根据微信平台要求，红包累计大于等于1元后可提现，不足1元的红包我们为您贴心准备了零钱包功能</p>
+        <div class="rule_box">
+            <a class="rule"></a>
+            <a class="explain"></a>
+        </div>
+        <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn" /> -->
+    </div>
+    <div class="loading">
+        <img src="/v/sxqp/img/loading.gif" />
+    </div>
+    <div class="tx_mark" style="display: none;">
+        <img src="img/alert.png" class="tx_mark" />
+    </div>
+    <!-- 联通流量 -->
+    <!-- <div class="ad">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/close.png" class="adClose">
+        <img src="img/ad_title.png" class="adTitle">
+        <img src="img/ad_cover.png" class="adCover">
+        <img src="img/ad_finger.png" class="adFinger">
+    </div> -->
+
+    <!--2018酒王-->
+    <!-- <div id="jw_box">
+        <img src="/v/vjfhls/img2018/icon-close.png" class="jw_close" />
+        <div class="jw_content">
+            <img src="/v/vjfhls/img2018/jw_content_1.png" />
+            <img src="/v/vjfhls/img2018/jw_content_2.png" />
+            <img src="/v/vjfhls/img2018/jw_content_3.png" />
+            <img src="/v/vjfhls/img2018/jw_content_4.png" />
+        </div>
+        <img src="/v/vjfhls/img2018/jw_person.png" class="jw_person" />
+        <div class="qrcode_box">
+            <img src="/v/vjfhls/img2018/yunnan.png" />
+        </div>
+    </div> -->
+
+    <!-- 淘彩蛋广告 -->
+    <div class="ad0618">
+        <img src="img/20200618/618ad.png?v=0" class="adImg">
+        <img src="img/20200618/close618.png" class="close">
+    </div>
+    <!-- 淘口令 -->
+	<div class="taocd618">
+        <div class="taocdToast">
+            <div class="cdbox618" >
+            <input type="text" id="tkl618" value="淘口令" readonly />
+			<img src="img/20200618/taoEgg.png" class="caidan618" >
+            <img class="close_cd618" src="img/20200618/close618.png" >
+            <img class="copy_cd618 copy-caidan" src="img/20200618/copytkl.png"  data-clipboard-action="copy" data-clipboard-target="#tkl618">
+		</div>
+        </div>
+    </div>
+    <!-- toast -->
+    <div id="toast" style="display: none; width:5.6em;height:5.6em;font-size: 16px;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast"></i>
+            <p class="weui_toast_content">已完成</p>
+        </div>
+    </div>
+
+</body>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<!-- 84k -->
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=12"></script>
+<script src="/v/js/cfg.js?v=13.0.6"></script>
+<script src="/v/js/publictip.js?v=13.0.0"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="/v/ynqp/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/getcash.js?v=11.8.6" type="text/javascript" charset="utf-8"></script>
+<script>
+    ini_wxshare(vge.ynqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

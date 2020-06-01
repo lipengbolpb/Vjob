@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>终端促销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/prize.css?v=1.0.2"/>
+	</head>
+	<body>
+		<div id="got">
+			<img src="img/got.png"/>
+			<p class="time"></p>
+		</div>
+		<div class="prize_box">
+			<span class="tip">恭喜您，扫码成功</span>
+			<div class="prize_content">
+				<p class="prize_title">华为B2智能手环1个</p>
+				<img src="img/huawei.png" class="priez_pic"/>
+			</div>
+			<div class="bottom">
+				<input type="button" name="btn" id="btn" value="立即兑奖" />
+				<a class="mall" href="javascript:;">进入积分商城</a>
+				<p class="tip_msg">点击“立即兑奖”填写中奖信息吧！</p>
+				<p class="a_box">
+					<a href="javascript:;" class="active">活动详情</a>
+					<a href="javascript:;" class="details">获奖记录</a>
+				</p>
+			</div>
+		</div>
+		<div class="msg_wrap">
+			<div class="pic_box">
+				<img src="img/huawei.png"/>
+			</div>
+			<p class="prize_msg">您获得华为B2智能手环1个，奖品价值599元，快去下方填写信息吧</p>
+			<p class="tip_t">温馨提示：请尽快拨打xxxx-xxxxxxxx核实中奖者 身份信息,以下内容须完整填写信息，否则无法兑奖。</p>
+			<div class="msg_box">
+				<p class="name_box"><input type="text" id="name" value="" placeholder="※输入姓名" maxlength="8"/></p>
+				<p class="id_box"><input type="text" id="id" value="" placeholder="※输入身份证号" maxlength="18"/></p>
+				<p class="tel_box"><input type="text" id="tel" value="" placeholder="※输入手机号" maxlength="11"/></p>
+				<p class="yz_box"><input type="text" id="yz_code" value="" placeholder="※输入验证码" maxlength="4"/><span id="get_yz">获取验证码</span></p>
+			</div>
+			<div id="tj">提交</div>
+			<p class="tip_msg">信息提交成功后，主办方会主动联系您，请耐心等待</p>
+			<p class="a_box">
+				<a href="javascript:;" class="active">活动详情</a>
+				<a href="javascript:;" class="details">获奖记录</a>
+			</p>
+		</div>
+		<div class="yhq_box">
+			<span class="tip">恭喜您，扫码成功</span>
+			<div class='yhq_up'>
+				<p class="yhq_title"><i>¥</i><span>10</span>京东抵扣券</p>
+			</div>
+			<div class="yhq_down">
+				<p class="yhq_code">兑换码</p>
+				<div class="yhq_content">
+					<p class="code">2232sdsd5d16as5d156</p>
+					<p class="code_msg">10元京东抵扣券</p>
+				</div>
+				<p class="tip_b">
+					使用说明：请登录京东官网www.jd.com 到我的京 东-我的优惠券-优惠券兑换，输入兑换码进行兑换。
+				</p>
+			</div>
+			<div class="bottom">
+				<input type="button" name="btn" id="lqyhq" value="立即领取"/>
+				<a class="mall" href="javascript:;"  >进入积分商城</a>
+				<p class="a_box">
+					<a href="javascript:;" class="active">活动详情</a>
+					<a href="javascript:;" class="details">获奖记录</a>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script> 
+  	<script src="/static/js/vve/10core.js?v1"></script>
+  	<script src="/static/js/vve/idcard.js"></script>
+  	<script src="/v/js/cfg.js?v=1.2.4"></script>
+  	<script src="/v/js/publictip.js?v=1.0.0"></script>
+  	<script src="/static/js/vve/11tool.js?v1"></script>
+  	<script src="/static/js/vve/20ajx.js?v=2"></script>
+  	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/prize.js?v1.1.1" type="text/javascript" charset="utf-8"></script>
+</html>

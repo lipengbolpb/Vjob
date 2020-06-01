@@ -1,0 +1,488 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: '微软雅黑';
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+input {
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #2c2b38;
+}
+
+.loading {
+    width: 12%;
+    position: absolute;
+    top: 10rem;
+    left: 44%;
+    z-index: 1;
+    display: none;
+    z-index: 999;
+}
+
+/* 时间 */
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    height: 1.6rem;
+    overflow: hidden;
+}
+
+.header p {
+    color: #b6c0c9;
+    font-size: 0.6rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+/* 概况 */
+
+.basic {
+    width: 100%;
+    height: 5rem;
+    /* background: #ffffff; */
+}
+
+.basic .left {
+    width: 50%;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+
+.basic .top {
+    margin-top: 1rem;
+}
+
+.basic .top span {
+    font-size: 0.8rem;
+    color: #b7bfc9;
+}
+
+.basic .top img {
+    width: 1.1rem;
+    vertical-align: middle;
+}
+
+.basic .bottom {
+    margin-top: 0.5rem;
+}
+
+.basic .bottom p {
+    color: #ffffff;
+    font-size: 0.7rem;
+}
+
+.basic .bottom span {
+    font-size: 1.2rem;
+}
+
+.basic .bottom p img {
+    width: 0.8rem;
+    vertical-align: baseline;
+}
+
+.basic .right {
+    width: 50%;
+    float: right;
+    height: 100%;
+    text-align: center;
+}
+
+/* 一周新鲜度趋势 */
+
+.trend {
+    width: 100%;
+    /* background: #b6c0c9; */
+}
+
+.trend p {
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+#echartsTrend{
+    width: 100%;
+    height: 10rem;
+}
+
+/* SKU */
+
+.sku {
+    width: 100%;
+}
+
+.sku p {
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 1.5rem auto 0.5rem;
+}
+
+#echartsSku {
+    width: 100%;
+    height: 100%;
+}
+
+/* 表格 */
+
+.excel {
+    width: 90%;
+    margin: 1rem auto 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.excel ul,
+li {
+    list-style: none;
+}
+
+.excel .head {
+    width: 100%;
+    height: 40px;
+    background: #19b5fe;
+}
+
+.excel .head li {
+    height: 100%;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 1px solid #2c6382;
+    font-size: 0.6rem;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+.excel .head li:nth-of-type(1) {
+    width: 18%;
+}
+
+.excel .head li:nth-of-type(2) {
+    width: 36%;
+}
+
+.excel .head li:nth-of-type(3) {
+    width: 20%;
+}
+
+.excel .head li:nth-of-type(4) {
+    width: 26%;
+}
+
+.excel .main {
+    width: 100%;
+}
+
+.excel .main li {
+    width: 100%;
+    height: 40px;
+}
+
+.excel .main span {
+    float: left;
+    height: 40px;
+    color: #b7bfc9;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 40px;
+    border-bottom: 1px solid #323239;
+    border-right: 1px solid #323239;
+    box-sizing: border-box;
+}
+
+.excel .main span:nth-of-type(1) {
+    width: 18%;
+    border-left: 1px solid #323239;
+}
+
+.excel .main span:nth-of-type(2) {
+    width: 36%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.excel .main span:nth-of-type(3) {
+    width: 20%;
+}
+
+.excel .main span:nth-of-type(4) {
+    width: 26%;
+    color: #00ffcc;
+    text-decoration: underline;
+}
+
+.excel .foot {
+    width: 100%;
+    height: 40px;
+}
+
+.excel .foot li {
+    width: 100%;
+    height: 40px;
+}
+
+.excel .foot span {
+    float: left;
+    height: 40px;
+    color: #19b5fe;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 40px;
+    border-bottom: 1px solid #323239;
+    border-right: 1px solid #323239;
+    box-sizing: border-box;
+}
+
+.excel .foot span:nth-of-type(1) {
+    width: 18%;
+    border-left: 1px solid #323239;
+}
+
+.excel .foot span:nth-of-type(2) {
+    width: 36%;
+}
+
+.excel .foot span:nth-of-type(3) {
+    width: 20%;
+}
+
+.excel .foot span:nth-of-type(4) {
+    width: 26%;
+}
+
+.excel .notice {
+    width: 100%;
+    font-size: 0.5rem;
+    color: #71757e;
+}
+
+/* 浮层图表 */
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17,17,17,0.8);
+    display: none;
+    z-index: 999;
+}
+.legend{
+    text-align: center;
+    width: 100%;
+    margin: 4rem auto 0;
+    color: #b8bfc7;
+    font-size: 14px;
+    display: none;
+}
+.legend i{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1bf6cc;
+    margin-right: 5px;
+}
+#echartsMask {
+    margin: 0 auto 0;
+    width: 90%;
+    height: 10rem;
+}
+
+.mask .maskClose{
+    width: 12%;
+    display: block;
+    margin: 2rem auto 0;
+    display: none;
+}
+.mask .maskClose img{
+    width: 100%;
+}
+/* 环形控制器 */
+
+.events {
+    pointer-events: auto;
+}
+
+.control {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    /* right: 100px; */
+    width: 150px;
+    border-radius: 50%;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.control .outside {
+    width: 250px;
+    height: 250px;
+    /* background:url('../img/bg.png') no-repeat top left;
+	background-size:100% 100%;
+	border-radius:50%; */
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.control .outside .close {
+    width: 35px;
+    height: 35px;
+    background-color: #20ceb3;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s linear;
+    background: url('../img/minute.png?v=2') no-repeat top left;
+    background-size: 100% 100%;
+    pointer-events: auto;
+}
+
+.control .outside .content {
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg.png?v=2') no-repeat top left;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    display: none;
+}
+
+.control .outside p {
+    font-size: 13px;
+    max-width: 100px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* line-height: 13px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #c7eef3;
+    text-decoration: underline;
+}
+
+.control .outside p.all {
+    top: 205px;
+    left: 100px;
+    color: #c7eef3;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    pointer-events: auto;
+}
+
+.control .top {
+    width: 35px;
+    position: absolute;
+    right: 5%;
+    top: 170px;
+    transition: all 0.2s linear;
+    pointer-events: auto;
+}
+
+.copyright {
+    width: 100%;
+    font-size: 0.5rem;
+    color: #71757e;
+    text-align: center;
+    margin: 4rem auto .2rem;
+	padding-bottom: env(safe-area-inset-bottom);
+}

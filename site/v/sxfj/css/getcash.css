@@ -1,0 +1,384 @@
+@charset "utf-8";
+html,
+body,
+p,
+h1,
+h2,
+h3,
+input,
+li,
+ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+body {
+	font-family: "微软雅黑", "Microsoft YaHei";
+	background: url(../img/bg_rep.png?v=1) repeat-y top left;
+	-webkit-background-size: 100% auto;
+}
+
+img {
+	display: block;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+	-webkit-appearance: none;
+	border: 0;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="button"],
+input[disabled] {
+	outline: 0;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-input-placeholder {
+	color: #814900;
+}
+
+#box,#ani{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#box img {
+	position: absolute;
+	display: block;
+}
+
+#ani img {
+	position: absolute;
+	display: block;
+}
+#box img.m_t {
+	width: 7rem;
+	top: .5rem;
+	left: .9rem;
+}
+#ani img.m_t {
+	width: 7rem;
+	top: .5rem;
+	left: .9rem;
+}
+
+#box img.tree {
+	width: 6rem;
+	top: 1rem;
+	left: 0rem;
+	z-index: 1;
+}
+#ani img.tree {
+	width: 6rem;
+	top: 1rem;
+	left: 0rem;
+	z-index: 1;
+}
+#box img.bird {
+	width: 5.4rem;
+	top: .8rem;
+	right: 0.3rem;
+}
+#ani img.bird {
+	width: 5.4rem;
+	top: .8rem;
+	right: 0.3rem;
+}
+#ani #bird{
+	top: -4rem;
+	left: 100%;
+}
+#ani div.poetry_box{
+	position: absolute;
+	right: 0;
+	top:0;
+	padding-right: 0.9rem;
+	padding-top: 1.15rem;
+	
+}
+#ani div.poetry_box{
+	width: 100%;
+}
+#ani div.poetry_box li{
+	float: right;
+	width: 1.5rem;
+	height: 0;
+	opacity: 0.5;
+	overflow: hidden;
+}
+#ani div.poetry_box li img{
+	position: static;
+	width:100%;
+	float: right;
+}
+#ani div.poetry_box img.jiu{
+	width: .6rem;
+	position: absolute;
+	right: 1.25rem;
+	display: none;
+}
+#ani div.child{
+	width: 13rem;
+	left: 1.5rem;
+	top: 10rem;
+	position: relative;
+}
+#ani div.child img.child{
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+#ani div.child img.hand_l{
+	left: 5.45rem;
+	top: 2.5rem;
+	width: 2.1rem;
+	-webkit-transform-origin: right center;
+	-webkit-animation: hand_l 8s linear 1 both;
+}
+@-webkit-keyframes hand_l{
+	15%,45%,78%{
+		-webkit-transform: rotate(10deg);
+	}
+	30%,60%{
+		-webkit-transform: rotate(-3deg);
+	}
+	0%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+#ani div.child div.cash_s_box{
+	position: absolute;
+	width: 1.4rem;
+	height: 1.5rem;
+	left: 8.65rem;
+	top: 1.4rem;
+	z-index: 1;
+	-webkit-transform-origin: bottom center;
+	-webkit-animation: hand_r 3s linear infinite both;
+}
+@-webkit-keyframes hand_r{
+	15%,45%,78%{
+		-webkit-transform: rotate(20deg);
+	}
+	30%,60%{
+		-webkit-transform: rotate(-5deg);
+	}
+	0%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+#ani div.child div.cash_s_box img.hand_r{
+	width: .5rem;
+	bottom: 0;
+	left: .5rem;
+}
+#ani div.child div.cash_s_box img.cash_s{
+	width: 100%;
+	z-index: 1;
+}
+#ani div.child img.cash_b{
+	z-index: 1;
+	width: 1.4rem;
+	height: 1.5rem;
+	left: 8.5rem;
+	top: 1.4rem;
+	opacity: 0.2;
+	-webkit-transform: rotate(0);
+	visibility: hidden;
+}
+@-webkit-keyframes cashrotate{
+	0%{
+		opacity: 0.2;
+		-webkit-transform:scale(1) rotate(0);
+	}
+	100%{
+		opacity: 0.9;
+		-webkit-transform:scale(16) rotate(-1110deg);
+	}
+}
+#ani #jump{
+	position: absolute;
+	height: 1.5rem;
+	width: 6.5rem;
+	z-index: 10;
+	background: url(../img/button_3.png) no-repeat center;
+	-webkit-background-size: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	bottom: 2.15rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#ani .yy{
+	text-align: right;
+	position: absolute;
+	width: 2.5rem;
+	height: 0.8rem;
+	line-height: .8rem;
+	font-size: .6rem;
+	bottom: 0.9rem;
+	left: 50%;
+	margin-left: -1.25rem;
+}
+#ani .yy img{
+	float: left;
+	height: .75rem;
+}
+#box img.repscan{
+	position: static;
+	width: 7.9rem;
+	margin:5.9rem auto 0;
+}
+
+#box img.m_m {
+	width: 3.8rem;
+	top: 11.6rem;
+	right: 0rem;
+}
+#ani img.m_m {
+	width: 3.8rem;
+	top: 11.6rem;
+	right: 0rem;
+}
+#box img.poetry {
+	height: 4rem;
+	position: static;
+	margin: 1.4rem auto 0;
+}
+#box .money{
+	margin:5rem auto 0;
+	text-align: center;
+	overflow: hidden;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 2rem;
+	font-weight: bold;
+}
+#box .money img{
+	display: inline-block;
+	height: 1.1rem;
+	position: static;
+}
+#box .money img.left{
+	height: .9rem;
+}
+#box .money span{
+	display: inline-block;
+	padding: 0 .3rem;
+	color: #920d06;
+}
+#btn{
+	height: 2.05rem;
+	background-image: url(../img/button_1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: auto 100%;
+	margin: 1.6rem auto;
+	overflow: hidden;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#btn img{
+	width: 1.2rem;
+	margin: .4rem auto;
+	position: static;
+}
+p.tip{
+	text-align: center;
+	font-size: .56rem;
+	color: #41403f;
+	padding: 0 1rem;
+}
+p.tip span{
+	font-size: .6rem;
+	color: #890000;
+	font-weight: bold;
+}
+p.loop{
+	text-align: center;
+	overflow: hidden;
+}
+p.loop #loop{
+	font-size: .58rem;
+	color: #2a2a2c;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.rule_box{
+	text-align: center;
+	overflow: hidden;
+}
+p.rule_box a{
+	font-size: .58rem;
+	color: #2a2a2c;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0 1rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+img.m_b {
+	position: absolute;
+	bottom: 0;
+	left: 0.8rem;
+	width: 14rem;
+}
+#tx_tip{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: none;
+}
+#tx_tip img{
+	width: 12rem;
+	margin: 6rem auto;
+}

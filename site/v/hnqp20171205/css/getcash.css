@@ -1,0 +1,373 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background: url(../img/bg.png) repeat left top;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+@-webkit-keyframes animated-open {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+.kai {
+    -webkit-animation: animated-open 1s linear both;
+    animation: animated-open 1s linear both;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+    z-index: 10;
+    background: url(../img/bg.png) repeat left top;
+}
+
+.qin {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    line-height: 1.2rem;
+}
+
+.alert {
+    position: absolute;
+    top: 8rem;
+    left: 7.5%;
+    width: 85%;
+}
+
+.ck {
+    position: absolute;
+    top: 19rem;
+    left: 25%;
+    width: 50%;
+    margin-bottom: 1rem;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #f1d35a !important;
+    color: #b60006;
+    font-size: 0.8rem;
+}
+
+.cash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+}
+
+.getted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+}
+
+.rescan {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    display: none;
+}
+.icon_game{
+	width:3.2rem;
+	height: 3.2rem;
+	position: absolute;
+	top: 3rem;
+	right: 0;
+	z-index: 1;
+}
+.rescan img:nth-of-type(1) {
+    display: block;
+    margin: 1rem auto 0;
+    width: 25%;
+}
+
+.rescan img:nth-of-type(2) {
+    display: block;
+    margin: 1.5rem auto 0;
+    width: 60%;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+    width: 85%;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+    width: 20%;
+}
+
+.record {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    top: 0.5rem;
+}
+
+.slogan {
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    top: 2.5rem;
+}
+
+.couplet {
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    top: 6.5rem;
+}
+
+.hbCash {
+    position: absolute;
+    width: 55%;
+    left: 22.5%;
+    top: 10.5rem;
+}
+
+.open {
+    position: absolute;
+    width: 25%;
+    left: 37.5%;
+    top: 12rem;
+}
+
+.bear {
+    position: absolute;
+    width: 20%;
+    left: 70%;
+    top: 20rem;
+    margin-bottom: 1rem;
+}
+
+.drum {
+    position: absolute;
+    top: 10rem;
+    left: 37.5%;
+    width: 25%;
+}
+
+.title {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    text-align: center;
+    color: #fff699;
+    font-size: 0.8rem;
+}
+
+.content {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    text-align: center;
+    color: #fff699;
+    font-weight: bold;
+}
+
+.content span:nth-of-type(1) {
+    font-size: 25px;
+}
+
+.content span:nth-of-type(2) {
+    font-size: 45px;
+    vertical-align: sub;
+    margin: 0 5px;
+}
+
+.content span:nth-of-type(3) {
+    font-size: 25px;
+}
+
+.loading {
+    width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+#btn {
+    position: absolute;
+    top: 16rem;
+    left: 25%;
+    width: 50%;
+    height: 2.2rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #f1d35a;
+    color: #ca0013;
+    font-size: 0.8rem;
+}
+
+.notice {
+    position: absolute;
+    top: 19.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    color: #ffffff;
+}
+
+.link {
+    position: absolute;
+    top: 22.5rem;
+    left: 25%;
+    width: 50%;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.link a:nth-of-type(1) {
+    float: left;
+    color: #fff699;
+    text-decoration: underline;
+}
+
+.link a:nth-of-type(2) {
+    float: right;
+    color: #fff699;
+    text-decoration: underline;
+}
+
+.copyright{
+    position: absolute;
+    top: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #d8cc93;
+    font-size: 0.5rem;
+}
+.active {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+.active img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.active img.activeClose {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 0.8rem;
+    right: 5%;
+    left: auto;
+}

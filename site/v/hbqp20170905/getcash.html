@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享河北</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.8"/>
+	</head>
+	<body>
+		<div class="alert">
+			<img src="img/alert.png" class="tx_tip"/>
+		</div>
+		<div class="active">
+			<img src="/v/hbqp20170905/img/active.png" id="active"/>
+		</div>
+		<div class="up">
+			<img src="img/slogan.png" class="slogan"/>
+			<div id="ani_1">
+				<img src="img/rabbit_1.png" class="rabbit_1"/>
+				<img src="img/lantern.png" class="lantern"/>	
+			</div>
+			<div id="ani_2">
+				<img src="img/rabbit_2.png" class="rabbit_2"/>
+				<div class="cash_s">
+					<img src="img/open.png" class="open"/>
+				</div>
+			</div>
+			<div class="wenzi">
+				<img src="img/wenzi_1.png" class="wz_1"/>
+				<img src="img/wenzi_2.png" class="wz_2" style="display: none;"/>
+				<img src="img/wenzi_3.png" class="wz_3"/>
+			</div>
+			<div class="desk">
+				<img src="img/smoke_1.png" class="smoke_1">
+				<img src="img/smoke_2.png"/ class="smoke_2">
+				<img src="img/desk_1.png" class="desk desk_1"/>
+				<img src="img/desk_2.png" class="desk desk_2" style="display: none;"/>
+			</div>
+		</div>
+		<div class="down">
+			<img src="img/loading.gif" class="loading"/>
+			<p class="title">恭喜您获得</p>
+			<p class="money"></p>
+			<div id="ani_11">
+				<img src="img/rabbit_1.png" class="rabbit_11"/>
+				<img src="img/lantern.png" class="lantern1"/>	
+				<img src="img/rabbit_4.png" class="rabbit_4"/>
+				<div class="pic_box">
+					<img src="img/sleep.png" class="sleep"/>
+				</div>
+				<div id="btn"></div>
+			</div>
+			<p class="tip">温馨提示：累计金额超过1元可提现</p>
+			<p class="rule_box">
+				<a href="javascript:;" class="pravite">隐私说明</a>
+				<a href="javascript:;" class="rule">活动规则</a>
+			</p>
+			<img src="img/bottom_bg.png" class="bottom_bg"/>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=1.0.1"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.1.5" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    ini_wxshare(vge.hbqpappid);
+	    // 隐藏微信右上角菜单
+	    wx.ready(function() {
+	        wx.hideOptionMenu();
+	    });
+    </script>
+</html>

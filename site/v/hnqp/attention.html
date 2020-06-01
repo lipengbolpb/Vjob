@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒华南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?1e2fbfeda8535170726e7e72a1ccd291";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/attention.css?v=1.0.7"/>
+	</head>
+	<body>
+		<img src="img/qr_qphn.png"/>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v=12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		pushHistory(); //返回动作监测
+	    window.addEventListener("popstate", function(e) { //禁止后退到拆红包页面
+	        wx.closeWindow();
+	    }, false); 
+	    function pushHistory() { 
+	        var state = { 
+	            title: "title", 
+	            url: "#"
+	        }; 
+	        window.history.pushState(state, "title", "#"); 
+	    } 
+	</script>
+</html>

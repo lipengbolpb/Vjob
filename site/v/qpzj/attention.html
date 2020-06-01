@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒浙江省区</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?4900a2217246623703b60ad534dc4461";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2">
+    <style>
+      body{background: #fff; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+      .bannerbox{overflow: hidden;}
+      .banner{width: 100%; float: left;}
+      .btnbox{width: 100%; background: #fff; padding-bottom: 20px;}
+      #tip_con{padding-top: 10%; font-size: 16px; color: #7E7E7E; padding-bottom: 8%; width: 80%;}
+      #btn{font-size: 18px; background: #EA541F; color: #fff; width: 90%; height: 40px; line-height: 40px; border-radius: 4px; margin-top: 20px;}
+      @media screen and (device-aspect-ratio: 2/3) {/*苹果4 26%*/
+          #tip_con{padding-top: 24px; padding-bottom: 24px;}
+          #btn{margin-top: 0;}
+      }
+      #att_img{width: 80%; display: none;}
+    </style>
+  </head>
+  <body>
+    <div class="bannerbox">
+	  <img src="/v/qpzj/img/att_bag.jpg" class="banner">
+    </div>
+    <div class="btnbox">
+	  <p id="tip_con">请先关注公众号再查看“我的红包”</p>
+	  <p id="btn">关注点这里</p>
+	  <img src="/v/qpzj/img/att-v3.jpg" id="att_img">
+    </div>
+  </body>
+  <script>
+    var dom_btn=document.getElementById('btn'),
+    tip_con=document.getElementById('tip_con'),
+    att_img=document.getElementById('att_img');
+    dom_btn.addEventListener('click',function () {
+        tip_con.innerHTML='长按识别二维码，关注“青岛啤酒浙江”公众号，查看“我的红包”';
+        tip_con.style.paddingBottom='3%';
+        dom_btn.style.display='none';
+        att_img.style.display='block';
+    },false);
+  </script>
+  <script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>

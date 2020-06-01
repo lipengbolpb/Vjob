@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/guess.css?v=1.6">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <img src="img/guess/light-1.png" class="light-1">
+            <img src="img/guess/light-2.png" class="light-2">
+            <img src="img/guess/light-3.png" class="light-3">
+            <img src="img/guess/light-4.png" class="light-4">
+            <img src="img/guess/slogan-1.png" class="slogan">
+        </div>
+        <div class="btns">
+            <input type="button" value="" class="btn1 btn">
+            <input type="button" value="" class="btn2 btn">
+            <input type="button" value="" class="btn3 btn">
+            <input type="button" value="" class="btn4 btn">
+        </div>
+        <img src="img/guess/footer.png" class="footer">
+        <img src="img/loading.gif" class="loading">
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=1.0.0"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    // ini_wxshare(vge.zzqpappid);
+    // // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+</script>
+<script>
+    var args = vge.urlparse(location.href),
+        openid = args.openid;
+    sessionStorage.openid = openid;
+    $(document).ready(function () {
+        $('.btn1').on('click', function () { //支持球队
+            window.location.href = 'http://' + location.host + '/v/zzqp20180401/active_1.html';
+        });
+        $('.btn2').on('click', function () { //支持球星
+            window.location.href = 'http://' + location.host + '/v/zzqp20180401/active_2.html';
+        });
+        $('.btn3').on('click', function () { //竞猜大奖
+            window.location.href = 'http://' + location.host + '/v/zzqp20180401/active_3.html';
+        });
+        $('.btn4').on('click', function () { 
+            window.location.href = 'http://w.vjifen.com/zzqp/to/bocai';
+        });
+
+        function loaded() {
+            $('.loading').css('display', 'none');
+        }
+
+        function loading() {
+            $('.loading').css('display', 'block');
+        }
+    });
+</script>
+
+</html>

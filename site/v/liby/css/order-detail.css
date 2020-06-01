@@ -1,0 +1,10 @@
+.title{ height: 43px; line-height: 43px;background: #eee;font-size: 16px; }
+.title span:first-child{margin-left:10px}
+.title span:nth-child(2){float:right; margin-right:10px}
+
+.content{background: #eee; font-size:14px}
+.box li{background-color:#fff; padding:15px 10px;border-bottom:1px solid #ccc;}
+.box .count{float:right;}
+.order {background-color:#fff; font-size:14px}
+.order div{padding:8px;}
+.order .title{padding:0px}

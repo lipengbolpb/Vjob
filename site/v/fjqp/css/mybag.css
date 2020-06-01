@@ -1,0 +1,622 @@
+@charset "utf-8";
+html,body{
+	font-family: "微软雅黑","Microsoft YaHei";
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#19883b url(../img/bg_rep.png) repeat-y left top;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+img{
+	display: block;
+}
+ul,li{
+	list-style: none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+::-webkit-input-placeholder{
+    color: #fff699;
+    font-size: .6rem;
+}
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+div.tj_mark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.8);
+	display: none;
+}
+#alert img{
+	width: 75%;
+	margin: 4rem auto 0;
+}
+#alert input{
+	width: 5.5rem;
+	height: 1.8rem;
+	background: #ffdb45;
+	color: #fe5642;
+	font-size: .6rem;
+	border: 0;
+	margin: 2rem auto;
+	display: block;
+	-webkit-border-radius: .5rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+#lj_tip{
+	background: url(../img/tj_tip.png?v=1) no-repeat center;
+    -webkit-background-size: 100%;
+    font-size: .8rem;
+    text-align: center;
+    width: 10rem;
+    height: 8rem;
+    font-size: .6rem;
+    margin: 5rem auto;
+    color: #ffffff;
+    padding:3rem .5rem 0;
+}
+#lj_tip span{
+	color: #ffdb4c;
+}
+div.cash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*display: none;*/
+}
+div.cash img.logo{
+	position: absolute;
+	left: 1rem;
+	top: .6rem;
+	width: 3rem;
+}
+div.cash img.slogan{
+	width: 10.6rem;
+	margin: 1.8rem auto 0;
+	position: relative;
+	z-index: 10;
+}
+div.cash img.bt_1{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+div.cash img.bt_2{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 3;
+}
+div.cash img.fly{
+	position: absolute;
+	width: 1.4rem;
+}
+div.cash img.fly_1{
+	top: 30%;
+	left: 2%;
+}
+div.cash img.fly_2{
+	top: 5%;
+	right: 10%;
+	-webkit-transform: rotate(80deg);
+}
+div.cash div.msg{
+	background: url(../img/cash.png) no-repeat center;
+	-webkit-background-size:100%;
+	font-size: 1rem;
+	text-align: center;
+	width: 13.8rem;
+	height: 16rem;
+	margin: -1rem auto 0;
+	/*overflow: hidden;*/
+	position: relative;
+	z-index: 4;
+}
+div.cash div.msg #jwbtn{
+	width: 4.1rem;
+	height: .9rem;
+	background: url(../img/jw_title.png) no-repeat center;
+	-webkit-background-size: 100%;
+	position: absolute;
+	right: -1rem;
+	top: 1rem;
+}
+div.cash div.msg #jwbtn img.bottle{
+	width: 1.4rem;
+	position: relative;
+	left: -.6rem;
+	top: -.7rem;
+	-webkit-animation: bottle 2s 1s both 3;
+}
+@-webkit-keyframes bottle{
+	3%,20%,40%{
+		-webkit-transform: rotate(-5deg);
+	}
+	10%,30%,50%{
+		-webkit-transform: rotate(5deg);
+	}
+	0%,55%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+div.cash div.msg p.title{
+	color: #ffffa0;
+	padding-top: 1rem;
+}
+div.cash div.msg p.num{
+	color: #ffffa0;
+	font-weight: bold;
+}
+div.cash div.msg p.num span{
+	font-size: 1.5rem;
+	position: relative;
+	bottom: -.1rem;
+}
+div.cash div.msg div.msg_box{
+	color: #FFFFFF;
+	font-size: .8rem;
+	overflow: hidden;
+}
+div.cash div.msg div.msg_box span{
+	font-weight: bold;
+	font-size: .9rem;
+}
+div.cash div.msg p.balance{
+	padding-left: 1.1rem;
+	background: url(../img/icon_money.png) no-repeat left;
+	-webkit-background-size: .8rem auto;
+	margin: 1.5rem auto;
+}
+div.cash div.msg p.sent{
+	padding-left: 1.1rem;
+	background: url(../img/icon_cash.png) no-repeat left;
+	-webkit-background-size: .8rem auto;
+}
+#dom_balance,#add_money{
+	font-size: 1.1rem;
+	position: relative;
+	bottom: -.1rem;
+}
+div.cash div.msg div.btn_box{
+	margin: 1rem auto 0;
+}
+div.cash div.msg div.btn_box input{
+	background: #ffdb45;
+	color: #fe5642;
+	font-size: .7rem;
+	border: 0;
+	-webkit-border-radius: .5rem;
+	padding: .4rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.cash div.msg div.btn_box #tx{
+	padding: .4rem 1rem;
+}
+@media only screen and (max-height:480px ) {
+	div.cash img.slogan{
+		width: 10rem;
+		margin: 1rem auto 0;
+	}
+	div.msg{
+		-webkit-transform: scaleY(.85);
+		-webkit-transform-origin: top;
+	}
+}
+
+
+div.rank{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+div.rank img.logo{
+	position: absolute;
+	left: 1rem;
+	top: .6rem;
+	width: 3rem;
+}
+div.rank img.slogan{
+	width: 10.6rem;
+	margin: 1.8rem auto 0;
+	position: relative;
+	z-index: 10;
+}
+div.rank img.slogan_2{
+	width: 10.6rem;
+	margin: 3.8rem auto 0;
+	position: relative;
+	z-index: 10;
+	display: none;
+}
+div.rank img.bt_1{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+div.rank img.bt_2{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 3;
+}
+div.rank img.fly{
+	position: absolute;
+	width: 1.4rem;
+	display: none;
+}
+div.rank div.rankMsg{
+	background: url(../img/fyb_bg.png?v=1) no-repeat center;
+	-webkit-background-size:100%;
+	font-size: 1rem;
+	text-align: center;
+	width: 13.8rem;
+	height: 16rem;
+	margin: -1rem auto 0;
+	overflow: hidden;
+	position: relative;
+	z-index: 4;
+}
+div.rank div.rankMsg img.rank_title{
+	margin: 1rem auto 0;
+	height: .9rem;
+}
+div.rank div.rankMsg p.rank_tip{
+	font-size: .5rem;
+	color: #fff;
+	margin-top: .2rem;
+	text-align: center;
+}
+#rankListOld{
+	display: none;
+}
+div.rank div.rankMsg .rankList{
+	width: 11rem;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	top: .5rem;
+	overflow: hidden;
+}
+div.rank div.rankMsg .rankList li{
+	height: 1.8rem;
+	background: #fd4829;
+	overflow: hidden;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(1){
+	background: #a60402;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(2){
+	background: #800000;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(3){
+	background: #a60402;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(4){
+	border-bottom: 1px #da2116 solid;
+}
+div.rank div.rankMsg .rankList li .l{
+	float: left;
+}
+div.rank div.rankMsg .rankList li .r{
+	float: right;
+}
+div.rank div.rankMsg .rankList li img{
+	height: 1.4rem;
+	width: 1.4rem;
+	margin: .2rem;
+	-webkit-border-radius: 50%;
+	display: block;
+}
+div.rank div.rankMsg .rankList li div.jwmsg{
+	height: 1.8rem;
+	width: 6rem;
+	overflow: hidden;
+}
+div.rank div.rankMsg .rankList li div.jwmsg p{
+	height: 0.9rem;
+	line-height: .9rem;
+	text-align: left;
+}
+div.rank div.rankMsg .rankList li div.jwmsg p.nickname{
+	color: #fff;
+	display: block;
+	font-size: .6rem;
+	width: 6rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+div.rank div.rankMsg .rankList li div.jwmsg p.ranks{
+	color: #e4e4e7;
+	font-size: .5rem;
+	padding-left: .6rem;
+	background: url(../img/rank_1.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(2) div.jwmsg p.ranks{
+	background: url(../img/rank_2.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(3) div.jwmsg p.ranks{
+	background: url(../img/rank_3.png) no-repeat left;
+	-webkit-background-size: .4rem auto;
+}
+div.rank div.rankMsg .rankList li:nth-of-type(4) div.jwmsg p.ranks{
+	background:none;
+	padding: 0;
+}
+div.rank div.rankMsg .rankList li span.rankNum{
+	font-size: .5rem;
+	color: #fff;
+	margin-right: .3rem;
+	line-height: 1.8rem;
+}
+div.rank div.rankMsg #rankListOld li .jwmsg span.rankNum{
+	line-height: .9rem;
+	font-size: .5rem;
+}
+div.rank div.rankMsg #rankListOld li .jwmsg span.rankNum i{
+	line-height: .9rem;
+	font-size: .5rem;
+}
+div.rank div.rankMsg #rankListOld li span.lqdj{
+	font-size: .5rem;
+	color: #961100;
+	margin: .4rem .3rem 0 0;
+	width: 2.6rem;
+	height: 1.1rem;
+	line-height: 1.1rem;
+	background: #ffc410;
+	-webkit-border-radius: .2rem;
+	font-weight: bold;
+	display: none;
+}
+div.rank div.rankMsg .rankList li span.rankNum i{
+	font-size: .8rem;
+	color: #ffd00f;
+	font-style: normal;
+}
+
+div.rank div.rankMsg ul.tjxx{
+	width: 11rem;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	top: .7rem;
+	display: none;
+	overflow: hidden;
+}
+div.rank div.rankMsg ul.tjxx li{
+	height: 2.1rem;
+	line-height: 2.1rem;
+	background: #fd4829;
+	overflow: hidden;
+	color: #fff699;
+	font-size: .7rem;
+}
+div.rank div.rankMsg ul.tjxx li:nth-of-type(1){
+	background: #a60402;
+}
+div.rank div.rankMsg ul.tjxx li:nth-of-type(2){
+	background: #800000;
+}
+div.rank div.rankMsg ul.tjxx li:nth-of-type(3){
+	background: #a60402;
+}
+div.rank div.rankMsg ul.tjxx li .l{
+	float: left;
+}
+div.rank div.rankMsg ul.tjxx li span{
+	height: 100%;
+	text-indent: .2rem;
+}
+div.rank div.rankMsg ul.tjxx li input{
+	height: 100%;
+	text-indent: .2rem;
+	border: 0;
+	color: #fff699;
+	font-size: .7rem;
+	outline: none;
+	width: 7.5rem;
+}
+div.rank div.rankMsg #rank_tip{
+	font-size: .5rem;
+	color: #fff;
+	margin-top: 1rem;
+}
+div.rank div.rankMsg div.btn_box{
+	position: absolute;
+	left: 50%;
+	top: 12.5rem;
+	width: 100%;
+	-webkit-transform: translate(-50%,0);
+}
+div.rank div.rankMsg div.btn_box input{
+	background: #ffdb45;
+	color: #fe5642;
+	font-size: .7rem;
+	border: 0;
+	-webkit-border-radius: .3rem;
+	width: 4.8rem;
+	height: 1.45rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.rank div.rankMsg div.btn_box #back2{
+	display: none;
+	margin: 0 auto;
+}
+div.rank div.rankMsg div.btn_box #tj{
+	display: none;
+	margin: 0 auto;
+}
+
+@media only screen and (max-height:480px ) {
+	div.rank img.slogan{
+		width: 10rem;
+		margin: 1rem auto 0;
+	}
+	div.rankMsg{
+		-webkit-transform: scaleY(.85);
+		-webkit-transform-origin: top;
+	}
+}
+
+
+div.bottom{
+	width: 100%;
+	height: 100%;
+	background:#19883b url(../img/bg_rep.png) repeat-y left top;
+	-webkit-background-size: 100% auto;
+	-webkit-transition:all 1s;
+	transition: all 1s;
+	overflow: hidden;
+	position: fixed;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+}
+div.bottom div.record{
+	width: 89%;
+	padding: 0 5.5%;
+	height: 95%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	margin:0 auto;
+}
+#hide{
+	width: 5.5rem;
+	height: 1.7rem;
+	font-size: .8rem;
+	text-align: center;
+	color: #fe5841;
+	background: #ffdc45;
+	margin: 1.05rem auto;
+	-webkit-border-radius: 0.5rem;
+	line-height: 1.7rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #bac3cc solid;
+}
+div.bottom div.record ul li{
+	border-bottom: 1px #bac3cc solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: left;
+	-webkit-background-size: 1.45rem auto;
+}
+div.bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.bottom div.record ul li p.title span:nth-of-type(1){
+	color: #fff;
+	font-size: 0.7rem;
+}
+div.bottom div.record ul li p.title span:nth-of-type(2){
+	color: #d2e0d6;
+	font-size: 0.6rem;
+}
+div.bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #fff;
+}
+div.bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	font-size: 0.8rem;
+	color: #fff699;
+	display: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #fff699;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

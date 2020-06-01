@@ -1,0 +1,665 @@
+@charset "utf-8";
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑", "Microsoft YaHei";
+	overflow-x: hidden;
+	background: #009040;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+	-webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+	outline: 0;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	-webkit-opacity: 1;
+}
+
+input[type='button'] {
+	/* box-shadow: 1px 1px 1px #000; */
+}
+
+.logo {
+	position: absolute;
+	z-index: 1;
+	width: 3rem;
+	top: 1rem;
+	left: 1rem;
+	z-index: 1;
+}
+
+.repcash {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rbga(0, 0, 0, 0.7);
+	display: none;
+}
+
+.repcash img {
+	width: 60%;
+	display: block;
+	margin: 3rem auto;
+}
+
+.repcash p {
+	width: 100%;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #ffffff;
+}
+
+.get {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+.newGet {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff url(/v/hbqp-common3.0/img/20190423/double_prize_bg.png) no-repeat top;
+	background-size: 100% auto;
+	z-index: 9;
+	display: none;
+}
+
+.newGet img {
+	width: 12.9rem;
+	position: absolute;
+	right: 0;
+	top: 2.7rem;
+	box-shadow: 0px 0px 60px #009140;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
+	-o-tap-highlight-color: rgba(0, 0, 0, 0);
+	tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+.get .top {
+	margin: 0 auto;
+	width: 100%;
+	height: 14.5rem;
+	overflow: hidden;
+}
+
+.get .top .bddTip{
+	text-align:center;
+	color:#fff;
+	font-size:.68rem;
+	display: none;
+}
+
+.get .slogan {
+	display: block;
+	width: 13rem;
+	margin: 0 auto;
+}
+
+.get .beer {
+	margin: 0rem 1rem 1rem 70%;
+	width: 4.2rem;
+	bottom: 0;
+	position: absolute;
+	margin-bottom: 1rem;
+	pointer-events: none;
+}
+
+.loading {
+	width: 2.5rem;
+	position: absolute;
+	top: 10rem;
+	left: 6.5rem;
+	pointer-events: none;
+	z-index: 1;
+	display: none;
+}
+
+.get .ck {
+	display: block;
+	margin: 1rem auto 0;
+	width: 45%;
+	height: 1.7rem;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	background-color: #f1d35a !important;
+	color: #ca0013;
+	font-size: 0.75rem;
+}
+
+.get .notice {
+	margin: 1rem auto 0;
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 0.55rem;
+}
+
+.info .slogan {
+	width: 70%;
+	display: block;
+	margin: 4.5rem auto 0;
+}
+
+.info .wrap {
+	width: 85%;
+	min-height: 1rem;
+	margin: 0.8rem auto 0;
+	overflow-y: hidden;
+}
+
+.info .explain {
+	width: 86%;
+	margin: 1rem auto 0;
+	overflow: hidden;
+	display: none;
+}
+
+.info .explain .title {
+	
+}
+
+.info .explain .title p {
+	font-size: 0.6rem;
+	width: 100%;
+	line-height: 1rem;
+	/* text-align: center; */
+	color: #fff8af;
+}
+
+.info .explain .title p span {
+	font-size: 0.6rem;
+	background-color: #feda0c;
+	color: #b20000;
+	padding-right: .3rem;
+}
+
+.info .explain .content {
+	width: 100%;
+}
+
+.info .explain .content p:nth-of-type(1) {
+	color: #fff;
+	font-size: 0.56rem;
+	width: 98%;
+}
+
+.info .explain .content p:nth-of-type(2) {
+	margin-top: 0.3rem;
+	color: #ffffff;
+	font-size: 0.55rem;
+}
+
+.info .ckff_box{
+	margin: 1rem auto 0;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+
+.info a{
+	font-size: 0.55rem;
+	color: #fff8af;
+	text-decoration: underline;
+	padding: 0 .8rem;
+}
+
+.info .explain .border,
+.info .explain_sky .border {
+	width: 100%;
+	display: block;
+	margin: 0.8rem auto 0;
+}
+
+.explain_cm,
+.explain_dyj,
+.explain_sky,
+.explain_ktv,
+.explain_hhzq,
+.explain_fh,
+.explain_pp,
+.explain_ytjnh,
+.explain_wfyyj,
+.explain_coupon,
+.explain_ticket,
+.explain_bdd,
+.explain_qp{
+	display: none;
+	width: 86%;
+	margin: 1rem auto 0;
+	overflow: hidden;
+}
+.bddTitle{
+	float: right;
+    width: 80%;
+}
+.bddTit{
+	font-size: 0.55rem;
+	font-weight: bold;
+	width: 100%;
+	line-height: 1.3rem;
+	color: #fff8af;
+}
+
+.info .title p{
+	font-size: 0.55rem;
+	font-weight: bold;
+	width: 100%;
+	line-height: 1.3rem;
+	color: #fff8af;
+}
+
+.info .title p span {
+	font-size: 0.6rem;
+	background-color: #feda0c;
+	color: #b20000;
+	padding:0 .3rem;
+}
+.info .title p span.new_time{
+	color: inherit;
+	padding: 0;
+	background: none;
+	font-size:inherit;
+}
+.info .content p{
+	color: #fff;
+	font-size: 0.56rem;
+	width: 98%;
+}
+
+.info .content p span.justify {
+	display: inline-block;
+	width: 3.4rem;
+	text-align: justify;
+	overflow: hidden;
+	height: .7rem;
+	margin-top: 0rem;
+	position: relative;
+	bottom: -.09rem;
+}
+.explain_coupon .dizhi{
+	color: #fff;
+    font-size: 0.56rem;
+    width: 70%;
+    float: right;
+}
+
+/* text-align:justify 对单行文本不生效，用伪类解决 */
+.info .content p span.justify:after {
+	content: '.';
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	height: 0;
+}
+
+.prize_btn {
+	display: inline-block;
+	background-color: #feda0c;
+	color: #b20000;
+	font-size: 0.6rem;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	padding: 0 .3rem;
+}
+
+.get_vocal,.get_coupon,.get_ticket {
+	overflow: hidden;
+}
+
+.get_vocal .top,.get_coupon .top,.get_ticket .top {
+	height: 100%;
+	overflow: hidden;
+}
+
+.get_vocal .top .slogan , .get_coupon .top .slogan , .get_ticket .top .slogan{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+.get_vocal .ck ,.get_coupon .ck,.get_ticket .ck{
+	background: #fbc601;
+	position: absolute;
+	font-weight: bold;
+	bottom: 3.5rem;
+	right: 2.5rem;
+	z-index: 3;
+	box-shadow: 0px 5px 5px #d37900;
+}
+
+.get_cm .slogan {
+	width: 62% !important;
+	margin: 3rem auto 0;
+}
+
+.get_cm .ck {
+	margin: 1.8rem auto 0;
+}
+
+.answer_box {
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+}
+
+.answer_box img.anwser_img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.answer_box .close {
+	width: 10%;
+	position: absolute;
+	top: 1rem;
+	right: 5%;
+}
+
+.info .warning {
+	width: 80%;
+	margin: 1rem auto 0;
+}
+
+.info .warning img {
+	width: 100%;
+	display: block;
+}
+
+.info .warning .notice {
+	width: 7%;
+	float: left;
+	margin-top: 0.3rem;
+	margin-left: 0.3rem;
+}
+
+.info .warning p {
+	font-size: 0.45rem;
+	color: #fff;
+	line-height: 0.8rem;
+	text-align: justify;
+	padding: .4rem .4rem .6rem;
+	background: url(../img/warning-2.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.info .warning p.white_bg{
+	color: #009933;
+	padding: .4rem .4rem .8rem 1.5rem;
+	background: url(../img/warning-bg.png) no-repeat center;
+	background-size: 100% 100%;
+	line-height:normal;
+}
+.info .warning p a {
+	color: #ffcc33;
+	padding: 0;
+}
+.info .warning p.white_bg a{
+	font-size: .5rem;
+	color: #009933;
+}
+
+.info .warning p .warnTxt {
+	font-size: 0.5rem;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.info .msg {
+	width: 80%;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #ffffff;
+	margin: 0.8rem auto 0;
+}
+
+.info .msg input {
+	width: 100%;
+	height: 2.5rem;
+	border: none;
+	outline: none;
+	background-color: #ffffff;
+	float: left;
+	border-bottom: 1px solid #cccccc;
+	background: url('../img/input-icon1.png') no-repeat;
+	background-position: 0.5rem;
+}
+
+.info .msg .code,
+.yz {
+	border: none;
+}
+
+.info .msg .code {
+	width: 65%;
+}
+
+.info .msg .yz {
+	width: 34%;
+	border-left: 1px solid #cccccc;
+	color: #009040;
+	border-bottom: none;
+	background: none;
+}
+
+.info .change {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+	display: none;
+}
+
+.info .change .change-content {
+	width: 70%;
+	margin: 3rem auto 0;
+	background-color: #c50012;
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+}
+
+.info .change .change-content p {
+	color: #ffffff;
+	text-align: center;
+	font-size: 0.5rem;
+}
+
+.info .change .change-content ul {
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+.info .change.cktel .change-content ul {
+	margin-top: 0.5rem;
+	width: auto;
+	margin-left: 2rem;
+}
+
+.info .change .change-content ul li {
+	color: #ffffff;
+	text-align: left;
+	font-size: 0.5rem;
+}
+
+.info .change .close {
+	width: 10%;
+	display: block;
+	margin: 1rem auto 0;
+}
+
+::-webkit-input-placeholder {
+	color: #999999;
+}
+
+input {
+	font-size: 0.7rem;
+	color: #333333;
+	-webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+	text-indent: 2em;
+}
+
+input {
+	-webkit-appearance: none;
+	/*去除input默认样式*/
+}
+
+.info .tj {
+	width: 50%;
+	height: 2.2rem;
+	border-radius: 8px;
+	background-color: #f1d35a;
+	color: #ca0013;
+	border: none;
+	outline: none;
+	margin: 1.5rem auto 0;
+	display: block;
+	font-size: 0.8rem;
+}
+
+.info .alert,.info .tipCoupon ,.info .tipTicket {
+	color: #ffffff;
+	font-size: 0.5rem;
+	margin: 0.8rem auto 0;
+	line-height: 0.8rem;
+	width: 80%;
+	display: none;
+}
+
+.info .link {
+	margin: 1rem auto 0;
+	text-align: justify;
+}
+
+.info a {
+	font-size: 0.65rem;
+	color: #fff68f;
+	text-decoration: underline;
+}
+
+.info .rule {
+	padding: 0 .5rem;
+}
+
+.info .secret {
+	padding: 0 .5rem;
+}
+
+.info .answer {
+	padding: 0 .5rem;
+	font-size: 0.65rem;
+	color: #fff68f;
+	text-decoration: underline;
+	display: none;
+}
+
+.info .beer {
+	margin: 0rem 1rem 1rem 70%;
+	width: 4.2rem;
+	pointer-events: none;
+}

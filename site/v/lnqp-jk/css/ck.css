@@ -1,0 +1,212 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+p,div,input,span{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+body{
+	background: url(../img/bg-repeat.png) repeat top left;
+	background-size: 2.2rem;
+}
+#ck_box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#ck_box .slogan{
+	width: 12.7rem;
+	display: block;
+	margin: .8rem auto 0.2rem;
+	transform: translateX(.3rem);
+}
+#ck_box .title{
+	font-size: .6rem;
+	text-align: center;
+	color: #f4e288;
+}
+#ck_box .card_box{
+	width: 9.5rem;
+	height: 13rem;
+	margin: 2rem auto 0;
+	position: relative;
+	background: url(../img/ac-alert-bg.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	position: relative;
+}
+.rotate{
+	transition: all 1s linear;
+	transform: rotateY(360deg);
+}
+#ck_box .card_box .ck_tip{
+	font-size: .72rem;
+	color: #fff;
+	line-height: 1.65rem;
+	text-align: center;
+	position: absolute;
+	bottom: 1.2rem;
+	width: 100%;
+}
+#ck_box>.tip{
+	font-size: .6rem;
+	text-align: center;
+	color: #fff;
+}
+/*弹窗*/
+#ck-alert{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 9;
+	display: none;
+}
+#ck-alert .fail {
+	display: none;
+}
+#ck-alert .fail img{
+	width: 13.8rem;
+	margin: 3rem auto 1rem;
+	display: block;
+}
+#ck-alert .success{
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+#ck-alert .success i{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	position: absolute;
+	right: .5rem;
+	top: .5rem;
+	background: url(../img/icon-close.png) no-repeat center;
+	background-size: 100%;
+}
+#ck-alert .success .title{
+	font-size: .972rem;
+	color: #e2ba6a;
+	font-weight: bold;
+	margin-top: 1.7rem;
+}
+#ck-alert .success .tip{
+	font-size: .52rem;
+	color: #fff;
+}
+#ck-alert .success .result{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: url(../img/cj-down.png) no-repeat 1.65rem top;
+	-webkit-background-size: 12.8rem 10rem;
+	height: 12.5rem;
+	transform-origin: bottom;
+}
+#ck-alert .success .result .ck-result{
+	width: 8.75rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -60%;
+}
+#ck-alert .success .result .ck-up{
+	width:100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+@media only screen and (max-height: 460px) {
+	#ck-alert .success .result{
+		transform:scale(.8);
+	}
+}

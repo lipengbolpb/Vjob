@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>江苏青啤</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body,
+		.box {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		body {
+			background: url(img/bg.png) repeat-y left top;
+			-webkit-background-size: 100% auto;
+			font-family: "微软雅黑", "Microsoft YaHei";
+		}
+
+		.box {
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, .6);
+		}
+
+		.bottom {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			display: block;
+		}
+
+		img.logo {
+			width: 3rem;
+			margin: .825rem 0 0 .825rem;
+		}
+
+		.box .tip_box {
+			overflow: hidden;
+			height: 19rem;
+			background: url(img/fail_bg.png) no-repeat center;
+			-webkit-background-size: auto 100%;
+		}
+
+		#tip {
+			height: 4.3rem;
+			display: block;
+			margin: 8rem auto 1.5rem;
+		}
+
+		p.time {
+			font-size: .6rem;
+			color: #fff;
+			text-align: center;
+		}
+
+		div.cash {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			overflow: hidden;
+			background: url(/v/jsqp-laoshan/img/bottom.png?v=1) no-repeat bottom;
+			-webkit-background-size: 100% auto;
+			display: block;
+		}
+
+		div.cash div.cash_box {
+			height: 12rem;
+			overflow: hidden;
+			background: url(/v/jsqp-laoshan/img/cash.png?v=1) no-repeat center;
+			-webkit-background-size: auto 100%;
+		}
+
+		div.cash div.cash_box p {
+			text-align: center;
+			color: #fcc834;
+			font-size: 1rem;
+		}
+
+		div.cash div.cash_box p.money {
+			font-weight: bold;
+			margin-top: 6rem;
+		}
+
+		div.cash div.cash_box p.money span {
+			font-size: 1.8rem;
+			position: relative;
+			bottom: -.1rem;
+		}
+
+		div.cash div.cash_box p.tip {
+			font-size: .8rem;
+			margin-top: 7rem;
+		}
+
+		div.cash div.cash_box p.tip span {
+			color: #fff;
+		}
+
+		#btn {
+			margin: 1.6rem auto 0;
+			height: 2.25rem;
+			width: 8rem;
+			text-align: center;
+			font-size: .65rem;
+			line-height: 2.25rem;
+			color: red;
+			background: #fcc834;
+			overflow: hidden;
+			border-radius: 1.125rem;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<img src="img/logo.png" class="logo" />
+		<div class="tip_box">
+			<img src="" id="tip" />
+			<p class="time"></p>
+		</div>
+		<p id="batch" style="color: white;position: absolute;bottom: 5%;text-align: center;width: 100%;"></p>
+	</div>
+	<img src="img/attention_bottom.png" class="bottom" />
+	<div class="cash">
+		<img src="img/logo.png" class="logo" />
+		<div class="cash_box">
+			<p class="tip">离红包只差一点点<br />再扫一瓶试试吧~</p>
+		</div>
+		<div id="btn">
+			查看红包记录
+		</div>
+	</div>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.2"></script>
+<script src="/v/js/cfg.js?v=2.3.2"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+	ini_wxshare(vge.jsqpappid);
+	// 隐藏微信右上角菜单
+	wx.ready(function () {
+		wx.hideOptionMenu();
+	});
+</script>
+<script>
+	var PHONE_NUM = '15801152037';
+	var contant = document.getElementById('tip'),
+		time = document.getElementsByClassName('time')[0];
+	var args = vge.urlparse(location.href),
+		batch = document.getElementById("batch"),
+		batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+		bizcode = args.bizcode;
+	document.getElementsByClassName("box")[0].addEventListener('click', function () {
+		wx.closeWindow();
+	}, false);
+	// 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+	switch (bizcode) {
+		case '1':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_6.png';
+			break;
+		case '2':
+			time.innerHTML = '扫码时间：' + sessionStorage.earnTime;
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_2.png';
+			contant.style.height = '3rem';
+			contant.style.margin = '7rem auto 1.5rem';
+			break;
+		case '3':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_3.png';
+			break;
+		case '4':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_4.png';
+			batch.innerHTML = batchName + '<br />服务热线：' + PHONE_NUM;
+			break;
+		case '5':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_3.png';
+			break;
+		case '6':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_6.png';
+			break;
+		case '11':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_2.png';
+			break;
+		case '-1':
+			contant.src = '/v/jsqp-laoshan/img/fail_tip_-1.png';
+			break;
+		case '18'://扫码专员
+			contant.style.display = 'none';
+			title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+			break;
+		case '19'://漏码
+			document.getElementsByClassName('box')[0].style.display = 'none';
+			document.getElementsByClassName('cash')[0].style.display = 'block';
+			document.getElementById('btn').addEventListener('click', function () {
+				location.href = 'http://' + location.host + '/jsqp-laoshan/too/mybag';
+			}, false);
+			break;
+		default:
+			contant.style.display = 'none';
+			title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+			break;
+	}
+</script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒江西省区</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="./css/game.css?v=0.0.4">
+</head>
+
+<body>
+    <div class="game-wrap">
+        <div class="game-box">
+            <div class="game-disk">
+                <img class="disk-bg buliang" src="./img/z-game-buliang.png" alt="">
+                <img class="disk-bg liang" src="./img/z-game-liang.png" alt="">
+                <div id="prize-disk" class="prize-disk"></div>
+                <div class="btn-pointer">
+                    <div id="btn-start"></div>
+                </div>
+            </div>
+            <div class="dizuo"></div>
+        </div>
+    </div>
+
+    <div id="dialog">
+        <div class="dialog-wrap">
+            <div class="dialog-content">
+                <div class="warn-tip">
+                    <span>奖品以实物为准</span>
+                    <span>关闭页面视为弃奖</span>
+                </div>
+                <div class="prize-content">
+                    <img id="prizeImg" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/jquery-2.2.4.min.js"></script>
+    <script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/publictip.js?v=2.0.1"></script>
+    <script src="/v/js/cfg.js?v=2.1.2"></script>
+    <script>
+        var PROJECT = 'jxqp-common3.0';
+    </script>
+    <script src="/static/js/wx/jsdk.js?v12"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/font.js"></script>
+    <!-- <script src="js/game.js?v=0.0.1"></script> -->
+    <script>
+        ini_wxshare(vge.jxqpappid);
+        // 隐藏微信右上角菜单
+        wx.ready(function () {
+            wx.hideOptionMenu();
+        });
+
+        $(function() {
+            var prizeType =sessionStorage.prizeType;
+
+            setInterval(function() {
+            $('.game-disk .liang').toggleClass('hide');
+            },400);
+
+            var baseDeg = 360*3;
+            var prizesInfo = {
+                M01: { // 一等奖 雨伞
+                        rotate: baseDeg + 30,
+                        prizeImg: './img/z-text-yusan.png'
+                    },
+                M02: { // 二等奖 青岛啤酒一听
+                        rotate: baseDeg + 150,
+                        prizeImg: './img/z-text-qingpi.png'
+                    },
+                M03: { // 三等奖 定制扎啤杯1个
+                        rotate: baseDeg + 90,
+                        prizeImg: './img/z-text-zhapi.png'
+                    },
+            }
+            // title_tip('提 示', '你没有抽奖机会了', '我知道了');
+            $('#btn-start').click(function() {
+            var curPrize = prizesInfo[prizeType] || null;
+            if(!curPrize) {
+                title_tip('提 示', '你没有抽奖机会了', '我知道了');
+                return 
+            } else {
+                sessionStorage.clear();
+            }
+            $('#prize-disk').css('transform', 'rotate('+ curPrize.rotate +'deg) translateZ(0)');
+            $('#dialog').delay(5000).fadeIn();
+            $('#prizeImg').attr('src', prizesInfo[prizeType].prizeImg);
+            })
+        })
+    </script>
+
+</html>

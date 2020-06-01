@@ -1,0 +1,312 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+body{
+	background: #f3f3f3;
+	/* background: url(../img/bg-repeat.png) repeat top left; */
+	/* background-size: 2.2rem; */
+}
+p,div,input,span{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+.ad{
+	width:100%;
+	/* height:2.25rem; */
+}
+#cash{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#rule{
+	height: 1.25rem;
+	text-align: right;
+	background: url(../img/rule-bg.png) no-repeat right;
+	-webkit-background-size: 3.175rem 100%;
+	background-size: 3.175rem 100%;
+	margin: .2rem auto .2rem;
+	font-size: .5rem;
+	color: #fff;
+	padding-right: .5rem;
+	line-height: 1.25rem;
+}
+#cash .slogan{
+	width: 9.8rem;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-1rem);
+}
+#cash .currentMoney{
+	width: 12.2rem;
+	height: 2rem;
+	background: url(../img/money-bg.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	text-align: center;
+	font-size: .67rem;
+	color: #d7000e;
+	/* margin: 0 auto; */
+	margin: -.8rem auto .6rem;
+	line-height: 1.8rem;
+	visibility: hidden;
+	transform: translateY(-.8rem);
+}
+#cash .currentMoney.wave{
+	-webkit-animation: wave linear 2s 2s 4  both;
+	animation: wave linear 2s 2s 4  both;
+}
+
+#cash .currentMoney i{
+	font-size: .8rem;
+	font-weight: bold;
+	display: inline-block;
+	
+}
+/* #cash .currentMoney i.wave{
+	-webkit-animation: wave linear 2s 2s 4  both;
+	animation: wave linear 2s 2s 4  both;
+} */
+@-webkit-keyframes wave{
+	10%,20%,30%,40%,50%{
+		transform:rotate(10deg);
+	}
+	5%,15%,25%,35%,45%{
+		transform:rotate(-8deg);
+	}
+	0%,55%,100%{
+		transform:rotate(0deg);
+	}
+}
+#card_box{
+	visibility: hidden;
+	width: 12rem;
+	height: 12.3rem;
+	/* background: url(../img/card-bg.png) no-repeat top left; */
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	margin:1.6rem auto .8rem;
+	position: relative;
+	-webkit-transform: scale(.9);
+	transform: scale(.9);
+	/*backface-visibility:hidden;*/
+}
+.rotate{
+	-webkit-animation: rotate linear 1s both;
+	animation: rotate linear 1s both;
+}
+@-webkit-keyframes rotate{
+	0%{
+		transform:scale(.9) rotateY(0deg);
+	}
+	100%{
+		transform:scale(.9) rotateY(360deg);
+	}
+}
+/*index*/
+#card_box img{
+	position: absolute;
+    bottom: -1.2rem;
+    left: .4rem;
+    width: 100%;
+    display: block;
+}
+/*香聚卡*/
+#card_box img.xiangju{
+	/* width: 7.76rem; */
+}
+/*鲜聚卡*/
+#card_box img.xianju{
+	/* width: 7.76rem; */
+}
+/*团聚卡*/
+#card_box img.tuanju{
+	/* width: 7.96rem; */
+}
+/*友聚卡*/
+#card_box img.youju{
+	/* width:8.56rem;
+	left: 0; */
+}
+/*欢聚卡*/
+#card_box img.huanju{
+	/* width: 8.96rem; */
+}
+
+.fromgzh{
+	display: none;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.fromgzh img{
+	width: 9.2rem;
+	display: block;
+	margin: 0 auto;
+}
+.btn-group{
+	text-align: center;
+}
+.btn-group input{
+	width: 4rem;
+	height: 1.2rem;
+	border: 0;
+	outline: none;
+}
+#qpActive{
+	background: url(../img/btn-active.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+#mycard{
+	background: url(../img/btn-card.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	margin: 0 .75rem;
+}
+#center{
+	background: url(../img/btn-center.png) no-repeat center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+#active{
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+#active img{
+	width: 80%;
+	display: block;
+	margin: 2rem auto;
+}
+/*全面屏*/
+.screen .fromgzh{
+	margin: 1rem auto 2rem;
+}
+.screen #card_box{
+	margin:2rem auto;
+}
+.screen #active img{
+	width: 12.5rem;
+	display: block;
+	margin: 6rem auto;
+}
+
+@media only screen and (min-aspect-ratio:320/480) {
+	#card_box{
+		width: 10rem;
+		margin-top: -1rem;
+	}
+	.fromgzh img{
+		width: 7.2rem;
+		padding-bottom: 1.4rem;
+	}
+}
+
+@media only screen and (min-height:700px) {
+	#cash .slogan{
+		margin-top: 1.2rem;
+	}
+    .fromgzh{
+		margin-bottom: 2rem;
+	}
+	.fromgzh img{
+		padding-bottom: .6rem;
+	}
+}
+
+
+
+/* @media only screen and (min-aspect-ratio:375/667) {
+	.fromgzh img{
+		padding-bottom: .4rem;
+	}
+} */
+
+

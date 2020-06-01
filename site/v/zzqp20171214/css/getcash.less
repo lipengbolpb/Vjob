@@ -1,0 +1,263 @@
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+@-webkit-keyframes city-round {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background:#bc2029;
+    position: relative;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background:#bc2029;
+    position: relative;
+    .wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        .head{
+            margin:0 auto;
+            width:100%;
+            font-size:0;
+            .logo{
+                margin:2rem 0 0 0.5rem;
+                width:3rem;
+                vertical-align: top;
+            }
+            .slogan{
+                margin:1rem 1rem 0 1rem;
+                width:10rem;
+                vertical-align: top;
+            }
+        }
+        .main{
+            margin:1rem auto 0;
+            width:100%;
+            .points{
+                width:100%;
+                display: none;
+                .title{
+                    text-align:center;
+                    width:100%;
+                    color:#eedb43;
+                    font-size:0.8rem;
+                }
+                .content{
+                    margin: 0.5rem auto 0;
+                    text-align:center;
+                    width:100%;
+                    color:#eedb43;
+                    font-size: 1.5rem;
+                    span:nth-of-type(1){
+                        font-weight:bold;
+                        font-size:2rem;
+                    }
+                    span:nth-of-type(2){
+                        font-weight:bold;
+                        font-size:2rem;
+                    }
+                    span:nth-of-type(3){
+                        font-size:1.5rem;
+                    }
+                }
+            }
+            .gift{
+                width:100%;
+                overflow: hidden;
+                // display: none;
+                .prize{
+                    width:35%;
+                    margin-left:3%;
+                    float: left;
+                }
+                div{
+                    width:58%;
+                    float: right;
+                    p:nth-of-type(1){
+                        color: #eedb43;
+                        font-size:0.7rem;
+                        margin-top: 0.5rem;
+                    }
+                    p:nth-of-type(2){
+                        color: #eedb43;
+                        font-size:0.8rem;
+                        font-weight: bold;
+                        margin-top:0.2rem;
+                    }
+                }
+                .ck{
+                    width: 100%;
+                    text-align:center;
+                    color:#ffffff;
+                    font-size:0.6rem;
+                    float: left;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .btns{
+            margin: 1rem auto 0;
+            width:100%;
+            position: relative;
+            z-index: 1;
+            .personal{
+                position: absolute;
+                top: 2rem;
+                left:1rem;
+                width:3.5rem;
+            }
+            .sign{
+                position: absolute;
+                top: 0rem;
+                left:5.75rem;
+                width:4rem;
+            }
+            .mall{
+                position: absolute;
+                top: 2rem;
+                right:1rem;
+                width:4.2rem;
+            }
+        }
+        .footer{
+            position: absolute;
+            bottom:8.5rem;
+            width: 120%;
+            left: -10%;
+            .football{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+            }
+            .city{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                animation: city-round 20s linear infinite;
+                pointer-events: none;
+            }
+        }
+        .mask{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,0.7);
+            z-index: 1;
+            display: none;
+            .title{
+                margin:3rem auto 0;
+                text-align:center;
+                width:100%;
+                color:#f6bf62;
+            }
+            .card{
+                margin: 1.5rem auto 0;
+                width:80%;
+                display: block;
+            }
+            .close{
+                margin: 0.5rem auto 0;
+                width:2rem;
+                display: block;
+            }
+            .notice{
+                position: absolute;
+                bottom:10px;
+                font-size:0.5rem;
+                color:#fffefe;
+                width:100%;
+                text-align:center;
+            }
+        }
+    }
+}

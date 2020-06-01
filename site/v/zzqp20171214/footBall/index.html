@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>足球射门</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="full-screen" content="true" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<link rel="stylesheet" type="text/css" href="css/index.css?1.1">
+
+	<!--modules_files_start-->
+	<script egret="lib" src="js/egret.min.js"></script>
+	<script egret="lib" src="js/egret.web.min.js"></script>
+	<script egret="lib" src="js/tween.min.js"></script>
+	<script egret="lib" src="js/res.min.js?1.1"></script>
+	<script egret="lib" src="js/game.min.js"></script>
+	<script egret="lib" src="js/game.web.min.js"></script>
+	<script egret="lib" src="js/howler.min.js"></script>
+    <script egret="lib" src="js/jquery-2.1.1.js"></script>
+    <script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script egret="lib" src="js/index.js?4.0"></script>
+    <script egret="lib" src="js/jex.js?1.1"></script>
+	<!--modules_files_end-->
+
+	<!--game_files_start-->
+	<script src="js/main.min.js?1.1"></script>
+	<!--game_files_end-->
+</head>
+
+<body>
+
+	<div id="Frame1" style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto"
+	 data-scale-mode="showAll" data-resolution-mode="retina" data-frame-rate="30" data-content-width="540" data-content-height="900"
+	 data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false" data-show-log="false" data-log-filter="" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
+	</div>
+    <audio id="bgm-box" src="css/bg.mp3" loop style="display:none;"></audio>
+	<script>
+		jg_aj = {};
+		var iftouch='';
+		jg_aj.txt = ["", "0.5", "", "", "", "", "1", "5", "请输入名字", "http://w.vjifen.com/zzqp20171214/too/mall" ,"足球射门游戏规则<br><br>一、游戏规则<br>1、首先选择需要押注的积分数量。其次选择射门的方向，足球会根据您的选择呈现相应的运动轨迹。<br>2、射门进球成功，您将获得您下注的双倍积分；进球失败，您将失去下注积分。<br>3、消耗/获得积分将会统计到您个人积分系统里。<br>4、积分可到积分商城参与抽奖活动或者兑换相应奖品。<br>","http://w.vjifen.com/zzqp20171214/too/mall"];
+		egret.runEgret();
+		jQuery("#Frame1").append("<img src='"+jg_getpng(120)+"' width='43.333333333333335%' class='swap-img'/>"
+		
+		+"<div class='call-box' style='width:" + jQuery('canvas').width() + "px;margin-left:-"+jQuery('canvas').width()*0.5+"px;'><div class='call-main' style='background:url("+jg_getpng(121)+") 50% 50%/100% no-repeat;'>"
+			
+		+"<div class='user-main'></div>"
+
+		+"<a class='duihuan' href='"+jg_aj.txt[9]+"' target='_blank'></a>"
+		
+		+"<div style='position: absolute;width: 100%;top: 52%;box-sizing: border-box;padding: 0 5%;height:"+jQuery('canvas').width()*0.15+"px;'>"+j().ui({cid:'callBtn',w:-26,h:-100,s:0,ca:'|jpn()|x_call1`|jpn()|x_call2',class0:'cent'})+"<div class='call-val-10' style='display:none;'>×10</div><div class='call-val-box'><input id='callVal' type='number' placeholder='自定义(10的倍数)' /></div></div>"
+		+"<div class='call-btn' onclick='pointSubmit()'></div>"
+		+"</div></div>"
+		+"<div class='rule-box' style='width:" + jQuery('canvas').width() + "px;margin-left:-"+jQuery('canvas').width()*0.5+"px;'><div style='background:url("+jg_getpng(132)+") 50% 50%/100% no-repeat;width:90%;height:" + jQuery('canvas').width()*1.3 + "px;margin: 16% auto 0;box-sizing: border-box;padding: 17% 7%;color: #fff;font-family: 微软雅黑;font-size: 0.9rem;position:relative;'><img src='"+jg_getpng(133)+"' width='9.31%' class='closeRuleBtn' onclick='closeRule()'/><section>"+jg_aj.txt[10]+"</section></div></div>");
+		iniUserInfo();
+		document.getElementById('bgm-box').play();
+		document.getElementById("bgm-box").volume = 0.6;
+		document.addEventListener("WeixinJSBridgeReady", function () { document.getElementById("bgm-box").play();}, false);
+	</script>
+</body>
+
+</html>

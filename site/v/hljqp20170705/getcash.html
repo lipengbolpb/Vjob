@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青啤豪情龙江</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.2" />
+    <link rel="stylesheet" type="text/css" href="css/jiuwang.css?v=1" />
+</head>
+
+<body>
+    <!-- 圣诞节 start -->
+    <div class="christmas" style="background-color: #ffffff; width:100%;height:100%;position:absolute;top: 0;left: 0;z-index: 5;"></div>
+    <!-- 圣诞节 end -->
+    <div class="wxmark" id="alert">
+        <img src="img/alert_tip.png" />
+    </div>
+    <div class="getcash">
+        <img src="img/logo.png" class="logo" />
+        <img src="img/slogan.png" class="slogan" />
+        <div class="cash_box">
+            <img src="img/woman.png" class="woman" />
+            <img src="img/cloud_1.png" class="cloud_1" />
+            <img src="img/cloud_2.png" class="cloud_2" />
+            <img src="img/man_1.png" class="man_1" />
+            <img src="img/man_2.png" class="man_2" />
+            <img src="img/cash.png" class="cash" />
+            <img src="img/light.png" class="light_1 light" />
+        </div>
+        <img src="img/index_bottom.png" class="bottom" />
+    </div>
+    <div class="repcash">
+        <img src="img/repscan.png" class="repscan" />
+        <div class="cash_bg">
+            <p class="title">恭喜你获得</p>
+            <p class="money"></p>
+        </div>
+        <div id="btn">存入我零钱包</div>
+        <p id="tip">根据微信平台要求，红包累计大于等于1元后可提现，不足1元的红包我们贴心为您准备了零钱包功能</p>
+        <p class="rule_box">
+            <a href="javascript:;" class="pravite">隐私说明</a>
+            <a href="javascript:;" class="rule">活动规则</a>
+        </p>
+    </div>
+
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script> <!-- 84k -->
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/vve/10core.js?v1"></script>
+<script src="/static/js/vve/11tool.js?v1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/cfg.js?v=1.6"></script>
+<script src="/v/js/publictip.js?v=1"></script>
+<!-- 圣诞节 -->
+<script src="/v/christmas/christmas.js?v=4.0"></script>
+<script src="js/getcash.js?v=2.3.6" type="text/javascript" charset="utf-8"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    ini_wxshare(vge.hljqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

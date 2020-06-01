@@ -1,0 +1,109 @@
+$(function(){
+	var isSet = false;
+	$(".dbt_menu_solution").parent().hover(function(){
+		if(!isSet){
+			var h = $(".dbt_menu_solutionList").outerHeight();
+			var w = $(".dbt_menu_solutionList").outerWidth();
+			$(".dbt_opacity").css({
+				width : w,
+				height : h,
+				opacity : 1
+			});
+			isSet = true;
+		}else{
+			$(".dbt_opacity").show();
+		}
+		$(".dbt_menu_solutionList").show();
+		$(this).find(".dbt_menu_solution").addClass("dbt_menu_solutionHover");
+	}, function(){
+		$(".dbt_menu_solutionList").hide();
+		$(".dbt_opacity").hide();
+		$(this).find(".dbt_menu_solution").removeClass("dbt_menu_solutionHover");
+	});
+
+	//向左滚动
+	if($('.dbt_banner_content').length){
+		$('.dbt_banner_content').cycle({ 
+			speed:1100,
+			fx:'scrollLeft',
+			pager:'.dbt_banner_pages',
+			timeout : 6000
+		});
+	}
+
+
+	//scroll
+	var setScroll = function (elem, options){
+		options = options || {};
+		var timer, animateTime = options.animateTime || 1000, time = options.time || 3000, num = options.num || 1;
+
+		elem.hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer = setInterval(function(){
+				scrollItem();
+		},time)
+		}).trigger("mouseleave");
+
+		function scrollItem(){
+			var liH = elem.find("li").first().outerHeight(true);
+			elem.animate({marginTop: -liH*num + "px"}, animateTime, function(){
+				for(var i = 0; i<num; i++){
+					elem.find("li").first().appendTo(elem);
+				}
+				elem.css("marginTop","1px");
+			})
+		}
+	};
+
+	(function(){
+		var elem = $(".dbt_newsActive_box");
+		setScroll(elem, {num : 1, animateTime : 800, time : 3000});
+	})();
+
+
+	(function(){
+			var streamSide = $('.dbt_nav');
+			if(streamSide.length){
+				var position = streamSide.offset();
+				$(window).scroll(function(){
+					if(position.top<$(window).scrollTop() + 10){
+						if(isie6()){
+								streamSide.css({
+									left:position.left+'px',
+									top : 10 + document.documentElement.scrollTop + "px",
+									position : "absolute"
+								})
+						}else{
+							streamSide.css({
+								position:"fixed",
+								left:position.left+'px',
+								top:'10px'
+							})
+						}
+					}else{
+						streamSide.css({
+							position:"static"
+						});
+					}
+				})
+				
+			    function isie6() {
+					return !!window.ActiveXObject && !window.XMLHttpRequest;
+				}
+			}
+	})();
+
+	//J_forActiveChange
+
+	(function(){
+		var navElems = $(".J_forActiveChange a");
+		navElems.bind("click", function(){
+			var me = $(this);
+			setTimeout(function(){
+				navElems.removeClass("active");
+				me.addClass("active");
+			},0);
+		});
+	})();
+})

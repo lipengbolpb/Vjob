@@ -1,0 +1,23 @@
+body{background: #FFF6CD; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.warpper{background: #FFF6CD url(/v/qpzj/img/bg_02.jpg) 0 0 repeat-y; background-size: 100%;}
+.inner{background: url(/v/qpzj/img/bg_001.jpg) 0 0 no-repeat; background-size: 100%;}
+.pinggai{width: 70%; padding-top: 8%;}
+.tipbox{width: 84%; border: 1px solid #F2D770; border-radius: 5px; padding: 5px 8px; color: #BC7F21; line-height: 16px; margin-top: 20px; position: relative;}
+.tip{font-size: 12px; padding-left: 18px; background: url(/v/qpzj/img/clock.png) 0 2px no-repeat; background-size: 12px; text-align: left;}
+.tipbox img{position: absolute; bottom: -7px; left: 10%; width: 12px;}
+.message{margin-top: 18px; width: 100%; border-top: 1px solid #F2D770; padding-bottom: 34px; font-size: 14px;}
+.message li{border-bottom:  1px solid #F2D770; text-align: left;}
+.message li input{color: #BC7F21; height: 34px; line-height: 34px; padding: 5px 5%; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0); outline:0; border: 0px; width: 90%; font-size: 14px;}
+#yz_box{overflow: hidden; width: 100%; padding-right: 0;}
+#yz_box input{float: left; width: 54%; padding: 5px 5%;}
+input::-webkit-input-placeholder{color: #BC7F21;} 
+#yz_box p{float: right; width: 32%; border-left: 1px solid #F2D770; color: #BC7F21; height: 44px; line-height: 44px; font-size: 14px; text-align: center;}
+#btn{font-size: 16px; border: none; border-radius: 4px; width: 90%; height: 38px; line-height: 38px; margin-bottom: 30px; color: #DFC18F; background: #FFE880;}
+/*.cant{}
+.can{color: #fff; background: #EA554F;}*/
+#mask{background: #000; opacity: 0.6; filter: alpha(opacity=60); position: fixed; top: 0px; left: 0px; display: none; width: 100%; height: 100%; z-index: 100;}
+#alert{position: absolute; top: 20%; left: 10%; z-index: 101; width: 80%; background: url(/v/qpzj/img/tip_bg1.png) 0 0 no-repeat; background-size: 100%; height: 60%; display: none;}
+#alert img{width: 76%; padding-top: 40%;}
+#alert p{height: 40px; line-height: 40px; color: #fff; font-size: 22px;}
+#telcode_box{display: none;}
+#yz_box{display: none;}

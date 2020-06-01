@@ -1,0 +1,221 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "å¾®è½¯é›…é»‘", "Microsoft YaHei";
+    /* overflow: hidden; */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* å±è”½è‹¹æžœæ‰‹æœºæ›´æ”¹æ ·å¼ */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    height: 9rem;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.header p {
+    width: 100%;
+    height: 1.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    text-indent: 0.3rem;
+}
+
+/* nav */
+
+.nav {
+    width: 100%;
+    height: 1.5rem;
+}
+
+.nav ul {
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul li {
+    font-size: 0.6rem;
+    text-align: center;
+    line-height: 1.5rem;
+    float: left;
+    list-style: none;
+    font-weight: bold;
+}
+
+/* content */
+
+.content {
+    /* -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    /* overflow: hidden; */
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+}
+
+.contentList {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    /* height: auto; */
+    margin-top: -0.3rem;
+    display: none;
+    /* -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto; */
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+}
+
+ul.contentList li {
+    width: 100%;
+    height: 3rem;
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    border-top: 1px solid #cccccc;
+    position: relative;
+    padding-left: 3%;
+    padding-right: 3%;
+    overflow: hidden;
+}
+
+ul.contentList li img {
+    width: 20%;
+    height: 2.8rem;
+    float: left;
+    margin-top: 0.1rem;
+    margin-right: 3%;
+}
+
+ul.contentList li div {
+    float: right;
+    width: 77%;
+    height: 2rem;
+}
+
+ul.contentList li div p:nth-of-type(1) {
+    margin-top: 0.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ul.contentList li div p:nth-of-type(2) {
+    width: 90%;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #999999;
+    margin-top: 0.2rem;
+}
+
+.active {
+    display: block;
+}
+
+.navActive {
+    border-bottom: 2px solid #006699;
+    color: #e83632;
+}
+
+.logo {
+    width: 25%;
+    position: absolute;
+    top: 0.3rem;
+    left: 1%;
+    z-index: 2;
+}

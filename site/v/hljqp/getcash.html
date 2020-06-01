@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>青啤豪情龙江</title>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?7a0456e524bd6f5439659fcce4533def";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+ 		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=2.12">
+ 		<script src="js/rem.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="shake">
+                <img src="img/slogan.png?v=2" class="slogan">
+                <img src="img/mobile.png?v=1" class="yao">
+                <img src="img/ball1.png?v=5" class="ball1">
+                <img src="img/ball2.png?v=5" class="ball2">
+                <img src="img/ball3.png?v=2" class="ball3">
+                <img src="img/man.png?v=1" class="man">
+            </div>
+            <div class="getcash">
+                <img src="" class="title">
+                <div class="draw">
+                    <img src="img/hb.png?v=1" class="hb">
+                    <p class="tip">恭喜您获得</p>
+                    <p class="num">￥<span class="money"></span>元</p>
+                </div>
+                <input type="button" value="存入我的零钱包" class="btn">
+                <div class="msg">
+                    <p id="notice">根据微信平台要求，红包累计大于等于1元后可提现，不足1元的红包我们为您贴心准备了零钱包功能</p>
+                    <div class="bottom">
+                        <a href="javascript:;" class="explain">隐私说明</a>
+                        <a href="javascript:;" class="rule">活动规则</a>
+                    </div>
+                </div>
+            </div>
+            <div class="alert">
+                <img src="img/alert_tip.png?v=1">
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=1.5"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/getcash.js?v=2.21"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+    <script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>

@@ -1,0 +1,48 @@
+#poster1{ widows:100%; height:100%; position:absolute; top:0;}
+#poster1 .index{ width:6.05rem; left:.3rem; top:4%; height:92%}
+#poster1 .start{ width:2.27rem; height:1.14rem; position:absolute; left:.8rem; top:78%;
+ background:url(../img/poster/start.png) no-repeat center/contain}
+#poster1 .back2{ width:2.27rem; height:1.14rem; position:absolute; right:.8rem; top:78%;
+ background:url(../img/poster/back2.png) no-repeat center/contain}
+#poster2{ widows:100%; height:100%; position:absolute; top:0; display:none}
+#poster2 .a{ width:1.02rem; height:.43rem; position:absolute}
+#poster2 .p1{ width:1.67rem; left:1.5rem; top:16%; -webkit-animation:fd 2s infinite}
+#poster2 .a1{ background:url(../img/poster/a1.png) no-repeat center/contain; left:1.7rem; top:39%}
+#poster2 .p2{ width:1.13rem; right:1.6rem; top:18%; -webkit-animation:fd 2s infinite}
+#poster2 .a2{ background:url(../img/poster/a2.png) no-repeat center/contain; right:1.6rem; top:39%}
+#poster2 .p3{ width:1.64rem; left:.6rem; top:46%; -webkit-animation:fd 2s .5s infinite}
+#poster2 .a3{ background:url(../img/poster/a3.png) no-repeat center/contain; left:.8rem; top:70%}
+#poster2 .p4{ width:1.43rem; left:2.6rem; top:47%; -webkit-animation:fd 2s .5s infinite}
+#poster2 .a4{ background:url(../img/poster/a4.png) no-repeat center/contain; left:2.7rem; top:70%}
+#poster2 .p5{ width:1.48rem; left:4.35rem; top:50%; -webkit-animation:fd 2s .5s infinite}
+#poster2 .a5{ background:url(../img/poster/a5.png) no-repeat center/contain; left:4.6rem; top:70%}
+#poster2 .sure{ width:2.06rem; height:.87rem; position:absolute; left:2.17rem; top:79%; 
+	background:url(../img/poster/back.png) no-repeat center/contain;}
+#poster2  .tips{ width:100%; text-align:center; position:absolute; top:92%; font-size:.22rem; color:#fff}
+@-webkit-keyframes fd{
+	0%,100%{ -webkit-transform:translateY(0)}
+	50%{ -webkit-transform:translateY(.05rem)}
+}
+#poster3{ widows:100%; height:100%; position:absolute; top:0; display: none}
+#poster3 .post{ display: none }
+#poster3 .bg2{ width: 100%;height: 100%;position: absolute;top: 0;}
+#poster3 .ai{ width:100%; height:100%; position:absolute; top:0;}
+#poster3 .cai{ width:100%; height:100%; position:absolute; top:0;}
+#poster3 .jiu{ width:100%; height:100%; position:absolute; top:0;}
+#poster3 .mei{ width:100%; height:100%; position:absolute; top:0;}
+#poster3 .meng{ width:100%; height:100%; position:absolute; top:0;}
+#poster3 .head{ width:3rem; height:3rem; position:absolute; border-radius:1rem;}
+/*#poster3 .head{ width:3rem; height:3rem; position:absolute; border-radius:1rem;background-repeat: no-repeat;background-position: center;background-size: contain;}*/
+#poster3 .ai .head{ left:1.8rem; top:24%}
+#poster3 .cai .head{ left:2rem; top:12%}
+#poster3 .jiu .head{ left:1.3rem; top:14%}
+#poster3 .mei .head{ left:.4rem; top:27%}
+#poster3 .meng .head{ left:1.5rem; top:25%}
+#poster3 .bef,.aft{ width:100%; height:2rem; position:absolute; bottom:0}
+#poster3 .aft{ display:none}
+#poster3 .bef .make{ width:1.63rem; height:1.53rem; position:absolute; left:2.4rem; top:.1rem; background:url(../img/poster/pz.png) no-repeat center/contain}
+#poster3 .bef .save1{ width:1.03rem; height:.93rem; position:absolute; left:4.2rem; top:.4rem;display: none;
+ background:url(../img/poster/pz2.png) no-repeat center/contain}
+#poster3 .bef .change{ width:1.97rem; height:1.02rem; position:absolute; left:.4rem; top:.3rem; background:url(../img/poster/change.png) no-repeat center/contain}
+#poster3 .aft .save2{ width:2.06rem; height:.87rem; position:absolute; left:.9rem; top:.6rem; background:url(../img/poster/save.png) no-repeat center/contain}
+#poster3 .aft .back{ width:2.06rem; height:.87rem; position:absolute; right:2.17rem; top:.6rem; background:url(../img/poster/back.png) no-repeat center/contain}

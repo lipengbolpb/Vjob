@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no" />
+		<title>江苏青啤</title>
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" href="css/prize.css?v=2.32">
+	</head>
+
+	<body>
+		<div class="repcash">
+			<img src="img/bg.png" class="footer">
+			<img src="img/geted.png" class="getted">
+			<p>扫码时间：
+				<span class="earnTime"></span>
+			</p>
+		</div>
+		<div class="get">
+			<img src="" alt="" class="prize-one">
+			<input type="button" value="立即兑奖" class="ck">
+		</div>
+		<div class="info">
+			<img src="img/rule.png" class="rule">
+			<div class="slogan_bg">
+				<img src="" alt="" class="prize-bg">
+				<p class="travel">行程说明>></p>
+			</div>
+			<!-- <a href="javascript:;" class="ckff">查看兑奖方法>></a> -->
+			<div class="warning">
+				<!-- <img src="img/notice.png" class="notice"> -->
+				<p>温馨提示：请尽快拨打025-86521539核实中奖者身份信息，以下内容须完整填写信息，否则无法兑奖。</p>
+			</div>
+			<div class="msg">
+				<input type="text" placeholder="姓名" class="name">
+				<input type="text" placeholder="输入地址" class="address" maxlength="50">
+				<input type="text" placeholder="输入身份证号" class="idcard" maxlength="18">
+				<input type="text" placeholder="输入手机号" class="tel" maxlength="11">
+				<input type="text" placeholder="验证码" class="code" maxlength="4">
+				<input type="button" value="获取验证码" class="yz">
+			</div>
+			<input type="button" value="提交" class="tj" id="btn">
+			<span class="line"></span>
+			<p class="alert">中奖者需提供完整的中奖瓶盖或拉环,以及个人身份证复印件供我公司或我公司委托的第三方公司核实确认。</p>
+			<!-- <div class="change">
+            <div class="change-content">
+                <p>兑奖说明</p>
+                <ul>
+                    <li>活动截止时间：2019年12月31日
+                        <br>兑奖截止时间：2020年1月31日</li>
+                        <li>全国奖项中奖者请拨打兑奖咨询电话：0551-62878695。</li>
+                        <li>每个瓶盖内二维码扫码成功只能获得一次奖项。</li>
+                        <li>逾期未要求兑付或逾期中出的奖项不再兑付。</li>
+                        <li>在活动区域外购得产品，本公司将不予兑付。</li>
+                        <li>本次活动非线上促销，通过任何电子商务平台购得的有奖产品，本公司将不予兑付。</li>
+                </ul>
+            </div>
+            <img src="img/close.png" class="close">
+        </div> -->
+		</div>
+		<div class="success_alert">
+			<div class="alert_msg">
+				<img src="img/prize_alert.png" >
+				<img src="img/prize_qrcode.png"  class="attention">
+			</div>
+			<div class="lt_xc">
+			    <div class="lt_xc_con">
+			        <div class="lt">
+			            <img src="img/lt.png" alt="" class="lt-img">
+			            <img src="img/lq-btn.png" alt="" class="lq-btn">
+			        </div>
+			        <div class="xc">
+			            <img src="img/xc.png" alt="" class="lt-img">
+			            <img src="img/lq-btn.png" alt="" class="xc-btn">
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="travel_box">
+			<img src="img/close_black.png" class="close">
+			<img src="img/travel_details.png" >
+		</div>
+	</body>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/static/js/vve/21tpl.js"></script>
+	<script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/publictip.js?v=3.0.1"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/font.js"></script>
+	<script src="/v/js/cfg.js?v=3.3.3"></script>
+	<script src="js/prize.js?v=4.59"></script>
+	<script>
+		ini_wxshare(vge.jsqpappid);
+		// 隐藏微信右上角菜单
+		wx.ready(function() {
+			wx.hideOptionMenu();
+		});
+		$("input").blur(function() {
+			setTimeout(() => {
+				var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+			}, 100);
+		});
+	</script>
+
+</html>

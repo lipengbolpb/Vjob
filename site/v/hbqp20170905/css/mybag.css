@@ -1,0 +1,261 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+input[type="button"]{
+	color: white;
+}
+img{
+	display: block;
+}
+div.alert{
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#060d1d url(../img/bg_3.png) no-repeat left top;
+	-webkit-background-size: 100% auto;
+	display: none;
+}
+div.alert img{
+	margin: 4.3rem auto 0;
+	width: 12.5rem;
+	-webkit-transform: translateX(.5rem);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.up{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background:#060d1d url(../img/bg_3.png) no-repeat left top;
+	-webkit-background-size: 100% auto;
+}
+div.up .loading{
+	width: 2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1rem;
+	top: 40%;
+	z-index: 100;
+	display: none;
+}
+div.up img.rabbit_3{
+	width: 3.25rem;
+	margin: 1.5rem auto 0;
+}
+div.up img.paws{
+	width: 2.8rem;
+	position: absolute;
+	top: 5.3rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+div.up img.cash_s{
+	width: 2rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1rem;
+	top: 4.5rem;
+	-webkit-transform: rotate(-50deg);
+	-webkit-animation: rabbit_3 linear 2s infinite;
+}
+div.up div.msg_box{
+	height: 12.15rem;
+	width: 100%;
+	overflow: hidden;
+	margin-top: -.3rem;
+	background: url(../img/mybag_bg.png) no-repeat center;
+	-webkit-background-size: auto 100% ;
+	text-align: center;
+}
+div.up div.msg_box p.title{
+	font-size: .8rem;
+	color: #fff;
+	margin-top: 1.5rem;
+}
+div.up div.msg_box p.title span{
+	color: #fe7811;
+}
+div.up div.msg_box div{
+	margin-top: 1rem;
+}
+div.up div.msg_box div p{
+	font-size: .68rem;
+	color: #ffd358;
+}
+div.up p.balance{
+	padding-left: 1.1rem;
+	background: url(../img/icon_money.png) no-repeat left;
+	background-size: 0.9rem;
+	margin-bottom: 0.55rem;
+}
+div.up p.sent{
+	padding-left: 1.1rem;
+	background: url(../img/icon_bag.png?v=1.0.2) no-repeat left;
+	background-size: 0.8rem;
+	margin-bottom: 0.55rem;
+}
+
+#dom_balance,#add_money{
+	font-size: .9rem;
+	font-weight: bold;
+}
+#btn{
+	margin: 1.5rem auto 0;
+	background: url(../img/button_5.png) no-repeat center;
+	-webkit-background-size:auto 100%;
+	height: 2.2rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+.details{
+	color: #afb1b4;
+	font-size: .6rem;
+	text-decoration: underline;
+	display: block;
+	text-align: center;
+	margin: .5rem auto 0;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+@-webkit-keyframes rabbit_3{
+	35%{
+		-webkit-transform: rotate(0deg);
+	}
+	0%,70%,100%{
+		-webkit-transform: rotate(-50deg);
+	}
+}
+
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 100%;
+	-webkit-transition: all 1s;
+	background: url(../img/bg_4.png) no-repeat top left;
+	background-size:100% 100%;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+}
+div.mybag_bottom div.record #hide{
+	height: 2.2rem;
+	margin: 1rem auto;
+	background: url(../img/button_6.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #cbcbcb solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #cbcbcb solid;
+	padding: 0.35rem 0;
+	overflow: hidden;
+	color: #fff;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #fff;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	color: #f3c03e;
+	display: none;
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #f3c03e;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

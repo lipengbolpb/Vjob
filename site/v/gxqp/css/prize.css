@@ -1,0 +1,144 @@
+@charset "utf-8";
+html,body,p,a,ul,dl,ol,li,input,img,table,h1,h2,h3,h4,h5,h6,tr,td,tbody,thead{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: block;
+}
+body,html{
+	font-family: "微软雅黑";
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: white;
+	font-size: 100%;
+	background:#00974A url(../img/prize-bg.png?v2) no-repeat;
+	background-size: 100% 50%;
+	-webkit-background-size: 100% 50%;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-input-placeholder{
+	color: white;
+}
+input{
+	font-size: 100%;
+	color: #fff;
+}
+input[type="text"]{
+	text-indent: 1em;
+}
+section.top{
+	width: 100%;
+	height: 44.89%;
+}
+section.msg{
+	width: 89%;
+	height: 55.11%;
+	padding: 0 5.625%;
+	overflow: hidden;
+}
+section.msg div.tips{
+	height: 16.79%;
+	width: 100%;
+	border-bottom: 1px #89C997 solid;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-bottom: 1px #89c997 solid;
+}
+section.msg div.tips img{
+	width: 100%;
+	height: 95.5%;
+}
+section.msg div.name{
+	width: 100%;
+	height: 12.76%;
+	overflow: hidden;
+	border-bottom: 1px #89c997 solid;
+}
+section.msg div.name input{
+	outline: none;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #00974a;
+}
+section.msg div.idcard{
+	width: 100%;
+	height: 12.76%;
+	overflow: hidden;
+	border-bottom: 1px #89c997 solid;
+}
+section.msg div.idcard input{
+	outline: none;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #00974a;
+}
+section.msg div.phonenum{
+	width: 100%;
+	height: 12.76%;
+	overflow: hidden;
+	border-bottom: 1px #89c997 solid;
+}
+section.msg div.phonenum input{
+	outline: none;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #00974a;
+}
+section.msg div.submit{
+	position: relative;
+	height: 20.14%;
+	width: 100%;
+}
+section.msg div.submit input{
+	width: 100%;
+	height: 53%;
+	border: 0;
+	background: #f7ab00;
+	-webkit-border-radius: 5px;
+	position: absolute;
+	left: 0;
+	top: 26.4%;
+}
+section.msg p.tip{
+	width: 100%;
+	font-size: 0.7em;
+	line-height: 1.5em;
+	height:14.33%;
+	text-align: center;
+}
+section.msg p.rule{
+	width: 100%;
+	height: 10.46%;
+	text-align: center;
+}
+section.msg p.rule a{
+	padding: 0 5%;
+	line-height: 2.5em;
+	font-size: 80%;
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,213 @@
+(function () {
+    "use strict";
+    ini_wxshare(vge.sdqpappid);
+    var now1 = new Date();
+    var args = vge.urlparse(location.href),
+        qr = args.s,
+        openid = args.openid,
+        unionid = '',
+        vjifenOpenid = args.vjifenOpenid;
+    var flag = true,
+        nickname = '',
+        headimg = '';
+    var dom_location = document.getElementById('location'),
+        dom_fail = document.getElementById('fail');
+    // $('#info').html('您扫的码是【'+qr+'】<br>openid: '+openid);
+
+    sessionStorage.clear();
+    sessionStorage.openid = openid;
+    sessionStorage.qr = qr;
+
+    subscribe();
+
+    function locationed(res) {
+        loading('玩命加载中');
+        _hmt.push(['_trackEvent', 'click', '抓取地理位置', '扫码']);
+        dom_location.style.display = 'none';
+        dom_fail.style.display = 'none';
+        sessionStorage.latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+        sessionStorage.longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+        sessionStorage.speed = res.speed; // 速度，以米/每秒计
+        sessionStorage.accuracy = res.accuracy; // 位置精度
+        sweep();
+    }
+    loading('玩命加载中'); //获取用户信息  
+    wx.ready(function () {
+        loading('玩命加载中');
+        wx.hideOptionMenu();
+        wxGetLocation();
+    });
+
+    function wxGetLocation() {
+        wx.getLocation({
+            type: 'wgs84',
+            cancel: function (res) {
+                loaded();
+                dom_location.style.display = 'block';
+                _hmt.push(['_trackEvent', 'click', '拒绝抓取地理位置', '扫码']);
+                dom_location.addEventListener('click', function () {
+                    $('.location').css('display', 'none');
+                    sweep();
+                }, false);
+            },
+            success: locationed, //接口调用完成时执行的回调函数，无论成功或失败都会执行。
+            fail: function (res) {
+                loaded();
+                _hmt.push(['_trackEvent', 'click', '抓取地理位置失败', '扫码']);
+                dom_fail.style.display = 'block';
+                dom_fail.addEventListener('click', function () {
+                    dom_fail.style.display = 'none';
+                    sweep();
+                }, false);
+            }
+        });
+    }
+
+    function sweep() {
+        if (flag) {
+            flag = false;
+            loading('玩命加载中'); //调用接口
+            var japi = vge.sdqp + '/DBTSDQPInterface/sweep/sweepQrcode';
+            var req = {
+                "openid": openid,
+                "sweepstr": qr,
+                "vjifenOpenid": vjifenOpenid,
+                "headimgurl": headimg,
+                "nickname": nickname,
+                "longitude": sessionStorage.longitude === undefined ? '00' : sessionStorage.longitude, //"经度"
+                "latitude": sessionStorage.latitude === undefined ? '00' : sessionStorage.latitude //"纬度"
+            };
+            vge.clog('debug', [japi, JSON.stringify(req)]);
+            vge.callJApi(japi, req, cb);
+        }
+
+    }
+
+    function subscribe() { //判断关注
+        var requrl = 'http://' + vge.o3host + '/wx3/uinfo2?openid=' + openid + '&appid=' + vge.sdqpappid;
+        vge.ajxget(requrl, 5000, function (r) {
+            try {
+                var o = JSON.parse(r);
+                if (o.subscribe == 0) { //未关注
+
+                } else { //已关注用户
+                    headimg = o.headimgurl;
+                    nickname = o.nickname;
+                }
+                vge.clog('个人信息', JSON.stringify(o));
+            } catch (e) {
+                vge.clog('errmsg', [requrl, e]);
+            }
+        }, function (err) {
+            vge.clog('errmsg', [requrl, err]);
+        });
+    }
+
+    function cb(jo) {
+        vge.clog('返回信息', [JSON.stringify(jo)]);
+        if (jo.result.code == '0') {
+            if(jo.result.businessCode=='30'){//大奖核销
+                sessionStorage.infoKey = jo.reply.checkPrizeRecord.infoKey;
+                sessionStorage.prizeName = jo.reply.checkPrizeRecord.prizeName;
+                sessionStorage.prizeImg = jo.reply.checkPrizeRecord.prizeImg;
+                sessionStorage.prizeVcode = jo.reply.checkPrizeRecord.prizeVcode;
+                sessionStorage.userName = jo.reply.checkPrizeRecord.userName;
+                sessionStorage.phoneNum = jo.reply.checkPrizeRecord.phoneNum;
+                sessionStorage.earnTime = jo.reply.checkPrizeRecord.earnTime;
+                sessionStorage.expireTime = jo.reply.checkPrizeRecord.expireTime;
+                sessionStorage.checkUserName = jo.reply.checkPrizeRecord.checkUserName;
+                sessionStorage.checkStatus = jo.reply.checkPrizeRecord.checkStatus;
+                sessionStorage.checkTime = jo.reply.checkPrizeRecord.checkTime;
+                sessionStorage.checkRemarks = jo.reply.checkPrizeRecord.checkRemarks;
+                location.replace('http://' + location.host + '/v/sdqp-prs/verification.html?bizcode=' + jo.result.businessCode);
+                return false;
+            }
+            if(jo.reply){
+                // 产品类型：0瓶、1罐
+                sessionStorage.skuType = jo.reply.skuType;
+            }
+            switch (jo.result.businessCode) {
+                case '0': // 普通奖
+                    sessionStorage.totalAccountMoney = jo.reply.totalAccountMoney;
+                    sessionStorage.currentMoney = jo.reply.currentMoney;
+                    sessionStorage.codeContentUrl = jo.reply.codeContentUrl;
+                    //新签到
+                    sessionStorage.weekSignFlag = jo.reply.weekSignFlag; //用户是否开启自然周签到，1:开启、0或空:关闭
+                    sessionStorage.weekSignPopup = jo.reply.weekSignPopup; //自然周签到弹出提示，1:弹出提示、0或空:不弹出
+                    sessionStorage.setItem('signCogAry', JSON.stringify(jo.reply.signCogAry));
+                    //捆绑
+                    sessionStorage.promotionFlag = jo.reply.promotionFlag; //用户是否开启自然周签到，1:开启、0或空:关闭
+                    sessionStorage.promotionPopup = jo.reply.promotionPopup; //自然周签到弹出提示，1:弹出提示、0或空:不弹出
+                    sessionStorage.setItem('promotionCogAry', JSON.stringify(jo.reply.promotionCogAry));
+
+                    sessionStorage.earnTime = jo.reply.earnTime === undefined ? '' : jo.reply.earnTime; //扫码时间
+                    location.replace('http://' + location.host + '/v/sdqp-prs/getcash.html?bizcode='+jo.result.businessCode);
+                    break;
+                case '11': // 自己重复扫，普通奖
+                    sessionStorage.totalAccountMoney = jo.reply.totalAccountMoney;
+                    sessionStorage.currentMoney = jo.reply.currentMoney;
+                    sessionStorage.codeContentUrl = jo.reply.codeContentUrl;
+                    sessionStorage.earnTime = jo.reply.earnTime;
+                    location.replace('http://' + location.host + '/v/sdqp-prs/getcash.html?bizcode=' + jo.result.businessCode);
+                    break;
+                case '12': // 
+                    location.replace('http://' + location.host + '/v/sdqp-prs/getMsg.html?bizcode=' + jo.result.businessCode);
+                    break;
+                case '13': // 
+                    location.replace('http://' + location.host + '/v/sdqp-prs/getMsg.html?bizcode=' + jo.result.businessCode);
+                    break;
+                case '14': // 
+                    location.replace('http://' + location.host + '/v/sdqp-prs/getMsg.html?bizcode=' + jo.result.businessCode);
+                    break;
+                case '15': //
+                    sessionStorage.earnTime = jo.reply.earnTime;
+                    sessionStorage.grandPrizeType = jo.reply.grandPrizeType === undefined ? '' : jo.reply.grandPrizeType;
+                    location.replace('http://' + location.host + '/v/sdqp-prs/prize.html?bizcode=' + jo.result.businessCode);
+                    
+                    break;
+                case '7': //一等奖或二等奖
+                    sessionStorage.address = jo.reply.address === undefined ? '' : jo.reply.address;
+                    sessionStorage.username = jo.reply.username === undefined ? '' : jo.reply.username;
+                    sessionStorage.idcard = jo.reply.idcard === undefined ? '' : jo.reply.idcard;
+                    sessionStorage.phonenum = jo.reply.phonenum === undefined ? '' : jo.reply.phonenum;
+                    sessionStorage.skukey = jo.reply.skukey === undefined ? '' : jo.reply.skukey;
+                    //中奖具体码
+                    sessionStorage.prizeVcode = jo.reply.prizeVcode === undefined ? '' : jo.reply.prizeVcode;
+                    //特等奖类别
+                    sessionStorage.grandPrizeType = jo.reply.grandPrizeType === undefined ? '' : jo.reply.grandPrizeType;
+                    location.replace('http://' + location.host + '/v/sdqp-prs/prize.html?bizcode=' + jo.result.businessCode);
+                    break;
+                default:
+                    if (jo.reply) {
+                        sessionStorage.batchName = jo.reply.batchName === undefined ? '' : jo.reply.batchName;
+                        sessionStorage.earnTime = jo.reply.earnTime;
+                        sessionStorage.msg = jo.result.msg;
+                    }
+                    location.replace('http://' + location.host + '/v/sdqp-prs/fail.html?bizcode='+jo.result.businessCode);
+            }
+        } else if (jo.result.code == '-1') { //code !=0;
+            title_tip('尊敬的用户', '系统升级中，请稍后再试！', '我知道了');
+        } else {
+            title_tip('尊敬的用户', '呜呜，系统开了个小差，请稍后重试！', '我知道了');
+        }
+    }
+
+    function loading(txt) {
+        // dom_content.innerHTML += $('#tpl_toast').html();
+        $('#loadingToast .weui_toast_content').html(txt);
+        $('#loadingToast').show();
+    }
+
+    function loaded() {
+        $('#loadingToast').hide();
+    }
+
+    function toast(txt) {
+        $('#toast .weui_toast_content').html(txt);
+        $('#toast').show();
+        setTimeout(function () {
+            $('#toast').hide();
+        }, 2000);
+    }
+
+})();

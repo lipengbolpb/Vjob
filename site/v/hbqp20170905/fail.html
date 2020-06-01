@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享河北</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			body{
+				background:#060d1d url(img/bg_3.png) no-repeat left top;
+				-webkit-background-size: 100% auto;
+			}
+			img{
+				display: block;
+			}
+			#ani_1{
+				height: 1.1rem;
+				position: absolute;
+				top: 3.6rem;
+				left: 57%;
+				-webkit-transform-origin: top;
+				-webkit-transform:scale(3) translateX(-50%);
+			}
+			#ani_1 .rabbit_1{
+				height: 100%;
+			}
+			#ani_1 .lantern{
+				width: .25rem;
+				position: absolute;
+				left: .758rem;
+				top: .26rem;
+				-webkit-transform-origin: top;
+				-webkit-animation: rabbit_1 linear 3s infinite;
+			}
+			@-webkit-keyframes rabbit_1{
+				15%,70%{
+					-webkit-transform:rotate(-10deg);
+				}
+				45%,90%{
+					-webkit-transform:rotate(10deg);
+				}
+				0%,100%{
+					-webkit-transform:rotate(0deg);
+				}
+			}
+			#alert{
+				height: 11.15rem;
+				background: url(img/fail_alert.png) no-repeat center;
+				-webkit-background-size: auto 100%;
+				margin-top: 6.5rem;
+				overflow: hidden;
+			}
+			#alert .msg{
+				width: 7rem;
+				margin: 1.8rem auto 0;
+			}
+			.time{
+				margin-top: 1.3rem;
+				font-size: .6rem;
+				text-align: center;
+				color: #fff699;
+			}
+			.time span{
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ani_1">
+			<img src="img/rabbit_1.png" class="rabbit_1"/>
+			<img src="img/lantern.png" class="lantern"/>	
+		</div>
+		<div id="alert">
+			<img src="" class="msg"/>
+			<p class="time"></p>
+		</div>
+		<p id="batch" style="position: fixed;bottom: 2%;text-align: center;width: 100%;font-size: 0.8rem;color: white;z-index: 100;"></p>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/publictip.js?v=2.0.1"></script>
+    <script src="/v/js/cfg.js?v=2.0"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+        var args = vge.urlparse(location.href),
+        	batch = document.getElementById("batch"),
+            earnTime = sessionStorage.earnTime,
+        	batchName = sessionStorage.batchName===undefined?'':sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch(bizcode) {
+        case '1'://二维码不存在
+        	$('.msg').attr('src','img/fail_tip_6.png');
+            break;
+        case '2'://二维码已被使用
+        	$('.msg').attr('src','img/fail_tip_2.png');
+        	if(sessionStorage.earnTime!=''){
+        		$('.time').html('扫码时间：<span>'+sessionStorage.earnTime+'</span>');
+        	}
+            break;
+        case '3'://二维码已过期(暂无此状态)
+        	$('.msg').attr('src','img/fail_tip_3.png?v=1');
+            break;
+        case '4'://活动未开始
+            $('.msg').attr('src','img/fail_tip_4.png');
+            batch.innerHTML = batchName+'<br />服务热线：15321413736';
+            break;
+        case '5'://活动已结束
+            $('.msg').attr('src','img/fail_tip_5.png?v=1');
+            break;
+        case '6'://二维码异常
+            $('.msg').attr('src','img/fail_tip_6.png');
+            break;
+        case '11':
+            $('.msg').attr('src','img/fail_tip_2.png');
+            break; 
+        case '17'://酒过期
+            $('.msg').attr('src','img/fail_tip_3.png');
+            break; 
+         case '18'://扫码专员
+         	$('.msg').css('display','none');
+            title_tip('尊敬的用户', '此码未被使用<br />活动批次：'+batchName, '我知道了');
+            break;    
+        case '-1'://系统升级中
+            $('.msg').attr('src','img/fail_tip_-1.png?v=1');
+            break;      
+        default:
+        	$('.msg').css('display','none');
+            title_tip('尊敬的用户', bizcode+':'+sessionStorage.msg, '我知道了');
+            break;
+        }
+        ini_wxshare(vge.hbqpappid);
+        wx.ready(function() {
+			$('#alert').on('click',function(){
+				wx.closeWindow();
+			});
+			function close(){
+				wx.closeWindow();
+			}
+        });
+    </script>
+</html>

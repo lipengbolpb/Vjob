@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>青花汾酒</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css?v=1.0.4"/>
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			#location,#fail{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: rgba(0,0,0,.7);
+				position: relative;
+			}
+			#location img{
+				display: block;
+				width: 12.9rem;
+				margin: 3rem auto;
+			}
+			#location p{
+				position: absolute;
+				width: 8rem;
+				height: 2rem;
+				left: 50%;
+				margin-left: -4rem;
+				top: 10.6rem;
+			}
+			#location span{
+				position: absolute;
+				width: 2rem;
+				height: 2rem;
+				left: 50%;
+				margin-left: -1rem;
+				top: 14.2rem;
+			}
+			#fail img{
+				display: block;
+				width: 12.9rem;
+				margin: 2rem auto;
+			}
+			#fail p{
+				position: absolute;
+				width: 8rem;
+				height: 2rem;
+				left: 50%;
+				margin-left: -4rem;
+				top: 16.3rem;
+			}
+			body.bg{
+				background:#fff url(/v/fjmall/img/qr-bg.png) no-repeat top left;
+				background-size: 100% 100%;
+				-webkit-background-size: 100% 100%;
+			}
+		</style>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?83f9ea786770450ffc9c3f1550f206b0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<div class="location" id="location" style="display: none;">
+			<img src="img/location.png" />
+			<p class="tosq"></p>
+			<span class="close"></span>
+		</div>
+		<div class="fail" id="fail" style="display: none;">
+			<img src="img/location2.png?v=1" />
+			<p class="close"></p>
+		</div>
+		<p id="info"></p>
+		<div id="toast" style="display: none;">
+			<div class="weui_mask_transparent"></div>
+			<div class="weui_toast">
+				<i class="weui_icon_toast"></i>
+				<p class="weui_toast_content">已完成</p>
+			</div>
+		</div>
+		<div class="screen">
+			<img src="img/screen.jpg" class="screen_pic"/>
+		</div>
+		<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+			<div class="weui_mask_transparent"></div>
+			<div class="weui_toast" style="width: 5.6em;min-height: 5.6em;margin-left: -2.8em;">
+				<div class="weui_loading">
+					<div class="weui_loading_leaf weui_loading_leaf_0"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_1"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_2"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_3"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_4"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_5"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_6"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_7"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_8"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_9"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_10"></div>
+					<div class="weui_loading_leaf weui_loading_leaf_11"></div>
+				</div>
+				<p class="weui_toast_content">数据加载中</p>
+			</div>
+		</div>
+
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="js/qr.js?v=1.1.7"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/screen.js?v=1.0.4" type="text/javascript" charset="utf-8"></script><script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+	<script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+</html>

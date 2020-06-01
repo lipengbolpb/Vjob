@@ -1,0 +1,788 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+
+div.shakeIco{
+	width:30%;
+	height: 30%;
+	position: absolute;
+	top: 38%;
+	left: 34%;
+	background: url('../img/shakeIco.png?v=1.0.2') no-repeat top left;
+	background-size: 100% auto;
+	z-index: 99;
+	opacity: 1;
+	transition:all 1s linear;
+	-webkit-transition:all 1s linear;
+}
+div.getcash{
+	width: 100%;
+	height: 100%;
+	background: url('../img/getcash.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 90%;
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+div.getcash img.logo{
+	display: block;
+	width:33%;
+	position: absolute;
+	left: 5%;
+	top: 4%;
+}
+div.getcash img.slogn{
+	display: block;
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 12%;
+}
+
+div.getcash img.leaves{
+	width:100%;
+	height:38%;
+	position: absolute;
+	bottom: 34%;
+	left: 0%;
+	z-index: 10;
+}
+div.getcash img.stem{
+	width:38%;
+	height:21%;
+	position: absolute;
+	bottom: 23%;
+	left: 28%;
+	z-index: 8;
+}
+div.getcash div.treeDown1{
+	width: 100%;
+	height: 30%;
+	position: absolute;
+	bottom: 0;
+	z-index: 6;
+	background: url('../img/treeDown1.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 100%;
+}
+div.getcash div.treeDown2{
+	width: 100%;
+	height: 27.5%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 8;
+	background: url('../img/treeDown2.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 100%;
+}
+div.getcash #iconHb1{
+	width:6%;
+	height:4%;
+	background: url('../img/icon-hb1.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 24%;
+	bottom: 40%;
+	z-index: 9;
+	transition:all 0.5s linear 1.6s;
+	-webkit-transition:all 0.5s linear 1.6s;
+}
+div.getcash #iconHb2{
+	width:6%;
+	height:4%;
+	background: url('../img/icon-hb2.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 16%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.4s;
+	-webkit-transition:all 0.5s linear 0.4s;
+}
+div.getcash #iconHb3{
+	width:7%;
+	height:3%;
+	background: url('../img/icon-hb3.png?v=1.0.2') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 51%;
+	bottom: 40%;
+	z-index: 9;
+	transition:all 0.5s linear 2s;
+	-webkit-transition:all 0.5s linear 2s;
+}
+div.getcash #iconBi1{
+	width:9%;
+	height:4%;
+	background: url('../img/icon-bi3.png?v=1.0.4') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 5%;
+	bottom: 43%;
+	z-index: 9;
+	transition:all 0.5s linear 1s;
+	-webkit-transition:all 0.5s linear 1s;
+}
+div.getcash #iconBi2{
+	width:9%;
+	height:4%;
+	background: url('../img/icon-bi3.png?v=1.0.4') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 35%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.7s;
+	-webkit-transition:all 0.5s linear 0.7s;
+}
+div.getcash #iconBi3{
+	width:9%;
+	height:4%;
+	background: url('../img/icon-bi3.png?v=1.0.4') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 65%;
+	bottom: 40%;
+	z-index: 9;
+	transition:all 0.5s linear 0.9s;
+	-webkit-transition:all 0.5s linear 0.9s;
+}
+div.getcash #iconBi7{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi4.png?v=1.0.5') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 25%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.9s;
+	-webkit-transition:all 0.5s linear 0.9s;
+}
+div.getcash #iconBi6{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi1.png?v=1.0.5') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 20%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 1.4s;
+	-webkit-transition:all 0.5s linear 1.4s;
+}
+div.getcash #iconBi8{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi5.png?v=1.0.5') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 80%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.5s;
+	-webkit-transition:all 0.5s linear 0.5s;
+}
+div.getcash #iconBi9{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi6.png?v=1.0.5') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 10%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.1s;
+	-webkit-transition:all 0.5s linear 0.1s;
+}
+div.getcash #iconBi10{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi7.png?v=1.0.5') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	bottom: 45%;
+	z-index: 9;
+	transition:all 0.5s linear 0.6s;
+	-webkit-transition:all 0.5s linear 0.6s;
+}
+div.getcash #iconBi4{
+	width:9.5%;
+	height:6.5%;
+	background: url('../img/icon-bi2.png?v=1.0.4') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 16%;
+	bottom: 42%;
+	z-index: 7;
+	transition:all 0.5s linear 1.7s;
+	-webkit-transition:all 0.5s linear 1.7s;
+}
+div.getcash #iconBi5{
+	width:8.5%;
+	height:5.5%;
+	background: url('../img/icon-bi2.png?v=1.0.4') no-repeat top left;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 73%;
+	bottom: 45%;
+	z-index: 7;
+	transition:all 0.5s linear 1.2s;
+	-webkit-transition:all 0.5s linear 1.2s;
+}
+
+div.getcash img.footer{
+	width: 100%;
+	height: 32%;
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+}
+/* 摇钱树动画类名 */
+.iconHb1{
+	transform:translateY(600%);
+	-webkit-transform:translateY(600%);
+}
+.iconHb2{
+	transform:translateY(680%);
+	-webkit-transform:translateY(680%);
+}
+.iconHb3{
+	transform:translateY(800%);
+	-webkit-transform:translateY(800%);
+}
+.iconBi1{
+	transform:translateY(600%);
+	-webkit-transform:translateY(600%);
+}
+.iconBi2{
+	transform:translateY(750%);
+	-webkit-transform:translateY(750%);
+}
+.iconBi3{
+	transform:translateY(600%);
+	-webkit-transform:translateY(600%);
+}
+.iconBi4{
+	transform:translateY(330%);
+	-webkit-transform:translateY(330%);
+}
+.iconBi5{
+	transform:translateY(425%);
+	-webkit-transform:translateY(425%);
+}
+.iconBi6{
+	transform:translateY(460%);
+	-webkit-transform:translateY(460%);
+}
+.iconBi7{
+	transform:translateY(425%);
+	-webkit-transform:translateY(425%);
+}
+.iconBi8{
+	transform:translateY(550%);
+	-webkit-transform:translateY(550%);
+}
+.iconBi9{
+	transform:translateY(550%);
+	-webkit-transform:translateY(550%);
+}
+.iconBi10{
+	transform:translateY(500%);
+	-webkit-transform:translateY(500%);
+}
+
+@media only screen and (max-device-height:480px ){
+	.footer{
+		height: 35%;
+	}
+	#hb{
+		left: 24%;
+		width:50%;
+		top: 25%;
+	}
+	#slogn{
+		width: 80%;
+		margin:0 auto;
+	}
+}
+
+div.mark{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 100;
+	text-align: center;
+}
+
+/*签到界面显示按钮*/
+
+ul,li{
+	list-style: none;
+}
+div.mark #sign-bg{
+	position: absolute;
+	left: 12.5rem;
+	top: 0.65rem;
+	width: 1.75rem;
+	z-index: 1000001;
+	display: none;
+}
+div.mark #sign-bg img.Unclaimed,img.receive{
+	width: 100%;
+}
+div.mark #sign-bg img.star{
+	position: absolute;
+	right: -2.2rem;
+	bottom: -1.5rem;
+	animation: star1 .8s infinite alternate;
+}
+@-webkit-keyframes star1{
+	0%{opacity:0.5;-webkit-transform: scale(0.8);}
+	100%{opacity:1;-webkit-transform: scale(1.1);}
+}
+
+
+#sign{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 9999999999999999;
+	overflow-x: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#sign div.content{
+	background: url('../img2/bg.png') no-repeat left top;
+	width:13.7rem;
+	margin:0.5rem auto 1rem;
+	-webkit-background-size: 100%;
+	padding-top: 6.3rem;
+	text-align: center;
+}
+#sign div.content #progress_box{
+	text-align: center;
+}
+#sign div.content #progress_box div.progress1{
+	display: inline-block;
+	width: 7.8rem;
+	height: 0.5rem;
+	background: url(../img2/progress.png) no-repeat left top;
+	-webkit-background-size: 100%;
+}
+#sign div.content #progress_box div.progress1 #progress{
+	width: 0rem;
+	height: 0.5rem;
+	background: url(../img2/progress-bg.png) repeat-x left top;
+	-webkit-background-size:auto 0.5rem;
+	-webkit-border-radius: 0.25rem;
+}
+#sign div.content #progress_box span{
+	color: #971d00;
+	font-size:0.56rem ;
+}
+#sign div.content ul{
+	text-align: center;
+}
+#sign div.content ul li{
+	display: inline-block;
+	color: #971d00;
+	font-size: .5rem;
+	width: 1.25rem;
+}
+#sign div.content #check_box li{
+	background: url(../img2/lattice.png) no-repeat center;
+	height: 1.15rem;
+	-webkit-background-size: 1.15rem;
+}
+#sign div.content #check_box li span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 0.2rem center;
+	-webkit-background-size: 1.1rem auto;
+}
+#sign div.content div.cash-bg{
+	overflow: hidden;
+	padding:0.5rem 0; 
+	margin: 0 auto;
+	width: 8.1rem;
+	text-align: center;
+	position: relative;
+	border-bottom: 1px #ccc dashed;
+}
+#sign div.content div.cash-bg img.cash-bg{
+	width: 4.4rem;
+}
+
+#sign div.content div.cash-bg img.days{
+	position: absolute;
+	width: 3.2rem;
+	left:2.5rem;
+	top: 4rem;
+}
+#sign div.content div.cash-bg img.zhang{
+	width: 3.35rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.67rem;
+	top: 4.5rem;
+}
+#sign div.content div.cash-bg p{
+	position: absolute;
+	top: 0.8rem;
+	font-size: 0.56rem;
+	color: #a53823;
+	width: 100%;
+}
+
+#sign div.content div.cash-bg p span{
+	font-size: 1rem;
+}
+#sign div.content h3{
+	font-size: 0.6rem;
+	padding: 0.2rem 0;
+}
+#sign div.content p.active{
+	font-size: 0.55rem;
+	text-align: left;
+	margin: -0.5rem auto 0;
+	-webkit-transform:scale(0.8);
+	color: #898989;
+}
+
+
+div.mark div.pig{
+	width: 88%;
+	position: relative;
+	top: 0;
+	left: 6%;
+}
+div.mark div.pig div.hand{
+	width: 100%;
+	height:5.05rem;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0%;
+	z-index: 2;
+	display: none;
+}
+div.mark div.pig div.pig_pic{
+	position: absolute;
+	top: 1.05rem;
+	width: 100%;
+	padding-top: 3.3rem;
+	padding-bottom: 1rem;
+	/*background: url(../img/light.png?v=1.0.2) no-repeat center 0.3rem;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;*/
+	z-index: 1;
+}
+#ro_light{
+	position: absolute;
+	top: 1.05rem;
+	width: 100%;
+	padding-top: 3.3rem;
+	padding-bottom: 1.2rem;
+	background: url(../img/light.png?v=1.0.2) no-repeat center 0.3rem;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	animation: jingys 6s linear infinite;
+	-webkit-animation: jingys 6s linear infinite;
+	transform-origin: 50% 52%;
+	-webkit-transform-origin: 50% 52%;
+	-webkit-animation-play-state: running;
+}
+@-webkit-keyframes jingys{
+	0%{
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
+div.mark div.pig div.pig_pic img.pig{
+	width: 88%;
+	position: absolute;
+	top: 3.3rem;
+	left: 6%;
+	z-index: 1;
+	/*opacity: 0;*/
+}
+div.mark div.pig div.pig_pic div.pic_box{
+	width: 100%;
+	height: 100%;
+	background: url(../img/pig_hb.png?v=1.0.2) no-repeat bottom;
+	background-size: 88% auto;
+	-webkit-background-size: 88% auto;
+	position: relative;
+	display: none;
+}
+div.mark div.pig div.pig_pic div.pic_box img{
+	height: 86%;
+	position: absolute;
+}
+div.mark div.pig div.pig_pic div.pic_box img.pic_lf{
+	top: 0;
+}
+div.mark div.pig div.pig_pic div.pic_box img.pic_rgt{
+	top: 1%;
+}
+#pic_lf,#pic_rgt{
+	transition: all 0.1s 0.2s;
+	-webkit-transition: all 0.1s 0.2s;
+}
+#gold-coin{
+	left: 30%;
+	top: 0;
+	transition-delay: 0.2s;
+	-webkit-transition-delay: 0.2s;
+}
+div.mark div.pig div.pig_pic div.hmark{
+	width: 64.5%;
+	height: 0;
+	position: absolute;
+	bottom: 2.8rem;
+	left: 2.05rem;
+	color: #ffffff;
+	border-top: 1px #FFFFFF dashed;
+	background: url(../img/mark-pig.png?v=1.0.2) no-repeat bottom;
+	background-size: 9.1rem auto;
+	-webkit-background-size: 9.1rem auto;
+	z-index: 2;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+div.mark div.pig div.pig_pic div.hmark span{
+	font-size: 0.8rem;
+	font-weight: 400;
+	position: absolute;
+	left:100% ;
+	top: -0.8rem;
+}
+
+div.mark div.pig div.msg{
+	position: absolute;
+	top: 6rem;
+	width: 100%;
+	z-index: 5;
+	color: #e70014;
+}
+div.mark div.pig div.msg h1{
+	font-size: 0.7rem;
+	font-weight: 400;
+	line-height: 0.8rem;
+}
+div.mark div.pig div.msg h1 span{
+	font-weight: 900;
+}
+div.mark div.pig div.msg p{
+	font-size: 1rem;
+}
+div.mark div.pig div.msg p span{
+	font-size: 1.4rem;
+	font-weight: bold;
+	line-height: 1.8rem;
+}
+div.mark div.pig div.toast{
+	padding: 0.6rem 0.5rem 1.875rem 0.65rem;
+	width:4.675rem;
+	height: 1.775rem;
+	background: url(../img/frame.png?v=1.0.2) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	position: absolute;
+	left: 63.6%;
+	top: 3.15rem;
+	z-index: 200;
+}
+div.mark div.pig div.toast img{
+	display: block;
+	width: 100%;
+}
+#hammer{
+	position: absolute;
+	width: 4.45rem;
+	top: 1.25rem;
+	left: 2.55rem;
+	z-index: 10;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	/*display: none;*/
+}
+.hammer{
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	animation: shake 2s linear infinite;
+	animation-delay: 1.5s;
+	-webkit-animation: shake 2s linear infinite;
+	-webkit-animation-delay: 1.5s;
+}
+.hammer1{
+	transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	transform-origin: 2.7rem 4.7rem;
+	-webkit-transform-origin: 2.7rem 4.7rem;
+}
+.hammer2{
+	
+}
+@-webkit-keyframes shake{
+	0%,10%,20%,40%,100%{ -webkit-transform:rotate(0); -webkit-transform-origin:50% 50%;}
+	5%,25%{ -webkit-transform:rotate(15deg); -webkit-transform-origin:50% 50%;}
+	15%,35%{ -webkit-transform:rotate(-15deg); -webkit-transform-origin:50% 50%;}
+}
+
+
+#hand{
+	position: absolute;
+	width:2.5rem;
+	left: 42.7%;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+img.hand{
+	top: -1rem;
+}
+img.hand1{
+	top: 0;
+}
+div.mark div.title{
+	width: 90%;
+	top: 60%;
+	left: 5%;	
+	position: absolute;
+}
+div.mark div.title p.tip{
+	padding: 0.2rem 0.67rem 0.7rem 1.16rem;
+	font-size: 0.6rem;
+	color: #FFFFFb;
+	margin-bottom: 0.1rem;
+	text-align: left;
+} 
+div.mark div.title p.tip{
+	padding: 0.2rem 0.67rem 0.7rem 1.16rem;
+	font-size: 0.6rem;
+	color: #FFFFFb;
+	margin-bottom: 0.1rem;
+	text-align: left;
+} 
+div.mark div.title p.tip span.wxtip{
+	display: inline-block;
+	padding-left: 0.8rem;
+	margin-left: -0.8rem;
+	background: url(../img/clock.png?v=1.0.2) no-repeat left;
+	-webkit-background-size: auto 80%;
+	background-size: auto 80%; 
+}
+div.mark div.title input.tomybag{
+	width: 5.75rem;
+	border: 0;
+	background: #ffed67;
+	height: 1.5rem;
+	color: #f49213;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.8rem;
+	font-size: 0.65rem;
+}
+div.mark div.title p.rule{
+	margin-top: 1rem;
+}
+@media only screen and (max-device-height: 480px) {
+	div.mark div.title{
+		width: 90%;
+		top: 65%;
+		left: 5%;	
+		position: absolute;
+	}
+	div.mark div.title p.tip{
+		padding: 0.2rem 0.67rem 0.5rem 1.16rem;
+		font-size: 0.6rem;
+		color: #FFFFFb;
+		margin-bottom: 0.1rem;
+		text-align: left;
+	} 
+	div.mark div.title p.tip{
+		padding: 0.2rem 0.67rem 0.7rem 1.16rem;
+		font-size: 0.6rem;
+		color: #FFFFFb;
+		margin-bottom: 0.1rem;
+		text-align: left;
+	} 
+	div.mark div.title p.tip span.wxtip{
+		display: inline-block;
+		padding-left: 0.8rem;
+		margin-left: -0.8rem;
+		background: url(../img/clock.png?v=1.0.2) no-repeat left;
+		-webkit-background-size: auto 80%;
+		background-size: auto 80%; 
+	}
+	div.mark div.title input.tomybag{
+		width: 5.75rem;
+		border: 0;
+		background: #ffed67;
+		height: 1.5rem;
+		color: #f49213;
+		border-radius: 0.5rem;
+		-webkit-border-radius: 0.5rem;
+		margin-top: 0.2rem;
+		margin-bottom: 0.6rem;
+		font-size: 0.65rem;
+	}
+	div.mark div.title p.rule{
+		margin-top: 0.6rem;
+	}
+}
+div.mark div.title p.rule a{
+	color: #FFFFFF;
+	font-size: 0.6rem;
+	padding:0 0.5rem;
+}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+}
+
+div.wxmark img{
+	width: 100%;
+}
+#zajizhu{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}

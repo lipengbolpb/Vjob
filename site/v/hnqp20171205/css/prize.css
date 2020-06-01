@@ -1,0 +1,470 @@
+@charset "utf-8";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('../img/bg.png') repeat top left;
+    text-align: center;
+    font-family: '微软雅黑';
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+.get {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: none;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+    width: 85%;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+    width: 20%;
+}
+
+.record {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+    top: 0.5rem;
+}
+
+.couplet {
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    top: 6.5rem;
+}
+
+.get .drum {
+    position: absolute;
+    top: 10rem;
+    left: 25%;
+    width: 50%;
+}
+
+#copyright {
+    position: absolute;
+    top: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #d8cc93;
+    font-size: 0.5rem;
+}
+
+.get .slogan {
+    position: absolute;
+    width: 80%;
+    top: 4rem;
+    left: 10%;
+}
+
+.get .ck {
+    position: absolute;
+    top: 16rem;
+    left: 25%;
+    width: 50%;
+    height: 2.2rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #f1d35a;
+    color: #ca0013;
+    font-size: 0.8rem;
+}
+
+.get .notice {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.5rem;
+    text-align: center;
+    position: absolute;
+    top: 20rem;
+}
+
+.get .link {
+    position: absolute;
+    top: 22.5rem;
+    left: 30%;
+    width: 40%;
+    font-size: 0.55rem;
+    margin-bottom: 1rem;
+}
+
+.get .link a:nth-of-type(1) {
+    float: left;
+    color: #fff699;
+    text-decoration: underline;
+}
+
+.get .link a:nth-of-type(2) {
+    float: right;
+    color: #fff699;
+    text-decoration: underline;
+}
+
+.cash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: none;
+}
+
+.cash .slogan {
+    width: 70%;
+    position: absolute;
+    top: 4rem;
+    left: 15%;
+}
+
+.cash .explain {
+    width: 80%;
+    /* margin: 1rem auto 0; */
+    overflow: hidden;
+    position: absolute;
+    top: 15rem;
+    left: 10%;
+}
+
+.cash .explain .title {
+    width: 22%;
+    float: left;
+    padding-top: 0.1rem;
+}
+
+.cash .explain .title  p {
+    background-color: #feda0c;
+    color: #b20000;
+    font-size: 0.6rem;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.cash .explain .content {
+    width: 75%;
+    float: right;
+    margin-top: -0.1rem;
+    margin-right: -0.2rem;
+    padding-top: 0.1rem;
+}
+
+.cash .explain .content p:nth-of-type(1) {
+    color: #fff8af;
+    font-size: 0.55rem;
+    text-align: left;
+}
+
+.cash .explain .content p:nth-of-type(2) {
+    margin-top: 0.3rem;
+    color: #ffffff;
+    font-size: 0.55rem;
+    text-align: left;
+}
+
+.cash .explain a {
+    font-size: 0.55rem;
+    color: #fff8af;
+    margin: 5rem auto 0;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.cash .explain .border {
+    width: 100%;
+    display: block;
+    margin: 0.8rem auto 0;
+}
+
+.cash .warning {
+    width: 80%;
+    height: 2.5rem;
+    /* margin: 1rem auto 0; */
+    position: absolute;
+    top: 22.5rem;
+    left: 10%;
+    background: url(../img/warning.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.cash .warning .notice {
+    width: 7%;
+    float: left;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+.cash .warning p {
+    float: right;
+    font-size: 0.45rem;
+    color: #ca0013;
+    width: 86%;
+    line-height: 0.8rem;
+    margin-top: 0.3rem;
+    text-align: left;
+}
+
+.cash .msg {
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* margin: 0.8rem auto 0; */
+    position: absolute;
+    top: 25.5rem;
+    left: 10%;
+}
+
+.cash .msg input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    float: left;
+    border-bottom: 1px solid #cccccc;
+    background: url('../img/input-icon1.png') no-repeat;
+    background-position: 0.5rem;
+    font-size: 0.7rem;
+}
+input {
+    font-size: 0.7rem;
+    color: #333333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+    text-indent: 2em;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+.cash .msg .code,
+.yz {
+    border: none;
+}
+
+.cash .msg .code {
+    width: 65%;
+}
+
+.cash .msg .yz {
+    width: 34%;
+    border-left: 1px solid #cccccc;
+    color: #ca0013;
+    border-bottom: none;
+    background: none;
+}
+
+.cash .tj {
+    width: 50%;
+    height: 2.2rem;
+    border-radius: 8px;
+    background-color: #f1d35a;
+    color: #ca0013;
+    border: none;
+    outline: none;
+    /* margin: 1.5rem auto 0; */
+    display: block;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 37rem;
+    left: 25%;
+}
+
+.cash .alert {
+    color: #ffffff;
+    font-size: 0.5rem;
+    /* margin: 0.8rem auto 0; */
+    line-height: 0.8rem;
+    width: 85%;
+    display: block;
+    position: absolute;
+    top: 40rem;
+    left: 10%;
+    text-align: left;
+}
+
+.cash .link {
+    width: 60%;
+    /* margin: 1rem auto 0; */
+    position: absolute;
+    top: 45rem;
+    left: 20%;
+    margin-bottom: 2rem;
+}
+
+.cash a {
+    font-size: 0.65rem;
+    color: #fff68f;
+    text-decoration: underline;
+}
+
+.cash .rule {
+    float: left;
+}
+
+.cash .secret {
+    float: right;
+}
+
+.cash .change{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+    display: none;
+}
+
+.cash .change .change-content{
+    width:70%;
+    margin:3rem auto 0;
+    background-color: #c50012;
+    border-radius:8px;
+    padding:0.5rem 1rem;
+}
+.cash .change .change-content p{
+    color:#ffffff;
+    text-align:center;
+    font-size:0.5rem;
+}
+.cash .change .change-content ul{
+    margin-top:0.5rem;
+    width:100%;
+}
+.cash .change .change-content ul li{
+    color:#ffffff;
+    text-align:left;
+    font-size:0.5rem;
+}
+.cash .change .close{
+    width:10%;
+    display:block;
+    margin:1rem auto;
+}
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.repcash{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rbga(0,0,0,0.7);
+    display: none;
+    overflow: auto;
+}
+.repcash img{
+    width: 50%;
+    /* display: block; */
+    /* margin: 3rem auto 0; */
+    position: absolute;
+    top: 2rem;
+    left: 25%;
+}
+.repcash p{
+    width:100%;
+    text-align:center;
+    font-size:0.7rem;
+    color:#ffffff;
+    position: absolute;
+    top: 20rem;
+}
+.repcash .getted{
+    top: 13rem;
+}

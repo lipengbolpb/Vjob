@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>青岛啤酒激情银麦</title>
+        <script>//百度统计
+            
+        </script>
+        <meta name="format-detection" content="telephone=no" />
+ 		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.25">
+ 		<script src="js/rem.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!-- 获得红包 -->
+		<img src="img/logo.png" class="logo">
+		<div id="cash">
+			<img src="img/slogan.png?v=1" class="slogan">
+			<div class="food">
+				<img src="img/shrimp1.png" class="shrimp">
+				<img src="img/sausage.png" class="sausage">
+				<img src="img/chips.png" class="chips">
+				<img src="img/cup.png" class="cup">
+				<img src="img/hb.png" class="hb">
+				<img src="img/cup_mask.png" class="cupmask">
+				<img src="img/skewer.png" class="skewer">
+				<img src="img/bean.png" class="bean">
+				<img src="img/groundnut.png" class="groundnut">
+				<img src="img/soy.png" class="soy">
+				<img src="img/bear.png" class="bear">
+			</div>
+		</div>
+		<!-- 活动提示 -->
+		<div class="alert" id="alert">
+			<a href="javascript:;" class="qrClose">×</a>
+			<img src="img/qr_bottle.png" class="qrBt">
+			<img src="img/qr_title.png" class="qrTitle">
+			<img src="img/qr_heart.png" class="qrHerat">
+		</div>
+		<!-- 签到 -->
+		<div id="sign">
+			<div class="sign_alert">
+				<div class="close close_1"></div>
+				<p class="days"></p>
+			</div>
+			<div class="content">
+				<div class="close"></div>
+				<img src="/v/sxqp20170926/img2/sign_title.png" class="sign_title"/>
+				<div id="progress_box">
+					<div class="progress1">
+						<p id="progress"></p>
+					</div>
+					<span class="progress"></span>
+				</div>
+				<ul id='week'>
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul id="check_box">
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+				</ul>
+				<div class="sign_cash">
+					<p id="weekSignEarnMoney"></p>
+				</div>
+				<p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+			</div>
+			<div class="getSignCash">
+				<p class="weekSignEarnMoney"></p>
+			</div>
+		</div>
+		<!-- 签到按钮 -->
+		<div id="sign_logo" class="sign_logo">
+			<img src="/v/ymqp/img2/light.png" class="light"/>
+		</div>
+		<!-- 遮罩层 -->
+		<div id="mask">
+			<img src="img/alert.png" class="alert">
+		</div>
+		<!-- 打开红包 -->
+		<div id="get">
+            <img src="img/game.png" class="game">
+			<img src="img/loading.gif" class="loading">
+			<div class="hbbox">
+				<img src="img/repcash.png" class="repcash">
+				<img src="img/hb_get.png" class="hb">
+				<p id="title"><span>￥</span><span id="money"></span><span>元</span></p>
+				<img src="" class="pic">
+			</div>
+			<input type="button" value="存入我的零钱包" id="btn">
+			<p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，<br>不足1元的红包我们为您贴心准备了零钱包功能</p>
+			<a href="javascript:;" class="rule">活动规则</a>
+		</div>
+		<p id="copyright" style="color:#ffe467;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">技术支持：V积分 · 鼎川物联Copyright 2012-2017</p>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=2.0.6"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/wx/jsdk.js?v=3"></script>
+    <script src="js/getcash.js?v=1.4.6"></script>
+    <script src="/static/js/font.js"></script>
+	<script>
+        ini_wxshare(vge.ymqpappid);
+        // 隐藏微信右上角菜单
+        wx.ready(function() {
+            wx.hideOptionMenu();
+        });
+    </script>
+</html>

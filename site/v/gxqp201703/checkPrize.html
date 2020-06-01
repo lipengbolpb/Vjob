@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<script src="/v/gxqp201703/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?75cd71d976264f5d5c9fed96c4f5da77";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background-color: #00974A;
+				background-image: url(img/prize-bg.png);
+				-webkit-background-size: 100% auto;
+				background-position: left top;
+				background-repeat: no-repeat;
+			}
+			.check{
+				width: 100%;
+				height: 100%;
+				overflow-x: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 9999;
+				background-color: rgba(0,0,0,.7);
+			}
+			#geted{
+				width: 12rem;
+				position: absolute;
+				left: 50%;
+				margin-left: -6rem;
+				top: 5rem;
+			}
+			#tip_1{
+				margin-top: 20rem;
+				text-align: center;
+			    font-size: 0.6rem;
+			    color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="check">
+			<img src="img/geted.png" id="geted"/>
+			<p id="tip_1">被扫时间：</p>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=11"></script>
+	<script src="/static/js/vve/11tool.js?v=11"></script>
+	<script src="/static/js/vve/20ajx.js?v=12"></script>
+	<script src="/v/js/cfg.js?v=11" type="text/javascript" charset="utf-8"></script>
+  	<script src="/v/js/publictip.js?v13"></script>
+  	<script src="/static/js/vve/idcard.js?v6"></script>
+	<script src="/v/gxqp201703/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v13"></script>
+	<script>
+		// 隐藏微信右上角菜单
+		document.getElementById("tip_1").innerHTML = '被扫时间：'+sessionStorage.earnTime;
+		if(sessionStorage.grandPrizeType=='0'){//0游轮/1金元宝2银元宝
+			document.getElementsByTagName('body').style.backgroundImage = 'url(/v/img/bag-bg.png)';
+		}else if(sessionStorage.grandPrizeType=='1'){
+			document.getElementsByTagName('body').style.backgroundImage = 'url(/v/img/prize-bg.png)';
+		}else if(sessionStorage.grandPrizeType=='2'){
+			document.getElementsByTagName('body').style.backgroundImage = 'url(/v/img/prize2-bg.png)';
+		}else{
+			document.getElementsByTagName('body').style.backgroundImage = 'url(/v/img/bag-bg.png)';
+		}
+		wx.ready(function() {
+			wx.hideOptionMenu();
+		});
+		var height = document.documentElement.clientHeight || document.body.clientHeight;
+		if (height !== "undefined"){
+			document.getElementsByTagName("body")[0].style.height = height + "px";
+		}
+	</script>
+</html>

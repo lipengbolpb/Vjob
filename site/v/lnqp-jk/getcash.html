@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒辽宁</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.0.9"/>
+		<link rel="stylesheet" type="text/css" href="css/fail.css?v=1.0.1"/>
+	</head>
+	<body>
+		<div id="cash">
+			<p id="rule">活动规则</p>
+			<img src="/v/lnqp-jk/img/slogan.png" class="slogan"/>
+			<p class="currentMoney">恭喜您获得<i class="wave">0.00</i>元扫码红包</p>
+			<div id="card_box">
+				<img src="/v/lnqp-jk/img/index.png" class="index"/>
+			</div>
+			<div class="fromgzh">
+				<img src="/v/lnqp-jk/img/cash.png"/>
+			</div>
+			<div class="btn-group">
+				<input type="button" id="qpActive" value=""/>
+				<input type="button" id="mycard" value=""/>
+				<input type="button" id="center" value=""/>
+			</div>
+		</div>
+		<div id="active">
+			<img src="/v/lnqp-jk/img/active.png?v=1"/>
+		</div>
+		<div id="content" style="display: none;position: absolute;top: 0;left: 0;z-index: 1;">
+			<div id="fail">
+				<div>
+					<img src="/v/lnqp-jk/img/fail-tip-2.png" class="h" />
+					<p class="fali_tip">您已扫过此码<br />扫码时间：<span></span></p>
+					<!--重复扫码-->
+				</div>
+			</div>
+			<p class="icon-close"></p>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=3.0.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.1.6" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hwb = document.documentElement.clientHeight/document.documentElement.clientWidth;
+		if(hwb>1.85){
+			$('body').addClass('screen');
+		}
+	</script>
+</html>

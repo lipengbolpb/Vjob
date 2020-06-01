@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>订单详情</title>
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/order-detail.css?v=4" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="title" id="title">
+      <span>累计货物：</span><span id="sum">12</span>
+    </div>
+    
+    <div class="content" id="content">
+      <ul class="box" id="box"></ul>
+    </div>
+    
+    <div class="order" id="order">
+    </div>
+
+    
+    <script type="template" id="tpl-li">
+        <li>
+          <span class="name"><%-skuName%></span>
+          <span class="count"><%-skuNum%>件</span>
+        </li>
+    </script>
+
+    <script type="template" id="tpl-order">
+    <div class="title"><span>订单信息</span></div>
+    <div class="code">订单编号：<sapn><%-orderNo%></sapn></div>
+    <div class="time">提交时间：<%-orderDate.substr(0,19)%></div>
+    <div class="shop">订货终端：<%-storeName%></div>
+    <div class>联系人：<%-contacts%></div>
+    <div class>联系方式：<%-contactMobile%></div>
+    </script>
+    
+    
+  </body>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="/static/js/ejs.min.js"></script>
+  <script src="/static/js/wx/jsdk.js?v12"></script>
+  <script src="/static/js/vve/10core.js?v=18"></script>
+  <script src="/static/js/vve/11tool.js?v=23"></script>
+  <script src="/static/js/vve/20ajx.js?v18"></script>
+  <script src="/static/js/vve/22nav.js?v=1"></script>
+  <script src="/v/js/cfg.js?v=1"></script>
+  <script src="js/order-detail.js?v=3"></script>
+</html>

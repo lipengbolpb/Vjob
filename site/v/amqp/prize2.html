@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>银麦啤酒敢为明天</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/prize.css?v=2.1">
+</head>
+
+<body>
+    <div class="repcash">
+        <img src="img/geted.png" class="getted">
+        <p>扫码时间：
+            <span class="earnTime"></span>
+        </p>
+    </div>
+    <div class="get">
+        <img src="img/prize-logo.png" class="logo">
+        <img src="img/prize_slogan5.png?v=2" class="slogan">
+        <input type="button" value="立即兑奖" class="ck">
+        <p class="notice">温馨提示，点击"立即兑奖"填写兑奖信息吧！</p>
+        <img src="img/prize-footer.png" class="footer">
+        <img src="img/beer.png" class="bear">
+    </div>
+    <div class="info">
+        <img src="img/prize-logo.png" class="logo">
+        <img src="img/prize_slogan6.png?v=2" class="slogan">
+        <div class="explain">
+            <div class="title">
+                <p>金喜奖</p>
+            </div>
+            <div class="content">
+                <p>金喜奖丨金球1枚（价值3999元，共4个，中奖率0.0001%）</p>
+                <p style="margin-left: -3rem;">活动区域：德州、聊城、济宁(不包括微山县)
+                    <br>活动截止时间：2018年11月11日
+                    <br>兑奖截止时间：2018年11月30日
+                	<br>活动备注：24小时内未输入兑奖信息视为自动放弃奖项</p>
+            </div>
+            <a href="javascript:;" class="ckff">查看兑奖方法>></a>
+            <img src="img/strcode-border.png" class="border">
+        </div>
+        <div class="warning">
+            <img src="img/prize-notice.png" class="notice">
+            <p>温馨提示：请尽快拨打18954959017核实中奖者身份信息，以下信息须完整填写信息，否则无法兑奖。</p>
+        </div>
+        <div class="msg">
+            <input type="text" placeholder="姓名" class="name">
+            <input style="display: none;" type="text" placeholder="输入身份证号" class="idcard" maxlength="18">
+            <input type="text" placeholder="输入手机号" class="tel" maxlength="11">
+            <input type="text" placeholder="验证码" class="code" maxlength="4">
+            <input type="button" value="获取验证码" class="yz">
+        </div>
+        <input type="button" value="提交" class="tj" id="btn">
+        <p class="alert">温馨提示：
+            <br>中奖者需提供完整的中奖瓶盖及中奖产品空瓶，以及个人身份证证复印件供我公司或我公司委托的第三方公司核实确认。</p>
+        <div class="link">
+            <a href="javascript:;" class="rule">活动规则</a>
+            <!-- <a href="javascript:;" class="secret">隐私说明</a> -->
+        </div>
+        <img src="img/beer.png" class="bear">
+        <div class="change">
+            <div class="change-content">
+                <p>兑奖环节</p>
+                <ul>
+                    <li>中奖者携带中奖瓶盖，空瓶，身份证复印件2份及身份证原件，在兑奖截止日期内到达指定兑奖地点进行领取。具体地址联系方式会在消费者中奖并输入正确信息7日内，联系到消费者。</li>
+                    <li style="margin:0.5rem auto;">发放奖品，中奖者填写领奖单。</li>
+                </ul>
+                <p>注意事项：若遇不可抗力因素，本公司有权取消此活动；中奖者在兑奖过程中发生的任何费用，支出及奖品个人所得税由中奖者自行承担；奖品以实物为准，奖品图片仅供参考，我公司承诺所提供的奖品均为合格品；本次活动奖品不可兑换现金或作价销售。二维码因光线、网络、系统扫描摄像头等原因，可能存在个别扫码不成功情况，敬请谅解；活动详见扫码后网页活动告知。</p>
+            </div>
+            <img src="img/close.png" class="close">
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=5.0.0"></script>
+<script src="js/prize.js?v=3.1.0"></script>
+<script>
+    ini_wxshare(vge.amqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒辽宁</title>
+    <script src="/static/js/rem.js"></script>
+    <link rel="stylesheet" href="css/prize.css?v=1.40">
+</head>
+
+<body>
+    <div class="content">
+		<img src="img/logo.png" class="logo">
+		<img src="img/slogan.png" class="slogan">
+		<div class="disc_box">
+			<img src="img/disc.png" class="disc">
+			<img src="img/pointer.png" class="pointer">
+		</div>
+		<p class="tip">奖品以实物为准<br />关闭页面视为弃奖</p>
+		<img src="img/panda.png" class="panda">
+	</div>
+	<div class="alert">
+		<div class="result_box">
+			<p class="title">恭喜您获得</p>
+			<img src="" class="prize">
+		</div>
+		<p class="btn">立即领取</p>
+		<p class="tip">奖品以实物为准<br />关闭页面视为弃奖</p>
+		<p class="time"></p>
+	</div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=1.1.0"></script>
+<script src="js/prize.js?v=1.5.5"></script>
+<script>
+    ini_wxshare(vge.lnqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function() {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

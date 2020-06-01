@@ -1,0 +1,14 @@
+body{background: #F0EFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+.bag_box{padding-top: 40px;}
+.bag_img{overflow: hidden; position: relative;}
+.bag_box img:nth-child(1){float: left; width: 46%; margin-left: 30%;}
+.bag_box img:nth-child(2){float: left; width: 52%; margin: 18px 0 15px 24%;}
+.bag_img p{position: absolute; top: 36%; width: 40%; margin-left: 30%; color: #FCFE04; font-size: 13px;}
+.bag_img p span{ font-size: 34px; font-weight: bold;}
+.bag_txt{color: #A6A29F; font-size: 14px;}
+.bag_txt span{color: #E75651;}
+#btn{width: 86%; margin-left: 7%; margin-top: 20px; height: 40px; line-height: 40px; color: #fff; background: #04BE01; font-size: 17px;/* border: 1px solid #2B982F;*/ border-radius: 5px;}
+.detail_box{padding-top: 18px; color: #333;}
+.detail_box p{line-height: 30px; font-size: 16px; margin: 0 10px; border-bottom: 1px solid #e5e5e5;}
+.detail_list{padding: 10px 6%;}
+.detail_list li{padding: 4px 0; line-height: 18px; font-size: 14px; text-align: left;}

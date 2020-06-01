@@ -1,0 +1,30 @@
+body{background: #F0EFF4; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+#all_notes .month_box{margin-top: 12px; background: #fff;}
+#all_notes .month_box .month_all{border-bottom: 1px solid #eee; overflow: hidden; font-size: 18px; color: #333; line-height: 45px; padding: 0 12px;}
+#all_notes .month_box .month_all p:nth-child(1){float: left;}
+#all_notes .month_box .month_all p:nth-child(2){float: right;}
+.month_notes{border-bottom: 1px solid #eee;}
+.month_notes li{border-bottom: 1px solid #eee; overflow: hidden; padding: 12px 0; font-size: 13px;}
+.month_notes li >div:nth-child(1){float: left; padding: 0 12px; text-align: left;}
+.month_notes li >div:nth-child(1) p:nth-child(1){line-height: 16px; margin-bottom: 10px; color: #444;}
+.month_notes li >div:nth-child(1) p:nth-child(2){line-height: 16px; color: #888;}
+
+.month_notes li >div:nth-child(2){float: right; padding: 0 12px; font-size: 12px; border-left: 1px solid #eee;}
+.month_notes li >div:nth-child(2) p:nth-child(1){font-size: 16px; line-height: 18px; color: #333; margin-bottom: 8px;}
+.month_notes li >div:nth-child(2) .cash_suc{color: #05BE00;}
+.month_notes li >div:nth-child(2) .cash_fail{color: #E9564F;}
+.month_notes li >div:nth-child(2) .cash_ing{color: #0DB0FF;}
+#more{color: #B5B5B5; font-size: 14px; line-height: 56px;}
+/*我的获奖记录页*/
+#all_notes .onedays{margin-top: 10px; background: #fff;}
+#all_notes .onedays:nth-child(1){margin-top: 0;}
+#all_notes .onedays .day_all{border-bottom: 1px solid #eee; overflow: hidden; font-size: 18px; color: #333; line-height: 42px; padding: 0 12px;}
+#all_notes .onedays .day_all p:nth-child(1){float: left;}
+#all_notes .onedays .day_all p:nth-child(2){float: right;}
+.day_notes{ padding: 6px 12px;}
+.day_notes li{ overflow: hidden; font-size: 14px; line-height: 31px; color: #888;}
+.day_notes li p:nth-child(1){float: left;}
+.day_notes li p:nth-child(2){float: right;}
+#my_more{color: #B5B5B5; font-size: 14px; line-height: 38px;}
+#s_loading{width: 100px; height: 100px; position: fixed; top: 32%; left: 50%; margin-left: -50px; border-radius: 5px; background: #000; opacity: 0.6; filter: alpha(opacity=60); display: none;}
+#s_loading img{width: 35%; padding-top: 30%;}

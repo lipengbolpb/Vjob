@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤湖南</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				font-family: "微软雅黑","Microsoft YaHei";
+			}
+			body{
+				background:#303e63 url(/v/csqp20170920/img/bg_2.png) no-repeat left top;
+				-webkit-background-size: 100% auto;
+			}
+			input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+			input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+			::-webkit-input-placeholder{
+			     color: #814900;
+			}
+			img{
+				display: block;
+			}
+			.repscan{
+				width: 4.7rem;
+				margin: 2.5rem auto 0;
+			}
+			.loading{
+				width: 2rem;
+				position: absolute;
+				left: 50%;
+				margin-left: -1rem;
+				top: 40%;
+				display: none;
+			}
+			p.time{
+				text-align: center;
+				font-size: .6rem;
+				color: #2a1202;
+				margin: 1rem auto 0;
+				line-height: 1rem;
+			}
+			p.time span{
+				color: #b20000;
+			}
+			p.time .current{
+				font-weight: bold;
+			}
+			#ani_2{
+				height: 12.8rem;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#ani_2 .rabbit_2{
+				position: absolute;
+				bottom: 2rem;
+				height: 1.55rem;
+				left: 50%;
+				margin-left: -.5rem;
+				visibility: hidden;
+				z-index: 1;
+			}
+			#ani_2 .cash_s{
+				width: .8rem;
+				position: absolute;
+				bottom: 2.5rem;
+				left: 50%;
+				margin-left: -.4rem;-webkit-transform-origin: bottom;
+				-webkit-animation: rabbit_2 linear 3s infinite;
+				visibility: hidden;
+				z-index: 2;
+			}
+			p.tip{
+				color: #c4c4c6;
+				font-size: .65rem;
+				text-align: center;
+				top: 14rem;
+			    z-index: 2;
+			    position: absolute;
+			    width: 100%;
+			}
+			#ani_2 .rabbit_4{
+				position: absolute;
+				bottom: 1.8rem;
+				height: 1.55rem;
+				left: 57%;
+				visibility: hidden;
+				z-index: 1;
+			}
+			#ani_2 .pic_box{
+				position: absolute;
+				width: 1rem;
+				overflow: hidden;
+				height: 0rem;
+				bottom: 3.1rem;
+				left: 53%;
+				visibility: hidden;
+			}
+			#ani_2 .pic_box img{
+				width: 100%;
+				position: absolute;bottom: 0;
+			}
+			@-webkit-keyframes rabbit_2{
+				15%,70%{
+					-webkit-transform:rotate(-25deg);
+				}
+				45%,90%{
+					-webkit-transform:rotate(25deg);
+				}
+				0%,100%{
+					-webkit-transform:rotate(0deg);
+				}
+			}
+			#btn{
+				position: absolute;
+				width: 100%;
+				bottom: 0rem;
+				background: url(img/button_5.png) no-repeat center;
+				-webkit-background-size:auto 100%;
+				height: 2.2rem;
+				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+				-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+				-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+				-o-tap-highlight-color:rgba(0, 0, 0, 0);
+				tap-highlight-color:rgba(0, 0, 0, 0);
+			}
+			#ani_2 .btn_box{
+				text-align: center;
+				position: absolute;
+				bottom: -5rem;
+				width: 100%;
+			}
+			#ani_2 .btn_box input{
+				width: 5.5rem;
+				height: 1.4rem;
+				background: #ff2e4d;
+				border: 0;
+				-webkit-border-radius: .35rem;
+				margin: 0 .6rem;
+				color: #fff;
+				font-size: .7rem;
+				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+				-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+				-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+				-o-tap-highlight-color:rgba(0, 0, 0, 0);
+				tap-highlight-color:rgba(0, 0, 0, 0);
+			}
+			p.rule_box{
+				position: absolute;
+				bottom: 20%;
+				width: 100%;
+				text-align: center;
+			}
+			p.rule_box a{
+				color: #fff;
+				text-decoration: underline;
+				padding: 0 2rem;
+				font-size: .5rem;
+				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+				-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+				-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+				-o-tap-highlight-color:rgba(0, 0, 0, 0);
+				tap-highlight-color:rgba(0, 0, 0, 0);
+			}
+			div.alert{
+				position: absolute;
+				z-index: 10;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background:#303e63 url(img/bg_3.png) no-repeat left top;
+				-webkit-background-size: 100% auto;
+				display: none;
+			}
+			div.alert img{
+				margin: 4.3rem auto 0;
+				width: 12.5rem;
+				-webkit-transform: translateX(.5rem);
+				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+				-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+				-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+				-o-tap-highlight-color:rgba(0, 0, 0, 0);
+				tap-highlight-color:rgba(0, 0, 0, 0);
+			}
+			.bottom_bg{
+				position: absolute;
+				bottom:0;
+				left: 0;
+				width: 100%;				
+			}
+			@media only screen and (max-height: 519px) {
+				#ani_2{
+					height: 11.5rem;
+				}
+				p.tip{
+					top: 13rem;
+				}
+			}
+			@media only screen and (max-height: 480px) {
+				#ani_2{
+					height: 11.5rem;
+				}
+				p.tip{
+					top: 13rem;
+				}
+			}
+			div.music{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/house.png" class="bottom_bg"/>
+		<img src="img/loading.gif" class="loading"/>
+		<div class="alert">
+			<img src="img/alert.png" class="tx_tip"/>
+		</div>
+		<img src="img/again.png" class="repscan"/>
+		<p class="time"></p>
+		<div id="ani_2">
+			<img src="img/rabbit_2.png" class="rabbit_2"/>
+			<img src="img/small_cash.png" class="cash_s"/>
+			<img src="img/rabbit_4.png" class="rabbit_4"/>
+			<div class="pic_box">
+				<img src="img/sleep.png" class="sleep"/>
+			</div>
+			<div id="btn"></div>
+			<div class="btn_box">
+				<input type="button" name="toBag" id="toBag" value="查看我的红包" />
+				<input type="button" name="" id="story" value="点击听故事" />
+			</div>
+		</div>
+		<p class="tip">温馨提示：累计金额超过1元可提现</p>
+		<p class="rule_box">
+			<a href="javascript:;" class="rule">活动规则</a>
+		</p>
+		<div class="music">
+			<audio src="" id="myaudio"></audio>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=1.1.1"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/repcash.js?v=1.0.5" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    ini_wxshare(vge.csqpappid);
+	    // 隐藏微信右上角菜单
+	    wx.ready(function() {
+	        wx.hideOptionMenu();
+	    });
+    </script>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>我的精酿生活</title>
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/rem.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.4.2">
+    <link rel="stylesheet" type="text/css" href="/static/css/weui.min.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f8e8f448c09ef3f0bf2e84ddad8e07d8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="active">
+        <img src="/v/qmbp/img/20200116.jpg" class="activeImg">
+        <img src="/v/fjqp-common3.0/img/close.png" class="activeClose">
+    </div>
+    <!-- 拆红包 -->
+    <!-- <div id="active">
+    	<img src="img/active20180614.jpg?v=1"/>
+    </div> -->
+    <div id="cash" class="cash">
+        <img src="img/logo.png" class="logo">
+        <img src="img/slogan.png" class="slogan">
+        <div class="hb">
+            <img src="img/gift-2.png" class="gift2">
+            <img src="img/bag.png" class="bag">
+            <img src="img/gift-1.png" class="gift1">
+            <img src="img/bar.png" class="bar">
+            <img src="img/coin-1.png" class="coin1">
+            <img src="img/coin-2.png" class="coin2">
+            <img src="img/open.png?v=2" class="open">
+        </div>
+        <p class="footer">技术支持:V积分·鼎川物联Copyright&copy;2012-2019</p>
+    </div>
+     <!-- 活动广告页 -->
+     <div class="jkAd">
+        <img src="img/jk/leftLight.png" alt="" class="light leftLight">
+        <img src="img/jk/rightLight.png" alt="" class="light rightLight">
+        <img src="img/jk/adToast.png?v=1.0.1" class="activeImg">
+        <img src="img/jk/close.png"   class="activeClose">
+    </div>
+    <!-- 获得集卡 -->
+    <div class="getCardToast">
+        <img src="img/jk/leftLight.png" alt="" class="light leftLight">
+        <img src="img/jk/rightLight.png" alt="" class="light rightLight">
+        <div class="toastWrap">
+            <img src="" alt="" class="card" id="card">
+            <img src="img/jk/know.png" alt="" class="iknowBtn btn">
+            <div class="tip">卡片已存入你的账户，请到“集卡活动”中查看</div>
+        </div>
+    </div>
+
+    <!-- 已打开/重复扫 -->
+    <div id="getted" class="getted">
+        <!-- 送酒上门按钮 -->
+        <img id="btn-to-home" src="img/btn-to-home-new.png">
+        <!-- 集卡入口 -->
+        <div class="enterJK" style="display: none;">
+            <img src="img/jk/enterJK.png" alt="" class="enter">
+            <img class="hand" src="img/jk/hand.png" alt="">
+        </div>
+        <img src="img/loading.gif" class="loading">
+        <img src="img/logo.png" class="logo">
+        <img src="img/getted-bag.png" class="gettedBag">
+        <img src="img/canvas-bg.png?v=1" class="cvsBg">
+        <p class="earn">
+            <span class="title">恭喜你获得</span>
+            <br>¥
+            <span id="money"></span>元</p>
+        <!-- 优惠券 -->
+        <div class="coupon">
+            <div class="couponTitle">
+                <div class="couponLeft">
+                    <span>￥</span><span class="couponMoney"></span>
+                </div>
+                <div class="couponRight">
+                    <div class="couponName"></div>
+                    <div class="couponLimit"></div>
+                </div>
+            </div>
+            <div class="proText"></div>
+            <!-- <div class="couponText"><span>券码：</span><input type="text" value="" class="couponMain" id="couponMain"></div> -->
+            <div class="couponText"><span>券码：</span><span class="couponMain"></span></div>
+        </div>
+        <canvas id="cardCanvas"></canvas>
+        <img src="img/getted-bag-mask.png" class="gettedMask">
+        <input type="button" value="" id="btn">
+        <div class='ewmBox'>
+            <div id="QRCode"></div>
+            <div id="QRCodeNone" class="" style="display:none"></div>
+            <div class='qrtip'>长按识别二维码，领取优惠券</div>
+        </div>
+        <a class="link"></a>
+        <p class="notice"></p>
+        <p class="earnTime"></p>
+    </div>
+    <!-- 提现遮罩层 -->
+    <div id="mask" class="mask">
+        <img src="img/logo.png" class="logo">
+        <img src="img/alert.png" class="alert">
+        <input type="button" value="查看红包余额" class="ck">
+    </div>
+
+    <!-- toast -->
+    <div id="toast" style="display: none; width:5.6em;height:5.6em;font-size: 16px;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast"></i>
+            <p class="weui_toast_content">已完成</p>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=1.0.7"></script>
+<script src="js/publictip.js?v=1.0.2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/v/jlqp-common/js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getcash.js?v=1.5.4"></script>
+<script src="/static/js/font.js"></script>
+
+<script type="text/javascript" src="js/qrcode.js?v=1.0.0"></script>
+<script>
+    // ini_wxshare(vge.qmbpappid);
+    // // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+</script>
+
+
+</html>

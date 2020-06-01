@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/fail.css" />
+	</head>
+
+	<body>
+		<div class="cash_warp">
+			<img src="img/caishen.png" class="caishen" />
+			<img src="img/open.png" class="open" />
+			<img src="img/yuanbao_1.png" class="yuanbao" />
+			<img src="img/bottom_bottle.png" class="bottom" />
+		</div>
+		<div class="alert">
+			<div class="alet_content">
+				<img src="img/fail_bg.png" class="fail_bg" />
+				<img src="" class="fail_tip" />
+				<p class="time"></p>
+			</div>
+			<p id="batch" style="position: fixed;bottom: 3%;text-align: center;width: 100%;font-size: 0.8rem;color: white;z-index: 100;"></p>
+		</div>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/vve/10core.js?v=11"></script>
+    <script src="/static/js/vve/11tool.js?v=11"></script>
+    <script src="/static/js/vve/20ajx.js?v=12"></script>
+    <script src="/v/js/publictip.js?v=11"></script>
+	<script type="text/javascript">
+		var args = vge.urlparse(location.href),
+		    bizcode = args.bizcode,
+			batchName = sessionStorage.batchName;
+		switch(bizcode) {
+			case '-1':
+				$('.fail_tip').attr('src', 'img/fail_tip_-1.png');
+				break;
+			case '2':
+				$('.fail_tip').attr('src', 'img/fail_tip_2.png');
+				$('.time').html('扫码时间：<span>'+sessionStorage.earnTime+'</span><br />再扫一瓶试试看');
+				$('.time').css('display', 'block');
+				break;
+			case '3':
+				$('.fail_tip').attr('src', 'img/fail_tip_3.png');
+				break;
+			case '4':
+				document.getElementById("batch").innerHTML = batchName+'<br />服务热线：15652287347';
+				$('.fail_tip').attr('src', 'img/fail_tip_4.png');
+				break;
+			case '5':
+				$('.fail_tip').attr('src', 'img/fail_tip_5.png');
+				break;
+			case '-1':
+				$('.fail_tip').attr('src', 'img/fail_tip_6.png');
+				break;
+			default:
+				$('.fail_tip').attr('src', 'img/fail_tip_6.png');
+				break;
+		}
+	</script>
+
+</html>

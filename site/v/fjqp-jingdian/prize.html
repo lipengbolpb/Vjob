@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒东南营销</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/prize.css?v=3.2.3">
+</head>
+
+<body>
+    <div class="repcash">
+        <img src="img/geted.png" class="getted">
+		<p>奖品名称：<span class="prizeName"></span></p>
+        <p>扫码时间：
+            <span class="earnTime"></span>
+        </p>
+    </div>
+    <div class="get">
+        <img src="" alt="" class="prize-one">
+        <input type="button" value="立即兑奖" class="ck">
+    </div>
+    <div class="info">
+        <img src="img/rule.png" class="rule">
+       <div class="slogan_bg">
+            <img src="" alt="" class="prize-bg">
+       </div>
+        <a href="javascript:;" class="ckff">查看兑奖方法>></a>
+		<p style="text-align: center;color: #fff;font-size: .5rem;margin-bottom: -.5rem;">中奖者需提供完整的中奖拉环及中奖电话，作为兑奖依据</p>
+        <div class="warning">
+            <!-- <img src="img/notice.png" class="notice"> -->
+            <p id="warntip">温馨提示：如有疑问，可拨打0592-3663963核实中奖者身份信息,以下内容须完整填写信息，否则无法兑奖。</p>
+        </div>
+        <div class="msg">
+            <input type="text" placeholder="姓名" class="name">
+            <!--<input type="text" placeholder="输入邮寄地址" class="address" maxlength="50">-->
+            <!--<input type="text" placeholder="输入身份证号" class="idcard" maxlength="18"> -->
+            <input type="text" placeholder="输入手机号" class="tel" maxlength="11">
+            <input type="text" placeholder="验证码" class="code" maxlength="4">
+            <input type="button" value="获取验证码" class="yz">
+        </div>
+        <input type="button" value="提交" class="tj" id="btn">
+        <span class="line"></span>
+        <p class="alert">中奖者需提供完整的中奖瓶盖或拉环,以及个人身份证复印件供我公司或我公司委托的第三方公司核实确认。</p>
+        <div class="change">
+            <div class="change-content">
+                <p>兑奖说明</p>
+                <ul id="li-content">
+
+                </ul>
+            </div>
+            <img src="img/close.png" class="close">
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=7.1"></script>
+<script src="js/prize.js?v=6.1.4"></script>
+<script>
+    // ini_wxshare(vge.fjqpappid);
+    // // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+    $("input").blur(function(){
+        setTimeout(() => {
+            var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+            window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+        }, 100);
+    });
+</script>
+
+</html>

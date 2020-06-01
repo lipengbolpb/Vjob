@@ -1,0 +1,146 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	color: #FFFFFF;
+}
+html{
+	background: -webkit-radial-gradient(circle,#ba0000,#510000);
+	background: radial-gradient(circle,#ba0000,#510000);
+}
+body{
+	background: url(../img/bg_1.png) no-repeat top;
+	-webkit-background-size: 100% auto;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+::-webkit-input-placeholder{
+     color: #E0E0E0;
+     font-size: 0.8rem;
+}
+#wrap{
+	width: 100%;
+	height: 100%;
+	padding-top: 4rem;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+#wrap p{
+	padding-left: 1rem;
+	border-bottom: 1px #FFFFFF solid;
+	overflow: hidden;
+}
+#wrap .tip{
+	padding: 0;
+	font-size: 0.7rem;
+	text-align: center;
+	margin: 0rem 0 2rem;
+	border: 0;
+}
+#tel_box{
+	border-top: 1px #FFFFFF solid;
+}
+#wrap input{
+	border: 0;
+}
+#wrap p span,a,input{
+	height: 2rem;
+	line-height: 2rem;
+	color: #FFFFFF;
+}
+#wrap p span{
+	padding: 0 0.2rem;
+}
+#wrap p input{
+	font-size: 0.8rem;
+}
+#tel{
+	width: 95%;
+}
+#name{
+	font-size: 0.7rem;
+	width: 50%;
+}
+#yz_code{
+	width: 10rem;
+}
+#get_yz{
+	height: 100%;
+	width: 3.8rem;
+	font-size: 0.7rem;
+	float: right;
+	text-align: center;
+	padding-left: 0.2rem;
+	border-left: 1px #FFFFFF solid;
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+#tj{
+	width: 7.8rem;
+	height: 1.9rem;
+	display: block;
+	margin: 5rem auto 1rem;
+	background: #ffd46c;
+	-webkit-border-radius: 0.5rem;
+	color: #882700;
+	font-size: 0.875rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#wrap #tips{
+	border: 0;
+	padding: 0;
+	margin:2rem auto;
+	width: 100%;
+	font-size: 0.7rem;
+	text-align: center;
+}
+#wrap1{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	display: none;
+	overflow: hidden;
+}
+#wrap1 p{
+	font-size: 0.7rem;
+	margin: 10rem auto;
+	padding: 0 2rem;
+	color: #FFFFFF;
+}
+.mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0.7);
+	display: none;
+}
+.mark img{
+	width: 100%;
+}

@@ -1,0 +1,109 @@
+#yaoq{ widows:100%; height:100%; position:absolute; top:0; overflow:hidden}
+#yaoq .yq1{ width: 4.6rem; left: 1rem; top:5%; -webkit-animation-delay:.5s;}
+#yaoq .yq2{ width: 3.26rem; left: 1.6rem; top:42%;-webkit-animation-delay:1s; }
+#yaoq .yq3{ width: .39rem; left: 4.2rem; top:72%;-webkit-animation-delay:1.5s;}
+#yaoq .yq_1{ width:3.13rem; left:1.6rem; top:51%; -webkit-animation:yq1 2s infinite; -webkit-animation-delay:1s}
+#yaoq .yq_2{ width:2.04rem; left:2.1rem; top:68%; -webkit-animation:yq3 2s .5s infinite}
+@-webkit-keyframes yq1{
+	0%,10%,18%,24%,32%,40%,100%{-webkit-transform: translate(0,0)}
+	14%,30%{-webkit-transform: translate(0,.1rem)}
+	22%,36%{-webkit-transform: translate(0,-.1rem)}
+}
+@-webkit-keyframes yq2{
+	0%,10%,18%,24%,32%,40%,100%{-webkit-transform: rotate(0); -webkit-transform-origin:50% 50%}
+	14%,30%{-webkit-transform:rotate(10deg); -webkit-transform-origin:50% 50%}
+	22%,36%{-webkit-transform:rotate(-10deg); -webkit-transform-origin:50% 50%}
+}
+@-webkit-keyframes yq3{
+	0%,10%,18%,24%,32%,40%,100%{-webkit-transform: rotate(0); -webkit-transform-origin:50% 50%}
+	14%,30%{-webkit-transform:rotate(2deg); -webkit-transform-origin:50% 50%}
+	22%,36%{-webkit-transform:rotate(-2deg); -webkit-transform-origin:50% 50%}
+}
+@-webkit-keyframes fadeIn1{
+	
+}
+#yaoq .yq4{ width: 2.53rem; right: .2rem; top:0; }
+#yaoq .yyy{ width: .45rem; -webkit-animation:yq2 2s 1s infinite; }
+#yaoq .yyy1{ left: 4.7rem; top: 67%; }
+#yaoq .yyy2{ left: 1rem; top: 74%; width: .63rem}
+.zj{ width: 100%;height: 100%;position: absolute;;top: 0;display: none; overflow:hidden}
+.zj .head{width: .98rem;height: .98rem;left:3.3rem;top: 5%;position: absolute;
+	background: url('../img/zj/head_bg.png') no-repeat center/contain}
+.zj .head>img{ max-width: 90%; max-height:90%;position: absolute;left: 51%;top: 51%;
+	-webkit-transform:translate(-50%,-50%);border-radius: .49rem;
+	 }
+.zj .name{ position: absolute;left: 4.4rem;top: 8%; font-size: .27rem;color: #fff }
+.zj.ai .jp1{ width: 4.33rem;right:0;top: 15%;-webkit-animation-delay:.1s}
+.zj.ai .jp2{ width: 4.24rem;left:.2rem;top: 33%;-webkit-animation-delay:.5s}
+.zj.ai .jp3{ width: 2.63rem;right: .4rem;top:62%;-webkit-animation-delay:.9s}
+.zj.ai .look{ width: 1.53rem;height: .72rem;position: absolute;right: .9rem;top: 83%;
+	background: url('../img/zj/look.png') no-repeat center/contain; opacity: 0;
+	-webkit-animation:fadeIn1 1s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes fadeIn1{
+	0%{ opacity: 0 }
+	100%{ opacity: 1 }
+}
+.zj.jiu .jp1{ width: 4.14em;left:0;top: 18%;-webkit-animation-delay:.1s}
+.zj.jiu .jp2{ width: 4.4rem;right:0rem;top: 33%;-webkit-animation-delay:.5s}
+.zj.jiu .jp3{ width: 2.07rem;left: .4rem;top:60%;-webkit-animation-delay:.9s}
+.zj.jiu .look{ width: 1.53rem;height: .72rem;position: absolute;left: .5rem;top: 88%;
+	background: url('../img/zj/look.png') no-repeat center/contain; opacity: 0;
+	-webkit-animation:fadeIn1 1s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;
+}
+.zj.mei .jp1{ width: 4.06rem;right:0;top: 15%;-webkit-animation-delay:.1s}
+.zj.mei .jp2{ width: 4.74rem;left:0rem;top: 23%;-webkit-animation-delay:.5s}
+.zj.mei .jp3{ width: 2.13rem;right: .6rem;top:57%;-webkit-animation-delay:.9s}
+.zj.mei .look{ width: 1.48rem;height: .55rem;position: absolute;right: .5rem;top: 82%;
+	background: url('../img/zj/look.png') no-repeat center/contain; opacity: 0;
+	-webkit-animation:fadeIn1 1s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;
+}
+.zj.cai .jp1{ width: 4.23em;left:0;top: 18%;-webkit-animation-delay:.1s}
+.zj.cai .jp2{ width: 4.7rem;right:.25rem;top: 29%;-webkit-animation-delay:.5s}
+.zj.cai .jp3{ width: 1.89rem;left: .4rem;top:65%;-webkit-animation-delay:.9s}
+.zj.cai .look{ width: 1.53rem;height: .72rem;position: absolute;left: .7rem;top: 86%;
+	background: url('../img/zj/look.png') no-repeat center/contain; opacity: 0;
+	-webkit-animation:fadeIn1 1s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;
+}
+.zj.cai .hb{ font-size: .4rem; color: #fbdc0c;position: absolute;left: .9rem;top: 76%;opacity: 0;
+	-webkit-animation:fadeIn1 .2s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards; }
+.zj.meng .jp1{ width: 4.03rem;left:0;top: 18%;-webkit-animation-delay:.1s}
+.zj.meng .jp2{ width: 4.13rem;right:.3rem;top: 23%;-webkit-animation-delay:.5s}
+.zj.meng .pk{ width: 2.26rem;height:2.06rem;position: absolute;left: .5rem;top: 69%;
+	background: url('../img/zj/pk.png') no-repeat center/contain; opacity: 0;
+	-webkit-animation:fadeIn1 1s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;
+}
+#animation{ width: 100%;height: 100%;position: absolute;top: 0; display: none; overflow:hidden}
+#animation .q1{ width: 1.96rem;right: .3rem;top: 153%;
+	-webkit-animation:q1 .5s;-webkit-animation-delay:.5s;-webkit-animation-fill-mode:forwards; }
+#animation .q2{ width: 4.58rem;left: .3rem;top: 10%; opacity: 0;
+	-webkit-animation:q2 .2s;-webkit-animation-delay:1.5s;-webkit-animation-fill-mode:forwards;}
+#animation .q3{ width: .64rem;left: 3rem;top: 45%; opacity: 0;
+	-webkit-animation:q3 .8s linear;-webkit-animation-delay:1.7s;-webkit-animation-fill-mode:forwards;}
+#animation .gif2{width: 100%;height: 100%;position: absolute;top: 0;overflow: hidden;display: none;
+	background: url('../img/yaoqian/_1.png') no-repeat center/100% 100%;
+	-webkit-animation:gif2 1.5s infinite;}
+@-webkit-keyframes q1{
+	0%{ -webkit-transform:translateY(0); }
+	100%{ -webkit-transform:translateY(-200%); }
+}
+@-webkit-keyframes q2{
+	0%{ opacity:0; -webkit-transform:scale(.8)}
+	100%{ opacity:1;-webkit-transform:scale(.9)}
+}
+@-webkit-keyframes q3{
+	0%{ opacity:0; -webkit-transform:scale(1)}
+	20%{ opacity:1; -webkit-transform:scale(1.2)}
+	100%{ opacity:1; -webkit-transform:scale(20)}
+}
+@-webkit-keyframes gif2{
+	0%,100%{ background: url('../img/yaoqian/_1.png') no-repeat center/100% 100%}
+	16%{ background: url('../img/yaoqian/_2.png') no-repeat center/100% 100%}
+	32%{ background: url('../img/yaoqian/_3.png') no-repeat center/100% 100%}
+	48%{ background: url('../img/yaoqian/_4.png') no-repeat center/100% 100%}
+	64%{ background: url('../img/yaoqian/_5.png') no-repeat center/100% 100%}
+	82%{ background: url('../img/yaoqian/_6.png') no-repeat center/100% 100%}
+}
+
+
+#music2{opacity: 0 ; position: absolute; display: none}

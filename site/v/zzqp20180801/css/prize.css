@@ -1,0 +1,370 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+input {
+    font-size: 0.7rem;
+    color: #333333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+    text-indent: 2em;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+
+@-webkit-keyframes bgm-rotate {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body .wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #030b1d url('../img/personal-bootom.png') no-repeat top left;
+    background-size: 100% auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body .wrap .audio {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 10%;
+    z-index: 999;
+}
+
+.running {
+    -webkit-animation: bgm-rotate 3s linear infinite forwards;
+    -webkit-animation-play-state: running;
+}
+
+body .wrap .head {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body .wrap .head .title {
+    width: 50%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+body .wrap .head .classify {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    color: #ffffff;
+}
+
+body .wrap .head .icon {
+    width: 40%;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+body .wrap .content {
+    width: 90%;
+    /* display: block; */
+    margin: 0.5rem auto 0;
+    background: url('../img/prize-content-bg.png') no-repeat top left;
+    background-size: 100% 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body .wrap .content .left {
+    width: 25%;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+body .wrap .content .left p {
+    color: #b20000;
+    background: #feda0c;
+    width: 75%;
+    height: 1rem;
+    line-height: 1rem;
+    display: block;
+    float: right;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+body .wrap .content .right {
+    width: 70%;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+body .wrap .content .right p:nth-of-type(1) {
+    color: #fff600;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+body .wrap .content .right p:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 0.5rem;
+    margin: 0.2rem auto 0;
+}
+
+body .wrap .ck {
+    width: 100%;
+    display: block;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #fff600;
+    text-decoration: underline;
+    margin: 0.6rem auto 1rem;
+}
+
+body .wrap .border {
+    width: 100%;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+body .wrap .notice {
+    width: 85%;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+body .wrap .msg {
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 0.8rem auto 0;
+}
+
+body .wrap .msg input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    float: left;
+    border-bottom: 1px solid #cccccc;
+    background: url('../img/input-icon1.png') no-repeat;
+    background-position: 0.5rem;
+}
+
+body .wrap .msg .code {
+    width: 65%;
+    border: none;
+    border-right: 1px solid #cccccc;
+}
+
+body .wrap .msg .yz {
+    width: 34%;
+    color: #006e31;
+    border-bottom: none;
+    background: none;
+    border: none;
+}
+
+body .wrap .tj {
+    width: 50%;
+    height: 2.2rem;
+    border-top-left-radius: 25px 50%;
+    border-top-right-radius: 25px 50%;
+    border-bottom-right-radius: 25px 50%;
+    border-bottom-left-radius: 25px 50%;
+    /* box-shadow: 2px 2px 2px #000000; */
+    box-shadow: 0px 4px 2px #ac9c22;
+    background-color: #fae540;
+    color: #006e31;
+    border: none;
+    outline: none;
+    margin: 1.5rem auto 0;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+body .wrap .alert {
+    color: #ffffff;
+    font-size: 0.5rem;
+    margin: 0.8rem auto 0;
+    line-height: 0.8rem;
+    width: 80%;
+    display: block;
+}
+
+body .wrap .link {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+body .wrap .link .rule {
+    float: left;
+    font-size: 0.65rem;
+    color: #fae540;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+body .wrap .link .secret {
+    float: right;
+    font-size: 0.65rem;
+    color: #fae540;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+body .wrap .change {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    display: none;
+}
+
+body .wrap .change .close {
+    width: 10%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+body .wrap .change .change-content {
+    width: 60%;
+    margin: 3rem auto 0;
+    background-color: #c50012;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+body .wrap .change .change-content p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+body .wrap .change .change-content ul {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+body .wrap .change .change-content li {
+    color: #ffffff;
+    text-align: left;
+    font-size: 0.5rem;
+}

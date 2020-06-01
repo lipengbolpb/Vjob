@@ -1,0 +1,129 @@
+@charset "utf-8";
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background: url(../img/bg.png?v=1) repeat-y left top;
+	-webkit-background-size: 100%;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	display: block;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #814900;
+}
+/*加载中秋动画的备用盒子*/
+#midAutumn_box{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	position: absolute;
+	background: #fff;
+}
+/*---end---*/
+#alert{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	position: fixed;z-index: 100;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+#alert img{
+	width: 11.6rem;
+	margin: 4.3rem auto;
+}
+img.logo{
+	width: 3rem;
+	margin: .825rem 0 0 .825rem;
+}
+img.index{
+	width: 100%;
+	max-height: 95%;
+	position: absolute;
+	bottom: 0;
+}
+div.cash{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background: url(../img/bottom.png?v=1) no-repeat bottom;
+	-webkit-background-size: 100% auto;
+	display: none;
+}
+div.cash div.cash_box{
+	height: 12rem;
+	margin-top: 2.4rem;
+	overflow: hidden;
+	background: url(../img/cash.png?v=2) no-repeat center;
+	-webkit-background-size: auto 100%;
+}
+div.cash div.cash_box p{
+	text-align: center;
+	color: #fcc834;
+	font-size: 1rem;
+}
+div.cash div.cash_box p.money{
+	font-weight: bold;
+	margin-top: 6rem;
+}
+div.cash div.cash_box p.money span{
+	font-size: 1.8rem;
+	position: relative;
+	bottom: -.1rem;
+}
+div.cash div.cash_box p.tip{
+	font-size: .56rem;
+	margin-top: 1rem;
+}
+div.cash div.cash_box p.tip span{
+	color: #fff;
+}
+#btn{
+	margin-top: 1.6rem;
+	height: 2.25rem;
+	background: url(../img/button_tx.png?v=1) no-repeat center;
+	-webkit-background-size: auto 100%;
+	overflow: hidden;
+}
+div.cash p.rule_box{
+	text-align: center;
+	padding-top: 2rem;
+}
+div.cash p.rule_box a{
+	color: #fff;
+	font-size: .6rem;
+	padding: 0 1rem;
+}
+
+
+@media only screen and (max-height: 480px) {
+	div.cash p.rule_box{
+		padding-top: 0rem;
+	}
+}

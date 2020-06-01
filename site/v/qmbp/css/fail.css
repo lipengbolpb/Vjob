@@ -1,0 +1,256 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:url('../img/bg.png') no-repeat top left;
+    -webkit-background-size: 100%;
+    text-align: center;
+	font-family: '微软雅黑';
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+div.wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+img.logo{
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+}
+img.hb{
+    width: 90%;
+    position: absolute;
+    top: 2rem;
+    left: 5%;
+}
+#batch{
+    position:absolute;
+    bottom:0.5rem;
+    color: black;
+    text-align: center;
+    width:100%;
+    z-index:9999;
+    font-weight:600;
+    background-color: aliceblue;
+}
+p.time{
+    width:100%;
+    text-align:center;
+    position: absolute;
+    top:11.5rem;
+    font-size:0.7rem;
+    color:#7d0000;
+    display: none;
+}
+#title{
+    position: absolute;
+    width: 50%;
+    top: 12rem;
+    left: 25%;
+}
+.content{
+    position: absolute;
+    width:100%;
+    top:16rem;
+    text-align:center;
+    font-size:0.65rem;
+    color:#ffffff;
+}
+#copyright{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.55rem;
+    color: #e50110;
+}
+
+@media only screen and (max-height: 490px) and (min-width:320px){
+    img.hb{
+        top: 1rem;
+        width:85%;
+        left: 9%;
+    }
+   
+}
+@media only screen and (max-height: 440px) and (min-width:320px){
+    img.hb{
+        top: 1rem;
+        width: 80%;
+        left:11%;
+    }
+}
+
+.getted {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    background:url('../img/bg.png') no-repeat top left;
+    -webkit-background-size: 100%;
+}
+
+.getted .logo {
+    width: 3rem;
+    position: absolute;
+    top: 0.8rem;
+    left: 5%;
+}
+
+.getted .notice {
+    position: absolute;
+    bottom:3rem;    
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #e50110;
+    display: none;
+}
+.getted .earnTime{
+    position: absolute;
+    bottom:3rem;    
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #e50110;
+    display: none;
+}
+
+.getted .msg {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+}
+.getted .loading{
+	width: 2.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 6.5rem;
+    z-index: 1;
+    display: none;
+}
+
+/* 最底层红包 */
+
+.getted .gettedBag {
+    position: absolute;
+    top: 5rem;
+    left: 5%;
+    width: 90%;
+}
+
+
+/* 上层红包 */
+
+.getted .gettedMask {
+    position: absolute;
+    top: -1rem;
+    left: 5%;
+    width: 90%;
+    pointer-events: none;
+}
+
+/* 黄色背景 */
+
+.getted .cvsBg {
+    width: 65%;
+    position: absolute;
+    top: 4.25rem;
+    left: 18%;
+    pointer-events: none;
+}
+
+#cardCanvas {
+    position: absolute;
+    top: 5rem;
+    left: 23%;
+    width: 55%;
+}
+
+.getted .earn {
+    line-height: 1.5rem;
+    position: absolute;
+    top: 6.2rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #da1522;
+}
+
+.getted .earn .title {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.getted .earn #money {
+    font-size: 1.5rem;
+}
+
+.getted .earn span {
+    vertical-align: text-bottom;
+}
+
+#btn {
+    position: absolute;
+    top: 8rem;
+    left: 25%;
+    width: 50%;
+    height: 2.2rem;
+    border: none;
+    /* background-color: #ffd732; */
+    background-color: #ffd732;
+    /* color: #cd0712; */
+    color: #cd0712;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.getted .link {
+    position: absolute;
+    top: 11.5rem;
+    left: 42.5%;
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 0.6rem;
+}

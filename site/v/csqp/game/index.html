@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>摇骰子</title>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=3.6">
+    <script src="js/rem.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/back.png" class="back">
+        <div class="control" id="control"><img src="img/audio.png?v=2" id="audioBg"></div>
+        <div class="banner">
+            <img src="img/slogan.png" class="slogan" id="slogan">
+            <img src="img/rock.png" class="rock" id="rock">
+        </div>
+        <div class="charge">
+            <input type="button" class="three">
+            <input type="button" class="five">
+        </div>
+        <img src="img/desk.png" class="desk">
+        <img src="img/money.png" class="money">
+        <div class="game" id="game">
+            <img src="img/base.png" class="base">
+            <div id="three">
+                <img src="img/r6.png" class="dice6 diceThree">
+                <img src="img/l5.png" class="dice7 diceThree">
+                <img src="img/l1.png" class="dice8 diceThree">
+            </div>
+            <div id="five">
+                <img src="img/r6.png" class="dice1 dice">
+                <img src="img/l2.png" class="dice2 dice">
+                <img src="img/l1.png" class="dice3 dice">
+                <img src="img/l5.png" class="dice4 dice">
+                <img src="img/r3.png" class="dice5 dice">
+            </div>
+            <img src="img/cover.png" class="cover" id="cover">
+        </div>
+        <div class="mask">
+            <div id="res3">
+                <img src="" class="res3One">
+                <br>
+                <img src="" class="res3Two">
+                <img src="" class="res3Three">
+            </div>
+            <div id="res5">
+                <img src="" class="res5One">
+                <img src="" class="res5Two">
+                <br>
+                <img src="" class="res5Three">
+                <img src="" class="res5Four">
+                <img src="" class="res5Five">
+            </div>
+            <input type="button" value="" id="btn">
+        </div>
+    </div>
+    <div>
+        <audio loop src="/v/dice/music/bg.mp3" autoplay preload id="musicBg"></audio>
+    </div>
+    <div style="opacity: 0;">
+        <audio src="/v/dice/music/rock.mp3" id="musicRock" preload style="position:absolute;width: 0;height: 0;"></audio>
+    </div>
+    <div style="opacity: 0;">
+        <audio src="/v/dice/music/result.mp3" id="musicResult" preload style="position:absolute;width: 0;height: 0;"></audio>
+    </div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        var dom_bg = document.getElementById('musicBg'),
+            dom_audioBg = document.getElementById('audioBg');
+        dom_bg.play();
+        dom_audioBg.className = 'active';
+        var dom_control = document.getElementById('control');
+        var flag = true;
+        dom_control.addEventListener('click', function () {
+            if (flag) {
+                dom_bg.pause();
+                dom_audioBg.className = '';
+                flag = false;
+            } else {
+                dom_bg.play();
+                dom_audioBg.className = 'active';
+                flag = true;
+            }
+        }, false);
+
+        document.getElementById('musicRock').setAttribute('src', '/v/dice/music/rock.mp3');
+        document.getElementById('musicRock').load();
+        document.getElementById('musicResult').setAttribute('src', '/v/dice/music/result.mp3');
+        document.getElementById('musicResult').load();
+    }, false);
+
+</script>
+<script src="/v/js/publictip.js?v=1.0.0"></script>
+<script src="js/index.js?v=2.32"></script>
+
+</html>

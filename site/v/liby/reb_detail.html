@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>返利详情</title>
+ 	<link rel="stylesheet" type="text/css" href="/v/liby/css/reb_detail.css?v=6">
+    <style>
+      .re_content{ width: 100%; height: auto; background: #FFFFFF; padding-bottom:8px}
+      .re_content .re_box{ margin-left: 3%; }
+      .re_content .re_box .li{ overflow: auto; width: 100%; border-bottom:1px solid #cccccc; padding-top:10px; }
+      .re_content .li .re_img{ float: left; width:23%;  text-align: center; }
+      .re_content .li .re_img img{ width: 62px; height: 62px; }
+      
+      .re_content .li .re_info{ float: left; width: 70%; padding-left: 3%; overflow: hidden;}
+      .re_content .li .re_info .font0{font-size: 18px; color: #292929; word-break:break-all; text-align:left}
+      .re_content .li .re_info .plusminus{width:100%;height:36px;line-height:36px;text-align:right; margin-top:6px}
+      .re_content .li .re_info b{height:30px;line-height:30px; width:30px; text-align:center; border-radius:4px; border:solid 1px; display:inline-block; font-size:26px;}
+      .re_content .li .re_info .minus{color:#000; border-color:#ccc;}
+      .re_content .li .re_info .plus{background-color:red; color:#fff; border-color:#ccc }
+      .re_content .li .re_info span{ font-size: 22px; color: #ff0000;}
+      
+      .re_title{height:32px; line-height:32px; font-size:16px; text-align:left;padding-left:12px; color:#333;}
+
+      .goods{position:fixed;bottom:0px;height:60px;background-color:#fff;width:100%;font-size:16px;line-height:60px;border-top:solid 1px #ccc}
+      .goods .sum{float:left;width:70%;background-color:#F0EFF4}
+      .goods .commit{float:right; width:30%; background-color:red;color:#fff}
+    </style>
+  </head>
+  <body>
+	<img src="img/reb_detail.jpg" alt="" class="top_banner">
+    <div class="re_title">活动商品</div>
+    <div class="re_content">
+      <div class="re_box" id="re_box">
+        
+        <div class="li">
+          <div class="re_img"><img src="img/noenough.png" /></div>
+      	  <div class="re_info">
+	        <p class="font0">商品名称商品名称商品名称商品名称330ml*12/箱</p>
+            <div class="plusminus"><b class="minus">-</b> <span>0</span> <b class="plus">+</b></div>
+	      </div>
+        </div>
+        
+        <div class="li">
+          <div class="re_img"><img src="img/getprize.png" /></div>
+      	  <div class="re_info">
+	        <p class="font0">商品名称商品名称商品名称商品名称330ml*12/箱</p>
+            <div class="plusminus"><b class="minus">-</b> <span>0</span> <b class="plus">+</b></div>
+	      </div>
+        </div>
+        
+      </div>
+    </div>
+	<div>
+	  <p class="div_tit">活动说明</p>
+      <ol class="readme">
+        <li>活动说明北京市建，国门内大街7号活动说明，活动说明活动说明活动说明活动说明活动说明活动说明活动说明。</li>
+        <li>活动说明北京市建，国门内大街7号活动说明，活动说明活动说明活动说明活动说明活动说明活动说明活动说明。</li>
+        <li>活动说明北京市建，国门内大街7号活动说明，活动说明活动说明活动说明活动说明活动说明活动说明活动说明。</li>
+      </ol>
+	</div>
+	<div style="padding-bottom:66px">
+	  <p class="div_tit">附近经销商</p>
+	  <ul class="nearby_box">
+		<li>
+		  <div>
+			<p>经销商名称经销商名称</p>
+			<p>
+			  <span>北京市建国门内大街7号</span><br>
+			  <span>151 1511 2345</span>
+			  <span>张先生</span>
+			</p>
+		  </div>
+		  <div>
+			<p></p>
+			<p>100米</p>
+		  </div>
+		</li>
+		<li>
+		  <div>
+			<p>经销商名称</p>
+			<p>
+			  <span>北京市东城区建国门东城区建国门内大街7号</span><br>
+			  <span>151 1511 2345</span>
+			  <span>张先生</span>
+			</p>
+		  </div>
+		  <div>
+			<p></p>
+			<p>12.10公里</p>
+		  </div>
+		</li>
+	  </ul>
+	  <div class="nogps">亲，打开您手机的“定位”功能，小V会告诉您最近的进货拿返利地点呦！</div>
+	</div>
+    <div class="goods">
+      <div class="sum">合计货物 <span id="gdsum">0</span> 件</div>
+      <div class="commit" id="commit">提交订单</div>
+    </div>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v7"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v16"></script>
+	<script src="js/tip.js"></script>
+	<script src="js/reb_detail.js?v=15"></script>
+  </body>
+</html>

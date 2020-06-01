@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>店铺资料</title>
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="/v/liby/css/scan_reg.css?v=1">
+    <script src="/v/liby/js/jquery-1.8.3.min.js"></script>
+  </head>
+  <body>
+    <ul id="inform_box">
+	  <li><input type="text" value="" maxlength="50" readonly="readonly"></li>
+	  <li><input type="text" value="" maxlength="15" readonly="readonly"></li>
+	  <li><input type="text" value="" maxlength="10" readonly="readonly"></li>
+	  <li><input type="tel" value="" readonly="readonly"></li>
+	  <li class="chose_open">
+	    <input type="text" readonly="readonly" value="">
+	    <span id="area"></span>
+	  </li>
+	  <li><input type="text" maxlength="50" value="" readonly="readonly"></li>
+    </ul>
+    <p id="btn">编辑</p>
+    <div class="chose-address">
+	  <div class="martotop">
+	    <header class="top">
+	      <p>所在地区</p>
+	      <img src="/v/liby/img/close_big.png" id="chose_close">
+	    </header>
+	    <div class="area-tab">
+	      <ul class="tabs">
+	        <li id="province" class="active">请选择</li>
+	        <li id="city">请选择</li>
+	        <li id="town">请选择</li>
+	      </ul>
+	      <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="province">
+	              </div>
+	            </div>
+	          </div>
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="city">
+	              </div>
+	            </div>
+	          </div>
+	          <div class="swiper-slide">
+	            <div class="content-slide">
+	              <div class="town">
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+    </div>
+    <script src="/static/js/vve/10core.js?v1"></script>
+    <script src="/v/js/cfg.js?v=4"></script>
+    <script src="/static/js/vve/11tool.js?v1"></script>
+    <script src="/static/js/vve/20ajx.js?v1"></script>
+    <script src="/v/liby/js/idangerous.swiper.js"></script>
+    <script src="/v/liby/js/tip.js"></script>
+    <script src="/v/liby/js/chosecity.js?v=1"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/static/js/wx/jsdk.js?v16"></script>
+    <script src="/v/liby/js/store_inform.js?v=19"></script>
+  </body>
+</html>

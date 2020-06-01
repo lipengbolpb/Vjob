@@ -1,0 +1,123 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+	background: url(../img/prize-rep.png) repeat-x left bottom;
+	-webkit-background-size: 1px auto;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border:0;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+::-webkit-input-placeholder{
+     color: #ffffff;
+     font-size: 0.78rem;
+}
+input[type="button"]{
+	color: #ea5244;
+}
+input:focus{
+	color: #FFFFFF;
+}
+div.top{
+	width: 100%;
+	overflow: hidden;
+}
+div.top img{
+	display: block;
+	width: 100%;
+}
+
+div.msg{
+	background:url(../img/prize-msg.png) no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+div.msg p.tip{
+	padding: 0.5rem 0.5rem 1rem 1.2rem;
+	font-size: 0.6rem;
+	color: #FFFFFF;
+	width: 80%;
+	margin: 0 auto;
+	background: url(../img/strcode-border.png) no-repeat left top;
+	-webkit-background-size: 100%;
+}
+div.msg p.tip span{
+	padding-left: 0.7rem;
+	margin-left: -0.7rem;
+	background: url(../img/icon-tip.png) no-repeat left;
+	-webkit-background-size: 0.55rem;
+}
+div.msg div.msg_box{
+	overflow: hidden;
+	border-top: 1px #FFFFFF solid;
+	width: 100%;
+	margin-top: 0.6rem;
+}
+div.msg div.msg_box div.box{
+	height: 2.4rem;
+	padding-left: 1.2rem;
+	border-bottom: 1px #FFFFFF solid;
+}
+div.msg div.msg_box div.box input{
+	height: 100%;
+	color: #FFFFFF;
+	font-size: 0.78rem;
+}
+#strcode,#tel{
+	width: 100%;
+}
+#yz_code{
+	float: left;
+	width: 6.5rem;
+}
+#get_yz{
+	float: right;
+	width: 5.85rem;
+	height: 100%;
+	line-height: 2.4rem;
+	font-size: 0.78rem;
+	color: #fee981;
+	text-align: center;
+	border-left: 1px #FFFFFF solid;
+}
+#btn{
+	width: 7.75rem;
+	height: 1.9rem;
+	font-size: 0.8rem;
+	display: block;
+	margin: 1.5rem auto 0;
+	-webkit-border-radius: 0.5rem;
+	background: #ffdc45;
+	color: #ea5244;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.tip2{
+	color: #FFFFFF;
+	font-size: 0.6rem;
+	text-align: center;
+	width: 90%;
+	margin: 1.5rem auto 0;
+}
+p.rule_box{
+	text-align: center;
+	margin: 0.8rem auto;
+}
+p.rule_box a{
+	color: #FFFFFF;
+	font-size: 0.6rem;
+	padding:0 1rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒畅享山东</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/prize.css?v=1.5">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="repcash">
+            <img src="img/prize-ship-slogan2.png" class="slogan">
+            <img src="img/geted.png" class="getted">
+            <p>扫码时间：<span class="earnTime"></span>
+            </p>
+        </div>
+        <!-- 获得大奖页 -->
+        <div class="cash">
+            <img src="img/logo.png" class="getLogo">
+            <div class="cashMask">
+                <img src="img/prize_get.png" class="prizeGet">
+                <input type="button" value="立即领取" class="btn ck">
+            </div>
+            <img src="img/mybag_footer.png" class="cashFooter">
+        </div>
+        <!-- 大奖提交页 -->
+        <div class="info">
+            <img src="img/logo.png" class="logo">
+            <img src="img/prize-ship-slogan2.png" class="slogan">
+            <div class="explain">
+                <div class="title">
+                    <p>畅赢奖</p>
+                </div>
+                <div class="content">
+                    <p>俄罗斯之旅1次(价值4999元，共1000个，中奖率:0.001%)</p>
+                    <p>活动区域：全国
+                        <br>活动截止时间：2018年08月30日
+                        <br>兑奖截止时间：2018年09月30日</p>
+                </div>
+                <a href="javascript:;" class="ckff">查看兑奖方法>></a>
+                <img src="img/strcode-border.png" class="border">
+            </div>
+            <div class="warning">
+                <img src="img/notice.png" class="notice">
+                <p>温馨提示：请尽快拨打4006800899核实中奖者身份信息，以下信息须完整填写信息，否则无法兑奖。</p>
+            </div>
+            <div class="msg">
+                <input type="text" placeholder="姓名" class="name">
+                <input style="display:none;" type="text" placeholder="输入身份证号" class="idcard" maxlength="18">
+                <input type="text" placeholder="输入手机号" class="tel" maxlength="11">
+                <input type="text" placeholder="验证码" class="code" maxlength="4">
+                <input type="button" value="获取验证码" class="yz">
+            </div>
+            <input type="button" value="提交" class="tj" id="btn">
+            <p class="alert">温馨提示：
+                <br>中奖者需提供完整的中奖瓶盖及中奖产品空瓶，以及个人身份证证复印件供我公司或我公司委托的第三方公司核实确认。</p>
+            <div class="link">
+                <a href="javascript:;" class="rule">活动规则</a>
+                <a href="javascript:;" class="secret">隐私说明</a>
+            </div>
+            <img src="img/cash_footer.png" class="beer">
+            <div class="change">
+                <div class="change-content">
+                    <p>兑奖说明</p>
+                    <ul>
+                        <li>畅赢奖：活动截止时间：2018年8月30日
+                            <br>兑奖截止时间：2018年09月30日
+                            <br>红包奖：活动截止时间：2018年12月31日
+                            <br>兑奖截止时间2019年2月28日</li>
+                        <li>全国畅赢奖中奖者请拨打兑奖咨询电话：4006800899。俄罗斯之旅的兑付将根据整体中奖情况统一安排出行时间，具体时间将另行通知中奖者。</li>
+                        <li>积分红包中奖者根据活动页面指示，直接将积分红包存入扫码微信账号内，粉丝抽奖中奖者名单在浙江省区微信公众号内公示，凭中奖活动页面提示信息兑换奖品，兑奖流程详见扫码活动页面说明。兑奖咨询电话4006800899。</li>
+                        <li>每个瓶盖内二维码扫码成功只能获得一次奖项。</li>
+                        <li>逾期未要求兑付或逾期中出的奖项不再兑付。</li>
+                        <li>在活动区域外购得产品，本公司将不予兑付。</li>
+                        <li>本次活动非线上促销，通过任何电子商务平台购得的有奖产品，本公司将不予兑付。</li>
+                    </ul>
+                </div>
+                <img src="img/close.png" class="close">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.0"></script>
+<script src="js/prize.js?v=1.7"></script>
+<script>
+    // ini_wxshare(vge.xaqpappid);
+    // // 隐藏微信右上角菜单
+    // wx.ready(function () {
+    //     wx.hideOptionMenu();
+    // });
+</script>
+
+</html>

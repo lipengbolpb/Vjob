@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>醉美安徽</title>
+    <meta name="format-detection" content="telephone=no" />
+    <script src="js/rem.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/mybag.css?v=2.11">
+</head>
+
+<body>
+    <!-- 提现成功提示 -->
+    <div class="mask" id="mask">
+        <img src="img/footertext.png" class="footertext">
+        <img src="img/logo.png?v=1" class="logo">
+        <p class="qin">亲,注意聊天消息里的【服务通知】
+            <br>看到这样的消息72小时内要点开收钱!</p>
+        <img src="img/alert.png" class="alert">
+        <input type="button" value="我知道了" class="ck">
+    </div>
+    <div class="mybag_top">
+        <img src="img/footertext.png" class="footertext">
+        <img src="img/loading.gif" class="loading">
+        <img src="img/logo.png?v=1" class="logo">
+        <div class="content">
+            <img src="img/mybag.png" class="mybag">
+            <p>
+                <span id="num">0</span>
+                <span>罐</span>
+            </p>
+        </div>
+        <div class="msg">
+            <p class="top">账户余额：<span id="dom_balance">0.00</span><span>元</span></p>
+            <p class="bottom">已领红包：<span id="add_money">0.00</span><span>元</span></p>
+            <a href="javascript:;" id="show">查看详细记录</a>
+        </div>
+        <input type="button" value="立即提现" id="btn">
+        <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现
+            <br>不足1元的红包将存入零钱包</p>
+        <!-- <img src="img/liantong.png" class="liantong"> -->
+        <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p>
+        <!-- <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2017</p> -->
+    </div>
+    <div class="mybag_bottom">
+        <div class="record">
+            <input type="button" name="" id="hide" value="" />
+            <ul id="mon_list">
+
+            </ul>
+            <p id="more" class="getmore">加载更多</p>
+            <p id="no_list">您还没有红包记录哦</p>
+        </div>
+    </div>
+    <script id="onenote_tpl" type="text/html">
+        <li>
+            <p class="title list_left">
+                <span class="title">[=monwhere]</span>
+                <br />
+                <span class="time">[=gettime]</span>
+            </p>
+            <p class="money title list_left" style="color:[=color]">
+                <span>[=money]</span>元</p>
+        </li>
+    </script>
+</body>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=1.2.2"></script>
+<script src="/v/js/publictip.js?v=1.0.0"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mybag.js?v=1.2"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    ini_wxshare(vge.ahqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+
+</html>

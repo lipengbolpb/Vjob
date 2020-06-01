@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>终端促销</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/details.css?v1.3.2" />
+		<link rel="stylesheet" type="text/css" href="/v/terminal/iconfont/iconfont.css" />
+	</head>
+
+	<body>
+		<div class="wxmark" id="alert">
+			<img src="img/alert_tip.png" />
+		</div>
+		<div id="txdetails">
+			<div class="content">
+				<p id="title">账户余额明细</p>
+				<p class="ques"></p>
+				<p class="sc_box"><span class="cancel">取消</span><span class="succ">确定</span></p>
+			</div>
+		</div>
+		<div class="top">
+			<img class="head" src="/v/terminal/img/headimg.png?v=2" />
+			<span class="nickname"></span>
+			<p class="msg">
+				<span class="scanNum"></span>
+				<span class="totalMoney"></span>
+				<span class="totalVpoints"></span>
+			</p>
+		</div>
+		<div class="bottom">
+			<div class="msg">
+				<p class="cash_list"><i class="iconfont icon-hongbao"></i>红包记录 </p>
+				<p class="jf_list"><i class="iconfont icon-shoucang"></i>积分记录</p>
+				<p class="qt_list"><i class="iconfont icon-liwu"></i>其他奖项记录</p>
+				<p class="yhq_list"><i class="iconfont icon-youhuiquan"></i>优惠券记录</p>
+			</div>
+			<div class="mallbtnbox">
+				<p class="mall"><i class="iconfont icon-shangcheng"></i>积分商城</p>
+				<p class="person"><i class="iconfont icon-person"></i>个人信息</p>
+            </div>
+            <p class="notice">温馨提示: 瓶盖/箱体二维码仅在产品有效期内扫码有效，逾期自动作废。</p>
+		</div>
+		<div class="btn_box">
+			<div id="btn"></div>
+		</div>
+		<div class="jf_list _list">
+			<p class="back">返回</p>
+			<div class="record">
+				<ul id="mon_list_1">
+				</ul>
+				<p class="more" class="getmore" type='1'>加载更多</p>
+				<p class="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="cash_list _list">
+			<p class="back">返回</p>
+			<div class="record">
+				<ul id="mon_list_2">
+				</ul>
+				<p class="more" class="getmore" type='2'>加载更多</p>
+				<p class="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="qt_list _list">
+			<p class="back">返回</p>
+			<img src="img/icon_err.png" class="err" />
+			<p class="err">暂时没有相关记录哦~</p>
+			<p id="copyright" style="color:#333;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 10000;">本服务由V积分提供</p>
+		</div>
+		<div class="details" id="details">
+			<ul id="inform_box">
+				<li><span>姓<i style="opacity: 0;">姓名</i>名</span><input type="tel" value="" id="time" readonly="readonly"></li>
+				<li><span>联系电话</span><input type="tel" value="" id="phoneNum" readonly="readonly"></li>
+				<li class="chose_store">
+					<span>终端门店</span>
+					<input type="text" value="" readonly="readonly" id="store">
+				</li>
+				<li class="chose_open address">
+					<span>所在区域</span>
+					<div id="address">
+						<p class="address_1"></p>
+						<p class="address_2" style="padding: 0;"></p>
+					</div>
+				</li>
+				<!--<li><span>绑定时间</span><input type="tel" value="" id="time" readonly="readonly"></li>-->
+			</ul>
+			<input type="button" name="back" id="back" value="返回首页" />
+		</div>
+		<div id="yedai">
+			<ul>
+				
+			</ul>
+			<div id="ydcode_box">
+				
+			</div>
+	
+		</div>
+		<img src="img/rank/icon_enter.png" class="enterRank">
+	</body>
+	<script id="onenote_tpl_1" type="text/html">
+		<li style=[=imgUrl]>
+			<p class="title list_left">
+				<span class="title">[=monwhere]</span>
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_right"><span>[=money]</span></p>
+		</li>
+	</script>
+	<script id="onenote_tpl_2" type="text/html">
+		<li style=[=imgUrl]>
+			<p class="title list_left">
+				<span class="title">[=monwhere]</span>
+				<span class="time">[=gettime]</span>
+			</p>
+			<p class="money title list_right"><span>[=money]</span></p>
+		</li>
+	</script>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/v/js/cfg.js?v=1.2.4"></script>
+	<script src="/v/js/publictip.js?v=1.0.0"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v=2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/details.js?v=2.0.3" type="text/javascript" charset="utf-8"></script>
+	<!--<script>
+      ini_wxshare(vge.terminalappid);
+      // 隐藏微信右上角菜单
+      wx.ready(function() {
+          wx.hideOptionMenu();
+      });
+    </script>-->
+
+</html>

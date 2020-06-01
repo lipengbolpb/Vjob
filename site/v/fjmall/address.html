@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>地址管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css?v=1.0.4"/>
+		<link rel="stylesheet" type="text/css" href="css/address.css?v=1.0.5"/>
+		<link rel="stylesheet" href="css/LArea.css">
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="address_list">
+		</div>
+		<div id="btn_box">
+			<p id="add">添加新地址</p>
+		</div>
+		<div id="addaddress" style="display: none;">
+			<div class="new_address">
+				<ul>
+					<li><p>收货人</p><input type="text" name="" id="user" value="" maxlength="8" autofocus="autofocus" placeholder="请填写收货人姓名"/></li>
+					<li><p>联系电话</p><input type="text" name="" id="phone" value="" maxlength="11" placeholder="请填写收货人手机号"/></li>
+					<li><p>所在地区</p><input type="text" name="" id="area" value="" readonly placeholder="请选择省市区/县"/></li>
+					<li><p>详细地址</p><input type="text" name="" id="address" value="" maxlength="50" placeholder="请填写乡镇/街道 门牌号等"/></li>
+				</ul>
+				<!-- <input id="addressval"  /> -->
+				<input id="addressval" type="hidden" />
+			</div>
+			<div id="btn_box_save" style="z-index: 1;">
+				<p id="save">保存</p>
+			</div>
+		</div>
+		<div class="screen">
+			<img src="img/screen.jpg" class="screen_pic"/>
+		</div>
+	</body>
+	<script src="/static/js/wx/jsdk.js?v12"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/rem.js"></script>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=3.9.9"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="js/LAreaData3.js?v=0.0.1"></script>
+    <script src="js/LArea.js"></script>
+    <script src="js/screen.js?v=1.0.4" type="text/javascript" charset="utf-8"></script>
+    <script src="js/share.js?v=1.0.1" type="text/javascript" charset="utf-8"></script>
+    <script>
+	    var area = new LArea();
+	    area.init({
+	        'trigger': '#area',
+	        'valueTo': '#addressval',
+	        'keys': {
+	            id: 'value',
+	            name: 'text'
+	        },
+	        'type': 2,
+	        'data': [provs_data, citys_data, dists_data]
+	    });
+		 
+		var win_h = $(window).height();//关键代码
+		window.addEventListener('resize', function () {
+			if($(window).height() < win_h){
+				$('#btn_box_save').css('visibility', 'hidden');
+			}else{
+				$('#btn_box_save').css('visibility', 'visible');
+			}
+		});
+// 		$("input,select").blur(function(){
+// 			setTimeout(() => {
+// 				var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;
+// 				window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+// 			}, 100);
+// 		})
+    </script>
+    <script src="js/address.js?v=1.2.3" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+</html>

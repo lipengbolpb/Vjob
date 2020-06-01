@@ -1,0 +1,269 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+input {
+    font-size: 0.7rem;
+    color: #333333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+    text-indent: 2em;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    .wrap{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background:url('../img/personal-bg.png') repeat top left;
+        background-size:100% auto;
+        .head{
+            width:100%;
+            margin: 0 auto;
+            .title{
+                width:50%;
+                display:block;
+                margin:1rem auto 0;
+            }
+            .classify{
+                width:100%;
+                text-align:center;
+                font-size:0.7rem;
+                margin-top:0.5rem;
+                color:#9a1820;
+            }
+            .icon{
+                width:40%;
+                display: block;
+                margin: 0.5rem auto 0;
+            }
+        }
+        .content{
+            width:75%;
+            display:block;
+            margin:0.5rem auto 0;
+        }
+        .ck{
+            width:100%;
+            display: block;
+            font-size:0.6rem;
+            text-align:center;
+            margin:0.5rem auto 0;
+            color:#9a1820;
+            text-decoration: underline;
+        }
+        .border{
+            width:100%;
+            display: block;
+            margin:0.5rem auto 0;
+        }
+        .notice{
+            width:85%;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+        .msg {
+            width: 80%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #ffffff;
+            margin: 0.8rem auto 0;
+            input {
+                width: 100%;
+                height: 2.5rem;
+                border: none;
+                outline: none;
+                background-color: #ffffff;
+                float: left;
+                border-bottom: 1px solid #cccccc;
+                background: url('../img/input-icon1.png') no-repeat;
+                background-position:0.5rem;
+            }
+            .code {
+                width: 65%;
+                border: none;
+                border-right: 1px solid #cccccc;
+            }
+            .yz {
+                width: 34%;
+                color: #9a1820;
+                border-bottom: none;
+                background: none;
+                border: none;
+            }
+        }
+        .tj {
+            width: 50%;
+            height: 2.2rem;
+            border-top-left-radius: 25px 50%;
+            border-top-right-radius: 25px 50%;
+            border-bottom-right-radius: 25px 50%;
+            border-bottom-left-radius:25px 50%;
+            box-shadow:2px 2px 2px #000000;
+            background-color: #f6bf62;
+            color: #9a1820;
+            border: none;
+            outline: none;
+            margin: 1.5rem auto 0;
+            display: block;
+            font-size: 0.8rem;
+            font-weight:bold;
+        }
+        .alert {
+            color: #000000;
+            font-size: 0.5rem;
+            margin: 0.8rem auto 0;
+            line-height: 0.8rem;
+            width: 80%;
+            display: block;
+        }
+        .link {
+            width: 50%;
+            margin: 1rem auto;
+            .rule {
+                float: left;
+                font-size: 0.65rem;
+                color: #9a1820;
+                text-decoration: underline;
+                margin-bottom:1rem;
+            }
+            .secret {
+                float: right;
+                font-size: 0.65rem;
+                color: #9a1820;
+                text-decoration: underline;
+                margin-bottom:1rem;
+            }
+        }
+        .change{
+            position: fixed;
+            top: 0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.7);
+            overflow: hidden;
+            display: none;
+            .close{
+                width:10%;
+                display:block;
+                margin:1rem auto 0;
+            }
+            .change-content{
+                width:70%;
+                margin:3rem auto 0;
+                background-color: #c50012;
+                border-radius:8px;
+                padding:0.5rem 1rem;
+                p{
+                    color:#ffffff;
+                    text-align:center;
+                    font-size:0.5rem;
+                }
+                ul{
+                    margin-top:0.5rem;
+                    width:100%;
+                }
+                li{
+                    color:#ffffff;
+                    text-align:left;
+                    font-size:0.5rem;
+                }
+            }
+        }
+    }
+}

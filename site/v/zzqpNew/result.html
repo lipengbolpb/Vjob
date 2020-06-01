@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>红包奖不停，酒王赢大礼</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="'" />
+<meta name="description" content="" />
+<meta name="robots" content ="all">
+<meta name="Language" content="zh-CN" />
+<meta name="publisher" content="">
+<meta name="author" content="" />
+<meta name="copyright" content="Copyright (c) 2017 All Rights Reserved." />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/guandao.css?v=1.0.2">
+<!--[if lt IE 9]>
+<script>
+    window.location.href='http://windows.microsoft.com/zh-CN/internet-explorer/download-ie';
+</script>
+<![endif]-->
+<!--public-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1b4b9890a45d3a0e0083bf6564fc9d5e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link rel="stylesheet" href="css/public/global.css?v=1.0.0">
+<link rel="stylesheet" href="css/public/layout.css?v=1.0.5">
+<link rel="stylesheet" href="css/jiuwang.css?v=1.0">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<style type="text/css">
+	#Vtjaddress::-webkit-input-placeholder{
+		font-size: 0.2rem;
+	}
+	div.prizeMsg{
+		position: absolute;
+		z-index: 9999999;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		display: none;
+		background-color: rgba(0,0,0,.7);
+	}
+	div.prizeMsg p{
+		margin: 3.3rem auto;
+		width: 4rem;
+		height: 4rem;
+		-webkit-border-radius: .1rem;
+		padding: .7rem .2rem 0;
+		text-align: center;
+		background: url(/v/zzqpNew/img/bg/prizeMsg.png?v=2) no-repeat center;
+		-webkit-background-size: 4rem auto;
+		position: relative;
+		font-size: .2rem;
+		color: green;
+		line-height: .3rem;
+	}
+	div.prizeMsg p span{
+		position: absolute;
+		bottom: .7rem;
+		right:1.7rem;
+		font-size: .3rem;
+		color: white;
+		line-height: .45rem;
+	}
+</style>
+</head>
+<body class="page page1">
+<div id="jwmark" style="width: 100%;height: 100%;display: none;position: fixed;z-index: 9999999999;"></div>
+<div id="jwdj" style="opacity: 0;top: 4.4rem;">
+	<img id="starlinght" src="/v/zzqp/img/zj/starlight.png"/>
+</div>	
+	
+<div id="zj" style="display: block;">
+	<div class="top">
+		<div class="head"><img id="Vhead" src=""></div>
+		<p class="name" style="width:2rem;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;"></p>
+	</div>
+	<img src="" class="jp1_2">
+	<a class="cq" href="javascript:;" style="width: 8rem;height: 3rem;left: 0;top: 7rem;"></a>
+	<p class="money"></p>
+	<div class="myjp"><p class="p1">我的礼品</p><p class="p2" id="jplb"></p><a class="lq" id="Vlq">领取</a></div>
+	<div class="myjp"><p class="p1">累计红包</p><p class="p2" id="totalAccountMoney"></p><a class="lq" id="tx">提现</a></div>
+
+	<a href="javascript:;" id="toMyJp" class="ck"></a>
+	<a href="/v/zzqpNew/huanju.html" class="ck2"></a>
+</div>
+<a class="_rules0" onclick="$('#ruleTier').fadeIn();"></a>
+<!--公用弹窗-->
+<div class="pop_container" id="comTips" style="display:none;"><a class="_close"></a>
+  <div class="fail" id="fail">
+    <h2>很抱歉</h2>
+    <p id="tip">呜呜~开了个小差~<br>关闭页面，重新去抽奖一次吧。</p>
+    <!--<a class="close">ok</a>-->
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" />
+</div>
+<!--规则-->
+<div class="pop_container mainBg" id="ruleTier" style="display:none;">
+  <img src="img/bg/beer5.png" class="beer5" />
+  <a href="javascript:popClose('#ruleTier');" class="pop_begin_btn"></a> 
+</div>
+<!--填写信息提交成功-->
+<div class="pop_container" id="prizeTier" style="display:none;"><a class="_close"></a>
+  <div class="success">
+    <p class="prizeTier">您的信息已提交成功！<br>请耐心等待工作人员跟您联系。</p>
+    <a class="close" id="tjcg">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important"  />
+</div>
+<!--填写信息提交失败-->
+<div class="pop_container" id="noprizeTier2" style="display:none;"><a class="_close"></a>
+  <div class="fail">
+    <p>呜呜~开了个小差~<br>关闭页面，重新再试一次吧。</p>
+    <a class="close">ok</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important" />
+</div>
+<!--填写信息姓名电话-->
+<div id="ipt" class="bg pop_container"><a class="_close"></a>
+  <div class="ipt">
+    <input type="text" class="name" id="Vtjname"><div class="sta1 wrong"></div>
+    <input type="tel" class="tel" id="Vtjtel"><div class="sta2 wrong"></div>
+    <!--提交按钮，提交失败执行tj2();-->
+    <a class="sub" id="Vtj"></a>
+  </div>
+  <div class="iptxx ipt" style="background: url('/v/zzqp/img/zj/tjxx.png?v=1') no-repeat center/contain ;display: none;overflow: hidden;height: 6.8rem;">
+  	<p id="tjxxtip1" style="text-align: center;font-size: 0.23rem;color: white;margin-top: 0.5rem;display: none;line-height: 1.2em;">您在<span id="jidu"></span>季度酒王榜排第<span id="mingci"></span>名<br />奖品为<span id="jlz"></span></p>
+  	<p id="tjxxtip" style="text-align: center;font-size: 0.23rem;color: white;margin-top: 0.6rem;line-height: 1.2em;padding: 0 0.1rem;">本萌神掐指一算，您可能中<span id="jiduNum"></span>季度(截至<span id="stopday"></span>)酒王大奖，请预留您的联系方式，方便我们联系您！</p>
+  	<p id="tjxxtip2" style="text-align: center;font-size: 0.19rem;color: white;margin-top: 0.1rem;opacity: 0;line-height: 1.2em;">请于<span id="year"></span>年<span id="month"></span>月20日之前，提交相关信息，逾期视为自动放弃。</p>
+    <input type="text" class="name" id="Vtjname2" maxlength="8"><div class="sta3 wrong"></div>
+    <input type="tel" class="tel" id="Vtjtel2" maxlength="11" style="top: 3.28rem;"><div class="sta4 wrong"></div>
+    <input type="text" class="address" id="Vtjaddress" maxlength="40" style="top: 4.2rem;" placeholder="X省X市X区（县）X乡镇XXX"><div class="sta5 wrong"></div>
+    <!--提交按钮，提交失败执行tj2();-->
+    <a class="sub" id="Vtjxx" style="top: 5.53rem;text-decoration: none;font-size: 0.25rem;color: #f00f3c;font-weight: bold;line-height: 0.6rem;text-align: center;">提交信息</a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important;top:1.5rem !important">
+</div>
+
+<!--提现成功-->
+<div class="tx tx1 bg" id="tx1"><a class="_close" onclick="location.reload()"></a>
+  <div><img src="img/zj/txcg.jpg?v=1" /><a class="back" onclick="location.reload()"></a><a class="huanju" href="/v/zzqpNew/huanju.html"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important;top:1.4rem !important"  />
+</div>
+<!--提现失败-->
+<div class="tx tx2 bg" id="tx2"><a class="_close"></a>
+  <div><img src="img/zj/txsb.jpg?v=1" /><a class="back" onclick="$('#tx2').fadeOut()"></a><a class="huanju" href="/v/zzqpNew/huanju.html"></a></div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important;top:1.4rem !important" />
+</div>
+<!--关注微信-->
+<div class="tx tx2 bg" id="gzwx"><a class="_close"></a>
+  <img src="img/zj/gzwx.png" style="width:4.04rem;left:1.18rem;top:14%" /><a class="back attention" style="top:6.6rem; width:2rem;left:2.2rem;position:absolute;height:.5rem"></a>
+  <img src="img/bg/logo2.png" class="logo2" style="top:75% !important;left:1.4rem !important" />
+</div>
+
+<!--认证-->
+<div class="tx tx2 bg" id="rzzs"><a class="_close"></a>
+  <img src="img/bg/rzzs.png" style="width:4.04rem;left:1.18rem;top:14%" /><a class="back" onclick="$('#rzzs').fadeOut()" style="top:4.85rem; width:2rem;left:2.2rem;position:absolute;height:.5rem"></a>
+  <img src="img/bg/logo2.png" class="logo2" style="top:5.5rem !important;left:1.4rem !important" />
+</div>
+
+
+<!--我的奖品列表-->
+<div id="fyb2" class="bg pop_container"><a class="_close"></a>
+  <div class="fyb">
+    <ul id="Vlist"></ul>
+    <a class="back swj" onclick="$('#fyb2').fadeOut()"></a>
+  </div>
+  <img src="img/bg/logo2.png" class="logo2" style="left:1.4rem !important" />
+</div>
+
+<div class="prizeMsg">
+	<p>
+		请填写好联系方式，同时务必保存好瓶盖以便兑奖时使用。<br /><br />
+		游轮奖兑奖截止日期:2017年7月25日，请在此前提交信息，逾期失效。
+		<span id="prizeMsg" onclick="$('.prizeMsg').fadeOut();">确  定</span>
+	</p>
+</div>
+<!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon"/>
+<div id="jiuw_box">
+    <img src="/v/ymqp20180130/img/close.png" class="close"/>
+    <div>
+    	<img src="/v/zzqpNew/img/bg/jiuw_qrcode.jpg" id="jwqrcode"/>
+    </div>
+</div>-->
+<script id="onenote_tpl" type="text/html">
+    <li>
+      <p class="name">[=pricename]</p>
+      <p class="ranking">中奖时间<span>[=gettime]</span></p>
+      <p class="num"><a class="wlq" infoKey=[=infoKey] useStatus=[=useStatus] prizeType=[=prizeType] ticketCode=[=ticketCode]>领取</a></p>
+    </li>
+</script>
+<!--分享层-->
+<div id="_share"></div>
+<script src="js/base/rem.js"></script>
+<script src="js/base/jquery-1.9.1.min.js" ></script>
+<script src="js/public/custom.js"></script>
+<script src="js/public/global.js"></script>
+<style>
+#btn-a1{ display:block; position:absolute; top: .14rem; right: .2rem; width: 1.05rem; height: 1.05rem; z-index: 1000;}
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+.rotate000{-webkit-animation:9.5s linear 0s infinite rotate forwards;-webkit-animation-play-state:running;}
+#btn-a1 p{ display:block; width:100%; height:100%; background-size: 1.05rem; line-height:9999px; overflow:hidden;}
+.kais { background:url(/v/zzqpNew/img/bg/audio1.png) no-repeat center; background-size: contain;}
+.kais2 {background:url(img/bg/audio2.png) no-repeat center; background-size: contain;}
+._audio{ width: .41rem; position: absolute;top:2%; right: .2rem;z-index: 1000; display: none}
+</style>
+<div><audio id="bgMusic" autoplay loop src="/v/zzqpNew/music/bg.mp3?v=1"></audio></div>
+<img src="img/bg/audio1.png" class="_audio" alt="">
+<div id="btn-a1" class="film-container rotate000">
+  <p class="kais"> <i class="fa fa-music"></i></p>
+  <p class="kais2" style="display: none;"><i class="fa fa-music"></i> <i class="fa fa-minus"></i></p>
+</div>
+<div><audio src="/v/zzqpNew/music/hb.mp3" autoplay id="music_3"></audio></div>
+<script type="text/javascript">
+    var audio = document.getElementById('bgMusic');
+	// 音乐相关
+    function initMusic() {
+        var el = $("#bgMusic")
+        if (el && el.length > 0 && el.attr("src")) {
+            // 音乐相关
+            
+            $('#btn-a1').on("touchstart", function (ev) {
+                if (audio.paused) {
+                    audio.play();$('btn-a1').addClass('btn-a1');
+                    //$(".kais2").stop().fadeOut(0);
+                    //$(".kais").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'running'});
+                } else {
+                    audio.pause();$('btn-a1').removeClass('btn-a1');
+                    //$(".kais").stop().fadeOut(0);
+                    //$(".kais2").stop().fadeIn(0);
+                    $(".kais").stop();
+					$('.film-container').css({'-webkit-animation-play-state':'paused'});
+                }
+            });
+            $(document).one('touchstart', function () {
+                //audio.play();
+            });
+        }
+    }
+    initMusic(); 
+
+</script> 
+
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=1.0.6"></script>
+<script src="/v/js/publictip.js?v=1.0.1"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script type="text/javascript" src="js/result.js?v=3.5.6"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script>
+  ini_wxshare(vge.zzqpappid);
+  // 隐藏微信右上角菜单
+  wx.ready(function() {
+  	document.getElementById("music_3").play();
+      wx.hideOptionMenu();
+  });
+</script>
+</body>
+<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+</html>

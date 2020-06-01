@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒江西省区</title>
+    <link rel="stylesheet" type="text/css" href="css/fail.css?v=1.10">
+    <script src="js/rem.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/logo.png" class="logo">
+        <img src="img/fail.png" class="fail">
+        <p id="title"></p>
+        <p id="notice"></p>
+    </div>
+    <img src="/v/qpzj/img/game1.png" class="game1" />
+    <img src="/v/qpzj/img/game2.png" class="game2" />
+    <p id="batch"></p>
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=1.0.1"></script>
+<script>
+    var title = document.getElementById('title'),
+        notice = document.getElementById('notice');
+    var args = vge.urlparse(location.href),
+        batch = document.getElementById("batch"),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        earnTime = sessionStorage.earnTime === undefined ? '' : sessionStorage.earnTime,
+        bizcode = args.bizcode;
+    // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+    switch (bizcode) {
+        case '1'://二维码不存在
+            title.innerHTML = '这个二维码不存在';
+            break;
+        case '2'://二维码已被使用
+            if (earnTime == '') {
+                notice.style.display = 'none';
+            }
+            //game
+            document.getElementsByClassName('game1')[0].addEventListener('click', function () {
+                location.href = 'http://' + location.host + '/v/game/game_1.html';
+            }, false);
+            document.getElementsByClassName('game2')[0].addEventListener('click', function () {
+                location.href = 'http://' + location.host + '/v/dice/index.html';
+            }, false);
+            document.getElementsByClassName('game1')[0].style.display = 'block';
+            document.getElementsByClassName('game2')[0].style.display = 'block';
+            title.innerHTML = '这个二维码已被扫';
+            notice.innerHTML = '扫码时间:' + earnTime + '<br>再扫一瓶试试看';
+            break;
+        case '3'://二维码已过期
+            title.innerHTML = '这个二维码已过期';
+            notice.innerHTML = '这么好的啤酒,要学会珍惜哦';
+            break;
+        case '4'://活动未开始
+            title.innerHTML = '活动未开始';
+            notice.innerHTML = '心急喝不了好啤酒,再等等哦';
+            batch.innerHTML = batchName + '<br />服务热线：18519813990';
+            break;
+        case '5'://活动已结束
+            title.innerHTML = '活动已截止';
+            notice.innerHTML = '好酒不等人,下次早点来哦';
+            break;
+        case '6'://二维码异常
+            title.innerHTML = '二维码异常';
+            notice.innerHTML = '稍等片刻,畅想欢聚时刻';
+            break;
+        case '-1'://系统升级中
+            title.innerHTML = '系统升级中';
+            notice.innerHTML = '稍安勿躁,敬请关注';
+            break;
+        case '18'://扫码专员
+            title.style.display = 'none';
+            notice.style.display = 'none';
+            title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+            break;
+        default:
+            title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+            break;
+    }
+
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js"></script>
+
+</html>

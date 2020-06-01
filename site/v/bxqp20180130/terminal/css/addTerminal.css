@@ -1,0 +1,149 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0 auto; padding:0px;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+select,input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+select,input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+html,body{ width:100%; height:100%;}
+body{
+	background:url(../img/bg.png) no-repeat top;
+	-webkit-background-size: 100%;
+	position: relative;
+}
+div.mark{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	background-color: rgba(0,0,0,.6);
+	display: block;
+	left: 0;
+	-webkit-transition: all .5s;
+}
+div.mark p{
+	color: #fff;
+	font-size: 1rem;
+	margin: 2rem auto 0;
+}
+div.mark img{
+	width: 6.4rem;
+	margin: 1.8rem auto 0;
+	display: block;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.msg_box{
+	width: 100%;
+	height: 100%;
+	padding-top: 1rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.6);
+	position: absolute;
+	left: 0%;
+	visibility: hidden;
+}
+div.msg_box span.tip{
+	font-size: .6rem;
+	line-height: 1rem;
+	color: #2aa1fd;
+	text-align: center;
+	padding:.1rem 0 .1rem 1.1rem;
+	background: url(../img/icon_tip.png) no-repeat left;
+	-webkit-background-size: .7rem auto;
+}
+#search_box{
+	width: 100%;
+	height: 2.1rem;
+	background: #2AA1FD;
+	padding: .35rem;
+	box-sizing: border-box;
+}
+#search_street_box,#search_shopname_box{
+	width: 4.75rem;
+	height: 100%;
+	border: 1px #FFFFFF solid;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	border-radius: 3px;
+	
+}
+#search_street_box{
+	margin-left: .5rem;
+}
+#search_shopname_box{
+	margin-left: .1rem;
+}
+#search_street_box span{
+	position: absolute;
+	left: .2rem;
+	top: -.3rem;
+	background: #2AA1FD;
+	color: #fff;
+	font-size: .3rem;
+}
+#search_shopname_box span{
+	position: absolute;
+	left: .2rem;
+	top: -.3rem;
+	background: #2AA1FD;
+	color: #fff;
+	font-size: .3rem;
+}
+#store_msg #search_street,#store_msg #search_shopname{
+	border: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-border-radius: 0;
+	text-indent: .3rem;
+	font-size: .56rem;
+	border-radius:4px;
+	line-height: 1.4rem;
+}
+#search_tip{
+	font-size: .4rem;
+	color: #FFFFFF;
+	line-height: 1.4rem;
+	float: right;
+	margin-right: 1.2rem;
+}
+#mon_list{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#mon_list li{
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#mon_list li p.name{
+	width: 10rem;
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#mon_list li span{
+	display: block;
+	clear: both;
+}
+#mon_list li p.linkMan{
+	float: right;
+    padding-right: 1rem;
+}

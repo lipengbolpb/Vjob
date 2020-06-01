@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒乐享山西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/getcash.css?v=1.1.9"/>
+	</head>
+	<body>
+		<div class="alert">
+			<img src="img/alert.png" class="tx_tip" style="display: none;"/>
+			<img src="img/active.png?v=3" class="active"/>
+		</div>
+		<div id="sign">
+			<div class="sign_alert">
+				<div class="close close_1"></div>
+				<p class="days"></p>
+			</div>
+			<div class="content">
+				<div class="close"></div>
+				<img src="/v/sxqp20170926/img2/sign_title.png" class="sign_title"/>
+				<div id="progress_box">
+					<div class="progress1">
+						<p id="progress"></p>
+					</div>
+					<span class="progress"></span>
+				</div>
+				<ul id='week'>
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul id="check_box">
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+					<li><span class="checks"></span></li>
+				</ul>
+				<div class="sign_cash">
+					<p id="weekSignEarnMoney"></p>
+				</div>
+				<p class="sign_tip">已自动存入您的零钱包，请注意查收</p>
+			</div>
+			<div class="getSignCash">
+				<p class="weekSignEarnMoney"></p>
+			</div>
+		</div>
+		<div class="up">
+			<img src="img/slogan.png?v=1" class="slogan"/>
+			<div id="ani_1">
+				<img src="img/rabbit_1.png" class="rabbit_1"/>
+				<img src="img/lantern.png" class="lantern"/>	
+			</div>
+			<div id="ani_2">
+				<img src="img/rabbit_2.png" class="rabbit_2"/>
+				<div class="cash_s">
+					<img src="img/open.png" class="open"/>
+				</div>
+			</div>
+			<div class="wenzi">
+				<img src="img/wenzi_1.png" class="wz_1"/>
+				<img src="img/wenzi_2.png" class="wz_2" style="display: none;"/>
+				<img src="img/wenzi_3.png" class="wz_3"/>
+			</div>
+			<div class="desk">
+				<img src="img/smoke_1.png" class="smoke_1">
+				<img src="img/smoke_2.png"/ class="smoke_2">
+				<img src="img/desk_1.png" class="desk desk_1"/>
+				<img src="img/desk_2.png" class="desk desk_2" style="display: none;"/>
+			</div>
+		</div>
+		<div class="down">
+			<div class="sign_logo">
+				<img src="/v/sxqp20170926/img2/light.png" class="light"/>
+			</div>
+			<img src="img/loading.gif" class="loading"/>
+			<p class="title">恭喜您获得</p>
+			<p class="money"></p>
+			<div id="ani_11">
+				<img src="img/rabbit_1.png" class="rabbit_11"/>
+				<img src="img/lantern.png" class="lantern1"/>	
+				<img src="img/rabbit_4.png" class="rabbit_4"/>
+				<div class="pic_box">
+					<img src="img/sleep.png" class="sleep"/>
+				</div>
+				<div id="btn"></div>
+			</div>
+			<p class="tip">温馨提示：累计金额超过1元可提现</p>
+			<p class="rule_box">
+				<a href="javascript:;" class="rule">活动规则</a>
+			</p>
+			<img src="img/bottom_bg.png" class="bottom_bg"/>
+		</div>
+	</body>
+	<script src="/static/js/vve/10core.js?v=1"></script>
+	<script src="/static/js/vve/11tool.js?v=1"></script>
+	<script src="/static/js/vve/12event.js?v=1"></script>
+	<script src="/static/js/vve/20ajx.js?v=1"></script>
+	<script src="/v/js/cfg.js?v=2.0.1"></script>
+	<script src="/v/js/publictip.js?v=2.0.1"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getcash.js?v=1.2.4" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    ini_wxshare(vge.sxqpappid);
+	    // 隐藏微信右上角菜单
+	    wx.ready(function() {
+	        wx.hideOptionMenu();
+	    });
+    </script>
+    <script type="text/javascript">
+		var hh = document.getElementsByTagName('body')[0].clientHeight,ww = document.getElementsByTagName('body')[0].clientWidth;
+		if(ww<=320){
+			$('li').css({'width':'1.1rem','line-height':'1em','-webkit-background-size': '1.1rem'});
+		}
+	</script>
+</html>

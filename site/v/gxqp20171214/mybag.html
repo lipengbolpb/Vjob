@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒广西</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1.1.1" />
+		<link rel="stylesheet" type="text/css" href="css/jiuwang.css?v=1.1"/>
+	</head>
+
+	<body>
+		<div class="bag_content">
+			<div class="top">
+				<img src="img/mybag_bg.png" class="yuanbao" />
+			</div>
+			<div class="bottom">
+				<div class="content">
+					<p class="all">喝了 <span id="bottle_num"></span> 瓶青岛啤酒</p>
+					<div class="msg">
+						<p class="balance" id="">账户余额：<span id="balance"></span>元</p>
+						<p class="sent">已领红包：<span id="add_money"></span>元</p>
+					</div>
+				</div>
+				<p class="tip">继续加油，努力再扫几瓶，<br />攒够1元即可提现</p>
+				<div class="btn" id="btn_box">
+					<div id="tx_btn">
+						立即提现
+					</div>
+					<div id="show">
+						查看详细记录
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="details">
+			<div class="record" id="list_show">
+				<input type="button" name="" id="hide" value="收起" />
+				<ul id="mon_list">
+				</ul>
+				<p class="getmore" id="more">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<div class="alert">
+			<img src="img/alert_tip.png" id="alert" />
+		</div>
+		<!--<img src="/v/ymqp20180130/img/jiuw_icon.png" id="jw_icon" />
+		<div id="jiuw_box">
+			<img src="/v/ymqp20180130/img/close.png" class="close" />
+			<div>
+				<img src="/v/gxqp20171214/img/jiuw_qrcode.jpg" id="jwqrcode" />
+			</div>
+		</div>-->
+	</body>
+	<script id="onenote_tpl" type="text/html">
+		<li>
+			<div class="list_left">
+				<p id="monwhere">[=monwhere]</p>
+				<p id="gettime">[=gettime]</p>
+			</div>
+			<div class="list_rgh">
+				<span id="dollor" style="color: [=color]">[=money]</span>元
+			</div>
+		</li>
+	</script>
+	<script src="/static/js/vve/10core.js?v=11"></script>
+	<script src="/static/js/vve/11tool.js?v=11"></script>
+	<script src="/static/js/vve/20ajx.js?v=12"></script>
+	<!--<script src="/v/js/60webcfg.js?v7"></script>-->
+	<script src="/v/js/cfg.js?v=11.0.2" type="text/javascript" charset="utf-8"></script>
+	<script src="/v/js/publictip.js?v=11"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mybag.js?v=11.0.8" type="text/javascript" charset="utf-8"></script>
+</html>

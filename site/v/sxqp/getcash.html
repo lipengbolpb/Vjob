@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒乐享山西</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/happyNewYear.css?v=2.3.4" /> -->
+    <link rel="stylesheet" type="text/css" href="css/result.css?v=2.3.3" />
+    <!-- <link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1"/> -->
+</head>
+
+<body>
+    <!-- <div class="happyNewYear">
+        <div class="curtain">
+            <img src="img/happyNewYear/curtain-bg.png" class="curtain-bg">
+            <img src="img/happyNewYear/curtain-left.png" class="curtain-left">
+            <img src="img/happyNewYear/curtain-right.png" class="curtain-right">
+            <img src="img/happyNewYear/curtain-logo.png" class="curtain-logo">
+            <div class="textTop">
+                <img src="img/happyNewYear/text-1.png" class="text-1">
+                <div class="foamBox1">
+                    <img src="img/happyNewYear/text-1-mask.png" class="text-1-foam text-foam">
+                </div>
+            </div>
+            <div class="textBottom">
+                <img src="img/happyNewYear/text-2.png" class="text-2">
+                <div class="foamBox2">
+                    <img src="img/happyNewYear/text-2-mask.png" class="text-2-foam text-foam">
+                </div>
+            </div>
+            <img src="img/happyNewYear/beer.png" class="happyNewYearBeer">
+        </div>
+    </div> -->
+    <img src="img/logo.png" class="logo" />
+    <div class="index" style="display: none;">
+        <div class="slogan">
+            <img src="img/slogan_2.png" class="slogan_2" />
+            <img src="img/slogan_1-hd.png" class="slogan_1" />
+            <img src="img/open.png" class="open" />
+        </div>
+        <img src="/v/sxqp/img/beer.png?v=1.0.0" class="beer" />
+        <a href="javascript:;" class="rule">活动规则</a>
+    </div>
+    <div class="cash" style="display: none;">
+        <div class="sign_logo">
+            <img src="/v/sxqp/img2/light.png" class="light" />
+        </div>
+        <div class="cash_bg">
+            <img src="img/repscan.png" class="repscan" />
+            <p class="time" style="display: none;"></p>
+            <p class="title">恭喜您获得</p>
+            <p id="currentMoney"></p>
+            <input type="button" name="tx" id="tx" value="立即提现" />
+        </div>
+        <p class="tx_tip">根据微信平台要求，红包累计大于等于0.3元后可提现，不足0.3元的红包我们为您贴心准备了零钱包功能</p>
+        <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+    </div>
+    <!-- kb竞猜 -->
+    <div class="ad">
+        <img src="img/get_close.png?v=2" class="adClose">
+        <img src="img/ad_football.png?v=3" class="adFootball">
+        <img src="img/ad_tap.png?v=2" class="adTap">
+    </div>
+    <div class="tx_mark" style="display: none;">
+        <img src="img/tx_tip.png" id="tx_mark" style="display: none;" />
+    </div>
+	<div class="active">
+	    <img src="img/20190428.png">
+	    <img src="/v/hkqp/img/close_black.png" class="activeClose">
+	</div>
+    <img src="img/loading.gif" id="loading" />
+    <!--2018酒王-->
+	<!-- <div id="jw_box">
+		<img src="/v/vjfhls/img2018/icon-close.png" class="jw_close"/>
+		<div class="jw_content">
+			<img src="/v/vjfhls/img2018/jw_content_1.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_2.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_3.png"/>
+			<img src="/v/vjfhls/img2018/jw_content_4.png"/>
+		</div>
+		<img src="/v/vjfhls/img2018/jw_person.png" class="jw_person"/>
+		<div class="qrcode_box">
+			<img src="/v/vjfhls/img2018/shanxi.png"/>
+		</div>
+	</div> -->
+    <div style="display: none;"><audio src="5293.mp3?v=1.0.1" preload="preload" id="knock"></audio></div>
+    <p id="copyright" style="color:#482000;width: 100%;font-size: 12px;text-align: center;position: fixed;bottom: 10px;z-index: 1;">技术支持：V积分
+        · 鼎川物联Copyright 2012-2019</p>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/v/js/cfg.js?v=2.0.9"></script>
+<script src="/v/js/publictip.js?v=3.0.0"></script>
+<!-- 新年活动页 -->
+<!-- <script src="js/happyNewYear.js?v=9"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=2"></script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/result.js?v=3.12.3" type="text/javascript" charset="utf-8"></script>
+<!--<script>
+	  	ini_wxshare(vge.sxqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>-->
+<script type="text/javascript">
+    var hh = document.getElementsByTagName('body')[0].clientHeight,
+        ww = document.getElementsByTagName('body')[0].clientWidth;
+    if (ww <= 320) {
+        $('li').css({
+            'width': '1.1rem',
+            'line-height': '1em',
+            '-webkit-background-size': '1.1rem'
+        });
+    }
+</script>
+
+</html>

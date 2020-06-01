@@ -1,0 +1,212 @@
+@charset "utf-8";
+html,body,p,h1,h2,h3,input,li,ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: url(../img/bg.png?v=2) no-repeat left top;
+	-webkit-background-size: 100% auto;
+}
+ul,li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+}
+body{
+	font-family: "微软雅黑","Microsoft YaHei";
+	color: white;
+	overflow-x: hidden;
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+::-webkit-input-placeholder{
+     color: #ffffff;
+     font-size: .7rem;
+}
+input[type="button"]{
+	color: white;
+}
+div.msg_box{
+	display: none;
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	background: url(../img/bg2.png?v=2) repeat-y left top;
+	-webkit-background-size: 100% auto;
+}
+div.msg_box img.prize{
+	display: block;
+	width: 11rem;
+	margin: 0 auto;
+	padding-top: 3rem;
+}
+div.msg_box #msglist{
+	overflow: hidden;
+	width: 100%;
+	margin-top: 1rem;
+}
+div.msg_box #msglist img.pic_tip{
+	width: 13.8rem;
+	display: block;
+	margin: 0 auto 1rem;
+}
+div.msg_box #msglist p{
+	height: 2.3rem;
+	border-bottom:1px #5791bf solid ;
+	line-height: 2.3rem;
+	
+}
+div.msg_box #msglist p.user_box{
+	border-top:1px #5791bf solid ;
+}
+div.msg_box #msglist p input{
+	height: 100%;
+	display: block;
+	text-indent: 1rem;
+	width: 100%;
+	font-size: .9rem;
+	color: #ffffff;
+}
+div.msg_box #msglist p #yzcode{
+	float: left;
+	border-right: 1px #5791bf solid;
+	width: 58%;
+}
+div.msg_box #msglist p #get_yz{
+	width: 40%;
+	float: right;
+	display: block;
+	color: #fcc833;
+	font-size: .9rem;
+	text-decoration: none;
+	text-align: center;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#btn{
+	height:2.2rem;
+	margin: 1rem auto;
+	overflow: hidden;
+	background: url(../img/button_tj.png?v1) no-repeat center;
+	-webkit-background-size: auto 100%;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#btn img{
+	width: 1.3rem;
+	display: block;
+	margin: .3rem auto;
+}
+div.msg_box p.tip{
+	font-size: .5rem;
+	padding: 0 .8rem;
+	text-align: center;
+	margin: 0 auto 1rem;
+}
+div.msg_box p.rule_box{
+	text-align: center;
+	padding-bottom: 1rem;
+}
+div.msg_box p.rule_box a{
+	padding: 0 1rem;
+	font-size: .56rem;
+	color: white;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+div.my_prize{
+	background: url(../img/myprize_bg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 3.56rem;
+    height: 1rem;
+	position: absolute;
+	right: 0;
+	top: 1.2rem;
+	line-height: .75rem;
+}
+
+.prize_title{
+	display: inline-block;
+	color: #f6243c;
+	font-size: .6rem;
+    padding-left: .7rem;
+	font-weight: bold;
+}
+div.attention_box{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:url(../img/bg.png?v=2) no-repeat 0 0;
+    background-size: 100% auto;
+    display: none;
+    overflow: hidden;
+}
+.attention_bot{
+	width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.prize_success{
+	position: absolute;
+	width: 60%;
+	left: 20%;
+    top: 8%;
+}
+.main{
+	position: relative;
+	z-index: 2;
+	background: url(../img/attention_line.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width: 72%;
+	margin:10rem auto 0;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.qrcode{
+	width: 54%;
+}
+.main ul {
+    width: 36%;
+    font-size: 0.55rem;
+}
+.main ul li {
+    line-height: 1rem;
+    list-style: initial;
+}
+
+img.logo {
+	display: block;
+    width: 3rem;
+    position: absolute;
+    top:.825rem;
+    left: .825rem;
+}
+img.index {
+    width: 100%;
+    max-height: 95%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}

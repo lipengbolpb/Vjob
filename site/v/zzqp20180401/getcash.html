@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=1.16">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="img/audio1.png" class="audio">
+        <div class="head">
+            <img src="img/logo.png" class="logo">
+            <img src="img/slogan.png" class="slogan">
+        </div>
+        <div class="main">
+            <div class="top">
+                <img src="img/main-title.png">
+            </div>
+            <div class="bottom">
+                <img src="img/main-content.png">
+                <div class="scan">
+                    <p>恭喜您，本次获得</p>
+                    <p>
+                        <span>+</span>
+                        <span class="money"></span>积分</p>
+                </div>
+                <div class="rescan">
+                    <p>您已扫过</p>
+                    <p class="rescan-title">您已于</p>
+                    <p class="rescan-content">2018年8月8日18::88:88</p>
+                    <p>获得
+                        <span class="rescan-money"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="prize">
+            <img src="img/prize-bg.png">
+            <img src="" class="prize-ico">
+            <img src="img/prize-mask.png" class="mask">
+            <p id="prizeTitle">恭喜您，中奖啦！</p>
+            <p class="peizeType"></p>
+            <a href="javascript:;" class="ck"></a>
+        </div>
+        <div class="select">
+            <div class="btn clearfix">
+                <div class="guess">
+                    <img src="img/btn-_1.png" class="btn1 _fadeIn">
+                    <img src="img/btn-1.png">
+                    <img src="img/txt-w.png" class="txt">
+                    <img src="img/txt-y.png" class="txt _fadeIn">
+                </div>
+                <div class="mall">
+                    <img src="img/btn-2.png">
+                </div>
+                <div class="personal">
+                    <img src="img/btn-3.png">
+                </div>
+            </div>
+        </div>
+        <div class="fail">
+            <img src="img/close.png" class="fail-close">
+            <img src="" class="fail-title">
+            <p class="content"></p>
+        </div>
+        <div class="foot">
+            <div class="russia">
+                <img src="img/russia.png">
+            </div>
+            <img src="img/foot.png" class="footer">
+        </div>
+        <!-- 中奖通知广告页 -->
+        <div class="ad">
+            <img src="img/ad/result.png" class="adResult">
+            <img src="img/ad/title_1.png" class="adTitle">
+            <img src="img/close.png" class="adClose">
+        </div>
+        <!-- <div class="active_1">
+            <img src="img/ad/active_1_slogan.png" class="activeSlogan">
+            <img src="img/close.png" class="activeClose">
+            <div class="activeTime">
+                <img src="img/guess/8.png" class="time">
+                <img src="img/guess/8.png" class="time">
+                <span>天</span>
+                <img src="img/guess/8.png" class="time">
+                <img src="img/guess/8.png" class="time">
+                <span>时</span>
+                <img src="img/guess/8.png" class="time">
+                <img src="img/guess/8.png" class="time">
+                <span>分</span>
+            </div>
+            <p class="notice">更多精彩，详见足球竞猜</p>
+            <div class="team">
+                <div class="icon">
+                    <img src="" class="pic">
+                    <p class="countryName"></p>
+                </div>
+                <div class="vs">
+                    <img src="img/ad/vs.png">
+                    <p class="activeDate"></p>
+                    <p class="activeMYX"></p>
+                </div>
+                <div class="icon">
+                    <img src="" class="pic">
+                    <p class="countryName"></p>
+                </div>
+            </div>
+            <div class="team">
+                <div class="icon">
+                    <img src="" class="pic">
+                    <p class="countryName"></p>
+                </div>
+                <div class="vs">
+                    <img src="img/ad/vs.png">
+                    <p class="activeDate"></p>
+                    <p class="activeMYX"></p>
+                </div>
+                <div class="icon">
+                    <img src="" class="pic">
+                    <p class="countryName"></p>
+                </div>
+            </div>
+            <p class="notice2">以上显示最近比赛场次</p>
+        </div> -->
+        <p id="batch"></p>
+    </div>
+    <audio id="bgm" loop preload src="music/bgm.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.1.1"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('bgm').setAttribute('src', '/v/zzqp20180401/music/bgm.mp3?v=1');
+        document.getElementById('bgm').setAttribute('loop', 'loop');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    ini_wxshare(vge.zzqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="js/getcash.js?v=1.30"></script>
+<!-- <script src="js/ad.js?v=22"></script> -->
+
+</html>

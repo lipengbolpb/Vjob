@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒乐享河北</title>
+    <script src="js/rem.js"></script>
+    <!-- <link rel="stylesheet" href="css/happyNewYear.css?v=4.3"> -->
+    <link rel="stylesheet" href="css/getcash.css?v=4.3">
+    <link rel="stylesheet" href="css/sign.css?v=2.0.0">
+    <link rel="stylesheet" href="css/sale.css?v=2.0.0">
+    <link rel="stylesheet" href="css/double.css?v=2.5.5">
+    <!-- <link rel="stylesheet" type="text/css" href="/v/vjfhls/css/jw_css.css?v=1"/> -->
+</head>
+
+<body>
+    <!-- <div class="happyNewYear">
+        <div class="curtain">
+            <img src="img/happyNewYear/curtain-bg.png" class="curtain-bg">
+            <img src="img/happyNewYear/curtain-left.png" class="curtain-left">
+            <img src="img/happyNewYear/curtain-right.png" class="curtain-right">
+            <img src="img/happyNewYear/curtain-logo.png" class="curtain-logo">
+            <div class="textTop">
+                <img src="img/happyNewYear/text-1.png" class="text-1">
+                <div class="foamBox1">
+                    <img src="img/happyNewYear/text-1-mask.png" class="text-1-foam text-foam">
+                </div>
+            </div>
+            <div class="textBottom">
+                <img src="img/happyNewYear/text-2.png" class="text-2">
+                <div class="foamBox2">
+                    <img src="img/happyNewYear/text-2-mask.png" class="text-2-foam text-foam">
+                </div>
+            </div>
+            <img src="img/happyNewYear/beer.png" class="beer">
+        </div>
+    </div> -->
+    <img src="img/loading.gif" class="loading" id="loading">
+    <div class="get">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/slogan.png?v=2" class="slogan">
+        <img src="img/footer.png" class="footer">
+        <div class="hb">
+            <img src="img/hb-get.png" class="hbGet">
+            <img src="img/open.png" class="open">
+        </div>
+        <img src="img/beer.png" class="beer">
+        <p class="copyright">本活动由
+            <a href="tel:4008365591">V积分</a>提供技术支持</p>
+        <!-- <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2018</p> -->
+    </div>
+    <div class="cash">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/hb-cash.png" class="hbCash">
+        <img src="" class="toast" />
+        <div class="msg">
+            <p class="congratulate">恭喜你获得</p>
+            <p class="prize">
+                <span>¥</span>
+                <span id="money">0.00</span>
+                <span>元</span>
+            </p>
+        </div>
+        <input type="button" value="立即提现" id="btn">
+        <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，
+            <br>不足1元的红包将存入零钱包</p>
+        <div class="link">
+            <a class="rule">活动规则</a>
+            <a class="explain">隐私说明</a>
+        </div>
+        <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+        <!-- <img src="img/game1.png" class="game1"> -->
+        <p class="copyright">本活动由
+            <a href="tel:4008365591">V积分</a>提供技术支持</p>
+    </div>
+    <div class="repcash">
+        <img src="img/logo.png" class="logo logo1">
+        <p class="title">您已扫过</p>
+        <p class="only">每支仅限扫码一次</p>
+        <img src="img/beer.png" class="beer">
+        <input type="button" value="立即提现" id="repbtn">
+        <p class="earn">
+            您已于
+            <span class="earnTime">undefined</span>扫过这支酒
+            <br>并获得
+            <span class="earnMoney">¥0元</span>
+        </p>
+        <div class="link">
+            <a class="rule">活动规则</a>
+            <a class="explain">隐私说明</a>
+        </div>
+        <!-- <img src="/v/vjfhls/img2018/jw_btn.png" class="jw_btn"/> -->
+        <!-- <img src="img/game1.png" class="game1"> -->
+        <p class="copyright">本活动由
+            <a href="tel:4008365591">V积分</a>提供技术支持</p>
+    </div>
+    <div class="mask">
+        <img src="img/logo.png" class="logo logo1">
+        <p class="qin">亲，注意聊天消息里的【服务通知】
+            <br>看到这样的消息72小时内要点开收钱！</p>
+        <img src="img/alert.png" class="alert">
+        <input type="button" value="我知道了" class="ck">
+    </div>
+    <!-- 联通流量 -->
+    <div class="ad">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/close.png" class="adClose">
+        <img src="img/ad_title.png" class="adTitle">
+        <img src="img/ad_cover.png" class="adCover">
+        <img src="img/ad_finger.png" class="adFinger">
+    </div>
+    <!-- 捆绑促销 -->
+    <div id="sale_icon"></div>
+    <div class="sale">
+        <div class="saleMain">
+            <img src="img/sale/sale-bg.png" class="saleBg">
+            <img src="img/sale/sale-close.png" class="saleClose">
+            <img src="img/sale/sale-slogan.png" class="saleSlogan">
+            <div class="saleBtns">
+                <img src="img/sale/sale-prev.png" class="salePrev">
+                <input type="button" value="" class="saleType">
+                <img src="img/sale/sale-next.png" class="saleNext">
+            </div>
+            <div class="saleNotice">
+                <p class="saleNoticeTop"></p>
+                <p class="saleNoticeBottom">¥
+                    <span id="saleMoney"></span>元</p>
+                <p class="saleNoticeOver1">（本次活动，红包总计
+                    <span class="saleNoticeOver1Num"></span>个，先到先得）</p>
+                <p class="saleNoticeOver2">本次活动，红包总计
+                    <span class="saleNoticeOver2Num"></span>个
+                    <br>先到先得，抢完为止</p>
+            </div>
+            <div class="saleContent">
+            </div>
+            <p class="saleRule">活动说明</p>
+        </div>
+    </div>
+    <div id="sign_logo" class="sign_logo"></div>
+    <div class="sign">
+        <div class="main">
+            <img src="img/sign/close.png" class="signClose">
+            <img src="img/sign/bg_top.png" class="bgTop">
+            <div class="mainTop">
+                <div class="signProgress">
+                    <div class="progressTitle">
+                        <p>0%</p>
+                    </div>
+                    <div class="outter">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <div class="signContent">
+                    <div class="signLeft">
+                        <img src="img/sign/on_left.png">
+                    </div>
+                    <div class="signMiddle">
+
+                    </div>
+                    <div class="signRight">
+                        <img src="img/sign/on_right.png">
+                    </div>
+                </div>
+            </div>
+            <img src="img/sign/bg_middle.png" class="bgMiddle">
+            <div class="mainBottom">
+                <div class="signMask">
+                    <img src="img/sign/mask.png?v=1">
+                </div>
+            </div>
+            <img src="img/sign/bg_bottom.png" class="bgBottom">
+            <img src="img/sign/ck.png" class="signCk">
+        </div>
+    </div>
+    <div class="signRule">
+        <div class="signInner">
+            <div class="top">
+                <img src="img/sign/back.png" class="back" id="signBack">
+                <img src="img/sign/logo.png" class="logo">
+            </div>
+            <div class="bottom">
+                <textarea name="" id="signContent" cols="30" rows="22" readonly="readonly" class="content"></textarea>
+            </div>
+        </div>
+    </div>
+    <!--2018酒王-->
+    <!-- <div id="jw_box">
+    	<img src="/v/vjfhls/img2018/icon-close.png" class="jw_close"/>
+    	<div class="jw_content">
+    		<img src="/v/vjfhls/img2018/jw_content_1.png"/>
+    		<img src="/v/vjfhls/img2018/jw_content_2.png"/>
+    		<img src="/v/vjfhls/img2018/jw_content_3.png"/>
+    		<img src="/v/vjfhls/img2018/jw_content_4.png"/>
+    	</div>
+    	<img src="/v/vjfhls/img2018/jw_person.png" class="jw_person"/>
+    	<div class="qrcode_box">
+    		<img src="/v/vjfhls/img2018/hebei.png"/>
+    	</div>
+    </div> -->
+    <!-- 活动广告页 -->
+    <!-- <div class="active">
+        <img src="img/20180531_jd.png">
+    </div> -->
+    <!-- 一码双奖 -->
+    <!-- 通知按钮 -->
+    <div class="doubleBtn">
+        <img src="img/double/icon.png">
+        <span class="doubleBtnNum">0</span>
+        <p class="doubleBtnTitle"></p>
+    </div>
+    <!-- 滚动宣传 -->
+    <div class="doubleTransform">
+        <p class="doubleTransformP">您的红包累计已领取
+            <span class="doubleTransformMoney"></span>元
+            <span class="doubleNbsp"></span>二重惊喜活动累计支数
+            <span class="doubleTransformNum"></span>支</p>
+        <p class="doubleTransformP">您的红包累计已领取
+            <span class="doubleTransformMoney"></span>元
+            <span class="doubleNbsp"></span>二重惊喜活动累计支数
+            <span class="doubleTransformNum"></span>支</p>
+    </div>
+    <div class="double">
+        <!-- 广告宣传 -->
+        <div class="doubleAd">
+            <img src="img/double/ad_slogan.png" class="doubleAdSlogan">
+            <div class="doubleAdContent">
+                <p class="doubleAdTitle"></p>
+                <textarea name="" id="doubleAdMain" cols="30" rows="7" readonly="readonly"></textarea>
+            </div>
+            <img src="img/double/close.png" class="doubleAdClose">
+        </div>
+        <!-- 二重惊喜 -->
+        <div class="doubleSurprise">
+            <div class="doubleSurpriseTop">
+                <img src="img/double/surprise-top.png">
+                <p>奖池动态</p>
+                <div id="doubleSurpriseList">
+                    <ul class="doubleSurpriseList">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="doubleSurpriseBottom">
+                <img src="img/double/surprise-bottom.png">
+                <p>幸运用户</p>
+                <ul class="doubleSurpriseLucky">
+
+                </ul>
+            </div>
+            <img src="img/double/close.png" class="doubleSurpriseClose">
+        </div>
+        <!-- 本次中奖弹窗 -->
+        <div class="doubleAlert">
+            <div class="doubleAlertMain">
+                <p>您的累计支数</p>
+                <p>已达到
+                    <span class="doubleAlertNum"></span>支</p>
+                <div class="doubleAlertLine"></div>
+                <p>获得一次幸运
+                    <span>抽奖机会</span>
+                </p>
+                <div class="doubleAlertBtn">
+                    <input type="button" value="不感兴趣" class="doubleAlertNo">
+                    <input type="button" value="点击抽奖" class="doubleAlertYes">
+                </div>
+            </div>
+        </div>
+        <!-- 抽中实物奖 -->
+        <div class="doubleGet">
+            <div class="doubleGetMain">
+                <p class="doubleGetTitle">恭喜你获得</p>
+                <p class="doubleGetPrize"></p>
+                <img src="" class="doubleGetPrizeImg">
+            </div>
+            <input type="button" value="立即领取" class="doubleGetBtn">
+        </div>
+        <!-- 未抽中实物奖 -->
+        <div class="doubleNone">
+            <img src="img/double/noprize.png" class="doubleNoneImg">
+            <input type="button" value="我知道了" class="doubleNoneBtn">
+        </div>
+        <!-- 填写中奖信息 -->
+        <div class="doubleInfo">
+            <img src="img/footer.png" class="doubleInfoFooter">
+            <img src="img/beer.png" class="doubleInfoBeer">
+            <p class="doubleInfoTitle">信息填写</p>
+            <div class="doubleInfoText">
+                <div>
+                    <span>丨</span>姓名:
+                    <input type="text" placeholder="张三" maxlength="10" class="doubleName">
+                </div>
+                <div>
+                    <span>丨</span>邮寄地址:
+                    <input type="text" placeholder="省、市、县、区/街道" maxlength="50" class="doubleAddress">
+                </div>
+                <div>
+                    <span>丨</span>身份证号:
+                    <input type="text" placeholder="请输入身份证号" maxlength="18" class="doubleIdcard">
+                </div>
+                <div>
+                    <span>丨</span>电话:
+                    <input type="text" placeholder="请输入手机号" maxlength="11" class="doubleTel">
+                </div>
+                <div>
+                    <span>丨</span>
+                    <input type="text" placeholder="验证码" maxlength="4" class="doubleCode">
+                    <input type="button" value="获取验证码" class="doubleYz">
+                </div>
+            </div>
+            <input type="button" value="提交" class="doubleInfoBtn">
+        </div>
+        <!-- 领取成功 -->
+        <div class="doubleSuccess">
+            <img src="img/double/success.png">
+            <input type="button" value="确定" class="doubleSuccessBtn">
+        </div>
+        <!-- 奖品列表 -->
+        <div class="doubleList">
+            <div class="doubleListBack"></div>
+            <!-- <input type="button" value="活动说明>" class="doubleListRule"> -->
+            <p class="doubleListRuleP">活动说明</p>
+            <div class="doubleListTitle">
+                <img src="img/double/list-title.png">
+                <p>
+                    <span class="doubleListNum"></span>
+                    <span>支</span>
+                </p>
+                <p>二重惊喜
+                    <br>活动累计支数</p>
+            </div>
+            <div class="doubleListBottom">
+                <img src="img/double/list-bg.png" class="doubleListLine">
+                <div class="doubleListMain">
+                    <div class="doubleListBtns">
+                        <a href="javascript:;" class="doubleListYes">已领奖品</a>
+                        <a href="javascript:;" class="doubleListNo doubleActive">未领奖品</a>
+                    </div>
+                    <!-- 没有记录 -->
+                    <img src="" class="doubleListNone">
+                    <!-- 有未领取记录 -->
+                    <ul class="doubleListDetailed">
+                        <p class="doubleGetMore"></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 已领奖信息弹框 -->
+        <div class="doubleListAlert">
+            <div class="doubleListAlertBox">
+                <h1>领奖信息</h1>
+                <div>
+                    姓名：
+                    <input type="text" value="" class="doubleListName" readonly="readonly">
+                </div>
+                <div>
+                    邮寄地址：
+                    <input type="text" value="" class="doubleListAddress" readonly="readonly">
+                </div>
+                <div>
+                    身份证号：
+                    <input type="text" value="" class="doubleListIdcard" readonly="readonly">
+                </div>
+                <div>
+                    电话：
+                    <input type="text" value="" class="doubleListTel" readonly="readonly">
+                </div>
+                <img src="img/double/close.png" class="doubleListAlertClose">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/static/js/vve/idcard.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<!-- 新年活动页 -->
+<!-- <script src="js/happyNewYear.js?v=8"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.8"></script>
+<script src="js/getcash.js?v=5.7.0"></script>
+<script src="js/sign.js?v=1.37"></script>
+<script src="js/sale.js?v=1.15"></script>
+<script src="js/double.js?v=2.3.0"></script>
+<script>
+    ini_wxshare(vge.hbqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

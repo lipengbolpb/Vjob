@@ -1,0 +1,355 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity: 1;-webkit-opacity:1;}
+
+img.logo{
+    width:20%;
+    position: absolute;
+    top: 1rem;
+    left: 8%;
+}
+#mask{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	background:url('../img/alert.png') no-repeat top left;
+	background-size:100% 100%;
+	z-index: 99;
+}
+#mask img.footer{
+	width:100%;
+	height:2.2rem;
+	position:absolute;
+	bottom:0;
+}
+#mask img.titleMask{
+	width:70%;
+	position: absolute;
+	top:4.5rem;
+	left:15%;
+}
+#mask input.btnMask{
+	position:absolute;
+	top:18rem;
+	left:25%;
+	width:50%;
+	height:2.2rem;
+	border:none;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color: #eacd49;
+	color:#ca0013;
+	font-size:0.8rem;
+}
+div.mybag_top{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background-color: #cc0013;
+	transition: all 1s;
+}
+img.hb{
+	width:70%;
+	position: absolute;
+	top:8rem;
+	left:11%;
+}
+img.bg{
+	position:absolute;
+	bottom:2.2rem;
+	left:0;
+	width:100%;
+	height:60%;
+}
+img.footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:2.2rem;
+}
+img.loading{
+	position: absolute;
+	width:20%;
+	top:10rem;
+	left:40%;
+	z-index: 1;
+	display:none;
+}
+div.mybag_top p:nth-of-type(1){
+	width: 100%;
+	text-align:center;
+	color:#fff699;
+	margin-top:3rem;
+	font-size:1rem;
+}
+div.mybag_top p:nth-of-type(2){
+	width: 100%;
+	text-align:center;
+	color:#fff699;
+	font-size:1rem;
+	font-weight:bold;
+	margin-top: 0.5rem;
+}
+#num{
+	font-size:2rem;
+}
+div.msg{
+	width:85%;
+	position:absolute;
+	top:13rem;
+	left: 22%;
+}
+div.mybag_top div.msg p{
+	text-align: left;
+}
+div.mybag_top div.msg p.tx{
+	color:#ffffff;
+	margin-top:1rem;
+	font-size:0.8rem;
+}
+div.msg p img{
+	width:6%;
+	margin-right:3%;
+	vertical-align: text-bottom;
+}
+div.mybag_top div.msg p.top{
+	color:#ffffff;
+	font-size:0.8rem;
+	margin-top:0;
+	font-weight: normal;
+}
+div.mybag_top div.msg p.bottom{
+	color:#ffffff;
+	font-size:0.8rem;
+	margin-top:0;
+	text-align:left;
+	width:100%;
+}
+div.mybag_top div.msg p span:nth-of-type(1){
+	font-size:1.5rem;
+	font-weight:bold;
+	vertical-align: sub;
+}
+div.mybag_top div.msg p span:nth-of-type(2){
+	font-weight:bold;
+}
+div.mybag_top div.msg p.tx span{
+	color: #fff699;
+}
+div.mybag_top div.btn{
+	width:75%;
+	position: absolute;
+	top: 20.5rem;
+	left:12.5%;
+}
+div.mybag_top #btn{
+	width:40%;
+	height:2.2rem;
+	background-color: #eacd49;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	border:none;
+	color:#ca0013;
+	font-size:0.8rem;
+	float:left;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+div.mybag_top #show{
+	width:40%;
+	height:2.2rem;
+	background-color: #eacd49;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	border:none;
+	color:#ca0013;
+	font-size:0.8rem;
+	float:right;
+	font-family: "微软雅黑","Microsoft YaHei";
+}
+
+div.mybag_bottom{
+	width: 100%;
+	height: 100%;
+	background:#009138 url('../img/maybag_bg.png') no-repeat bottom left;
+	background-size:100% auto;
+}
+div.mybag_bottom div.record{
+	width: 89%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	position: relative;
+	left: 5.5%;
+	top: 0;
+}
+div.mybag_bottom div.record input{
+	width: 60%;
+    height: 2rem;
+    margin: 1.05rem 3rem;
+	border-radius:0.5rem;
+	-webkit-border-radius: 0.5rem;	
+	background:#eacd49 url(../img/up.png?v=1) no-repeat center;
+	background-size: auto 100%;
+	float: left;
+	border:none;
+}
+div.mybag_bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #90c9a2 solid;
+}
+div.mybag_bottom div.record ul li{
+	border-bottom: 1px #90c9a2 solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+}
+div.mybag_bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.9rem;
+	color:#ffffff;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(1){
+	font-size: 0.7rem;
+}
+div.mybag_bottom div.record ul li p.title span:nth-of-type(2){
+	color: #ffffff;
+	font-size: 0.6rem;
+}
+div.mybag_bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 2rem;
+}
+div.mybag_bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.mybag_bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	color: #fff699;
+	display: none;
+	font-size:0.75rem;
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #fff699;
+	display: none;
+	width:100%;
+	font-size:0.75rem;
+}
+@media only screen and (max-height:500px) and (min-width:320px) {
+	div.msg{
+		top: 11rem;
+	}
+	div.mybag_top div.btn{
+		top:18.5rem;
+	}
+	#mask input.btnMask{
+    	top:17rem;
+    }
+}
+@media only screen and (max-height:450px) and (min-width:320px) {
+	div.msg{
+		top: 9rem;
+	}
+	div.mybag_top div.btn{
+		top:16rem;
+	}
+	img.hb{
+		width: 60%;
+    	top: 6rem;
+    	left: 17%;
+	}
+	div.mybag_top p:nth-of-type(1){
+		margin-top:2rem;
+	}
+	div.mybag_top p:nth-of-type(2){
+		margin-top: 0rem;
+	}
+	#mask input.btnMask{
+    	top:15rem;
+    }
+}
+@media only screen and (max-height:570px) and (min-width:360px) {
+	div.msg{
+		top: 11.5rem;
+	}
+	div.mybag_top div.btn{
+		top:19.5rem;
+	}
+	img.hb{
+		width: 60%;
+    	top: 8rem;
+    	left: 17%;
+	}
+}
+@media only screen and (max-height:550px) and (min-width:360px) {
+	div.mybag_top p:nth-of-type(2){
+		margin-top:0;
+	}
+	img.hb{
+		width: 55%;
+    	top: 7.5rem;
+    	left: 20%;
+	}
+	div.msg{
+		top: 11rem;
+	}
+	div.mybag_top div.btn{
+		top:18rem;
+	}
+	#mask input.btnMask{
+    	top:16.5rem;
+    }
+}
+@media only screen and (max-height:650px) and (min-width:380px) {
+	img.hb{
+		width: 65%;
+    	top: 7.5rem;
+    	left: 14%;
+	}
+	div.msg{
+		top: 12rem;
+	}
+	div.mybag_top div.btn{
+		top:19.5rem;
+	}
+}
+@media only screen and (max-height:550px) and (min-width:380px) {
+	div.msg{
+		top: 9rem;
+	}
+	div.mybag_top div.btn{
+		top:16rem;
+	}
+	img.hb{
+		width: 55%;
+    	top: 7rem;
+    	left: 18%;
+	}
+}

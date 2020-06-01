@@ -1,0 +1,751 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+@-webkit-keyframes city-round {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes bgm-round {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background: #bc2029;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    background: #bc2029;
+    position: relative;
+}
+
+body .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body .wrap .audio {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 10%;
+}
+
+.running {
+    -webkit-animation: bgm-round 3s linear infinite forwards;
+    -webkit-animation-play-state: running;
+}
+
+body .wrap .head {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0;
+}
+
+body .wrap .head .logo {
+    margin: 2rem 0 0 0.5rem;
+    width: 3rem;
+    vertical-align: top;
+}
+
+body .wrap .head .slogan {
+    margin: 1rem 1rem 0 1rem;
+    width: 10rem;
+    vertical-align: top;
+}
+
+body .wrap .main {
+    margin: 1rem auto 0;
+    width: 100%;
+}
+
+body .wrap .main .points {
+    width: 100%;
+    display: none;
+}
+
+body .wrap .main .points .title {
+    text-align: center;
+    width: 100%;
+    color: #eedb43;
+    font-size: 0.8rem;
+}
+
+body .wrap .main .points .content {
+    margin: 0.5rem auto 0;
+    text-align: center;
+    width: 100%;
+    color: #eedb43;
+    font-size: 1.5rem;
+}
+
+body .wrap .main .points .content span:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+body .wrap .main .points .content span:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+body .wrap .main .points .content span:nth-of-type(3) {
+    font-size: 1.5rem;
+}
+
+body .wrap .main .gift {
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+body .wrap .main .gift .mybescan {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 20%;
+    display: none;
+}
+
+body .wrap .main .gift .prize {
+    width: 35%;
+    margin-left: 3%;
+    float: left;
+}
+
+body .wrap .main .gift div {
+    width: 58%;
+    float: right;
+}
+
+body .wrap .main .gift div p:nth-of-type(1) {
+    color: #eedb43;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+body .wrap .main .gift div p:nth-of-type(2) {
+    color: #eedb43;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+
+body .wrap .main .gift .ck {
+    width: 100%;
+    text-align: left;
+    margin-top: 0.8rem;
+    color: #ffffff;
+    font-size: 0.6rem;
+    float: left;
+    text-decoration: underline;
+}
+
+body .wrap .main .rescan {
+    width: 100%;
+    display: none;
+}
+
+body .wrap .main .rescan p:nth-of-type(1) {
+    width: 100%;
+    text-align: center;
+    color: #eedb43;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+body .wrap .main .rescan p:nth-of-type(2) {
+    width: 100%;
+    text-align: center;
+    color: #eedb43;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+body .wrap .main .rescan p:nth-of-type(3) {
+    width: 100%;
+    text-align: center;
+    color: #eedb43;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+body .wrap .main .rescan .get {
+    font-weight: bold;
+    margin-left: 0.3rem;
+    font-size: 0.65rem;
+}
+
+body .wrap .main .verify {
+    width: 100%;
+    display: none;
+}
+
+body .wrap .main .verify .left {
+    float: left;
+    width: 30%;
+    position: relative;
+}
+
+body .wrap .main .verify .left .verify-img {
+    width: 80%;
+    position: absolute;
+    top: 0.5rem;
+    left: 20%;
+}
+
+body .wrap .main .verify .left .bescan {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+body .wrap .main .verify .right {
+    float: right;
+    width: 70%;
+    position: relative;
+}
+
+body .wrap .main .verify .right p:nth-of-type(1) {
+    color: #eedb43;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+body .wrap .main .verify .right p:nth-of-type(2) {
+    color: #eedb43;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+body .wrap .main .verify .right p:nth-of-type(2) span {
+    color: #ffffff;
+}
+
+body .wrap .btns {
+    margin: 1rem auto 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+body .wrap .btns .personal {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    width: 3.5rem;
+}
+
+body .wrap .btns .sign {
+    position: absolute;
+    top: 0rem;
+    left: 5.75rem;
+    width: 4rem;
+}
+
+body .wrap .btns .mall {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    width: 4.2rem;
+}
+
+body .wrap .footer {
+    position: absolute;
+    bottom: 8.5rem;
+    width: 120%;
+    left: -10%;
+}
+
+body .wrap .footer .football {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+body .wrap .footer .city {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: city-round 20s linear infinite;
+    pointer-events: none;
+}
+
+body .wrap .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+body .wrap .mask .title {
+    margin: 3rem auto 0;
+    text-align: center;
+    width: 100%;
+    color: #f6bf62;
+}
+
+body .wrap .mask .card {
+    margin: 1.5rem auto 0;
+    width: 80%;
+    display: block;
+}
+
+body .wrap .mask .close {
+    margin: 0.5rem auto 0;
+    width: 2rem;
+    display: block;
+}
+
+body .wrap .mask .notice {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.5rem;
+    color: #fffefe;
+    width: 100%;
+    text-align: center;
+}
+
+body .wrap .reach {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+body .wrap .reach .reach-bg {
+    width: 90%;
+    position: absolute;
+    top: 3rem;
+    left: 10%;
+}
+
+body .wrap .reach p:nth-of-type(1) {
+    text-align: center;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 7.8rem;
+}
+
+body .wrap .reach p:nth-of-type(2) {
+    text-align: center;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 8.8rem;
+}
+
+body .wrap .reach p:nth-of-type(3) {
+    text-align: center;
+    width: 100%;
+    font-size: 0.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 19rem;
+}
+
+body .wrap .reach p:nth-of-type(4) {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #f3ca92;
+    font-weight: bold;
+    top: 14rem;
+}
+
+body .wrap .reach #money {
+    font-size: 1.2rem;
+}
+
+body .wrap .reach .hb {
+    width: 45%;
+    position: absolute;
+    top: 9.5rem;
+    left: 28%;
+}
+
+body .wrap .reach .close {
+    width: 10%;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+}
+
+body .wrap .fail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+body .wrap .fail .fail-title {
+    width: 70%;
+    display: block;
+    margin: 2.5rem auto 0;
+}
+
+body .wrap .fail .content {
+    text-align: center;
+    width: 100%;
+    font-size: 0.65rem;
+    color: #f6bf62;
+    margin-top: 1.5rem;
+}
+
+body .wrap .fail .fail-bg {
+    width: 85%;
+    display: block;
+    margin: 2rem auto 0;
+}
+body .wrap .fail .fail-close{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 10%;
+    display: none;
+}
+#batch {
+    position: absolute;
+    bottom: 0.5rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: aliceblue;
+}
+
+@media only screen and (max-height:630px) and (min-width:400px) {
+    body .wrap .footer {
+        bottom: 7.5rem;
+    }
+    body .wrap .fail .fail-title {
+        width: 60%;
+        margin: 3rem auto 0;
+    }
+    body .wrap .fail .fail-bg {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-height:600px) and (min-width:400px) {
+    body .wrap .footer {
+        bottom: 6.5rem;
+    }
+}
+
+@media only screen and (max-height:550px) and (min-width:400px) {
+    body .wrap .reach .reach-bg {
+        top: 2rem;
+    }
+    body .wrap .reach p:nth-of-type(1) {
+        top: 6.8rem;
+    }
+    body .wrap .reach p:nth-of-type(2) {
+        top: 7.8rem;
+    }
+    body .wrap .reach .hb {
+        top: 8.5rem;
+    }
+    body .wrap .reach p:nth-of-type(3) {
+        top: 18rem;
+    }
+    body .wrap .fail .fail-bg {
+        margin: 1rem auto 0;
+    }
+}
+
+@media only screen and (max-height:580px) and (min-width:375px) {
+    body .wrap .footer {
+        bottom: 6.5rem;
+    }
+    body .wrap .fail .fail-title {
+        width: 60%;
+        margin: 2rem auto 0;
+    }
+}
+
+@media only screen and (max-height:550px) and (min-width:375px) {
+    body .wrap .footer {
+        bottom: 4.5rem;
+    }
+    body .wrap .fail .fail-bg {
+        width: 70%;
+        margin: 1rem auto 0;
+    }
+}
+
+@media only screen and (max-height:500px) and (min-width:375px) {
+    body .wrap .reach .reach-bg {
+        top: 2rem;
+    }
+    body .wrap .reach p:nth-of-type(1) {
+        top: 6.8rem;
+    }
+    body .wrap .reach p:nth-of-type(2) {
+        top: 7.8rem;
+    }
+    body .wrap .reach .hb {
+        top: 8.5rem;
+    }
+    body .wrap .reach p:nth-of-type(3) {
+        top: 18rem;
+    }
+}
+
+@media only screen and (max-height:600px) and (min-width:360px) {
+    body .wrap .fail .fail-title {
+        width: 60%;
+        margin: 2rem auto 0;
+    }
+}
+
+@media only screen and (max-height:550px) and (min-width:360px) {
+    body .wrap .footer {
+        bottom: 7.5rem;
+    }
+    body .wrap .fail .fail-bg {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-height:520px) and (min-width:360px) {
+    body .wrap .footer {
+        bottom: 6.5rem;
+    }
+    body .wrap .mask .card {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-height:480px) and (min-width:360px) {
+    body .wrap .footer {
+        bottom: 4.5rem;
+    }
+    body .wrap .reach .reach-bg {
+        top: 2rem;
+    }
+    body .wrap .reach p:nth-of-type(1) {
+        top: 6.8rem;
+    }
+    body .wrap .reach p:nth-of-type(2) {
+        top: 7.8rem;
+    }
+    body .wrap .reach .hb {
+        top: 8.5rem;
+    }
+    body .wrap .reach p:nth-of-type(3) {
+        top: 18rem;
+    }
+    body .wrap .fail .fail-bg {
+        width: 70%;
+        margin: 1rem auto 0;
+    }
+}
+
+@media only screen and (max-height:540px) and (min-width:320px) {
+    body .wrap .fail .fail-title {
+        width: 65%;
+        margin: 2rem auto 0;
+    }
+    body .wrap .fail .fail-bg {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-height:500px) and (min-width:320px) {
+    body .wrap .footer {
+        bottom: 6.5rem;
+    }
+}
+
+@media only screen and (max-height:480px) and (min-width:320px) {
+    body .wrap .footer {
+        bottom: 6.5rem;
+    }
+    body .wrap .fail .fail-title {
+        width: 65%;
+        margin: 2rem auto 0;
+    }
+    body .wrap .fail .fail-bg {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-height:450px) and (min-width:320px) {
+    body .wrap .footer {
+        bottom: 5rem;
+    }
+    body .wrap .mask .card {
+        width: 70%;
+    }
+    body .wrap .mask .title {
+        margin: 2rem auto 0;
+    }
+}
+
+@media only screen and (max-height:420px) and (min-width:320px) {
+    body .wrap .footer {
+        bottom: 4rem;
+    }
+    body .wrap .reach .reach-bg {
+        top: 2rem;
+    }
+    body .wrap .reach p:nth-of-type(1) {
+        top: 6.8rem;
+    }
+    body .wrap .reach p:nth-of-type(2) {
+        top: 7.8rem;
+    }
+    body .wrap .reach .hb {
+        top: 8.5rem;
+    }
+    body .wrap .reach p:nth-of-type(3) {
+        top: 18rem;
+    }
+    body .wrap .fail .fail-title {
+        width: 60%;
+        margin: 1.5rem auto 0;
+    }
+    body .wrap .fail .fail-bg {
+        width: 65%;
+    }
+}

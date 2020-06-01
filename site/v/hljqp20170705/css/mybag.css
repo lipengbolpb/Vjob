@@ -1,0 +1,248 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: url(../img/index_bg.png?v=1) no-repeat center;
+	-webkit-background-size: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#alert img{
+	width: 100%;
+}
+div.cash{
+	height: 14rem;
+	background: url(../img/mybag_cash_bg.png?v=1) no-repeat center;
+	-webkit-background-size: auto 100%;
+	margin-top: 2rem;
+	text-align: center;
+	overflow: hidden;
+}
+div.cash img.logo{
+	position: absolute;
+	left: 1.1rem;
+	top: 1.1rem;
+	width: 2.4rem;
+}
+div.cash p.title{
+	color: #fff699;
+	font-size: .9rem;
+	margin-top: 3.8rem;
+}
+div.cash p.num{
+	padding: .7rem 0 .3rem;
+	background: url(../img/mybag_cloud.png) no-repeat center;
+	-webkit-background-size: auto 100%;
+	margin: 1.1rem auto 0;
+	color: #6e0000;
+	font-size: 1rem;
+	font-weight: bold;
+}
+div.cash p.num span{
+	color: #fb941e;
+	font-size: 1.5rem;
+	position: relative;
+	bottom: -.1rem;
+}
+div.cash div.msg_box{
+	color: #FFFFFF;
+	font-size: .7rem;
+}
+div.cash div.msg_box span{
+	color:#fef79c ;
+}
+#dom_balance,#add_money{
+	font-size: 1rem;
+	position: relative;
+	bottom: -.1rem;
+}
+#btn{
+	width: 12.1rem;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	text-align: center;
+	margin: 0rem auto .8rem;
+	background: #ffdb45;
+	-webkit-border-radius: .5rem;
+	font-size: .8rem;
+	color: #ea5244;
+	overflow: hidden;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#btn img{
+	width: 1.5rem;
+	display: block;
+	margin: .15rem auto 0;
+}
+p.tip{
+	padding: 0 1rem;
+	text-align: center;
+	font-size: .6rem;
+	color: #ffffff;
+}
+a.details{
+	color: #ffe769;
+	font-size: .8rem;
+	display: block;
+	margin: .8rem auto;
+	text-align: center;
+	text-decoration: underline;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+@media only screen and (max-height:480px ) {
+	div.cash{
+		margin-top: 1.5rem;
+		height: 13rem;
+	}
+	#btn{
+		margin: 0rem auto .3rem;
+	}
+	a.details{
+		font-size: .7rem;
+		margin: .5rem auto;
+	}
+}
+div.bottom{
+	width: 100%;
+	height: 100%;
+	background: #e7f3ff;
+	-webkit-transition:all 1s;
+	transition: all 1s;
+	overflow: hidden;
+	position: fixed;
+	top: 100%;
+	left: 0;
+}
+div.bottom div.record{
+	width: 89%;
+	padding: 0 5.5%;
+	height: 100%;
+	padding-bottom: 1rem;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+	margin:0 auto;
+}
+#hide{
+	width: 9.5rem;
+	height: 1.95rem;
+	margin: 1.05rem auto;
+	background:url(../img/bag_btn.png) no-repeat center;
+	-webkit-border-radius: 0.5rem;
+	-webkit-background-size: auto 100%;
+	line-height: 1.7rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+div.bottom div.record ul{
+	width: 100%;
+	overflow:hidden;
+	margin-bottom: 0.6rem;
+	border-top: 1px #bac3cc solid;
+}
+div.bottom div.record ul li{
+	border-bottom: 1px #bac3cc solid;
+	padding: 0.2rem 0;
+	overflow: hidden;
+	background-image:url(../img/icon-code.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	-webkit-background-size: 1.45rem auto;
+}
+div.bottom div.record ul li p.title{
+	float: left;
+	line-height: 0.75rem;
+}
+div.bottom div.record ul li p.title span:nth-of-type(1){
+	color: #676664;
+	font-size: 0.7rem;
+}
+div.bottom div.record ul li p.title span:nth-of-type(2){
+	color: #898989;
+	font-size: 0.6rem;
+}
+div.bottom div.record ul li p.money{
+	float: right;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #e95144;
+}
+div.bottom div.record ul li p.money span:nth-of-type(1){
+	font-size: 1.1rem;
+}
+div.bottom div.record p.getmore{
+	text-align: center;
+	margin: 1rem 0;
+	font-size: 0.8rem;
+	color: #343331;
+	display: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#no_list{
+	text-align: center;
+	margin: 1rem 0;
+	color: #343331;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

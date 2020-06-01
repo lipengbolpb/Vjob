@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒东南营销</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #19883b url(img/bg_rep.png) repeat-y left top;
+            background-size: 100% auto;
+            -webkit-background-size: 100% auto;
+        }
+
+        img {
+            display: block;
+        }
+
+        img.logo {
+            position: absolute;
+            left: 1rem;
+            top: .6rem;
+            width: 3rem;
+        }
+
+        img.slogan {
+            width: 10.6rem;
+            margin: 1.8rem auto 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        div.msg {
+            width: 12rem;
+            height: 10.5rem;
+            margin: -1rem auto 0;
+            -webkit-border-radius: .5rem;
+            background: #199e41;
+            padding-top: 1px;
+            position: relative;
+        }
+
+        div.msg img.pic_tip {
+            margin: 3rem auto 1rem;
+            width: 70%;
+        }
+
+        div.msg img.bottle {
+            width: 4rem;
+            position: absolute;
+            bottom: -2rem;
+            right: -1.5rem;
+        }
+
+        div.msg p.time {
+            color: #fff699;
+            font-size: .6rem;
+            text-align: center;
+            display: none;
+        }
+
+        img.bt_1 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        img.bt_2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        img.fly {
+            position: absolute;
+            width: 1.4rem;
+        }
+
+        img.fly_1 {
+            top: 30%;
+            left: 2%;
+        }
+
+        img.fly_2 {
+            top: 5%;
+            right: 10%;
+            -webkit-transform: rotate(80deg);
+        }
+
+        @-webkit-keyframes game {
+            20%,
+            60% {
+                -webkit-transform: rotate(-5deg);
+            }
+            40%,
+            80% {
+                -webkit-transform: rotate(5deg);
+            }
+            0%,
+            10%,
+            90%,
+            100% {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+        img.game {
+            z-index: 11;
+            position: absolute;
+            width: 3rem;
+            bottom:-1rem;
+            left: -1rem;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+            -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+            -o-tap-highlight-color: rgba(0, 0, 0, 0);
+            tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-animation: game .8s linear both infinite;
+            display: none;
+        }
+
+        @media only screen and (max-height: 481px) {
+            img.slogan {
+                width: 10rem;
+                margin: 1rem auto 0;
+            }
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f8e8f448c09ef3f0bf2e84ddad8e07d8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <img src="img/logo.png" class="logo" />
+    <img src="img/slogan.png" class="slogan" />
+    <div class="msg">
+        <img src="" class="pic_tip" id="fail_tip" />
+        <img src="img/fail_bottle.png" class="bottle" />
+        <img src="img/game.png" class="game">
+        <p class="time">扫码时间：<span id="time"></span><br />再扫一瓶看看</p>
+    </div>
+    <img src="img/bottom_coin.png" class="bt_1" />
+    <img src="img/bottom_bg.png" class="bt_2" />
+    <img src="img/fly.png" class="fly fly_1" />
+    <img src="img/fly.png" class="fly fly_2" />
+    <p id="batch" style="position: fixed;bottom: 2%;text-align: center;width: 100%;font-size: 0.7rem;color: red;z-index: 100;"></p>
+</body>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.1"></script>
+<script src="/v/js/cfg.js?v=2.3"></script>
+<script>
+        var contant = document.getElementById('fail_tip');
+        var args = vge.urlparse(location.href),
+            batch = document.getElementById("batch"),
+            batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch (bizcode) {
+            case '1':
+                contant.src = 'img/fail_tip_6.png';
+                break;
+            case '2':
+                contant.src = 'img/fail_tip_2.png';
+                if (sessionStorage.earnTime) {
+                    document.getElementsByClassName('time')[0].style.display = 'block';
+                    document.getElementById("time").innerHTML = sessionStorage.earnTime;
+                }
+                document.getElementsByClassName('game')[0].style.display = 'block';
+                document.getElementsByClassName('game')[0].addEventListener('click',function(){
+                    location.href = 'http://'+location.host+'/v/fjqp/game/index.html';
+                },false);
+                break;
+            case '3':
+                contant.src = 'img/fail_tip_3.png';
+                document.getElementsByClassName('game')[0].style.display = 'block';
+                document.getElementsByClassName('game')[0].addEventListener('click',function(){
+                    location.href = 'http://'+location.host+'/v/fjqp/game/index.html';
+                },false);
+                break;
+            case '4':
+                contant.src = 'img/fail_tip_4.png';
+                batch.innerHTML = batchName + '<br />服务热线：15311695989';
+                document.getElementsByClassName('game')[0].style.display = 'block';
+                document.getElementsByClassName('game')[0].addEventListener('click',function(){
+                    location.href = 'http://'+location.host+'/v/fjqp/game/index.html';
+                },false);
+                break;
+            case '5':
+                contant.src = 'img/fail_tip_5.png';
+                document.getElementsByClassName('game')[0].style.display = 'block';
+                document.getElementsByClassName('game')[0].addEventListener('click',function(){
+                    location.href = 'http://'+location.host+'/v/fjqp/game/index.html';
+                },false);
+                break;
+            case '6':
+                contant.src = 'img/fail_tip_6.png';
+                break;
+            case '11':
+                contant.src = 'img/fail_tip_2.png';
+                break;
+            case '-1':
+                contant.src = 'img/fail_tip_-1.png';
+                break;
+            case '18'://扫码专员
+	        	contant.style.display='none';
+	        	title_tip('尊敬的用户', '此码未被使用<br />活动批次：'+batchName, '我知道了');
+	            break;     
+	        default:
+	            title_tip('尊敬的用户', bizcode+':'+sessionStorage.msg, '我知道了');
+	            break;
+        }
+
+</script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  	ini_wxshare(vge.fjqpappid);
+  	// 隐藏微信右上角菜单
+  	wx.ready(function() {
+  	    wx.hideOptionMenu();
+  	    function close(){
+			wx.closeWindow();
+		}
+  	});
+</script>
+
+</html>

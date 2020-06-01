@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒华南</title>
+    	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    	<script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?5b4d3f7153d3e4018a3fab95724e346d";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=2.1.0"/>
+	</head>
+	<body>
+		<!-- 弹窗 -->
+    <div class="wxmark" id="wxmark">
+        <img src="img/alert_tip.png"/>       
+    </div>
+
+		<div class="mybag_top" id="outer">
+			<div class="msg">
+				<p class="all">喝了<span id="bottle_num"></span>瓶青岛啤酒</p>
+				<div class="contant">
+					<p class="balance">账户余额：<span id="balance"></span>元</p>
+					<p class="sent">已领红包：<span id="add_money"></span>元</p>
+				</div>
+				<div class="btn" id="btn_box">
+					<input type="button" id="tx_btn" value="提现" style="float: left;"/>
+					<input type="button" id="show" value="查看详细记录" style="float: right;"/>
+				</div>
+			</div>		
+		</div>
+		<div class="mybag_bottom">
+			<div class="record" id="list_show">
+				<input type="button" name="" id="hide" value="" />
+				<ul id="mon_list"></ul>
+				<p class="getmore" id="more">加载更多</p>
+				<p id="no_list">您还没有红包记录哦</p>
+			</div>
+		</div>
+		<script id="onenote_tpl" type="text/html">
+      		<li>
+      			<div class="list_left">
+      				<p id="monwhere">[=monwhere]</p>
+      				<p id="gettime">[=gettime]</p>
+      			</div>
+      			<div class="list_rgh">
+      				<span id="dollor">[=money]</span>元
+      			</div>
+      		</li>
+    </script>
+	</body>
+	<script src="/static/js/vve/10core.js"></script>
+  <script src="/static/js/vve/11tool.js"></script>
+  <script src="/static/js/vve/12event.js"></script>
+  <script src="/static/js/vve/20ajx.js"></script>
+  <script src="/static/js/vve/21tpl.js"></script>
+  <script src="/v/js/publictip.js?v=122"></script>
+  <script src="/v/js/cfg.js?v=13.0.2"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v1"></script>
+	<script src="js/mybag.js?v=12.4" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script>
+	  ini_wxshare(vge.hnqpappid);
+	  // 隐藏微信右上角菜单
+	  wx.ready(function() {
+	      wx.hideOptionMenu();
+	  });
+	</script>
+	<script>
+        (function () {
+        　　if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        　　　　handleFontSize();
+        　　} else {
+        　　    if (document.addEventListener) {
+        　　　　    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        　　　　} else if (document.attachEvent) {
+        　　　　    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+        　　　　    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        　　　　}
+            }
+            function handleFontSize() {
+            　　// 设置网页字体为默认大小
+            　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　  'fontSize': 0
+            　　});
+            　　// 重写设置网页字体大小的事件
+            　　WeixinJSBridge.on('menu:setfont', function () {
+            　　　　WeixinJSBridge.invoke('setFontSizeCallback', {
+            　　　　　　'fontSize': 0
+            　　　　});
+            　　});
+            }
+        })(); 
+    </script>
+</html>

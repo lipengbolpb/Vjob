@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒辽宁</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=3.2.3">
+    <link rel="stylesheet" href="css/sign.css?v=1.8">
+    <link rel="stylesheet" href="css/sale.css?v=1.8">
+</head>
+
+<body>
+	<!-- 圣诞节 start -->
+    <!--<div class="christmas" style="background-color: #029348;width:100%;height:100%;position:absolute;top: 0;left: 0;z-index: 5;"></div>-->
+    <!-- 圣诞节 end -->
+    <img src="img/loading.gif" class="loading" id="loading">
+    <div class="get">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="/v/lnqp/img/slogan.png" class="slogan">
+        <img src="img/footer.png" class="footer">
+        <div class="hb">
+            <img src="img/hb-get.png" class="hbGet">
+            <img src="img/open.png" class="open">
+        </div>
+        <img src="/v/lnqpMS/img/bear.png" class="beer">
+        <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p>
+        <!-- <p class="copyright">技术支持:V积分·鼎川物联Copyright&copy;2012-2018</p> -->
+    </div>
+    <div class="cash">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/hb-cash.png" class="hbCash">
+        <!-- <img src="" class="toast" /> -->
+        <div class="msg">
+            <p class="congratulate">恭喜你获得</p>
+            <p class="prize">
+                <span>¥</span>
+                <span id="money">0.00</span>
+                <span>元</span>
+            </p>
+        </div>
+        <input type="button" value="立即提现" id="btn">
+        <p class="notice">根据微信平台要求，红包累计大于等于1元后可提现，
+            <br>不足1元的红包将存入零钱包</p>
+        <div class="link">
+            <a class="rule">活动规则</a>
+            <!-- <a class="explain">隐私说明</a> -->
+        </div>
+        <!-- <img src="img/game1.png" class="game1"> -->
+        <p class="copyright">本活动由<a href="tel:4008365591">V积分</a>提供技术支持</p>
+    </div>
+    <div class="repcash">
+        <img src="img/logo.png" class="logo logo1">
+        <p class="title">您已扫过</p>
+        <p class="only">每瓶仅限扫码一次</p>
+        <img src="/v/lnqpMS/img/bear.png" class="beer">
+        <input type="button" value="立即提现" id="repbtn">
+        <p class="earn">
+            您已于
+            <span class="earnTime">undefined</span>扫过这瓶酒
+            <br>并获得
+            <span class="earnMoney">¥0元</span>
+        </p>
+        <div class="link">
+            <a class="rule">活动规则</a>
+            <!-- <a class="explain">隐私说明</a> -->
+        </div>
+        <!-- <img src="img/game1.png" class="game1"> -->
+        <p class="copyright">本活动由
+            <a href="tel:4008365591">V积分</a>提供技术支持</p>
+    </div>
+    <div class="mask">
+        <img src="img/logo.png" class="logo logo1">
+        <p class="qin">亲，注意聊天消息里的【服务通知】
+            <br>看到这样的消息72小时内要点开收钱！</p>
+        <img src="img/alert.png" class="alert">
+        <input type="button" value="我知道了" class="ck">
+    </div>
+    <!-- 联通流量 -->
+    <!-- <div class="ad">
+        <img src="img/logo.png" class="logo logo1">
+        <img src="img/close.png" class="adClose">
+        <img src="img/ad_title.png" class="adTitle">
+        <img src="img/ad_cover.png" class="adCover">
+        <img src="img/ad_finger.png" class="adFinger">
+    </div> -->
+    <!-- 活动广告页 -->
+    <!-- <div class="active">
+        <img src="img/20180531_jd.png">
+    </div> -->
+</body>
+<script src="/static/js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<!-- 圣诞节 -->
+<!--<script src="/v/christmas/christmas.js?v=4.0"></script>-->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script src="/v/js/cfg.js?v=2.0"></script>
+<script src="js/getcash.js?v=4.0.5"></script>
+<!-- <script src="js/sign.js?v=1.37"></script> -->
+<!-- <script src="js/sale.js?v=1.15"></script> -->
+<script>
+    ini_wxshare(vge.lnqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+
+</html>

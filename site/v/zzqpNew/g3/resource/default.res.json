@@ -1,0 +1,50 @@
+{
+	"groups": [
+		{
+			"name": "preload",
+			"keys": "GameTips_png,bg_jpg,1_png,2_png,0_png,fingers_json,fingers_png,click_mp3"
+		}
+	],
+	"resources": [
+		{
+			"name": "GameTips_png",
+			"type": "image",
+			"url": "GameTips.png"
+		},
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "bg.jpg"
+		},
+		{
+			"name": "1_png",
+			"type": "image",
+			"url": "1.png"
+		},
+		{
+			"name": "2_png",
+			"type": "image",
+			"url": "2.png"
+		},
+		{
+			"name": "0_png",
+			"type": "image",
+			"url": "0.png"
+		},
+		{
+			"name": "fingers_json",
+			"type": "json",
+			"url": "fingers.json"
+		},
+		{
+			"name": "fingers_png",
+			"type": "image",
+			"url": "fingers.png"
+		},
+		{
+			"name": "click_mp3",
+			"type": "sound",
+			"url": "click.mp3"
+		}
+	]
+}

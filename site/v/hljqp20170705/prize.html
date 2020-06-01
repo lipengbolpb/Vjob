@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青啤豪情龙江</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/prize.css?v=1.1"/>
+		<style type="text/css">
+			.check{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 9999;
+				display: none;
+				background-color: rgba(0,0,0,.7);
+			}
+			#geted{
+				width: 12rem;
+				position: absolute;
+				left: 50%;
+				margin-left: -6rem;
+				top: 5rem;
+			}
+			#tip_1{
+				margin-top: 20rem;
+				text-align: center;
+			    font-size: 0.6rem;
+			    color: #FFFFFF;
+			}
+			div.msg_box #msglist .servers{
+			    height: 1rem;
+			    border: 0;
+			    font-size: .6rem;
+			    position: absolute;
+			    top: 24.5rem;
+			    width: 100%;
+			    text-align: center;
+			    line-height: initial;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="check">
+			<img src="img/geted.png" id="geted"/>
+			<p id="tip_1">扫码时间</p>
+		</div>
+		<div class="msg_box">
+			<img src="img/prize_2.png?v=2" class="prize"/>
+			<div id="msglist">
+				<img src="img/border_2.png" class="pic_tip"/>
+				<p class="servers">拨打时间：工作日 8:00-17:00</p>
+				<p class="user_box"><input class="l" type="text" maxlength="8" name="user" id="user" value="" placeholder="您的姓名"/></p>
+				<p style="display: none;" class="id_box"><input class="l" type="text" name="user" id="id" value="" maxlength="18" placeholder="输入身份证号"/></p>
+				<p class="tel_box"><input class="l" type="text" name="user" id="tel" value="" maxlength="11" placeholder="输入手机号"/></p>
+				<p class="address_box" style="display: none;"><input class="l" type="text" name="user" id="address" value="" maxlength="50" placeholder="输入详细地址"/></p>
+				<p class="yz_box"><input type="text" class="l" name="user" id="yzcode" value="" maxlength="4" placeholder="验证码"/><span  id="get_yz" class="l">获取验证码</span></p>
+			</div>
+			<div id="btn">提交</div>
+			<p class="tip">温馨提示：中奖者需提供完整的中奖瓶盖及中奖产品空瓶，以及个人身份证复印件供我公司或我公司委托的第三方公司核实确认</p>
+			<!--您的信息已提交成功，请耐心等待主办方与您联系-->
+			<p class="rule_box">
+				<a href="javascript:;" id="rule">活动规则</a>
+				<a href="javascript:;" id="private">隐私说明</a>
+			</p>
+		</div>
+	</body>
+	<script src="/static/js/jquery-2.2.4.min.js"></script>
+	<script src="/static/js/vve/10core.js?v1"></script>
+	<script src="/static/js/vve/11tool.js?v1"></script>
+	<script src="/static/js/vve/20ajx.js?v1"></script>
+	<script src="/static/js/vve/idcard.js"></script>
+	<script src="/v/js/publictip.js?v=1"></script>
+	<script src="/v/js/cfg.js?v1.6" type="text/javascript" charset="utf-8"></script>
+	<script src="js/prize.js?v=2.2.1" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	<script src="/static/js/wx/jsdk.js?v12"></script>
+  	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+  	<script>
+	  	ini_wxshare(vge.hljqpappid);
+	  	// 隐藏微信右上角菜单
+	  	wx.ready(function() {
+	  	    wx.hideOptionMenu();
+	  	});
+	</script>
+</html>

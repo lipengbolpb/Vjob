@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>汾酒</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/fail.css?v=1"/>
+	</head>
+	<body>
+		<div id="box">
+    		<img src="img/mountain_t.png" class="m_t"/>
+	    	<img src="img/bird.png" class="bird"/>
+	    	<div class="content" style="display: block;width: 100%;height: 100%;overflow: hidden;">
+	    		<img src="img/tree.png" class="tree"/>
+	    		<div class="msg">
+	    			<img src="" id="fail_tip" class="fail_tip"/>
+	    			<p class="time"></p>
+	    		</div>
+	    	</div>
+    	</div>
+    	<p id="batch" style="position: fixed;bottom: 6%;text-align: center;width: 100%;font-size: 0.8rem;color: black;z-index: 100;"></p>
+    	<img src="img/mountain_b.png" class="m_b"/>
+	</body>
+	<!--重复扫码图片 top:45%-->
+	<script src="/static/js/vve/10core.js?v=1"></script>
+    <script src="/static/js/vve/11tool.js?v=1"></script>
+    <script src="/static/js/vve/20ajx.js?v=2"></script>
+    <script src="/v/js/publictip.js?v=2.0.1"></script>
+    <script src="/v/js/cfg.js?v=3.1.8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var args = vge.urlparse(location.href),
+			fail_tip = document.getElementById("fail_tip"),
+        	batch = document.getElementById("batch"),
+        	batchName = sessionStorage.batchName===undefined?'':sessionStorage.batchName,
+            bizcode = args.bizcode;
+        // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+        switch(bizcode) {
+        case '1':
+            fail_tip.src = 'img/fail_tip_1.png';
+            break;
+        case '2':
+        	fail_tip.style.top = '45%';
+        	$('p.time').html(`扫码时间：<span>${sessionStorage.earnTime}</span>`);
+            fail_tip.src = 'img/fail_tip_2.png';
+            break;
+        case '3':
+            fail_tip.src = 'img/fail_tip_3.png';
+            break;
+        case '4':
+            fail_tip.src = 'img/fail_tip_4.png';
+            batch.innerHTML = batchName+'<br />服务热线：4008-365-591';
+            break;
+        case '5':
+            fail_tip.src = 'img/fail_tip_5.png';
+            break;
+        case '6':
+            fail_tip.src = 'img/fail_tip_6.png';
+            break;
+        case '11':
+            fail_tip.src = 'img/fail_tip_2.png';
+            break; 
+        case '-1':
+        	fail_tip.src = 'img/fail_tip_-1.png';
+          //  fail_tip.src = '系统升级中...';
+            break;      
+        case '18'://扫码专员
+        	fail_tip.style.display='none';
+        	title_tip('尊敬的用户', '此码未被使用<br />活动批次：'+batchName, '我知道了');
+            break;     
+        default:
+            title_tip('尊敬的用户', bizcode+':'+sessionStorage.msg, '我知道了');
+            break;
+        }
+		
+	</script>
+	<script type="text/javascript">
+		document.querySelector('body').addEventListener('touchmove', function(e) {
+		    e.preventDefault();
+		})
+	</script>
+</html>

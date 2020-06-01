@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>青岛啤酒华中</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/getcash.css?v=2.1">
+</head>
+
+<body>
+    <div class="wrap">
+        <!--<div id="midAutumn_box">
+        </div>-->
+        <img src="img/audio1.png" class="audio">
+        <div class="header">
+            <img src="img/logo.png" class="logo">
+            <div class="sloganBox">
+                <img src="img/slogan.png" class="slogan">
+                <img src="img/light.png?v=1" class="light">
+            </div>
+        </div>
+        <div class="main">
+            <img src="img/beer.png" class="beer">
+            <p class="mainTitle">恭喜您，本次获得</p>
+            <p class="mainContent">
+                <span class="money">0</span>
+                <span>积分</span>
+            </p>
+        </div>
+        <div class="prize">
+            <img src="img/map.png">
+            <img src="img/prize-1.png" class="prize-ico">
+            <img src="img/prize-mask.png" class="mask">
+            <p id="prizeTitle">恭喜您，中奖啦！</p>
+            <p class="peizeType"></p>
+            <a href="javascript:;" class="ck"></a>
+        </div>
+        <div class="btns">
+            <div class="mall">
+                <img src="img/wing-left.png" class="wingLeft">
+                <div class="mallBtn">
+                    <img src="img/btn-top.png" class="btnTop">
+                    <img src="img/mall-title.png" class="mallTitle">
+                    <img src="img/btn-bottom.png" class="btnBottom">
+                </div>
+                <img src="img/wing-right.png" class="wingRight">
+            </div>
+            <div class="personal">
+                <img src="img/wing-left.png" class="wingLeft">
+                <div class="personalBtn">
+                    <img src="img/btn-top.png" class="btnTop">
+                    <img src="img/personal-titles.png" class="personalTitle">
+                    <img src="img/btn-bottom.png" class="btnBottom">
+                </div>
+                <img src="img/wing-right.png" class="wingRight">
+            </div>
+        </div>
+        <div class="ufo">
+            <img src="img/star.png" class="star">
+            <img src="img/ufo-top.png" class="ufoTop">
+            <img src="img/ufo-light.png" class="ufoLight">
+            <img src="img/ufo-bottom.png" class="ufoBottom">
+        </div>
+    </div>
+    <div class="fail">
+        <img src="img/close.png" class="failClose">
+        <p class="failContent">这个二维码
+            <br>已过期</p>
+        <p class="failTip">下次请早</p>
+        <img src="img/ufo.png" class="failUfo">
+        <p id="batch"></p>
+    </div>
+    <audio id="bgm" loop preload src="music/bgm.mp3?v=1" style="display:none;opacity:0;z-index:-1;"></audio>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="/static/js/vve/10core.js"></script>
+<script src="/static/js/vve/11tool.js"></script>
+<script src="/static/js/vve/12event.js"></script>
+<script src="/static/js/vve/20ajx.js"></script>
+<script src="/static/js/vve/21tpl.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/v/js/cfg.js?v=2.1.1"></script>
+<script src="/v/js/publictip.js?v=3.0.1"></script>
+<script src="/static/js/wx/jsdk.js?v=3"></script>
+<script src="/static/js/font.js"></script>
+<script>
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('bgm').setAttribute('src', '/v/zzqp20180801/music/bgm.mp3?v=1');
+        document.getElementById('bgm').setAttribute('loop', 'loop');
+        document.getElementById('bgm').load();
+        document.getElementById('bgm').play();
+        $('.audio').addClass('running');
+    }, false);
+</script>
+<script>
+    ini_wxshare(vge.zzqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script src="js/getcash.js?v=1.13"></script>
+<!-- <script src="js/ad.js?v=22"></script> -->
+
+</html>

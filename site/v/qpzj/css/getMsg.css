@@ -1,0 +1,170 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑","Microsoft YaHei";
+	overflow: hidden;
+	background: url('../img/getmsg-bg.png') no-repeat left top;
+	background-size: 100%;
+	-webkit-background-size: 100%;
+	color: #FFFFFF;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+img{border:none}
+table {border-collapse: collapse; border-spacing:0;}
+a:link,a:visited,a:hover,a:active{
+     text-decoration:none;
+}
+/* 屏蔽苹果手机更改样式 */
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;}
+input[type="tel"],input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"]{
+	outline: 0; background-color: transparent;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	opacity: 1;
+	-webkit-opacity:1;
+}
+::-webkit-input-placeholder{
+     color: #E0E0E0;
+     font-size: 0.8rem;
+}
+
+body{background: #FFF6CD url(/v/qpzj/img/bg_02.jpg) 0 0 repeat-y; background-size: 100%; font-family: '微软雅黑' 'Avenir Heavy'; text-align: center;}
+/*红包开*/
+.wrap_bot{width: 100%; height: 100%; background: url(/v/qpzj/img/bg_020.jpg) 0 0 repeat-y; background-size: 100%;}
+.wrap_bot1{width: 100%; height: 74%; background: url(/v/qpzj/img/bg_05.jpg) 0 0 repeat-y; background-size: 100%;}
+.wrap_bot2{width: 100%; height: 26%; background: url(/v/qpzj/img/bg_06.jpg) 0 0 no-repeat; background-size: 100%;}
+#bag_boxs{width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 100;}
+.gxqp_logo{position: absolute; top: 8px; left: 16px; width: 18%; z-index: 100;}
+.hd_logo{width: 86%; padding-top: 13%;}
+.qpgx_bag{margin-top: 10px; width: 100%; height: 70%; position: relative;}
+#qpbag_top{width: 78%; height: 96px; position: absolute; top: 0px; left: 11%; z-index: 11;}
+#qpbag_bot{width: 78%; height: 350px; position: absolute; top: 0px; left: 11%; z-index: 10; box-shadow: 0px 7px 8px -3px rgba(57,54,54,0.7); border-radius: 20px;}
+@media screen and (device-aspect-ratio: 2/3) {/*苹果4 */
+	.hd_logo{width: 84%; padding-top: 12%;}
+	.qpgx_bag{margin-top: 2px;}
+}
+
+/*页面*/
+#wrapper{display: none;}
+.topbanner{position: relative; width: 100%;}
+.topbanner img{width: 100%;}
+.moneybox{position: absolute; top: 48%; left: 34%; width: 32%;}
+.moneytip{color: #fff; font-size: 12px; padding-bottom: 10px;}
+.moneynum{font-size: 14px; font-weight: bold; color: #FFF226;}
+.moneynum span{font-size: 32px;}
+.messagebox{width: 84%; overflow: hidden; padding-top: 16px; color: #C18527;}
+#message{float: left; width: 100%; max-height: 70px;}
+#one_tip{width: 93%; padding-left: 7%; background: url(/v/qpzj/img/clock.png) 0 1px no-repeat; line-height: 16px; font-size: 13px; background-size: 14px; margin-top: 72px; text-align: left; margin-bottom: 14px;}
+
+
+
+#wrap{
+	width: 100%;
+	height: 100%;
+	padding-top: 4rem;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#wrap p{
+	padding-left: 1rem;
+	border-bottom: 1px #FFFFFF solid;
+	overflow: hidden;
+}
+#wrap .tip{
+	padding: 0;
+	font-size: 0.7rem;
+	text-align: center;
+	margin: 0rem 0 2rem;
+	border: 0;
+}
+#tel_box{
+	border-top: 1px #FFFFFF solid;
+}
+#wrap input{
+	border: 0;
+}
+#wrap p span,a,input{
+	height: 2rem;
+	line-height: 2rem;
+	color: #FFFFFF;
+}
+#wrap p span{
+	padding: 0 0.2rem;
+}
+#wrap p input{
+	font-size: 0.8rem;
+}
+#tel{
+	width: 95%;
+}
+#name{
+	font-size: 0.7rem;
+	width: 50%;
+}
+#yz_code{
+	width: 10rem;
+}
+#get_yz{
+	height: 100%;
+	width: 3.8rem;
+	font-size: 0.7rem;
+	float: right;
+	text-align: center;
+	padding-left: 0.2rem;
+	border-left: 1px #FFFFFF solid;
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+#tj{
+	width: 7.8rem;
+	height: 1.9rem;
+	display: block;
+	margin: 5rem auto 1rem;
+	background: #ffd46c;
+	-webkit-border-radius: 0.5rem;
+	color: #882700;
+	font-size: 0.875rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#wrap #tips{
+	border: 0;
+	padding: 0;
+	margin:2rem auto;
+	width: 100%;
+	font-size: 0.7rem;
+	text-align: center;
+}
+#wrap1{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	display: none;
+	/* overflow: hidden; */
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#wrap1 p{
+	font-size: 0.7rem;
+	position: absolute;
+	top:10rem;
+	width:100%;
+	color: #FFFFFF;
+}
+

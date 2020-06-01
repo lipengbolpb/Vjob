@@ -1,0 +1,44 @@
+img{
+	display: block;
+}
+body{
+	background: url(../img/attention-bg.png) no-repeat top left;
+	background-size: 100% 100%;
+	-webkit-background-size:  100% 100%;
+}
+.title{
+	width: 12.5rem;
+	margin: 1.25rem auto 0;
+}
+.qrcode{
+	width: 9rem;
+	margin: 1.5rem auto 0;
+}
+#qrcode{
+	position: absolute;
+	top: 14rem;
+	width: 9rem;
+	left: 50%;
+	margin-left: -4.5rem;
+	opacity: 0;
+}
+p{
+	width: 7.5rem;
+	height: 2rem;
+	border-radius: 2px;
+	background: #023d88;
+	line-height: 2rem;
+	text-align: center;
+	font-size: .72rem;
+	color: #fff;
+	margin: 3rem auto 0;
+}
+@media only screen and (max-height: 480px) {
+	p{
+		margin: 1rem auto 0;
+	}
+	.qrcode{
+		width: 8rem;
+		margin: 1rem auto 0;
+	}
+}

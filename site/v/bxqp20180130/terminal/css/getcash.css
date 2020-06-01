@@ -1,0 +1,208 @@
+@charset "utf-8";
+body,html,p,img,input,i,em{
+	margin: 0;
+	padding: 0;
+}
+i,em{
+	font-style: normal;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+html{
+	background: url(../img/bg.png) no-repeat top;
+	-webkit-background-size: 100%;
+}
+body{
+	background-color: rgba(0,0,0,.6);
+}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="tel"],input[type="text"],button,textarea{-webkit-appearance:none;border: 0;}
+input[type="tel"],input[type="text"],input[type="button"],input[disabled]{outline: 0; background-color: transparent;-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+
+div.wxmark{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+#alert img{
+	width: 100%;
+}
+span.tip{
+	font-size: .6rem;
+	line-height: 4rem;
+	color: #2aa1fd;
+	text-align: center;
+	padding:.1rem 0 .1rem 1.1rem;
+	background: url(../img/icon_tip.png) no-repeat left;
+	-webkit-background-size: .7rem auto;
+}
+div.cash_box{
+	width: 11rem;
+	height: 11rem;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-origin: top;
+}
+div.cash_box div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 8.75rem auto;
+}
+div.cash_box div.cash_wrap{
+	background-image: url(../img/cash.png);
+	z-index: 1;
+	/*display: none;*/
+}
+div.cash_box div.repscan{
+	width:11rem;
+	z-index: 10;
+	margin: 0 auto;
+	left: 50%;
+	position: relative;
+	overflow: hidden;
+	-webkit-transform: translateX(-50%);
+	display: none;
+}
+div.cash_box div.repscan img{
+	width:100%;
+	display:block;
+	margin: 3rem auto 0;
+}
+div.cash_box div.repscan p{
+	font-size: .5rem;
+	color: #fff;
+	transform:translateX(.45rem) rotate(-9deg);
+	position: absolute;	
+	top: 7.5rem;
+}
+div.cash_box div.cash_wrap #open{
+	width: 3.5rem;
+	height: 3.5rem;
+	margin: 3.7rem auto 0;
+	display: block;
+}
+div.cash_box div.cash_content{
+	background-image: url(../img/cash_open_1.png);
+	display: none;
+}
+div.cash_box div .coin{
+	position: absolute;
+}
+div.cash_box div .coin_l{
+	bottom: -.5rem;
+	left: 0;
+	width: 2.8rem;
+}
+div.cash_box div .coin_r{
+	bottom: -.5rem;
+	right: 0;
+	width: 2.4rem;
+}
+div.cash_box div p{
+	font-size: .7rem;
+	color: #fff;
+	position: absolute;
+	bottom: 1.25rem;
+	width: 100%;
+	text-align: center;
+}
+div.cash_box div p.odd{
+	line-height: 2.5rem;
+}
+div.cash_box div p span{
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+div.cash_box div p i{
+	font-size: .9rem;
+}
+div.bottom{
+	display: none;
+}
+#btn{
+	width: 12.5rem;
+	height: 2.15rem;
+	line-height:2.15rem;
+	background: #2aa1fd;
+	color: #fff;
+	font-size: .8rem;
+	border-radius: 3px;
+	display: block;
+	margin: 1.7rem auto .5rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+	overflow: hidden;
+}
+#btn img{
+	display: block;
+	height: 1.15rem;
+	margin: .5rem auto;
+}
+a.mall{
+	font-size: .65rem;
+	color: #2AA1FD;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+p.tip_msg{
+	font-size: .45rem;
+	color: #fff;
+	width: 120%;
+	margin: .7rem auto 0;
+	-webkit-transform:translateX(-8%) scale(.9);
+}
+p.time{
+	position: absolute;
+	bottom: 1.6rem;
+	width: 100%;
+	font-size: .65rem;
+	color: #a6a6a6;
+}
+p.a_box{
+	margin: 0rem auto 0;
+}
+p.a_box a{
+	font-size: .6rem;
+	color: #fff;
+	padding: 0 1rem;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color:rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color:rgba(0, 0, 0, 0);
+	-o-tap-highlight-color:rgba(0, 0, 0, 0);
+	tap-highlight-color:rgba(0, 0, 0, 0);
+}
+@media only screen and (max-height: 480px) {
+	div.cash_box{
+		-webkit-transform: scaleX(.9);
+		margin: -1rem auto 0;
+	}
+	div.bottom{
+		margin-top: -1rem;
+	}
+}

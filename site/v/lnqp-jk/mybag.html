@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>青岛啤酒辽宁</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1"/>
+	</head>
+	<body>
+		<div id="title">
+			<p class="cur" id="record-hb">红包记录</p>
+			<p id="record-jk">集卡记录</p>
+		</div>
+		<div id="hb-list">
+			<div class="tx">
+				<p>
+					<span></span><br />红包余额
+				</p>
+			</div>
+			<ul class="list" id="list">
+				
+			</ul>
+			<p class="more hb-more">仅显示近30天的记录</p>
+		</div>
+		<ul id="jk-list">
+			
+		</ul>
+		<p class="more jk-more">仅显示近30天的记录</p>
+		<div id="tx-alert">
+			<img src="/v/lnqp-jk/img/notattention.png"/>
+		</div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+        <li>
+            <p class="title list_left">
+                <span class="title">[=monwhere]</span><br />
+                <span class="time">[=gettime]</span>
+            </p>
+            <p class="money title list_right"><span>[=money]</span>元</p>
+        </li>
+    </script>
+    <script id="onenote_tpl_jk" type="text/html">
+        <li>
+            <p class="title list_left">
+                <span class="title">[=cardName]</span><br />
+                <span class="time">[=gettime]</span>
+            </p>
+            <p class="money title list_right"><span>[=money]</span>张</p>
+        </li>
+    </script>
+    <script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=3.0.0"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mybag.js?v=1.0.9" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+</html>

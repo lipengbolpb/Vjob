@@ -1,0 +1,573 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+img,
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+
+/* 屏蔽苹果手机更改样式 */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"],
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="tel"],
+input[type="text"] {
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #999999;
+}
+
+input {
+    font-size: 0.7rem;
+    color: #333333;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="text"] {
+    text-indent: 2em;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body .wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: url('../img/bg.png') repeat top left;
+    background-size: 100% auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wrap .head {
+    width: 75%;
+    z-index: 1;
+    display: block;
+    margin: -3rem auto 0;
+}
+
+.wrap .head .slogan {
+    width: 100%;
+}
+
+.wrap .main {
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    top: 4rem;
+    left: 2.5%;
+    background: url(../img/desk.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+
+.wrap .main .box {
+    width: 80%;
+    height: 5rem;
+    margin: 0.5rem auto 0;
+}
+
+.wrap .main .box ul {
+    width: 100%;
+    list-style: none;
+}
+
+.wrap .main .box ul li {
+    width: 23%;
+    margin: 0 1%;
+    float: left;
+}
+
+.wrap .main .box ul li img {
+    width: 100%;
+}
+
+.wrap .main .box .ul-2 #btn {
+    width: 48%;
+    height: 2.2rem;
+}
+
+.wrap .main .box .ul-2 #btn img {
+    width: 100%;
+    display: block;
+    margin: 10% auto 0;
+    z-index: 9999;
+}
+
+.wrap .main .link {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+.wrap .main .link a {
+    font-size: 0.6rem;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.wrap .back {
+    width: 12%;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+.wrap .back img {
+    width: 100%;
+}
+
+.luck-unit-0 {
+    background: url(../img/00.png?v=2) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-1 {
+    background: url(../img/01.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-2 {
+    background: url(../img/02.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-3 {
+    background: url(../img/03.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-4 {
+    background: url(../img/04.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-5 {
+    background: url(../img/05.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-6 {
+    background: url(../img/02.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-7 {
+    background: url(../img/06.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-8 {
+    background: url(../img/04.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.luck-unit-9 {
+    background: url(../img/07.png) no-repeat;
+    background-size: 89% 87%;
+    background-position: 50% 30%;
+}
+
+.border {
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
+}
+
+.wrap .rule {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.wrap .rule img:nth-of-type(1) {
+    width: 95%;
+    height: 80%;
+    display: block;
+    margin: 4rem auto 0;
+}
+
+.wrap .rule .iknow {
+    width: 40%;
+    height: 2.5rem;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+}
+
+.wrap .alert {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.wrap .alert .result {
+    width: 50%;
+    display: block;
+    margin: 4rem auto 0;
+}
+
+.wrap .alert div {
+    width: 100%;
+    margin: 1rem auto 0;
+}
+
+.wrap .alert div .line1 {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: '黑体';
+}
+
+.wrap .alert div .line2 {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-family: '黑体';
+}
+
+.wrap .alert div .line1 #prize {
+    color: #f2b525;
+}
+
+.wrap .alert .close {
+    width: 10%;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+
+/* 弹窗 */
+
+#info {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+}
+
+#info div.window {
+    width: 13.8rem;
+    height: 13rem;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    margin: 5rem auto;
+    overflow: hidden;
+    text-align: center;
+    color: #1e9dfc;
+    font-size: .7rem;
+}
+
+#info div.window p.tip {
+    line-height: 1.9rem;
+    width: 10.5rem;
+    margin: 0 auto;
+    border-bottom: 1px #ccc solid;
+}
+
+#info div.window_res {
+    display: none;
+}
+
+#info div.window_res img {
+    width: 3.7rem;
+    margin: 1.9rem auto .8rem;
+}
+
+#info div.window_res p.tip_msg {
+    padding: 0 .4rem;
+    font-size: .6rem;
+    color: #a7a7a7;
+}
+
+#info div.window_msg {
+    display: none;
+}
+
+#info div.window_msg input[type=text] {
+    width: 12.5rem;
+    height: 1.9rem;
+    -webkit-border-radius: .5rem;
+    border-radius: .5rem;
+    border: 1px #999 solid;
+    margin-top: .6rem;
+    text-indent: 0.2rem;
+    font-size: .55rem;
+}
+
+#info div.window_msg input[type=button] {
+    margin: .4rem;
+    height: 2.15rem;
+    width: 5.5rem;
+    background: #2aa1fd;
+    -webkit-border-radius: 5px;
+    color: #fff;
+    font-size: .8rem;
+    border: none;
+}
+
+#info div.window_msg #cancel_msg {
+    background: #999;
+}
+
+#info div.window_confirm {
+    display: none;
+    position: relative;
+}
+
+#info div.window_confirm p.confrim {
+    font-size: .8rem;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.5rem;
+    margin: 2.8rem auto 0;
+}
+
+#info div.window_confirm p.confrim_msg {
+    font-size: .6rem;
+    line-height: 1.1rem;
+    color: #656565;
+}
+
+#info div.window_confirm .a_box {
+    width: 100%;
+    position: absolute;
+    bottom: 0.4rem;
+    padding: 0;
+}
+
+#info div.window_confirm .a_box a {
+    color: #fff;
+    background: #999;
+    width: 5.8rem;
+    height: 2.15rem;
+    -webkit-border-radius: 5px;
+    line-height: 2.15rem;
+    font-size: .9rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 .2rem;
+    -webkit-tap-highlight-color: transparent
+}
+
+#info div.window_confirm .a_box a.determine {
+    background: #2aa1fd;
+}
+
+@media only screen and (max-height:620px) and (min-width:400px) {
+    .wrap .head {
+        margin: -3.5rem auto 0;
+    }
+    .wrap .main .box {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height:580px) and (min-width:400px) {
+    .wrap .head {
+        width: 65%;
+    }
+    .wrap .main .box {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height:530px) and (min-width:400px) {
+    .wrap .head {
+        width: 60%;
+    }
+    .wrap .main .box {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .wrap .alert .result {
+        margin: 3rem auto 0;
+    }
+}
+
+@media only screen and (max-height:570px) and (min-width:375px) {
+    .wrap .head {
+        width: 65%;
+    }
+    .wrap .main .box {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height:500px) and (min-width:375px) {
+    .wrap .main .box {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-height:560px) and (min-width:360px) {
+    .wrap .head {
+        width: 65%;
+    }
+    .wrap .main .box {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height:500px) and (min-width:360px) {
+    .wrap .head {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-height:500px) and (min-width:320px) {
+    .wrap .head {
+        width: 65%;
+    }
+    .wrap .main .box {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height:450px) and (min-width:320px) {
+    .wrap .head {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-height:420px) and (min-width:320px) {
+    .wrap .head {
+        width: 55%;
+    }
+    .wrap .alert .result {
+        margin: 3rem auto 0;
+    }
+}
+
+@media only screen and (width:320px) {
+    #info div.window_msg input[type=text] {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+}

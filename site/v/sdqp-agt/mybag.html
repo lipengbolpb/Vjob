@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>青岛啤酒畅享山东</title>
+		<script src="/static/js/rem.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybag.css?v=1.0.3"/>
+	</head>
+	<body>
+		<div class="mybag">
+			<img src="img/logo.png" class="logo">
+			<img src="img/details.png" class="todetails">
+			<img src="img/loading.gif" class="loading">
+			<div class="content">
+				<div class="num">
+					<p class="totalNum"><span class="">0</span>瓶</p>
+					<p>共喝奥古特</p>
+				</div>
+				<div class="money">
+					<p>账户余额：<span><i class="total">0.00</i>元</span></p>
+					<p>已领红包：<span><i class="gifts">0.00</i>元</span></p>
+					<p>冻结金额：<span><i class="freeze">0.00</i>元</span></p>
+				</div>
+			</div>
+			<p class="txTips">已提现金额请在微信首页查看</p>
+
+			<p class="btn"></p>
+			<p class="tip">红包累计大于等于1元后可提现<br />不足1元的红包将存入零钱包</p>
+			<p class="freezeTip">什么是冻结金额？</p>
+		</div>
+		<div class="mark">
+			<img src="img/logo.png" class="logo">
+			<img src="img/tx-alert.png" class="mark_pic">
+			<div class="txOK">您已提现成功</div>
+			<p class="mark_btn"></p>
+		</div>
+		<div class="record">
+			<p class="hide"></p>
+			<ul id="mon_list">
+			</ul>
+			<p class="more">加载更多</p>
+		</div>
+		<div class="freezeAlert">
+			<p class="closeTip"></p>
+			<img src="/v/sdqp-agt/img/freeze_tip.png?v=1">
+			<div></div>
+		</div>
+	</body>
+	<script id="onenote_tpl" type="text/html">
+	    <li>
+	        <p class="title list_left">
+	            <span class="title">[=monwhere]</span>
+	            <br />
+	            <span class="time">[=gettime]</span>
+	        </p>
+	        <p class="money title list_left">
+	            <span>[=money]</span>元</p>
+	    </li>
+	</script>
+	<script src="/static/js/vve/10core.js"></script>
+	<script src="/static/js/vve/11tool.js"></script>
+	<script src="/static/js/vve/12event.js"></script>
+	<script src="/static/js/vve/20ajx.js"></script>
+	<script src="/v/js/cfg.js?v=2.2"></script>
+	<script src="/v/js/publictip.js?v=1.0.1"></script>
+	<script src="/static/js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mybag.js?v=1.1.2" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/static/js/wx/jsdk.js?v=3"></script>
+</html>

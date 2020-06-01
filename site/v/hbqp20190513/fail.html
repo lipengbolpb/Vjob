@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>青岛啤酒乐享河北</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/static/js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: url(img/bg.png?v=1) repeat-y left top;
+            -webkit-background-size: 100% auto;
+            font-family: "微软雅黑", "Microsoft YaHei";
+        }
+
+        .box {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: block;
+        }
+
+        img.logo {
+            width: 3rem;
+            margin: .825rem 0 0 .825rem;
+        }
+
+        .box .tip_box {
+            overflow: hidden;
+            height: 19rem;
+            background: url(img/fail_bg.png?v=2) no-repeat center;
+            -webkit-background-size: auto 100%;
+        }
+
+        #tip {
+            height: 4.3rem;
+            display: block;
+            margin: 8rem auto 1.5rem;
+        }
+
+        p.time {
+            font-size: .6rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .rule_box {
+            width: 40%;
+            margin: 5rem auto 0;
+        }
+
+        .rule_box a {
+            font-size: 0.6rem;
+            color: #ffffff;
+        }
+
+        .rule_box a:nth-of-type(1) {
+            float: left;
+        }
+
+        .rule_box a:nth-of-type(2) {
+            float: right;
+        }
+
+        .cash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: url(img/bg.png?v=1) repeat-y left top;
+            -webkit-background-size: 100%;
+            z-index: 1;
+        }
+
+        .hbCash {
+            display: block;
+            margin: 3.5rem auto 0;
+            width: 10rem;
+        }
+
+        .msg {
+            position: absolute;
+            top: 8rem;
+            width: 100%;
+        }
+
+        .congratulate {
+            margin: 2rem auto 0;
+            text-align: center;
+            width: 100%;
+            color: #fff699;
+            font-size: 0.75rem;
+        }
+
+        #btn {
+            display: block;
+            margin: 1rem auto 0;
+            width: 9rem;
+            height: 2.2rem;
+            outline: none;
+            border: none;
+            background-color: #f1d35a;
+            color: #ca0013;
+            font-size: 0.8rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/logo.png" class="logo" />
+        <div class="tip_box">
+            <img src="" id="tip" />
+            <p class="time"></p>
+            <!-- <p class="rule_box">
+                <a href="javascript:;" class="rule">活动规则</a>
+                <a href="javascript:;" class="pravite">隐私说明</a>
+            </p> -->
+        </div>
+        <p id="batch" style="pointer-events: none; color: white;position: absolute;bottom: 5%;text-align: center;width: 100%;"></p>
+    </div>
+    <div class="cash" id="cash">
+        <img src="img/cash.png?v=1" class="hbCash">
+        <div class="msg">
+            <p class="congratulate">离红包只差一点点
+                <br />再扫一瓶试试吧~</p>
+        </div>
+        <input type="button" value="查看红包记录" id="btn">
+    </div>
+    <img src="img/attention_bottom.png?v=1" class="bottom" />
+</body>
+<script src="/static/js/vve/10core.js?v=1"></script>
+<script src="/static/js/vve/11tool.js?v=1"></script>
+<script src="/static/js/vve/20ajx.js?v=2"></script>
+<script src="/v/js/publictip.js?v=2.0.2"></script>
+<script src="/v/js/cfg.js?v=2.1.8"></script>
+<script src="/static/js/wx/jsdk.js?v12"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    ini_wxshare(vge.hbqpappid);
+    // 隐藏微信右上角菜单
+    wx.ready(function () {
+        wx.hideOptionMenu();
+    });
+</script>
+<script>
+    var contant = document.getElementById('tip'),
+        time = document.getElementsByClassName('time')[0];
+    //var dom_rule = document.getElementsByClassName('rule')[0];
+    //var dom_pravite = document.getElementsByClassName('pravite')[0];
+    var args = vge.urlparse(location.href),
+        batch = document.getElementById("batch"),
+        batchName = sessionStorage.batchName === undefined ? '' : sessionStorage.batchName,
+        bizcode = args.bizcode;
+    
+    /*dom_rule.addEventListener('click', function () {
+        location.href =
+            "https://mp.weixin.qq.com/s?__biz=MzI5NjQ4MDMyNg==&mid=100000687&idx=1&sn=403bd0ea975a901361b33eb9fb4fb7e9&chksm=6c42f8865b3571906841c2e3bf6f6950d5adb9c646f27e297d06d48cde45ffe906df338153d6#rd";
+    }, false);
+    dom_pravite.addEventListener('click', function () {
+        location.href =
+            "https://mp.weixin.qq.com/s?__biz=MzI5NjQ4MDMyNg==&mid=100000689&idx=1&sn=69d3a1ae649f59ea7f5ad66a592055e4&chksm=6c42f8985b35718e073d8931de9a434cd3090c7b2dcd066fed41626f309fe06fb9ca8ccfb6f0#rd";
+    }, false);*/
+    // 1 - 该积分码不存在",2 - 该积分码已经被使用过,3 - 积分码已过期,4 - 活动未开始,5 - 活动已结束,6 - 积分码异常   (通常为服务器报错)
+    switch (bizcode) {
+        case '0':
+            contant.src = '/v/hbqp20190513/img/fail_tip_0.png?v=1';
+            break;
+        case '1':
+            contant.src = '/v/hbqp20190513/img/fail_tip_6.png';
+            break;
+        case '2':
+            time.innerHTML = '扫码时间：' + sessionStorage.earnTime;
+            contant.src = '/v/hbqp20190513/img/fail_tip_2.png';
+            contant.style.height = '3rem';
+            contant.style.margin = '7rem auto 1.5rem';
+            break;
+        case '3':
+            contant.src = '/v/hbqp20190513/img/fail_tip_5.png';
+            break;
+        case '4':
+            contant.src = '/v/hbqp20190513/img/fail_tip_4.png';
+            batch.innerHTML = batchName + '<br />服务热线：15321413736';
+            break;
+        case '5':
+            contant.src = '/v/hbqp20190513/img/fail_tip_5.png';
+            break;
+        case '6':
+            contant.src = '/v/hbqp20190513/img/fail_tip_6.png';
+            break;
+        case '11':
+            contant.src = '/v/hbqp20190513/img/fail_tip_2.png';
+            break;
+        case '-1':
+            contant.src = '/v/hbqp20190513/img/fail_tip_-1.png';
+            break;
+        case '17': //酒品已过期
+            contant.src = '/v/hbqp20190513/img/fail_tip_5.png';
+            break;
+        case '19': //酒品已过期
+            document.getElementById("cash").style.display = 'block';
+            document.getElementById("btn").addEventListener('click', function () {
+                location.href = 'http://' + location.host + '/hbqp20181022/too/mybag';
+            }, false);
+            break;
+        case '18': //扫码专员
+            contant.style.display = 'none';
+            title_tip('尊敬的用户', '此码未被使用<br />活动批次：' + batchName, '我知道了');
+            break;
+        default:
+            contant.style.display = 'none';
+            title_tip('尊敬的用户', bizcode + ':' + sessionStorage.msg, '我知道了');
+            break;
+    }
+</script>
+<script src="/static/js/font.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
